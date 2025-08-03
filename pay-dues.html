@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pay Your Dues Online | Chicago North Shore Property Management | Manage369</title>
+    <meta name="description" content="Convenient online payment options for Chicago and North Shore property management dues. Multiple secure payment methods available 24/7. Call (224) 647-5621.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Navigation */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link:hover {
+            color: #ff9500;
+            background: rgba(255, 149, 0, 0.1);
+        }
+
+        .nav-link.active {
+            background: #ff9500;
+            color: white;
+        }
+
+        .cta-button {
+            background: #4a90e2;
+            color: white;
+            padding: 0.7rem 1.5rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+        }
+
+        /* Services Dropdown */
+        .dropdown {
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            border-radius: 10px;
+            padding: 1rem 0;
+            z-index: 1001;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-section {
+            padding: 0 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .dropdown-section h4 {
+            color: #666;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .dropdown-section a {
+            display: block;
+            color: #333;
+            text-decoration: none;
+            padding: 0.5rem 0;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+        }
+
+        .dropdown-section a:hover {
+            color: #ff9500;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(74, 144, 226, 0.9), rgba(255, 149, 0, 0.8)), url('images/financial-office-hero.webp');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn-hero {
+            padding: 1rem 2rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #ff9500;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #e6850e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 149, 0, 0.3);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #4a90e2;
+            transform: translateY(-3px);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Payment Options */
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .payment-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+            border: 2px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
+
+        .payment-card:hover {
+            border-color: #ff9500;
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+
+        .payment-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .payment-card h3 {
+            color: #333;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .payment-card p {
+            color: #666;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-orange {
+            background: #ff9500;
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background: #e6850e;
+            transform: translateY(-2px);
+        }
+
+        .btn-blue {
+            background: #4a90e2;
+            color: white;
+        }
+
+        .btn-blue:hover {
+            background: #357abd;
+            transform: translateY(-2px);
+        }
+
+        /* Fees Section */
+        .fees-section {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 3rem;
+            border-radius: 20px;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+
+        .fees-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .fee-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .fee-item h4 {
+            color: #333;
+            margin-bottom: 0.5rem;
+        }
+
+        .fee-amount {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff9500;
+        }
+
+        .free-badge {
+            color: #28a745;
+        }
+
+        /* Footer */
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            margin-bottom: 1rem;
+            color: #ff9500;
+        }
+
+        .footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer a {
+            color: #ff9500;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .certifications {
+            margin-top: 1rem;
+            font-size: 0.9rem;
+            color: #ccc;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">MANAGE369</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item dropdown">
+                    <a href="services.html" class="nav-link">Services ▼</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-section">
+                            <h4>Property Types</h4>
+                            <a href="services/condominium-management/index.html">Condominium Management</a>
+                            <a href="services/hoa-management/index.html">HOA Management</a>
+                            <a href="services/townhome-management/index.html">Townhome Management</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Service Offerings</h4>
+                            <a href="services/financial-management/index.html">Financial Management</a>
+                            <a href="services/maintenance-coordination/index.html">Maintenance Coordination</a>
+                            <a href="services/board-support/index.html">Board Support</a>
+                            <a href="services/administrative-services/index.html">Administrative Services</a>
+                            <a href="services/capital-project-management/index.html">Capital Project Management</a>
+                            <a href="services/resident-relations/index.html">Resident Relations</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="nav-item"><a href="service-areas.html" class="nav-link">Service Areas</a></li>
+                <li class="nav-item"><a href="pay-dues.html" class="nav-link active">Pay Dues</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="tel:+12246475621" class="cta-button">Call (224) 647-5621</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Pay Your Dues Online</h1>
+            <p>Convenient, Secure, and Flexible Payment Methods for Property Owners and Residents</p>
+            <div class="hero-buttons">
+                <a href="#payment-options" class="btn-hero btn-primary">View Payment Options</a>
+                <a href="tel:+12246475621" class="btn-hero btn-secondary">Call (224) 647-5621</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Payment Options -->
+        <section id="payment-options">
+            <h2 class="section-title">Payment Methods</h2>
+            <p class="section-subtitle">We offer multiple convenient and secure payment options to meet your needs.</p>
+            
+            <div class="payment-grid">
+                <div class="payment-card">
+                    <div class="payment-icon">💻</div>
+                    <h3>Online Owner Portal</h3>
+                    <p>Securely manage and process payments through our dedicated online platform with 24/7 access to your account.</p>
+                    <a href="https://stellarpropertygrp.appfolio.com/oportal/users/log_in" class="btn btn-orange" target="_blank">Access Portal</a>
+                </div>
+                
+                <div class="payment-card">
+                    <div class="payment-icon">✉️</div>
+                    <h3>Mail Payment</h3>
+                    <p>Traditional check payments sent directly to our office address with detailed mailing instructions.</p>
+                    <a href="#mail-info" class="btn btn-blue">View Details</a>
+                </div>
+                
+                <div class="payment-card">
+                    <div class="payment-icon">🏦</div>
+                    <h3>Bank Bill Pay</h3>
+                    <p>Convenient, zero-fee payment option through your bank's online platform with automatic scheduling.</p>
+                    <a href="#billpay-info" class="btn btn-orange">Setup Bill Pay</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Payment Fees -->
+        <section class="fees-section">
+            <h2>Payment Fees Explained</h2>
+            <p>We strive to provide transparent and cost-effective payment options.</p>
+            
+            <div class="fees-grid">
+                <div class="fee-item">
+                    <h4>Credit Card Payments</h4>
+                    <p class="fee-amount">3.5% processing fee</p>
+                    <p>per transaction</p>
+                </div>
+                <div class="fee-item">
+                    <h4>Bank Bill Pay</h4>
+                    <p class="fee-amount free-badge">100% FREE</p>
+                    <p>No additional charges</p>
+                </div>
+            </div>
+            <p style="margin-top: 2rem; color: #4a90e2; font-weight: bold;">We recommend Bank Bill Pay for the most cost-effective payment method.</p>
+        </section>
+
+        <!-- Online Payments Details -->
+        <section id="online-info" style="background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+            <h2 style="color: #333; margin-bottom: 2rem;">Online Payments</h2>
+            <p style="margin-bottom: 2rem; color: #666;">Our secure owner portal allows you to make payments, view your account balance, and access important documents. To access the portal, you'll need your account number and password provided to you.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                <div style="text-align: center;">
+                    <h4 style="color: #ff9500; margin-bottom: 0.5rem;">Step 1</h4>
+                    <p>Go to the "Access Portal" button above</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="color: #ff9500; margin-bottom: 0.5rem;">Step 2</h4>
+                    <p>Enter your account credentials</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="color: #ff9500; margin-bottom: 0.5rem;">Step 3</h4>
+                    <p>Navigate to the "Payments" section</p>
+                </div>
+                <div style="text-align: center;">
+                    <h4 style="color: #ff9500; margin-bottom: 0.5rem;">Step 4</h4>
+                    <p>Follow the instructions to submit your payment</p>
+                </div>
+            </div>
+
+            <h3 style="color: #333; margin-bottom: 1rem;">Portal Features</h3>
+            <ul style="color: #666; max-width: 600px; margin: 0 auto;">
+                <li>Secure payment processing</li>
+                <li>Account balance viewing</li>
+                <li>Payment history access</li>
+                <li>Document downloads</li>
+                <li>24/7 availability</li>
+            </ul>
+        </section>
+
+        <!-- Mail Payments Details -->
+        <section id="mail-info" style="background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+            <h2 style="color: #333; margin-bottom: 2rem;">Mail Payments</h2>
+            <p style="margin-bottom: 2rem; color: #666;">If you prefer to mail your payments, please send them to:</p>
+            
+            <div style="background: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 2rem;">
+                <h3 style="color: #ff9500; margin-bottom: 1rem;">Mailing Address</h3>
+                <p style="font-weight: bold; color: #333;">Manage369</p>
+                <p style="color: #666;">1400 Patriot Boulevard 357</p>
+                <p style="color: #666;">Glenview, IL 60026</p>
+            </div>
+            
+            <p style="margin-top: 2rem; color: #666;"><strong>Important:</strong> Please include your property address and account number on your check to ensure proper crediting to your account.</p>
+        </section>
+
+        <!-- Bill Pay Details -->
+        <section id="billpay-info" style="background: #f8f9fa; padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+            <h2 style="color: #333; margin-bottom: 2rem;">Setting Up Bill Pay</h2>
+            <p style="margin-bottom: 2rem; color: #666;">Bill Pay is a convenient way to manage your payments through your own bank's online banking platform. Follow these steps to set up recurring or one-time payments:</p>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;">
+                <div>
+                    <h3 style="color: #333; margin-bottom: 1rem;">Step-by-Step Instructions</h3>
+                    <ol style="color: #666; line-height: 1.8;">
+                        <li><strong>Access your bank's online banking portal</strong><br>Log into your bank's website or mobile app</li>
+                        <li><strong>Look for the "Bill Pay" or "Payments" section</strong><br>Usually found in the main navigation menu</li>
+                        <li><strong>Add a new payee using our information</strong><br>See the payee information in the box to the right</li>
+                        <li><strong>Schedule your payment</strong><br>Choose one-time or recurring payment options</li>
+                        <li><strong>Include reference information</strong><br>Add your property address and unit number in the memo field</li>
+                    </ol>
+                </div>
+                
+                <div style="background: white; padding: 2rem; border-radius: 10px;">
+                    <h3 style="color: #ff9500; margin-bottom: 1rem;">Payee Information</h3>
+                    <p style="margin-bottom: 1rem;"><strong>Payee Name:</strong><br>Your Association</p>
+                    <p style="margin-bottom: 1rem;"><strong>Mailing Address:</strong><br>1400 Patriot Boulevard 357<br>Glenview, IL 60026</p>
+                    <p style="margin-bottom: 1rem;"><strong>Reference Field:</strong><br>Include your property address and unit number</p>
+                    <p style="color: #4a90e2; font-weight: bold;">💡 Tip: Set up recurring payments to never miss a due date!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Help Section -->
+        <section style="text-align: center; padding: 2rem; background: linear-gradient(135deg, #4a90e2, #ff9500); border-radius: 15px; color: white;">
+            <h2 style="margin-bottom: 1rem;">Need Help with Your Payment?</h2>
+            <p style="margin-bottom: 2rem;">Our team is here to assist you with any payment questions or issues.</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="tel:+12246475621" class="btn-hero btn-secondary">Call (224) 647-5621</a>
+                <a href="mailto:service@manage369.com" class="btn-hero btn-secondary">Email Support</a>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Manage369</h3>
+            <p>Chicago Property Management Services</p>
+            <p>1400 Patriot Boulevard 357, Glenview, IL 60026</p>
+            <p>Phone: <a href="tel:+12246475621">(224) 647-5621</a> | Email: <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+            <p>Hours: Monday-Friday 9:00 AM - 5:00 PM</p>
+            
+            <div style="margin: 1rem 0;">
+                <a href="privacy-policy.html" style="margin: 0 1rem;">Privacy Policy</a>
+                <a href="terms-of-service.html" style="margin: 0 1rem;">Terms of Service</a>
+                <a href="legal-disclaimers.html" style="margin: 0 1rem;">Legal Disclaimers</a>
+                <a href="accessibility.html" style="margin: 0 1rem;">Accessibility</a>
+                <a href="sitemap.xml" style="margin: 0 1rem;">Sitemap</a>
+            </div>
+            
+            <div class="certifications">
+                <p>CAI National Member | IREM Certified | CCIM Designated | NAR Member | IDFPR Licensed</p>
+            </div>
+            
+            <p style="margin-top: 1rem;">&copy; 2024 Manage369. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Manage369",
+        "description": "Professional property management services for condominiums, HOAs, and townhomes in Chicago and North Shore suburbs.",
+        "url": "https://manage369.com",
+        "telephone": "+12246475621",
+        "email": "service@manage369.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "1400 Patriot Boulevard 357",
+            "addressLocality": "Glenview",
+            "addressRegion": "IL",
+            "postalCode": "60026",
+            "addressCountry": "US"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": "42.0697",
+            "longitude": "-87.7864"
+        },
+        "openingHours": "Mo-Fr 09:00-17:00",
+        "serviceArea": [
+            "Chicago, IL",
+            "Glenview, IL",
+            "Highland Park, IL",
+            "Evanston, IL",
+            "Wilmette, IL"
+        ]
+    }
+    </script>
+</body>
+</html>
+

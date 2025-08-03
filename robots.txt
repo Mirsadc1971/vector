@@ -1,0 +1,43 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://manage369.com/sitemap.xml
+
+# Allow all important pages
+Allow: /index.html
+Allow: /services.html
+Allow: /service-areas.html
+Allow: /contact.html
+Allow: /pay-dues.html
+
+# Allow all service pages
+Allow: /services/
+Allow: /services/condominium-management/
+Allow: /services/hoa-management/
+Allow: /services/townhome-management/
+Allow: /services/financial-management/
+Allow: /services/maintenance-coordination/
+Allow: /services/board-support/
+Allow: /services/administrative-services/
+Allow: /services/capital-project-management/
+Allow: /services/resident-relations/
+
+# Allow all neighborhood pages
+Allow: /property-management-*.html
+
+# Allow legal pages
+Allow: /privacy-policy.html
+Allow: /terms-of-service.html
+Allow: /legal-disclaimers.html
+Allow: /accessibility.html
+
+# Disallow test and temporary files
+Disallow: /test-*
+Disallow: /*.tmp
+Disallow: /temp/
+Disallow: /backup/
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+

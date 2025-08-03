@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financial Management & Reporting Services | Manage369</title>
+    <meta name="description" content="Chicago property financial management: budget development, monthly reporting, reserve studies, assessment collection, audit support & investment management services.">
+    
+    <!-- Service Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Financial Management & Reporting Services",
+      "description": "Professional financial management and reporting services for Chicago condominiums, HOAs, and townhomes. Expert budget planning, reserve studies, and transparent reporting.",
+      "provider": {
+        "@type": "Organization",
+        "name": "Manage369",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "1400 Patriot Boulevard 357",
+          "addressLocality": "Glenview",
+          "addressRegion": "IL",
+          "postalCode": "60026"
+        },
+        "telephone": "(224) 647-5621",
+        "email": "service@manage369.com"
+      },
+      "areaServed": [
+        "Chicago, IL",
+        "Glenview, IL", 
+        "Highland Park, IL",
+        "Evanston, IL",
+        "Wilmette, IL"
+      ],
+      "offers": {
+        "@type": "Offer",
+        "description": "Professional financial management services",
+        "priceRange": "$$"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Navigation Styles */
+        nav {
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #2c5aa0;
+            text-decoration: none;
+        }
+        
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-menu a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav-menu a:hover {
+            color: #ff6b35;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown-btn {
+            background: none;
+            border: none;
+            color: #333;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            padding: 1rem 0;
+            top: 100%;
+            left: 0;
+            border: 1px solid #eee;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-content a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: #333;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .dropdown-content a:hover {
+            background: #f8f9fa;
+            color: #ff6b35;
+        }
+        
+        .dropdown-section {
+            border-bottom: 1px solid #eee;
+            margin-bottom: 0.5rem;
+            padding-bottom: 0.5rem;
+        }
+        
+        .dropdown-section:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+        
+        .dropdown-header {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            padding: 0.5rem 1rem;
+            letter-spacing: 0.5px;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid;
+        }
+        
+        .btn-primary {
+            background: #ff6b35;
+            color: white;
+            border-color: #ff6b35;
+        }
+        
+        .btn-primary:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: #2c5aa0;
+            border-color: #2c5aa0;
+        }
+        
+        .btn-secondary:hover {
+            background: #2c5aa0;
+            color: white;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(44, 90, 160, 0.9), rgba(255, 107, 53, 0.8)), 
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f8f9fa" width="1200" height="600"/><g fill="%23e9ecef" opacity="0.3"><rect x="100" y="100" width="200" height="150" rx="10"/><rect x="350" y="150" width="180" height="120" rx="10"/><rect x="580" y="80" width="220" height="180" rx="10"/><rect x="850" y="120" width="200" height="140" rx="10"/><circle cx="200" cy="400" r="60"/><circle cx="500" cy="450" r="80"/><circle cx="800" cy="420" r="70"/><circle cx="1000" cy="380" r="50"/></g></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 120px 0 80px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Content Sections */
+        .section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c5aa0;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-left: 4px solid #ff6b35;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card h3 {
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .service-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .service-card li:before {
+            content: "✓";
+            color: #ff6b35;
+            font-weight: bold;
+            margin-right: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        /* Property Types Section */
+        .property-types {
+            background: #f8f9fa;
+        }
+        
+        .property-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .property-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .property-card:hover {
+            transform: translateY(-3px);
+        }
+        
+        .property-card h3 {
+            color: #2c5aa0;
+            margin-bottom: 1rem;
+            font-size: 1.4rem;
+        }
+        
+        .property-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+        
+        .property-card li {
+            padding: 0.3rem 0;
+            display: flex;
+            align-items: center;
+        }
+        
+        .property-card li:before {
+            content: "•";
+            color: #ff6b35;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        
+        .property-card .btn {
+            display: inline-block;
+            margin-top: 1rem;
+        }
+        
+        /* Stats Section */
+        .stats {
+            background: #2c5aa0;
+            color: white;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+        
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #ff6b35;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-item p {
+            font-size: 1.1rem;
+        }
+        
+        /* Benefits Section */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .benefit-item {
+            text-align: center;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .benefit-item h4 {
+            color: #2c5aa0;
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #ff6b35, #e55a2b);
+            color: white;
+            text-align: center;
+            padding: 60px 0;
+        }
+        
+        .cta-section h2 {
+            margin-bottom: 1rem;
+            font-size: 2.2rem;
+        }
+        
+        .cta-section p {
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .cta-section .btn {
+            background: white;
+            color: #ff6b35;
+            border-color: white;
+        }
+        
+        .cta-section .btn:hover {
+            background: #f8f9fa;
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+        
+        footer a {
+            color: #ff6b35;
+            text-decoration: none;
+        }
+        
+        footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .nav-menu {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .services-grid,
+            .property-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="/" class="logo">MANAGE369</a>
+            <ul class="nav-menu">
+                <li><a href="/">Home</a></li>
+                <li class="dropdown">
+                    <button class="dropdown-btn">Services ▼</button>
+                    <div class="dropdown-content">
+                        <div class="dropdown-section">
+                            <div class="dropdown-header">Property Types</div>
+                            <a href="/services/condominium-management/">Condominium Management</a>
+                            <a href="/services/hoa-management/">HOA Management</a>
+                            <a href="/services/townhome-management/">Townhome Management</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <div class="dropdown-header">Service Offerings</div>
+                            <a href="/services/financial-management/">Financial Management</a>
+                            <a href="/services/maintenance-coordination/">Maintenance Coordination</a>
+                            <a href="/services/board-support/">Board Support</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="/service-areas.html">Service Areas</a></li>
+                <li><a href="../../contact.html">Contact</a></li>
+            </ul>
+            <div class="cta-buttons">
+                <a href="tel:2246475621" class="btn btn-secondary">Call (224) 647-5621</a>
+                <a href="../../contact.html" class="btn btn-primary">Get Quote</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Financial Management & Reporting</h1>
+            <p>Comprehensive financial management services for Chicago property associations. From budget preparation to reserve planning, we provide the financial oversight and transparency your board needs.</p>
+            <div class="cta-buttons">
+                <a href="../../contact.html" class="btn btn-primary">Request Financial Analysis</a>
+                <a href="tel:2246475621" class="btn btn-secondary">Call (224) 647-5621</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Comprehensive Financial Management Services</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional financial oversight tailored for condominiums, HOAs, and townhome associations.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Budget Development & Planning</h3>
+                    <p>Strategic budget development with board approval process and variance analysis.</p>
+                    <ul>
+                        <li>Comprehensive expense forecasting</li>
+                        <li>Revenue projection and assessment planning</li>
+                        <li>Capital expenditure planning</li>
+                        <li>Board presentation and approval process</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Monthly Financial Reporting</h3>
+                    <p>Detailed monthly reporting with variance analysis and trend identification.</p>
+                    <ul>
+                        <li>Balance sheet and income statements</li>
+                        <li>Budget vs. actual variance analysis</li>
+                        <li>Cash flow statements and projections</li>
+                        <li>Delinquency reports and collection status</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Reserve Studies & Capital Planning</h3>
+                    <p>Professional reserve studies and long-term capital planning with expert guidance.</p>
+                    <ul>
+                        <li>Reserve study coordination and updates</li>
+                        <li>Long-term capital planning</li>
+                        <li>Funding level recommendations</li>
+                        <li>Investment strategy development</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Assessment Collection</h3>
+                    <p>Efficient collection processes with delinquency management and legal coordination.</p>
+                    <ul>
+                        <li>Monthly assessment billing and collection</li>
+                        <li>Delinquency management and follow-up</li>
+                        <li>Legal collection coordination</li>
+                        <li>Payment plan administration</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Audit Support & Compliance</h3>
+                    <p>Complete audit support with CPA liaison and compliance management.</p>
+                    <ul>
+                        <li>CPA selection and coordination</li>
+                        <li>Audit preparation and documentation</li>
+                        <li>Financial record organization</li>
+                        <li>Audit findings implementation</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Investment & Banking Management</h3>
+                    <p>Strategic investment management and banking relationship coordination.</p>
+                    <ul>
+                        <li>Investment policy development</li>
+                        <li>Banking relationship management</li>
+                        <li>CD and investment coordination</li>
+                        <li>Risk assessment and recommendations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Property Types Section -->
+    <section class="section property-types">
+        <div class="container">
+            <h2 class="section-title">Financial Management by Property Type</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Customized financial services tailored to the unique needs of each property type.</p>
+            
+            <div class="property-grid">
+                <div class="property-card">
+                    <h3>🏢 Condominium Financial Management</h3>
+                    <ul>
+                        <li>Complex building system budgeting</li>
+                        <li>Elevator and mechanical reserve planning</li>
+                        <li>High-rise maintenance cost analysis</li>
+                        <li>Unit owner assessment coordination</li>
+                        <li>Capital improvement financing</li>
+                        <li>Insurance deductible management</li>
+                    </ul>
+                    <a href="/services/condominium-management/" class="btn btn-primary">Learn More About Condo Management →</a>
+                </div>
+                
+                <div class="property-card">
+                    <h3>🏘️ HOA Financial Management</h3>
+                    <ul>
+                        <li>Common area maintenance budgeting</li>
+                        <li>Landscaping and grounds cost planning</li>
+                        <li>Amenity operation and maintenance</li>
+                        <li>Covenant enforcement cost management</li>
+                        <li>Community event budgeting</li>
+                        <li>Environmental compliance costs</li>
+                    </ul>
+                    <a href="/services/hoa-management/" class="btn btn-primary">Learn More About HOA Management →</a>
+                </div>
+                
+                <div class="property-card">
+                    <h3>🏠 Townhome Financial Management</h3>
+                    <ul>
+                        <li>Exterior maintenance cost planning</li>
+                        <li>Roof and gutter system coordination</li>
+                        <li>Shared utility expense management</li>
+                        <li>Driveway and walkway upkeep</li>
+                        <li>Shared amenity cost allocation</li>
+                        <li>Individual vs. common expense tracking</li>
+                    </ul>
+                    <a href="/services/townhome-management/" class="btn btn-primary">Learn More About Townhome Management →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="section stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>17+</h3>
+                    <p>Years Experience</p>
+                    <small>Managing Chicago properties with deep local market knowledge</small>
+                </div>
+                <div class="stat-item">
+                    <h3>Licensed</h3>
+                    <p>& Insured</p>
+                    <small>Fully licensed with comprehensive insurance coverage</small>
+                </div>
+                <div class="stat-item">
+                    <h3>Board</h3>
+                    <p>Focused</p>
+                    <small>Dedicated support to help boards fulfill fiduciary duties</small>
+                </div>
+                <div class="stat-item">
+                    <h3>24/7</h3>
+                    <p>Support</p>
+                    <small>Emergency response and financial support</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Why Choose Our Financial Management?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h4>📊 Transparent Reporting</h4>
+                    <p>Clear, detailed monthly reports that help boards understand their financial position.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>💰 Strategic Planning</h4>
+                    <p>Strategic reserve studies and funding recommendations to protect long-term assets.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🏦 Professional Collection</h4>
+                    <p>Streamlined assessment collection with professional delinquency management.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>✅ Audit Coordination</h4>
+                    <p>Complete audit coordination and regulatory compliance management.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>📈 Improved Cash Flow</h4>
+                    <p>Enhanced property values and financial stability through proper management.</p>
+                </div>
+                <div class="benefit-item">
+                    <h4>🛡️ Risk Reduction</h4>
+                    <p>Reduced board liability and fiduciary risk through professional oversight.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Areas Served Section -->
+    <section class="section property-types">
+        <div class="container">
+            <h2 class="section-title">Areas Served</h2>
+            <p style="text-align: center; margin-bottom: 2rem;">Professional financial management services throughout Chicago and North Shore communities.</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: center;">
+                <a href="/property-management-glenview.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Glenview</a>
+                <a href="/property-management-highland-park.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Highland Park</a>
+                <a href="/property-management-evanston.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Evanston</a>
+                <a href="/property-management-wilmette.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Wilmette</a>
+                <a href="/property-management-winnetka.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Winnetka</a>
+                <a href="/property-management-glencoe.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Glencoe</a>
+                <a href="/property-management-gold-coast.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Gold Coast</a>
+                <a href="/property-management-lincoln-park.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Lincoln Park</a>
+                <a href="/property-management-lakeview.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Lakeview</a>
+                <a href="/property-management-river-north.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">River North</a>
+                <a href="/property-management-northbrook.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Northbrook</a>
+                <a href="/property-management-lake-forest.html" style="color: #2c5aa0; text-decoration: none; padding: 1rem; background: white; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">Lake Forest</a>
+            </div>
+        </div>
+    </section>
+
+
+    <- Email: Areas Served Section -->
+    <section class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Financial Management Areas We Serve</h2>
+            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional financial management services throughout Chicago and the North Shore suburbs.</p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+                <a href="../../property-management-glenview.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Glenview Financial Management</a>
+                <a href="../../property-management-northbrook.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Northbrook Financial Management</a>
+                <a href="../../property-management-highland-park.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Highland Park Financial Management</a>
+                <a href="../../property-management-lake-forest.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lake Forest Financial Management</a>
+                <a href="../../property-management-wilmette.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Wilmette Financial Management</a>
+                <a href="../../property-management-winnetka.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Winnetka Financial Management</a>
+                <a href="../../property-management-glencoe.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Glencoe Financial Management</a>
+                <a href="../../property-management-evanston.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Evanston Financial Management</a>
+                <a href="../../property-management-gold-coast.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Gold Coast Financial Management</a>
+                <a href="../../property-management-river-north.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">River North Financial Management</a>
+                <a href="../../property-management-lincoln-park.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lincoln Park Financial Management</a>
+                <a href="../../property-management-lakeview.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lakeview Financial Management</a>
+
+                <a href="../../property-management-hawthorn-woods.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Hawthorn Woods Financial Management</a>
+                <a href="../../property-management-kildeer.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Kildeer Financial Management</a>
+                <a href="../../property-management-lake-zurich.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lake Zurich Financial Management</a>            </div>
+            
+            <div style="text-align: center;">
+                <a href="../../service-areas.html" class="btn btn-secondary">View All Service Areas</a>
+            </div>
+        </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready for Professional Financial Management?</h2>
+            <p>Protect your community's financial future with expert financial management and reporting services.</p>
+            <a href="../../contact.html" class="btn">Get Started Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>Manage369</strong> - Chicago Property Management Services</p>
+            <p>1400 Patriot Boulevard 357, Glenview, IL 60026</p>
+            <p>Phone: <a href="tel:2246475621">(224) 647-5621</a> | Email: <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+            <p>Hours: Monday-Friday 9:00 AM - 5:00 PM</p>
+            <p style="margin-top: 1rem;">
+                <strong>Professional Certifications:</strong> CAI National Member | IREM Certified | CCIM Designated | NAR Member | IDFPR Licensed
+            </p>
+            <p style="margin-top: 1rem;">
+                <a href="/privacy-policy.html">Privacy Policy</a> | 
+                <a href="/terms-of-service.html">Terms of Service</a> | 
+                <a href="/legal-disclaimers.html">Legal Disclaimers</a> | 
+                <a href="/accessibility.html">Accessibility</a> | 
+                <a href="/sitemap.xml">Sitemap</a>
+            </p>
+            <p style="margin-top: 1rem;">&copy; 2024 Manage369. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+

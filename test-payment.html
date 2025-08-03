@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Test | Manage369</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 2rem; 
+            max-width: 800px; 
+            margin: 0 auto; 
+        }
+        .test-section { 
+            background: #f5f5f5; 
+            padding: 2rem; 
+            margin: 2rem 0; 
+            border-radius: 10px; 
+        }
+        .btn { 
+            display: inline-block; 
+            padding: 15px 30px; 
+            background: #ff9500; 
+            color: white; 
+            text-decoration: none; 
+            border-radius: 5px; 
+            margin: 10px; 
+        }
+        .btn:hover { background: #e68500; }
+        .success { color: green; font-weight: bold; }
+        .info { color: #666; }
+    </style>
+</head>
+<body>
+    <h1>🧪 Payment Functionality Test</h1>
+    
+    <div class="test-section">
+        <h2>Pay Dues Button Test</h2>
+        <p class="info">Click the button below to test the AppFolio portal link:</p>
+        
+        <!-- MAIN PAYMENT BUTTON - SAME AS ON PAY-DUES.HTML -->
+        <a href="https://stellarpropertygrp.appfolio.com/oportal/users/log_in" 
+           class="btn" 
+           target="_blank">🔗 Test Pay Dues Portal</a>
+           
+        <p class="success">✅ If this button opens the AppFolio login page, your payment system is working!</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Navigation Test</h2>
+        <p class="info">Test navigation to main pages:</p>
+        
+        <a href="index.html" class="btn">🏠 Homepage</a>
+        <a href="pay-dues.html" class="btn">💳 Pay Dues Page</a>
+        <a href="services.html" class="btn">🔧 Services</a>
+        <a href="contact.html" class="btn">📞 Contact</a>
+        
+        <p class="success">✅ All navigation links should work properly</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Image Test</h2>
+        <p class="info">Testing if your property images load:</p>
+        
+        <img src="images/manage369livingroomskokie.jpg" 
+             alt="Living Room" 
+             style="max-width: 300px; border-radius: 10px; margin: 10px;">
+             
+        <img src="images/manstandingmanage369.jpg" 
+             alt="Team Photo" 
+             style="max-width: 300px; border-radius: 10px; margin: 10px;">
+             
+        <p class="success">✅ If you see images above, your image system is working!</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>Contact Information Test</h2>
+        <p class="info">Current contact details:</p>
+        
+        <p><strong>Phone:</strong> <a href="tel:2246475621">(224) 647-5621</a></p>
+        <p><strong>Email:</strong> <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+        <p><strong>Address:</strong> 5107 North Western Ave Suite 1S, Chicago, IL 60625</p>
+        
+        <p class="success">✅ Click phone/email links to test functionality</p>
+    </div>
+    
+    <div class="test-section">
+        <h2>🔧 How to Edit</h2>
+        <p class="info">To customize your website:</p>
+        <ol>
+            <li><strong>Read EDITING_GUIDE.md</strong> - Complete instructions</li>
+            <li><strong>Edit HTML files</strong> - Use any text editor (Notepad, VS Code, etc.)</li>
+            <li><strong>Test locally</strong> - Open HTML files in your browser</li>
+            <li><strong>Deploy</strong> - Upload to Netlify or your hosting provider</li>
+        </ol>
+    </div>
+    
+    <div class="test-section">
+        <h2>🚨 Troubleshooting</h2>
+        <p><strong>Pay Dues button not working?</strong></p>
+        <ul>
+            <li>Check if it opens: https://stellarpropertygrp.appfolio.com/oportal/users/log_in</li>
+            <li>Make sure popup blockers are disabled</li>
+            <li>Try right-click → "Open in new tab"</li>
+        </ul>
+        
+        <p><strong>Images not showing?</strong></p>
+        <ul>
+            <li>Verify files are in the "images/" folder</li>
+            <li>Check file names match exactly (case-sensitive)</li>
+        </ul>
+    </div>
+    
+    <p style="text-align: center; margin-top: 3rem;">
+        <a href="index.html" class="btn">← Back to Main Website</a>
+    </p>
+</body>
+</html>
+

@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="U    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Manage369 for professional property management services in Chicago and North Shore. Free consultations available. Call (224) 647-5621 or email today.">
+    <title>Contact Chicago North Shore Property Management | Manage369</title>
+    
+    <!-- FAQ Schema for Contact Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How can I contact Manage369?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can contact us by phone at (224) 647-5621, email at service@manage369.com, or visit our office at 1400 Patriot Boulevard 357, Glenview, IL 60026. Our business hours are Monday-Friday 9:00 AM - 5:00 PM."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer free consultations?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide free consultations for property management services. Contact us to discuss your condominium, HOA, or townhome management needs and receive a customized proposal."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your emergency contact information?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For emergency maintenance issues, call our 24/7 emergency hotline at (224) 647-5621. We provide round-the-clock emergency response for all managed properties in Chicago and North Shore areas."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly do you respond to inquiries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We typically respond to all inquiries within 24 hours during business hours. For urgent matters, call our main line at (224) 647-5621 for immediate assistance."
+          }
+        }
+      ]
+    }
+    </script><style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #4a90e2;
+            background: #f0f0f0;
+        }
+        
+        .nav a.active {
+            background: #ff9500;
+            color: white;
+        }
+        
+        .phone {
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .phone:hover {
+            background: #357abd;
+        }
+        
+        .hero {
+            height: 70vh;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(74, 144, 226, 0.8)), 
+                        url('https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=2126&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn-primary {
+            background: #ff9500;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+        
+        .btn-primary:hover {
+            background: #e6850e;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            transition: all 0.3s;
+            background: transparent;
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+        
+        .contact-section {
+            padding: 5rem 2rem;
+            background: #f8fafc;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+        
+        .section-header p {
+            font-size: 1.2rem;
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-bottom: 4rem;
+        }
+        
+        .contact-info {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-info h3 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: #f8fafc;
+            border-radius: 0.8rem;
+            border-left: 4px solid #ff9500;
+        }
+        
+        .contact-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: #ff9500;
+            min-width: 40px;
+        }
+        
+        .contact-details h4 {
+            color: #1e3a8a;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .contact-details p {
+            color: #666;
+            margin-bottom: 0.3rem;
+        }
+        
+        .contact-details a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+        
+        .contact-form {
+            background: white;
+            padding: 3rem;
+            border-radius: 1rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .contact-form h3 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: #333;
+        }
+        
+        .form-group input,
+        .form-group textarea,
+        .form-group select {
+            width: 100%;
+            padding: 1rem;
+            border: 2px solid #e5e7eb;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: #ff9500;
+        }
+        
+        .office-locations {
+            background: white;
+            padding: 4rem 2rem;
+        }
+        
+        .offices-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+        
+        .office-card {
+            background: #f8fafc;
+            padding: 2.5rem;
+            border-radius: 1rem;
+            text-align: center;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s;
+        }
+        
+        .office-card:hover {
+            border-color: #ff9500;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+        
+        .office-card h4 {
+            color: #1e3a8a;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .office-card p {
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+        
+        .office-card .phone-number {
+            color: #ff9500;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+        
+        .why-choose {
+            background: #1e3a8a;
+            color: white;
+            padding: 4rem 2rem;
+        }
+        
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 1rem;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.15);
+            transform: translateY(-5px);
+        }
+        
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: #ff9500;
+        }
+        
+        .feature-card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card p {
+            color: #b8c5d1;
+        }
+        
+        .emergency-section {
+            background: #dc2626;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .emergency-section h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .emergency-section p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .emergency-phone {
+            background: white;
+            color: #dc2626;
+            padding: 1rem 2rem;
+            border-radius: 0.5rem;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.2rem;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+        
+        .emergency-phone:hover {
+            background: #f8f9fa;
+            transform: scale(1.05);
+        }
+        
+        /* FOOTER STYLES */
+        .footer {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-section h3 {
+            color: #ffffff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #ff9500;
+            padding-bottom: 0.5rem;
+            display: inline-block;
+        }
+
+        .footer-section p {
+            color: #b8c5d1;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-section ul li a {
+            color: #b8c5d1;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #ff9500;
+        }
+
+        .footer-contact-info {
+            margin-bottom: 1rem;
+        }
+
+        .footer-contact-info strong {
+            color: #ffffff;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .footer-contact-info span {
+            color: #b8c5d1;
+        }
+
+        .office-location {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+        }
+
+        .office-location h4 {
+            color: #ff9500;
+            margin-bottom: 0.5rem;
+            font-size: 1rem;
+        }
+
+        .certifications {
+            text-align: center;
+            padding: 2rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            margin: 2rem 0;
+        }
+
+        .certifications h3 {
+            margin-bottom: 1.5rem;
+        }
+
+        .cert-badges {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .cert-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .cert-badge span {
+            display: block;
+            font-size: 0.9rem;
+            color: #b8c5d1;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer-bottom p {
+            color: #b8c5d1;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #b8c5d1;
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: #ff9500;
+        }
+
+        .footer-emergency-contact {
+            background: #c0392b;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin-top: 1rem;
+        }
+
+        .footer-emergency-contact h4 {
+            color: #ffffff;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-emergency-contact p {
+            color: #ffffff;
+            margin: 0;
+            font-weight: bold;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .offices-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .cert-badges {
+                gap: 1rem;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">MANAGE369</a>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="service-areas.html">Service Areas</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="pay-dues.html">Pay Dues</a>
+        </nav>
+        <a href="tel:2246475621" class="phone">Call (224) 647-5621</a>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact Us</h1>
+            <p>Ready to experience professional property management? Get in touch with Chicago's premier property management team today.</p>
+            <div class="hero-buttons">
+                <a href="#contact-form" class="btn-primary">Request a Proposal</a>
+                <a href="tel:2246475621" class="btn-secondary">Call (224) 647-5621</a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch</h2>
+                <p>We're here to help with all your property management needs. Contact us today for a free consultation.</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:2246475621">(224) 647-5621</a></p>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                            <p>24/7 Emergency Response Available</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:service@manage369.com">service@manage369.com</a></p>
+                            <p>We respond to all emails within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🏢</div>
+                        <div class="contact-details">
+                            <h4>Service Areas</h4>
+                            <p>Chicago & North Shore Suburbs</p>
+                            <p>Serving 36+ premium communities</p>
+                            <p><a href="service-areas.html">View All Service Areas</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">⭐</div>
+                        <div class="contact-details">
+                            <h4>Our Expertise</h4>
+                            <p>50+ Properties Managed</p>
+                            <p>2,450+ Doors Under Management</p>
+                            <p>17+ Years of Experience</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form" id="contact-form">
+                    <h3>Request a Proposal</h3>
+                    
+                    <form action="mailto:service@manage369.com" method="post" enctype="text/plain">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="first-name" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="last-name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="property-type">Property Type *</label>
+                            <select id="property-type" name="property-type" required>
+                                <option value="">Select Property Type</option>
+                                <option value="condominium">Condominium Association</option>
+                                <option value="hoa">Homeowners Association (HOA)</option>
+                                <option value="townhome">Townhome Community</option>
+                                <option value="mixed-use">Mixed-Use Development</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Property Location *</label>
+                            <input type="text" id="location" name="location" placeholder="e.g., Gold Coast, Chicago" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="units">Number of Units</label>
+                            <select id="units" name="units">
+                                <option value="">Select Number of Units</option>
+                                <option value="1-10">1-10 Units</option>
+                                <option value="11-25">11-25 Units</option>
+                                <option value="26-50">26-50 Units</option>
+                                <option value="51-100">51-100 Units</option>
+                                <option value="100+">100+ Units</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="services">Services Needed</label>
+                            <select id="services" name="services">
+                                <option value="">Select Primary Service</option>
+                                <option value="full-management">Full Property Management</option>
+                                <option value="financial-only">Financial Management Only</option>
+                                <option value="consulting">Consulting Services</option>
+                                <option value="transition">Management Transition</option>
+                                <option value="other">Other Services</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your property management needs, current challenges, or any specific questions you have..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary" style="width: 100%;">Send Request</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    
+
+    
+    <section class="emergency-section">
+        <div class="container">
+            <h3>🚨 Emergency Maintenance Hotline</h3>
+            <p>For urgent maintenance issues outside business hours</p>
+            <a href="tel:2246475621" class="emergency-phone">Call (224) 647-5621</a>
+        </div>
+    </section>
+
+    <!-- SIMPLE FOOTER CSS -->
+    <style>
+    .simple-footer {
+        background: #2c3e50;
+        color: #ffffff;
+        padding: 2rem 0;
+        text-align: center;
+        margin-top: 2rem;
+    }
+
+    .simple-footer-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .simple-footer h3 {
+        color: #ffffff;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .simple-footer p {
+        color: #b8c5d1;
+        margin-bottom: 0.5rem;
+    }
+
+    .simple-footer a {
+        color: #ff9500;
+        text-decoration: none;
+    }
+
+    .simple-footer a:hover {
+        text-decoration: underline;
+    }
+    </style>
+
+    <!-- SIMPLE FOOTER HTML -->
+    <footer class="simple-footer">
+        <div class="simple-footer-content">
+            <h3>Manage369</h3>
+            <p>Chicago Property Management Services</p>
+            <p>Phone: <a href="tel:2246475621">(224) 647-5621</a> | Email: <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+            <p><strong>Professional Certifications:</strong> CAI National Member | IREM Certified | CCIM Designated | NAR Member | IDFPR Licensed</p>
+            <p>
+                <a href="privacy-policy.html">Privacy Policy</a> | 
+                <a href="terms-of-service.html">Terms of Service</a> | 
+                <a href="legal-disclaimers.html">Legal Disclaimers</a> | 
+                <a href="accessibility.html">Accessibility</a> | 
+                <a href="sitemap.html">Sitemap</a>
+            </p>
+            <p>© 2025 Manage369. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
