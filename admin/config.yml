@@ -1,0 +1,66 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "index.html"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string", default: "Chicago North Shore Property Management | Condominium & HOA Services | Manage369"}
+          - {label: "Meta Description", name: "description", widget: "text", default: "Expert property management services for condominiums, HOAs, and townhomes in Chicago and North Shore suburbs. 17+ years experience."}
+          - {label: "Company Name", name: "company_name", widget: "string", default: "Manage369"}
+          - {label: "Phone Number", name: "phone", widget: "string", default: "(224) 647-5621"}
+          - {label: "Email", name: "email", widget: "string", default: "service@manage369.com"}
+          - {label: "Address", name: "address", widget: "text", default: "1400 Patriot Boulevard 357, Glenview"}
+          - {label: "Business Hours", name: "hours", widget: "text", default: "Monday to Friday, 9 AM to 5 PM"}
+          
+      - label: "Contact Page"
+        name: "contact"
+        file: "contact.html"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string", default: "Contact Chicago North Shore Property Management | Manage369"}
+          - {label: "Contact Phone", name: "phone", widget: "string", default: "(224) 647-5621"}
+          - {label: "Contact Email", name: "email", widget: "string", default: "service@manage369.com"}
+          - {label: "Office Address", name: "address", widget: "text", default: "1400 Patriot Boulevard 357, Glenview"}
+          - {label: "Emergency Hotline", name: "emergency_phone", widget: "string", default: "(224) 647-5621"}
+          - {label: "Free Consultation Text", name: "consultation_text", widget: "text", default: "Yes, we provide free consultations for property management services. Contact us to discuss your condominium, HOA, or townhome management needs."}
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    files:
+      - label: "Homepage"
+        name: "homepage"
+        file: "index.html"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string", default: "Chicago North Shore Property Management | Condominium & HOA Services | Manage369"}
+          - {label: "Meta Description", name: "description", widget: "text", default: "Expert property management services for condominiums, HOAs, and townhomes in Chicago and North Shore suburbs. 17+ years experience."}
+          - {label: "Company Name", name: "company_name", widget: "string", default: "Manage369"}
+          - {label: "Phone Number", name: "phone", widget: "string", default: "(224) 647-5621"}
+          - {label: "Email", name: "email", widget: "string", default: "service@manage369.com"}
+          - {label: "Address", name: "address", widget: "text", default: "1400 Patriot Boulevard 357, Glenview"}
+          - {label: "Business Hours", name: "hours", widget: "text", default: "Monday to Friday, 9 AM to 5 PM"}
+          
+      - label: "Contact Page"
+        name: "contact"
+        file: "contact.html"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string", default: "Contact Chicago North Shore Property Management | Manage369"}
+          - {label: "Contact Phone", name: "phone", widget: "string", default: "(224) 647-5621"}
+          - {label: "Contact Email", name: "email", widget: "string", default: "service@manage369.com"}
+          - {label: "Office Address", name: "address", widget: "text", default: "1400 Patriot Boulevard 357, Glenview"}
+          - {label: "Emergency Hotline", name: "emergency_phone", widget: "string", default: "(224) 647-5621"}
+          - {label: "Free Consultation Text", name: "consultation_text", widget: "text", default: "Yes, we provide free consultations for property management services. Contact us to discuss your condominium, HOA, or townhome management needs."}
