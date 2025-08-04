@@ -303,6 +303,40 @@
             color: white;
         }
         
+        /* Mobile Navigation */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem;
+            z-index: 1001;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            text-decoration: none;
+        }
+        
         /* Services Dropdown Menu */
         .services-dropdown {
             position: relative;
@@ -520,6 +554,49 @@
         
         /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .phone {
+                display: none;
+            }
+            
+            .hero {
+                height: 80vh;
+                padding: 2rem 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+                margin-bottom: 1rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .btn {
+                width: 100%;
+                max-width: 280px;
+                text-align: center;
+            }
+            
             .footer-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
@@ -533,6 +610,35 @@
                 flex-direction: column;
                 gap: 1rem;
             }
+            
+            /* FAQ Section Mobile */
+            section[style*="grid-template-columns"] {
+                padding: 2rem 1rem !important;
+            }
+            
+            section[style*="grid-template-columns"] > div > div {
+                grid-template-columns: 1fr !important;
+                gap: 1rem !important;
+            }
+            
+            /* Service Cards Mobile */
+            section[style*="padding: 4rem 2rem"] {
+                padding: 2rem 1rem !important;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .logo {
+                font-size: 1.3rem;
+            }
+            
+            .header {
+                padding: 0.75rem;
+            }
         }
     </style>
 </head>
@@ -540,6 +646,9 @@
     <header class="header">
         <!-- COMPANY LOGO/NAME - Edit this to change your company name -->
         <div class="logo">MANAGE369</div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
         
         <!-- MAIN NAVIGATION MENU - Add/remove menu items here -->
         <nav class="nav">
@@ -568,6 +677,16 @@
         <!-- PHONE BUTTON - Edit phone number here -->
         <!-- PHONE NUMBER - Replace with your phone number -->
         <a href="tel:2246475621" class="phone">Call (224) 647-5621</a>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="service-areas.html">Service Areas</a>
+            <a href="pay-dues.html">Pay Dues</a>
+            <a href="contact.html">Contact</a>
+            <a href="tel:2246475621" style="background: #4a90e2; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (224) 647-5621</a>
+        </div>
     </header>
     
     <section class="hero">
@@ -677,5 +796,22 @@
             <p>© 2025 Manage369. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!mobileMenu.contains(event.target) && !toggle.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
