@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evanston Property Management Services | Northwestern University District Specialists | Manage369</title>
+    <meta name="description" content="Professional property management in Evanston's Northwestern University district. 18+ years serving diverse communities, academic housing, lakefront properties. Call (224) 647-5621.">
+    <meta name="keywords" content="Evanston property management, Northwestern University property management, Evanston HOA management, university district property services, Evanston condominium management">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #4a90e2;
+            background: #f0f0f0;
+        }
+        
+        .phone {
+            background: #4a90e2;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(74,144,226,0.7), rgba(52,152,219,0.7)), 
+                        url('images/manage369livingroomskokie.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.7);
+        }
+        
+        .cta-button {
+            background: #4a90e2;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .community-highlight {
+            background: linear-gradient(135deg, #663399, #522d80);
+            color: white;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .community-highlight h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .community-highlight p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .highlight-contact {
+            background: rgba(255,255,255,0.15);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+        
+        .highlight-contact a {
+            color: white;
+            font-size: 1.4rem;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 4rem 0;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 5px solid #663399;
+            transition: transform 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .service-card h3 {
+            color: #663399;
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .service-card a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .stats-section {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #663399;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 0.5rem;
+            font-size: 0.9rem;
+        }
+        
+        .content h2 {
+            color: #4a90e2;
+            font-size: 2.2rem;
+            margin: 3rem 0 2rem 0;
+            text-align: center;
+        }
+        
+        .content h3 {
+            color: #663399;
+            font-size: 1.6rem;
+            margin: 2rem 0 1rem 0;
+        }
+        
+        .content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .content a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .content a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            border-left: 8px solid #4a90e2;
+        }
+        
+        .testimonial {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .testimonial blockquote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .testimonial cite {
+            color: #4a90e2;
+            font-weight: bold;
+        }
+        
+        .contact-section {
+            background: #4a90e2;
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-section a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .footer h3 {
+            color: #663399;
+            margin-bottom: 1rem;
+        }
+        
+        .footer p {
+            color: #b8c5d1;
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer a {
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.2rem;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="logo">MANAGE369</a>
+        
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="service-areas.html">Service Areas</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        
+        <a href="tel:2246475621" class="phone">Call (224) 647-5621</a>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Evanston Property Management Services</h1>
+            <p>Northwestern University District Specialists | Diverse Community Experts | 18+ Years Local Experience</p>
+            <a href="tel:2246475621" class="cta-button">Schedule Your Consultation</a>
+        </div>
+    </section>
+    
+    <section class="content">
+        <div class="community-highlight">
+            <h2>🎓 Proudly Serving Evanston's University Community</h2>
+            <p>For over 18 years, Manage369 has been honored to serve the diverse communities of Evanston, from Northwestern University district properties to lakefront residences along Lake Michigan. Our deep understanding of this vibrant city's unique blend of academic excellence, cultural diversity, and community spirit guides our approach to property management in this special North Shore destination.</p>
+            <div class="highlight-contact">
+                <p><strong>Connect with Our Evanston Team:</strong><br>
+                <a href="tel:2246475621">(224) 647-5621</a></p>
+            </div>
+            <p>From the historic Grosse Point Lighthouse to the bustling downtown and the university campus, we appreciate what makes Evanston a premier place to live, work, and study.</p>
+        </div>
+        
+        <h2>Professional Property Management in Evanston</h2>
+        
+        <p>Evanston's distinctive character as both a premier university city and diverse lakefront community requires property management services that understand and celebrate its rich academic heritage, cultural diversity, and strong community values. Since 2007, Manage369 has proudly served Evanston's residential properties, from faculty housing near Northwestern's campus to family neighborhoods throughout the city and luxury lakefront buildings along the shoreline.</p>
+        
+        <p>As long-time partners in the Evanston community, we understand the unique dynamics that make this city special - from the academic calendar's influence on housing needs to the vibrant arts scene, from the diverse neighborhoods each with their own character to the excellent schools and community programs that attract families here. This local insight enables us to provide <a href="services/hoa-management/index.html">HOA management</a> and <a href="services/condominium-management/index.html">condominium management</a> services that truly serve Evanston's best interests while honoring the values that make this community thrive.</p>
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>🏫 University District Property Management</h3>
+                <p>Specialized management for properties serving Northwestern University faculty, staff, and graduate students. We understand the unique needs of academic communities, from seasonal considerations to international residents requiring specialized support.</p>
+                <a href="services/condominium-management/index.html">University Area Services →</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>🏡 Neighborhood HOA Management</h3>
+                <p>Comprehensive homeowners association management throughout Evanston's diverse neighborhoods. Our local knowledge helps maintain community character while ensuring efficient operations and strong property values.</p>
+                <a href="services/hoa-management/index.html">HOA Management →</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>🏢 Lakefront Condominium Services</h3>
+                <p>Expert management of Evanston's lakefront properties, understanding the unique maintenance needs and lifestyle expectations of Lake Michigan shoreline communities.</p>
+                <a href="services/condominium-management/index.html">Lakefront Services →</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>💼 Financial Management</h3>
+                <p>Professional financial oversight with transparent reporting tailored to Evanston's community standards. Our local vendor relationships help optimize costs while maintaining quality service delivery.</p>
+                <a href="services/financial-management/index.html">Financial Services →</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>🔧 Maintenance Coordination</h3>
+                <p>Established relationships with trusted local contractors who understand Evanston properties and municipal requirements. From routine maintenance to major improvements, we ensure quality work that respects community standards.</p>
+                <a href="services/maintenance-coordination/index.html">Maintenance Services →</a>
+            </div>
+            
+            <div class="service-card">
+                <h3>🤝 Community Relations</h3>
+                <p>Professional resident relations services that honor Evanston's diversity and community spirit. We help foster the neighborly atmosphere that makes Evanston neighborhoods so special.</p>
+                <a href="services/resident-relations/index.html">Community Relations →</a>
+            </div>
+        </div>
+        
+        <div class="stats-section">
+            <h2>Our Evanston Community Record</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">18+</div>
+                    <div class="stat-label">Years Serving Evanston</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$100M+</div>
+                    <div class="stat-label">Local Assets Under Management</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Communities Served</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2,450+</div>
+                    <div class="stat-label">Units Managed</div>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Understanding Evanston's Unique Community Dynamics</h3>
+        
+        <p>Evanston's identity as home to Northwestern University creates distinctive property management considerations that extend far beyond typical residential communities. The academic calendar influences everything from occupancy patterns to maintenance scheduling, while the international character of the university community brings unique communication needs and cultural considerations to resident relations.</p>
+        
+        <p>Our experience managing properties throughout Evanston has taught us to appreciate the city's remarkable diversity - from young professionals in downtown high-rises to faculty families in tree-lined neighborhoods, from graduate students in university-area housing to long-term residents who've called Evanston home for decades. This understanding shapes our approach to <a href="services/resident-relations/index.html">resident relations</a>, ensuring our communication and service delivery respects and celebrates the community's multicultural character.</p>
+        
+        <div class="highlight-box">
+            <h3>Local Expertise That Makes a Difference</h3>
+            
+            <p><strong>University Calendar Coordination:</strong> We understand how Northwestern's academic schedule affects property operations, from move-in periods to sabbatical housing needs, ensuring seamless service throughout the academic year.</p>
+            
+            <p><strong>Municipal Relationships:</strong> Established connections with City of Evanston departments ensure efficient permit processing, inspection coordination, and compliance with local regulations.</p>
+            
+            <p><strong>Vendor Network:</strong> Long-term partnerships with local contractors and service providers who understand Evanston properties and share our commitment to quality workmanship and community respect.</p>
+            
+            <p><strong>Cultural Sensitivity:</strong> Experience serving diverse communities with multilingual capabilities and cultural awareness that reflects Evanston's international character.</p>
+        </div>
+        
+        <h3>Lakefront Property Specialization</h3>
+        
+        <p>Evanston's extensive Lake Michigan shoreline creates opportunities for some of the most desirable residential properties on the North Shore. Managing lakefront properties requires specialized knowledge of environmental considerations, seasonal maintenance needs, and the unique lifestyle expectations of lakefront residents.</p>
+        
+        <p>Our team has extensive experience with the specific challenges lakefront properties present, from understanding lake effect weather patterns to coordinating with specialized contractors for shoreline work. We work closely with lakefront associations and individual properties to ensure proper maintenance of these valuable assets while preserving the natural beauty that makes lakefront living so special.</p>
+        
+        <h3>Academic Community Housing Excellence</h3>
+        
+        <p>Properties serving Northwestern University faculty, staff, and graduate students require management approaches that understand academic life's unique rhythms and requirements. From coordinating with visiting scholars to managing seasonal occupancy changes, from understanding visa requirements to facilitating international residents' community integration, academic housing demands specialized expertise.</p>
+        
+        <p>Our <a href="services/administrative-services/index.html">administrative services</a> include coordination with university housing offices, understanding of academic calendar implications for property operations, and experience with the documentation and communication needs of international residents. This specialization ensures that properties serving the academic community operate smoothly while contributing to Northwestern's mission of excellence.</p>
+        
+        <div class="testimonial">
+            <blockquote>"Manage369 has managed our faculty housing complex for over eight years, and their understanding of academic community needs has been invaluable. They coordinate seamlessly with university schedules, provide excellent support for our international residents, and maintain our property to standards that reflect Northwestern's commitment to excellence. Their local knowledge and professional approach make them ideal partners for university-area properties."</blockquote>
+            <cite>— Board Chair, Northwestern Faculty Housing Association</cite>
+        </div>
+        
+        <h3>Supporting Evanston's Diverse Neighborhoods</h3>
+        
+        <p>From the historic charm of downtown Evanston to the quiet residential streets near the lakefront, from family neighborhoods with tree-lined sidewalks to modern developments, each Evanston community has its own character and needs. Our neighborhood-specific approach to <a href="services/hoa-management/index.html">HOA management</a> and community relations ensures that management decisions respect and enhance each area's unique qualities.</p>
+        
+        <p>We work closely with neighborhood associations, participate in community events, and maintain relationships with local businesses and organizations. This community involvement helps us stay connected to each neighborhood's priorities and challenges, enabling us to provide management services that truly serve residents' best interests while contributing to Evanston's overall community health.</p>
+        
+        <h3>Financial Management with Community Focus</h3>
+        
+        <p>Evanston properties benefit from our comprehensive approach to <a href="services/financial-management/index.html">financial management</a> that combines professional accounting standards with deep understanding of local market conditions and community values. Our financial oversight includes not just basic accounting but strategic planning that helps communities achieve long-term goals while maintaining fiscal responsibility.</p>
+        
+        <p>We work with boards to develop budgets that reflect community priorities, whether that's maintaining excellent amenities, planning for major improvements, or building reserves for future needs. Our local market knowledge helps ensure that assessment levels remain competitive while providing the services and improvements that Evanston residents expect and deserve.</p>
+        
+        <h3>Maintenance Excellence with Local Partnership</h3>
+        
+        <p>Quality maintenance and timely improvements require reliable contractor relationships and deep understanding of local conditions. Our <a href="services/maintenance-coordination/index.html">maintenance coordination</a> services leverage years of partnership with Evanston-area contractors who share our commitment to quality work and community respect.</p>
+        
+        <p>From routine maintenance to major capital improvements, we ensure that all work meets both technical standards and community expectations. Our contractors understand local conditions, from lake effect weather impacts to soil conditions, and they respect the community standards that make Evanston neighborhoods so attractive.</p>
+        
+        <div class="highlight-box">
+            <h3>Evanston Property Management Services</h3>
+            
+            <p><strong>University District Specialization:</strong> Expert management of properties serving Northwestern University community members, with understanding of academic schedules and international resident needs.</p>
+            
+            <p><strong>Lakefront Property Expertise:</strong> Specialized knowledge of Lake Michigan shoreline property management, including environmental considerations and seasonal maintenance requirements.</p>
+            
+            <p><strong>Diverse Community Support:</strong> Culturally sensitive management approaches that celebrate Evanston's diversity while fostering community unity and neighborly relationships.</p>
+            
+            <p><strong>Local Municipal Coordination:</strong> Established relationships with City of Evanston departments for efficient permitting, inspections, and regulatory compliance.</p>
+            
+            <p><strong>Academic Calendar Integration:</strong> Management schedules and services coordinated with Northwestern University's academic calendar to minimize disruption and maximize convenience.</p>
+        </div>
+        
+        <h3>Capital Projects and Community Enhancement</h3>
+        
+        <p>Major improvements and capital projects provide opportunities to enhance property values while respecting Evanston's architectural character and community standards. Our <a href="services/capital-project-management/index.html">capital project management</a> services include not just project coordination but strategic planning that helps communities make improvements that align with neighborhood character and long-term value creation.</p>
+        
+        <p>We work with boards and residents to identify improvement priorities, develop realistic budgets and timelines, and coordinate with contractors and municipal departments to ensure projects proceed smoothly. Whether it's building system upgrades, common area improvements, or accessibility enhancements, we ensure that capital projects serve the community's best interests while meeting all applicable codes and standards.</p>
+        
+        <h3>Board Support and Governance Excellence</h3>
+        
+        <p>Effective community governance requires board members who understand their responsibilities and have access to professional support when needed. Our <a href="services/board-support/index.html">board support</a> services include education, training, and ongoing consultation to help volunteer boards make informed decisions that serve their communities well.</p>
+        
+        <p>We provide guidance on legal compliance, financial oversight, policy development, and community communication. Our goal is to empower board members with the knowledge and resources they need to provide effective leadership while ensuring that governance decisions reflect community values and legal requirements.</p>
+        
+        <h3>Why Evanston Communities Choose Manage369</h3>
+        
+        <p>Our commitment to Evanston extends beyond professional services to genuine community partnership. We understand that property management is ultimately about creating and maintaining communities where people want to live, work, and build relationships. Our approach honors Evanston's rich history, celebrates its diversity, and supports its continued growth as one of the North Shore's most vibrant and welcoming communities.</p>
+        
+        <p>Whether you're on a board considering management options, a resident with questions about community operations, or a property owner exploring professional management services, we invite you to learn more about how our local expertise and community commitment can benefit your Evanston property. Our team is always available for consultation and questions about how we can serve your community's unique needs.</p>
+        
+        <p>The combination of Northwestern University's academic excellence, Lake Michigan's natural beauty, diverse neighborhoods with strong community spirit, and convenient access to Chicago makes Evanston a truly special place. We're honored to play a role in maintaining and enhancing the properties that make this community home for so many families, professionals, and students.</p>
+    </section>
+    
+    <section class="contact-section">
+        <h2>Ready to Experience Professional Evanston Property Management?</h2>
+        <p>Contact our experienced team today to learn how we can serve your community</p>
+        <p>📞 <a href="tel:2246475621">(224) 647-5621</a> | ✉️ <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+        <p style="margin-top: 1rem;">Serving Evanston with pride since 2007</p>
+    </section>
+    
+    <footer class="footer">
+        <h3>Manage369 - Evanston Property Management</h3>
+        <p>Northwestern University District & Lakefront Community Specialists</p>
+        <p>1400 Patriot Boulevard 357, Glenview, IL 60026</p>
+        <p>Phone: <a href="tel:2246475621">(224) 647-5621</a></p>
+        <p>Email: <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+        <p style="margin-top: 1.5rem;">© 2025 Manage369. All rights reserved. | Licensed & Insured | CAI/IREM/CCIM Certified</p>
+    </footer>
+</body>
+</html>
