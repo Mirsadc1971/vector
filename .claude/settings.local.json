@@ -11,7 +11,9 @@
       "Bash(do echo \"=== $file character count ===\")",
       "Bash(wc:*)",
       "Bash(echo)",
-      "Bash(git push:*)"
+      "Bash(git push:*)",
+      "Bash(find:*)",
+      "Bash(do if ! grep -q \"Property Types We Manage\" \"$file\")"
     ],
     "deny": []
   }
