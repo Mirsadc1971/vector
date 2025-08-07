@@ -117,11 +117,83 @@
             font-weight: 500;
         }
         
+        .stats-section {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 2rem auto 0;
+        }
+        
+        .stat-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #d4af37;
+        }
+        
+        .stat-label {
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            padding: 2.5rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            border-left: 8px solid #d4af37;
+        }
+        
+        .testimonial {
+            background: #fff;
+            padding: 3rem;
+            border-radius: 15px;
+            margin: 3rem 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        
+        .testimonial blockquote {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #555;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonial cite {
+            color: #4a90e2;
+            font-weight: bold;
+        }
+        
         .footer {
             background: #2c3e50;
             color: white;
             padding: 3rem 2rem;
             text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -195,7 +267,105 @@
         
         <p>Our approach to property management honors these traditions while providing modern efficiency and professional service. We work closely with the Lake Forest Preservation Foundation, understand municipal procedures specific to historic properties, and maintain relationships with specialized contractors and artisans who share our commitment to preserving Lake Forest's architectural legacy.</p>
         
-        <p>The combination of natural beauty, architectural significance, strong community values, and convenient access to Chicago makes Lake Forest one of America's most desirable residential communities. We're honored to help preserve and enhance the properties that make this historic community home for discerning families and individuals who appreciate excellence in all aspects of community life.</p>
+        <div class="stats-section">
+            <h2>Lake Forest Excellence Since 2007</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">18+</div>
+                    <div class="stat-label">Years Historic Estate Experience</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">$200M+</div>
+                    <div class="stat-label">Historic Assets Managed</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">25+</div>
+                    <div class="stat-label">Premium Lake Forest Properties</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">750+</div>
+                    <div class="stat-label">Estate Units Served</div>
+                </div>
+            </div>
+        </div>
+        
+        <h3>Historic Preservation and Architectural Heritage</h3>
+        
+        <p>Lake Forest's designation as a National Historic Landmark district reflects not just architectural beauty but a community commitment to preserving America's finest examples of late 19th and early 20th century residential design. Managing properties within this historic framework requires specialized knowledge of preservation guidelines, period-appropriate materials, and the delicate balance between maintaining historical integrity and meeting modern living standards.</p>
+        
+        <p>Our team works closely with the Lake Forest Preservation Foundation and understands the nuances of historic district requirements, from window replacement guidelines to landscaping standards that preserve the original designers' vision. We maintain relationships with specialized craftsmen and contractors who appreciate the importance of preservation while delivering the quality that Lake Forest properties demand.</p>
+        
+        <h3>Estate-Level Property Management Excellence</h3>
+        
+        <p>Lake Forest's grand estates and luxury properties require management services that match their sophistication and significance. From sprawling lakefront estates designed by legendary architects to elegant period homes nestled in the forest preserve, these properties demand attention to detail, discretionary service, and expertise in managing complex residential systems and extensive grounds.</p>
+        
+        <p>Our <a href="services/maintenance-coordination/index.html">maintenance coordination</a> includes specialists in historic preservation, landscape architecture, and luxury property systems. We understand that these properties are not just homes but cultural treasures that require stewardship reflecting their historical and architectural importance.</p>
+        
+        <div class="highlight-box">
+            <h3>Why Lake Forest's Premier Properties Choose Manage369</h3>
+            
+            <p><strong>Historic Preservation Expertise:</strong> Specialized knowledge of National Historic Landmark requirements, preservation standards, and period-appropriate restoration techniques that maintain architectural integrity.</p>
+            
+            <p><strong>Luxury Property Specialization:</strong> Experience managing grand estates, complex residential systems, and extensive grounds with the discretion and quality standards that prestigious properties require.</p>
+            
+            <p><strong>Architectural Heritage Understanding:</strong> Deep appreciation for Lake Forest's architectural legacy, from Prairie School masterpieces to Colonial Revival estates, ensuring management respects each property's historical significance.</p>
+            
+            <p><strong>Municipal Relations Excellence:</strong> Established relationships with City of Lake Forest departments, preservation authorities, and planning offices for seamless project coordination and regulatory compliance.</p>
+            
+            <p><strong>Estate Services Network:</strong> Curated relationships with specialists in historic restoration, luxury landscaping, fine art handling, and estate-level services that Lake Forest properties deserve.</p>
+        </div>
+        
+        <h3>The Forest Preserve Legacy and Environmental Stewardship</h3>
+        
+        <p>Lake Forest's visionary founders preserved thousands of acres of native forest and ravines, creating the natural setting that defines the community's character today. This environmental heritage influences every aspect of property management, from landscaping that complements native ecosystems to building practices that preserve the delicate balance between development and conservation.</p>
+        
+        <p>We work with properties to implement land stewardship practices that honor Lake Forest's conservation legacy while meeting modern property management needs. Our environmental approach includes native plant restoration, sustainable grounds management, and coordination with forest preserve authorities to ensure private properties complement the broader conservation mission.</p>
+        
+        <h3>Lake Michigan Shoreline Excellence</h3>
+        
+        <p>Lake Forest's pristine Lake Michigan shoreline represents some of the most valuable and environmentally sensitive residential property on the Great Lakes. Managing these lakefront estates requires specialized understanding of coastal dynamics, environmental regulations, and the unique maintenance challenges that come with proximity to one of the world's great freshwater lakes.</p>
+        
+        <p>From bluff stabilization to shoreline restoration, from seasonal storm preparation to water system protection, our lakefront property expertise ensures these irreplaceable natural settings are preserved while properties function flawlessly for their residents. We coordinate with environmental consultants and specialized contractors who share our commitment to protecting both property values and environmental integrity.</p>
+        
+        <div class="testimonial">
+            <blockquote>"Manage369 understands what makes Lake Forest extraordinary. They work with craftsmen who appreciate our estate's historical significance, coordinate seamlessly with preservation authorities, and maintain our property to standards that honor its architectural heritage. Their expertise in managing historic properties has been invaluable."</blockquote>
+            <cite>— Estate Owner, Lake Forest Historic District</cite>
+        </div>
+        
+        <h3>Community Traditions and Civic Excellence</h3>
+        
+        <p>Lake Forest's strong tradition of civic engagement and community leadership extends to residential property management, where boards and associations often reflect the community's commitment to excellence and thoughtful stewardship. Our <a href="services/board-support/index.html">governance support</a> services are designed for communities that expect the highest standards of professional expertise and ethical leadership.</p>
+        
+        <p>We provide board members with sophisticated guidance that supports informed decision-making while respecting the collaborative leadership traditions that have made Lake Forest a model of community governance. Our support helps volunteer leaders navigate complex issues while maintaining the consensus-building approaches that strengthen community bonds.</p>
+        
+        <h3>Educational Excellence and Family Heritage</h3>
+        
+        <p>Lake Forest's commitment to educational excellence, from Lake Forest Country Day School to Lake Forest College, creates a community environment where intellectual achievement and cultural sophistication are deeply valued. Many properties serve multi-generational families with deep community roots and strong commitment to preserving Lake Forest's educational and cultural heritage.</p>
+        
+        <p>Our property management approach recognizes how these educational institutions influence community life and property values. We understand the seasonal rhythms of academic life, coordinate with school schedules for major projects, and maintain properties to standards that reflect the educational excellence Lake Forest represents.</p>
+        
+        <h3>Arts, Culture, and Community Life</h3>
+        
+        <p>From Deer Path Inn's historic elegance to the cultural programming at Lake Forest College, from the annual Harvest Festival to the summer concerts in the forest preserves, Lake Forest offers a rich cultural life that enhances property values while enriching residents' daily experience. Our management approach considers how these cultural amenities affect community life and property operations.</p>
+        
+        <p>We coordinate with community events, understand how cultural programming affects traffic and parking patterns, and help properties plan for the increased activity that comes with Lake Forest's vibrant cultural calendar. This planning ensures residents can fully enjoy community cultural life while maintaining the peaceful residential environment that makes Lake Forest so desirable.</p>
+        
+        <div class="historic-highlight">
+            <h3>Experience Lake Forest's Premier Property Management</h3>
+            <p><strong>Discover how historic estate expertise enhances your property stewardship</strong></p>
+            <p>Whether you're managing a landmark estate, serving on a community board, or considering professional management services, we welcome the opportunity to discuss how our Lake Forest specialization can benefit your property. Our expertise in historic preservation and luxury property management ensures your estate receives the specialized attention it deserves.</p>
+            <p><strong>Historic Estate Consultation: <a href="tel:2246475621" style="color: white; font-weight: bold;">(224) 647-5621</a></strong></p>
+        </div>
+        
+        <h3>Long-Term Preservation and Legacy Planning</h3>
+        
+        <p>Successful estate management in Lake Forest requires a generational perspective that balances immediate needs with long-term preservation goals. Our strategic planning approach helps property owners make decisions that protect both financial investments and historical legacy, ensuring these architectural treasures continue to enrich the community for future generations.</p>
+        
+        <p>We work with families and communities to develop preservation plans that address both current functionality and historical significance. This approach includes capital planning for major systems, landscape master planning for estate grounds, and coordination with preservation professionals who ensure work meets both contemporary needs and historical standards.</p>
+        
+        <p>The combination of natural beauty, architectural significance, strong community values, educational excellence, and convenient access to Chicago makes Lake Forest one of America's most extraordinary residential communities. We're deeply honored to help preserve and enhance the historic properties that make this landmark community home for discerning families who appreciate excellence, beauty, and the irreplaceable heritage that defines Lake Forest living.</p>
+        
+        <p>When you choose Manage369 for your Lake Forest property management needs, you're selecting partners who understand that these properties are not just real estate but cultural treasures that require specialized expertise, preservation knowledge, and genuine appreciation for architectural and environmental heritage. Contact our Lake Forest team today to learn how our historic estate expertise can enhance your property stewardship while honoring the extraordinary legacy that makes Lake Forest truly timeless.</p>
     </section>
     
     <footer class="footer">
