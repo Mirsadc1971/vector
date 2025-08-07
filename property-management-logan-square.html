@@ -3,12 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Logan Square Property Management | Chicago Condo & HOA Management | Manage369</title>
-    <meta name="description" content="Premier Logan Square property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals. Call (224) 647-5621.">
+    <title>Logan Square Property Management | 18+ Years Expertise | Manage369</title>
+    <meta name="description" content="Expert Logan Square property management with 18+ years local expertise. Managing creative district condos, historic buildings, trendy developments. Revolution Brewing proximity. CAI/IREM certified. (224) 647-5621">
+    
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Windows Tile Configuration -->
+    <meta name="msapplication-TileColor" content="#4a90e2">
+    <meta name="msapplication-TileImage" content="images/favicon-32x32.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Logan Square Property Management | Manage369">
+    <meta property="og:description" content="Premier Logan Square property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manage369.com/property-management-logan-square.html">
+    <meta property="og:image" content="https://manage369.com/images/manage369livingroomskokie.jpg">
+    <meta property="og:site_name" content="Manage369">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Logan Square Property Management | Manage369">
+    <meta name="twitter:description" content="Premier Logan Square property management services. 18+ years managing luxury condos, HOAs & townhomes.">
+    <meta name="twitter:image" content="https://manage369.com/images/manage369livingroomskokie.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Manage369">
+    <meta name="geo.region" content="US-IL">
+    <meta name="geo.placename" content="Logan Square, Illinois">
+    <meta name="geo.position" content="42.0697;-87.6928">
+    <meta name="ICBM" content="42.0697, -87.6928">
+    
+    <!-- Local Business Schema Markup -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Manage369",
+  "description": "Premier Logan Square property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.",
+  "url": "https://manage369.com/property-management-logan-square.html",
+  "telephone": "+1-224-647-5621",
+  "email": "service@manage369.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1400 Patriot Boulevard 357",
+    "addressLocality": "Glenview",
+    "addressRegion": "IL",
+    "postalCode": "60026",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "42.0697",
+    "longitude": "-87.6928"
+  },
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "sameAs": [
+    "https://manage369.com"
+  ],
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Logan Square, Illinois"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "50"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Property Management Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Condominium Management",
+          "description": "Professional condominium association management services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "HOA Management",
+          "description": "Comprehensive homeowner association management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Financial Management",
+          "description": "Professional financial reporting and budget development"
+        }
+      }
+    ]
+  }
+}
+    </script>
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
         
         .header {
             position: fixed;
@@ -99,6 +201,11 @@
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .phone:hover {
+            background: #357abd;
         }
         
         .hero {
@@ -119,11 +226,13 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero-content p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .content {
@@ -136,6 +245,7 @@
             color: #666;
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
+            line-height: 1.7;
         }
         
         .services-grid {
@@ -151,22 +261,34 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
         
         .service-card h3 {
             color: #4a90e2;
             margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
         }
         
         .service-card a {
             color: #ff9500;
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .service-card a:hover {
+            color: #e6840d;
         }
         
         .why-choose {
@@ -204,6 +326,11 @@
             flex-direction: column;
             height: 100%;
             min-height: 180px;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-3px);
         }
         
         .benefit-item h3 {
@@ -230,12 +357,22 @@
         
         .contact-section h2 {
             margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .contact-section p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
         
         .contact-section a {
             color: #ff9500;
             text-decoration: none;
             font-weight: bold;
+        }
+        
+        .contact-section a:hover {
+            color: #fff200;
         }
         
         .simple-footer {
@@ -271,38 +408,6 @@
             text-decoration: underline;
         }
         
-        @media (max-width: 768px) {
-            .header {
-                flex-direction: column;
-                padding: 1rem;
-            }
-            
-            .nav {
-                margin-top: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-content p {
-                font-size: 1.1rem;
-            }
-            
-            .benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 1.5rem;
-            }
-        }
-        
-        @media (min-width: 769px) and (max-width: 1024px) {
-            .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-            
         .location-content {
             background: white;
             padding: 4rem 2rem;
@@ -333,6 +438,7 @@
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
             color: #666;
+            line-height: 1.7;
         }
         
         .location-content a {
@@ -351,6 +457,12 @@
             border-radius: 10px;
             margin: 2rem 0;
             border-left: 5px solid #4a90e2;
+        }
+        
+        .highlight-box h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
         
         .service-highlight-box {
@@ -373,7 +485,44 @@
             font-weight: 600;
         }
         
-</style>
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .nav {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -407,15 +556,19 @@
     
     <section class="hero">
         <div class="hero-content">
-            <h1>Property Management Logan Square – Manage369</h1>
-            <p>Expert Condominium, HOA & Townhome Management Services</p>
+            <h1>Logan Square Property Management | 18+ Years Creative District Expertise</h1>
+            <p>Revolution Brewing, Logan Square Monument & Artistic Community Excellence</p>
         </div>
     </section>
     
     <section class="content">
-        <p>Logan Square pulses with the creative energy that makes Chicago's northwest side so magnetic – where craft cocktail bars occupy former auto shops, where music venues showcase tomorrow's headliners, and where young professionals and artists have created one of the city's most vibrant cultural scenes. The iconic Logan Square monument anchors a neighborhood that perfectly balances hipster cool with genuine community warmth.</p>
         
-        <p>At Manage369, we appreciate Logan Square's unique character – a neighborhood that embraces both its working-class roots and its reputation as Chicago's creative hub. From converted industrial lofts to charming vintage apartments along tree-lined boulevards, we manage properties that reflect the neighborhood's artistic spirit while providing the reliable service that busy professionals and creative types need to thrive.</p>
+        <p>Logan Square stands as Chicago's premier arts and culture district, where creative energy flows through tree-lined boulevards, historic architecture, and innovative restaurants that have earned national recognition. The iconic Logan Square monument marks the heart of a neighborhood where craft breweries like Revolution Brewing anchor vibrant commercial corridors, and residents enjoy everything from intimate jazz clubs to expansive farmers markets. At Manage369, we understand what makes Logan Square exceptional – the perfect blend of artistic innovation with community authenticity that creates a neighborhood where both creativity and property values flourish.</p>
+        
+        <p>Our comprehensive property management approach recognizes that Logan Square properties serve discerning residents who have chosen quality, location, and community above all else. Whether managing elegant condominiums with stunning architectural details, family-friendly townhome associations that foster neighborhood connections, or sophisticated HOA communities that maintain the highest standards, we understand that successful property management here means preserving the unique character that makes Logan Square one of the region's most desirable places to call home.</p>
+        
+        <p>With 18+ years of experience serving Chicago and North Shore communities, our team brings deep local knowledge to every aspect of property management. We understand the seasonal challenges that affect Logan Square properties, from winter heating concerns to summer maintenance schedules. Our relationships with trusted local contractors ensure prompt, professional service that meets the high standards Logan Square residents expect and deserve.</p>
+        
         
         <div class="services-grid">
             <div class="service-card">
@@ -436,6 +589,142 @@
         </div>
     </section>
     
+    
+        <div class="location-content">
+            <div class="location-content-wrapper">
+                <h2>Logan Square Property Management: 18+ Years in Chicago's Creative Heart</h2>
+                
+                <p>For over 18 years, Manage369 has called Logan Square home to some of Chicago's most dynamic property management success stories. We've watched this neighborhood evolve from a well-kept secret to one of Chicago's most sought-after communities, and we've helped property owners navigate every stage of this remarkable transformation. From the bustling corridors around the Logan Square monument to the quiet residential streets that branch off like spokes from the central square, we understand that managing properties here means preserving the authentic character that makes Logan Square exceptional while ensuring modern operational excellence.</p>
+
+                <p>Logan Square represents everything we love about Chicago property management: diverse architecture that tells the story of the city's development, a community of residents who genuinely care about their neighborhood, and commercial corridors that balance local authenticity with modern convenience. Revolution Brewing's flagship location serves as more than just a brewery – it's a community anchor that exemplifies how local businesses and residential properties can create synergistic value that benefits everyone.</p>
+
+                <h3>Logan Square's Creative District Property Management Excellence</h3>
+                
+                <p>Logan Square's property management requires understanding both the neighborhood's creative soul and its practical residential needs. Our <a href="services/condominium-management/index.html">condominium management</a> services have evolved alongside the neighborhood's transformation, ensuring that vintage brick buildings maintain their historic charm while incorporating modern amenities that today's residents expect. From converted warehouse lofts that house working artists to contemporary developments that attract young professionals, we manage each property type with specialized expertise that reflects Logan Square's unique character.</p>
+
+                <p>The neighborhood's music scene, centered around venues like Schubas Tavern and Lincoln Hall, creates a vibrant atmosphere that enhances property appeal while requiring property managers who understand the balance between community energy and residential tranquility. Our experience managing properties near entertainment venues ensures residents enjoy the benefits of Logan Square's cultural richness without the drawbacks of urban noise or congestion.</p>
+
+                <h3>Revolution Brewing District: Where Community and Commerce Meet</h3>
+                
+                <p>Revolution Brewing's flagship location has transformed the Milwaukee Avenue corridor into one of Chicago's premier destinations, creating a ripple effect that benefits residential properties throughout the area. Properties within walking distance of Revolution Brewing enjoy enhanced desirability from food and beverage enthusiasts, while the brewery's community events and seasonal celebrations create year-round neighborhood energy that supports property values.</p>
+
+                <p>Managing properties in this dynamic environment requires understanding seasonal patterns – from Revolution's Oktoberfest celebrations that bring thousands of visitors to the area, to winter months when the neighborhood's indoor venues become gathering places for residents seeking community connection. Our <a href="services/maintenance-coordination/index.html">maintenance coordination</a> services adapt to these rhythms, scheduling major projects during quieter periods while ensuring properties remain pristine during high-visibility events.</p>
+
+                <div class="service-highlight-box">
+                    <h3>Historic Architecture Preservation & Modern Amenity Integration</h3>
+                    <p>Logan Square's stunning architecture spans over a century, from vintage graystones and classic Chicago bungalows to contemporary infill developments. Our <a href="services/capital-project-management/index.html">capital project management</a> expertise ensures that building improvements preserve historical character while incorporating modern conveniences like updated HVAC systems, high-speed internet infrastructure, and energy-efficient appliances that today's residents demand.</p>
+                    <a href="services/capital-project-management/index.html">Explore Our Historic Building Expertise →</a>
+                </div>
+
+                <h3>Logan Square Farmers Market and Community Living</h3>
+                
+                <p>The Logan Square Farmers Market, one of Chicago's largest and most popular, exemplifies how local amenities enhance residential property appeal. Properties near the market benefit from increased foot traffic and community engagement, while residents enjoy easy access to fresh produce, artisanal goods, and community events that strengthen neighborhood bonds.</p>
+
+                <p>Our <a href="services/hoa-management/index.html">HOA management</a> services recognize how community amenities like the farmers market impact property management decisions. We help associations develop policies that capitalize on neighborhood attractions while managing practical considerations like parking, pedestrian traffic, and seasonal maintenance schedules that align with community rhythms.</p>
+
+                <h3>Transportation Hub Advantages and Urban Connectivity</h3>
+                
+                <p>Logan Square's Blue Line station provides direct access to O'Hare Airport and downtown Chicago, making it one of the city's most transit-accessible neighborhoods. This connectivity attracts residents who work throughout the metropolitan area while preferring the character and affordability that Logan Square offers compared to downtown living options.</p>
+
+                <p>Properties near the Logan Square Blue Line station command premium rents due to transportation convenience, but they also require specialized <a href="services/financial-management/index.html">financial management</a> approaches that account for higher turnover rates and the unique needs of commuter residents. Our experience managing transit-adjacent properties ensures optimal financial performance while maintaining stable, satisfied resident communities.</p>
+
+                <div class="highlight-box">
+                    <h3>Logan Square's Artist Community and Property Character</h3>
+                    <p>Logan Square's reputation as an artist neighborhood brings unique considerations to property management. Many residents are creative professionals who work from home studios, requiring buildings with flexible space usage policies and utilities that can handle higher electrical loads. Our <a href="services/administrative-services/index.html">administrative services</a> help associations develop policies that support creative residents while maintaining property standards and neighbor harmony.</p>
+                </div>
+
+                <h3>Logan Square Boulevard and Tree-Lined Living</h3>
+                
+                <p>The Logan Square Boulevard system, designed by renowned landscape architect Jens Jensen, creates one of Chicago's most beautiful residential environments. These tree-lined streets require specialized <a href="services/maintenance-coordination/index.html">maintenance coordination</a> that works with city services to preserve the boulevard character while maintaining sidewalks, landscaping, and building exteriors to the high standards residents expect.</p>
+
+                <p>Properties along the boulevards benefit from enhanced curb appeal and the prestige of historic neighborhood designation, but they also face unique challenges like seasonal leaf management, older infrastructure systems, and architectural guidelines that preserve the area's historic character. Our experience managing boulevard properties ensures compliance with city requirements while maximizing property appeal and resident satisfaction.</p>
+
+                <h3>HOA Management Tailored to Logan Square Community Values</h3>
+                <p>Homeowner associations in Logan Square require management that understands both the practical needs of property maintenance and the community values that make neighborhoods thrive for generations. Our <a href="services/hoa-management/index.html">HOA management</a> approach recognizes that successful associations create environments where families feel genuinely connected, property values remain consistently strong, and community traditions continue to flourish while adapting to modern needs and expectations.</p>
+
+                <p>We work closely with Logan Square HOA boards to develop policies that protect property values while fostering the neighborly atmosphere that residents cherish and that attracts quality families to the community. From coordinating seasonal maintenance projects that enhance curb appeal to managing community events that bring neighbors together and create lasting friendships, our services support the full spectrum of community life that makes Logan Square such a special place to live and raise families.</p>
+
+                <p>Our approach includes detailed budget planning that anticipates both routine maintenance needs and long-term capital improvements, ensuring that associations maintain adequate reserves while avoiding unnecessary special assessments that can burden homeowners. We coordinate with local service providers who understand the community's standards and expectations, from landscaping companies that maintain the beautiful grounds to contractors who handle repairs with minimal disruption to residents' daily lives.</p>
+
+                <h3>Transparent Financial Management and Strategic Planning</h3>
+                <p>Property owners in Logan Square expect – and deserve – complete transparency in financial management combined with strategic thinking that protects their significant investments. Our <a href="services/financial-management/index.html">financial management</a> services provide detailed monthly reports that clearly explain every expense, professional budget development that anticipates both routine costs and unexpected needs, and strategic reserve planning that protects your investment while supporting the high-quality amenities that Logan Square residents value and expect.</p>
+
+                <p>We understand that many Logan Square properties represent significant family investments, often passed down through generations or purchased by residents who plan to call this community home for decades. Our financial stewardship reflects this long-term perspective, ensuring that every decision supports both current operational excellence and future property value protection. We maintain relationships with local financial institutions that understand property management needs and can provide favorable terms for major capital improvements when necessary.</p>
+
+                <div class="service-highlight-box">
+                    <h3>Professional Maintenance Coordination for Logan Square Properties</h3>
+                    <p>Our <a href="services/maintenance-coordination/index.html">maintenance coordination</a> services connect your property with our network of trusted local contractors who understand Logan Square's unique requirements and community standards. From seasonal weather challenges that require proactive planning to local architectural standards that preserve neighborhood character, we ensure that all maintenance work enhances your property while respecting the distinctive character that defines this special community.</p>
+                    <p>We coordinate everything from routine preventive maintenance that prevents costly emergency repairs to major capital improvements that enhance property values and resident satisfaction. Our emergency response system ensures 24/7 availability for urgent situations, while our preventive maintenance programs help avoid emergencies through systematic care and attention.</p>
+                    <p><strong>Local Expertise & 24/7 Response: <a href="tel:2246475621">(224) 647-5621</a></strong></p>
+                </div>
+
+                <h3>Comprehensive Board Support and Administrative Excellence</h3>
+                <p>Effective property management requires seamless coordination between professional management and community leadership, with clear communication and mutual respect guiding every interaction. Our <a href="services/board-support/index.html">board support</a> services empower Logan Square association boards with the detailed information, expert guidance, and comprehensive administrative support they need to make confident decisions about their communities while avoiding the time-consuming details that can overwhelm volunteer board members.</p>
+
+                <p>We provide comprehensive <a href="services/administrative-services/index.html">administrative services</a> that handle everything from resident communications and document management to vendor coordination and regulatory compliance, allowing board members to focus on strategic planning and community enhancement while ensuring that daily operations run smoothly and efficiently. Our approach respects the volunteer nature of board service while providing professional support that keeps communities operating at the highest standards.</p>
+
+                <p>Our board support includes preparation of detailed meeting materials, coordination of annual meetings and elections, management of governing document updates, and assistance with policy development that reflects community values while meeting legal requirements. We help boards navigate complex decisions by providing clear information and professional recommendations based on our extensive experience with similar communities.</p>
+
+                <h3>Expert Capital Project Management and Long-term Planning</h3>
+                <p>Preserving and enhancing Logan Square properties requires strategic planning and professional project management that balances immediate needs with long-term value protection. Our <a href="services/capital-project-management/index.html">capital project management</a> services guide associations through major improvements, from routine building updates that maintain property appeal to significant infrastructure investments that protect property values and enhance resident quality of life for years to come.</p>
+
+                <p>We work with boards to develop realistic project timelines that minimize disruption to residents, manage contractor relationships to ensure quality results and fair pricing, and coordinate with local permitting authorities to ensure smooth project approval and completion. Our experience with local building codes and contractor networks helps ensure that projects are completed to the high standards that Logan Square properties require while staying within budget and schedule constraints.</p>
+
+                <p>Our project management approach includes detailed planning phases that identify potential challenges before they become problems, regular progress monitoring that keeps boards informed throughout the project lifecycle, and final inspections that ensure all work meets or exceeds community standards. We maintain detailed project documentation that protects associations and provides valuable records for future maintenance and improvements.</p>
+
+                <h3>Exceptional Resident Relations and Community Building</h3>
+                <p>The strong sense of community that defines Logan Square doesn't happen by accident – it requires thoughtful attention to resident relations and proactive communication that builds trust and fosters positive interactions. Our <a href="services/resident-relations/index.html">resident relations</a> services foster positive interactions between residents, management, and boards while addressing concerns promptly and professionally, ensuring that minor issues don't escalate into major community problems.</p>
+
+                <p>From comprehensive new resident orientation programs that help newcomers connect with established community traditions to sophisticated communication systems that keep everyone informed about important developments without overwhelming them with unnecessary details, we support the social fabric that makes Logan Square neighborhoods places where people choose to build their lives and raise their families.</p>
+
+                <p>Our resident relations approach includes regular community surveys to gauge satisfaction and identify improvement opportunities, coordination of social events that bring neighbors together, and conflict resolution services that address disputes fairly while maintaining community harmony. We understand that happy residents are more likely to take pride in their community, participate in association activities, and maintain their properties to high standards.</p>
+
+                <div class="highlight-box">
+                    <h3>Why Logan Square Properties Choose Manage369</h3>
+                    <p><strong>Proven Local Market Expertise:</strong> 18+ years serving Chicago and North Shore communities with deep understanding of local regulations, seasonal challenges, market conditions, and resident expectations that come from extensive hands-on experience.</p>
+                    
+                    <p><strong>Professional Certifications & Continuing Education:</strong> CAI, IREM, and CCIM certified professionals ensuring industry best practices, ethical standards, and continuing education in property management excellence, financial stewardship, and community leadership.</p>
+                    
+                    <p><strong>Outstanding Track Record:</strong> Zero properties lost in our management history, with over $100 million in managed assets, 50+ properties, and 2,450+ units under professional management, demonstrating consistent excellence and client satisfaction.</p>
+                    
+                    <p><strong>Boutique-Level Personal Service:</strong> Direct access to ownership and personalized attention that larger corporate firms simply cannot match, ensuring responsive service tailored to your community's unique needs, character, and long-term goals.</p>
+                </div>
+
+                <h3>Logan Square Townhome Communities: Creative Living with Community Benefits</h3>
+                
+                <p>Logan Square's townhome developments represent some of Chicago's most successful examples of urban infill housing that respects neighborhood character while providing modern living conveniences. Our <a href="services/townhome-management/index.html">townhome management</a> services help these communities thrive by balancing individual homeowner needs with shared community benefits like private streets, landscaped common areas, and architectural standards that maintain property values.</p>
+
+                <p>Many Logan Square townhome residents are drawn to the neighborhood's creative energy and choose communities that support artistic expression while maintaining quality standards. Our management approach encourages individualization within architectural guidelines, supporting residents who want to personalize their homes while preserving the community aesthetic that protects everyone's investment.</p>
+
+                <h3>Board Support for Logan Square's Engaged Communities</h3>
+                
+                <p>Logan Square residents are notably engaged in their communities, often bringing passionate advocacy and creative problem-solving to building governance. Our <a href="services/board-support/index.html">board support</a> services help channel this community energy productively, providing professional guidance that supports volunteer board members while ensuring all decisions align with legal requirements and financial best practices.</p>
+
+                <p>We assist Logan Square boards with everything from annual meeting coordination and election oversight to policy development that reflects community values. Our experience with the neighborhood's diverse demographics helps boards navigate decisions about amenities, assessments, and building improvements that satisfy different resident priorities while maintaining financial stability.</p>
+
+                <h3>Comprehensive Resident Relations in Chicago's Creative Hub</h3>
+                
+                <p>Logan Square's diverse resident population includes working artists, young professionals, families, and longtime residents who've watched the neighborhood evolve. Our <a href="services/resident-relations/index.html">resident relations</a> services help foster positive connections between different resident groups while addressing concerns that arise in any dynamic community.</p>
+
+                <p>From managing noise concerns related to home studios and creative workshops to coordinating community events that bring neighbors together, we help Logan Square properties maintain the inclusive, creative atmosphere that makes the neighborhood special while ensuring all residents feel heard and respected.</p>
+
+                <h3>24/7 Emergency Response and Comprehensive Property Protection</h3>
+                <p>When emergencies arise, Logan Square property owners need management partners who respond quickly, professionally, and with the local knowledge necessary to protect both property and residents. Our comprehensive 24/7 emergency response system ensures that urgent situations – from heating system failures during harsh winter storms to plumbing emergencies that could damage multiple units if not addressed immediately – receive prompt attention from qualified professionals who understand the unique challenges of Logan Square properties.</p>
+
+                <p>Our established relationships with local emergency service providers and contractors mean faster response times and better outcomes when urgent situations arise, often preventing minor problems from becoming major disasters. This proactive approach to emergency management protects both property values and resident safety while providing invaluable peace of mind for owners and boards throughout Logan Square.</p>
+
+                <p>Our emergency services include immediate response protocols for weather-related damage, coordination with utility companies during power outages, management of water damage situations to prevent mold and structural problems, and communication systems that keep residents informed during emergency situations while coordinating with local authorities when necessary.</p>
+
+                <h3>Long-term Value Protection and Strategic Growth</h3>
+                <p>Successful property management in Logan Square requires more than just maintaining current operations – it demands strategic thinking that anticipates future needs and opportunities while protecting the long-term value of significant real estate investments. Our approach combines day-to-day operational excellence with strategic planning that ensures your property continues to compete effectively in the Logan Square market while adapting to changing resident needs and expectations.</p>
+
+                <p>We provide regular market analysis that helps boards make informed decisions about amenity upgrades, policy changes, and capital improvements that enhance property appeal and resident satisfaction. Our understanding of local market trends, combined with our extensive experience managing similar properties, enables us to recommend improvements that provide genuine value rather than costly changes that don't meaningfully enhance the resident experience or property values.</p>
+
+                <p>This strategic approach includes regular reserve studies that ensure adequate funding for future capital needs, analysis of utility usage and opportunities for efficiency improvements that reduce operating costs, and evaluation of community amenities to ensure they continue meeting resident needs while remaining cost-effective to maintain and operate.</p>
+            </div>
+        </div>
+        
+    
     <section class="why-choose">
         <div class="why-choose-content">
             <h2>Why Choose Manage369?</h2>
@@ -453,8 +742,8 @@
                     <p>Monthly financial statements, budget development, and reserve studies to protect property values.</p>
                 </div>
                 <div class="benefit-item">
-                    <h3>Local Expertise</h3>
-                    <p>Deep understanding of Logan Square's unique property management challenges and regulations.</p>
+                    <h3>Local Logan Square Expertise</h3>
+                    <p>Deep understanding of Logan Square's unique property management challenges and community character.</p>
                 </div>
                 <div class="benefit-item">
                     <h3>Professional Certifications</h3>

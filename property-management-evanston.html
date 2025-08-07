@@ -6,9 +6,111 @@
     <title>Evanston Property Management | Chicago Condo & HOA Management | Manage369</title>
     <meta name="description" content="Premier Evanston property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals. Call (224) 647-5621.">
     
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    
+    <!-- Windows Tile Configuration -->
+    <meta name="msapplication-TileColor" content="#4a90e2">
+    <meta name="msapplication-TileImage" content="images/favicon-32x32.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Evanston Property Management | Manage369">
+    <meta property="og:description" content="Premier Evanston property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manage369.com/property-management-evanston.html">
+    <meta property="og:image" content="https://manage369.com/images/manage369livingroomskokie.jpg">
+    <meta property="og:site_name" content="Manage369">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Evanston Property Management | Manage369">
+    <meta name="twitter:description" content="Premier Evanston property management services. 18+ years managing luxury condos, HOAs & townhomes.">
+    <meta name="twitter:image" content="https://manage369.com/images/manage369livingroomskokie.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Manage369">
+    <meta name="geo.region" content="US-IL">
+    <meta name="geo.placename" content="Evanston, Illinois">
+    <meta name="geo.position" content="42.0697;-87.6928">
+    <meta name="ICBM" content="42.0697, -87.6928">
+    
+    <!-- Local Business Schema Markup -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Manage369",
+  "description": "Premier Evanston property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.",
+  "url": "https://manage369.com/property-management-evanston.html",
+  "telephone": "+1-224-647-5621",
+  "email": "service@manage369.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1400 Patriot Boulevard 357",
+    "addressLocality": "Glenview",
+    "addressRegion": "IL",
+    "postalCode": "60026",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "42.0697",
+    "longitude": "-87.6928"
+  },
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "sameAs": [
+    "https://manage369.com"
+  ],
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Evanston, Illinois"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "50"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Property Management Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Condominium Management",
+          "description": "Professional condominium association management services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "HOA Management",
+          "description": "Comprehensive homeowner association management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Financial Management",
+          "description": "Professional financial reporting and budget development"
+        }
+      }
+    ]
+  }
+}
+    </script>
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
         
         .header {
             position: fixed;
@@ -99,6 +201,11 @@
             padding: 10px 20px;
             border-radius: 5px;
             text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .phone:hover {
+            background: #357abd;
         }
         
         .hero {
@@ -119,11 +226,13 @@
             font-size: 3rem;
             margin-bottom: 1rem;
             color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
         
         .hero-content p {
             font-size: 1.3rem;
             margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
         }
         
         .content {
@@ -136,6 +245,7 @@
             color: #666;
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
+            line-height: 1.7;
         }
         
         .services-grid {
@@ -151,22 +261,34 @@
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0,0,0,0.1);
             text-align: center;
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
         
         .service-card:hover {
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
         }
         
         .service-card h3 {
             color: #4a90e2;
             margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
         }
         
         .service-card a {
             color: #ff9500;
             text-decoration: none;
             font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .service-card a:hover {
+            color: #e6840d;
         }
         
         .why-choose {
@@ -204,6 +326,11 @@
             flex-direction: column;
             height: 100%;
             min-height: 180px;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-3px);
         }
         
         .benefit-item h3 {
@@ -230,12 +357,22 @@
         
         .contact-section h2 {
             margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .contact-section p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
         }
         
         .contact-section a {
             color: #ff9500;
             text-decoration: none;
             font-weight: bold;
+        }
+        
+        .contact-section a:hover {
+            color: #fff200;
         }
         
         .simple-footer {
@@ -301,6 +438,7 @@
             margin-bottom: 1.5rem;
             font-size: 1.1rem;
             color: #666;
+            line-height: 1.7;
         }
         
         .location-content a {
@@ -321,42 +459,30 @@
             border-left: 5px solid #4a90e2;
         }
         
+        .highlight-box h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
         .service-highlight-box {
-            background: linear-gradient(135deg, #ff6b6b, #ee5a52);
-            color: white;
+            background: #f8f9fa;
             padding: 2rem;
             border-radius: 10px;
             margin: 2rem 0;
-            text-align: center;
+            border-left: 5px solid #4a90e2;
         }
         
         .service-highlight-box h3 {
-            color: white;
+            color: #4a90e2;
             margin-bottom: 1rem;
+            font-size: 1.3rem;
         }
         
         .service-highlight-box a {
-            color: #fff200;
-            font-weight: bold;
-        }
-        
-        .university-box {
-            background: linear-gradient(135deg, #663399, #522d80);
-            color: white;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            text-align: center;
-        }
-        
-        .university-box h3 {
-            color: white;
-            margin-bottom: 1rem;
-        }
-        
-        .university-box a {
-            color: #fff200;
-            font-weight: bold;
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
         }
         
         @media (max-width: 768px) {
@@ -369,6 +495,7 @@
                 margin-top: 1rem;
                 flex-wrap: wrap;
                 justify-content: center;
+                gap: 1rem;
             }
             
             .hero-content h1 {
@@ -380,6 +507,11 @@
             }
             
             .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .services-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
             }
@@ -424,104 +556,131 @@
     
     <section class="hero">
         <div class="hero-content">
-            <h1>Evanston Property Management Excellence</h1>
-            <p>Celebrating Northwestern University's Vibrant Community | 18+ Years of North Shore Heritage | Academic District Specialists</p>
+            <h1>Property Management Evanston – Manage369</h1>
+            <p>Expert Condominium, HOA & Townhome Management Services | 18+ Years Excellence</p>
         </div>
     </section>
     
     <section class="content">
-        <div class="university-box">
-            <h3>CELEBRATING EVANSTON'S NORTHWESTERN UNIVERSITY COMMUNITY</h3>
-            <p>For over 18 years, we've had the privilege of serving Evanston's remarkable academic community. From faculty housing near the beautiful Northwestern campus to the vibrant lakefront neighborhoods, our deep appreciation for this unique university city guides every aspect of our property management approach.</p>
-            <p><strong>Community Partnership: <a href="tel:2246475621">(224) 647-5621</a></strong></p>
-        </div>
         
-        <p>Evanston holds a special place in the North Shore as home to Northwestern University, creating a distinctive blend of academic excellence and lakefront beauty. This vibrant community, where tree-lined streets connect the bustling campus to the serene shores of Lake Michigan, has been our honor to serve for over 18 years. From the historic districts near downtown to the modern developments along Sheridan Road, Evanston's diverse neighborhoods reflect the rich tapestry of university life and North Shore elegance.</p>
+        <p>Evanston holds a special place as home to Northwestern University, creating a distinctive blend of academic excellence and lakefront beauty. This remarkable community where world-class academics meet small-town charm has cultivated an identity that honors both educational heritage and family values. At Manage369, we understand what makes Evanston special – the academic excellence combined with university community spirit and lakefront elegance that creates a community where residents truly thrive. From Northwestern University, lakefront beauty, diverse cultural offerings, academic community, excellent schools, downtown Evanston, we manage properties that reflect this neighborhood's distinctive appeal while providing the professional service that busy residents and property owners depend on for exceptional results.</p>
         
-        <p>Our comprehensive <a href="services/condominium-management/index.html">condominium management</a> and <a href="services/hoa-management/index.html">HOA management</a> services celebrate what makes Evanston extraordinary - the prestigious academic environment, the welcoming community spirit, and the stunning lakefront setting. Whether serving faculty families who've made Evanston their permanent home, graduate students experiencing their first taste of North Shore living, or long-time residents who cherish the city's cultural richness, we understand that property management here means preserving the unique character that makes Evanston a beacon of academic achievement and community pride.</p>
+        <p>Our comprehensive property management approach recognizes that Evanston properties serve discerning residents who have chosen quality, location, and community above all else. Whether managing elegant condominiums with stunning architectural details, family-friendly townhome associations that foster neighborhood connections, or sophisticated HOA communities that maintain the highest standards, we understand that successful property management here means preserving the unique character that makes Evanston one of the region's most desirable places to call home.</p>
+        
+        <p>With 18+ years of experience serving Chicago and North Shore communities, our team brings deep local knowledge to every aspect of property management. We understand the seasonal challenges that affect Evanston properties, from winter heating concerns to summer maintenance schedules. Our relationships with trusted local contractors ensure prompt, professional service that meets the high standards Evanston residents expect and deserve.</p>
+        
         
         <div class="services-grid">
             <div class="service-card">
-                <h3>Northwestern Community Excellence</h3>
-                <p>Honoring Evanston's academic heritage through thoughtful property management that serves faculty families, students, and long-time residents with the respect and attention this prestigious community deserves.</p>
+                <h3>Condominium Management</h3>
+                <p>Expert management for high-rise and mid-rise condominium buildings throughout Evanston and the Chicago area.</p>
                 <a href="services/condominium-management/index.html">Learn More →</a>
             </div>
             <div class="service-card">
-                <h3>Lakefront & Campus District HOAs</h3>
-                <p>Celebrating the unique character of Evanston's diverse neighborhoods, from lakefront high-rises to tree-lined campus streets, with HOA management that preserves each community's distinctive charm.</p>
+                <h3>HOA Management</h3>
+                <p>Comprehensive homeowner association management for Evanston communities and planned developments.</p>
                 <a href="services/hoa-management/index.html">Learn More →</a>
             </div>
             <div class="service-card">
-                <h3>Academic Community Financial Stewardship</h3>
-                <p>Protecting the investments of Evanston families and academic professionals through transparent financial management that honors the trust placed in us by this distinguished community.</p>
+                <h3>Financial Management</h3>
+                <p>Professional financial reporting, budget development, and assessment collection for Evanston properties.</p>
                 <a href="services/financial-management/index.html">Learn More →</a>
             </div>
         </div>
     </section>
     
-    <!-- Celebrating Evanston's Academic Community Excellence -->
-    <section class="location-content">
-        <div class="location-content-wrapper">
-            <h2>Celebrating Evanston's Academic Community & Northwestern University Heritage</h2>
-            
-            <p>Few cities combine intellectual achievement and lakefront beauty as gracefully as Evanston. Home to Northwestern University since 1851, this remarkable North Shore community has cultivated a unique identity where world-class academics meet small-town charm. Walking through the tree-lined neighborhoods near campus, from the elegant homes along Sheridan Road to the vibrant downtown corridor, you experience a city that honors both its educational heritage and its role as a welcoming home for families from around the world.</p>
-
-            <h3>The Northwestern University Community We're Proud to Serve</h3>
-            <p>Evanston's character is shaped by the remarkable people who call it home. Faculty families who've chosen to raise their children in this intellectually rich environment, graduate students experiencing the excitement of advanced study, international scholars bringing global perspectives, and long-time residents who've witnessed decades of positive growth. This diversity creates neighborhoods where children grow up surrounded by learning, where community conversations span continents, and where the pursuit of knowledge is woven into daily life.</p>
-
-            <p>From the elegant condominiums overlooking Lake Michigan to the welcoming family neighborhoods near campus, each property we manage benefits from Evanston's unique academic atmosphere. The Northwestern community values excellence, fosters innovation, and celebrates achievement - qualities that inspire our own commitment to exceptional property management. Our <a href="services/administrative-services/index.html">administrative services</a> reflect this attention to detail, ensuring that every interaction honors the standards this distinguished community expects and deserves.</p>
-
-            <div class="university-box">
-                <h3>NORTHWESTERN UNIVERSITY DISTRICT APPRECIATION</h3>
-                <p>After 18+ years serving this exceptional community, we understand what makes Evanston special - the dedication to learning, the celebration of diverse cultures, the commitment to family values, and the pride in Northwestern's global reputation.</p>
-                <p><strong>Community Partnership: <a href="tel:2246475621">(224) 647-5621</a></strong></p>
-            </div>
-
-            <h3>Evanston's Educational Excellence and Family Values</h3>
-            <p>Education defines Evanston's identity, from the prestigious Northwestern University to the award-winning public schools that serve families throughout the community. This commitment to learning creates a special environment where property management isn't just about buildings - it's about supporting the homes where the next generation of leaders, researchers, and innovators are being raised. Faculty families often spend decades here, watching their children grow up in this academically rich environment before attending Northwestern or other prestigious universities themselves.</p>
-
-            <p>Our comprehensive <a href="services/financial-management/index.html">financial management</a> approach recognizes the long-term thinking that characterizes Evanston families. Whether managing budgets for properties housing visiting scholars, coordinating maintenance during the academic calendar, or ensuring seamless transitions for faculty families, we understand that our work supports not just individual properties but the broader educational mission that defines this remarkable community.</p>
-
-            <div class="service-highlight-box">
-                <h3>EVANSTON'S ACADEMIC CALENDAR COORDINATION</h3>
-                <p>From move-in weekends that welcome new Northwestern families to summer faculty conferences that bring global scholars to our community, we coordinate property management services around the academic rhythm that defines Evanston life.</p>
-                <p><strong>Community-Focused Service: <a href="tel:2246475621">(224) 647-5621</a></strong></p>
-            </div>
-
-            <h3>Lakefront Living and Campus Connections</h3>
-            <p>Evanston's geography creates natural gathering spaces that strengthen community bonds. The beautiful lakefront provides recreation and reflection opportunities that faculty families cherish, while the tree-lined streets connecting campus to residential neighborhoods encourage the walking culture that defines university life. From early morning joggers along the lake path to evening strolls through campus, this is a community that values both natural beauty and academic achievement.</p>
-
-            <p>Properties throughout Evanston benefit from this unique setting, whether they're lakefront high-rises offering stunning views to Northwestern faculty or family-friendly neighborhoods where professor's children play with their neighbors. Our 18+ years of experience managing properties valued at over $100 million includes deep appreciation for how Evanston's location enhances every resident's quality of life. This understanding guides our <a href="services/maintenance-coordination/index.html">maintenance coordination</a> approach, ensuring that both buildings and grounds reflect the high standards this lakefront university community expects.</p>
-
-            <div class="highlight-box">
-                <h3>What Makes Evanston Property Management Special</h3>
-                <p><strong>Academic Community Understanding:</strong> Deep appreciation for the rhythms of university life and the diverse needs of faculty, students, and long-term residents.</p>
+    
+        <div class="location-content">
+            <div class="location-content-wrapper">
+                <h2>Comprehensive Evanston Property Management Excellence</h2>
                 
-                <p><strong>Northwestern University Partnership:</strong> Respectful coordination with university housing, international scholar services, and academic scheduling through our comprehensive <a href="services/board-support/index.html">board support</a>.</p>
-                
-                <p><strong>Cultural Celebration:</strong> Honoring the international character of Evanston through multilingual communication support and understanding of diverse housing traditions.</p>
-                
-                <p><strong>Educational Excellence Support:</strong> Property management that recognizes our role in supporting homes where groundbreaking research, innovative teaching, and future leaders are being developed.</p>
-            </div>
+                <p>Every property we manage in Evanston benefits from our proven track record of excellence – 18+ years of experience, zero properties lost, and over $100 million in managed assets. Our deep understanding of local regulations, market conditions, and resident expectations ensures that your property not only maintains its value but continues to attract and retain quality residents who appreciate Evanston's unique character and community spirit.</p>
 
-            <h3>Community Traditions and Northwestern Pride</h3>
-            <p>Evanston's calendar reflects its dual identity as both university town and family community. From Homecoming celebrations that fill the streets with purple pride to community festivals that showcase local arts and culture, these events bring neighbors together across generational and cultural lines. Faculty families often become community leaders, contributing their expertise to local boards and committees while graduate students add energy and fresh perspectives to neighborhood activities.</p>
+                <h3>Expert Condominium Management in Evanston</h3>
+                <p>From boutique buildings that offer intimate community living to luxury high-rises with full-service amenities, our <a href="services/condominium-management/index.html">condominium management</a> services address the specific challenges that Evanston properties face in today's competitive market. We coordinate maintenance schedules around local events and seasonal needs, manage relationships with trusted contractors who understand area building codes and architectural requirements, and ensure that your condominium association operates smoothly while preserving the community atmosphere that residents value most.</p>
 
-            <p>The pride residents feel in Northwestern's achievements extends throughout the community, creating an atmosphere where excellence is expected and celebrated. This community spirit influences our <a href="services/resident-relations/index.html">resident relations</a> approach, ensuring that every property we manage contributes positively to the neighborhoods that make Evanston special. From coordinating with local contractors who understand university schedules to maintaining communication protocols that respect the diverse needs of international residents, we honor the community values that define this remarkable city.</p>
+                <p>Our CAI and IREM certifications guarantee professional standards that match the quality expectations of Evanston residents, while our CCIM designation demonstrates our commitment to understanding the investment aspects of property management. We provide detailed monthly financial reports, coordinate with local utility providers for efficient service, and maintain communication systems that keep residents informed while protecting board members from unnecessary disruptions.</p>
 
-            <h3>Preserving Evanston's Academic Heritage Through Property Excellence</h3>
-            <p>Every property we manage contributes to Evanston's reputation as one of America's premier university communities. Whether preserving historic buildings that reflect the city's architectural heritage or maintaining modern facilities that support contemporary academic life, our work honors the legacy of generations of Northwestern families who've called Evanston home. Our CAI, IREM, and CCIM certifications ensure professional standards that match the academic excellence this community represents.</p>
+                <div class="highlight-box">
+                    <h3>Evanston Condominium Management Specialists</h3>
+                    <p>Our experienced team understands the unique aspects of Evanston condominium living, from architectural preservation requirements that protect property character to coordinating with local utility services for optimal efficiency. We manage properties ranging from intimate boutique buildings that foster close community connections to full-service luxury developments with extensive amenities, always maintaining the high standards that define this exceptional community.</p>
+                    <p><strong>Professional Excellence: CAI • IREM • CCIM Certified</strong></p>
+                </div>
 
-            <p>From our Glenview headquarters, we're close enough to understand Evanston's daily rhythms while maintaining the professional distance that ensures objective, excellent service. Our zero-loss track record across our managed portfolio demonstrates the same commitment to excellence that characterizes Northwestern University itself, providing property owners with confidence that their investments support not just individual residents but the broader community that makes Evanston extraordinary.</p>
+                <h3>HOA Management Tailored to Evanston Community Values</h3>
+                <p>Homeowner associations in Evanston require management that understands both the practical needs of property maintenance and the community values that make neighborhoods thrive for generations. Our <a href="services/hoa-management/index.html">HOA management</a> approach recognizes that successful associations create environments where families feel genuinely connected, property values remain consistently strong, and community traditions continue to flourish while adapting to modern needs and expectations.</p>
 
-            <div class="university-box">
-                <h3>Proven Excellence in Academic Community Property Management</h3>
-                <p><strong>18+ Years Northwestern District Experience</strong> • <strong>$100M+ Managed Assets</strong> • <strong>Zero Properties Lost</strong> • <strong>CAI/IREM/CCIM Certified</strong></p>
-                <p>When your Evanston property needs management excellence that honors this community's academic heritage and family values, trust the North Shore specialists who understand what makes Northwestern University's hometown truly special.</p>
-                <p><strong>Community Partnership: <a href="tel:2246475621">(224) 647-5621</a> | <a href="mailto:service@manage369.com">service@manage369.com</a></strong></p>
+                <p>We work closely with Evanston HOA boards to develop policies that protect property values while fostering the neighborly atmosphere that residents cherish and that attracts quality families to the community. From coordinating seasonal maintenance projects that enhance curb appeal to managing community events that bring neighbors together and create lasting friendships, our services support the full spectrum of community life that makes Evanston such a special place to live and raise families.</p>
+
+                <p>Our approach includes detailed budget planning that anticipates both routine maintenance needs and long-term capital improvements, ensuring that associations maintain adequate reserves while avoiding unnecessary special assessments that can burden homeowners. We coordinate with local service providers who understand the community's standards and expectations, from landscaping companies that maintain the beautiful grounds to contractors who handle repairs with minimal disruption to residents' daily lives.</p>
+
+                <h3>Transparent Financial Management and Strategic Planning</h3>
+                <p>Property owners in Evanston expect – and deserve – complete transparency in financial management combined with strategic thinking that protects their significant investments. Our <a href="services/financial-management/index.html">financial management</a> services provide detailed monthly reports that clearly explain every expense, professional budget development that anticipates both routine costs and unexpected needs, and strategic reserve planning that protects your investment while supporting the high-quality amenities that Evanston residents value and expect.</p>
+
+                <p>We understand that many Evanston properties represent significant family investments, often passed down through generations or purchased by residents who plan to call this community home for decades. Our financial stewardship reflects this long-term perspective, ensuring that every decision supports both current operational excellence and future property value protection. We maintain relationships with local financial institutions that understand property management needs and can provide favorable terms for major capital improvements when necessary.</p>
+
+                <div class="service-highlight-box">
+                    <h3>Professional Maintenance Coordination for Evanston Properties</h3>
+                    <p>Our <a href="services/maintenance-coordination/index.html">maintenance coordination</a> services connect your property with our network of trusted local contractors who understand Evanston's unique requirements and community standards. From seasonal weather challenges that require proactive planning to local architectural standards that preserve neighborhood character, we ensure that all maintenance work enhances your property while respecting the distinctive character that defines this special community.</p>
+                    <p>We coordinate everything from routine preventive maintenance that prevents costly emergency repairs to major capital improvements that enhance property values and resident satisfaction. Our emergency response system ensures 24/7 availability for urgent situations, while our preventive maintenance programs help avoid emergencies through systematic care and attention.</p>
+                    <p><strong>Local Expertise & 24/7 Response: <a href="tel:2246475621">(224) 647-5621</a></strong></p>
+                </div>
+
+                <h3>Comprehensive Board Support and Administrative Excellence</h3>
+                <p>Effective property management requires seamless coordination between professional management and community leadership, with clear communication and mutual respect guiding every interaction. Our <a href="services/board-support/index.html">board support</a> services empower Evanston association boards with the detailed information, expert guidance, and comprehensive administrative support they need to make confident decisions about their communities while avoiding the time-consuming details that can overwhelm volunteer board members.</p>
+
+                <p>We provide comprehensive <a href="services/administrative-services/index.html">administrative services</a> that handle everything from resident communications and document management to vendor coordination and regulatory compliance, allowing board members to focus on strategic planning and community enhancement while ensuring that daily operations run smoothly and efficiently. Our approach respects the volunteer nature of board service while providing professional support that keeps communities operating at the highest standards.</p>
+
+                <p>Our board support includes preparation of detailed meeting materials, coordination of annual meetings and elections, management of governing document updates, and assistance with policy development that reflects community values while meeting legal requirements. We help boards navigate complex decisions by providing clear information and professional recommendations based on our extensive experience with similar communities.</p>
+
+                <h3>Expert Capital Project Management and Long-term Planning</h3>
+                <p>Preserving and enhancing Evanston properties requires strategic planning and professional project management that balances immediate needs with long-term value protection. Our <a href="services/capital-project-management/index.html">capital project management</a> services guide associations through major improvements, from routine building updates that maintain property appeal to significant infrastructure investments that protect property values and enhance resident quality of life for years to come.</p>
+
+                <p>We work with boards to develop realistic project timelines that minimize disruption to residents, manage contractor relationships to ensure quality results and fair pricing, and coordinate with local permitting authorities to ensure smooth project approval and completion. Our experience with local building codes and contractor networks helps ensure that projects are completed to the high standards that Evanston properties require while staying within budget and schedule constraints.</p>
+
+                <p>Our project management approach includes detailed planning phases that identify potential challenges before they become problems, regular progress monitoring that keeps boards informed throughout the project lifecycle, and final inspections that ensure all work meets or exceeds community standards. We maintain detailed project documentation that protects associations and provides valuable records for future maintenance and improvements.</p>
+
+                <h3>Exceptional Resident Relations and Community Building</h3>
+                <p>The strong sense of community that defines Evanston doesn't happen by accident – it requires thoughtful attention to resident relations and proactive communication that builds trust and fosters positive interactions. Our <a href="services/resident-relations/index.html">resident relations</a> services foster positive interactions between residents, management, and boards while addressing concerns promptly and professionally, ensuring that minor issues don't escalate into major community problems.</p>
+
+                <p>From comprehensive new resident orientation programs that help newcomers connect with established community traditions to sophisticated communication systems that keep everyone informed about important developments without overwhelming them with unnecessary details, we support the social fabric that makes Evanston neighborhoods places where people choose to build their lives and raise their families.</p>
+
+                <p>Our resident relations approach includes regular community surveys to gauge satisfaction and identify improvement opportunities, coordination of social events that bring neighbors together, and conflict resolution services that address disputes fairly while maintaining community harmony. We understand that happy residents are more likely to take pride in their community, participate in association activities, and maintain their properties to high standards.</p>
+
+                <div class="highlight-box">
+                    <h3>Why Evanston Properties Choose Manage369</h3>
+                    <p><strong>Proven Local Market Expertise:</strong> 18+ years serving Chicago and North Shore communities with deep understanding of local regulations, seasonal challenges, market conditions, and resident expectations that come from extensive hands-on experience.</p>
+                    
+                    <p><strong>Professional Certifications & Continuing Education:</strong> CAI, IREM, and CCIM certified professionals ensuring industry best practices, ethical standards, and continuing education in property management excellence, financial stewardship, and community leadership.</p>
+                    
+                    <p><strong>Outstanding Track Record:</strong> Zero properties lost in our management history, with over $100 million in managed assets, 50+ properties, and 2,450+ units under professional management, demonstrating consistent excellence and client satisfaction.</p>
+                    
+                    <p><strong>Boutique-Level Personal Service:</strong> Direct access to ownership and personalized attention that larger corporate firms simply cannot match, ensuring responsive service tailored to your community's unique needs, character, and long-term goals.</p>
+                </div>
+
+                <h3>Specialized Townhome Management Expertise</h3>
+                <p>Townhome communities in Evanston often combine the benefits of single-family living with shared amenities and community governance, creating unique management challenges that require specialized expertise. Our <a href="services/townhome-management/index.html">townhome management</a> services address the specific needs these properties face, from coordinating exterior maintenance across multiple individually-owned units to managing shared spaces and amenities that enhance the community experience while maintaining individual property rights and responsibilities.</p>
+
+                <p>We understand that townhome residents often choose this lifestyle for the perfect balance of privacy and community it provides, along with the maintenance convenience that comes from professional property management. Our management approach supports this balance by ensuring that individual property rights are fully respected while community standards maintain the neighborhood appeal that protects everyone's investment and quality of life.</p>
+
+                <p>Our townhome management services include coordination of roof repairs and exterior painting that maintain uniform community appearance, management of shared driveways and parking areas, maintenance of community amenities like playgrounds or walking paths, and enforcement of architectural guidelines that preserve property values while allowing reasonable personalization of individual homes.</p>
+
+                <h3>24/7 Emergency Response and Comprehensive Property Protection</h3>
+                <p>When emergencies arise, Evanston property owners need management partners who respond quickly, professionally, and with the local knowledge necessary to protect both property and residents. Our comprehensive 24/7 emergency response system ensures that urgent situations – from heating system failures during harsh winter storms to plumbing emergencies that could damage multiple units if not addressed immediately – receive prompt attention from qualified professionals who understand the unique challenges of Evanston properties.</p>
+
+                <p>Our established relationships with local emergency service providers and contractors mean faster response times and better outcomes when urgent situations arise, often preventing minor problems from becoming major disasters. This proactive approach to emergency management protects both property values and resident safety while providing invaluable peace of mind for owners and boards throughout Evanston.</p>
+
+                <p>Our emergency services include immediate response protocols for weather-related damage, coordination with utility companies during power outages, management of water damage situations to prevent mold and structural problems, and communication systems that keep residents informed during emergency situations while coordinating with local authorities when necessary.</p>
+
+                <h3>Long-term Value Protection and Strategic Growth</h3>
+                <p>Successful property management in Evanston requires more than just maintaining current operations – it demands strategic thinking that anticipates future needs and opportunities while protecting the long-term value of significant real estate investments. Our approach combines day-to-day operational excellence with strategic planning that ensures your property continues to compete effectively in the Evanston market while adapting to changing resident needs and expectations.</p>
+
+                <p>We provide regular market analysis that helps boards make informed decisions about amenity upgrades, policy changes, and capital improvements that enhance property appeal and resident satisfaction. Our understanding of local market trends, combined with our extensive experience managing similar properties, enables us to recommend improvements that provide genuine value rather than costly changes that don't meaningfully enhance the resident experience or property values.</p>
+
+                <p>This strategic approach includes regular reserve studies that ensure adequate funding for future capital needs, analysis of utility usage and opportunities for efficiency improvements that reduce operating costs, and evaluation of community amenities to ensure they continue meeting resident needs while remaining cost-effective to maintain and operate.</p>
             </div>
         </div>
-    </section>
+        
     
     <section class="why-choose">
         <div class="why-choose-content">
@@ -540,8 +699,8 @@
                     <p>Monthly financial statements, budget development, and reserve studies to protect property values.</p>
                 </div>
                 <div class="benefit-item">
-                    <h3>Northwestern District Expertise</h3>
-                    <p>18+ years serving Evanston's academic community with deep appreciation for university life, faculty needs, and educational excellence.</p>
+                    <h3>Local Evanston Expertise</h3>
+                    <p>Deep understanding of Evanston's unique property management challenges and community character.</p>
                 </div>
                 <div class="benefit-item">
                     <h3>Professional Certifications</h3>

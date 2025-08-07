@@ -6,7 +6,11 @@
       "Bash(do if grep -q \"emergency\\|crisis\\|24/7\" \"$file\")",
       "Bash(then echo \"$file\")",
       "Bash(fi)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(dir property-management-*.html)",
+      "Bash(do echo \"=== $file character count ===\")",
+      "Bash(wc:*)",
+      "Bash(echo)"
     ],
     "deny": []
   }
