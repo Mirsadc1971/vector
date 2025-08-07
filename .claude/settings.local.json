@@ -10,7 +10,8 @@
       "Bash(dir property-management-*.html)",
       "Bash(do echo \"=== $file character count ===\")",
       "Bash(wc:*)",
-      "Bash(echo)"
+      "Bash(echo)",
+      "Bash(git push:*)"
     ],
     "deny": []
   }

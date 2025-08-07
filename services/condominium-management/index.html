@@ -273,6 +273,26 @@
         footer a:hover {
             text-decoration: underline;
         }
+        
+        /* Process Grid Responsive Design */
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+        }
+        
+        @media (max-width: 1024px) {
+            .process-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .process-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -488,7 +508,7 @@
             
             <div style="background: linear-gradient(135deg, rgba(44, 90, 160, 0.05), rgba(255, 107, 53, 0.05)); padding: 3rem; border-radius: 15px; margin-top: 3rem;">
                 <h3 style="color: #2c5aa0; text-align: center; font-size: 2rem; margin-bottom: 2rem;">Our Condominium Management Process</h3>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div class="process-grid">
                     <div style="text-align: center;">
                         <div style="width: 60px; height: 60px; background: #2c5aa0; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">1</div>
                         <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Building Assessment</h4>
