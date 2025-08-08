@@ -1208,215 +1208,227 @@
         </div>
     </section>
     
-    <!-- CLEAN MODERN FOOTER CSS -->
+    <!-- PROPERLY ALIGNED FOOTER CSS -->
     <style>
-    /* Clean Modern Footer Styles */
-    .footer {
-        background: linear-gradient(135deg, #1a2a3a 0%, #2B5BA0 100%);
-        color: #fff;
-        padding: 3rem 0 1rem;
-        margin-top: 4rem;
+    /* FIXED ALIGNED FOOTER */
+    footer {
+        background: linear-gradient(135deg, #2C4A5F 0%, #1E3A4C 100%);
+        color: #ffffff;
+        font-size: 14px;
     }
-
-    .footer-container {
-        max-width: 1200px;
+    
+    .footer-main {
+        max-width: 1400px;
         margin: 0 auto;
-        padding: 0 20px;
-    }
-
-    .footer-grid {
+        padding: 50px 20px 40px;
         display: grid;
         grid-template-columns: 2fr 1fr 1fr;
-        gap: 3rem;
-        margin-bottom: 2rem;
+        gap: 60px;
     }
-
-    .footer-section h3 {
+    
+    .footer-column h3 {
         color: #FF6B35;
-        font-size: 1.1rem;
-        margin-bottom: 1rem;
-        font-weight: 600;
+        font-size: 16px;
+        margin-bottom: 20px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        border-bottom: 2px solid #FF6B35;
+        padding-bottom: 10px;
     }
-
-    .footer-section p {
-        color: #e0e0e0;
-        line-height: 1.6;
-        margin-bottom: 0.5rem;
-        font-size: 0.95rem;
-    }
-
-    .footer-section ul {
-        list-style: none;
-        padding: 0;
-    }
-
-    .footer-section ul li {
-        margin-bottom: 0.5rem;
-    }
-
-    .footer-section ul li a {
-        color: #e0e0e0;
-        text-decoration: none;
-        transition: color 0.3s ease;
-        font-size: 0.95rem;
-    }
-
-    .footer-section ul li a:hover {
+    
+    .footer-logo {
+        font-size: 24px;
         color: #FF6B35;
+        margin-bottom: 15px;
+        font-weight: 400;
+        letter-spacing: 2px;
     }
-
+    
+    .footer-description {
+        color: #B8C5D6;
+        line-height: 1.8;
+        margin-bottom: 20px;
+        font-size: 14px;
+    }
+    
     .footer-contact {
+        margin-top: 20px;
+    }
+    
+    .footer-contact div {
+        margin-bottom: 10px;
+        color: #B8C5D6;
         display: flex;
         align-items: center;
-        gap: 1rem;
-        margin-top: 0.5rem;
     }
-
+    
     .footer-contact a {
         color: #FF6B35;
         text-decoration: none;
-        font-weight: 600;
+        margin-left: 5px;
     }
-
+    
     .footer-contact a:hover {
         text-decoration: underline;
     }
-
-    /* Certifications Bar */
-    .certifications-bar {
-        background: rgba(0, 0, 0, 0.2);
-        padding: 1.5rem 0;
-        margin-top: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    
+    /* PROPERLY ALIGNED FOOTER LINKS */
+    .footer-links {
+        list-style: none;
+        padding: 0;
     }
-
-    .certifications-content {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 0 20px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-        gap: 2rem;
+    
+    .footer-links li {
+        margin-bottom: 12px;
+        padding-left: 0;
     }
-
-    .cert-badges {
-        display: flex;
-        gap: 2rem;
-        align-items: center;
+    
+    .footer-links a {
+        color: #B8C5D6;
+        text-decoration: none;
+        transition: color 0.3s;
+        font-size: 14px;
+        display: block;
+        padding: 2px 0;
     }
-
-    .cert-badge {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .cert-badge strong {
+    
+    .footer-links a:hover {
         color: #FF6B35;
-        font-size: 1rem;
+        transform: translateX(3px);
+        transition: all 0.3s;
     }
-
-    .cert-badge span {
-        color: #b0b0b0;
-        font-size: 0.75rem;
-    }
-
+    
     .footer-bottom {
-        text-align: center;
-        padding: 1rem 0;
-        color: #b0b0b0;
-        font-size: 0.9rem;
+        background: #1A2F3F;
+        padding: 25px 20px;
+        border-top: 1px solid #3A566B;
     }
-
-    /* Footer Mobile Responsive */
-    @media (max-width: 768px) {
-        .footer-grid {
+    
+    .certifications {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        margin-bottom: 20px;
+        flex-wrap: wrap;
+        max-width: 1400px;
+        margin: 0 auto 20px;
+    }
+    
+    .cert-badge {
+        text-align: center;
+        padding: 10px 20px;
+        background: rgba(255, 107, 53, 0.1);
+        border: 1px solid #FF6B35;
+        border-radius: 8px;
+        min-width: 100px;
+    }
+    
+    .cert-badge .cert-abbr {
+        color: #FF6B35;
+        font-weight: 600;
+        font-size: 16px;
+        display: block;
+        margin-bottom: 3px;
+    }
+    
+    .cert-badge .cert-desc {
+        color: #8A9BAB;
+        font-size: 10px;
+        text-transform: capitalize;
+    }
+    
+    .footer-copyright {
+        text-align: center;
+        color: #8A9BAB;
+        font-size: 13px;
+        padding-top: 20px;
+        border-top: 1px solid #2A3F4F;
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
+    @media (max-width: 968px) {
+        .footer-main {
             grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-
-        .certifications-content {
-            flex-direction: column;
+            gap: 40px;
             text-align: center;
         }
-
-        .cert-badges {
-            justify-content: center;
-            flex-wrap: wrap;
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
     }
     </style>
 
-    <!-- CLEAN MODERN FOOTER HTML -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-grid">
-                <!-- Company Info -->
-                <div class="footer-section">
-                    <h3>Manage369</h3>
-                    <p>Premier Chicago & North Shore Property Management</p>
-                    <p>18+ Years of Excellence • 50+ Properties • 2,450+ Units</p>
-                    <div class="footer-contact">
-                        <a href="tel:2246475621">(224) 647-5621</a>
-                        <span>•</span>
-                        <a href="mailto:service@manage369.com">service@manage369.com</a>
-                    </div>
-                    <p>1400 Patriot Boulevard 357, Glenview, IL 60026</p>
+    <!-- PROPERLY ALIGNED FOOTER HTML -->
+    <footer>
+        <div class="footer-main">
+            <!-- Company Info Column -->
+            <div class="footer-column">
+                <div class="footer-logo">Manage369</div>
+                <p class="footer-description">
+                    Premier Chicago & North Shore Property Management<br>
+                    18+ Years of Excellence • 50+ Properties • 2,450+ Units
+                </p>
+                <div class="footer-contact">
+                    <div>(224) 647-5621 • <a href="mailto:service@manage369.com">service@manage369.com</a></div>
+                    <div style="margin-top: 10px;">1400 Patriot Boulevard 357, Glenview, IL 60026</div>
                 </div>
-                
-                <!-- Quick Links -->
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="service-areas.html">Service Areas</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="blog/index.html">Blog</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Resources -->
-                <div class="footer-section">
-                    <h3>Resources</h3>
-                    <ul>
-                        <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="sitemap.html">Sitemap</a></li>
-                    </ul>
-                </div>
+            </div>
+            
+            <!-- Quick Links Column - PROPERLY ALIGNED -->
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="service-areas.html">Service Areas</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog/index.html">Blog</a></li>
+                    <li><a href="payment-methods.html">Payment Methods</a></li>
+                </ul>
+            </div>
+            
+            <!-- Resources Column - PROPERLY ALIGNED -->
+            <div class="footer-column">
+                <h3>Resources</h3>
+                <ul class="footer-links">
+                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                    <li><a href="terms-of-service.html">Terms of Service</a></li>
+                    <li><a href="sitemap.html">Sitemap</a></li>
+                    <li><a href="accessibility.html">Accessibility</a></li>
+                    <li><a href="legal-disclaimers.html">Legal Disclaimers</a></li>
+                </ul>
             </div>
         </div>
         
-        <!-- Certifications Bar -->
-        <div class="certifications-bar">
-            <div class="certifications-content">
-                <div class="cert-badges">
-                    <div class="cert-badge">
-                        <strong>CAI</strong>
-                        <span>Member</span>
-                    </div>
-                    <div class="cert-badge">
-                        <strong>IREM</strong>
-                        <span>Certified</span>
-                    </div>
-                    <div class="cert-badge">
-                        <strong>CCIM</strong>
-                        <span>Designated</span>
-                    </div>
-                    <div class="cert-badge">
-                        <strong>NAR</strong>
-                        <span>Member</span>
-                    </div>
-                    <div class="cert-badge">
-                        <strong>IDFPR</strong>
-                        <span>Licensed</span>
-                    </div>
+        <div class="footer-bottom">
+            <div class="certifications">
+                <div class="cert-badge">
+                    <span class="cert-abbr">CAI</span>
+                    <span class="cert-desc">Member</span>
                 </div>
-                <div class="footer-bottom">
-                    &copy; 2025 Manage369. All Rights Reserved.
+                <div class="cert-badge">
+                    <span class="cert-abbr">IREM</span>
+                    <span class="cert-desc">Certified</span>
                 </div>
+                <div class="cert-badge">
+                    <span class="cert-abbr">CCIM</span>
+                    <span class="cert-desc">Designated</span>
+                </div>
+                <div class="cert-badge">
+                    <span class="cert-abbr">NAR</span>
+                    <span class="cert-desc">Member</span>
+                </div>
+                <div class="cert-badge">
+                    <span class="cert-abbr">IDFPR</span>
+                    <span class="cert-desc">Licensed</span>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                © 2025 Manage369. All Rights Reserved.
             </div>
         </div>
     </footer>
