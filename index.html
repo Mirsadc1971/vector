@@ -1208,41 +1208,41 @@
         </div>
     </section>
     
-    <!-- COMPREHENSIVE FOOTER CSS -->
+    <!-- CLEAN MODERN FOOTER CSS -->
     <style>
-    .comprehensive-footer {
-        background: #2c3e50;
-        color: #ffffff;
-        padding: 4rem 0 2rem;
+    /* Clean Modern Footer Styles */
+    .footer {
+        background: linear-gradient(135deg, #1a2a3a 0%, #2B5BA0 100%);
+        color: #fff;
+        padding: 3rem 0 1rem;
+        margin-top: 4rem;
     }
 
     .footer-container {
         max-width: 1200px;
         margin: 0 auto;
-        padding: 0 2rem;
+        padding: 0 20px;
     }
 
     .footer-grid {
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr 1.5fr;
+        grid-template-columns: 2fr 1fr 1fr;
         gap: 3rem;
-        margin-bottom: 3rem;
+        margin-bottom: 2rem;
     }
 
     .footer-section h3 {
-        color: #ffffff;
-        font-size: 1.2rem;
+        color: #FF6B35;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
         font-weight: 600;
-        margin-bottom: 1.5rem;
-        border-bottom: 2px solid #ff9500;
-        padding-bottom: 0.5rem;
-        display: inline-block;
     }
 
     .footer-section p {
-        color: #b8c5d1;
+        color: #e0e0e0;
         line-height: 1.6;
-        margin-bottom: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 0.95rem;
     }
 
     .footer-section ul {
@@ -1251,108 +1251,83 @@
     }
 
     .footer-section ul li {
-        margin-bottom: 0.8rem;
+        margin-bottom: 0.5rem;
     }
 
     .footer-section ul li a {
-        color: #b8c5d1;
+        color: #e0e0e0;
         text-decoration: none;
         transition: color 0.3s ease;
+        font-size: 0.95rem;
     }
 
     .footer-section ul li a:hover {
-        color: #ff9500;
+        color: #FF6B35;
     }
 
-    .footer-contact-info {
-        margin-bottom: 1rem;
+    .footer-contact {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-top: 0.5rem;
     }
 
-    .footer-contact-info strong {
-        color: #ffffff;
-        display: inline;
-        margin-right: 0.3rem;
-    }
-
-    .footer-contact-info a {
-        color: #ff9500;
+    .footer-contact a {
+        color: #FF6B35;
         text-decoration: none;
+        font-weight: 600;
     }
 
-    .footer-contact-info a:hover {
+    .footer-contact a:hover {
         text-decoration: underline;
     }
 
-    .certifications {
-        text-align: center;
-        padding: 2rem 0;
+    /* Certifications Bar */
+    .certifications-bar {
+        background: rgba(0, 0, 0, 0.2);
+        padding: 1.5rem 0;
+        margin-top: 2rem;
         border-top: 1px solid rgba(255, 255, 255, 0.1);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 2rem 0;
     }
 
-    .certifications h3 {
-        margin-bottom: 1.5rem;
-        color: #ffffff;
-        font-size: 1.2rem;
+    .certifications-content {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 2rem;
     }
 
     .cert-badges {
         display: flex;
-        justify-content: center;
         gap: 2rem;
-        flex-wrap: wrap;
+        align-items: center;
     }
 
     .cert-badge {
-        background: rgba(255, 255, 255, 0.1);
-        padding: 1rem;
-        border-radius: 10px;
-        text-align: center;
-        min-width: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .cert-badge strong {
-        display: block;
-        color: #ff9500;
-        font-size: 1.1rem;
-        margin-bottom: 0.25rem;
+        color: #FF6B35;
+        font-size: 1rem;
     }
 
     .cert-badge span {
-        display: block;
-        font-size: 0.9rem;
-        color: #b8c5d1;
-    }
-
-    .footer-emergency-contact {
-        background: #c0392b;
-        padding: 1rem;
-        border-radius: 8px;
-        text-align: center;
-        margin-top: 1rem;
-    }
-
-    .footer-emergency-contact h4 {
-        color: #ffffff;
-        margin-bottom: 0.5rem;
-    }
-
-    .footer-emergency-contact p {
-        color: #ffffff;
-        margin: 0;
-        font-weight: bold;
+        color: #b0b0b0;
+        font-size: 0.75rem;
     }
 
     .footer-bottom {
         text-align: center;
-        padding-top: 2rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .footer-bottom p {
-        color: #b8c5d1;
-        margin-bottom: 0;
+        padding: 1rem 0;
+        color: #b0b0b0;
+        font-size: 0.9rem;
     }
 
     /* Footer Mobile Responsive */
@@ -1361,90 +1336,66 @@
             grid-template-columns: 1fr;
             gap: 2rem;
         }
-        
-        .cert-badges {
-            gap: 1rem;
+
+        .certifications-content {
+            flex-direction: column;
+            text-align: center;
         }
-        
-        .cert-badge {
-            min-width: 100px;
-            padding: 0.75rem;
+
+        .cert-badges {
+            justify-content: center;
+            flex-wrap: wrap;
         }
     }
     </style>
 
-    <!-- COMPREHENSIVE FOOTER HTML -->
-    <footer class="comprehensive-footer">
+    <!-- CLEAN MODERN FOOTER HTML -->
+    <footer class="footer">
         <div class="footer-container">
-            <!-- Main Footer Content -->
             <div class="footer-grid">
                 <!-- Company Info -->
                 <div class="footer-section">
                     <h3>Manage369</h3>
-                    <p>Chicago & North Shore Property Management Services</p>
-                    <p>18+ Years of Local Expertise</p>
-                    <div class="footer-contact-info">
-                        <p><strong>Phone:</strong> <a href="tel:2246475621">(224) 647-5621</a></p>
-                        <p><strong>Email:</strong> <a href="mailto:service@manage369.com">service@manage369.com</a></p>
-                        <p><strong>Address:</strong> 1400 Patriot Boulevard 357, Glenview, IL 60026</p>
-                        <p><strong>Hours:</strong> Monday-Friday 9:00 AM - 5:00 PM</p>
+                    <p>Premier Chicago & North Shore Property Management</p>
+                    <p>18+ Years of Excellence • 50+ Properties • 2,450+ Units</p>
+                    <div class="footer-contact">
+                        <a href="tel:2246475621">(224) 647-5621</a>
+                        <span>•</span>
+                        <a href="mailto:service@manage369.com">service@manage369.com</a>
                     </div>
+                    <p>1400 Patriot Boulevard 357, Glenview, IL 60026</p>
                 </div>
                 
-                <!-- Services Menu -->
+                <!-- Quick Links -->
                 <div class="footer-section">
-                    <h3>Our Services</h3>
+                    <h3>Quick Links</h3>
                     <ul>
-                        <li><a href="services/condominium-management/index.html">Condominium Management</a></li>
-                        <li><a href="services/hoa-management/index.html">HOA Management</a></li>
-                        <li><a href="services/townhome-management/index.html">Townhome Management</a></li>
-                        <li><a href="services/financial-management/index.html">Financial Management</a></li>
-                        <li><a href="services/maintenance-coordination/index.html">Maintenance Coordination</a></li>
-                        <li><a href="services/board-support/index.html">Board Support</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="service-areas.html">Service Areas</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="blog/index.html">Blog</a></li>
                     </ul>
                 </div>
                 
-                <!-- Top Service Areas -->
-                <div class="footer-section">
-                    <h3>Top Service Areas</h3>
-                    <ul>
-                        <li><a href="property-management-wilmette.html">Wilmette</a></li>
-                        <li><a href="property-management-winnetka.html">Winnetka</a></li>
-                        <li><a href="property-management-highland-park.html">Highland Park</a></li>
-                        <li><a href="property-management-glencoe.html">Glencoe</a></li>
-                        <li><a href="property-management-evanston.html">Evanston</a></li>
-                        <li><a href="property-management-glenview.html">Glenview</a></li>
-                        <li><a href="property-management-northbrook.html">Northbrook</a></li>
-                        <li><a href="service-areas.html">View All Areas</a></li>
-                    </ul>
-                </div>
-                
-                <!-- Resources & Legal -->
+                <!-- Resources -->
                 <div class="footer-section">
                     <h3>Resources</h3>
                     <ul>
-                        <li><a href="blog/index.html">Property Management Blog</a></li>
-                        <li><a href="contact.html">Contact Us</a></li>
-                        <li><a href="pay-dues.html">Pay Dues</a></li>
-                    </ul>
-                    <h4 style="margin-top: 1.5rem; margin-bottom: 0.75rem; color: #ffffff; font-size: 1rem;">Legal</h4>
-                    <ul>
                         <li><a href="privacy-policy.html">Privacy Policy</a></li>
                         <li><a href="terms-of-service.html">Terms of Service</a></li>
-                        <li><a href="legal-disclaimers.html">Legal Disclaimers</a></li>
-                        <li><a href="accessibility.html">Accessibility</a></li>
                         <li><a href="sitemap.html">Sitemap</a></li>
                     </ul>
                 </div>
             </div>
-            
-            <!-- Professional Certifications -->
-            <div class="certifications">
-                <h3>Professional Certifications</h3>
+        </div>
+        
+        <!-- Certifications Bar -->
+        <div class="certifications-bar">
+            <div class="certifications-content">
                 <div class="cert-badges">
                     <div class="cert-badge">
                         <strong>CAI</strong>
-                        <span>National Member</span>
+                        <span>Member</span>
                     </div>
                     <div class="cert-badge">
                         <strong>IREM</strong>
@@ -1463,17 +1414,9 @@
                         <span>Licensed</span>
                     </div>
                 </div>
-            </div>
-            
-            <!-- Emergency Contact -->
-            <div class="footer-emergency-contact">
-                <h4>24/7 Emergency Property Management</h4>
-                <p>Call (224) 647-5621</p>
-            </div>
-            
-            <!-- Footer Bottom -->
-            <div class="footer-bottom">
-                <p>&copy; 2025 Manage369. All rights reserved.</p>
+                <div class="footer-bottom">
+                    &copy; 2025 Manage369. All Rights Reserved.
+                </div>
             </div>
         </div>
     </footer>
