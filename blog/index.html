@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Expert property management insights, North Shore HOA guidance, and Chicago condominium management tips. 18+ years of professional property management expertise.">
+    <title>Property Management Blog | North Shore HOA & Condo Management Tips | Manage369</title>
+    <meta name="keywords" content="property management blog, North Shore HOA tips, condo management advice, Chicago property management, HOA board guidance">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://manage369.com/blog/">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Property Management Blog | North Shore HOA & Condo Management Tips">
+    <meta property="og:description" content="Expert insights from 18+ years of North Shore property management. HOA guidance, condo tips, and financial planning advice.">
+    <meta property="og:image" content="https://manage369.com/images/manage369livingroomskokie.webp">
+    <meta property="og:url" content="https://manage369.com/blog/">
+    <meta property="og:type" content="website">
+    
+    <!-- Blog Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Manage369 Property Management Blog",
+      "description": "Expert property management insights for North Shore and Chicago communities",
+      "url": "https://manage369.com/blog/",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Manage369",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://manage369.com/images/manage369-logo.png"
+        }
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://manage369.com/blog/"
+      }
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header Styles */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover, .nav a.active {
+            color: #4a90e2;
+            background: #f0f0f0;
+        }
+        
+        .phone {
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .phone:hover {
+            background: #357abd;
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 70vh;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.9), rgba(74, 144, 226, 0.8)), 
+                        url('../images/manage369livingroomskokie.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+        
+        /* Blog Categories */
+        .categories {
+            padding: 4rem 0;
+            background: #f8f9fa;
+        }
+        
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .category-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            border-top: 4px solid #ff9500;
+        }
+        
+        .category-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .category-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .category-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .category-card .btn {
+            background: #ff9500;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .category-card .btn:hover {
+            background: #e6850e;
+        }
+        
+        /* Blog Posts Grid */
+        .blog-section {
+            padding: 4rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 3rem;
+        }
+        
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        
+        .blog-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .blog-card-content {
+            padding: 1.5rem;
+        }
+        
+        .blog-meta {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+        
+        .blog-category {
+            background: #ff9500;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+        }
+        
+        .blog-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .blog-excerpt {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        
+        .read-more {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .read-more:hover {
+            text-decoration: underline;
+        }
+        
+        /* Newsletter Signup */
+        .newsletter {
+            background: #1e3a8a;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+        
+        .newsletter h2 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        
+        .newsletter p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 1rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        
+        .newsletter-form button {
+            background: #ff9500;
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .newsletter-form button:hover {
+            background: #e6850e;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+        
+        .footer a {
+            color: #ff9500;
+            text-decoration: none;
+        }
+        
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 6rem 1rem 4rem;
+                margin-top: 120px;
+            }
+            
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .newsletter-form {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="../index.html" class="logo">MANAGE369</a>
+        <nav class="nav">
+            <a href="../index.html">Home</a>
+            <a href="../services.html">Services</a>
+            <a href="../service-areas.html">Service Areas</a>
+            <a href="../contact.html">Contact</a>
+            <a href="index.html" class="active">Blog</a>
+        </nav>
+        <a href="tel:2246475621" class="phone">Call (224) 647-5621</a>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Property Management Insights</h1>
+            <p>Expert guidance from 18+ years of North Shore & Chicago property management experience</p>
+        </div>
+    </section>
+    
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Explore Our Topics</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>🏢 Property Management Tips</h3>
+                    <p>Best practices for maintaining and managing condominiums, HOAs, and townhomes</p>
+                    <a href="category/property-management-tips.html" class="btn">Read Articles</a>
+                </div>
+                <div class="category-card">
+                    <h3>📰 North Shore News</h3>
+                    <p>Local community updates, regulations, and North Shore property market insights</p>
+                    <a href="category/north-shore-news.html" class="btn">Read Articles</a>
+                </div>
+                <div class="category-card">
+                    <h3>🏛️ HOA Guidance</h3>
+                    <p>Board member resources, governance tips, and homeowner association best practices</p>
+                    <a href="category/hoa-guidance.html" class="btn">Read Articles</a>
+                </div>
+                <div class="category-card">
+                    <h3>💰 Financial Planning</h3>
+                    <p>Budget development, reserve studies, and financial management for property associations</p>
+                    <a href="category/financial-planning.html" class="btn">Read Articles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Latest Articles</h2>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <img src="../images/manage369livingroomskokie.webp" alt="North Shore property management tips" loading="lazy">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Property Management Tips</span>
+                            <span>December 8, 2024</span>
+                        </div>
+                        <h3>Essential Winter Property Management Checklist for North Shore Communities</h3>
+                        <p class="blog-excerpt">Prepare your property for Chicago winter with our comprehensive checklist covering heating systems, snow removal, and emergency preparations...</p>
+                        <a href="winter-property-management-checklist.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <img src="../images/manage369livingroomskokie.webp" alt="HOA board meeting guidance" loading="lazy">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">HOA Guidance</span>
+                            <span>December 5, 2024</span>
+                        </div>
+                        <h3>How to Run Effective HOA Board Meetings: A Complete Guide</h3>
+                        <p class="blog-excerpt">Master the art of productive board meetings with proven strategies for agenda setting, member engagement, and decision-making processes...</p>
+                        <a href="effective-hoa-board-meetings.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <img src="../images/manage369livingroomskokie.webp" alt="Financial planning for condos" loading="lazy">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Financial Planning</span>
+                            <span>December 2, 2024</span>
+                        </div>
+                        <h3>Reserve Study Basics: What Every Condo Board Should Know</h3>
+                        <p class="blog-excerpt">Understanding reserve studies is crucial for long-term financial health. Learn when to update, how to fund, and what components to include...</p>
+                        <a href="reserve-study-basics-condo-boards.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <img src="../images/manage369livingroomskokie.webp" alt="North Shore property market" loading="lazy">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">North Shore News</span>
+                            <span>November 28, 2024</span>
+                        </div>
+                        <h3>2025 North Shore Property Management Trends to Watch</h3>
+                        <p class="blog-excerpt">Discover emerging trends in North Shore property management, from smart technology adoption to sustainability initiatives...</p>
+                        <a href="north-shore-property-trends-2025.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <img src="../images/manage369livingroomskokie.webp" alt="Emergency response planning" loading="lazy">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Property Management Tips</span>
+                            <span>November 25, 2024</span>
+                        </div>
+                        <h3>Creating Emergency Response Plans for Chicago Properties</h3>
+                        <p class="blog-excerpt">Develop comprehensive emergency protocols to protect residents and property during natural disasters, power outages, and other critical situations...</p>
+                        <a href="emergency-response-plans-chicago.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+                
+                <article class="blog-card">
+                    <img src="../images/manage369livingroomskokie.webp" alt="Budget planning for associations" loading="lazy">
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span class="blog-category">Financial Planning</span>
+                            <span>November 22, 2024</span>
+                        </div>
+                        <h3>Annual Budget Planning: 5 Steps for Property Associations</h3>
+                        <p class="blog-excerpt">Master the annual budget process with our step-by-step guide covering expense forecasting, revenue planning, and board presentation...</p>
+                        <a href="annual-budget-planning-guide.html" class="read-more">Read More →</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+    
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Informed</h2>
+            <p>Get the latest property management insights, North Shore news, and expert tips delivered to your inbox monthly</p>
+            <form class="newsletter-form" action="mailto:service@manage369.com" method="post" enctype="text/plain">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+    
+    <footer class="footer">
+        <div class="container">
+            <p><strong>Manage369</strong> - Chicago & North Shore Property Management Services</p>
+            <p>Phone: <a href="tel:2246475621">(224) 647-5621</a> | Email: <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+            <p>
+                <a href="../privacy-policy.html">Privacy Policy</a> | 
+                <a href="../terms-of-service.html">Terms of Service</a> | 
+                <a href="../contact.html">Contact</a>
+            </p>
+            <p>&copy; 2025 Manage369. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
