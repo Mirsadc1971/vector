@@ -177,6 +177,25 @@ RedirectMatch 404 /\.git
 # Enable Keep-Alive
 <IfModule mod_headers.c>
     Header set Connection keep-alive
+    
+    # Resource hints for key pages
+    <FilesMatch "index\.html$">
+        Header add Link "</images/manage369livingroomskokie.webp>; rel=preload; as=image; type=image/webp"
+        Header add Link "</mobile-responsive.css>; rel=preload; as=style"
+    </FilesMatch>
+    
+    <FilesMatch "service-areas\.html$">
+        Header add Link "</images/manage369livingroomskokie.webp>; rel=preload; as=image; type=image/webp"
+        Header add Link "</mobile-responsive.css>; rel=preload; as=style"
+    </FilesMatch>
+</IfModule>
+
+# HTTP/2 Server Push (if supported)
+<IfModule mod_http2.c>
+    H2Push on
+    H2PushPriority * after
+    H2PushPriority text/css before
+    H2PushPriority image/webp interleaved
 </IfModule>
 
 # Redirect common misspellings and variations
