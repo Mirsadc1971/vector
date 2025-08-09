@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forest Glen Property Management | Chicago Condo & HOA Management | Manage369</title>
+    <meta name="description" content="Premier Forest Glen property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals. Call (847) 652-2338.">
+    
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest">
+    
+    <!-- Windows Tile Configuration -->
+    <meta name="msapplication-TileColor" content="#4a90e2">
+    <meta name="msapplication-TileImage" content="../../images/favicon-32x32.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Forest Glen Property Management | Manage369">
+    <meta property="og:description" content="Premier Forest Glen property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manage369.com/property-management/forest-glen/">
+    <meta property="og:image" content="https://manage369.com/images/manstandingmanage369.jpg">
+    <meta property="og:site_name" content="Manage369">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Forest Glen Property Management | Manage369">
+    <meta name="twitter:description" content="Premier Forest Glen property management services. 18+ years managing luxury condos, HOAs & townhomes.">
+    <meta name="twitter:image" content="https://manage369.com/images/manstandingmanage369.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Manage369">
+    <meta name="geo.region" content="US-IL">
+    <meta name="geo.placename" content="Forest Glen, Chicago, Illinois">
+    <meta name="geo.position" content="41.9694;-87.7533">
+    <meta name="ICBM" content="41.9694, -87.7533">
+    
+    <!-- Local Business Schema Markup -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Manage369",
+  "description": "Premier Forest Glen property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.",
+  "url": "https://manage369.com/property-management/forest-glen/",
+  "telephone": "+1-(847) 652-2338",
+  "email": "service@manage369.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1400 Patriot Boulevard 357",
+    "addressLocality": "Glenview",
+    "addressRegion": "IL",
+    "postalCode": "60026",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "41.9694",
+    "longitude": "-87.7533"
+  },
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "sameAs": [
+    "https://manage369.com"
+  ],
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Forest Glen, Chicago, Illinois"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "50"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Property Management Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Condominium Management",
+          "description": "Professional condominium association management services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "HOA Management",
+          "description": "Comprehensive homeowner association management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Financial Management",
+          "description": "Professional financial reporting and budget development"
+        }
+      }
+    ]
+  }
+}
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #4a90e2;
+            background: #f0f0f0;
+        }
+        
+        .services-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px 0;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin: 0;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown-header {
+            padding: 8px 16px;
+            font-weight: bold;
+            color: #4a90e2;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 5px;
+        }
+        
+        .services-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .phone {
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .phone:hover {
+            background: #357abd;
+        }
+        
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('../../images/manstandingmanage369.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .service-card a:hover {
+            color: #e6840d;
+        }
+        
+        .why-choose {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+        
+        .why-choose-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .why-choose h2 {
+            color: #333;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 180px;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .benefit-item h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.3;
+        }
+        
+        .benefit-item p {
+            color: #666;
+            line-height: 1.5;
+            flex-grow: 1;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .contact-section {
+            background: #4a90e2;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .contact-section p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-section a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-section a:hover {
+            color: #fff200;
+        }
+        
+        .simple-footer {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .simple-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .simple-footer h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .simple-footer p {
+            color: #b8c5d1;
+            margin-bottom: 0.5rem;
+        }
+
+        .simple-footer a {
+            color: #ff9500;
+            text-decoration: none;
+        }
+
+        .simple-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .location-content {
+            background: white;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+        
+        .location-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .location-content h2 {
+            color: #4a90e2;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        
+        .location-content h3 {
+            color: #4a90e2;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+        
+        .location-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .location-content a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .location-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #4a90e2;
+        }
+        
+        .highlight-box h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-highlight-box {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #4a90e2;
+        }
+        
+        .service-highlight-box h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-highlight-box a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .faq-section {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+        
+        .faq-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .faq-content h2 {
+            color: #4a90e2;
+            text-align: center;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .faq-item {
+            background: white;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            background: #4a90e2;
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        
+        .faq-question:hover {
+            background: #357abd;
+        }
+        
+        .faq-answer {
+            padding: 1.5rem;
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .nav {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="../../index.html" class="logo">MANAGE369</a>
+        
+        <nav class="nav">
+            <a href="../../index.html">Home</a>
+            <div class="services-dropdown">
+                <a href="../../services.html">Services <span>▼</span></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">Property Types</div>
+                    <a href="../../services/condominium-management/index.html">Condominium Management</a>
+                    <a href="../../services/hoa-management/index.html">HOA Management</a>
+                    <a href="../../services/townhome-management/index.html">Townhome Management</a>
+                    <div class="dropdown-header">Service Offerings</div>
+                    <a href="../../services/financial-management/index.html">Financial Management</a>
+                    <a href="../../services/maintenance-coordination/index.html">Maintenance Coordination</a>
+                    <a href="../../services/board-support/index.html">Board Support</a>
+                    <a href="../../services/administrative-services/index.html">Administrative Services</a>
+                    <a href="../../services/capital-project-management/index.html">Capital Project Management</a>
+                    <a href="../../services/resident-relations/index.html">Resident Relations</a>
+                </div>
+            </div>
+            <a href="../../service-areas.html">Service Areas</a>
+            <a href="../../pay-dues.html">Pay Dues</a>
+            <a href="../../contact.html">Contact</a>
+        </nav>
+        
+        <a href="tel:8476522338" class="phone">Call (847) 652-2338</a>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Property Management Forest Glen – Manage369</h1>
+            <p>Expert Condominium, HOA & Townhome Management Services | 18+ Years Excellence</p>
+        </div>
+    </section>
+    
+    <section class="content">
+        
+        <p>Forest Glen stands as one of Chicago's most unique and desirable Northwest Side neighborhoods, where natural beauty meets suburban tranquility in a community that preserves its distinctive character through careful planning and strong environmental stewardship. At Manage369, we understand what makes Forest Glen exceptional – the abundant green spaces and mature tree canopy that create a park-like atmosphere, the active community organizations that foster genuine neighborly connections, and the perfect balance of peaceful residential living with convenient access to urban amenities and downtown Chicago.</p>
+        
+        <p>Our comprehensive property management approach recognizes that Forest Glen properties serve residents who have chosen this neighborhood for its exceptional environmental quality, strong sense of community, and unique suburban character within Chicago city limits. Whether managing well-established condominium buildings that reflect the area's commitment to maintaining neighborhood character, growing townhome associations that attract environmentally conscious families, or HOA communities that preserve the natural beauty and quality of life that define this special area, we understand that successful property management here means protecting the unique qualities that make Forest Glen one of Chicago's hidden gems.</p>
+        
+        <p>With its population of approximately 19,000 residents and strong commitment to environmental preservation through community gardens, tree-lined streets, and active participation in local environmental initiatives, Forest Glen offers an exceptional environment for property management companies who understand both the investment potential and community values that define this distinctive neighborhood. From the Forest Glen Community Club that anchors neighborhood activities to the numerous parks and green spaces that provide recreational opportunities, Forest Glen demands management services that appreciate both its natural advantages and strong community traditions.</p>
+        
+        <p>With 18+ years of experience serving Chicago neighborhoods that value community character and environmental quality, our team brings deep local knowledge to every aspect of property management. We understand the seasonal maintenance requirements that Forest Glen properties face, from comprehensive tree care that preserves the area's distinctive canopy to sustainable practices that align with resident values. Our established network of trusted local contractors includes specialists who understand both Chicago building requirements and the environmental standards that Forest Glen residents expect and deserve.</p>
+        
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Condominium Management</h3>
+                <p>Expert management for Forest Glen condominium buildings, emphasizing environmental stewardship and community engagement.</p>
+                <a href="../../services/condominium-management/index.html">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <h3>HOA Management</h3>
+                <p>Comprehensive homeowner association management for Forest Glen communities that value natural beauty and neighborhood character.</p>
+                <a href="../../services/hoa-management/index.html">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <h3>Financial Management</h3>
+                <p>Professional financial reporting, sustainable budget development, and transparent assessment management for Forest Glen properties.</p>
+                <a href="../../services/financial-management/index.html">Learn More →</a>
+            </div>
+        </div>
+    </section>
+    
+    
+        <div class="location-content">
+            <div class="location-content-wrapper">
+                <h2>Comprehensive Forest Glen Property Management Excellence</h2>
+                
+                <p>Every property we manage in Forest Glen benefits from our proven track record of excellence – 18+ years of experience, zero properties lost, and over $100 million in managed assets. Our deep understanding of environmentally conscious community management, resident expectations, and the unique characteristics that make green neighborhoods successful ensures that your property not only maintains its value but continues to attract and retain quality residents who appreciate Forest Glen's exceptional combination of natural beauty, community engagement, and convenient Chicago location.</p>
+
+                <h3>Expert Condominium Management in Forest Glen</h3>
+                <p>From intimate condominium complexes nestled among mature trees to contemporary developments that incorporate sustainable design principles, our <a href="../../services/condominium-management/index.html">condominium management</a> services address the specific challenges that Forest Glen properties face in today's environmentally conscious housing market. We coordinate maintenance schedules that respect the neighborhood's commitment to preserving natural beauty, manage relationships with contractors who understand both Chicago building codes and sustainable practices, and ensure that your condominium association operates efficiently while maintaining the environmental character that residents value most highly.</p>
+
+                <p>Our CAI and IREM certifications guarantee professional standards that match the sophisticated expectations of Forest Glen residents, while our CCIM designation demonstrates our commitment to understanding the investment aspects of environmentally conscious property management. We provide detailed monthly financial reports that help boards make informed decisions about sustainable improvements and energy-efficient systems, coordinate with eco-friendly service providers when available, and maintain communication systems that keep residents informed while supporting the community engagement that defines Forest Glen's distinctive character.</p>
+
+                <div class="highlight-box">
+                    <h3>Forest Glen Sustainable Condominium Management Specialists</h3>
+                    <p>Our experienced team understands the unique aspects of Forest Glen condominium living, from maintaining the natural landscaping that residents cherish to coordinating with service providers who understand the neighborhood's commitment to environmental stewardship and community values. We manage properties ranging from intimate complexes that foster close community connections to developments with sustainable amenities, always maintaining the professional standards and environmental consciousness that define successful property management in this exceptional Chicago neighborhood.</p>
+                    <p><strong>Professional Excellence: CAI • IREM • CCIM Certified</strong></p>
+                </div>
+
+                <h3>HOA Management Tailored to Forest Glen Community Values</h3>
+                <p>Homeowner associations in Forest Glen require management that understands both the practical needs of property maintenance and the environmental values that make neighborhoods thrive while preserving their natural character for future generations. Our <a href="../../services/hoa-management/index.html">HOA management</a> approach recognizes that successful associations create environments where families feel genuinely connected to both their neighbors and their natural surroundings, property values remain strong through community stewardship, and environmental traditions continue to flourish while adapting to modern sustainability practices and energy efficiency standards.</p>
+
+                <p>We work closely with Forest Glen HOA boards to develop policies that protect property values while fostering the environmentally conscious community atmosphere that residents cherish and that attracts families seeking sustainable living options within Chicago. From coordinating seasonal maintenance projects that enhance natural landscaping to supporting community gardens and environmental initiatives that bring neighbors together around shared values, our services support the full spectrum of community life that makes Forest Glen such an exceptional place to live and raise environmentally conscious families.</p>
+
+                <div class="service-highlight-box">
+                    <h3>Sustainable Maintenance Coordination for Forest Glen Properties</h3>
+                    <p>Our <a href="../../services/maintenance-coordination/index.html">maintenance coordination</a> services connect your property with our network of trusted local contractors who understand Forest Glen's environmental standards and community expectations. From tree care that preserves the neighborhood's distinctive canopy to sustainable landscaping practices that enhance property values while protecting natural resources, we ensure that all maintenance work enhances your property while respecting the environmental consciousness that makes this community so special and desirable.</p>
+                    <p><strong>Environmental Expertise & 24/7 Response: <a href="tel:8476522338">(847) 652-2338</a></strong></p>
+                </div>
+
+                <h3>Understanding Forest Glen's Distinctive Environmental Market Position</h3>
+                <p>Forest Glen offers an exceptional combination of urban convenience and environmental quality that attracts residents seeking sustainable living options without sacrificing access to city amenities and career opportunities. The neighborhood's extensive tree coverage, numerous parks and green spaces, and active environmental stewardship create a unique market position that supports stable property values while providing exceptional quality of life for residents who value both community engagement and environmental responsibility.</p>
+
+                <p>The area's commitment to preserving natural character while maintaining modern conveniences creates a distinctive residential environment that appeals to families, professionals, and retirees who appreciate both urban accessibility and suburban tranquility. This unique combination of environmental quality and practical location advantages provides a strong foundation for long-term property investment success, particularly as demand for sustainable living options continues to grow throughout the Chicago metropolitan area.</p>
+
+                <div class="highlight-box">
+                    <h3>Forest Glen Environmental and Community Advantages</h3>
+                    <p><strong>Exceptional Natural Environment:</strong> Abundant mature trees, numerous parks, and community gardens create a distinctive park-like atmosphere that enhances both property values and quality of life for residents seeking natural beauty within the city.</p>
+                    
+                    <p><strong>Active Environmental Stewardship:</strong> Community-wide commitment to environmental preservation, including tree care programs, community gardens, and sustainability initiatives that attract environmentally conscious residents and families.</p>
+                    
+                    <p><strong>Strong Community Organizations:</strong> Active Forest Glen Community Club, neighborhood associations, and community groups foster genuine connections among residents while supporting environmental and community improvement projects.</p>
+                    
+                    <p><strong>Convenient Urban Access:</strong> Strategic location provides easy access to downtown Chicago via public transportation and major roadways, while maintaining peaceful residential character and environmental quality that feels distinctly suburban.</p>
+                </div>
+
+                <h3>Local Landmarks and Community Features</h3>
+                <p>The Forest Glen Community Club serves as the heart of neighborhood life, providing meeting space for community organizations and hosting events that bring residents together around shared interests in environmental stewardship and community improvement. This active community hub supports numerous volunteer initiatives, from tree planting programs to neighborhood beautification projects, that help maintain Forest Glen's distinctive character while fostering genuine connections among neighbors who share similar values and commitment to community welfare.</p>
+
+                <p>Numerous pocket parks and green spaces throughout the neighborhood provide residents with accessible recreational opportunities while contributing to the area's distinctive environmental character. These well-maintained community spaces serve as gathering places for informal socializing and organized activities, enhancing both quality of life and property values through proximity to protected green space and community amenities that are increasingly rare in urban environments.</p>
+
+                <div class="service-highlight-box">
+                    <h3>Professional Board Support for Forest Glen Communities</h3>
+                    <p>Our <a href="../../services/board-support/index.html">board support</a> services provide Forest Glen community leaders with the practical tools and professional guidance they need to make informed decisions about environmentally conscious property management, community policies, and long-term sustainability planning. We understand that effective board governance in environmentally focused communities requires balancing resident expectations with financial responsibilities while maintaining the natural character and environmental standards that make neighborhoods attractive to families and long-term residents.</p>
+                    <p><strong>Environmental Community Leadership: <a href="tel:8476522338">(847) 652-2338</a></strong></p>
+                </div>
+
+                <h3>Professional Services Aligned with Community Values</h3>
+                <p>Our comprehensive approach to property management in Forest Glen reflects our understanding that this community values services that align with its commitment to environmental stewardship and community engagement. From routine maintenance that preserves natural landscaping to strategic planning that incorporates sustainable practices, we provide professional management services that support the long-term success of your investment while maintaining the environmental character and community values that make Forest Glen such an exceptional place to live and raise families.</p>
+
+                <p>We coordinate closely with local service providers who understand Forest Glen's expectations for environmental responsibility and community standards, ensuring that all property maintenance and improvement projects meet the high standards that residents expect. Our proactive approach includes energy-efficient improvements when appropriate, sustainable landscaping practices, and community communication systems that support the active resident engagement that defines Forest Glen's distinctive neighborhood character.</p>
+
+                <div class="highlight-box">
+                    <h3>Why Forest Glen Properties Choose Manage369</h3>
+                    <p><strong>Proven Environmental Community Expertise:</strong> 18+ years serving Chicago neighborhoods that value environmental stewardship with deep understanding of sustainable property management practices and community engagement requirements.</p>
+                    
+                    <p><strong>Professional Certifications & Continuing Education:</strong> CAI, IREM, and CCIM certified professionals ensuring industry best practices, ethical standards, and continuing education in environmentally conscious property management that adapts to evolving sustainability standards and community needs.</p>
+                    
+                    <p><strong>Outstanding Track Record:</strong> Zero properties lost in our management history, with over $100 million in managed assets, 50+ properties, and 2,450+ units under professional management, demonstrating consistent excellence across diverse community types including environmentally focused neighborhoods.</p>
+                    
+                    <p><strong>Community-Focused Service:</strong> Boutique-level personal attention with deep appreciation for community values and environmental stewardship, ensuring responsive service tailored to your community's unique character, resident expectations, and long-term goals for maintaining neighborhood environmental quality and community engagement.</p>
+                </div>
+            </div>
+        </div>
+        
+    <section class="faq-section">
+        <div class="faq-content">
+            <h2>Frequently Asked Questions</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What makes Forest Glen an attractive area for environmentally conscious property investment?
+                </div>
+                <div class="faq-answer">
+                    Forest Glen offers exceptional environmental quality with abundant mature trees, numerous parks, and active community commitment to environmental stewardship. The neighborhood's unique combination of natural beauty, strong community engagement, and convenient urban access creates a sustainable market position that attracts residents seeking green living options within Chicago.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do you support Forest Glen's commitment to environmental stewardship?
+                </div>
+                <div class="faq-answer">
+                    We work with associations to develop maintenance practices that preserve natural landscaping and support environmental goals. This includes coordinating with contractors who understand sustainable practices, supporting community garden initiatives, implementing energy-efficient improvements when appropriate, and maintaining the tree coverage and green spaces that define the neighborhood's character.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What community amenities does Forest Glen offer residents?
+                </div>
+                <div class="faq-answer">
+                    Forest Glen provides exceptional community amenities including the active Forest Glen Community Club, numerous pocket parks and green spaces, community gardens, and well-organized neighborhood associations. The area's extensive tree coverage and commitment to environmental preservation create park-like conditions throughout the neighborhood that enhance both recreation and property values.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    How do you foster community engagement in Forest Glen properties?
+                </div>
+                <div class="faq-answer">
+                    We support community engagement through effective communication systems, coordination with local community organizations, and support for environmental initiatives that bring residents together. Our approach includes facilitating resident participation in community projects, supporting neighborhood events, and maintaining transparency in association operations that builds trust and active participation among neighbors.
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    What types of properties do you manage in Forest Glen?
+                </div>
+                <div class="faq-answer">
+                    We manage a diverse range of Forest Glen properties, including condominium complexes nestled among mature trees, townhome developments with sustainable features, and HOA communities committed to environmental stewardship. Our experience includes both established properties that maintain traditional neighborhood character and newer developments that incorporate modern sustainability features.
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="why-choose">
+        <div class="why-choose-content">
+            <h2>Why Choose Manage369?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>18+ Years Experience</h3>
+                    <p>Proven track record managing 50+ properties with 2,450+ units throughout Chicago's diverse neighborhoods.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Environmental Stewardship</h3>
+                    <p>Understanding of sustainable property management practices and community environmental values.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Community-Focused Service</h3>
+                    <p>Support for community engagement initiatives and transparent financial management that builds resident trust.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Local Forest Glen Expertise</h3>
+                    <p>Deep understanding of Forest Glen's unique environmental character and community engagement traditions.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Professional Certifications</h3>
+                    <p>CAI, IREM, and CCIM certified professionals ensuring industry best practices and ethical excellence.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Boutique-Level Service</h3>
+                    <p>Personalized attention and responsiveness that larger corporate firms cannot match for community-focused neighborhoods.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <h2>Ready for Community-Focused Property Management?</h2>
+        <p>Contact us today for a free consultation about your Forest Glen property management needs.</p>
+        <p>📞 <a href="tel:8476522338">(847) 652-2338</a> | ✉️ <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+    </section>
+    
+    <footer class="simple-footer">
+        <div class="simple-footer-content">
+            <h3>Manage369</h3>
+            <p>Chicago & North Shore Property Management Services</p>
+            <p>1400 Patriot Boulevard 357, Glenview, IL 60026</p>
+            <p>Phone: <a href="tel:8476522338">(847) 652-2338</a> | Email: <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+            <p>Hours: Monday-Friday 9:00 AM - 5:00 PM</p>
+            <p>© 2025 Manage369. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
