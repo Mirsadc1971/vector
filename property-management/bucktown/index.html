@@ -143,8 +143,10 @@
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(43, 91, 160, 0.85), rgba(255, 107, 53, 0.85)), 
-                        url('../../images/manage369kitchenevanston.webp') center/cover;
+            background-image: url('../../images/manage369livingroomskokie.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
             color: white;
             text-align: center;
             padding: 150px 0 80px;
@@ -393,7 +395,8 @@
 
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
+        <div style="position: absolute; inset: 0; background: linear-gradient(135deg, rgba(74,144,226,0.9) 0%, rgba(53,122,189,0.9) 100%);"></div>
+        <div class="container" style="position: relative; z-index: 1;">
             <h1>Bucktown Property Management</h1>
             <div class="hero-subtitle">Quiet Luxury. Clear Results.</div>
             <div class="hero-stats">18+ Years • 50+ Properties • Zero Lost</div>

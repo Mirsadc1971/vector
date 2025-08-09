@@ -22,14 +22,8 @@
     <meta property="og:description" content="Premier Morton Grove property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://manage369.com/property-management/morton-grove/">
-    <meta property="og:image" content="https://manage369.com/images/manage369amenities.jpg">
+    <meta property="og:image" content="https://manage369.com/images/manage369livingroom.jpg">
     <meta property="og:site_name" content="Manage369">
-    
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Morton Grove Property Management | Manage369">
-    <meta name="twitter:description" content="Premier Morton Grove property management services. 18+ years managing luxury condos, HOAs & townhomes.">
-    <meta name="twitter:image" content="https://manage369.com/images/manage369amenities.jpg">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="robots" content="index, follow">
@@ -378,83 +372,6 @@
             text-decoration: underline;
         }
         
-        .location-content {
-            background: white;
-            padding: 4rem 2rem;
-            margin: 2rem 0;
-        }
-        
-        .location-content-wrapper {
-            max-width: 1200px;
-            margin: 0 auto;
-            line-height: 1.8;
-            color: #444;
-        }
-        
-        .location-content h2 {
-            color: #4a90e2;
-            margin-bottom: 2rem;
-            text-align: center;
-            font-size: 2.5rem;
-        }
-        
-        .location-content h3 {
-            color: #4a90e2;
-            margin: 2rem 0 1rem 0;
-            font-size: 1.5rem;
-        }
-        
-        .location-content p {
-            margin-bottom: 1.5rem;
-            font-size: 1.1rem;
-            color: #666;
-            line-height: 1.7;
-        }
-        
-        .location-content a {
-            color: #ff9500;
-            text-decoration: none;
-            font-weight: 500;
-        }
-        
-        .location-content a:hover {
-            text-decoration: underline;
-        }
-        
-        .highlight-box {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            border-left: 5px solid #4a90e2;
-        }
-        
-        .highlight-box h3 {
-            color: #4a90e2;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        .service-highlight-box {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-            margin: 2rem 0;
-            border-left: 5px solid #4a90e2;
-        }
-        
-        .service-highlight-box h3 {
-            color: #4a90e2;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
-        }
-        
-        .service-highlight-box a {
-            color: #ff9500;
-            text-decoration: none;
-            font-weight: 600;
-        }
-        
         @media (max-width: 768px) {
             .header {
                 flex-direction: column;
@@ -492,7 +409,7 @@
                 grid-template-columns: repeat(2, 1fr);
             }
         }
-    </style>
+        \n        .location-content {\n            background: white;\n            padding: 4rem 2rem;\n            margin: 2rem 0;\n        }\n        \n        .location-content-wrapper {\n            max-width: 1200px;\n            margin: 0 auto;\n            line-height: 1.8;\n            color: #444;\n        }\n        \n        .location-content h2 {\n            color: #4a90e2;\n            margin-bottom: 2rem;\n            text-align: center;\n            font-size: 2.5rem;\n        }\n        \n        .location-content h3 {\n            color: #4a90e2;\n            margin: 2rem 0 1rem 0;\n            font-size: 1.5rem;\n        }\n        \n        .location-content p {\n            margin-bottom: 1.5rem;\n            font-size: 1.1rem;\n            color: #666;\n            line-height: 1.7;\n        }\n        \n        .location-content a {\n            color: #ff9500;\n            text-decoration: none;\n            font-weight: 500;\n        }\n        \n        .location-content a:hover {\n            text-decoration: underline;\n        }\n        \n        .highlight-box {\n            background: #f8f9fa;\n            padding: 2rem;\n            border-radius: 10px;\n            margin: 2rem 0;\n            border-left: 5px solid #4a90e2;\n        }\n        \n        .highlight-box h3 {\n            color: #4a90e2;\n            margin-bottom: 1rem;\n            font-size: 1.3rem;\n        }\n        \n        .service-highlight-box {\n            background: #f8f9fa;\n            padding: 2rem;\n            border-radius: 10px;\n            margin: 2rem 0;\n            border-left: 5px solid #4a90e2;\n        }\n        \n        .service-highlight-box h3 {\n            color: #4a90e2;\n            margin-bottom: 1rem;\n            font-size: 1.3rem;\n        }\n        \n        .service-highlight-box a {\n            color: #ff9500;\n            text-decoration: none;\n            font-weight: 600;\n        }\n    </style>
 </head>
 <body>
     <header class="header">
