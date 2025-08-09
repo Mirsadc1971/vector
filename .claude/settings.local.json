@@ -18,7 +18,9 @@
       "Bash(git commit:*)",
       "Bash(mkdir:*)",
       "Bash(cp:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(do echo \"=== $dir ===\")",
+      "Bash(sed:*)"
     ],
     "deny": []
   }
