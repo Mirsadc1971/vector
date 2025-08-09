@@ -16,7 +16,9 @@
       "Bash(do if ! grep -q \"Property Types We Manage\" \"$file\")",
       "Bash(do if ! grep -q \"emergency\\|crisis\\|24/7\" \"$file\")",
       "Bash(git commit:*)",
-      "Bash(mkdir:*)"
+      "Bash(mkdir:*)",
+      "Bash(cp:*)",
+      "Bash(grep:*)"
     ],
     "deny": []
   }
