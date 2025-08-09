@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evanston Property Management | Chicago Condo & HOA Management | Manage369</title>
+    <meta name="description" content="Premier Evanston property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals. Call (847) 652-2338.">
+    
+    <!-- Favicon and Apple Touch Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
+    <link rel="manifest" href="../../site.webmanifest">
+    
+    <!-- Windows Tile Configuration -->
+    <meta name="msapplication-TileColor" content="#4a90e2">
+    <meta name="msapplication-TileImage" content="../../images/favicon-32x32.png">
+    <meta name="theme-color" content="#ffffff">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Evanston Property Management | Manage369">
+    <meta property="og:description" content="Premier Evanston property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://manage369.com/property-management/glencoe/">
+    <meta property="og:image" content="https://manage369.com/images/manage369widowview.jpg">
+    <meta property="og:site_name" content="Manage369">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Evanston Property Management | Manage369">
+    <meta name="twitter:description" content="Premier Evanston property management services. 18+ years managing luxury condos, HOAs & townhomes.">
+    <meta name="twitter:image" content="https://manage369.com/images/manage369widowview.jpg">
+    
+    <!-- Additional SEO Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Manage369">
+    <meta name="geo.region" content="US-IL">
+    <meta name="geo.placename" content="Evanston, Illinois">
+    <meta name="geo.position" content="42.0451;-87.6877">
+    <meta name="ICBM" content="42.1350, -87.7581">
+    
+    <!-- Local Business Schema Markup -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Manage369",
+  "description": "Premier Evanston property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.",
+  "url": "https://manage369.com/property-management/glencoe/",
+  "telephone": "+1-(847) 652-2338",
+  "email": "service@manage369.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1400 Patriot Boulevard 357",
+    "addressLocality": "Glenview",
+    "addressRegion": "IL",
+    "postalCode": "60026",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "42.0451",
+    "longitude": "-87.6877"
+  },
+  "openingHours": "Mo-Fr 09:00-17:00",
+  "sameAs": [
+    "https://manage369.com"
+  ],
+  "serviceArea": {
+    "@type": "Place",
+    "name": "Evanston, Illinois"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5.0",
+    "reviewCount": "50"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Property Management Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Condominium Management",
+          "description": "Professional condominium association management services"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "HOA Management",
+          "description": "Comprehensive homeowner association management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Financial Management",
+          "description": "Professional financial reporting and budget development"
+        }
+      }
+    ]
+  }
+}
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: white;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #4a90e2;
+            background: #f0f0f0;
+        }
+        
+        .services-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px 0;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin: 0;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown-header {
+            padding: 8px 16px;
+            font-weight: bold;
+            color: #4a90e2;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 5px;
+        }
+        
+        .services-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .phone {
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .phone:hover {
+            background: #357abd;
+        }
+        
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('../../images/manage369widowview.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .service-card a:hover {
+            color: #e6840d;
+        }
+        
+        .why-choose {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+        
+        .why-choose-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .why-choose h2 {
+            color: #333;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 180px;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .benefit-item h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.3;
+        }
+        
+        .benefit-item p {
+            color: #666;
+            line-height: 1.5;
+            flex-grow: 1;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .contact-section {
+            background: #4a90e2;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .contact-section p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-section a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-section a:hover {
+            color: #fff200;
+        }
+        
+        .simple-footer {
+            background: #2c3e50;
+            color: #ffffff;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        .simple-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .simple-footer h3 {
+            color: #ffffff;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .simple-footer p {
+            color: #b8c5d1;
+            margin-bottom: 0.5rem;
+        }
+
+        .simple-footer a {
+            color: #ff9500;
+            text-decoration: none;
+        }
+
+        .simple-footer a:hover {
+            text-decoration: underline;
+        }
+        
+        .location-content {
+            background: white;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+        
+        .location-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .location-content h2 {
+            color: #4a90e2;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        
+        .location-content h3 {
+            color: #4a90e2;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+        
+        .location-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .location-content a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .location-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #4a90e2;
+        }
+        
+        .highlight-box h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-highlight-box {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #4a90e2;
+        }
+        
+        .service-highlight-box h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-highlight-box a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            
+            .nav {
+                margin-top: 1rem;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1rem;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <a href="../../index.html" class="logo">MANAGE369</a>
+        
+        <nav class="nav">
+            <a href="../../index.html">Home</a>
+            <div class="services-dropdown">
+                <a href="../../services.html">Services <span>▼</span></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-header">Property Types</div>
+                    <a href="../../services/condominium-management/index.html">Condominium Management</a>
+                    <a href="../../services/hoa-management/index.html">HOA Management</a>
+                    <a href="../../services/townhome-management/index.html">Townhome Management</a>
+                    <div class="dropdown-header">Service Offerings</div>
+                    <a href="../../services/financial-management/index.html">Financial Management</a>
+                    <a href="../../services/maintenance-coordination/index.html">Maintenance Coordination</a>
+                    <a href="../../services/board-support/index.html">Board Support</a>
+                    <a href="../../services/administrative-services/index.html">Administrative Services</a>
+                    <a href="../../services/capital-project-management/index.html">Capital Project Management</a>
+                    <a href="../../services/resident-relations/index.html">Resident Relations</a>
+                </div>
+            </div>
+            <a href="../../service-areas.html">Service Areas</a>
+            <a href="../../pay-dues.html">Pay Dues</a>
+            <a href="../../contact.html">Contact</a>
+        </nav>
+        
+        <a href="tel:8476522338" class="phone">Call (847) 652-2338</a>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Property Management Evanston – Manage369</h1>
+            <p>Expert Condominium, HOA & Townhome Management Services | 18+ Years Excellence</p>
+        </div>
+    </section>
+    
+    <section class="content">
+        
+        <p>Evanston exemplifies North Shore excellence with tree-lined streets, outstanding schools, and the perfect balance of suburban tranquility and urban accessibility that defines the region's appeal. At Manage369, we understand what makes Evanston special – the North Shore elegance with family-friendly community values and suburban sophistication that creates a community where residents truly thrive. From Northwestern University campus, vibrant Downtown Evanston, beautiful lakefront access, diverse residential neighborhoods, strong community connections, convenient CTA Purple Line and Metra Union Pacific North Line access, we manage properties that reflect this neighborhood's distinctive appeal while providing the professional service that busy residents and property owners depend on for exceptional results.</p>
+        
+        <p>Our comprehensive property management approach recognizes that Evanston properties serve discerning residents who have chosen quality, location, and community above all else. Whether managing elegant condominiums with stunning architectural details, family-friendly townhome associations that foster neighborhood connections, or sophisticated HOA communities that maintain the highest standards, we understand that successful property management here means preserving the unique character that makes Evanston one of the region's most desirable places to call home. With its population of approximately 75,000 residents and wide range from student housing to luxury, Evanston demands management excellence that matches its prestigious reputation.</p>
+        
+        <p>With 18+ years of experience serving Chicago and North Shore communities, our team brings deep local knowledge to every aspect of property management. We understand the seasonal challenges that affect Evanston properties, from winter heating concerns to summer maintenance schedules. Our relationships with trusted local contractors ensure prompt, professional service that meets the high standards Evanston residents expect and deserve.</p>
+        
+        
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>Condominium Management</h3>
+                <p>Expert management for high-rise and mid-rise condominium buildings throughout Evanston and the Chicago area.</p>
+                <a href="../../services/condominium-management/index.html">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <h3>HOA Management</h3>
+                <p>Comprehensive homeowner association management for Evanston communities and planned developments.</p>
+                <a href="../../services/hoa-management/index.html">Learn More →</a>
+            </div>
+            <div class="service-card">
+                <h3>Financial Management</h3>
+                <p>Professional financial reporting, budget development, and assessment collection for Evanston properties.</p>
+                <a href="../../services/financial-management/index.html">Learn More →</a>
+            </div>
+        </div>
+    </section>
+    
+    
+        <div class="location-content">
+            <div class="location-content-wrapper">
+                <h2>Comprehensive Evanston Property Management Excellence</h2>
+                
+                <p>Every property we manage in Evanston benefits from our proven track record of excellence – 18+ years of experience, zero properties lost, and over $100 million in managed assets. Our deep understanding of local regulations, market conditions, and resident expectations ensures that your property not only maintains its value but continues to attract and retain quality residents who appreciate Evanston's unique character and community spirit.</p>
+
+                <h3>Expert Condominium Management in Evanston</h3>
+                <p>From boutique buildings that offer intimate community living to luxury high-rises with full-service amenities, our <a href="../../services/condominium-management/index.html">condominium management</a> services address the specific challenges that Evanston properties face in today's competitive market. We coordinate maintenance schedules around local events and seasonal needs, manage relationships with trusted contractors who understand area building codes and architectural requirements, and ensure that your condominium association operates smoothly while preserving the community atmosphere that residents value most.</p>
+
+                <p>Our CAI and IREM certifications guarantee professional standards that match the quality expectations of Evanston residents, while our CCIM designation demonstrates our commitment to understanding the investment aspects of property management. We provide detailed monthly financial reports, coordinate with local utility providers for efficient service, and maintain communication systems that keep residents informed while protecting board members from unnecessary disruptions.</p>
+
+                <div class="highlight-box">
+                    <h3>Evanston Condominium Management Specialists</h3>
+                    <p>Our experienced team understands the unique aspects of Evanston condominium living, from architectural preservation requirements that protect property character to coordinating with local utility services for optimal efficiency. We manage properties ranging from intimate boutique buildings that foster close community connections to full-service luxury developments with extensive amenities, always maintaining the high standards that define this exceptional community.</p>
+                    <p><strong>Professional Excellence: CAI • IREM • CCIM Certified</strong></p>
+                </div>
+
+                <h3>HOA Management Tailored to Evanston Community Values</h3>
+                <p>Homeowner associations in Evanston require management that understands both the practical needs of property maintenance and the community values that make neighborhoods thrive for generations. Our <a href="../../services/hoa-management/index.html">HOA management</a> approach recognizes that successful associations create environments where families feel genuinely connected, property values remain consistently strong, and community traditions continue to flourish while adapting to modern needs and expectations.</p>
+
+                <p>We work closely with Evanston HOA boards to develop policies that protect property values while fostering the neighborly atmosphere that residents cherish and that attracts quality families to the community. From coordinating seasonal maintenance projects that enhance curb appeal to managing community events that bring neighbors together and create lasting friendships, our services support the full spectrum of community life that makes Evanston such a special place to live and raise families.</p>
+
+                <div class="service-highlight-box">
+                    <h3>Professional Maintenance Coordination for Evanston Properties</h3>
+                    <p>Our <a href="../../services/maintenance-coordination/index.html">maintenance coordination</a> services connect your property with our network of trusted local contractors who understand Evanston's unique requirements and community standards. From seasonal weather challenges that require proactive planning to local architectural standards that preserve neighborhood character, we ensure that all maintenance work enhances your property while respecting the distinctive character that defines this special community.</p>
+                    <p><strong>Local Expertise & 24/7 Response: <a href="tel:8476522338">(847) 652-2338</a></strong></p>
+                </div>
+
+                <div class="highlight-box">
+                    <h3>Why Evanston Properties Choose Manage369</h3>
+                    <p><strong>Proven Local Market Expertise:</strong> 18+ years serving Chicago and North Shore communities with deep understanding of local regulations, seasonal challenges, market conditions, and resident expectations that come from extensive hands-on experience.</p>
+                    
+                    <p><strong>Professional Certifications & Continuing Education:</strong> CAI, IREM, and CCIM certified professionals ensuring industry best practices, ethical standards, and continuing education in property management excellence, financial stewardship, and community leadership.</p>
+                    
+                    <p><strong>Outstanding Track Record:</strong> Zero properties lost in our management history, with over $100 million in managed assets, 50+ properties, and 2,450+ units under professional management, demonstrating consistent excellence and client satisfaction.</p>
+                    
+                    <p><strong>Boutique-Level Personal Service:</strong> Direct access to ownership and personalized attention that larger corporate firms simply cannot match, ensuring responsive service tailored to your community's unique needs, character, and long-term goals.</p>
+                </div>
+            </div>
+        </div>
+        
+    
+    <section class="why-choose">
+        <div class="why-choose-content">
+            <h2>Why Choose Manage369?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>18+ Years Experience</h3>
+                    <p>Proven track record managing 50+ properties with 2,450+ units throughout Chicago and North Shore.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Professional Service Excellence</h3>
+                    <p>Direct access to the owner and immediate response to maintenance needs.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Transparent Financial Reporting</h3>
+                    <p>Monthly financial statements, budget development, and reserve studies to protect property values.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Local Evanston Expertise</h3>
+                    <p>Deep understanding of Evanston's unique property management challenges and community character.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Professional Certifications</h3>
+                    <p>CAI, IREM, and CCIM certified professionals ensuring industry best practices.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Boutique-Level Service</h3>
+                    <p>Personalized attention and responsiveness that larger firms simply cannot match.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <h2>Ready for Professional Property Management?</h2>
+        <p>Contact us today for a free consultation about your Evanston property management needs.</p>
+        <p>📞 <a href="tel:8476522338">(847) 652-2338</a> | ✉️ <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+    </section>
+    
+    <footer class="simple-footer">
+        <div class="simple-footer-content">
+            <h3>Manage369</h3>
+            <p>Chicago & North Shore Property Management Services</p>
+            <p>1400 Patriot Boulevard 357, Glenview, IL 60026</p>
+            <p>Phone: <a href="tel:8476522338">(847) 652-2338</a> | Email: <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+            <p>Hours: Monday-Friday 9:00 AM - 5:00 PM</p>
+            <p>© 2025 Manage369. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
