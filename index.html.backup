@@ -977,7 +977,89 @@
         </div>
     </section>
     
-    <!-- SERVICES SECTION (MOVED UP) -->
+    <!-- LOCAL EXPERTISE SOCIAL PROOF SECTION -->
+    <section style="background: linear-gradient(135deg, #4a90e2, #357abd); color: white; padding: 3rem 2rem; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Your Trusted North Shore Property Management Partner</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                    <div style="font-size: 3rem; color: #ff9500; margin-bottom: 1rem;">18+</div>
+                    <div style="font-size: 1.2rem; font-weight: bold;">Years Serving Our Community</div>
+                    <div>Established Relationships Throughout North Shore</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                    <div style="font-size: 3rem; color: #ff9500; margin-bottom: 1rem;">50+</div>
+                    <div style="font-size: 1.2rem; font-weight: bold;">Properties Under Management</div>
+                    <div>From Highland Park to Lincoln Park</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                    <div style="font-size: 3rem; color: #ff9500; margin-bottom: 1rem;">2,450+</div>
+                    <div style="font-size: 1.2rem; font-weight: bold;">Residential Units Managed</div>
+                    <div>Preserving $100M+ in Community Assets</div>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
+                    <div style="font-size: 3rem; color: #ff9500; margin-bottom: 1rem;">100%</div>
+                    <div style="font-size: 1.2rem; font-weight: bold;">Client Satisfaction</div>
+                    <div>Long-term Partnership Focus</div>
+                </div>
+            </div>
+            
+            <!-- TESTIMONIALS -->
+            <div style="margin-top: 3rem;">
+                <h3 style="font-size: 2rem; margin-bottom: 2rem; color: white;">Testimonials from Our Community Partners</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
+                    <div style="background: rgba(255,255,255,0.95); color: #333; padding: 2rem; border-radius: 15px; text-align: left;">
+                        <div style="color: #ff9500; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 1rem;">"We've worked with Manage369 for over a decade and have consistently been impressed by their professionalism and deep understanding of our Lincoln Park community. Their established vendor relationships and financial stewardship have enhanced our property values significantly."</p>
+                        <div style="font-weight: bold; color: #4a90e2;">- Board President, Lincoln Park Condominiums</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.95); color: #333; padding: 2rem; border-radius: 15px; text-align: left;">
+                        <div style="color: #ff9500; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 1rem;">"Manage369 has been our trusted partner for eight years. Their comprehensive understanding of North Shore communities, meticulous financial management, and respect for our neighborhood character make them an invaluable part of our community's success."</p>
+                        <div style="font-weight: bold; color: #4a90e2;">- HOA President, Glenview Townhomes</div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.95); color: #333; padding: 2rem; border-radius: 15px; text-align: left;">
+                        <div style="color: #ff9500; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                        <p style="font-style: italic; margin-bottom: 1rem;">"Manage369's long-term commitment to our Highland Park community shows in everything they do. Their respect for our neighborhood's heritage, combined with modern management practices, has steadily enhanced our property values while maintaining the character we cherish."</p>
+                        <div style="font-weight: bold; color: #4a90e2;">- Condo Owner, Highland Park</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- PROFESSIONAL CONSULTATION CALL TO ACTION -->
+            <div style="background: #ff9500; padding: 2rem; border-radius: 15px; margin-top: 3rem;">
+                <h3 style="font-size: 2rem; margin-bottom: 1rem; color: white;">Discover the Manage369 Difference</h3>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: white;">Experience property management excellence built on 18+ years of North Shore community relationships and local expertise. We'd be honored to discuss how we can serve your community.</p>
+                <a href="tel:8476522338" style="background: white; color: #ff9500; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block;">Contact Us at (847) 652-2338</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section for SEO -->
+    <section style="padding: 4rem 2rem; background: #f8f9fa;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; margin-bottom: 3rem; color: #333;">Common Questions About Our Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: #4a90e2; margin-bottom: 1rem;">What makes Manage369 the right choice for North Shore properties?</h3>
+                    <p><strong>Established community relationships:</strong> Since 2006, we've built deep relationships throughout North Shore and Chicago communities. Our CAI/IREM/CCIM certifications, combined with our understanding of local character and municipal requirements, allow us to provide management services that honor your community's heritage while ensuring modern operational excellence.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: #4a90e2; margin-bottom: 1rem;">How do you approach property management transitions?</h3>
+                    <p><strong>Thoughtful, comprehensive transitions:</strong> We understand that changing management companies is a significant decision. Our experienced team carefully evaluates your property's unique needs and community character, ensuring a smooth transition that respects your established relationships while introducing enhanced service standards. We work closely with boards to ensure continuity and improvement.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: #4a90e2; margin-bottom: 1rem;">How do you approach financial stewardship?</h3>
+                    <p><strong>Meticulous financial management with local insight:</strong> Our comprehensive financial reporting provides complete transparency, while our established vendor relationships throughout North Shore communities ensure competitive pricing without compromising quality. We focus on long-term value preservation through strategic planning and prudent reserve management.</p>
+                </div>
+                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                    <h3 style="color: #4a90e2; margin-bottom: 1rem;">What is your commitment to service excellence?</h3>
+                    <p><strong>Partnership-focused approach:</strong> Our long-term client relationships speak to our commitment to excellence. We view every property as a long-term partnership, working closely with boards and residents to continually enhance property values and community satisfaction. Our success is measured by the lasting relationships we've built throughout North Shore communities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
     <section style="padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
         <h2 style="margin-bottom: 1.5rem; color: #1e3a8a; font-size: 2.5rem; font-weight: 700;">Our Complete Property Management Services</h2>
         <p style="margin-bottom: 4rem; font-size: 1.2rem; color: #666; max-width: 800px; margin-left: auto; margin-right: auto;">We specialize in managing three types of properties with comprehensive service offerings tailored to each community's unique needs.</p>
@@ -1045,91 +1127,6 @@
                     <h4 style="color: #ff9500; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Resident Relations</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Professional communication, conflict resolution, and community event coordination.</p>
                 </a>
-            </div>
-        </div>
-    </section>
-    
-    <!-- LOCAL EXPERTISE SOCIAL PROOF SECTION -->
-    <section style="background: linear-gradient(135deg, #4a90e2, #357abd); color: white; padding: 3rem 2rem; text-align: center;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Your Trusted North Shore Property Management Partner</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
-                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <div style="font-size: 3rem; color: #ff9500; margin-bottom: 1rem;">18+</div>
-                    <div style="font-size: 1.2rem; font-weight: bold;">Years Serving Our Community</div>
-                    <div>Established Relationships Throughout North Shore</div>
-                </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <div style="font-size: 3rem; color: #ff9500; margin-bottom: 1rem;">50+</div>
-                    <div style="font-size: 1.2rem; font-weight: bold;">Properties Under Management</div>
-                    <div>From Highland Park to Lincoln Park</div>
-                </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <div style="font-size: 3rem; color: #ff9500; margin-bottom: 1rem;">2,450+</div>
-                    <div style="font-size: 1.2rem; font-weight: bold;">Residential Units Managed</div>
-                    <div>Preserving $100M+ in Community Assets</div>
-                </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <div style="font-size: 3rem; color: #ff9500; margin-bottom: 1rem;">100%</div>
-                    <div style="font-size: 1.2rem; font-weight: bold;">Client Satisfaction</div>
-                    <div>Long-term Partnership Focus</div>
-                </div>
-            </div>
-            
-            <!-- PROFESSIONAL CONSULTATION CALL TO ACTION -->
-            <div style="background: #ff9500; padding: 2rem; border-radius: 15px; margin-top: 3rem;">
-                <h3 style="font-size: 2rem; margin-bottom: 1rem; color: white;">Discover the Manage369 Difference</h3>
-                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: white;">Experience property management excellence built on 18+ years of North Shore community relationships and local expertise. We'd be honored to discuss how we can serve your community.</p>
-                <a href="tel:8476522338" style="background: white; color: #ff9500; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block;">Contact Us at (847) 652-2338</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS SECTION (MOVED DOWN AND STANDALONE) -->
-    <section style="padding: 4rem 2rem; background: #f5f7fa;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="font-size: 2.5rem; margin-bottom: 3rem; color: #333; text-align: center;">Testimonials from Our Community Partners</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
-                <div style="background: white; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div style="color: #ff9500; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 1rem; color: #666; line-height: 1.6;">"We've worked with Manage369 for over a decade and have consistently been impressed by their professionalism and deep understanding of our Lincoln Park community. Their established vendor relationships and financial stewardship have enhanced our property values significantly."</p>
-                    <div style="font-weight: bold; color: #4a90e2;">- Board President, Lincoln Park Condominiums</div>
-                </div>
-                <div style="background: white; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div style="color: #ff9500; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 1rem; color: #666; line-height: 1.6;">"Manage369 has been our trusted partner for eight years. Their comprehensive understanding of North Shore communities, meticulous financial management, and respect for our neighborhood character make them an invaluable part of our community's success."</p>
-                    <div style="font-weight: bold; color: #4a90e2;">- HOA President, Glenview Townhomes</div>
-                </div>
-                <div style="background: white; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div style="color: #ff9500; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
-                    <p style="font-style: italic; margin-bottom: 1rem; color: #666; line-height: 1.6;">"Manage369's long-term commitment to our Highland Park community shows in everything they do. Their respect for our neighborhood's heritage, combined with modern management practices, has steadily enhanced our property values while maintaining the character we cherish."</p>
-                    <div style="font-weight: bold; color: #4a90e2;">- Condo Owner, Highland Park</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section for SEO -->
-    <section style="padding: 4rem 2rem; background: #f8f9fa;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center; margin-bottom: 3rem; color: #333;">Common Questions About Our Services</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: #4a90e2; margin-bottom: 1rem;">What makes Manage369 the right choice for North Shore properties?</h3>
-                    <p><strong>Established community relationships:</strong> Since 2006, we've built deep relationships throughout North Shore and Chicago communities. Our CAI/IREM/CCIM certifications, combined with our understanding of local character and municipal requirements, allow us to provide management services that honor your community's heritage while ensuring modern operational excellence.</p>
-                </div>
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: #4a90e2; margin-bottom: 1rem;">How do you approach property management transitions?</h3>
-                    <p><strong>Thoughtful, comprehensive transitions:</strong> We understand that changing management companies is a significant decision. Our experienced team carefully evaluates your property's unique needs and community character, ensuring a smooth transition that respects your established relationships while introducing enhanced service standards. We work closely with boards to ensure continuity and improvement.</p>
-                </div>
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: #4a90e2; margin-bottom: 1rem;">How do you approach financial stewardship?</h3>
-                    <p><strong>Meticulous financial management with local insight:</strong> Our comprehensive financial reporting provides complete transparency, while our established vendor relationships throughout North Shore communities ensure competitive pricing without compromising quality. We focus on long-term value preservation through strategic planning and prudent reserve management.</p>
-                </div>
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: #4a90e2; margin-bottom: 1rem;">What is your commitment to service excellence?</h3>
-                    <p><strong>Partnership-focused approach:</strong> Our long-term client relationships speak to our commitment to excellence. We view every property as a long-term partnership, working closely with boards and residents to continually enhance property values and community satisfaction. Our success is measured by the lasting relationships we've built throughout North Shore communities.</p>
-                </div>
             </div>
         </div>
     </section>
