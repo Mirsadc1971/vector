@@ -427,24 +427,65 @@
         }
 
         /* Responsive */
+        /* Mobile Navigation Styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem;
+            z-index: 1001;
+        }
+
+        .mobile-menu.active {
+            display: block;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .mobile-menu a:hover {
+            color: #4a90e2;
+            background: #f8f9fa;
+        }
+
         @media (max-width: 768px) {
             .nav-container {
-                flex-direction: column;
-                gap: 1rem;
+                flex-direction: row;
+                justify-content: space-between;
                 padding: 1rem;
             }
             
             .nav-menu {
-                flex-direction: column;
-                gap: 1rem;
-                width: 100%;
-                text-align: center;
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
             }
             
             .hero {
                 height: auto;
                 padding: 6rem 1rem 4rem;
-                margin-top: 120px;
+                margin-top: 80px;
             }
             
             .hero-content h1 {
@@ -458,10 +499,6 @@
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
-            }
-            
-            .nav-menu {
-                display: none;
             }
             
             .service-grid {
@@ -512,6 +549,10 @@
     <nav class="navbar">
         <div class="nav-container">
             <a href="index.html" class="logo">MANAGE369</a>
+            
+            <!-- Mobile Menu Toggle -->
+            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile navigation menu">☰</button>
+            
             <ul class="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
                 <li class="nav-item dropdown">
@@ -534,11 +575,42 @@
                         </div>
                     </div>
                 </li>
-                <li class="nav-item"><a href="service-areas.html" class="nav-link">Service Areas</a></li>
-                <li class="nav-item"><a href="pay-dues.html" class="nav-link">Pay Dues</a></li>
+                <li class="nav-item dropdown">
+                    <a href="service-areas.html" class="nav-link">Service Areas ▼</a>
+                    <div class="dropdown-content">
+                        <div class="dropdown-section">
+                            <h4>North Shore</h4>
+                            <a href="service-areas/wilmette/index.html">Wilmette</a>
+                            <a href="service-areas/winnetka/index.html">Winnetka</a>
+                            <a href="service-areas/glencoe/index.html">Glencoe</a>
+                            <a href="service-areas/highland-park/index.html">Highland Park</a>
+                            <a href="service-areas/lake-forest/index.html">Lake Forest</a>
+                        </div>
+                        <div class="dropdown-section">
+                            <h4>Chicago</h4>
+                            <a href="service-areas/gold-coast/index.html">Gold Coast</a>
+                            <a href="service-areas/lincoln-park/index.html">Lincoln Park</a>
+                            <a href="service-areas/lakeview/index.html">Lakeview</a>
+                            <a href="service-areas.html">View All Areas</a>
+                        </div>
+                    </div>
+                </li>
                 <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                <li class="nav-item"><a href="blog/index.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="payment-methods.html" class="nav-link">Payment Methods</a></li>
                 <li class="nav-item"><a href="tel:+18476522338" class="cta-button">Call (847) 652-2338</a></li>
             </ul>
+            
+            <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="service-areas.html">Service Areas</a>
+                <a href="contact.html">Contact</a>
+                <a href="blog/index.html">Blog</a>
+                <a href="payment-methods.html">Payment Methods</a>
+                <a href="tel:8476522338" style="background: #4a90e2; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+            </div>
         </div>
     </nav>
 
@@ -1016,6 +1088,41 @@
         }
       ]
     }
+    </script>
+
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            const isExpanded = mobileMenu.classList.contains('active');
+            
+            mobileMenu.classList.toggle('active');
+            toggle.setAttribute('aria-expanded', !isExpanded);
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!mobileMenu.contains(event.target) && !toggle.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+        
+        // Handle escape key for mobile menu
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                const mobileMenu = document.getElementById('mobileMenu');
+                const toggle = document.querySelector('.mobile-menu-toggle');
+                if (mobileMenu.classList.contains('active')) {
+                    mobileMenu.classList.remove('active');
+                    toggle.setAttribute('aria-expanded', 'false');
+                    toggle.focus();
+                }
+            }
+        });
     </script>
 </body>
 </html>

@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- Primary Meta Tags -->
-    <title>Where Excellence Meets Experience | Chicago & North Shore Property Management | Manage369</title>
-    <meta name="title" content="Where Excellence Meets Experience | Chicago & North Shore Property Management | Manage369">
+    <title>Chicago & North Shore Property Management | Manage369</title>
+    <meta name="title" content="Chicago & North Shore Property Management | Manage369">
     <meta name="description" content="Where Excellence Meets Experience - Chicago & North Shore property management. 18+ Years • 50+ Properties • Zero Lost • Professional Excellence. Expert condo, HOA & townhome management.">
     <meta name="keywords" content="North Shore property management, Wilmette property management, Winnetka property management, Highland Park property management, Glencoe property management, Evanston property management, North Shore condo management, Chicago property managers">
     <meta name="author" content="Manage369">
@@ -16,8 +16,8 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://manage369.com/">
-    <meta property="og:title" content="Where Excellence Meets Experience | Chicago & North Shore Property Management | Manage369">
-    <meta property="og:description" content="Where Excellence Meets Experience - Chicago & North Shore property management. 18+ Years • 50+ Properties • Zero Lost • Professional Excellence. Expert condo, HOA & townhome management.">
+    <meta property="og:title" content="Chicago & North Shore Property Management | Manage369">
+    <meta property="og:description" content="Where Excellence Meets Experience - Chicago & North Shore property management. 18+ Years • 50+ Properties • Zero Lost."
     <meta property="og:image" content="https://manage369.com/images/manage369-social-share.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -27,8 +27,8 @@
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://manage369.com/">
-    <meta property="twitter:title" content="Where Excellence Meets Experience | Chicago & North Shore Property Management | Manage369">
-    <meta property="twitter:description" content="Where Excellence Meets Experience - Chicago & North Shore property management. 18+ Years • 50+ Properties • Zero Lost • Professional Excellence. Expert condo, HOA & townhome management.">
+    <meta property="twitter:title" content="Chicago & North Shore Property Management | Manage369">
+    <meta property="twitter:description" content="Where Excellence Meets Experience - Chicago & North Shore property management. 18+ Years • 50+ Properties • Zero Lost."
     <meta property="twitter:image" content="https://manage369.com/images/manage369-social-share.jpg">
     
     <!-- Additional SEO Meta Tags -->
@@ -40,6 +40,17 @@
     <meta name="distribution" content="global">
     <meta name="rating" content="general">
     <meta name="revisit-after" content="7 days">
+    
+    <!-- Performance and Resource Hints -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    
+    <!-- Critical Resource Preloads -->
+    <link rel="preload" href="/images/manage369livingroomskokie.webp" as="image" type="image/webp">
+    <link rel="preload" href="/images/manage369livingroomskokie.jpg" as="image" type="image/jpeg">
     
     <!-- Favicons -->
     <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
@@ -53,8 +64,9 @@
     <!-- Windows Tile -->
     <meta name="msapplication-TileColor" content="#000000">
     
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="mobile-responsive.css">
+    <!-- Stylesheets - Load non-critical CSS asynchronously -->
+    <link rel="preload" href="mobile-responsive.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="mobile-responsive.css"></noscript>
     
     <!-- Enhanced LocalBusiness Schema for Google Business Profile -->
     <script type="application/ld+json">
@@ -250,64 +262,76 @@
         }
         
         .hero-content h1 {
-            font-size: 3.5rem;
-            margin-bottom: 0.5rem;
+            font-size: 4rem;
+            margin-bottom: 1.5rem;
             color: #4a90e2;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-            line-height: 1.2;
-            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            line-height: 1.1;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
         
         .hero-subtitle {
-            font-size: 2.3rem;
+            font-size: 2.5rem;
             color: #FF6B35;
-            margin-bottom: 0.5rem;
-            font-weight: 400;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
             letter-spacing: 1px;
             font-style: italic;
         }
         
         .hero-stats {
-            font-size: 1.4rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
-            letter-spacing: 0.5px;
-        }
-        
-        .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: 1.6rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 3rem;
+            font-weight: 500;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.6);
+            letter-spacing: 1px;
         }
         
         .cta-buttons {
             display: flex;
-            gap: 1rem;
+            gap: 2rem;
             justify-content: center;
         }
         
         .btn {
-            padding: 15px 30px;
+            padding: 18px 36px;
             text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: all 0.3s;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
         }
         
         .btn-primary {
             background: #ff9500;
             color: white;
+            border: 2px solid #ff9500;
         }
         
         .btn-secondary {
             border: 2px solid white;
             color: white;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
         }
         
-        .btn:hover {
-            transform: translateY(-2px);
+        .btn-primary:hover {
+            background: #e8850a;
+            border-color: #e8850a;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,149,0,0.4);
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.2);
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255,255,255,0.2);
         }
         
         .header {
@@ -686,33 +710,33 @@
             }
             
             .hero-content h1 {
-                font-size: 2.5rem;
-                margin-bottom: 0.5rem;
+                font-size: 2.8rem;
+                margin-bottom: 1rem;
+                line-height: 1.1;
             }
             
             .hero-subtitle {
-                font-size: 1.8rem;
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
             }
             
             .hero-stats {
-                font-size: 1.1rem;
-            }
-            
-            .hero-content p {
-                font-size: 1.1rem;
-                margin-bottom: 1.5rem;
+                font-size: 1.3rem;
+                margin-bottom: 2.5rem;
             }
             
             .cta-buttons {
                 flex-direction: column;
-                gap: 1rem;
+                gap: 1.5rem;
                 align-items: center;
             }
             
             .btn {
                 width: 100%;
-                max-width: 280px;
+                max-width: 300px;
                 text-align: center;
+                font-size: 1rem;
+                padding: 16px 32px;
             }
             
             .footer-grid {
@@ -747,15 +771,21 @@
         
         @media (max-width: 480px) {
             .hero-content h1 {
-                font-size: 2rem;
+                font-size: 2.2rem;
+                line-height: 1.1;
             }
             
             .hero-subtitle {
-                font-size: 1.4rem;
+                font-size: 1.6rem;
             }
             
             .hero-stats {
+                font-size: 1.1rem;
+            }
+            
+            .btn {
                 font-size: 0.95rem;
+                padding: 14px 28px;
             }
             
             .logo {
@@ -877,19 +907,8 @@
       gtag('config', 'G-XXXXXXXXXX');
     </script>
     
-    <!-- Preconnect to external domains for performance -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.google-analytics.com">
-    <link rel="preconnect" href="https://www.googletagmanager.com">
-    
-    <!-- DNS Prefetch for performance -->
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//www.google-analytics.com">
-    
-    <!-- Preload critical resources -->
+    <!-- Additional Resource Preloads for Performance -->
     <link rel="preload" href="/images/manage369-logo.png" as="image">
-    <link rel="preload" href="mobile-responsive.css" as="style">
 </head>
 <body>
     <header class="header">
@@ -967,17 +986,11 @@
             <!-- SEO-OPTIMIZED H1 - Primary Keywords for Search Rankings -->
             <h1>Chicago & North Shore Property Management</h1>
             <div class="hero-subtitle">Where Excellence Meets Experience</div>
-            <div class="hero-stats">18+ Years • 50+ Properties • Zero Lost • Professional Excellence</div>
-            <!-- TAGLINE - Professional Excellence Message -->
-            <p>Premier Chicago & North Shore Property Management Services | Expert Condo, HOA & Townhome Management</p>
-            <div style="background: rgba(255,255,255,0.9); padding: 1rem; border-radius: 10px; margin: 1rem 0; color: #333;">
-                <strong style="color: #ff9500; font-size: 1.2rem;">Established Local Expertise</strong><br>
-                <span style="font-size: 1.1rem;">50+ Properties • 2,450+ Units • $100M+ Assets Under Management</span>
-            </div>
+            <div class="hero-stats">18+ Years • 50+ Properties • Zero Lost</div>
             <div class="cta-buttons">
-                <!-- CALL-TO-ACTION BUTTONS - Edit text and links -->
-                <a href="tel:8476522338" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 40px;">Schedule a Consultation</a>
-                <a href="contact.html" class="btn btn-secondary" style="font-size: 1.1rem; padding: 15px 30px;">Learn About Our Services</a>
+                <!-- CALL-TO-ACTION BUTTONS - Clean, focused options -->
+                <a href="tel:8476522338" class="btn btn-primary">Schedule Consultation</a>
+                <a href="service-areas.html" class="btn btn-secondary">View Service Areas</a>
             </div>
         </div>
     </section>
