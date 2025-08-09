@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://manage369.com/property-management/">
     <meta property="og:title" content="Areas We Serve | 68 Chicago & North Shore Communities">
-    <meta property="og:description" content="Professional property management in 36+ North Shore & Chicago areas including Wilmette, Winnetka, Highland Park, Glencoe, Evanston. 18+ years expertise.">
+    <meta property="og:description" content="Professional property management in 68 North Shore & Chicago areas including Wilmette, Winnetka, Highland Park, Glencoe, Evanston. 18+ years expertise.">
     <meta property="og:image" content="https://manage369.com/images/manage369-service-areas.jpg">
     <meta property="og:site_name" content="Manage369">
     
@@ -22,7 +22,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://manage369.com/property-management/">
     <meta name="twitter:title" content="Areas We Serve | 68 Chicago & North Shore Communities">
-    <meta name="twitter:description" content="Professional property management in 36+ North Shore & Chicago areas. 18+ years expertise.">
+    <meta name="twitter:description" content="Professional property management in 68 North Shore & Chicago areas. 18+ years expertise.">
     <meta name="twitter:image" content="https://manage369.com/images/manage369-service-areas.jpg">
     
     <!-- Geo Tags -->
@@ -495,7 +495,96 @@
         
         .nav {
             display: flex;
-            gap: 2rem;
+            align-items: center;
+            gap: 0;
+        }
+        
+        .nav-link {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 12px 20px;
+            display: inline-block;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #4a90e2;
+            background: #f8f9fa;
+        }
+        
+        .nav-link.active {
+            color: #4a90e2;
+            font-weight: 600;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 250px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border-radius: 8px;
+            padding: 1rem 0;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-content a {
+            color: #333;
+            padding: 10px 20px;
+            text-decoration: none;
+            display: block;
+            transition: all 0.3s ease;
+        }
+        
+        .dropdown-content a:hover {
+            background: #f8f9fa;
+            color: #4a90e2;
+        }
+        
+        .dropdown-section {
+            padding: 0.5rem 0;
+        }
+        
+        .dropdown-header {
+            padding: 10px 20px;
+            font-weight: 600;
+            color: #666;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .header-cta {
+            margin-left: auto;
+        }
+        
+        .phone-button {
+            background: #ff9500;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-button:hover {
+            background: #e8850a;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255,149,0,0.3);
         }
         
         .nav a {
@@ -1184,44 +1273,44 @@
     </style>
 </head>
 <body>
-    <header class="header" role="banner">
-        <!-- COMPANY LOGO/NAME - Edit this to change your company name -->
-        <div class="logo" aria-label="Manage369 Logo">MANAGE369</div>
+    <header class="header">
+        <!-- COMPANY LOGO/NAME -->
+        <div class="logo">MANAGE369</div>
         
         <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile navigation menu" aria-expanded="false" aria-controls="mobileMenu">
-            <span aria-hidden="true">☰</span>
-        </button>
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
         
-        <!-- MAIN NAVIGATION MENU - Add/remove menu items here -->
-        <nav class="nav" role="navigation" aria-label="Main navigation">
-            <a href="../">Home</a>
-            <div class="services-dropdown">
-                <a href="../services.html" aria-haspopup="true" aria-expanded="false">Services <span class="dropdown-arrow" aria-hidden="true">▼</span></a>
-                <div class="dropdown-content" role="menu" aria-label="Services submenu">
-                    <div class="dropdown-header" role="presentation">Property Types</div>
-                    <a href="services/condominium-management/index.html">Condominium Management</a>
-                    <a href="services/hoa-management/index.html">HOA Management</a>
-                    <a href="services/townhome-management/index.html">Townhome Management</a>
-                    <div class="dropdown-header">Service Offerings</div>
-                    <a href="services/financial-management/index.html">Financial Management</a>
-                    <a href="services/maintenance-coordination/index.html">Maintenance Coordination</a>
-                    <a href="services/board-support/index.html">Board Support</a>
-                    <a href="services/administrative-services/index.html">Administrative Services</a>
-                    <a href="services/capital-project-management/index.html">Capital Project Management</a>
-                    <a href="services/resident-relations/index.html">Resident Relations</a>
+        <!-- MAIN NAVIGATION MENU -->
+        <nav class="nav">
+            <a href="../" class="nav-link">Home</a>
+            <div class="dropdown">
+                <a href="../services.html" class="nav-link dropdown-trigger">Services <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Property Types</div>
+                        <a href="../services/condominium-management/">Condominium Management</a>
+                        <a href="../services/hoa-management/">HOA Management</a>
+                        <a href="../services/townhome-management/">Townhome Management</a>
+                    </div>
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Service Offerings</div>
+                        <a href="../services/financial-management/">Financial Management</a>
+                        <a href="../services/maintenance-coordination/">Maintenance Coordination</a>
+                        <a href="../services/board-support/">Board Support</a>
+                        <a href="../services/administrative-services/">Administrative Services</a>
+                        <a href="../services/capital-project-management/">Capital Project Management</a>
+                        <a href="../services/resident-relations/">Resident Relations</a>
+                    </div>
                 </div>
             </div>
-            <a href="./" class="active">Areas We Serve</a>
-            <a href="../pay-dues.html" class="pay-dues">Pay Dues</a>
-            <a href="../contact.html">Contact</a>
+            <a href="./" class="nav-link active">Areas We Serve</a>
+            <a href="../payment-methods.html" class="nav-link">Pay Dues</a>
+            <a href="../contact.html" class="nav-link">Contact</a>
         </nav>
         
-        <!-- PHONE BUTTON - Edit phone number here -->
-        <!-- PHONE NUMBER - Replace with your phone number -->
-        <div style="display: flex; align-items: center; gap: 0.5rem;">
-            <div style="background: #ff4444; color: white; padding: 0.25rem 0.5rem; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase; animation: pulse 2s infinite;">24/7 EMERGENCY</div>
-            <a href="tel:8476522338" class="phone" onclick="trackPhoneClick()">Call (847) 652-2338</a>
+        <!-- PROFESSIONAL PHONE CTA -->
+        <div class="header-cta">
+            <a href="tel:8476522338" class="phone-button">Call (847) 652-2338</a>
         </div>
         
         <!-- Mobile Menu -->
@@ -1241,7 +1330,7 @@
                 <!-- MAIN COMPANY NAME - Edit this for your company name -->
                 <h1 id="hero-heading">Areas We Serve - 68 Communities Across Chicago & North Shore</h1>
                 <!-- TAGLINE - Edit this for your company tagline -->
-                <p>Serving 36+ Premium Communities Throughout Chicago & North Shore | Expert Local Property Management Since 2006</p>
+                <p>Serving 68 Premium Communities Throughout Chicago & North Shore | Expert Local Property Management Since 2006</p>
                 <div class="cta-buttons" role="group" aria-label="Contact options">
                     <!-- CALL-TO-ACTION BUTTONS - Edit text and links -->
                     <a href="tel:8476522338" class="btn btn-primary" style="font-size: 1.2rem; padding: 20px 40px;" aria-label="Call Manage369 at (847) 652-2338" onclick="trackPhoneClick()">Call (847) 652-2338</a>
