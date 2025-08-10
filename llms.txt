@@ -1,0 +1,57 @@
+# Manage369 Property Management
+
+## About
+Manage369 is a professional property management company serving Chicago and the North Shore suburbs. We specialize in condominium, HOA, and townhome management services.
+
+## Services
+- Condominium Management
+- HOA Management
+- Townhome Management
+- Financial Management
+- Maintenance Coordination
+- Board Support
+- Resident Relations
+- Administrative Services
+- Capital Project Management
+- Emergency Property Management (24/7)
+
+## Service Areas
+We provide property management services throughout Chicago and North Shore including:
+
+### North Shore Communities
+Arlington Heights, Buffalo Grove, Deerfield, Des Plaines, Elk Grove Village, Evanston, Glencoe, Glenview, Highland Park, Lake Bluff, Lake Forest, Lincolnshire, Lincolnwood, Morton Grove, Mount Prospect, Northbrook, Northfield, Park Ridge, Prospect Heights, Rolling Meadows, Skokie, Vernon Hills, Wheeling, Wilmette, Winnetka
+
+### Chicago Neighborhoods
+Albany Park, Andersonville, Avondale, Bucktown, Dunning, Edgewater, Edison Park, Forest Glen, Gold Coast, Hyde Park, Jefferson Park, Lakeview, Lincoln Park, Lincoln Square, Logan Square, Loop, Mayfair, North Park, Norwood Park, Old Irving Park, Old Town, Portage Park, Pulaski Park, Ravenswood, River North, Rogers Park, Sauganash, South Loop, Streeterville, The Glen, Uptown, West Loop, West Ridge, Wicker Park
+
+### Other Areas
+Elmwood Park, Franklin Park, Golf, Harwood Heights, Itasca, Norridge, Oak Park, Schiller Park, Wood Dale
+
+## Contact
+Website: https://manage369.com
+Phone: Available on website
+Email: Available on website
+
+## Key Features
+- 24/7 Emergency Response
+- Professional Board Support
+- Financial Management and Reporting
+- Maintenance Coordination
+- Resident Portal Access
+- Capital Project Management
+- Transparent Pricing
+- Local Expertise
+
+## Company Focus
+We focus on providing comprehensive property management solutions for condominium associations, homeowner associations, and townhome communities in the Chicago metropolitan area. Our team combines local expertise with professional management practices to deliver exceptional service to property owners and residents.
+
+## URLs
+- Homepage: https://manage369.com
+- Services: https://manage369.com/services.html
+- Contact: https://manage369.com/contact.html
+- Blog: https://manage369.com/blog/
+- Emergency Services: https://manage369.com/emergency-property-management-chicago.html
+
+## Property Management Locations
+For specific area pages, use format: https://manage369.com/property-management/[area-name]/
+Example: https://manage369.com/property-management/northbrook/
