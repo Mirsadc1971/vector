@@ -75,24 +75,107 @@
             gap: 2rem;
         }
         
-        .nav a {
+        .nav-link {
             color: #333;
             text-decoration: none;
-            margin: 0 1rem;
+            margin: 0 0.5rem;
             font-weight: 500;
             padding: 8px 16px;
             border-radius: 5px;
             transition: all 0.3s ease;
         }
         
-        .nav a:hover {
+        .nav-link:hover {
             color: #4a90e2;
             background: #f0f0f0;
         }
         
-        .nav a.active {
+        .nav-link.active {
             background: #ff9500;
             color: white;
+        }
+        
+        /* Dropdown Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 280px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            border-radius: 8px;
+            z-index: 1001;
+            top: 100%;
+            left: 0;
+            margin-top: 0.5rem;
+            padding: 0.5rem 0;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-trigger {
+            cursor: pointer;
+        }
+        
+        .dropdown-arrow {
+            font-size: 0.8em;
+            transition: transform 0.3s;
+        }
+        
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        
+        .dropdown-section {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .dropdown-section:last-child {
+            border-bottom: none;
+        }
+        
+        .dropdown-header {
+            padding: 0.5rem 1rem;
+            font-weight: 600;
+            color: #666;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+        }
+        
+        .dropdown-content a {
+            display: block;
+            padding: 0.5rem 1rem;
+            color: #333;
+            text-decoration: none;
+            transition: background 0.3s;
+            margin: 0;
+        }
+        
+        .dropdown-content a:hover {
+            background: #f0f0f0;
+            color: #4a90e2;
+        }
+        
+        .phone-button {
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .phone-button:hover {
+            background: #357abd;
+            transform: translateY(-2px);
         }
         
         .phone {
@@ -700,13 +783,64 @@
                 margin-bottom: 1rem;
                 margin-right: 0;
             }
+            
+            /* Mobile Menu Styles */
+            .nav {
+                display: none;
+            }
+            
+            .header-cta {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+        }
+        
+        /* Mobile Menu Styles */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: #333;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem;
+            z-index: 999;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem;
+            color: #333;
+            text-decoration: none;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .mobile-menu a:hover {
+            background: #f0f0f0;
         }
     </style>
 </head>
 <body>
     <header class="header">
         <!-- COMPANY LOGO/NAME -->
-        <div class="logo">MANAGE369</div>
+        <a href="index.html" class="logo">MANAGE369</a>
         
         <!-- Mobile Menu Toggle -->
         <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
