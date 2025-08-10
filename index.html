@@ -1712,7 +1712,7 @@
         <h2>Get Your Free Property Management Consultation</h2>
         <p>Fill out this quick form and we'll contact you within 24 hours to discuss your property management needs.</p>
         
-        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
             <div class="form-row">
                 <div class="form-group">
                     <label for="name">Full Name *</label>
@@ -1833,6 +1833,54 @@
                 mobileMenu.classList.remove('active');
             }
         });
+    </script>
+    <script>
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const propertyType = document.getElementById('property-type').value;
+            const propertyAddress = document.getElementById('property-address').value;
+            const message = document.getElementById('message').value;
+            
+            // Create email body
+            const emailBody = `New Property Management Inquiry from Manage369.com
+            
+Name: ${name}
+Email: ${email}
+Phone: ${phone}
+Property Type: ${propertyType}
+Property Address: ${propertyAddress || 'Not provided'}
+
+Message:
+${message}
+
+---
+This inquiry was submitted through the quick contact form on manage369.com`;
+            
+            // Create mailto link
+            const subject = encodeURIComponent('New Property Management Inquiry - ' + name);
+            const body = encodeURIComponent(emailBody);
+            const mailtoLink = `mailto:service@manage369.com?subject=${subject}&body=${body}`;
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            // Show success message
+            alert('Thank you for your inquiry! Your default email client should open with your information. If it doesn\'t, please email us directly at service@manage369.com or call (847) 652-2338.');
+            
+            // Reset form
+            document.getElementById('contactForm').reset();
+        }
+        
+        // Mobile menu toggle function (keeping existing functionality)
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
     </script>
 </body>
 </html>
