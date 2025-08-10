@@ -73,42 +73,174 @@
         }
         
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #4a90e2;
-            text-decoration: none;
         }
         
         .nav {
             display: flex;
-            gap: 2rem;
+            align-items: center;
+            gap: 0;
+            flex-wrap: nowrap;
         }
         
-        .nav a {
+        .nav-link {
             color: #333;
             text-decoration: none;
             font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 5px;
+            padding: 12px 20px;
+            transition: color 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        
+        .nav-link:hover {
+            color: #2B5BA0;
+        }
+        
+        .nav-link.active {
+            color: #2B5BA0;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-trigger {
+            cursor: pointer;
+        }
+        
+        .dropdown-arrow {
+            margin-left: 5px;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        
+        /* Mobile Navigation */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem;
+            z-index: 1001;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        /* Professional Dropdown Menu */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background: white;
+            min-width: 280px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            padding: 1rem 0;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .dropdown-section {
+            margin-bottom: 0.5rem;
+        }
+        
+        .dropdown-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .dropdown-header {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            padding: 8px 20px 5px;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 5px;
+        }
+        
+        .dropdown-content a {
+            color: #333 !important;
+            padding: 8px 20px !important;
+            margin: 0 !important;
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
             transition: all 0.3s ease;
         }
         
-        .nav a:hover, .nav a.active {
-            color: #4a90e2;
-            background: #f0f0f0;
+        .dropdown-content a:hover {
+            background: #f8f9fa !important;
+            color: #2B5BA0 !important;
         }
         
-        .phone {
-            background: #4a90e2;
+        /* Professional Header CTA */
+        .header-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 3px;
+        }
+        
+        .emergency-text {
+            font-size: 0.75rem;
+            color: #666;
+            font-weight: 500;
+            white-space: nowrap;
+        }
+        
+        .phone-button {
+            background: #2B5BA0;
             color: white;
             padding: 10px 20px;
-            border-radius: 5px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid #2B5BA0;
         }
         
-        .phone:hover {
-            background: #357abd;
+        .phone-button:hover {
+            background: #1e4080;
+            border-color: #1e4080;
+            transform: translateY(-1px);
         }
         
         /* Hero Section */
@@ -344,15 +476,25 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .header {
-                flex-direction: column;
-                gap: 1rem;
                 padding: 1rem;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .header-cta {
+                display: none;
             }
             
             .hero {
                 height: auto;
                 padding: 6rem 1rem 4rem;
-                margin-top: 120px;
+                margin-top: 80px;
             }
             
             .hero-content h1 {
@@ -372,15 +514,54 @@
 </head>
 <body>
     <header class="header">
-        <a href="../index.html" class="logo">MANAGE369</a>
+        <!-- COMPANY LOGO/NAME - Edit this to change your company name -->
+        <div class="logo">MANAGE369</div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        
+        <!-- MAIN NAVIGATION MENU - Standardized Layout -->
         <nav class="nav">
+            <a href="../index.html" class="nav-link">Home</a>
+            <div class="dropdown">
+                <a href="../services.html" class="nav-link dropdown-trigger">Services <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Property Types</div>
+                        <a href="../services/condominium-management/index.html">Condominium Management</a>
+                        <a href="../services/hoa-management/index.html">HOA Management</a>
+                        <a href="../services/townhome-management/index.html">Townhome Management</a>
+                    </div>
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Service Offerings</div>
+                        <a href="../services/financial-management/index.html">Financial Management</a>
+                        <a href="../services/maintenance-coordination/index.html">Maintenance Coordination</a>
+                        <a href="../services/board-support/index.html">Board Support</a>
+                        <a href="../services/administrative-services/index.html">Administrative Services</a>
+                        <a href="../services/capital-project-management/index.html">Capital Project Management</a>
+                        <a href="../services/resident-relations/index.html">Resident Relations</a>
+                    </div>
+                </div>
+            </div>
+            <a href="../property-management" class="nav-link">Areas We Serve</a>
+            <a href="../payment-methods.html" class="nav-link">Pay Dues</a>
+            <a href="../contact.html" class="nav-link">Contact</a>
+        </nav>
+        
+        <!-- PROFESSIONAL PHONE CTA -->
+        <div class="header-cta">
+            <a href="tel:8476522338" class="phone-button">Call (847) 652-2338</a>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
             <a href="../index.html">Home</a>
             <a href="../services.html">Services</a>
             <a href="../property-management">Areas We Serve</a>
+            <a href="../payment-methods.html">Pay Dues</a>
             <a href="../contact.html">Contact</a>
-            <a href="index.html" class="active">Blog</a>
-        </nav>
-        <a href="tel:8476522338" class="phone">Call (847) 652-2338</a>
+            <a href="tel:8476522338" style="background: #4a90e2; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+        </div>
     </header>
     
     <section class="hero">
@@ -526,5 +707,22 @@
             <p>&copy; 2025 Manage369. All rights reserved.</p>
         </div>
     </footer>
+    
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!mobileMenu.contains(event.target) && !toggle.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

@@ -19,126 +19,148 @@
             color: #333;
         }
 
-        /* Navigation */
-        .navbar {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            padding: 1rem 0;
+        /* Header Styles - Standardized */
+        .header {
             position: fixed;
-            width: 100%;
             top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 20px rgba(0,0,0,0.1);
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
+            width: 100%;
+            background: white;
+            padding: 1rem 2rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 2rem;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
+        
         .logo {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: bold;
             color: #4a90e2;
-            text-decoration: none;
         }
-
-        .nav-menu {
+        
+        .nav {
             display: flex;
-            list-style: none;
-            gap: 2rem;
             align-items: center;
+            gap: 0;
+            flex-wrap: nowrap;
         }
-
-        .nav-item {
-            position: relative;
-        }
-
+        
         .nav-link {
             color: #333;
             text-decoration: none;
             font-weight: 500;
-            font-size: 1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            transition: all 0.3s ease;
+            padding: 12px 20px;
+            transition: color 0.3s ease;
+            position: relative;
+            display: flex;
+            align-items: center;
         }
-
+        
         .nav-link:hover {
-            color: #ff9500;
-            background: rgba(255, 149, 0, 0.1);
+            color: #2B5BA0;
         }
-
+        
         .nav-link.active {
-            background: #ff9500;
-            color: white;
+            color: #2B5BA0;
         }
-
-        .cta-button {
-            background: #4a90e2;
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-
-        .cta-button:hover {
-            background: #357abd;
-            transform: translateY(-2px);
-        }
-
-        /* Services Dropdown */
+        
         .dropdown {
             position: relative;
+            display: inline-block;
         }
-
+        
+        .dropdown-trigger {
+            cursor: pointer;
+        }
+        
+        .dropdown-arrow {
+            margin-left: 5px;
+            font-size: 0.8rem;
+            transition: transform 0.3s ease;
+        }
+        
+        .dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+        
+        /* Professional Dropdown Menu */
         .dropdown-content {
             display: none;
             position: absolute;
-            top: 100%;
-            left: 0;
             background: white;
             min-width: 280px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            z-index: 1000;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
             padding: 1rem 0;
-            z-index: 1001;
+            top: 100%;
+            left: 0;
         }
-
+        
         .dropdown:hover .dropdown-content {
             display: block;
         }
-
+        
         .dropdown-section {
-            padding: 0 1rem;
             margin-bottom: 0.5rem;
         }
-
-        .dropdown-section h4 {
-            color: #666;
-            font-size: 0.8rem;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
+        
+        .dropdown-section:last-child {
+            margin-bottom: 0;
+        }
+        
+        .dropdown-header {
+            font-size: 0.75rem;
             font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            padding: 8px 20px 5px;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 5px;
         }
-
-        .dropdown-section a {
-            display: block;
-            color: #333;
+        
+        .dropdown-content a {
+            color: #333 !important;
+            padding: 8px 20px !important;
+            margin: 0 !important;
             text-decoration: none;
-            padding: 0.5rem 0;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
+            display: block;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
-
-        .dropdown-section a:hover {
-            color: #ff9500;
+        
+        .dropdown-content a:hover {
+            background: #f8f9fa !important;
+            color: #2B5BA0 !important;
+        }
+        
+        /* Professional Header CTA */
+        .header-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 3px;
+        }
+        
+        .phone-button {
+            background: #2B5BA0;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            border: 2px solid #2B5BA0;
+        }
+        
+        .phone-button:hover {
+            background: #1e4080;
+            border-color: #1e4080;
+            transform: translateY(-1px);
         }
 
         /* Hero Section */
@@ -427,7 +449,7 @@
         }
 
         /* Responsive */
-        /* Mobile Navigation Styles */
+        /* Mobile Navigation */
         .mobile-menu-toggle {
             display: none;
             background: none;
@@ -435,9 +457,8 @@
             font-size: 1.5rem;
             color: #333;
             cursor: pointer;
-            padding: 0.5rem;
         }
-
+        
         .mobile-menu {
             display: none;
             position: absolute;
@@ -449,11 +470,11 @@
             padding: 1rem;
             z-index: 1001;
         }
-
+        
         .mobile-menu.active {
             display: block;
         }
-
+        
         .mobile-menu a {
             display: block;
             padding: 0.75rem 0;
@@ -461,25 +482,22 @@
             color: #333;
             text-decoration: none;
         }
-
-        .mobile-menu a:hover {
-            color: #4a90e2;
-            background: #f8f9fa;
-        }
-
+        
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: row;
-                justify-content: space-between;
+            .header {
                 padding: 1rem;
             }
             
-            .nav-menu {
+            .nav {
                 display: none;
             }
             
             .mobile-menu-toggle {
                 display: block;
+            }
+            
+            .header-cta {
+                display: none;
             }
             
             .hero {
@@ -546,54 +564,56 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">MANAGE369</a>
-            
-            <!-- Mobile Menu Toggle -->
-            <button class="mobile-menu-toggle" onclick="toggleMobileMenu()" aria-label="Toggle mobile navigation menu">☰</button>
-            
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a href="services.html" class="nav-link active">Services ▼</a>
-                    <div class="dropdown-content">
-                        <div class="dropdown-section">
-                            <h4>Property Types</h4>
-                            <a href="services/condominium-management/index.html">Condominium Management</a>
-                            <a href="services/hoa-management/index.html">HOA Management</a>
-                            <a href="services/townhome-management/index.html">Townhome Management</a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4>Service Offerings</h4>
-                            <a href="services/financial-management/index.html">Financial Management</a>
-                            <a href="services/maintenance-coordination/index.html">Maintenance Coordination</a>
-                            <a href="services/board-support/index.html">Board Support</a>
-                            <a href="services/administrative-services/index.html">Administrative Services</a>
-                            <a href="services/capital-project-management/index.html">Capital Project Management</a>
-                            <a href="services/resident-relations/index.html">Resident Relations</a>
-                        </div>
+    <header class="header">
+        <!-- COMPANY LOGO/NAME -->
+        <div class="logo">MANAGE369</div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        
+        <!-- MAIN NAVIGATION MENU - Standardized Layout -->
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <div class="dropdown">
+                <a href="services.html" class="nav-link dropdown-trigger active">Services <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Property Types</div>
+                        <a href="services/condominium-management/index.html">Condominium Management</a>
+                        <a href="services/hoa-management/index.html">HOA Management</a>
+                        <a href="services/townhome-management/index.html">Townhome Management</a>
                     </div>
-                </li>
-                <li class="nav-item"><a href="property-management" class="nav-link">Areas We Serve</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="blog/index.html" class="nav-link">Blog</a></li>
-                <li class="nav-item"><a href="payment-methods.html" class="nav-link">Payment Methods</a></li>
-                <li class="nav-item"><a href="tel:+18476522338" class="cta-button">Call (847) 652-2338</a></li>
-            </ul>
-            
-            <!-- Mobile Menu -->
-            <div class="mobile-menu" id="mobileMenu">
-                <a href="index.html">Home</a>
-                <a href="services.html">Services</a>
-                <a href="property-management">Areas We Serve</a>
-                <a href="contact.html">Contact</a>
-                <a href="blog/index.html">Blog</a>
-                <a href="payment-methods.html">Payment Methods</a>
-                <a href="tel:8476522338" style="background: #4a90e2; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Service Offerings</div>
+                        <a href="services/financial-management/index.html">Financial Management</a>
+                        <a href="services/maintenance-coordination/index.html">Maintenance Coordination</a>
+                        <a href="services/board-support/index.html">Board Support</a>
+                        <a href="services/administrative-services/index.html">Administrative Services</a>
+                        <a href="services/capital-project-management/index.html">Capital Project Management</a>
+                        <a href="services/resident-relations/index.html">Resident Relations</a>
+                    </div>
+                </div>
             </div>
+            <a href="property-management" class="nav-link">Areas We Serve</a>
+            <a href="payment-methods.html" class="nav-link">Pay Dues</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        
+        <!-- PROFESSIONAL PHONE CTA -->
+        <div class="header-cta">
+            <a href="tel:8476522338" class="phone-button">Call (847) 652-2338</a>
         </div>
-    </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="property-management">Areas We Serve</a>
+            <a href="payment-methods.html">Pay Dues</a>
+            <a href="contact.html">Contact</a>
+            <a href="tel:8476522338" style="background: #4a90e2; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">

@@ -403,38 +403,56 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">MANAGE369</a>
-            <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item dropdown">
-                    <a href="services.html" class="nav-link">Services ▼</a>
-                    <div class="dropdown-content">
-                        <div class="dropdown-section">
-                            <h4>Property Types</h4>
-                            <a href="services/condominium-management/index.html">Condominium Management</a>
-                            <a href="services/hoa-management/index.html">HOA Management</a>
-                            <a href="services/townhome-management/index.html">Townhome Management</a>
-                        </div>
-                        <div class="dropdown-section">
-                            <h4>Service Offerings</h4>
-                            <a href="services/financial-management/index.html">Financial Management</a>
-                            <a href="services/maintenance-coordination/index.html">Maintenance Coordination</a>
-                            <a href="services/board-support/index.html">Board Support</a>
-                            <a href="services/administrative-services/index.html">Administrative Services</a>
-                            <a href="services/capital-project-management/index.html">Capital Project Management</a>
-                            <a href="services/resident-relations/index.html">Resident Relations</a>
-                        </div>
+    <header class="header">
+        <!-- COMPANY LOGO/NAME -->
+        <div class="logo">MANAGE369</div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        
+        <!-- MAIN NAVIGATION MENU - Standardized Layout -->
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            <div class="dropdown">
+                <a href="services.html" class="nav-link dropdown-trigger">Services <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Property Types</div>
+                        <a href="services/condominium-management/index.html">Condominium Management</a>
+                        <a href="services/hoa-management/index.html">HOA Management</a>
+                        <a href="services/townhome-management/index.html">Townhome Management</a>
                     </div>
-                </li>
-                <li class="nav-item"><a href="property-management" class="nav-link">Areas We Serve</a></li>
-                <li class="nav-item"><a href="pay-dues.html" class="nav-link active">Pay Dues</a></li>
-                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-                <li class="nav-item"><a href="tel:+18476522338" class="cta-button">Call (847) 652-2338</a></li>
-            </ul>
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Service Offerings</div>
+                        <a href="services/financial-management/index.html">Financial Management</a>
+                        <a href="services/maintenance-coordination/index.html">Maintenance Coordination</a>
+                        <a href="services/board-support/index.html">Board Support</a>
+                        <a href="services/administrative-services/index.html">Administrative Services</a>
+                        <a href="services/capital-project-management/index.html">Capital Project Management</a>
+                        <a href="services/resident-relations/index.html">Resident Relations</a>
+                    </div>
+                </div>
+            </div>
+            <a href="property-management" class="nav-link">Areas We Serve</a>
+            <a href="payment-methods.html" class="nav-link active">Pay Dues</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        
+        <!-- PROFESSIONAL PHONE CTA -->
+        <div class="header-cta">
+            <a href="tel:8476522338" class="phone-button">Call (847) 652-2338</a>
         </div>
-    </nav>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="property-management">Areas We Serve</a>
+            <a href="payment-methods.html">Pay Dues</a>
+            <a href="contact.html">Contact</a>
+            <a href="tel:8476522338" style="background: #4a90e2; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+        </div>
+    </header>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -643,6 +661,22 @@
             "Wilmette, IL"
         ]
     }
+    </script>
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!mobileMenu.contains(event.target) && !toggle.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
