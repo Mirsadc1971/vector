@@ -109,6 +109,215 @@
 }
     </script>
     
+    <!-- Enhanced Visual Styling -->
+    <style>
+        /* Service Overview Grid */
+        .services-overview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 2.5rem 0;
+        }
+        
+        .service-overview-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border: 1px solid #e8f4fd;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .service-overview-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(74, 144, 226, 0.15);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+        
+        .service-overview-card h4 {
+            color: #4a90e2;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+        
+        .service-overview-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.5;
+        }
+        
+        .service-link {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
+            padding: 0.5rem 1rem;
+            border: 2px solid #ff9500;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .service-link:hover {
+            background: #ff9500;
+            color: white;
+        }
+        
+        /* Expertise Section */
+        .expertise-section {
+            margin: 3rem 0;
+            padding: 2.5rem;
+            background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 100%);
+            border-radius: 12px;
+            border-left: 5px solid #4a90e2;
+        }
+        
+        .expertise-section h3 {
+            color: #4a90e2;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .expertise-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+        
+        .expertise-item {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        
+        .expertise-item strong {
+            color: #4a90e2;
+            display: block;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .expertise-item p {
+            color: #666;
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        /* Emergency Contact Banner */
+        .emergency-contact-banner {
+            background: linear-gradient(135deg, #ff9500 0%, #ff7a00 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            margin: 3rem 0;
+            box-shadow: 0 6px 20px rgba(255, 149, 0, 0.3);
+        }
+        
+        .emergency-contact-banner h3 {
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .emergency-contact-banner p {
+            margin-bottom: 1.5rem;
+            opacity: 0.95;
+        }
+        
+        .emergency-phone {
+            background: white;
+            color: #ff9500;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+        
+        .emergency-phone:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Why Choose Highlight */
+        .why-choose-highlight {
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+        
+        .why-choose-highlight h3 {
+            margin-bottom: 2rem;
+            font-size: 1.8rem;
+        }
+        
+        .achievement-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .certifications-badge {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            margin-top: 2rem;
+            display: inline-block;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .services-overview-grid,
+            .expertise-grid,
+            .achievement-stats {
+                grid-template-columns: 1fr;
+            }
+            
+            .expertise-section,
+            .emergency-contact-banner,
+            .why-choose-highlight {
+                margin: 2rem 0;
+                padding: 1.5rem;
+            }
+            
+            .stat-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-496518917"></script>
@@ -214,29 +423,72 @@
             <h3>Expert Property Management Services</h3>
             <p>Our <strong>CAI, IREM, and CCIM certified</strong> professionals understand River North's unique requirements. We provide comprehensive <a href="../../services/financial-management/index.html">financial management</a>, coordinate with trusted local contractors through our <a href="../../services/maintenance-coordination/index.html">maintenance services</a>, and maintain excellent <a href="../../services/resident-relations/index.html">resident relations</a> that preserve community atmosphere.</p>
 
-            <div class="highlight-box">
-                <h3>Comprehensive Service Portfolio</h3>
-                <ul>
-                    <li><strong>Condominium Management:</strong> From intimate buildings to luxury high-rises</li>
-                    <li><strong>HOA Management:</strong> Community-focused neighborhood associations</li>
-                    <li><strong>Townhome Management:</strong> Modern residential communities</li>
-                    <li><strong>Financial Services:</strong> Monthly reporting, budgets, assessments</li>
-                    <li><strong>Maintenance Coordination:</strong> 24/7 response with local contractors</li>
-                </ul>
-                <p><strong>Emergency Response: <a href="tel:8476522338">(847) 652-2338</a></strong></p>
+            <div class="services-overview-grid">
+                <div class="service-overview-card">
+                    <div class="service-icon">🏢</div>
+                    <h4>Condominium Management</h4>
+                    <p>From intimate buildings to luxury high-rises with full-service management</p>
+                    <a href="../../services/condominium-management/index.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-overview-card">
+                    <div class="service-icon">🏘️</div>
+                    <h4>HOA Management</h4>
+                    <p>Community-focused neighborhood associations with comprehensive support</p>
+                    <a href="../../services/hoa-management/index.html" class="service-link">Learn More →</a>
+                </div>
+                <div class="service-overview-card">
+                    <div class="service-icon">🏡</div>
+                    <h4>Townhome Management</h4>
+                    <p>Modern residential communities with professional oversight</p>
+                    <a href="../../services/townhome-management/index.html" class="service-link">Learn More →</a>
+                </div>
             </div>
 
-            <h3>River North Expertise</h3>
-            <p>We understand River North's seasonal challenges, from winter heating and snow removal to summer cooling and landscaping. Our local market knowledge includes transportation patterns, business environment considerations, and community traditions that define this exceptional neighborhood.</p>
+            <div class="expertise-section">
+                <h3>🌟 River North Expertise</h3>
+                <div class="expertise-grid">
+                    <div class="expertise-item">
+                        <strong>❄️ Seasonal Management</strong>
+                        <p>Winter heating, snow removal, summer cooling, and year-round landscaping coordination</p>
+                    </div>
+                    <div class="expertise-item">
+                        <strong>🏙️ Urban Living</strong>
+                        <p>Transportation access, business environment, and downtown lifestyle considerations</p>
+                    </div>
+                    <div class="expertise-item">
+                        <strong>💻 Modern Technology</strong>
+                        <p><a href="../../pay-dues.html">Online payment systems</a> and digital communication platforms</p>
+                    </div>
+                </div>
+            </div>
 
-            <p>Our technology solutions provide modern convenience while maintaining personal service. Residents access <a href="../../pay-dues.html">online payment systems</a>, communication platforms, and maintenance coordination tools designed for River North's urban lifestyle.</p>
+            <div class="emergency-contact-banner">
+                <h3>🚨 24/7 Emergency Response</h3>
+                <p>Immediate response for heating, plumbing, electrical, and security emergencies</p>
+                <a href="tel:8476522338" class="emergency-phone">(847) 652-2338</a>
+            </div>
 
-            <div class="service-highlight-box">
-                <h3>Why Choose Manage369 for River North?</h3>
-                <p><strong>Proven Excellence:</strong> 50+ properties, 2,450+ units under management<br>
-                <strong>Local Expertise:</strong> Deep Chicago market knowledge and contractor relationships<br>
-                <strong>Professional Standards:</strong> CAI/IREM/CCIM certified management team<br>
-                <strong>Personal Service:</strong> Direct owner access and boutique-level attention</p>
+            <div class="why-choose-highlight">
+                <h3>⭐ Why River North Properties Choose Manage369</h3>
+                <div class="achievement-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">18+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Properties Managed</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">2,450+</div>
+                        <div class="stat-label">Units Under Management</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">$100M+</div>
+                        <div class="stat-label">Assets Managed</div>
+                    </div>
+                </div>
+                <p class="certifications-badge"><strong>CAI • IREM • CCIM Certified Professionals</strong></p>
             </div>
         </div>
     </section>
