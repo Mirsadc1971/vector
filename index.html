@@ -879,7 +879,11 @@
         /* RESPONSIVE DESIGN */
         @media (max-width: 768px) {
             .header {
-                padding: 1rem;
+                padding: 0.75rem 1rem;
+            }
+            
+            .logo {
+                font-size: 1.2rem;
             }
             
             .nav {
@@ -888,6 +892,8 @@
             
             .mobile-menu-toggle {
                 display: block;
+                padding: 8px;
+                font-size: 1.8rem;
             }
             
             .header-cta {
@@ -895,38 +901,44 @@
             }
             
             .hero {
-                height: 80vh;
+                height: 100vh;
+                min-height: 600px;
                 padding: 2rem 1rem;
             }
             
+            .hero-content {
+                padding: 0 1rem;
+            }
+            
             .hero-content h1 {
-                font-size: 2.8rem;
+                font-size: 2.2rem;
                 margin-bottom: 1rem;
-                line-height: 1.1;
+                line-height: 1.2;
             }
             
             .hero-subtitle {
-                font-size: 2rem;
+                font-size: 1.5rem;
                 margin-bottom: 1.5rem;
             }
             
             .hero-stats {
-                font-size: 1.3rem;
-                margin-bottom: 2.5rem;
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
             }
             
             .cta-buttons {
                 flex-direction: column;
-                gap: 1.5rem;
+                gap: 1rem;
                 align-items: center;
+                padding: 0 1rem;
             }
             
             .btn {
                 width: 100%;
-                max-width: 300px;
+                max-width: 280px;
                 text-align: center;
-                font-size: 1rem;
-                padding: 16px 32px;
+                font-size: 0.95rem;
+                padding: 14px 24px;
             }
             
             .footer-grid {
@@ -961,21 +973,21 @@
         
         @media (max-width: 480px) {
             .hero-content h1 {
-                font-size: 2.2rem;
-                line-height: 1.1;
+                font-size: 1.8rem;
+                line-height: 1.2;
             }
             
             .hero-subtitle {
-                font-size: 1.6rem;
+                font-size: 1.2rem;
             }
             
             .hero-stats {
-                font-size: 1.1rem;
+                font-size: 1rem;
             }
             
             .btn {
-                font-size: 0.95rem;
-                padding: 14px 28px;
+                font-size: 0.9rem;
+                padding: 12px 18px;
             }
             
             .logo {
@@ -1171,7 +1183,7 @@
         <!-- Property Types - Main Services (Highlighted) -->
         <div class="property-types-section" style="margin-bottom: 3rem;">
             <h3 style="color: #1e3a8a; font-size: 1.8rem; font-weight: 600; margin-bottom: 2rem;">Property Types We Serve</h3>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: 1100px; margin: 0 auto;">
+            <div class="property-types-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: 1100px; margin: 0 auto;">
                 <a href="services/condominium-management/index.html" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: linear-gradient(135deg, #4a90e2 0%, #6ba3f5 100%); color: white; box-shadow: 0 12px 35px rgba(74,144,226,0.3); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden;" onmouseover="this.style.transform='translateY(-12px) scale(1.05)'; this.style.boxShadow='0 25px 50px rgba(74,144,226,0.4)'" onmouseout="this.style.transform='translateY(0) scale(1)'; this.style.boxShadow='0 12px 35px rgba(74,144,226,0.3)'">
                     <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
                     <div style="font-size: 4rem; margin-bottom: 1.5rem; text-shadow: 0 2px 10px rgba(0,0,0,0.2);">🏢</div>
@@ -1200,7 +1212,7 @@
         <div class="service-offerings-section">
             <h3 style="color: #ff9500; font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem;">Complete Service Offerings</h3>
             <p style="margin-bottom: 2rem; color: #666; font-size: 1.1rem;">Comprehensive management services provided to all property types</p>
-            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
+            <div class="service-offerings-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
                 <a href="services/financial-management/index.html" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #ff9500;">💰</div>
                     <h4 style="color: #ff9500; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Financial Management</h4>
