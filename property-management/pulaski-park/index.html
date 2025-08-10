@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/styles.css">
-    <meta name="theme-color" content="#1e40af">
-    <title>Pulaski Park Property Management | Northwest Chicago HOA & Condo Services | Manage369</title>
-    <meta name="description" content="Pulaski Park property management: 18+ years managing condos, HOAs & townhomes in Northwest Chicago. CAI/IREM certified. Call (847) 652-2338.">
+    <title>Pulaski Park Property Management | Chicago Condo & HOA Management | Manage369</title>
+    <meta name="description" content="Premier Pulaski Park property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals. Call (847) 652-2338.">
     
     <!-- Favicon and Apple Touch Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
@@ -14,29 +12,40 @@
     <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
     <link rel="manifest" href="../../site.webmanifest">
     
+    <!-- Windows Tile Configuration -->
+    <meta name="msapplication-TileColor" content="#4a90e2">
+    <meta name="msapplication-TileImage" content="../../images/favicon-32x32.png">
+    <meta name="theme-color" content="#ffffff">
+    
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Pulaski Park Property Management | Manage369">
-    <meta property="og:description" content="Expert Pulaski Park property management services. 18+ years managing condos, HOAs & townhomes in this diverse Northwest Chicago neighborhood.">
+    <meta property="og:description" content="Premier Pulaski Park property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://manage369.com/property-management/pulaski-park/">
-    <meta property="og:image" content="https://manage369.com/images/manage369livingroom.jpg">
+    <meta property="og:image" content="https://manage369.com/images/manage369bedroom1740maplewood.jpg">
     <meta property="og:site_name" content="Manage369">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Pulaski Park Property Management | Manage369">
+    <meta name="twitter:description" content="Premier Pulaski Park property management services. 18+ years managing luxury condos, HOAs & townhomes.">
+    <meta name="twitter:image" content="https://manage369.com/images/manage369bedroom1740maplewood.jpg">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="robots" content="index, follow">
     <meta name="author" content="Manage369">
     <meta name="geo.region" content="US-IL">
-    <meta name="geo.placename" content="Pulaski Park, Chicago, Illinois">
-    <meta name="geo.position" content="41.9231;-87.7242">
-    <meta name="ICBM" content="41.9231, -87.7242">
+    <meta name="geo.placename" content="Pulaski Park, Illinois">
+    <meta name="geo.position" content="41.9014,-87.7242">
+    <meta name="ICBM" content="41.9014,-87.7242">
     
-    <!-- Local Business Schema -->
+    <!-- Local Business Schema Markup -->
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Manage369",
-  "description": "Expert Pulaski Park property management services. 18+ years managing condos, HOAs & townhomes in this diverse Northwest Chicago neighborhood.",
+  "description": "Premier Pulaski Park property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals.",
   "url": "https://manage369.com/property-management/pulaski-park/",
   "telephone": "+1-(847) 652-2338",
   "email": "service@manage369.com",
@@ -50,7 +59,7 @@
   },
   "geo": {
     "@type": "GeoCoordinates",
-    "latitude": "41.9231",
+    "latitude": "41.9014",
     "longitude": "-87.7242"
   },
   "openingHours": "Mo-Fr 09:00-17:00",
@@ -59,7 +68,7 @@
   ],
   "serviceArea": {
     "@type": "Place",
-    "name": "Pulaski Park, Chicago, Illinois"
+    "name": "Pulaski Park, Illinois"
   },
   "aggregateRating": {
     "@type": "AggregateRating",
@@ -98,7 +107,742 @@
   }
 }
     </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+        
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255,255,255,0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4a90e2;
+            text-decoration: none;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+        
+        .nav a {
+            color: #333;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav a:hover {
+            color: #4a90e2;
+            background: #f0f0f0;
+        }
+        
+        .services-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: white;
+            min-width: 250px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+            border-radius: 5px;
+            padding: 10px 0;
+            top: 100%;
+            left: 0;
+        }
+        
+        .dropdown-content a {
+            color: #333;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            margin: 0;
+        }
+        
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .dropdown-header {
+            padding: 8px 16px;
+            font-weight: bold;
+            color: #4a90e2;
+            font-size: 0.9rem;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 5px;
+        }
+        
+        .services-dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .phone {
+            background: #4a90e2;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .phone:hover {
+            background: #357abd;
+        }
+        
+        .hero {
+            height: 60vh;
+            background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.5)), url('../../images/northfield1manage369.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            margin-top: 80px;
+        }
+        
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+        
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .content p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+        
+        .service-card a:hover {
+            color: #e6840d;
+        }
+        
+        .why-choose {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+        
+        .why-choose-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .why-choose h2 {
+            color: #333;
+            margin-bottom: 3rem;
+            font-size: 2.5rem;
+        }
+        
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            min-height: 180px;
+            transition: transform 0.3s;
+        }
+        
+        .benefit-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .benefit-item h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            line-height: 1.3;
+        }
+        
+        .benefit-item p {
+            color: #666;
+            line-height: 1.5;
+            flex-grow: 1;
+            margin: 0;
+            font-size: 0.95rem;
+        }
+        
+        .contact-section {
+            background: #4a90e2;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .contact-section p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .contact-section a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        
+        .contact-section a:hover {
+            color: #fff200;
+        }
+        
+        .consultation-form {
+            background: #f8f9fa;
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+        }
+        
+        .consultation-form-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .consultation-form h2 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .consultation-form p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e1e1;
+            border-radius: 5px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #4a90e2;
+        }
+        
+        .form-group textarea {
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .form-submit {
+            background: #4a90e2;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .form-submit:hover {
+            background: #357abd;
+        }
+        
+        /* PERFECT FOOTER CSS - EXACT SPECIFICATIONS */
+        footer {
+            background: #2c3e50;
+            color: white;
+            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        .footer-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .footer-column {
+            line-height: 1.6;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            color: #ff6b35;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+        
+        .footer-description {
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        
+        .footer-stats {
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        
+        .footer-contact-line {
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact-line a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-contact-line a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-license {
+            color: #ff6b35;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+        
+        .footer-column h3 {
+            color: #ff6b35;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-links a:hover {
+            color: #ff6b35;
+        }
+        
+        .footer-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            text-align: center;
+        }
+        
+        .certifications {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cert-badge {
+            height: 60px;
+            max-height: 60px;
+            background: white;
+            border-radius: 8px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .footer-copyright {
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+                padding: 40px 15px;
+            }
+            
+            .footer-contact-line {
+                justify-content: center;
+            }
+            
+            .certifications {
+                gap: 15px;
+            }
+            
+            .cert-badge {
+                height: 50px;
+                max-height: 50px;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+        
+        .location-content {
+            background: white;
+            padding: 4rem 2rem;
+            margin: 2rem 0;
+        }
+        
+        .location-content-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            line-height: 1.8;
+            color: #444;
+        }
+        
+        .location-content h2 {
+            color: #4a90e2;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+        
+        .location-content h3 {
+            color: #4a90e2;
+            margin: 2rem 0 1rem 0;
+            font-size: 1.5rem;
+        }
+        
+        .location-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.7;
+        }
+        
+        .location-content a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        .location-content a:hover {
+            text-decoration: underline;
+        }
+        
+        .highlight-box {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #4a90e2;
+        }
+        
+        .highlight-box h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-highlight-box {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            border-left: 5px solid #4a90e2;
+        }
+        
+        .service-highlight-box h3 {
+            color: #4a90e2;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+        
+        .service-highlight-box a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 600;
+        }
 
+        .faq-section {
+            background: #f8f9fa;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+        }
+
+        .faq-content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .faq-content h2 {
+            color: #4a90e2;
+            margin-bottom: 3rem;
+            text-align: center;
+            font-size: 2.5rem;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: #4a90e2;
+            color: white;
+            padding: 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #357abd;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            color: #666;
+            line-height: 1.7;
+        }
+
+        .faq-answer p {
+            margin-bottom: 1rem;
+        }
+
+        .faq-answer a {
+            color: #ff9500;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+        
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem;
+            z-index: 1001;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            text-decoration: none;
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: row;
+                padding: 1rem;
+                justify-content: space-between;
+            }
+            
+            .nav {
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .phone {
+                display: none;
+            }
+            
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+            
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+            
+            .benefits-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+            
+        .benefits-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        .services-grid {
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .benefits-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-496518917"></script>
     <script>
@@ -156,200 +900,270 @@
     
     <section class="hero">
         <div class="hero-content">
-            <h1>Pulaski Park Property Management - Manage369</h1>
-            <p>Professional Northwest Chicago Neighborhood Property Management</p>
+            <h1>Property Management Pulaski Park - Manage369</h1>
+            <p>Expert Condominium, HOA & Townhome Management Services | 18+ Years Excellence</p>
         </div>
     </section>
     
-    <div class="content">
-        <p>Pulaski Park represents the vibrant diversity and community spirit that defines Northwest Chicago, where approximately 15,000 residents enjoy the benefits of urban living with a strong neighborhood identity and convenient access to the city's amenities. At Manage369, we understand what makes Pulaski Park special - the multicultural community atmosphere where diverse families and professionals create a dynamic residential environment, the strategic location providing excellent transportation access to downtown Chicago and surrounding neighborhoods, and the ongoing revitalization efforts that continue to enhance property values and community appeal. From the bustling commercial corridors along Central Park Avenue and Diversey Avenue to the quiet residential streets that offer urban tranquility, we manage properties that reflect this neighborhood's unique character while providing the professional property management services that residents and property owners depend on for exceptional results.</p>
+    <section class="content">
+        
+        <p>Pulaski Park represents vibrant west side Chicago neighborhood known for its rich cultural heritage, strong community connections, and ongoing revitalization, creating an environment where residents enjoy established neighborhood character with strong cultural identity, diverse population, mix of vintage and renovated housing options, active local business corridor, and convenient access to downtown Chicago and surrounding neighborhoods that defines successful community living throughout the Chicagoland area.</p>
+        
+        <p>Our comprehensive property management approach recognizes that Pulaski Park properties serve residents who have chosen quality, community, and convenience above all else. Whether managing established condominium complexes that have served residents for years, townhome communities that foster neighborhood connections, or homeowner associations that maintain the high standards residents expect, we understand that successful property management here means preserving the community character that makes Pulaski Park one of the region's most desirable places to call home. With its population of approximately 28,000 residents and rich community character, Pulaski Park demands management excellence that matches its reputation for quality living.</p>
+        
+        <p>With 18+ years of experience serving Chicago and suburban communities, our team brings deep local knowledge to every aspect of property management. We understand the seasonal challenges that affect Pulaski Park properties, from winter heating systems and snow removal to summer landscaping and maintenance schedules. Our relationships with trusted local contractors ensure prompt, professional service that meets the high standards Pulaski Park residents expect while maintaining the cost-effectiveness that makes community living attractive.</p>
 
-        <p>Our comprehensive property management approach recognizes that Pulaski Park properties serve residents who have chosen this dynamic Northwest Side neighborhood for its affordability, diversity, and urban convenience combined with community atmosphere. Whether managing multi-unit condominiums that offer urban living with community amenities, family-oriented townhome associations that provide maintenance convenience for busy professionals, or established homeowner associations that maintain neighborhood standards while celebrating community diversity, we understand that successful property management in Pulaski Park means balancing professional standards with the neighborhood character that makes this community an attractive choice for working families and young professionals seeking urban opportunities with community connections.</p>
+        <p>Located strategically near Humboldt Park, Logan Square, and Wicker Park, Pulaski Park benefits from excellent accessibility and community amenities that create unique property management opportunities. This strategic location, combined with the community's strong local character, requires understanding both lifestyle preferences and convenience expectations that define successful community living in this exceptional area.</p>
 
-        <p>With 18+ years of experience serving Chicago's diverse neighborhoods and communities, our team brings deep local knowledge and proven urban property management expertise to every aspect of managing Pulaski Park properties. We understand the unique challenges that urban properties face, from coordinating maintenance in multi-unit buildings to managing community relations in diverse residential settings. Our relationships with trusted local contractors who understand both city requirements and neighborhood dynamics ensure prompt, professional service that meets the practical needs of urban property management while respecting the community atmosphere that residents value about their Pulaski Park address.</p>
+        <p>The Pulaski Park community features distinctive characteristics that define daily life for residents and create the foundation for strong property values and resident satisfaction that successful management must protect and enhance. Our property management philosophy in Pulaski Park centers on understanding that residents have chosen this community for specific reasons: community atmosphere, value for investment, convenient location, and that sense of belonging that comes from living in a well-managed neighborhood where residents feel connected and community standards are consistently maintained.</p>
 
+        <p>Whether managing a mid-rise condominium building with residents who have established roots in the community, or a townhome community where families enjoy common areas and neighbors maintain lasting friendships, we recognize that our role extends beyond maintenance and financial management to preserving the community character that makes these properties special and attractive to quality residents seeking genuine community experiences.</p>
+        
         <div class="services-grid">
             <div class="service-card">
-                <h3>Urban Condominium Management</h3>
-                <p>Expert management for Pulaski Park's diverse condominium properties, from vintage buildings to modern developments.</p>
-                <a href="../../services/condominium-management/index.html">Explore Our Services →</a>
+                <h3>Condominium Management</h3>
+                <p>Expert management for condominium buildings throughout Pulaski Park and the Chicago area.</p>
+                <a href="../../services/condominium-management/index.html">Learn More →</a>
             </div>
             <div class="service-card">
-                <h3>Neighborhood HOA Management</h3>
-                <p>Comprehensive homeowner association management for Pulaski Park's residential communities and mixed-use developments.</p>
-                <a href="../../services/hoa-management/index.html">Learn About HOA Services →</a>
+                <h3>HOA Management</h3>
+                <p>Comprehensive homeowner association management for Pulaski Park communities and developments.</p>
+                <a href="../../services/hoa-management/index.html">Learn More →</a>
             </div>
             <div class="service-card">
-                <h3>Urban Financial Management</h3>
-                <p>Professional financial stewardship and budget management designed for Chicago's urban property investment needs.</p>
-                <a href="../../services/financial-management/index.html">Discover Financial Services →</a>
+                <h3>Financial Management</h3>
+                <p>Professional financial reporting, budget development, and assessment collection for Pulaski Park properties.</p>
+                <a href="../../services/financial-management/index.html">Learn More →</a>
             </div>
         </div>
+    </section>
 
-        <h2>Comprehensive Pulaski Park Property Management Excellence</h2>
-        
-        <p>Every property we manage in Pulaski Park benefits from our proven track record of excellence - 18+ years of experience, zero properties lost, and over $100 million in managed assets throughout Chicago and the broader metropolitan area. Our deep understanding of Chicago city regulations, Cook County requirements, and the unique dynamics of urban neighborhood property management ensures that your Pulaski Park property not only maintains its value but continues to attract and retain quality residents who appreciate the neighborhood's diversity, convenience, and community spirit that define urban Chicago living at its best.</p>
-
-        <h3>Expert Urban Condominium Management in Pulaski Park</h3>
-        
-        <p>From vintage brick buildings that reflect Chicago's architectural heritage to modern condominium developments that offer contemporary amenities and urban convenience, our <a href="../../services/condominium-management/index.html">condominium management</a> services address the unique challenges that Pulaski Park properties face in Chicago's competitive urban market. We coordinate maintenance schedules that respect residents' busy urban lifestyles while ensuring buildings remain attractive and functional, manage relationships with contractors who understand both Chicago building codes and neighborhood accessibility requirements, and ensure that your condominium association operates with the efficiency and professionalism that urban residents expect while maintaining the community atmosphere that makes neighborhood living appealing.</p>
-
-        <p>Our CAI and IREM certifications guarantee professional standards that meet Chicago's demanding property management requirements, while our CCIM designation demonstrates our commitment to understanding the investment aspects of urban property management in diverse neighborhoods like Pulaski Park. We provide detailed monthly financial reports that give property owners the transparency they need to make informed decisions, coordinate efficiently with city services and utility providers, and maintain communication systems that keep residents informed while building the community connections that enhance urban neighborhood living.</p>
-
-        <div class="highlight-box">
-            <h3>Pulaski Park Urban Condominium Specialists</h3>
-            <p>Our experienced team understands the unique aspects of condominium living in a diverse urban neighborhood like Pulaski Park, from navigating Chicago's regulatory environment to fostering community connections among residents from different backgrounds. We manage properties that preserve the neighborhood's welcoming character while providing professional management standards that protect investments and enhance the quality of life that makes urban Chicago living attractive to working families and professionals.</p>
-            <p><strong>Professional Excellence: CAI * IREM * CCIM Certified</strong></p>
-        </div>
-
-        <h3>HOA Management Tailored to Pulaski Park's Community Diversity</h3>
-        
-        <p>Homeowner associations in Pulaski Park require management that understands both the practical needs of urban property maintenance and the community dynamics that make diverse neighborhoods thrive. Our <a href="../../services/hoa-management/index.html">HOA management</a> approach recognizes that successful associations in Pulaski Park create environments where residents from different backgrounds feel welcome and valued, where property values remain stable and competitive, and where the neighborhood atmosphere continues to attract working families and professionals who appreciate both urban convenience and community connection in their residential choice.</p>
-
-        <p>We work closely with Pulaski Park HOA boards to develop policies that protect property values while fostering the inclusive community atmosphere that residents appreciate and that makes the neighborhood attractive to quality residents seeking affordable urban living with neighborhood character. From coordinating seasonal maintenance projects that enhance curb appeal and neighborhood pride to supporting community initiatives that bring neighbors together and celebrate the diversity that defines the area, our services support the full spectrum of urban neighborhood life that makes Pulaski Park a desirable choice for Chicago residents seeking community in the city.</p>
-
-        <p>Our approach includes practical budget planning that balances maintenance needs with affordability considerations, ensuring that associations maintain adequate reserves while keeping assessments reasonable for working families and young professionals. We coordinate with local service providers who understand the neighborhood's character and accessibility requirements, from landscaping companies that maintain attractive common areas to contractors who handle repairs efficiently while respecting the urban environment and resident schedules.</p>
-
-        <h3>Transparent Financial Management and Urban Investment Protection</h3>
-        
-        <p>Property owners in Pulaski Park expect - and deserve - complete transparency in financial management combined with practical thinking that protects their urban real estate investments. Our <a href="../../services/financial-management/index.html">financial management</a> services provide detailed monthly reports that clearly explain every expense, professional budget development that anticipates both routine urban maintenance costs and unexpected needs, and strategic reserve planning that protects your investment while supporting the maintenance standards and community amenities that Pulaski Park residents expect and that preserve property competitiveness in Chicago's diverse housing market.</p>
-
-        <p>We understand that many Pulaski Park properties represent important investments for working families and individual investors who have chosen this neighborhood for its affordability, growth potential, and community character. Our financial stewardship reflects this understanding, ensuring that every decision supports both current operational efficiency and long-term property value protection in one of Chicago's evolving and improving neighborhoods. We maintain relationships with financial institutions that understand urban property management needs and can provide favorable terms for improvements that enhance both property values and resident satisfaction.</p>
-
-        <div class="service-highlight-box">
-            <h3>Professional Maintenance Coordination for Pulaski Park Properties</h3>
-            <p>Our <a href="../../services/maintenance-coordination/index.html">maintenance coordination</a> services connect your property with our network of trusted contractors who understand both Chicago's requirements and Pulaski Park's neighborhood dynamics. From routine urban maintenance challenges to enhancing the community appeal that makes the neighborhood attractive to residents, we ensure that all maintenance work improves your property while respecting the diverse community atmosphere that defines this vibrant area.</p>
-            <p>We coordinate everything from routine preventive maintenance that prevents costly emergency repairs to strategic improvements that enhance property values and resident satisfaction. Our 24/7 emergency response system ensures immediate availability for urgent situations common in urban properties, while our preventive maintenance programs help avoid emergencies through systematic care that protects both property and residents.</p>
-            <p><strong>Urban Expertise & 24/7 Response: <a href="tel:8476522338">(847) 652-2338</a></strong></p>
-        </div>
-
-        <h3>Comprehensive Board Support and Urban Administrative Excellence</h3>
-        
-        <p>Effective property management in a diverse urban neighborhood like Pulaski Park requires seamless coordination between professional management and community leadership, with clear communication and mutual respect guiding every interaction. Our <a href="../../services/board-support/index.html">board support</a> services empower Pulaski Park association boards with the detailed information, expert guidance, and comprehensive administrative support they need to make confident decisions about their communities while managing the time constraints that urban residents face as they balance community service with work and family obligations.</p>
-
-        <p>We provide comprehensive <a href="../../services/administrative-services/index.html">administrative services</a> that handle everything from resident communications and document management to vendor coordination and city compliance, allowing board members to focus on strategic planning and community enhancement while ensuring that daily operations run smoothly and efficiently. Our approach respects the volunteer nature of board service while providing professional support that keeps Pulaski Park communities operating effectively and maintaining the standards that preserve property values and enhance neighborhood appeal.</p>
-
-        <p>Our board support includes preparation of clear meeting materials that help boards make informed decisions, coordination of annual meetings that encourage resident participation, management of governing document updates that reflect changing community needs, and assistance with policy development that balances property protection with the inclusive atmosphere that makes Pulaski Park an attractive residential choice. We help boards navigate complex decisions by providing practical information and professional recommendations based on our extensive experience with similar urban communities throughout Chicago.</p>
-
-        <h3>Expert Capital Project Management and Neighborhood Enhancement</h3>
-        
-        <p>Preserving and enhancing Pulaski Park properties requires strategic planning and professional project management that balances immediate maintenance needs with long-term value protection in an urban environment. Our <a href="../../services/capital-project-management/index.html">capital project management</a> services guide associations through major improvements, from routine building updates that maintain competitive appeal to significant infrastructure investments that protect property values and enhance the quality of life that residents expect from their urban community investment.</p>
-
-        <p>We work with boards to develop realistic project timelines that minimize disruption to residents' busy urban schedules while ensuring quality results, manage relationships with contractors to ensure fair pricing and professional results, and coordinate with city authorities to ensure smooth project approval and completion that meets Chicago's requirements. Our experience with Chicago regulations and our network of trusted contractors helps ensure that projects are completed professionally while staying within budget and schedule constraints that respect associations' financial realities.</p>
-
-        <p>Our project management approach includes detailed planning that anticipates challenges before they become problems, regular progress monitoring that keeps boards informed throughout the project with clear communication, and final inspections that ensure all work meets standards that preserve community investment value. We maintain comprehensive project documentation that protects associations and provides valuable records for future maintenance planning and community development.</p>
-
-        <h3>Exceptional Resident Relations and Urban Community Building</h3>
-        
-        <p>The strong sense of community that makes Pulaski Park special requires thoughtful attention to resident relations and proactive communication that builds connections among neighbors from diverse backgrounds. Our <a href="../../services/resident-relations/index.html">resident relations</a> services foster positive interactions between residents, management, and boards while addressing concerns with the promptness and professionalism that busy urban residents need, ensuring that minor issues don't escalate into problems that could disrupt the community harmony that makes neighborhood living appealing in a city environment.</p>
-
-        <p>From comprehensive new resident orientation programs that help newcomers connect with established community traditions and understand the benefits of neighborhood living to effective communication systems that keep everyone informed about important developments without overwhelming busy residents with unnecessary information, we support the social connections that make Pulaski Park neighborhoods places where people choose to build community in the city and enjoy the benefits of both urban convenience and neighborhood atmosphere.</p>
-
-        <p>Our resident relations approach includes regular feedback collection to gauge satisfaction and identify improvement opportunities, support for community initiatives that bring neighbors together while respecting diverse backgrounds and busy schedules, and conflict resolution services that address disputes fairly while maintaining the community harmony that preserves both property values and quality of life. We understand that satisfied residents are more likely to take pride in their community, participate in association activities when possible, and maintain their properties to standards that preserve the neighborhood appeal that attracts quality residents to Pulaski Park.</p>
-
-        <h2>Understanding Pulaski Park's Urban Property Management Environment</h2>
-        
-        <p>Pulaski Park's distinctive position as a diverse Northwest Side Chicago neighborhood creates unique property management opportunities and challenges that require understanding of both urban dynamics and community values. With its multicultural population, convenient transportation access, and ongoing neighborhood development, Pulaski Park represents an urban property management environment where professional standards and community sensitivity must work together to create residential experiences that serve working families and professionals seeking both affordability and quality.</p>
-
-        <p>The neighborhood's diversity means that property management strategies must respect different cultural backgrounds and communication preferences while maintaining consistent professional standards that protect all residents' investments. This requires management expertise that understands both the practical needs of urban property maintenance and the community dynamics that make diverse neighborhoods successful places to live and build connections.</p>
-
-        <p>Pulaski Park's location within Chicago's transportation network significantly influences property management considerations, as CTA Blue Line access and bus routes create commuter convenience that enhances property values while creating unique management challenges related to parking, noise management, and community security that require professional attention and strategic planning.</p>
-
-        <h3>Urban Infrastructure and City Services</h3>
-        
-        <p>Chicago's urban infrastructure creates both opportunities and requirements for professional property management in Pulaski Park. City services, from waste management to emergency response, require coordination and understanding that helps associations navigate urban systems effectively. Property managers must understand Chicago's regulatory environment while helping associations maintain compliance and take advantage of city programs that can benefit communities.</p>
-
-        <p>The neighborhood's position within Chicago's development patterns creates opportunities for associations to benefit from city improvements and neighborhood revitalization while ensuring that properties remain competitive as the area continues to evolve. This requires strategic thinking that helps associations adapt to changing conditions while preserving the community character that residents value.</p>
-
-        <h3>Transportation and Accessibility Considerations</h3>
-        
-        <p>Pulaski Park's excellent public transportation access, including CTA Blue Line stations and multiple bus routes, creates property management considerations related to commuter parking, pedestrian traffic, and community security. Properties must balance the convenience that transportation access provides with the residential tranquility that residents expect from their neighborhood community.</p>
-
-        <p>The area's accessibility to downtown Chicago and employment centers throughout the region creates lifestyle advantages that property managers can leverage to attract and retain quality residents. Marketing and resident relations strategies should highlight these connectivity benefits while ensuring that properties provide the community atmosphere and practical amenities that urban residents seek.</p>
-
-        <h2>Economic Factors and Urban Market Dynamics</h2>
-        
-        <p>Pulaski Park's property market reflects both local neighborhood characteristics and broader Chicago trends that influence property management strategies. The area's affordability combined with urban convenience creates demand from working families and young professionals, but also creates expectations for professional management that maximizes value while maintaining reasonable costs.</p>
-
-        <p>Property tax considerations in Pulaski Park require attention to Chicago's assessment practices and the various taxing bodies that affect property costs. Associations must balance necessary expenditures with the affordability expectations of residents who have chosen the neighborhood partly for its reasonable housing costs. This requires financial planning that demonstrates clear value while avoiding unnecessary expenses.</p>
-
-        <p>Insurance considerations for urban properties in Pulaski Park focus on comprehensive coverage that protects against both common risks and urban-specific challenges. The area's ongoing development and improvement means that property managers must stay informed about changing risk factors while ensuring that associations maintain appropriate coverage that protects both community assets and individual interests.</p>
-
-        <h3>Seasonal Urban Property Management</h3>
-        
-        <p>Chicago's climate creates seasonal management requirements that affect Pulaski Park properties throughout the year. Winter maintenance focuses on snow removal, heating system reliability, and ice management that keeps properties safe and accessible. Spring restoration involves landscape renewal, system maintenance, and preparation for summer cooling needs.</p>
-
-        <p>Summer management emphasizes cooling system optimization, landscape maintenance that enhances curb appeal, and community activities that strengthen neighbor connections. Fall preparation involves winterization procedures, heating system preparation, and maintenance projects that prepare properties for Chicago's challenging winter conditions.</p>
-
-        <p>Year-round urban management also requires attention to security, noise control, and community relations that maintain the residential atmosphere residents expect while accommodating the urban environment that provides convenient city living.</p>
-
-        <h2>Community Development and Neighborhood Growth</h2>
-        
-        <p>Pulaski Park's ongoing development and neighborhood improvement create opportunities for properties to benefit from increased investment and enhanced amenities. Property managers must stay informed about development plans, infrastructure improvements, and community initiatives that can affect property values and resident experiences.</p>
-
-        <p>The neighborhood's commercial development along major corridors provides convenient amenities for residents while creating management considerations related to increased activity, parking pressure, and changing neighborhood dynamics. Professional management helps associations adapt to these changes while preserving the residential character that residents value.</p>
-
-        <p>Community organizations and local government initiatives in Pulaski Park create opportunities for associations to participate in neighborhood improvement efforts that can benefit properties and residents. Property managers can help associations identify and participate in programs that enhance community appeal while building positive relationships with neighbors and local organizations.</p>
-
-        <h2>Cultural Sensitivity and Community Inclusion</h2>
-        
-        <p>Pulaski Park's multicultural character requires property management approaches that respect diverse backgrounds while building inclusive communities where all residents feel welcome and valued. This involves communication strategies that reach residents effectively, community policies that accommodate different cultural needs, and conflict resolution approaches that respect different perspectives while maintaining community standards.</p>
-
-        <p>Successful property management in diverse communities like Pulaski Park requires understanding that different residents may have different expectations and communication preferences, while maintaining consistent professional standards that protect everyone's interests. This balance creates stronger communities where diversity becomes a strength rather than a challenge.</p>
-
-        <p>Community building efforts in multicultural neighborhoods benefit from approaches that celebrate diversity while creating shared experiences that bring neighbors together. Property managers can support community events, communication strategies, and policies that build connections while respecting the individual preferences and cultural backgrounds that make the neighborhood special.</p>
-
-        <h2>Nearby Service Areas and Regional Connections</h2>
-        
-        <p>Pulaski Park's central Chicago location makes it an excellent base for comprehensive urban property management services. <strong>Manage369</strong> extends our Pulaski Park expertise to surrounding Chicago neighborhoods that share similar characteristics and benefit from our established vendor relationships and deep understanding of urban community dynamics.</p>
-
-        <p>Explore our property management services in these nearby Chicago areas:</p>
-        <ul>
-            <li><a href="../hermosa/">Hermosa Property Management</a> - Professional services for this neighboring Northwest Side community</li>
-            <li><a href="../logan-square/">Logan Square Property Management</a> - Expert management for this vibrant neighborhood</li>
-            <li><a href="../avondale/">Avondale Property Management</a> - Comprehensive services for this developing area</li>
-            <li><a href="../portage-park/">Portage Park Property Management</a> - Quality management for this established neighborhood</li>
-            <li><a href="../irving-park/">Irving Park Property Management</a> - Professional services for this diverse community</li>
-            <li><a href="../albany-park/">Albany Park Property Management</a> - Expert management for this multicultural neighborhood</li>
-            <li><a href="../belmont-cragin/">Belmont Cragin Property Management</a> - Comprehensive services for this growing area</li>
-            <li><a href="../dunning/">Dunning Property Management</a> - Professional management for this residential community</li>
-        </ul>
-        <p><a href="../">View All Areas We Serve</a> across Chicago and the metropolitan region.</p>
-
-        <h2>Why Pulaski Park Properties Choose Manage369</h2>
-        
-        <div class="highlight-box">
-            <h3>Proven Urban Property Management Expertise</h3>
-            <p><strong>18+ Years Chicago Experience:</strong> Extensive experience serving Chicago's diverse neighborhoods with deep understanding of city regulations, urban dynamics, multicultural community needs, and the practical challenges that come from managing properties in evolving urban environments like Pulaski Park that balance affordability with professional standards.</p>
+    <section class="location-content">
+        <div class="location-content-wrapper">
+            <h2>Comprehensive Pulaski Park Property Management Excellence</h2>
             
-            <p><strong>Professional Certifications & Urban Expertise:</strong> CAI, IREM, and CCIM certified professionals ensuring industry best practices, ethical standards, and continuing education in urban property management excellence, financial stewardship, and community leadership in diverse settings that require both professional expertise and cultural sensitivity.</p>
-            
-            <p><strong>Outstanding Track Record:</strong> Zero properties lost in our management history, with over $100 million in managed assets, 50+ properties, and 2,450+ units under professional management, demonstrating consistent excellence and client satisfaction across diverse urban community types throughout Chicago and similar neighborhoods.</p>
-            
-            <p><strong>Urban Community Focus:</strong> Direct access to ownership and personalized attention that larger corporate firms cannot match, ensuring responsive service tailored to your community's unique character, diverse resident needs, and long-term value protection goals in one of Chicago's evolving and improving neighborhoods.</p>
+            <p>Every property we manage in Pulaski Park benefits from our proven track record of excellence - 18+ years of experience, zero properties lost, and over $100 million in managed assets. Our deep understanding of local regulations, market conditions, and resident expectations ensures that your property not only maintains its value but continues to attract and retain quality residents who appreciate Pulaski Park's unique character and community spirit.</p>
+
+            <h3>Expert Condominium Management in Pulaski Park</h3>
+            <p>From established buildings that have served residents for years to modern complexes with contemporary amenities, our <a href="../../services/condominium-management/index.html">condominium management</a> services address the specific challenges that Pulaski Park properties face in today's competitive market. We coordinate maintenance schedules around seasonal needs and local considerations, manage relationships with trusted contractors who understand local building requirements and community expectations, and ensure that your condominium association operates smoothly while preserving the community atmosphere that residents value most about Pulaski Park living.</p>
+
+            <p>Our CAI and IREM certifications guarantee professional standards that match the quality expectations of Pulaski Park residents, while our CCIM designation demonstrates our commitment to understanding the investment aspects of property management. We provide detailed monthly financial reports that track building performance, coordinate with local utility providers for efficient service delivery, and maintain communication systems that keep residents informed while protecting board members from unnecessary disruptions and allowing them to focus on community-building activities.</p>
+
+            <div class="highlight-box">
+                <h3>Pulaski Park Condominium Management Specialists</h3>
+                <p>Our experienced team understands the unique aspects of Pulaski Park condominium living, from maintaining the established character that attracts residents to coordinating with local service providers who understand community needs. We manage properties ranging from intimate buildings that foster close neighbor relationships to larger complexes with extensive amenities, always maintaining the high standards that define this exceptional community and its commitment to quality living.</p>
+                <p><strong>Professional Excellence: CAI * IREM * CCIM Certified</strong></p>
+            </div>
+
+            <h3>HOA Management Tailored to Pulaski Park Community Values</h3>
+            <p>Homeowner associations in Pulaski Park require management that understands both the practical needs of property maintenance and the community values that make neighborhoods thrive for generations. Our <a href="../../services/hoa-management/index.html">HOA management</a> approach recognizes that successful associations create environments where residents feel genuinely connected, property values remain consistently strong, and community traditions continue to flourish while adapting to modern needs and lifestyle expectations.</p>
+
+            <p>We work closely with Pulaski Park HOA boards to develop policies that protect property values while fostering the neighborly atmosphere that residents cherish and that attracts quality families to the community. From coordinating seasonal maintenance projects that enhance curb appeal and neighborhood pride to managing community events that bring neighbors together and create lasting friendships, our services support the full spectrum of community life that makes Pulaski Park such a special place to live, work, and raise families.</p>
+
+            <h3>Seasonal Property Management Expertise</h3>
+            <p>Pulaski Park's location requires property management that understands the full cycle of seasonal challenges and opportunities. Our comprehensive approach addresses winter concerns including snow removal coordination with local contractors, heating system maintenance that prevents costly emergencies, and ice management that ensures resident safety. Spring brings landscaping restoration, exterior maintenance assessment, and preparation for the active seasons that define community life.</p>
+
+            <p>Summer management includes coordinating landscaping maintenance that keeps properties attractive, managing recreational area upkeep that supports community enjoyment, and ensuring that cooling systems operate efficiently during peak demand periods. Fall preparation involves comprehensive winterization procedures, exterior maintenance completion, and community preparation that supports the seasonal traditions that make Pulaski Park living special for residents and their families.</p>
+
+            <div class="service-highlight-box">
+                <h3>Professional Maintenance Coordination for Pulaski Park Properties</h3>
+                <p>Our <a href="../../services/maintenance-coordination/index.html">maintenance coordination</a> services connect your property with our network of trusted local contractors who understand Pulaski Park's unique requirements and community standards. From seasonal weather challenges that require proactive planning to local building requirements that preserve neighborhood character, we ensure that all maintenance work enhances your property while respecting the distinctive character that defines this special community and its commitment to quality.</p>
+                <p><strong>Local Expertise & 24/7 Response: <a href="tel:8476522338">(847) 652-2338</a></strong></p>
+            </div>
+
+            <h3>Community-Centered Resident Relations</h3>
+            <p>Successful property management in Pulaski Park requires understanding that residents expect personal service, community connection, and responsive communication that reflects the neighborhood atmosphere they have chosen. Our <a href="../../services/resident-relations/index.html">resident relations</a> approach emphasizes building genuine relationships that support community cohesion while ensuring that individual concerns receive prompt, professional attention that maintains the high standards residents expect.</p>
+
+            <p>We facilitate communication that keeps residents informed about community matters while protecting their privacy and personal time. Our approach includes organizing community events that bring neighbors together, coordinating with local services that support daily life, and maintaining the welcoming atmosphere that makes Pulaski Park properties attractive to residents seeking authentic community experiences where neighbors become friends and community traditions continue.</p>
+
+            <h3>Financial Management for Pulaski Park Properties</h3>
+            <p>Pulaski Park property owners and residents expect financial management that combines professional excellence with the transparency and accountability that define community values. Our <a href="../../services/financial-management/index.html">financial management</a> services provide detailed monthly reports that track property performance, budget development that balances fiscal responsibility with community needs, and assessment collection procedures that maintain fairness while ensuring adequate funding for property maintenance and improvements.</p>
+
+            <p>We understand that property management must balance cost-effectiveness with quality service delivery. Our financial approach includes reserve planning that protects long-term property values, vendor management that ensures competitive pricing without compromising service quality, and budget development that anticipates seasonal needs while maintaining the financial stability that supports community confidence and property values.</p>
+
+            <div class="highlight-box">
+                <h3>Local Market Knowledge and Expertise</h3>
+                <p>Our deep understanding of Pulaski Park and the broader Chicago market enables us to provide property management services that address local opportunities and challenges effectively. We understand the transportation patterns that affect resident lifestyles, the local business environment that supports property values, community considerations that influence resident decisions, and the neighborhood traditions that create the community atmosphere residents value most.</p>
+                <p>This local expertise enables us to coordinate services that support community life, manage vendor relationships with contractors who understand local requirements, and provide resident communications that reflect the community atmosphere that makes Pulaski Park special. From coordinating with local utilities to understanding seasonal maintenance needs, our local knowledge ensures effective property management that enhances resident satisfaction and property values.</p>
+            </div>
+
+            <h3>Technology-Enhanced Community Management</h3>
+            <p>While Pulaski Park residents appreciate community values, they also expect modern conveniences that enhance community life and property management efficiency. Our technology solutions include online payment systems that provide convenience while maintaining personal service, communication platforms that keep residents informed without overwhelming them, and maintenance coordination systems that ensure prompt response while respecting community privacy and lifestyle preferences.</p>
+
+            <p>We balance technological efficiency with the personal attention that communities expect, ensuring that residents can access services conveniently while maintaining the community atmosphere that makes Pulaski Park special. Our approach includes resident portals that provide easy access to community information, financial transparency tools that support informed decision-making, and communication systems that facilitate neighborhood connections while respecting individual privacy preferences.</p>
+
+            <div class="highlight-box">
+                <h3>Why Pulaski Park Properties Choose Manage369</h3>
+                <p><strong>Proven Local Market Expertise:</strong> 18+ years serving Chicago and suburban communities with deep understanding of local regulations, seasonal challenges, market conditions, and community values that come from extensive hands-on experience in communities like Pulaski Park.</p>
+                
+                <p><strong>Professional Certifications & Continuing Education:</strong> CAI, IREM, and CCIM certified professionals ensuring industry best practices, ethical standards, and continuing education in property management excellence, financial stewardship, and community leadership that supports long-term success.</p>
+                
+                <p><strong>Outstanding Track Record:</strong> Zero properties lost in our management history, with over $100 million in managed assets, 50+ properties, and 2,450+ units under professional management, demonstrating consistent excellence and client satisfaction in communities throughout the Chicago area.</p>
+                
+                <p><strong>Boutique-Level Personal Service:</strong> Direct access to ownership and personalized attention that larger corporate firms simply cannot match, ensuring responsive service tailored to your community's unique needs, character, and long-term goals while maintaining the neighborhood atmosphere that makes community living special.</p>
+            </div>
         </div>
+    </section>
 
-        <h3>Specialized Townhome Management for Pulaski Park</h3>
-        
-        <p>Townhome communities in Pulaski Park often represent an ideal combination of homeownership benefits with maintenance convenience for busy urban professionals and families. Our <a href="../../services/townhome-management/index.html">townhome management</a> services address the specific needs these properties face, from coordinating exterior maintenance across multiple individually-owned units to managing shared amenities and common spaces that enhance the community experience while respecting the individual property rights and diverse lifestyles of urban residents.</p>
-
-        <p>We understand that townhome residents in Pulaski Park often choose this lifestyle for the balance of privacy and community it provides, along with the maintenance convenience that comes from professional property management in an urban setting. Our management approach supports this balance by ensuring that individual property rights are protected while community standards maintain the neighborhood appeal that attracts working families and professionals seeking both urban convenience and community connection.</p>
-
-        <h2>Getting Started with Pulaski Park Property Management</h2>
-        
-        <p>Professional property management transforms communities by creating environments where residents want to live long-term and property values remain stable and competitive. In a diverse neighborhood like Pulaski Park, this transformation comes from understanding both the practical needs of urban property maintenance and the community dynamics that make neighborhoods successful.</p>
-
-        <p>Our process begins with understanding your property's unique characteristics, your community's specific needs, and your long-term goals for property value protection and resident satisfaction. We then develop customized management strategies that balance professional standards with affordability considerations while building the community connections that make urban neighborhoods special places to live.</p>
-
-        <p>Contact <strong>Manage369</strong> today to learn how professional property management can enhance your Pulaski Park community while protecting your investment and building the neighbor relationships that make city living rewarding and sustainable.</p>
-
-        <div class="contact-cta">
-            <h2>Ready to Experience Professional Urban Property Management?</h2>
-            <p>Join the Chicago properties that trust Manage369 with their valuable community investments.</p>
-            <p>📞 <a href="tel:8476522338">(847) 652-2338</a> | ✉️ <a href="mailto:service@manage369.com">service@manage369.com</a></p>
-            <p><a href="../../contact.html">Request Your Urban Community Assessment →</a></p>
+    <section class="consultation-form">
+        <div class="consultation-form-content">
+            <h2>Schedule Your Free Pulaski Park Property Management Consultation</h2>
+            <p>Discover how our 18+ years of experience and professional certifications can enhance your Pulaski Park property. Get expert insights tailored to your community's unique needs.</p>
+            
+            <form action="https://formspree.io/f/xpznzgnk" method="POST" id="consultationForm">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="phone">Phone Number *</label>
+                    <input type="tel" id="phone" name="phone" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="property_type">Property Type</label>
+                    <select id="property_type" name="property_type">
+                        <option value="">Select Property Type</option>
+                        <option value="condominium">Condominium Association</option>
+                        <option value="hoa">Homeowner Association (HOA)</option>
+                        <option value="townhome">Townhome Community</option>
+                        <option value="mixed_use">Mixed Use Development</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="units">Number of Units</label>
+                    <input type="number" id="units" name="units" placeholder="e.g., 24">
+                </div>
+                
+                <div class="form-group">
+                    <label for="current_management">Current Management Situation</label>
+                    <select id="current_management" name="current_management">
+                        <option value="">Select Current Situation</option>
+                        <option value="self_managed">Self-Managed</option>
+                        <option value="management_company">Have Management Company</option>
+                        <option value="board_managed">Board-Managed</option>
+                        <option value="new_development">New Development</option>
+                        <option value="transition">In Transition</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timeline">When are you looking to make a change?</label>
+                    <select id="timeline" name="timeline">
+                        <option value="">Select Timeline</option>
+                        <option value="immediately">Immediately</option>
+                        <option value="1_3_months">1-3 months</option>
+                        <option value="3_6_months">3-6 months</option>
+                        <option value="exploring">Just exploring options</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="challenges">What are your main property management challenges? (Optional)</label>
+                    <textarea id="challenges" name="challenges" placeholder="e.g., Financial reporting, maintenance issues, board support, resident relations..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="location_specific">Specific to Pulaski Park:</label>
+                    <input type="text" name="location_specific" value="Pulaski Park Property Management Inquiry" readonly>
+                </div>
+                
+                <button type="submit" class="form-submit">Schedule Free Consultation</button>
+            </form>
         </div>
-    </div>
+    </section>
+
+    <section class="faq-section">
+        <div class="faq-content">
+            <h2>Frequently Asked Questions - Pulaski Park Property Management</h2>
+            
+            <div class="faq-item">
+                <div class="faq-question">What makes Pulaski Park properties unique for management purposes?</div>
+                <div class="faq-answer">
+                    <p>Pulaski Park properties benefit from established neighborhood character with strong cultural identity, diverse population, mix of vintage and renovated housing options, active local business corridor, and convenient access to downtown Chicago and surrounding neighborhoods, creating unique management opportunities that require understanding both community lifestyle preferences and local expectations.</p>
+                    <p>Our management approach addresses these unique characteristics by coordinating with local contractors who understand community requirements, managing seasonal challenges specific to the area, and maintaining the community atmosphere that attracts residents to this established neighborhood.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do you handle seasonal maintenance for Pulaski Park properties?</div>
+                <div class="faq-answer">
+                    <p>Pulaski Park's location requires comprehensive seasonal management including winter snow removal coordination, heating system maintenance, spring landscaping restoration, summer cooling system management, and fall winterization procedures. We maintain relationships with local contractors who understand these seasonal requirements and provide prompt, professional service that keeps properties attractive and functional year-round.</p>
+                    <p>Our seasonal approach includes proactive planning that prevents costly emergencies, coordination with local service providers, and communication with residents about seasonal considerations that affect community life and property maintenance schedules.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What types of properties do you manage in Pulaski Park?</div>
+                <div class="faq-answer">
+                    <p>We manage a diverse range of properties in Pulaski Park including established condominium buildings, townhome communities, and homeowner associations. Our experience ranges from intimate buildings that foster close community relationships to larger complexes with extensive amenities, always focusing on maintaining the community character and atmosphere that residents value.</p>
+                    <p>Each property type requires specific management expertise, from coordinating with local utilities and contractors to managing community events and maintaining the neighborhood atmosphere that makes Pulaski Park special. Our team understands these diverse requirements and provides services tailored to each property's unique needs and community character.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">How do you maintain community atmosphere in Pulaski Park properties?</div>
+                <div class="faq-answer">
+                    <p>Maintaining community atmosphere requires understanding that Pulaski Park residents have chosen this community for specific reasons: neighborhood connections, convenient location, and community traditions. Our <a href="../../services/resident-relations/index.html">resident relations</a> approach includes facilitating community events, supporting neighborhood connections, and maintaining communication that keeps residents informed while respecting their privacy and lifestyle preferences.</p>
+                    <p>We work with property boards to develop policies that protect community character while adapting to modern needs, coordinate with local organizations that support community life, and ensure that management decisions reflect the values and priorities that make Pulaski Park neighborhoods special for residents and their families.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question">What are your emergency response procedures for Pulaski Park properties?</div>
+                <div class="faq-answer">
+                    <p>Our 24/7 emergency response system ensures immediate attention to urgent situations affecting Pulaski Park properties. We maintain relationships with local contractors who provide prompt response to heating, plumbing, electrical, and security emergencies. Our emergency procedures include immediate assessment, professional response coordination, and follow-up communication with residents and board members.</p>
+                    <p>Emergency response in Pulaski Park requires understanding local resources, maintaining relationships with trusted contractors who serve the area, and providing communication that keeps residents informed while managing emergency situations effectively. Call our emergency line at <a href="tel:8476522338">(847) 652-2338</a> for immediate assistance.</p>
+                </div>
+            </div>
+        </section>
+    </section>
+        
+    <section class="why-choose">
+        <div class="why-choose-content">
+            <h2>Why Choose Manage369?</h2>
+            <div class="benefits-grid">
+                <div class="benefit-item">
+                    <h3>18+ Years Experience</h3>
+                    <p>Proven track record managing 50+ properties with 2,450+ units throughout Chicago and surrounding communities.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Professional Service Excellence</h3>
+                    <p>Direct access to the owner and immediate response to maintenance needs with community focus.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Transparent Financial Reporting</h3>
+                    <p>Monthly financial statements, budget development, and reserve studies to protect property values.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Local Pulaski Park Expertise</h3>
+                    <p>Deep understanding of Pulaski Park's unique property management challenges and community character.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Professional Certifications</h3>
+                    <p>CAI, IREM, and CCIM certified professionals ensuring industry best practices and community leadership.</p>
+                </div>
+                <div class="benefit-item">
+                    <h3>Boutique-Level Service</h3>
+                    <p>Personalized attention and responsiveness that larger firms cannot match, tailored to community needs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="contact-section">
+        <h2>Ready for Professional Property Management?</h2>
+        <p>Contact us today for a free consultation about your Pulaski Park property management needs.</p>
+        <p>📞 <a href="tel:8476522338">(847) 652-2338</a> | ✉️ <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+    </section>
     
     <!-- PERFECT FOOTER HTML - EXACT SPECIFICATIONS -->
     <footer>
@@ -427,14 +1241,35 @@
                 mobileMenu.classList.remove('active');
             }
         });
+        
+        // Form submission handling
+        document.getElementById('consultationForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            
+            // Submit to Formspree
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Thank you for your inquiry! We will contact you within 24 hours to schedule your free consultation.');
+                    this.reset();
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            })
+            .catch(error => {
+                alert('There was an error submitting the form. Please call us directly at (847) 652-2338.');
+            });
+        });
     </script>
-
-
-    <!-- Floating Get Quote Button -->
-    <a href="tel:8476522338" class="floating-quote-btn">
-        <span class="phone-icon">📞</span>
-        <span>Get Free Quote</span>
-    </a>
 
 </body>
 </html>
