@@ -166,31 +166,7 @@ body {
     border-bottom: 1px solid var(--border-gray);
 }
 
-/* Hero Section - Matching existing structure */
-.hero {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 100px 20px 80px;
-    text-align: center;
-    color: white;
-    margin-top: 0;
-}
-
-.hero-content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-.hero-content h1 {
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
-}
-
-.hero-content p {
-    font-size: 24px;
-    opacity: 0.95;
-}
+/* Hero Section - Removed to preserve existing hero images from styles.css */
 
 /* Main Content Section - Matching existing .content class */
 .content {
@@ -861,13 +837,7 @@ footer {
         display: block;
     }
     
-    .hero-content h1 {
-        font-size: 36px;
-    }
-    
-    .hero-content p {
-        font-size: 20px;
-    }
+    /* Hero styles removed to preserve existing hero images */
     
     .services-grid {
         grid-template-columns: 1fr;
@@ -919,13 +889,7 @@ footer {
 }
 
 @media (max-width: 480px) {
-    .hero-content h1 {
-        font-size: 28px;
-    }
-    
-    .hero-content p {
-        font-size: 18px;
-    }
+    /* Hero styles removed to preserve existing hero images */
     
     .stats-grid {
         grid-template-columns: 1fr;
@@ -963,11 +927,7 @@ footer {
         display: none;
     }
     
-    .hero {
-        background: none;
-        color: black;
-        padding: 20px 0;
-    }
+    /* Hero print styles removed to preserve existing hero images */
     
     .content,
     .location-content {
