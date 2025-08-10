@@ -68,13 +68,21 @@
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "LocalBusiness",
+      "@type": "ProfessionalService",
+      "@id": "https://manage369.com/#organization",
       "name": "Manage369",
       "alternateName": "Manage 369 Property Management",
+      "legalName": "Manage369 Property Management LLC",
       "description": "Professional property management services for condominiums, HOAs, and townhomes in Chicago and North Shore suburbs. 18+ years local expertise managing 50+ properties with 2,450+ units.",
+      "slogan": "Where Excellence Meets Experience",
+      "foundingDate": "2006",
+      "founder": {
+        "@type": "Person",
+        "name": "Manage369 Founders"
+      },
       "address": {
         "@type": "PostalAddress",
-        "streetAddress": "1400 Patriot Boulevard 357",
+        "streetAddress": "1400 Patriot Boulevard, Suite 357",
         "addressLocality": "Glenview",
         "addressRegion": "IL",
         "postalCode": "60026",
@@ -85,11 +93,25 @@
         "latitude": "42.0697",
         "longitude": "-87.7864"
       },
-      "telephone": "(847) 652-2338",
+      "telephone": "+1-847-652-2338",
       "email": "service@manage369.com",
       "url": "https://manage369.com",
-      "image": "https://manage369.com/images/manage369-office.jpg",
-      "logo": "https://manage369.com/images/manage369-logo.png",
+      "sameAs": [
+        "https://www.facebook.com/manage369",
+        "https://www.linkedin.com/company/manage369",
+        "https://twitter.com/manage369"
+      ],
+      "image": [
+        "https://manage369.com/images/manage369livingroomskokie.jpg",
+        "https://manage369.com/images/manage369bedroom1740maplewood.jpg",
+        "https://manage369.com/images/northbrook2manage369.jpg"
+      ],
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://manage369.com/images/manage369-logo.png",
+        "width": "250",
+        "height": "60"
+      },
       "serviceArea": [
         {
           "@type": "City",
@@ -238,6 +260,177 @@
           }
         }
       ]
+    }
+    </script>
+    
+    <!-- WebSite Schema for Sitelinks Searchbox -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://manage369.com/#website",
+      "url": "https://manage369.com",
+      "name": "Manage369 - Chicago & North Shore Property Management",
+      "description": "Professional property management services for condominiums, HOAs, and townhomes in Chicago and North Shore suburbs",
+      "publisher": {
+        "@id": "https://manage369.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://manage369.com/search?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      },
+      "inLanguage": "en-US"
+    }
+    </script>
+    
+    <!-- Organization Schema with Knowledge Graph -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "@id": "https://manage369.com/#organization",
+      "name": "Manage369",
+      "url": "https://manage369.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://manage369.com/images/manage369-logo.png",
+        "width": 250,
+        "height": 60
+      },
+      "contactPoint": [
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-847-652-2338",
+          "contactType": "customer service",
+          "contactOption": "TollFree",
+          "areaServed": ["US"],
+          "availableLanguage": ["en"],
+          "hoursAvailable": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "09:00",
+            "closes": "17:00"
+          }
+        },
+        {
+          "@type": "ContactPoint",
+          "telephone": "+1-847-652-2338",
+          "contactType": "sales",
+          "areaServed": ["US"],
+          "availableLanguage": ["en"]
+        }
+      ],
+      "numberOfEmployees": {
+        "@type": "QuantitativeValue",
+        "value": 25
+      },
+      "hasCredential": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "license",
+          "name": "IDFPR Management Firm License",
+          "identifier": "291.000211"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "CAI Certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "IREM Certification"
+        },
+        {
+          "@type": "EducationalOccupationalCredential",
+          "credentialCategory": "certification",
+          "name": "CCIM Certification"
+        }
+      ]
+    }
+    </script>
+    
+    <!-- Service Schema for Property Management -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "serviceType": "Property Management",
+      "provider": {
+        "@id": "https://manage369.com/#organization"
+      },
+      "areaServed": {
+        "@type": "State",
+        "name": "Illinois"
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Property Management Services",
+        "itemListElement": [
+          {
+            "@type": "OfferCatalog",
+            "name": "Condominium Management",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "High-Rise Condominium Management",
+                  "description": "Comprehensive management for luxury high-rise condominiums"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Mid-Rise Condominium Management",
+                  "description": "Professional management for mid-rise condominium buildings"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "HOA Management",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Homeowner Association Management",
+                  "description": "Full-service HOA management with board support"
+                }
+              }
+            ]
+          },
+          {
+            "@type": "OfferCatalog",
+            "name": "Financial Services",
+            "itemListElement": [
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Financial Management",
+                  "description": "Professional accounting and financial reporting"
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Budget Development",
+                  "description": "Annual budget planning and reserve studies"
+                }
+              }
+            ]
+          }
+        ]
+      }
     }
     </script>
     <style>

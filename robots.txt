@@ -40,9 +40,6 @@ Disallow: /
 Disallow: /admin/
 Disallow: /private/
 Disallow: /temp/
-Disallow: /*.pdf$
-Disallow: /search?
-Disallow: /*?*
 Disallow: /cgi-bin/
 
 # Allow access to important resources
@@ -58,9 +55,6 @@ Allow: /*.gif
 Allow: /*.webp
 Allow: /*.svg
 
-# Additional sitemaps
-Sitemap: https://manage369.com/sitemap-images.xml
-Sitemap: https://manage369.com/sitemap-locations.xml
 
 # Host directive (helps with canonicalization)
 Host: https://manage369.com

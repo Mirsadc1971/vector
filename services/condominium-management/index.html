@@ -6,40 +6,142 @@
     <title>Chicago Condominium Management Services | North Shore Condo Board Support | Manage369</title>
     <meta name="description" content="Professional Chicago & North Shore condominium management: expert board governance, building operations, elevator maintenance, financial reporting, legal compliance. CAI certified with 17+ years experience.">
     
-    <!-- Schema Markup for Service -->
+    <!-- Enhanced Service Schema with Rich Snippets -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
+      "@id": "https://manage369.com/services/condominium-management/#service",
       "name": "Condominium Management Services",
+      "alternateName": "Chicago Condo Management",
+      "serviceType": "Property Management",
+      "category": "Real Estate Services",
+      "description": "Professional condominium management services for Chicago and North Shore high-rise and mid-rise buildings including board governance, building operations, elevator maintenance, and financial management.",
       "provider": {
-        "@type": "LocalBusiness",
+        "@type": "ProfessionalService",
+        "@id": "https://manage369.com/#organization",
         "name": "Manage369",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "1400 Patriot Boulevard 357",
+          "streetAddress": "1400 Patriot Boulevard, Suite 357",
           "addressLocality": "Glenview",
           "addressRegion": "IL",
-          "postalCode": "60026"
+          "postalCode": "60026",
+          "addressCountry": "US"
         },
-        "telephone": "(847) 652-2338",
+        "telephone": "+1-847-652-2338",
         "email": "service@manage369.com",
-        "url": "https://manage369.com"
+        "url": "https://manage369.com",
+        "priceRange": "$$",
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
       },
-      "serviceType": "Property Management",
-      "description": "Professional condominium management services for Chicago and North Shore high-rise and mid-rise buildings including board governance, building operations, elevator maintenance, and financial management.",
       "areaServed": [
+        {"@type": "State", "name": "Illinois"},
         {"@type": "City", "name": "Chicago", "addressRegion": "IL"},
         {"@type": "City", "name": "Glenview", "addressRegion": "IL"},
         {"@type": "City", "name": "Evanston", "addressRegion": "IL"},
         {"@type": "City", "name": "Highland Park", "addressRegion": "IL"},
-        {"@type": "City", "name": "Winnetka", "addressRegion": "IL"}
+        {"@type": "City", "name": "Winnetka", "addressRegion": "IL"},
+        {"@type": "City", "name": "Wilmette", "addressRegion": "IL"},
+        {"@type": "City", "name": "Lake Forest", "addressRegion": "IL"},
+        {"@type": "City", "name": "Glencoe", "addressRegion": "IL"}
       ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Condominium Management Service Catalog",
+        "itemListElement": [
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "High-Rise Condominium Management",
+              "description": "Specialized management for luxury high-rise buildings with complex mechanical systems"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Mid-Rise Condominium Management",
+              "description": "Professional management for 3-10 story condominium buildings"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Condominium Board Governance",
+              "description": "Board meeting management, Illinois Condominium Property Act compliance"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Building Operations Management",
+              "description": "HVAC, elevator, plumbing, and electrical system management"
+            }
+          },
+          {
+            "@type": "Offer",
+            "itemOffered": {
+              "@type": "Service",
+              "name": "Financial Management",
+              "description": "Budget development, financial reporting, and reserve fund management"
+            }
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "32",
+        "bestRating": "5"
+      },
       "offers": {
-        "@type": "Offer",
-        "description": "Comprehensive condominium management services",
+        "@type": "AggregateOffer",
+        "priceCurrency": "USD",
+        "offerCount": "5",
         "availability": "https://schema.org/InStock"
-      }
+      },
+      "url": "https://manage369.com/services/condominium-management/",
+      "image": [
+        "https://manage369.com/images/manage369livingroomskokie.jpg",
+        "https://manage369.com/images/manage369bedroom1740maplewood.jpg"
+      ]
+    }
+    </script>
+    
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://manage369.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Services",
+          "item": "https://manage369.com/services"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Condominium Management",
+          "item": "https://manage369.com/services/condominium-management"
+        }
+      ]
     }
     </script>
     
