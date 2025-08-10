@@ -3,9 +3,21 @@
   <!-- Main Pages -->
   <url>
     <loc>https://manage369.com/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-01-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://manage369.com/property-management-cost-guide.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+  <url>
+    <loc>https://manage369.com/chicago-property-management-companies.html</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
   </url>
   <url>
     <loc>https://manage369.com/services.html</loc>
