@@ -1,0 +1,444 @@
+/* =====================================================
+   PROPERTY PAGES CONTENT STYLING
+   This CSS styles ONLY the content sections
+   DOES NOT affect hero or footer sections
+   ===================================================== */
+
+/* Content Section Styling */
+.content {
+    padding: 80px 20px;
+    background: white;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 25px;
+    font-size: 16px;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content p:first-of-type {
+    font-size: 18px;
+    color: #333;
+    font-weight: 500;
+    border-left: 4px solid #4A90E2;
+    padding-left: 20px;
+    margin-bottom: 30px;
+}
+
+/* Services Grid Styling */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin: 60px auto;
+    max-width: 1100px;
+    padding: 0 20px;
+}
+
+.service-card {
+    background: white;
+    padding: 40px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #E0E0E0;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4A90E2, #FF9500);
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.service-card h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.service-card p {
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.service-card a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    display: inline-flex;
+    align-items: center;
+    transition: all 0.3s;
+}
+
+.service-card a:hover {
+    color: #2C5AA0;
+    transform: translateX(5px);
+}
+
+/* Location Content Section */
+.location-content {
+    padding: 80px 20px;
+    background: #F8F9FA;
+}
+
+.location-content-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.location-content h2 {
+    font-size: 36px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 50px;
+    font-weight: 700;
+    position: relative;
+}
+
+.location-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4A90E2, #FF9500);
+}
+
+.location-content h3 {
+    font-size: 28px;
+    color: #4A90E2;
+    margin: 40px 0 20px;
+    font-weight: 600;
+}
+
+.location-content p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+.location-content a {
+    color: #4A90E2;
+    text-decoration: none;
+    font-weight: 500;
+    border-bottom: 1px dotted #4A90E2;
+    transition: all 0.3s;
+}
+
+.location-content a:hover {
+    color: #2C5AA0;
+    border-bottom-style: solid;
+}
+
+/* Highlight Boxes */
+.highlight-box,
+.service-highlight-box {
+    background: white;
+    padding: 35px;
+    border-radius: 12px;
+    margin: 40px 0;
+    border-left: 5px solid #4A90E2;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.highlight-box h3,
+.service-highlight-box h3 {
+    color: #4A90E2;
+    margin-bottom: 15px;
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.highlight-box p,
+.service-highlight-box p {
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.highlight-box p:last-child,
+.service-highlight-box p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight-box strong,
+.service-highlight-box strong {
+    color: #333;
+    font-weight: 600;
+}
+
+/* FAQ Section */
+.faq-section {
+    padding: 80px 20px;
+    background: white;
+}
+
+.faq-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.faq-section h2,
+.faq-content h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 700;
+    position: relative;
+}
+
+.faq-section h2::after,
+.faq-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4A90E2, #FF9500);
+}
+
+.faq-item {
+    background: #F8F9FA;
+    padding: 30px;
+    border-radius: 12px;
+    margin-bottom: 30px;
+    box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s;
+}
+
+.faq-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.faq-question {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 600;
+    padding-left: 30px;
+    position: relative;
+}
+
+.faq-question::before {
+    content: 'Q:';
+    position: absolute;
+    left: 0;
+    color: #4A90E2;
+    font-weight: 700;
+}
+
+.faq-answer {
+    color: #666;
+    line-height: 1.8;
+    padding-left: 30px;
+}
+
+.faq-answer p {
+    margin-bottom: 15px;
+}
+
+.faq-answer p:last-child {
+    margin-bottom: 0;
+}
+
+/* Why Choose Section */
+.why-choose {
+    padding: 80px 20px;
+    background: #F8F9FA;
+}
+
+.why-choose-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.why-choose h2,
+.why-choose-content h2 {
+    font-size: 36px;
+    text-align: center;
+    color: #333;
+    margin-bottom: 50px;
+    font-weight: 700;
+    position: relative;
+}
+
+.why-choose h2::after,
+.why-choose-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: linear-gradient(90deg, #4A90E2, #FF9500);
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 40px;
+}
+
+.benefit-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    transition: all 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    border-top: 3px solid #4A90E2;
+}
+
+.benefit-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+}
+
+.benefit-item h3 {
+    font-size: 20px;
+    color: #4A90E2;
+    font-weight: 600;
+}
+
+.benefit-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Contact Section (middle contact, not footer) */
+.contact-section {
+    background: linear-gradient(135deg, #FF9500 0%, #E67E00 100%);
+    padding: 60px 20px;
+    text-align: center;
+    color: white;
+    margin: 40px 0;
+}
+
+.contact-section h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+.contact-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+    opacity: 0.95;
+}
+
+.contact-section a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+}
+
+.contact-section a:hover {
+    border-bottom-color: white;
+}
+
+/* Consultation Form Section */
+.consultation-form-section {
+    background: linear-gradient(135deg, #f8f9ff 0%, #ffffff 50%, #fff5f0 100%);
+    padding: 80px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.consultation-form-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #4a90e2 0%, #ff9500 100%);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .location-content h2 {
+        font-size: 28px;
+    }
+    
+    .location-content h3 {
+        font-size: 24px;
+    }
+    
+    .faq-section h2,
+    .why-choose h2,
+    .contact-section h2 {
+        font-size: 28px;
+    }
+    
+    .highlight-box,
+    .service-highlight-box {
+        padding: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .content {
+        padding: 60px 15px;
+    }
+    
+    .services-grid {
+        gap: 30px;
+    }
+    
+    .service-card {
+        padding: 30px 20px;
+    }
+    
+    .location-content {
+        padding: 60px 15px;
+    }
+    
+    .faq-section {
+        padding: 60px 15px;
+    }
+    
+    .why-choose {
+        padding: 60px 15px;
+    }
+}
