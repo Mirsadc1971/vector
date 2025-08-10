@@ -1097,99 +1097,112 @@
     </section>
 
     <!-- PROPERLY ALIGNED FOOTER CSS -->
+    <!-- PERFECT FOOTER CSS - EXACT SPECIFICATIONS -->
     <style>
-    /* FIXED ALIGNED FOOTER */
+    /* PERFECT FOOTER WITH EXACT SPECIFICATIONS */
     footer {
-        background: linear-gradient(135deg, #2C4A5F 0%, #1E3A4C 100%);
-        color: #ffffff;
-        font-size: 14px;
+        background: #2c3e50;
+        color: white;
+        line-height: 1.6;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     
     .footer-main {
-        max-width: 1400px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 50px 20px 40px;
+        padding: 40px 20px;
         display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        gap: 60px;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 20px;
     }
     
-    .footer-column h3 {
-        color: #FF6B35;
-        font-size: 16px;
-        margin-bottom: 20px;
-        font-weight: 500;
-        letter-spacing: 1px;
-        border-bottom: 2px solid #FF6B35;
-        padding-bottom: 10px;
+    .footer-column {
+        line-height: 1.6;
     }
     
     .footer-logo {
         font-size: 24px;
-        color: #FF6B35;
-        margin-bottom: 15px;
-        font-weight: 400;
-        letter-spacing: 2px;
+        color: #ff6b35;
+        margin-bottom: 8px;
+        font-weight: normal;
     }
     
     .footer-description {
-        color: #B8C5D6;
-        line-height: 1.8;
-        margin-bottom: 20px;
-        font-size: 14px;
+        color: white;
+        line-height: 1.6;
+        margin-bottom: 8px;
     }
     
-    .footer-contact {
-        margin-top: 20px;
+    .footer-stats {
+        color: white;
+        line-height: 1.6;
+        margin-bottom: 8px;
     }
     
-    .footer-contact div {
-        margin-bottom: 10px;
-        color: #B8C5D6;
+    .footer-contact-line {
+        color: white;
+        line-height: 1.6;
+        margin-bottom: 8px;
         display: flex;
         align-items: center;
     }
     
-    .footer-contact a {
-        color: #FF6B35;
+    .footer-contact-line a {
+        color: white;
         text-decoration: none;
-        margin-left: 5px;
     }
     
-    .footer-contact a:hover {
+    .footer-contact-line a:hover {
         text-decoration: underline;
     }
     
-    /* PROPERLY ALIGNED FOOTER LINKS */
+    .footer-license {
+        color: #ff6b35;
+        font-weight: bold;
+        line-height: 1.6;
+    }
+    
+    .footer-column h3 {
+        color: #ff6b35;
+        font-size: 18px;
+        margin-bottom: 15px;
+        font-weight: normal;
+    }
+    
     .footer-links {
         list-style: none;
         padding: 0;
+        margin: 0;
     }
     
     .footer-links li {
-        margin-bottom: 12px;
-        padding-left: 0;
+        margin-bottom: 10px;
     }
     
     .footer-links a {
-        color: #B8C5D6;
+        color: white;
         text-decoration: none;
-        transition: color 0.3s;
-        font-size: 14px;
-        display: block;
-        padding: 2px 0;
+        line-height: 1.6;
     }
     
     .footer-links a:hover {
-        color: #FF6B35;
-        transform: translateX(3px);
-        transition: all 0.3s;
+        color: #ff6b35;
+    }
+    
+    .footer-divider {
+        border: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        margin: 20px 0;
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
     }
     
     .footer-bottom {
-        background: #1A2F3F;
-        padding: 25px 20px;
-        border-top: 1px solid #3A566B;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px 40px;
+        text-align: center;
     }
     
     .certifications {
@@ -1199,76 +1212,76 @@
         gap: 30px;
         margin-bottom: 20px;
         flex-wrap: wrap;
-        max-width: 1400px;
-        margin: 0 auto 20px;
     }
     
     .cert-badge {
-        text-align: center;
-        padding: 10px 20px;
-        background: rgba(255, 107, 53, 0.1);
-        border: 1px solid #FF6B35;
+        height: 60px;
+        max-height: 60px;
+        background: white;
         border-radius: 8px;
-        min-width: 100px;
-    }
-    
-    .cert-badge .cert-abbr {
-        color: #FF6B35;
-        font-weight: 600;
-        font-size: 16px;
-        display: block;
-        margin-bottom: 3px;
-    }
-    
-    .cert-badge .cert-desc {
-        color: #8A9BAB;
-        font-size: 10px;
-        text-transform: capitalize;
+        padding: 10px 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #2c3e50;
+        font-weight: bold;
+        font-size: 14px;
     }
     
     .footer-copyright {
         text-align: center;
-        color: #8A9BAB;
-        font-size: 13px;
-        padding-top: 20px;
-        border-top: 1px solid #2A3F4F;
-        max-width: 1400px;
-        margin: 0 auto;
+        color: white;
+        font-size: 14px;
+        line-height: 1.6;
     }
     
-    @media (max-width: 968px) {
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
         .footer-main {
             grid-template-columns: 1fr;
-            gap: 40px;
+            gap: 30px;
             text-align: center;
+            padding: 40px 15px;
         }
         
-        .footer-links {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+        .footer-contact-line {
+            justify-content: center;
+        }
+        
+        .certifications {
+            gap: 15px;
+        }
+        
+        .cert-badge {
+            height: 50px;
+            max-height: 50px;
+            padding: 8px 12px;
+            font-size: 12px;
         }
     }
     </style>
 
-    <!-- PROPERLY ALIGNED FOOTER HTML -->
+    <!-- PERFECT FOOTER HTML - EXACT SPECIFICATIONS -->
     <footer>
         <div class="footer-main">
-            <!-- Company Info Column -->
+            <!-- LEFT COLUMN -->
             <div class="footer-column">
                 <div class="footer-logo">Manage369</div>
-                <p class="footer-description">
-                    Premier Chicago & North Shore Property Management<br>
-                    18+ Years of Excellence • 50+ Properties • 2,450+ Units
-                </p>
-                <div class="footer-contact">
-                    <div>(847) 652-2338 • <a href="mailto:service@manage369.com">service@manage369.com</a></div>
-                    <div style="margin-top: 10px;">1400 Patriot Boulevard 357, Glenview, IL 60026</div>
-                    <div style="margin-top: 10px; color: #FF6B35; font-weight: 500;">IDFPR Management Firm License 291.000211</div>
+                <div class="footer-description">Premier Chicago & North Shore Property Management</div>
+                <div class="footer-stats">18+ Years of Excellence • 50+ Properties • 2,450+ Units</div>
+                <div class="footer-contact-line">
+                    📞 <a href="tel:8476522338">(847) 652-2338</a>
                 </div>
+                <div class="footer-contact-line">
+                    ✉️ <a href="mailto:service@manage369.com">service@manage369.com</a>
+                </div>
+                <div class="footer-contact-line">
+                    📍 1400 Patriot Boulevard 357, Glenview, IL 60026
+                </div>
+                <div class="footer-license">IDFPR Management Firm License 291.000211</div>
             </div>
             
-            <!-- Quick Links Column - PROPERLY ALIGNED -->
+            <!-- CENTER COLUMN -->
             <div class="footer-column">
                 <h3>Quick Links</h3>
                 <ul class="footer-links">
@@ -1276,14 +1289,15 @@
                     <li><a href="property-management">Areas We Serve</a></li>
                     <li><a href="contact.html">Contact</a></li>
                     <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="payment-methods/index.html">Payment Methods</a></li>
+                    <li><a href="payment-methods.html">Payment Methods</a></li>
                 </ul>
             </div>
             
-            <!-- Resources Column - PROPERLY ALIGNED -->
+            <!-- RIGHT COLUMN -->
             <div class="footer-column">
                 <h3>Resources</h3>
                 <ul class="footer-links">
+                    <li><a href="forms.html">Forms & Documents</a></li>
                     <li><a href="privacy-policy.html">Privacy Policy</a></li>
                     <li><a href="terms-of-service.html">Terms of Service</a></li>
                     <li><a href="sitemap.html">Sitemap</a></li>
@@ -1293,28 +1307,15 @@
             </div>
         </div>
         
+        <hr class="footer-divider">
+        
         <div class="footer-bottom">
             <div class="certifications">
-                <div class="cert-badge">
-                    <span class="cert-abbr">CAI</span>
-                    <span class="cert-desc">Member</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">IREM</span>
-                    <span class="cert-desc">Certified</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">CCIM</span>
-                    <span class="cert-desc">Designated</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">NAR</span>
-                    <span class="cert-desc">Member</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">IDFPR</span>
-                    <span class="cert-desc">Licensed</span>
-                </div>
+                <div class="cert-badge">CAI</div>
+                <div class="cert-badge">IREM</div>
+                <div class="cert-badge">CCIM</div>
+                <div class="cert-badge">NAR</div>
+                <div class="cert-badge">IDFPR</div>
             </div>
             <div class="footer-copyright">
                 © 2025 Manage369. All Rights Reserved.
