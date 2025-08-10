@@ -612,6 +612,40 @@
             font-weight: 600;
         }
         
+        /* Mobile Navigation */
+        .mobile-menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            color: #333;
+            cursor: pointer;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 1rem;
+            z-index: 1001;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+            color: #333;
+            text-decoration: none;
+        }
+        
         .faq-section {
             background: #f8f9fa;
             padding: 4rem 2rem;
@@ -660,15 +694,21 @@
         
         @media (max-width: 768px) {
             .header {
-                flex-direction: column;
+                flex-direction: row;
+                justify-content: space-between;
                 padding: 1rem;
             }
             
             .nav {
-                margin-top: 1rem;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
+                display: none;
+            }
+            
+            .mobile-menu-toggle {
+                display: block;
+            }
+            
+            .phone {
+                display: none;
             }
             
             .hero-content h1 {
@@ -701,6 +741,9 @@
     <header class="header">
         <a href="../../index.html" class="logo">MANAGE369</a>
         
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        
         <nav class="nav">
             <a href="../../index.html">Home</a>
             <div class="services-dropdown">
@@ -725,6 +768,16 @@
         </nav>
         
         <a href="tel:8476522338" class="phone">Call (847) 652-2338</a>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="../../index.html">Home</a>
+            <a href="../../services.html">Services</a>
+            <a href="../">Areas We Serve</a>
+            <a href="../../pay-dues.html">Pay Dues</a>
+            <a href="../../contact.html">Contact</a>
+            <a href="tel:8476522338" style="background: #4a90e2; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+        </div>
     </header>
     
     <section class="hero">
@@ -1124,5 +1177,22 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+        function toggleMobileMenu() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const mobileMenu = document.getElementById('mobileMenu');
+            const toggle = document.querySelector('.mobile-menu-toggle');
+            
+            if (!mobileMenu.contains(event.target) && !toggle.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
