@@ -24,7 +24,12 @@
       "Bash(do sed -i 's|<a href=\"\"../\"\">Service Areas</a>|<a href=\"\"../\"\">Areas We Serve</a>|g' \"$file\")",
       "Bash(echo:*)",
       "Bash(do if [ -f \"$dir/index.html\" ])",
-      "Bash(then echo \"=== $dir ===\")"
+      "Bash(then echo \"=== $dir ===\")",
+      "Bash(python:*)",
+      "Bash(git checkout:*)",
+      "Bash(test:*)",
+      "Bash(del nul)",
+      "Bash(rm:*)"
     ],
     "deny": []
   }

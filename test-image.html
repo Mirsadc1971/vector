@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Path Test</title>
+    <style>
+        .test1 {
+            width: 100%;
+            height: 200px;
+            background: url('images/manage369livingroomskokie.jpg');
+            background-size: cover;
+            margin: 10px 0;
+        }
+        .test2 {
+            width: 100%;
+            height: 200px;
+            background: url('/images/manage369livingroomskokie.jpg');
+            background-size: cover;
+            margin: 10px 0;
+        }
+        .test3 {
+            width: 100%;
+            height: 200px;
+            background: url('./images/manage369livingroomskokie.jpg');
+            background-size: cover;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Testing Image Paths</h1>
+    
+    <h2>Test 1: Relative Path (images/...)</h2>
+    <div class="test1"></div>
+    
+    <h2>Test 2: Absolute Path (/images/...)</h2>
+    <div class="test2"></div>
+    
+    <h2>Test 3: Current Directory (./images/...)</h2>
+    <div class="test3"></div>
+    
+    <h2>Test 4: Direct IMG tags</h2>
+    <img src="images/manage369livingroomskokie.jpg" width="200" alt="Test relative">
+    <img src="/images/manage369livingroomskokie.jpg" width="200" alt="Test absolute">
+    
+    <h2>Files in images directory:</h2>
+    <ul>
+        <li>manage369livingroomskokie.jpg - Hero background image</li>
+        <li>favicon-32x32.png - Favicon</li>
+        <li>apple-touch-icon.png - Apple touch icon</li>
+    </ul>
+</body>
+</html>
