@@ -110,7 +110,6 @@
     
     <!-- External CSS -->
     <link rel="stylesheet" href="../../css/styles.css">
-    <link rel="stylesheet" href="../../css/property-pages.css">
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-496518917"></script>
@@ -175,7 +174,516 @@
     </section>
     
     <!-- Main Content -->
-    <section class="content">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-blue: #4A90E2;
+            --dark-blue: #2C5AA0;
+            --orange: #FF9500;
+            --dark-orange: #E67E00;
+            --text-dark: #333;
+            --text-gray: #666;
+            --light-gray: #F8F9FA;
+            --border-gray: #E0E0E0;
+        }
+
+        /* Main Content Section */
+        .main-content {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .main-content .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .main-content p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 25px;
+            font-size: 16px;
+        }
+
+        .main-content p:first-of-type {
+            font-size: 18px;
+            color: var(--text-dark);
+            font-weight: 500;
+        }
+
+        /* Services Grid */
+        .services-section {
+            padding: 80px 20px;
+            background: var(--light-gray);
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .service-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-blue), var(--orange));
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 25px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 36px;
+        }
+
+        .service-card h3 {
+            font-size: 24px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .service-card p {
+            color: var(--text-gray);
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .learn-more {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            display: inline-flex;
+            align-items: center;
+            transition: all 0.3s;
+        }
+
+        .learn-more:hover {
+            color: var(--dark-blue);
+            transform: translateX(5px);
+        }
+
+        .learn-more::after {
+            content: '→';
+            margin-left: 8px;
+            font-size: 18px;
+        }
+
+        /* Excellence Section */
+        .excellence-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .excellence-section h2 {
+            font-size: 36px;
+            color: var(--text-dark);
+            text-align: center;
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .excellence-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: start;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .excellence-text h3 {
+            font-size: 28px;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .excellence-text p {
+            color: var(--text-gray);
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
+        .certifications {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border-gray);
+        }
+
+        .cert-badge {
+            padding: 8px 16px;
+            background: var(--light-gray);
+            border-radius: 6px;
+            font-weight: 600;
+            color: var(--primary-blue);
+            font-size: 14px;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+            padding: 80px 20px;
+            color: white;
+            text-align: center;
+        }
+
+        .stats-header {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .stats-subheader {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 50px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .stat-item {
+            padding: 30px 20px;
+            background: rgba(255,255,255,0.1);
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, #FFF, #E0E0E0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
+            padding: 60px 20px;
+            text-align: center;
+            color: white;
+        }
+
+        .cta-section h2 {
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: white;
+            color: var(--orange);
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 16px;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            padding: 80px 20px;
+            background: var(--light-gray);
+        }
+
+        .faq-section h2 {
+            font-size: 36px;
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .faq-grid {
+            display: grid;
+            gap: 30px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.08);
+        }
+
+        .faq-question {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .faq-answer {
+            color: var(--text-gray);
+            line-height: 1.8;
+        }
+
+        /* Why Choose Section */
+        .why-choose-section {
+            padding: 80px 20px;
+            background: white;
+        }
+
+        .why-choose-section h2 {
+            font-size: 36px;
+            text-align: center;
+            color: var(--text-dark);
+            margin-bottom: 50px;
+            font-weight: 700;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            display: flex;
+            gap: 20px;
+            align-items: start;
+        }
+
+        .feature-icon {
+            flex-shrink: 0;
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--dark-blue));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .feature-content h3 {
+            font-size: 20px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .feature-content p {
+            color: var(--text-gray);
+            line-height: 1.6;
+        }
+
+        /* Contact Form Section */
+        .contact-section {
+            padding: 80px 20px;
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--dark-blue) 100%);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 50px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+
+        .contact-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .contact-header h2 {
+            font-size: 36px;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .contact-header p {
+            color: var(--text-gray);
+            font-size: 18px;
+        }
+
+        .form-grid {
+            display: grid;
+            gap: 25px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 8px;
+        }
+
+        .form-group label span {
+            color: var(--orange);
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 12px 16px;
+            border: 2px solid var(--border-gray);
+            border-radius: 8px;
+            font-size: 16px;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-submit {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .submit-button {
+            padding: 16px 50px;
+            background: linear-gradient(135deg, var(--orange) 0%, var(--dark-orange) 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 5px 20px rgba(255, 149, 0, 0.3);
+        }
+
+        .submit-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 149, 0, 0.4);
+        }
+
+        .form-note {
+            text-align: center;
+            margin-top: 20px;
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        .form-note a {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .excellence-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                padding: 30px;
+            }
+        }
+    </style>
+
+    <section class="main-content">
         <div class="container">
             <p>Glenview represents the ideal suburban community where traditional family values meet modern convenience, creating an environment where residents enjoy balanced suburban living with Glen Town Center shopping, excellent schools, and beautiful parks that create the ideal family community defining this North Shore suburb.</p>
             
