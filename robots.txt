@@ -40,8 +40,7 @@ User-agent: anthropic-ai
 Allow: /
 
 User-agent: Claude-Web
-Allow: /</<parameter>
-</invoke>
+Allow: /
 
 # Block unwanted bots
 User-agent: AhrefsBot
