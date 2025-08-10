@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1e40af">
     <title>Lincolnshire Property Management | Chicago Condo & HOA Management | Manage369</title>
     <meta name="description" content="Premier Lincolnshire property management services. 18+ years managing luxury condos, HOAs & townhomes. CAI/IREM certified professionals. Call (847) 652-2338.">
     
@@ -694,6 +695,15 @@
                 mobileMenu.classList.remove('active');
             }
         });
+    </script>
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('ServiceWorker registered:', registration))
+                    .catch(error => console.log('ServiceWorker registration failed:', error));
+            });
+        }
     </script>
 </body>
 </html>

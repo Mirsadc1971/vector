@@ -40,6 +40,7 @@
     <meta name="distribution" content="global">
     <meta name="rating" content="general">
     <meta name="revisit-after" content="7 days">
+    <meta name="theme-color" content="#1e40af">
     
     <!-- Performance and Resource Hints -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
@@ -1880,6 +1881,15 @@ This inquiry was submitted through the quick contact form on manage369.com`;
         function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
             mobileMenu.classList.toggle('active');
+        }
+
+        // Register Service Worker for PWA
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/sw.js')
+                    .then(registration => console.log('ServiceWorker registered:', registration))
+                    .catch(error => console.log('ServiceWorker registration failed:', error));
+            });
         }
     </script>
 </body>
