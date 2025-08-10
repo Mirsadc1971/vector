@@ -103,6 +103,7 @@
             display: flex;
             align-items: center;
             width: 100%;
+            justify-content: flex-start;
         }
         
         .logo {
@@ -123,6 +124,9 @@
             transition: background 0.3s ease;
             order: 3;
             margin-left: auto;
+            position: relative;
+            right: 0;
+            flex-shrink: 0;
         }
         
         .phone:hover {
