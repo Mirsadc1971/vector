@@ -1,79 +1,123 @@
 #!/usr/bin/env python3
-import os
-import glob
+"""
+Fix the remaining 21 pages that need CSS styling
+These pages have a different structure and need special handling
+"""
 
-def fix_html_file(file_path):
-    """Fix HTML structure issues in a single file"""
-    with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+import os
+import re
+from pathlib import Path
+
+def fix_page_css(file_path):
+    """Fix CSS link for pages with different structure"""
+    
+    with open(file_path, 'r', encoding='utf-8') as f:
         content = f.read()
     
-    original_content = content
-    fixed = False
+    # Check if already has the CSS
+    if 'property-content-styles.css' in content:
+        return False, "Already has CSS"
     
-    # Check if </header> is missing
-    if '<header class="header">' in content and '</header>' not in content:
-        # Find <section class="hero"> and add </header> before it
-        hero_pos = content.find('<section class="hero">')
-        if hero_pos > 0:
-            # Work backwards to find the proper indentation
-            indent_pos = content.rfind('\n', 0, hero_pos)
-            if indent_pos > 0:
-                content = content[:hero_pos] + '    </header>\n    \n    ' + content[hero_pos:]
-                fixed = True
-                print(f"  - Added missing </header> tag")
+    # Try different patterns to find where to add CSS
+    patterns = [
+        # Pattern 1: After any existing CSS file
+        (r'(<link rel="stylesheet" href="[^"]+\.css">)', r'\1\n    <link rel="stylesheet" href="../../css/property-content-styles.css">'),
+        # Pattern 2: Before closing head tag if no CSS found
+        (r'(</head>)', r'    <link rel="stylesheet" href="../../css/property-content-styles.css">\n\1'),
+        # Pattern 3: After meta tags
+        (r'(<meta[^>]+>\s*\n)(?=\s*<)', r'\1    <link rel="stylesheet" href="../../css/property-content-styles.css">\n'),
+    ]
     
-    # Check if </body> and </html> are missing at the end
-    if not content.rstrip().endswith('</html>'):
-        if not content.rstrip().endswith('</body>'):
-            # Find the last </script> tag
-            last_script_pos = content.rfind('</script>')
-            if last_script_pos > 0:
-                # Add closing tags after the last script
-                end_pos = last_script_pos + 9
-                # Check if there's already content after </script>
-                remaining = content[end_pos:].strip()
-                if not remaining:
-                    content = content[:end_pos] + '\n</body>\n</html>'
-                else:
-                    content = content.rstrip() + '\n</body>\n</html>'
-                fixed = True
-                print(f"  - Added missing </body> and </html> tags")
-        else:
-            content = content.rstrip() + '\n</html>'
-            fixed = True
-            print(f"  - Added missing </html> tag")
+    modified = False
+    for pattern, replacement in patterns:
+        if re.search(pattern, content):
+            new_content = re.sub(pattern, replacement, content, count=1)
+            if new_content != content:
+                content = new_content
+                modified = True
+                break
     
-    if fixed:
+    if modified:
         with open(file_path, 'w', encoding='utf-8') as f:
             f.write(content)
-        return True
-    return False
-
-# Get all property management HTML files
-property_dirs = glob.glob(r"C:\Users\mirsa\manage369-live\property-management\*\index.html")
-
-print(f"Checking {len(property_dirs)} property management pages...\n")
-
-fixed_files = []
-already_ok = []
-
-for file_path in property_dirs:
-    dir_name = os.path.basename(os.path.dirname(file_path))
-    print(f"Checking {dir_name}...")
+        return True, "CSS added successfully"
     
-    if fix_html_file(file_path):
-        fixed_files.append(dir_name)
-        print(f"  FIXED\n")
+    return False, "Could not find place to add CSS"
+
+def main():
+    """Main function to fix remaining pages"""
+    
+    print("Fixing remaining pages with CSS styling...")
+    print("=" * 50)
+    
+    # Path to property-management directory
+    prop_mgmt_dir = Path('property-management')
+    
+    if not prop_mgmt_dir.exists():
+        print("Error: property-management directory not found!")
+        return
+    
+    # List of pages that need fixing (from previous run)
+    pages_to_fix = [
+        'portage-park', 'prospect-heights', 'pulaski-park', 'ravenswood',
+        'rogers-park', 'rolling-meadows', 'sauganash', 'schiller-park',
+        'skokie', 'south-loop', 'streeterville', 'the-glen',
+        'uptown', 'vernon-hills', 'west-loop', 'west-ridge',
+        'wheeling', 'wicker-park', 'wilmette', 'winnetka', 'wood-dale'
+    ]
+    
+    fixed_count = 0
+    error_count = 0
+    
+    print(f"Processing {len(pages_to_fix)} pages...")
+    print("-" * 50)
+    
+    for page_name in pages_to_fix:
+        page_dir = prop_mgmt_dir / page_name
+        index_file = page_dir / 'index.html'
+        
+        if index_file.exists():
+            print(f"\nProcessing: {page_name}")
+            success, message = fix_page_css(index_file)
+            
+            if success:
+                print(f"  [FIXED] {message}")
+                fixed_count += 1
+            else:
+                print(f"  [INFO] {message}")
+                if "Could not" in message:
+                    error_count += 1
+        else:
+            print(f"\n[ERROR] Page not found: {page_name}")
+            error_count += 1
+    
+    # Now check ALL pages to make sure we got everything
+    print("\n" + "=" * 50)
+    print("Verifying all pages...")
+    
+    all_locations = [d for d in prop_mgmt_dir.iterdir() if d.is_dir()]
+    total_with_css = 0
+    total_pages = 0
+    
+    for location_dir in sorted(all_locations):
+        index_file = location_dir / 'index.html'
+        if index_file.exists():
+            total_pages += 1
+            with open(index_file, 'r', encoding='utf-8') as f:
+                if 'property-content-styles.css' in f.read():
+                    total_with_css += 1
+    
+    print(f"\nFinal Status:")
+    print(f"  Total pages: {total_pages}")
+    print(f"  Pages with CSS: {total_with_css}")
+    print(f"  Pages without CSS: {total_pages - total_with_css}")
+    print(f"\n  Fixed in this run: {fixed_count}")
+    print(f"  Errors: {error_count}")
+    
+    if total_pages - total_with_css == 0:
+        print("\n✓ SUCCESS: All pages now have CSS styling!")
     else:
-        already_ok.append(dir_name)
-        print(f"  Already OK\n")
+        print(f"\n⚠ WARNING: {total_pages - total_with_css} pages still need CSS")
 
-print("\n" + "="*50)
-print(f"SUMMARY:")
-print(f"Fixed: {len(fixed_files)} pages")
-print(f"Already OK: {len(already_ok)} pages")
-
-if fixed_files:
-    print(f"\nFixed pages:")
-    for page in fixed_files:
-        print(f"  - {page}")
+if __name__ == "__main__":
+    main()
