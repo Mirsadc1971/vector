@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Leave a review for Manage369 Property Management. Share your experience with Chicago's trusted property management company.">
+    <title>Leave a Review | Manage369 Property Management</title>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .review-container {
+            background: white;
+            max-width: 800px;
+            width: 100%;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .review-header {
+            background: #1e3a8a;
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .review-header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .review-header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+        
+        .rating-display {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            margin-top: 1.5rem;
+        }
+        
+        .stars {
+            color: #ffd700;
+            font-size: 2rem;
+        }
+        
+        .rating-text {
+            font-size: 1.1rem;
+        }
+        
+        .review-body {
+            padding: 3rem 2rem;
+        }
+        
+        .review-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .review-intro h2 {
+            color: #1e3a8a;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+        }
+        
+        .review-intro p {
+            color: #666;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .review-platforms {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+        
+        .platform-card {
+            background: #f8fafc;
+            border: 2px solid #e5e7eb;
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        
+        .platform-card:hover {
+            border-color: #ff9500;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .platform-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .platform-name {
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        
+        .platform-description {
+            color: #666;
+            margin-bottom: 1rem;
+        }
+        
+        .platform-cta {
+            background: #ff9500;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 8px;
+            display: inline-block;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+        
+        .platform-card:hover .platform-cta {
+            background: #e6850e;
+        }
+        
+        .google-primary {
+            background: linear-gradient(135deg, #4285f4, #34a853);
+            color: white;
+            border: none;
+        }
+        
+        .google-primary .platform-name,
+        .google-primary .platform-description {
+            color: white;
+        }
+        
+        .testimonials {
+            background: #f8fafc;
+            padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+        }
+        
+        .testimonials h3 {
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            border-left: 4px solid #ff9500;
+        }
+        
+        .testimonial-text {
+            color: #333;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+        
+        .testimonial-author {
+            color: #666;
+            font-size: 0.9rem;
+        }
+        
+        .back-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+        
+        .back-link a {
+            color: #4a90e2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        .back-link a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 768px) {
+            .review-header h1 {
+                font-size: 2rem;
+            }
+            
+            .review-body {
+                padding: 2rem 1rem;
+            }
+            
+            .platform-card {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="review-container">
+        <div class="review-header">
+            <h1>Share Your Experience</h1>
+            <p>Your feedback helps us serve North Shore communities better</p>
+            <div class="rating-display">
+                <span class="stars">★★★★★</span>
+                <span class="rating-text">4.8/5 • 50+ Reviews</span>
+            </div>
+        </div>
+        
+        <div class="review-body">
+            <div class="review-intro">
+                <h2>Thank You for Choosing Manage369</h2>
+                <p>We value your feedback and would appreciate if you could take a moment to share your experience with our property management services.</p>
+            </div>
+            
+            <div class="review-platforms">
+                <!-- Google Reviews - Primary -->
+                <a href="https://g.page/r/CfdhSxOyYhY7EBM/review" target="_blank" class="platform-card google-primary">
+                    <div class="platform-icon">🌟</div>
+                    <div class="platform-name">Google Reviews</div>
+                    <div class="platform-description">Help others find us on Google Maps and Search</div>
+                    <span class="platform-cta">Leave a Google Review</span>
+                </a>
+                
+                <!-- Yelp -->
+                <a href="https://www.yelp.com/writeareview/biz/XXXXXXXXXX?return_url=%2Fbiz%2FXXXXXXXXXX" target="_blank" class="platform-card">
+                    <div class="platform-icon">📝</div>
+                    <div class="platform-name">Yelp</div>
+                    <div class="platform-description">Share your experience on Yelp</div>
+                    <span class="platform-cta">Review on Yelp</span>
+                </a>
+                
+                <!-- BBB -->
+                <a href="https://www.bbb.org/us/il/glenview/profile/property-management/manage369-XXXXXXXXXX/customer-reviews" target="_blank" class="platform-card">
+                    <div class="platform-icon">🏆</div>
+                    <div class="platform-name">Better Business Bureau</div>
+                    <div class="platform-description">Leave feedback on BBB</div>
+                    <span class="platform-cta">Review on BBB</span>
+                </a>
+            </div>
+            
+            <div class="testimonials">
+                <h3>What Our Clients Say</h3>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Manage369 transformed our building's operations. Their attention to detail and proactive communication have made all the difference."</p>
+                    <p class="testimonial-author">— Jennifer L., Condo Board President, Glenview</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"Professional, responsive, and knowledgeable. They've managed our 75-unit complex flawlessly for over 5 years."</p>
+                    <p class="testimonial-author">— Robert K., HOA Member, Northbrook</p>
+                </div>
+                
+                <div class="testimonial">
+                    <p class="testimonial-text">"The best property management company in the North Shore. They truly care about our community."</p>
+                    <p class="testimonial-author">— Maria S., Townhome Owner, Winnetka</p>
+                </div>
+            </div>
+            
+            <div class="back-link">
+                <a href="index.html">← Return to Homepage</a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Track review clicks
+        document.querySelectorAll('.platform-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                const platform = this.querySelector('.platform-name').textContent;
+                console.log('Review click:', platform);
+                // You can add Google Analytics tracking here
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'review_click', {
+                        'event_category': 'engagement',
+                        'event_label': platform
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
