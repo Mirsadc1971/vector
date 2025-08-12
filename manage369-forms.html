@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Manage369 Property Management - Chicago & North Shore. Professional HOA, Condo, and Townhome management services.">
+    <title>Contact Forms - Manage369 Property Management</title>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #4a90e2 0%, #357abd 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 3rem;
+            padding: 2rem 0;
+        }
+        
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.95;
+        }
+        
+        .forms-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .form-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+        
+        .form-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .form-title {
+            font-size: 1.8rem;
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid #ff9500;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #555;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            transition: all 0.3s;
+            font-family: inherit;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #ff9500;
+            box-shadow: 0 0 0 3px rgba(255, 149, 0, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .required {
+            color: #dc2626;
+        }
+        
+        .btn {
+            background: #ff9500;
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            width: 100%;
+            text-decoration: none;
+            display: block;
+            text-align: center;
+        }
+        
+        .btn:hover {
+            background: #e6850e;
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(255, 149, 0, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #4a90e2;
+        }
+        
+        .btn-secondary:hover {
+            background: #357abd;
+            box-shadow: 0 10px 30px rgba(74, 144, 226, 0.4);
+        }
+        
+        .success-badge {
+            background: #2ecc71;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        
+        .info-box {
+            background: #f0f4ff;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            border-left: 4px solid #4a90e2;
+        }
+        
+        .emergency-box {
+            background: #ffebee;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #dc2626;
+        }
+        
+        .emergency-box h3 {
+            color: #dc2626;
+            margin-bottom: 0.5rem;
+        }
+        
+        @media (max-width: 768px) {
+            .forms-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>MANAGE369</h1>
+            <p>Chicago & North Shore Property Management Since 2006</p>
+            <p style="margin-top: 1rem;">📞 (847) 652-2338 | 📧 service@manage369.com</p>
+        </div>
+        
+        <!-- Emergency Contact -->
+        <div class="emergency-box">
+            <h3>🚨 24/7 Emergency Maintenance?</h3>
+            <p>For urgent maintenance issues, call our emergency line immediately: <strong>(847) 652-2338</strong></p>
+        </div>
+        
+        <div class="forms-grid">
+            <!-- Property Management Inquiry Form -->
+            <div class="form-card">
+                <h2 class="form-title">
+                    Property Management Inquiry
+                    <span class="success-badge">INSTANT</span>
+                </h2>
+                
+                <form id="pm-form">
+                    <div class="form-group">
+                        <label for="pm-name">Your Name <span class="required">*</span></label>
+                        <input type="text" id="pm-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pm-email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="pm-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pm-phone">Phone Number</label>
+                        <input type="tel" id="pm-phone" placeholder="(847) 555-0100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pm-property-type">Property Type <span class="required">*</span></label>
+                        <select id="pm-property-type" required>
+                            <option value="">Select Property Type</option>
+                            <option value="Condominium">Condominium Association</option>
+                            <option value="HOA">Homeowners Association (HOA)</option>
+                            <option value="Townhome">Townhome Community</option>
+                            <option value="Mixed-Use">Mixed-Use Development</option>
+                            <option value="Commercial">Commercial Property</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pm-location">Property Location</label>
+                        <select id="pm-location">
+                            <option value="">Select Location</option>
+                            <option value="Glenview">Glenview</option>
+                            <option value="Northbrook">Northbrook</option>
+                            <option value="Wilmette">Wilmette</option>
+                            <option value="Winnetka">Winnetka</option>
+                            <option value="Evanston">Evanston</option>
+                            <option value="Skokie">Skokie</option>
+                            <option value="Highland Park">Highland Park</option>
+                            <option value="Lake Forest">Lake Forest</option>
+                            <option value="Chicago - Gold Coast">Chicago - Gold Coast</option>
+                            <option value="Chicago - Lincoln Park">Chicago - Lincoln Park</option>
+                            <option value="Chicago - Loop">Chicago - Loop</option>
+                            <option value="Other">Other North Shore/Chicago</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pm-units">Number of Units</label>
+                        <input type="text" id="pm-units" placeholder="e.g., 25 units">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="pm-message">Tell Us About Your Needs</label>
+                        <textarea id="pm-message" placeholder="Current challenges, services needed, timeline..."></textarea>
+                    </div>
+                    
+                    <button type="button" class="btn" onclick="sendPropertyInquiry()">
+                        📧 Send Inquiry via Email
+                    </button>
+                    
+                    <button type="button" class="btn btn-secondary" style="margin-top: 1rem;" onclick="copyPropertyInquiry()">
+                        📋 Copy & Send Manually
+                    </button>
+                </form>
+                
+                <div class="info-box">
+                    <strong>What happens next:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px; line-height: 1.6;">
+                        <li>Your email app will open</li>
+                        <li>Everything will be pre-filled</li>
+                        <li>Just click Send</li>
+                        <li>We respond within 24 hours</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Board Member Quick Contact -->
+            <div class="form-card">
+                <h2 class="form-title">
+                    Board Member Quick Contact
+                    <span class="success-badge">FOR BOARDS</span>
+                </h2>
+                
+                <form id="board-form">
+                    <div class="form-group">
+                        <label for="board-name">Your Name <span class="required">*</span></label>
+                        <input type="text" id="board-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="board-position">Board Position</label>
+                        <select id="board-position">
+                            <option value="">Select Position</option>
+                            <option value="President">President</option>
+                            <option value="Vice President">Vice President</option>
+                            <option value="Treasurer">Treasurer</option>
+                            <option value="Secretary">Secretary</option>
+                            <option value="Member">Board Member</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="board-association">Association Name <span class="required">*</span></label>
+                        <input type="text" id="board-association" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="board-email">Email <span class="required">*</span></label>
+                        <input type="email" id="board-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="board-phone">Phone</label>
+                        <input type="tel" id="board-phone">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="board-topic">Topic</label>
+                        <select id="board-topic">
+                            <option value="">Select Topic</option>
+                            <option value="Management Proposal">Request Management Proposal</option>
+                            <option value="Change Management">Change Management Companies</option>
+                            <option value="Financial Review">Financial Management Review</option>
+                            <option value="Maintenance Issue">Maintenance Coordination</option>
+                            <option value="Board Support">Board Support Services</option>
+                            <option value="General Question">General Question</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="board-message">Message</label>
+                        <textarea id="board-message" placeholder="How can we help your association?"></textarea>
+                    </div>
+                    
+                    <button type="button" class="btn" onclick="sendBoardInquiry()">
+                        📧 Send to Manage369
+                    </button>
+                    
+                    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=service@manage369.com" 
+                       target="_blank" 
+                       class="btn btn-secondary" 
+                       style="margin-top: 1rem;">
+                        📮 Open in Gmail
+                    </a>
+                </form>
+            </div>
+            
+            <!-- Maintenance Request Form -->
+            <div class="form-card">
+                <h2 class="form-title">
+                    Maintenance Request
+                    <span class="success-badge" style="background: #dc2626;">RESIDENTS</span>
+                </h2>
+                
+                <form id="maintenance-form">
+                    <div class="form-group">
+                        <label for="maint-name">Your Name <span class="required">*</span></label>
+                        <input type="text" id="maint-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maint-property">Property Name <span class="required">*</span></label>
+                        <input type="text" id="maint-property" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maint-unit">Unit Number</label>
+                        <input type="text" id="maint-unit" placeholder="e.g., 3B">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maint-type">Issue Type <span class="required">*</span></label>
+                        <select id="maint-type" required>
+                            <option value="">Select Issue Type</option>
+                            <option value="Plumbing">Plumbing</option>
+                            <option value="Electrical">Electrical</option>
+                            <option value="HVAC">Heating/Cooling</option>
+                            <option value="Appliance">Appliance</option>
+                            <option value="Structural">Structural</option>
+                            <option value="Pest Control">Pest Control</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maint-urgency">Urgency Level <span class="required">*</span></label>
+                        <select id="maint-urgency" required>
+                            <option value="">Select Urgency</option>
+                            <option value="Emergency">🚨 Emergency (Immediate)</option>
+                            <option value="Urgent">⚠️ Urgent (24-48 hours)</option>
+                            <option value="Normal">✓ Normal (This week)</option>
+                            <option value="Low">📅 Low (Schedule anytime)</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maint-description">Describe the Issue <span class="required">*</span></label>
+                        <textarea id="maint-description" required placeholder="Please describe the maintenance issue in detail..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="maint-contact">Best Contact Number <span class="required">*</span></label>
+                        <input type="tel" id="maint-contact" required>
+                    </div>
+                    
+                    <button type="button" class="btn" onclick="sendMaintenanceRequest()">
+                        📧 Submit Maintenance Request
+                    </button>
+                    
+                    <div class="info-box" style="margin-top: 1rem; background: #ffebee; border-color: #dc2626;">
+                        <strong>🚨 Emergency?</strong> Call immediately: <strong>(847) 652-2338</strong>
+                    </div>
+                </form>
+            </div>
+            
+            <!-- Get a Quote Form -->
+            <div class="form-card">
+                <h2 class="form-title">
+                    Get a Free Quote
+                    <span class="success-badge">NO OBLIGATION</span>
+                </h2>
+                
+                <form id="quote-form">
+                    <div class="form-group">
+                        <label for="quote-name">Contact Name <span class="required">*</span></label>
+                        <input type="text" id="quote-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quote-email">Email <span class="required">*</span></label>
+                        <input type="email" id="quote-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quote-phone">Phone <span class="required">*</span></label>
+                        <input type="tel" id="quote-phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quote-property">Property Name</label>
+                        <input type="text" id="quote-property">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quote-address">Property Address <span class="required">*</span></label>
+                        <input type="text" id="quote-address" required placeholder="Street address, City, IL">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quote-units">Number of Units <span class="required">*</span></label>
+                        <input type="text" id="quote-units" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quote-services">Services Needed</label>
+                        <select id="quote-services" multiple style="height: 120px;">
+                            <option value="Full Management">Full Property Management</option>
+                            <option value="Financial">Financial Management Only</option>
+                            <option value="Maintenance">Maintenance Coordination</option>
+                            <option value="Board Support">Board Support Services</option>
+                            <option value="Consulting">Consulting Services</option>
+                        </select>
+                        <small style="color: #666;">Hold Ctrl/Cmd to select multiple</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="quote-current">Current Management Situation</label>
+                        <select id="quote-current">
+                            <option value="">Select...</option>
+                            <option value="Self-Managed">Currently Self-Managed</option>
+                            <option value="Has Management">Has Management Company</option>
+                            <option value="New Development">New Development</option>
+                            <option value="Transitioning">In Transition</option>
+                        </select>
+                    </div>
+                    
+                    <button type="button" class="btn" onclick="sendQuoteRequest()">
+                        📧 Request Free Quote
+                    </button>
+                    
+                    <div class="info-box">
+                        <strong>✓ Free consultation</strong><br>
+                        <strong>✓ No obligation</strong><br>
+                        <strong>✓ Response within 24 hours</strong>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Alternative Contact Methods -->
+        <div style="margin-top: 3rem; background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+            <h2 style="font-size: 1.8rem; color: #1e3a8a; margin-bottom: 2rem; text-align: center;">Other Ways to Reach Us</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                <div style="text-align: center; padding: 1.5rem; background: #f0f4ff; border-radius: 10px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📧</div>
+                    <strong>Email Directly</strong>
+                    <p><a href="mailto:service@manage369.com" style="color: #4a90e2; text-decoration: none;">service@manage369.com</a></p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: #fff3e0; border-radius: 10px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📞</div>
+                    <strong>Call Us</strong>
+                    <p><a href="tel:8476522338" style="color: #ff9500; text-decoration: none; font-weight: bold;">(847) 652-2338</a></p>
+                    <small>Mon-Fri 9AM-5PM</small>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: #f0fff4; border-radius: 10px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📍</div>
+                    <strong>Visit Our Office</strong>
+                    <p>Glenview, IL 60026</p>
+                    <small>By appointment</small>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: #ffebee; border-radius: 10px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">🚨</div>
+                    <strong>24/7 Emergency</strong>
+                    <p style="color: #dc2626; font-weight: bold;">(847) 652-2338</p>
+                    <small>For urgent issues only</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Property Management Inquiry
+        function sendPropertyInquiry() {
+            const name = document.getElementById('pm-name').value;
+            const email = document.getElementById('pm-email').value;
+            const phone = document.getElementById('pm-phone').value;
+            const propertyType = document.getElementById('pm-property-type').value;
+            const location = document.getElementById('pm-location').value;
+            const units = document.getElementById('pm-units').value;
+            const message = document.getElementById('pm-message').value;
+            
+            const subject = `Property Management Inquiry - ${propertyType} in ${location || 'North Shore'}`;
+            const body = `Dear Manage369 Team,\n\n` +
+                        `I am interested in your property management services.\n\n` +
+                        `PROPERTY INFORMATION:\n` +
+                        `Type: ${propertyType}\n` +
+                        `Location: ${location || 'Not specified'}\n` +
+                        `Number of Units: ${units || 'Not specified'}\n\n` +
+                        `MY CONTACT INFORMATION:\n` +
+                        `Name: ${name}\n` +
+                        `Email: ${email}\n` +
+                        `Phone: ${phone || 'Not provided'}\n\n` +
+                        `ADDITIONAL INFORMATION:\n` +
+                        `${message || 'No additional details provided'}\n\n` +
+                        `Please contact me to discuss your services and pricing.\n\n` +
+                        `Best regards,\n${name}`;
+            
+            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+        
+        function copyPropertyInquiry() {
+            const name = document.getElementById('pm-name').value;
+            const email = document.getElementById('pm-email').value;
+            const propertyType = document.getElementById('pm-property-type').value;
+            
+            const emailText = `To: service@manage369.com\nSubject: Property Management Inquiry\n\nForm data copied! Paste this into your email app.`;
+            
+            navigator.clipboard.writeText(emailText).then(() => {
+                alert('✓ Form data copied! Now paste into your email app and send to service@manage369.com');
+            });
+        }
+        
+        // Board Member Inquiry
+        function sendBoardInquiry() {
+            const name = document.getElementById('board-name').value;
+            const position = document.getElementById('board-position').value;
+            const association = document.getElementById('board-association').value;
+            const email = document.getElementById('board-email').value;
+            const phone = document.getElementById('board-phone').value;
+            const topic = document.getElementById('board-topic').value;
+            const message = document.getElementById('board-message').value;
+            
+            const subject = `Board Inquiry - ${association} - ${topic || 'General'}`;
+            const body = `Dear Manage369,\n\n` +
+                        `I am contacting you on behalf of our association board.\n\n` +
+                        `BOARD MEMBER INFORMATION:\n` +
+                        `Name: ${name}\n` +
+                        `Position: ${position || 'Board Member'}\n` +
+                        `Association: ${association}\n` +
+                        `Email: ${email}\n` +
+                        `Phone: ${phone || 'Not provided'}\n\n` +
+                        `INQUIRY TOPIC: ${topic || 'General Question'}\n\n` +
+                        `MESSAGE:\n${message || 'Please contact me to discuss.'}\n\n` +
+                        `Thank you,\n${name}\n${position || 'Board Member'}\n${association}`;
+            
+            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+        
+        // Maintenance Request
+        function sendMaintenanceRequest() {
+            const name = document.getElementById('maint-name').value;
+            const property = document.getElementById('maint-property').value;
+            const unit = document.getElementById('maint-unit').value;
+            const type = document.getElementById('maint-type').value;
+            const urgency = document.getElementById('maint-urgency').value;
+            const description = document.getElementById('maint-description').value;
+            const contact = document.getElementById('maint-contact').value;
+            
+            const subject = `${urgency} - Maintenance Request - ${property} ${unit ? 'Unit ' + unit : ''}`;
+            const body = `MAINTENANCE REQUEST\n\n` +
+                        `URGENCY: ${urgency}\n\n` +
+                        `PROPERTY DETAILS:\n` +
+                        `Property: ${property}\n` +
+                        `Unit: ${unit || 'N/A'}\n` +
+                        `Issue Type: ${type}\n\n` +
+                        `DESCRIPTION OF ISSUE:\n` +
+                        `${description}\n\n` +
+                        `CONTACT INFORMATION:\n` +
+                        `Name: ${name}\n` +
+                        `Phone: ${contact}\n\n` +
+                        `Please contact me to schedule repairs.\n\n` +
+                        `Submitted by: ${name}`;
+            
+            if (urgency === 'Emergency') {
+                if (confirm('This is an EMERGENCY request. For immediate assistance, please call (847) 652-2338.\n\nContinue with email?')) {
+                    window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                }
+            } else {
+                window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            }
+        }
+        
+        // Quote Request
+        function sendQuoteRequest() {
+            const name = document.getElementById('quote-name').value;
+            const email = document.getElementById('quote-email').value;
+            const phone = document.getElementById('quote-phone').value;
+            const property = document.getElementById('quote-property').value;
+            const address = document.getElementById('quote-address').value;
+            const units = document.getElementById('quote-units').value;
+            const current = document.getElementById('quote-current').value;
+            
+            const servicesSelect = document.getElementById('quote-services');
+            const services = Array.from(servicesSelect.selectedOptions).map(option => option.value).join(', ');
+            
+            const subject = `Quote Request - ${property || address} - ${units} Units`;
+            const body = `REQUEST FOR MANAGEMENT QUOTE\n\n` +
+                        `PROPERTY INFORMATION:\n` +
+                        `Property Name: ${property || 'Not specified'}\n` +
+                        `Address: ${address}\n` +
+                        `Number of Units: ${units}\n` +
+                        `Current Situation: ${current || 'Not specified'}\n\n` +
+                        `SERVICES NEEDED:\n` +
+                        `${services || 'Full Property Management'}\n\n` +
+                        `CONTACT INFORMATION:\n` +
+                        `Name: ${name}\n` +
+                        `Email: ${email}\n` +
+                        `Phone: ${phone}\n\n` +
+                        `Please provide a detailed quote for management services.\n\n` +
+                        `Thank you,\n${name}`;
+            
+            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        }
+        
+        // Format phone numbers
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 0) {
+                    if (value.length <= 3) {
+                        value = `(${value}`;
+                    } else if (value.length <= 6) {
+                        value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                    } else {
+                        value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                    }
+                }
+                e.target.value = value;
+            });
+        });
+    </script>
+</body>
+</html>
