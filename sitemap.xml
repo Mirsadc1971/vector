@@ -2,15 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
   <url>
     <loc>https://manage369.com</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://manage369.com/contact.html</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://manage369.com/leave-review.html</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://manage369.com/consultation_form.html</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://manage369.com/forms.html</loc>
@@ -26,7 +38,7 @@
   </url>
   <url>
     <loc>https://manage369.com/property-management/</loc>
-    <lastmod>2025-08-09</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
@@ -79,6 +91,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://manage369.com/services/administrative-services/</loc>
+    <lastmod>2025-08-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://manage369.com/services/townhome-management/</loc>
     <lastmod>2025-08-10</lastmod>
     <changefreq>weekly</changefreq>
@@ -92,409 +110,409 @@
   </url>
   <url>
     <loc>https://manage369.com/property-management/albany-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/andersonville/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/arlington-heights/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/avondale/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/bucktown/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/buffalo-grove/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/deerfield/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/des-plaines/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/dunning/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/edgewater/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/edison-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/elk-grove-village/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/elmwood-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/evanston/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/forest-glen/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/franklin-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/glencoe/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/glenview/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/gold-coast/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/golf/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/harwood-heights/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/highland-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/hyde-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/itasca/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/jefferson-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/lake-bluff/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/lake-forest/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/lakeview/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/lincoln-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/lincoln-square/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/lincolnshire/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/lincolnwood/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/logan-square/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/loop/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/mayfair/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/morton-grove/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/mount-prospect/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/norridge/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/north-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/northbrook/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/northfield/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/norwood-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/oak-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/old-irving-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/old-town/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/park-ridge/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/portage-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/prospect-heights/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/pulaski-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/ravenswood/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/river-north/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/rogers-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/rolling-meadows/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/sauganash/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/schiller-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/skokie/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/south-loop/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/streeterville/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/the-glen/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/uptown/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/vernon-hills/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/west-loop/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/west-ridge/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/wheeling/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/wicker-park/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/wilmette/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/winnetka/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://manage369.com/property-management/wood-dale/</loc>
-    <lastmod>2025-08-10</lastmod>
+    <lastmod>2025-08-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
