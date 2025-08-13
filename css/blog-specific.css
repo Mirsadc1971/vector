@@ -105,6 +105,61 @@
     display: none !important;
 }
 
+/* Newsletter section styling */
+.newsletter {
+    background: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+    margin-top: 60px;
+}
+
+.newsletter h2 {
+    color: #1e3a8a;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.newsletter p {
+    color: #666;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.newsletter-form {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.newsletter-form input {
+    flex: 1;
+    padding: 12px 20px;
+    border: 2px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.newsletter-form button {
+    background: #ff9500;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.newsletter-form button:hover {
+    background: #e6850e;
+}
+
 /* If you want to keep it, uncomment below and remove above */
 /*
 .chat-widget {
