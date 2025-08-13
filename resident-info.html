@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resident Information Sheet - Manage369 Property Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            text-align: center;
+        }
+        
+        .form-section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+        
+        .radio-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-item input[type="radio"] {
+            margin-right: 5px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .submit-btn {
+            background: #1e3a8a;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background: #1e40af;
+        }
+        
+        .tenant-btn {
+            background: #059669;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 10px;
+        }
+        
+        .tenant-btn:hover {
+            background: #047857;
+        }
+        
+        .required {
+            color: #dc2626;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .three-column {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .file-upload {
+            padding: 8px;
+            border: 1px dashed #999;
+            background: #f9f9f9;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        
+        .tenant-section {
+            background: #f0f9ff;
+            padding: 20px;
+            border-radius: 4px;
+            margin-top: 20px;
+        }
+        
+        #tenantInfo {
+            display: none;
+        }
+        
+        #tenantInfo.show {
+            display: block;
+        }
+        
+        @media (max-width: 600px) {
+            .two-column,
+            .three-column {
+                grid-template-columns: 1fr;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+    <script>
+        function toggleTenantInfo() {
+            const occupied = document.querySelector('input[name="occupied"]:checked').value;
+            const tenantSection = document.getElementById('tenantInfo');
+            
+            if (occupied === 'No') {
+                tenantSection.classList.add('show');
+            } else {
+                tenantSection.classList.remove('show');
+            }
+        }
+        
+        function prepareOwnerEmail() {
+            // Gather form data
+            const formData = {
+                associationName: document.getElementById('associationName').value,
+                homeowner1: document.getElementById('homeowner1').value,
+                cell1: document.getElementById('cell1').value,
+                homeowner2: document.getElementById('homeowner2').value,
+                cell2: document.getElementById('cell2').value,
+                address: document.getElementById('address').value,
+                unit: document.getElementById('unit').value,
+                homePhone: document.getElementById('homePhone').value,
+                email1: document.getElementById('email1').value,
+                email2: document.getElementById('email2').value,
+                parkingSpace: document.getElementById('parkingSpace').value,
+                locker: document.getElementById('locker').value,
+                legalOwner: document.getElementById('legalOwner').value,
+                insuranceCompany: document.getElementById('insuranceCompany').value,
+                occupied: document.querySelector('input[name="occupied"]:checked').value,
+                leaseHolders: document.getElementById('leaseHolders').value,
+                leaseStart: document.getElementById('leaseStart').value,
+                leaseEnd: document.getElementById('leaseEnd').value,
+                tenantHomePhone: document.getElementById('tenantHomePhone').value,
+                tenantCell1: document.getElementById('tenantCell1').value,
+                tenantCell2: document.getElementById('tenantCell2').value,
+                otherResidents: document.getElementById('otherResidents').value,
+                pets: document.getElementById('pets').value,
+                vehicleMake: document.getElementById('vehicleMake').value,
+                vehicleModel: document.getElementById('vehicleModel').value,
+                vehiclePlate: document.getElementById('vehiclePlate').value,
+                specialHelp: document.querySelector('input[name="specialHelp"]:checked').value,
+                emergencyName: document.getElementById('emergencyName').value,
+                emergencyPhone: document.getElementById('emergencyPhone').value,
+                correspondence: document.querySelector('input[name="correspondence"]:checked').value,
+                electronicAgreement: document.getElementById('electronicAgreement').checked ? 'Yes' : 'No',
+                signature: document.getElementById('signature').value
+            };
+            
+            // Create email body
+            let emailBody = "RESIDENT INFORMATION SHEET\n";
+            emailBody += "==========================\n\n";
+            emailBody += "ASSOCIATION INFORMATION\n";
+            emailBody += "Association Name: " + formData.associationName + "\n\n";
+            emailBody += "OWNER INFORMATION\n";
+            emailBody += "Homeowner 1: " + formData.homeowner1 + " | Cell: " + formData.cell1 + "\n";
+            emailBody += "Homeowner 2: " + formData.homeowner2 + " | Cell: " + formData.cell2 + "\n";
+            emailBody += "Address: " + formData.address + "\n";
+            emailBody += "Unit: " + formData.unit + "\n";
+            emailBody += "Home Phone: " + formData.homePhone + "\n";
+            emailBody += "Email 1: " + formData.email1 + "\n";
+            emailBody += "Email 2: " + formData.email2 + "\n";
+            emailBody += "Parking Space #: " + formData.parkingSpace + "\n";
+            emailBody += "Locker #: " + formData.locker + "\n";
+            emailBody += "Legal Owner(s): " + formData.legalOwner + "\n";
+            emailBody += "Insurance Company: " + formData.insuranceCompany + "\n\n";
+            emailBody += "OCCUPANT INFORMATION\n";
+            emailBody += "Owner Occupied: " + formData.occupied + "\n";
+            
+            if (formData.occupied === 'No') {
+                emailBody += "Lease Holders: " + formData.leaseHolders + "\n";
+                emailBody += "Lease Start: " + formData.leaseStart + "\n";
+                emailBody += "Lease End: " + formData.leaseEnd + "\n";
+                emailBody += "Tenant Home Phone: " + formData.tenantHomePhone + "\n";
+                emailBody += "Tenant Cell 1: " + formData.tenantCell1 + "\n";
+                emailBody += "Tenant Cell 2: " + formData.tenantCell2 + "\n";
+            }
+            
+            emailBody += "Other Residents: " + formData.otherResidents + "\n";
+            emailBody += "Pets: " + formData.pets + "\n\n";
+            emailBody += "VEHICLE INFORMATION\n";
+            emailBody += "Make: " + formData.vehicleMake + "\n";
+            emailBody += "Model: " + formData.vehicleModel + "\n";
+            emailBody += "License Plate: " + formData.vehiclePlate + "\n\n";
+            emailBody += "EMERGENCY CONTACT\n";
+            emailBody += "Special Help Needed: " + formData.specialHelp + "\n";
+            emailBody += "Emergency Contact: " + formData.emergencyName + "\n";
+            emailBody += "Emergency Phone: " + formData.emergencyPhone + "\n\n";
+            emailBody += "COMMUNICATION PREFERENCE\n";
+            emailBody += "Preferred Method: " + formData.correspondence + "\n";
+            emailBody += "Electronic Agreement: " + formData.electronicAgreement + "\n\n";
+            emailBody += "SIGNATURE\n";
+            emailBody += "Signed: " + formData.signature + "\n";
+            emailBody += "Date: " + new Date().toLocaleDateString() + "\n\n";
+            emailBody += "NOTE: Please attach insurance declaration page and lease document (if applicable) to this email.";
+            
+            // Create mailto link
+            const subject = "Resident Information Sheet - Unit " + formData.unit;
+            const mailtoLink = "mailto:service@manage369.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            return false;
+        }
+        
+        function prepareTenantEmail() {
+            alert("This form is for property owners only. Tenants should contact the property owner to update resident information.");
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <a href="forms.html" class="back-link">← Back to Forms</a>
+        
+        <div class="header">
+            <div class="logo">Manage369 Property Management</div>
+            <div class="contact-info">
+                📞 (847) 652-2338 | ✉️ service@manage369.com<br>
+                📍 1400 Patriot Boulevard 357, Glenview, IL 60026
+            </div>
+        </div>
+        
+        <h1>Resident Information Sheet</h1>
+        
+        <form onsubmit="return prepareOwnerEmail()">
+            <!-- Association Information -->
+            <div class="form-section">
+                <div class="section-title">Association Information</div>
+                
+                <div class="form-group">
+                    <label for="associationName">Association Name <span class="required">*</span></label>
+                    <input type="text" id="associationName" name="associationName" required>
+                </div>
+            </div>
+            
+            <!-- Owner Information -->
+            <div class="form-section">
+                <div class="section-title">Owner Information</div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="homeowner1">Homeowner 1 <span class="required">*</span></label>
+                        <input type="text" id="homeowner1" name="homeowner1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cell1">Cell # <span class="required">*</span></label>
+                        <input type="tel" id="cell1" name="cell1" required>
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="homeowner2">Homeowner 2</label>
+                        <input type="text" id="homeowner2" name="homeowner2">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="cell2">Cell #</label>
+                        <input type="tel" id="cell2" name="cell2">
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="address">Address <span class="required">*</span></label>
+                        <input type="text" id="address" name="address" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="unit">Unit <span class="required">*</span></label>
+                        <input type="text" id="unit" name="unit" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="homePhone">Home Phone</label>
+                    <input type="tel" id="homePhone" name="homePhone">
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="email1">Homeowner 1 Email <span class="required">*</span></label>
+                        <input type="email" id="email1" name="email1" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email2">Homeowner 2 Email</label>
+                        <input type="email" id="email2" name="email2">
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="parkingSpace">Parking Space #</label>
+                        <input type="text" id="parkingSpace" name="parkingSpace">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="locker">Locker #</label>
+                        <input type="text" id="locker" name="locker">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="legalOwner">Legal and Beneficial Owner(s) <span class="required">*</span></label>
+                    <input type="text" id="legalOwner" name="legalOwner" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="insuranceCompany">Homeowner's Insurance Company <span class="required">*</span></label>
+                    <input type="text" id="insuranceCompany" name="insuranceCompany" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="insuranceDoc">Attach insurance declaration page (PDF)</label>
+                    <div class="file-upload">
+                        📎 Please attach to email when submitting
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Occupant Information -->
+            <div class="form-section">
+                <div class="section-title">Occupant Information</div>
+                
+                <div class="form-group">
+                    <label>Is Unit Currently Occupied by Owner? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="occupiedYes" name="occupied" value="Yes" required onchange="toggleTenantInfo()">
+                            <label for="occupiedYes">Yes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="occupiedNo" name="occupied" value="No" required onchange="toggleTenantInfo()">
+                            <label for="occupiedNo">No</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="tenantInfo" class="tenant-section">
+                    <div class="form-group">
+                        <label for="leaseHolders">Names of Lease Holders</label>
+                        <input type="text" id="leaseHolders" name="leaseHolders">
+                    </div>
+                    
+                    <div class="two-column">
+                        <div class="form-group">
+                            <label for="leaseStart">Lease Start Date</label>
+                            <input type="date" id="leaseStart" name="leaseStart">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="leaseEnd">Lease End Date</label>
+                            <input type="date" id="leaseEnd" name="leaseEnd">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="tenantHomePhone">Home Phone</label>
+                        <input type="tel" id="tenantHomePhone" name="tenantHomePhone">
+                    </div>
+                    
+                    <div class="two-column">
+                        <div class="form-group">
+                            <label for="tenantCell1">Cell Phone 1</label>
+                            <input type="tel" id="tenantCell1" name="tenantCell1">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="tenantCell2">Cell Phone 2</label>
+                            <input type="tel" id="tenantCell2" name="tenantCell2">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="leaseDoc">Attach lease document (PDF)</label>
+                        <div class="file-upload">
+                            📎 Please attach to email when submitting
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="otherResidents">List all residents in your home not listed above</label>
+                    <textarea id="otherResidents" name="otherResidents" placeholder="Name, relationship, age..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="pets">List pets in your home (Breed, Name)</label>
+                    <textarea id="pets" name="pets" placeholder="e.g., Golden Retriever - Max, Tabby Cat - Whiskers"></textarea>
+                </div>
+            </div>
+            
+            <!-- Vehicle Information -->
+            <div class="form-section">
+                <div class="section-title">Vehicle Information</div>
+                
+                <div class="three-column">
+                    <div class="form-group">
+                        <label for="vehicleMake">Make</label>
+                        <input type="text" id="vehicleMake" name="vehicleMake">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="vehicleModel">Model</label>
+                        <input type="text" id="vehicleModel" name="vehicleModel">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="vehiclePlate">License Plate</label>
+                        <input type="text" id="vehiclePlate" name="vehiclePlate">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Emergency Contact -->
+            <div class="form-section">
+                <div class="section-title">Emergency Contact Information</div>
+                
+                <div class="form-group">
+                    <label>Will you need special help in case of emergency? (elderly, disabled)</label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="helpYes" name="specialHelp" value="Yes" required>
+                            <label for="helpYes">Yes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="helpNo" name="specialHelp" value="No" required>
+                            <label for="helpNo">No</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="emergencyName">Emergency Contact Name <span class="required">*</span></label>
+                        <input type="text" id="emergencyName" name="emergencyName" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="emergencyPhone">Emergency Contact Phone <span class="required">*</span></label>
+                        <input type="tel" id="emergencyPhone" name="emergencyPhone" required>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Communication Preference -->
+            <div class="form-section">
+                <div class="section-title">Communication Preference</div>
+                
+                <div class="form-group">
+                    <label>Preferred method of correspondence <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="prefEmail" name="correspondence" value="Email" required>
+                            <label for="prefEmail">Email</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="prefMail" name="correspondence" value="Mail" required>
+                            <label for="prefMail">Mail</label>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="electronicAgreement" name="electronicAgreement" required>
+                    <label for="electronicAgreement">I agree to receive electronic communications from the management company and understand that I may receive important notices, updates, and other communications via email. <span class="required">*</span></label>
+                </div>
+            </div>
+            
+            <!-- Digital Signature -->
+            <div class="form-section">
+                <div class="section-title">Digital Signature</div>
+                
+                <div class="form-group">
+                    <label for="signature">Type your full name as signature <span class="required">*</span></label>
+                    <input type="text" id="signature" name="signature" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Form</button>
+            <button type="button" class="tenant-btn" onclick="prepareTenantEmail()">If you are a tenant (non-owner), click here</button>
+        </form>
+    </div>
+</body>
+</html>
