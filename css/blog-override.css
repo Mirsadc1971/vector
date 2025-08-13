@@ -2,8 +2,8 @@
 
 /* Override the 100vh hero height for blog pages */
 .hero {
-    height: auto !important;
-    min-height: 300px !important;
+    height: 300px !important;
+    min-height: unset !important;
     padding: 80px 20px 60px !important;
 }
 
