@@ -477,8 +477,8 @@
                     </div>
                     
                     <div class="form-group">
-                        <label>Phone</label>
-                        <input type="tel" id="mgmt-phone" placeholder="(847) 555-0100">
+                        <label>Phone <span class="required">*</span></label>
+                        <input type="tel" id="mgmt-phone" placeholder="(847) 555-0100" required>
                     </div>
                     
                     <div class="form-group">
@@ -489,26 +489,76 @@
                             <option value="HOA">Homeowners Association</option>
                             <option value="Townhome">Townhome Community</option>
                             <option value="Commercial">Commercial Property</option>
+                            <option value="Mixed-Use">Mixed-Use Property</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
-                        <label>Property Location</label>
-                        <input type="text" id="mgmt-location" placeholder="City or Neighborhood">
+                        <label>Property Address <span class="required">*</span></label>
+                        <input type="text" id="mgmt-address" placeholder="Street Address" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>Number of Units</label>
-                        <input type="text" id="mgmt-units" placeholder="e.g., 25">
+                        <label>City <span class="required">*</span></label>
+                        <select id="mgmt-city" required>
+                            <option value="">Select City</option>
+                            <option value="Chicago">Chicago</option>
+                            <option value="Evanston">Evanston</option>
+                            <option value="Skokie">Skokie</option>
+                            <option value="Wilmette">Wilmette</option>
+                            <option value="Winnetka">Winnetka</option>
+                            <option value="Glenview">Glenview</option>
+                            <option value="Northbrook">Northbrook</option>
+                            <option value="Highland Park">Highland Park</option>
+                            <option value="Lake Forest">Lake Forest</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
                     
                     <div class="form-group">
-                        <label>Message</label>
-                        <textarea id="mgmt-message" placeholder="Tell us about your property management needs..."></textarea>
+                        <label>Number of Units <span class="required">*</span></label>
+                        <input type="number" id="mgmt-units" placeholder="e.g., 25" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Current Management</label>
+                        <select id="mgmt-current">
+                            <option value="">Select Option</option>
+                            <option value="Self-Managed">Self-Managed</option>
+                            <option value="Other Company">Other Management Company</option>
+                            <option value="New Construction">New Construction</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Services Needed</label>
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-top: 10px;">
+                            <label style="font-weight: normal;"><input type="checkbox" value="Financial Management"> Financial Management</label>
+                            <label style="font-weight: normal;"><input type="checkbox" value="Maintenance Coordination"> Maintenance Coordination</label>
+                            <label style="font-weight: normal;"><input type="checkbox" value="Board Support"> Board Support</label>
+                            <label style="font-weight: normal;"><input type="checkbox" value="Vendor Management"> Vendor Management</label>
+                            <label style="font-weight: normal;"><input type="checkbox" value="Emergency Response"> 24/7 Emergency Response</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Best Time to Contact</label>
+                        <select id="mgmt-contact-time">
+                            <option value="">Select Time</option>
+                            <option value="Morning">Morning (9AM-12PM)</option>
+                            <option value="Afternoon">Afternoon (12PM-5PM)</option>
+                            <option value="Evening">Evening (5PM-7PM)</option>
+                            <option value="Anytime">Anytime</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Additional Information</label>
+                        <textarea id="mgmt-message" placeholder="Tell us about your property management needs, challenges, or specific requirements..." rows="5"></textarea>
                     </div>
                     
                     <button type="button" class="btn btn-full" onclick="sendManagementInquiry()">
-                        📧 Send Inquiry
+                        Submit Inquiry
                     </button>
                 </form>
             </div>
@@ -525,18 +575,45 @@
                     </div>
                     
                     <div class="form-group">
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" id="maint-email" required>
+                    </div>
+                    
+                    <div class="form-group">
                         <label>Property Name <span class="required">*</span></label>
                         <input type="text" id="maint-property" required>
                     </div>
                     
                     <div class="form-group">
-                        <label>Unit Number</label>
-                        <input type="text" id="maint-unit" placeholder="e.g., 3B">
+                        <label>Unit Number <span class="required">*</span></label>
+                        <input type="text" id="maint-unit" placeholder="e.g., 3B" required>
                     </div>
                     
                     <div class="form-group">
                         <label>Contact Phone <span class="required">*</span></label>
                         <input type="tel" id="maint-phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Alternative Phone</label>
+                        <input type="tel" id="maint-alt-phone" placeholder="(847) 555-0100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Issue Location <span class="required">*</span></label>
+                        <select id="maint-location" required>
+                            <option value="">Select Location</option>
+                            <option value="Kitchen">Kitchen</option>
+                            <option value="Bathroom">Bathroom</option>
+                            <option value="Bedroom">Bedroom</option>
+                            <option value="Living Room">Living Room</option>
+                            <option value="Balcony/Patio">Balcony/Patio</option>
+                            <option value="Common Area">Common Area</option>
+                            <option value="Hallway">Hallway</option>
+                            <option value="Garage">Garage</option>
+                            <option value="Exterior">Exterior</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
                     
                     <div class="form-group">
@@ -548,6 +625,10 @@
                             <option value="HVAC">Heating/Cooling</option>
                             <option value="Appliance">Appliance</option>
                             <option value="Structural">Structural</option>
+                            <option value="Pest Control">Pest Control</option>
+                            <option value="Lock/Key">Lock/Key</option>
+                            <option value="Water Damage">Water Damage</option>
+                            <option value="Window/Door">Window/Door</option>
                             <option value="Other">Other</option>
                         </select>
                     </div>
@@ -556,24 +637,183 @@
                         <label>Urgency <span class="required">*</span></label>
                         <select id="maint-urgency" required>
                             <option value="">Select Urgency</option>
-                            <option value="Emergency">🚨 Emergency (Immediate)</option>
-                            <option value="Urgent">⚠️ Urgent (24-48 hours)</option>
-                            <option value="Normal">✓ Normal (This week)</option>
+                            <option value="Emergency">Emergency (Immediate - Safety/Security Issue)</option>
+                            <option value="Urgent">Urgent (24-48 hours)</option>
+                            <option value="Normal">Normal (This week)</option>
+                            <option value="Low">Low Priority (When convenient)</option>
                         </select>
                     </div>
                     
                     <div class="form-group">
+                        <label>Access Instructions</label>
+                        <textarea id="maint-access" placeholder="Special instructions for entering unit, pets present, preferred contact times, etc." rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
                         <label>Description <span class="required">*</span></label>
-                        <textarea id="maint-description" required placeholder="Please describe the issue..."></textarea>
+                        <textarea id="maint-description" required placeholder="Please describe the issue in detail..." rows="5"></textarea>
                     </div>
                     
                     <button type="button" class="btn btn-full" onclick="sendMaintenanceRequest()">
-                        📧 Submit Request
+                        Submit Request
                     </button>
                     
                     <p style="margin-top: 1rem; text-align: center; color: #dc2626;">
                         <strong>Emergency?</strong> Call (847) 652-2338 immediately
                     </p>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Additional Forms Row -->
+        <div class="forms-grid" style="margin-top: 3rem;">
+            <!-- Owner Consultation Form -->
+            <div class="form-card">
+                <h2>Schedule Free Consultation</h2>
+                <p>Property owners - let's discuss your management needs</p>
+                
+                <form id="consultation-form">
+                    <div class="form-group">
+                        <label>Your Name <span class="required">*</span></label>
+                        <input type="text" id="consult-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" id="consult-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone <span class="required">*</span></label>
+                        <input type="tel" id="consult-phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Property Type <span class="required">*</span></label>
+                        <select id="consult-type" required>
+                            <option value="">Select Property Type</option>
+                            <option value="Condominium">Condominium</option>
+                            <option value="HOA">HOA</option>
+                            <option value="Townhome">Townhome</option>
+                            <option value="Multi-Family">Multi-Family</option>
+                            <option value="Commercial">Commercial</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Number of Units <span class="required">*</span></label>
+                        <select id="consult-units" required>
+                            <option value="">Select Range</option>
+                            <option value="1-10">1-10 units</option>
+                            <option value="11-25">11-25 units</option>
+                            <option value="26-50">26-50 units</option>
+                            <option value="51-100">51-100 units</option>
+                            <option value="100+">100+ units</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Preferred Meeting Type</label>
+                        <select id="consult-meeting">
+                            <option value="">Select Preference</option>
+                            <option value="In-Person">In-Person Meeting</option>
+                            <option value="Phone">Phone Call</option>
+                            <option value="Video">Video Conference</option>
+                            <option value="Property Visit">On-Site Property Visit</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Preferred Date/Time</label>
+                        <input type="text" id="consult-datetime" placeholder="e.g., Next Tuesday afternoon">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Main Concerns</label>
+                        <textarea id="consult-concerns" placeholder="What are your main property management challenges?" rows="4"></textarea>
+                    </div>
+                    
+                    <button type="button" class="btn btn-full btn-secondary" onclick="sendConsultation()">
+                        Schedule Consultation
+                    </button>
+                </form>
+            </div>
+            
+            <!-- Board Member Inquiry Form -->
+            <div class="form-card">
+                <h2>Board Member Inquiry</h2>
+                <p>Board members - get information for your association</p>
+                
+                <form id="board-form">
+                    <div class="form-group">
+                        <label>Your Name <span class="required">*</span></label>
+                        <input type="text" id="board-name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Association Name <span class="required">*</span></label>
+                        <input type="text" id="board-association" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Role <span class="required">*</span></label>
+                        <select id="board-role" required>
+                            <option value="">Select Role</option>
+                            <option value="President">Board President</option>
+                            <option value="Vice President">Vice President</option>
+                            <option value="Treasurer">Treasurer</option>
+                            <option value="Secretary">Secretary</option>
+                            <option value="Board Member">Board Member</option>
+                            <option value="Committee Chair">Committee Chair</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Email <span class="required">*</span></label>
+                        <input type="email" id="board-email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone <span class="required">*</span></label>
+                        <input type="tel" id="board-phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Inquiry Type <span class="required">*</span></label>
+                        <select id="board-inquiry" required>
+                            <option value="">Select Inquiry Type</option>
+                            <option value="Management Proposal">Request Management Proposal</option>
+                            <option value="Change Management">Change Management Companies</option>
+                            <option value="Service Upgrade">Upgrade Current Services</option>
+                            <option value="General Question">General Question</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Association Size</label>
+                        <input type="number" id="board-size" placeholder="Number of units">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Annual Budget Range</label>
+                        <select id="board-budget">
+                            <option value="">Select Budget Range</option>
+                            <option value="Under 100k">Under $100,000</option>
+                            <option value="100k-250k">$100,000 - $250,000</option>
+                            <option value="250k-500k">$250,000 - $500,000</option>
+                            <option value="500k-1M">$500,000 - $1M</option>
+                            <option value="Over 1M">Over $1M</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message <span class="required">*</span></label>
+                        <textarea id="board-message" required placeholder="Please describe your inquiry or requirements..." rows="5"></textarea>
+                    </div>
+                    
+                    <button type="button" class="btn btn-full" onclick="sendBoardInquiry()">
+                        Submit Inquiry
+                    </button>
                 </form>
             </div>
         </div>
@@ -642,68 +882,166 @@
             const email = document.getElementById('mgmt-email').value;
             const phone = document.getElementById('mgmt-phone').value;
             const type = document.getElementById('mgmt-type').value;
-            const location = document.getElementById('mgmt-location').value;
+            const address = document.getElementById('mgmt-address').value;
+            const city = document.getElementById('mgmt-city').value;
             const units = document.getElementById('mgmt-units').value;
+            const current = document.getElementById('mgmt-current').value;
+            const contactTime = document.getElementById('mgmt-contact-time').value;
             const message = document.getElementById('mgmt-message').value;
             
-            if (!name || !email || !type) {
+            const checkboxes = document.querySelectorAll('#management-form input[type="checkbox"]:checked');
+            const services = Array.from(checkboxes).map(cb => cb.value).join(', ');
+            
+            if (!name || !email || !phone || !type || !address || !city || !units) {
                 alert('Please fill in all required fields');
                 return;
             }
             
-            const subject = `Property Management Inquiry - ${type} in ${location || 'Chicago Area'}`;
-            const body = `New Property Management Inquiry\n\n` +
-                        `Contact Information:\n` +
+            const subject = `Property Management Inquiry - ${type} in ${city}`;
+            const body = `NEW PROPERTY MANAGEMENT INQUIRY\n\n` +
+                        `CONTACT INFORMATION:\n` +
                         `Name: ${name}\n` +
                         `Email: ${email}\n` +
-                        `Phone: ${phone || 'Not provided'}\n\n` +
-                        `Property Details:\n` +
+                        `Phone: ${phone}\n` +
+                        `Best Time to Contact: ${contactTime || 'Anytime'}\n\n` +
+                        `PROPERTY DETAILS:\n` +
                         `Type: ${type}\n` +
-                        `Location: ${location || 'Not specified'}\n` +
-                        `Units: ${units || 'Not specified'}\n\n` +
-                        `Message:\n${message || 'No additional message'}\n\n` +
-                        `Please contact me to discuss property management services.\n\n` +
-                        `Submitted by: ${name}`;
+                        `Address: ${address}\n` +
+                        `City: ${city}\n` +
+                        `Number of Units: ${units}\n` +
+                        `Current Management: ${current || 'Not specified'}\n\n` +
+                        `SERVICES NEEDED:\n${services || 'Not specified'}\n\n` +
+                        `ADDITIONAL INFORMATION:\n${message || 'No additional information'}\n\n` +
+                        `---\n` +
+                        `Submitted: ${new Date().toLocaleString()}\n` +
+                        `From: ${name}`;
             
             window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            alert('Thank you for your inquiry! We will contact you within 24 hours.');
         }
         
         // Maintenance Request
         function sendMaintenanceRequest() {
             const name = document.getElementById('maint-name').value;
+            const email = document.getElementById('maint-email').value;
             const property = document.getElementById('maint-property').value;
             const unit = document.getElementById('maint-unit').value;
             const phone = document.getElementById('maint-phone').value;
+            const altPhone = document.getElementById('maint-alt-phone').value;
+            const location = document.getElementById('maint-location').value;
             const type = document.getElementById('maint-type').value;
             const urgency = document.getElementById('maint-urgency').value;
+            const access = document.getElementById('maint-access').value;
             const description = document.getElementById('maint-description').value;
             
-            if (!name || !property || !phone || !type || !urgency || !description) {
+            if (!name || !email || !property || !unit || !phone || !location || !type || !urgency || !description) {
                 alert('Please fill in all required fields');
                 return;
             }
             
-            const subject = `${urgency} Maintenance Request - ${property} ${unit ? 'Unit ' + unit : ''}`;
+            const subject = `[${urgency}] Maintenance Request - ${property} Unit ${unit}`;
             const body = `MAINTENANCE REQUEST\n\n` +
-                        `URGENCY: ${urgency}\n\n` +
-                        `Resident Information:\n` +
+                        `PRIORITY: ${urgency}\n\n` +
+                        `RESIDENT INFORMATION:\n` +
                         `Name: ${name}\n` +
+                        `Email: ${email}\n` +
                         `Property: ${property}\n` +
-                        `Unit: ${unit || 'N/A'}\n` +
-                        `Phone: ${phone}\n\n` +
-                        `Issue Details:\n` +
-                        `Type: ${type}\n` +
+                        `Unit: ${unit}\n` +
+                        `Primary Phone: ${phone}\n` +
+                        `Alternative Phone: ${altPhone || 'None'}\n\n` +
+                        `ISSUE DETAILS:\n` +
+                        `Location in Unit: ${location}\n` +
+                        `Issue Type: ${type}\n` +
                         `Description: ${description}\n\n` +
-                        `Please contact me to schedule repairs.\n\n` +
-                        `Submitted by: ${name}`;
+                        `ACCESS INSTRUCTIONS:\n${access || 'No special instructions'}\n\n` +
+                        `---\n` +
+                        `Submitted: ${new Date().toLocaleString()}\n` +
+                        `Resident: ${name}`;
             
             if (urgency === 'Emergency') {
-                if (confirm('This is an EMERGENCY. For immediate help, call (847) 652-2338.\n\nContinue with email?')) {
+                if (confirm('This is an EMERGENCY. For immediate help, call (847) 652-2338.\n\nContinue with email submission?')) {
                     window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    alert('Emergency request submitted. We will contact you immediately.');
                 }
             } else {
                 window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                alert('Maintenance request submitted. We will contact you within 24 hours.');
             }
+        }
+        
+        // Consultation Request
+        function sendConsultation() {
+            const name = document.getElementById('consult-name').value;
+            const email = document.getElementById('consult-email').value;
+            const phone = document.getElementById('consult-phone').value;
+            const type = document.getElementById('consult-type').value;
+            const units = document.getElementById('consult-units').value;
+            const meeting = document.getElementById('consult-meeting').value;
+            const datetime = document.getElementById('consult-datetime').value;
+            const concerns = document.getElementById('consult-concerns').value;
+            
+            if (!name || !email || !phone || !type || !units) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            const subject = `Consultation Request - ${type} (${units} units)`;
+            const body = `FREE CONSULTATION REQUEST\n\n` +
+                        `CONTACT INFORMATION:\n` +
+                        `Name: ${name}\n` +
+                        `Email: ${email}\n` +
+                        `Phone: ${phone}\n\n` +
+                        `PROPERTY INFORMATION:\n` +
+                        `Property Type: ${type}\n` +
+                        `Number of Units: ${units}\n\n` +
+                        `MEETING PREFERENCES:\n` +
+                        `Meeting Type: ${meeting || 'No preference'}\n` +
+                        `Preferred Date/Time: ${datetime || 'Flexible'}\n\n` +
+                        `MAIN CONCERNS:\n${concerns || 'To be discussed'}\n\n` +
+                        `---\n` +
+                        `Submitted: ${new Date().toLocaleString()}\n` +
+                        `From: ${name}`;
+            
+            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            alert('Consultation request submitted! We will contact you within 24 hours to schedule.');
+        }
+        
+        // Board Member Inquiry
+        function sendBoardInquiry() {
+            const name = document.getElementById('board-name').value;
+            const association = document.getElementById('board-association').value;
+            const role = document.getElementById('board-role').value;
+            const email = document.getElementById('board-email').value;
+            const phone = document.getElementById('board-phone').value;
+            const inquiry = document.getElementById('board-inquiry').value;
+            const size = document.getElementById('board-size').value;
+            const budget = document.getElementById('board-budget').value;
+            const message = document.getElementById('board-message').value;
+            
+            if (!name || !association || !role || !email || !phone || !inquiry || !message) {
+                alert('Please fill in all required fields');
+                return;
+            }
+            
+            const subject = `Board Inquiry - ${association} - ${inquiry}`;
+            const body = `BOARD MEMBER INQUIRY\n\n` +
+                        `BOARD MEMBER INFORMATION:\n` +
+                        `Name: ${name}\n` +
+                        `Role: ${role}\n` +
+                        `Association: ${association}\n` +
+                        `Email: ${email}\n` +
+                        `Phone: ${phone}\n\n` +
+                        `ASSOCIATION DETAILS:\n` +
+                        `Size: ${size || 'Not specified'} units\n` +
+                        `Annual Budget: ${budget || 'Not specified'}\n\n` +
+                        `INQUIRY TYPE: ${inquiry}\n\n` +
+                        `MESSAGE:\n${message}\n\n` +
+                        `---\n` +
+                        `Submitted: ${new Date().toLocaleString()}\n` +
+                        `From: ${name}, ${role}`;
+            
+            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            alert('Thank you for your inquiry! A management specialist will contact you within 24 hours.');
         }
         
         // Format phone numbers
@@ -720,6 +1058,27 @@
                     }
                 }
                 e.target.value = value;
+            });
+        });
+        
+        // Form validation styling
+        document.addEventListener('DOMContentLoaded', function() {
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+                inputs.forEach(input => {
+                    input.addEventListener('blur', function() {
+                        if (this.value.trim() === '') {
+                            this.style.borderColor = '#dc2626';
+                        } else {
+                            this.style.borderColor = '#22c55e';
+                        }
+                    });
+                    
+                    input.addEventListener('focus', function() {
+                        this.style.borderColor = '#ff9500';
+                    });
+                });
             });
         });
     </script>
