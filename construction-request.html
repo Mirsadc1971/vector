@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Construction Request - Manage369 Property Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            text-align: center;
+        }
+        
+        .notice {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .form-section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .submit-btn {
+            background: #1e3a8a;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background: #1e40af;
+        }
+        
+        .required {
+            color: #dc2626;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media (max-width: 600px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        function prepareEmail() {
+            // Gather form data
+            const formData = {
+                ownerName: document.getElementById('ownerName').value,
+                unitNumber: document.getElementById('unitNumber').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                altContact: document.getElementById('altContact').value,
+                projectType: document.getElementById('projectType').value,
+                description: document.getElementById('description').value,
+                contractor: document.getElementById('contractor').value,
+                contractorPhone: document.getElementById('contractorPhone').value,
+                contractorLicense: document.getElementById('contractorLicense').value,
+                startDate: document.getElementById('startDate').value,
+                endDate: document.getElementById('endDate').value,
+                workHours: document.getElementById('workHours').value,
+                materials: document.getElementById('materials').value,
+                structural: document.getElementById('structural').checked ? 'Yes' : 'No',
+                plumbing: document.getElementById('plumbing').checked ? 'Yes' : 'No',
+                electrical: document.getElementById('electrical').checked ? 'Yes' : 'No',
+                hvac: document.getElementById('hvac').checked ? 'Yes' : 'No',
+                permits: document.getElementById('permits').value,
+                insurance: document.getElementById('insurance').checked ? 'Yes' : 'No',
+                agreement: document.getElementById('agreement').checked ? 'Yes' : 'No',
+                signature: document.getElementById('signature').value,
+                date: document.getElementById('date').value
+            };
+            
+            // Create email body
+            let emailBody = "CONSTRUCTION REQUEST FORM\n";
+            emailBody += "=========================\n\n";
+            emailBody += "OWNER INFORMATION\n";
+            emailBody += "Name: " + formData.ownerName + "\n";
+            emailBody += "Unit Number: " + formData.unitNumber + "\n";
+            emailBody += "Phone: " + formData.phone + "\n";
+            emailBody += "Email: " + formData.email + "\n";
+            emailBody += "Alternate Contact: " + formData.altContact + "\n\n";
+            emailBody += "PROJECT DETAILS\n";
+            emailBody += "Project Type: " + formData.projectType + "\n";
+            emailBody += "Description:\n" + formData.description + "\n\n";
+            emailBody += "CONTRACTOR INFORMATION\n";
+            emailBody += "Contractor Name: " + formData.contractor + "\n";
+            emailBody += "Contractor Phone: " + formData.contractorPhone + "\n";
+            emailBody += "License Number: " + formData.contractorLicense + "\n\n";
+            emailBody += "WORK SCHEDULE\n";
+            emailBody += "Start Date: " + formData.startDate + "\n";
+            emailBody += "End Date: " + formData.endDate + "\n";
+            emailBody += "Work Hours: " + formData.workHours + "\n\n";
+            emailBody += "WORK AREAS AFFECTED\n";
+            emailBody += "Structural: " + formData.structural + "\n";
+            emailBody += "Plumbing: " + formData.plumbing + "\n";
+            emailBody += "Electrical: " + formData.electrical + "\n";
+            emailBody += "HVAC: " + formData.hvac + "\n\n";
+            emailBody += "MATERIALS & EQUIPMENT\n";
+            emailBody += formData.materials + "\n\n";
+            emailBody += "PERMITS\n";
+            emailBody += formData.permits + "\n\n";
+            emailBody += "CONFIRMATIONS\n";
+            emailBody += "Insurance Provided: " + formData.insurance + "\n";
+            emailBody += "Terms Agreed: " + formData.agreement + "\n\n";
+            emailBody += "SIGNATURE\n";
+            emailBody += "Signed: " + formData.signature + "\n";
+            emailBody += "Date: " + formData.date;
+            
+            // Create mailto link
+            const subject = "Construction Request - Unit " + formData.unitNumber;
+            const mailtoLink = "mailto:service@manage369.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <a href="forms.html" class="back-link">← Back to Forms</a>
+        
+        <div class="header">
+            <div class="logo">Manage369 Property Management</div>
+            <div class="contact-info">
+                📞 (847) 652-2338 | ✉️ service@manage369.com<br>
+                📍 1400 Patriot Boulevard 357, Glenview, IL 60026
+            </div>
+        </div>
+        
+        <h1>Construction Request Form</h1>
+        
+        <div class="notice">
+            ⚠️ <strong>Important:</strong> All construction work must be approved BEFORE starting. Please submit this form at least 30 days prior to your planned start date.
+        </div>
+        
+        <form onsubmit="return prepareEmail()">
+            <!-- Owner Information -->
+            <div class="form-section">
+                <div class="section-title">Owner Information</div>
+                
+                <div class="form-group">
+                    <label for="ownerName">Owner Name <span class="required">*</span></label>
+                    <input type="text" id="ownerName" name="ownerName" required>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="unitNumber">Unit Number <span class="required">*</span></label>
+                        <input type="text" id="unitNumber" name="unitNumber" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="altContact">Alternate Contact (if owner unavailable)</label>
+                    <input type="text" id="altContact" name="altContact">
+                </div>
+            </div>
+            
+            <!-- Project Details -->
+            <div class="form-section">
+                <div class="section-title">Project Details</div>
+                
+                <div class="form-group">
+                    <label for="projectType">Type of Project <span class="required">*</span></label>
+                    <select id="projectType" name="projectType" required>
+                        <option value="">Select project type</option>
+                        <option value="Kitchen Renovation">Kitchen Renovation</option>
+                        <option value="Bathroom Renovation">Bathroom Renovation</option>
+                        <option value="Flooring">Flooring</option>
+                        <option value="Painting">Painting</option>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="HVAC">HVAC</option>
+                        <option value="Windows/Doors">Windows/Doors</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="description">Detailed Description of Work <span class="required">*</span></label>
+                    <textarea id="description" name="description" required placeholder="Please provide a detailed description of the work to be performed..."></textarea>
+                </div>
+            </div>
+            
+            <!-- Contractor Information -->
+            <div class="form-section">
+                <div class="section-title">Contractor Information</div>
+                
+                <div class="form-group">
+                    <label for="contractor">Contractor Name/Company <span class="required">*</span></label>
+                    <input type="text" id="contractor" name="contractor" required>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="contractorPhone">Contractor Phone <span class="required">*</span></label>
+                        <input type="tel" id="contractorPhone" name="contractorPhone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="contractorLicense">License Number <span class="required">*</span></label>
+                        <input type="text" id="contractorLicense" name="contractorLicense" required>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Work Schedule -->
+            <div class="form-section">
+                <div class="section-title">Work Schedule</div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="startDate">Proposed Start Date <span class="required">*</span></label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="endDate">Estimated End Date <span class="required">*</span></label>
+                        <input type="date" id="endDate" name="endDate" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="workHours">Work Hours <span class="required">*</span></label>
+                    <input type="text" id="workHours" name="workHours" value="Monday-Friday: 8:00 AM - 5:00 PM, Saturday: 9:00 AM - 4:00 PM" required>
+                </div>
+            </div>
+            
+            <!-- Work Areas -->
+            <div class="form-section">
+                <div class="section-title">Work Areas Affected (Check all that apply)</div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="structural" name="structural">
+                    <label for="structural">Structural (walls, ceiling, floor)</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="plumbing" name="plumbing">
+                    <label for="plumbing">Plumbing</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="electrical" name="electrical">
+                    <label for="electrical">Electrical</label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="hvac" name="hvac">
+                    <label for="hvac">HVAC</label>
+                </div>
+            </div>
+            
+            <!-- Additional Information -->
+            <div class="form-section">
+                <div class="section-title">Additional Information</div>
+                
+                <div class="form-group">
+                    <label for="materials">Materials & Equipment to be Used</label>
+                    <textarea id="materials" name="materials" placeholder="List major materials and equipment..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label for="permits">Building Permits (if applicable)</label>
+                    <input type="text" id="permits" name="permits" placeholder="List permit numbers or 'N/A'">
+                </div>
+            </div>
+            
+            <!-- Agreements -->
+            <div class="form-section">
+                <div class="section-title">Agreements & Signature</div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="insurance" name="insurance" required>
+                    <label for="insurance">I confirm that my contractor has valid insurance and will provide proof <span class="required">*</span></label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="agreement" name="agreement" required>
+                    <label for="agreement">I agree to the association's construction rules and regulations <span class="required">*</span></label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signature">Digital Signature (Type your full name) <span class="required">*</span></label>
+                    <input type="text" id="signature" name="signature" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Date <span class="required">*</span></label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Construction Request</button>
+        </form>
+    </div>
+</body>
+</html>
