@@ -91,3 +91,33 @@
 .read-more:hover {
     color: #ff9500;
 }
+
+/* Hide or fix chat widget on blog pages */
+.chat-widget {
+    display: none !important;
+}
+
+.chat-window {
+    display: none !important;
+}
+
+/* If you want to keep it, uncomment below and remove above */
+/*
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.chat-window {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 350px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 30px rgba(0,0,0,0.2);
+    display: none;
+}
+*/
