@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HO-6 Insurance Proof - Manage369 Property Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            text-align: center;
+        }
+        
+        .info-box {
+            background: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .requirements-list {
+            background: #f9f9f9;
+            padding: 20px;
+            border-radius: 4px;
+            margin-bottom: 25px;
+        }
+        
+        .requirements-list h3 {
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .requirements-list ul {
+            margin-left: 20px;
+            color: #555;
+        }
+        
+        .requirements-list li {
+            margin-bottom: 5px;
+        }
+        
+        .form-section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .submit-btn {
+            background: #1e3a8a;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background: #1e40af;
+        }
+        
+        .required {
+            color: #dc2626;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        @media (max-width: 600px) {
+            .two-column {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        function prepareEmail() {
+            // Gather form data
+            const formData = {
+                ownerName: document.getElementById('ownerName').value,
+                unitNumber: document.getElementById('unitNumber').value,
+                phone: document.getElementById('phone').value,
+                email: document.getElementById('email').value,
+                insuranceCompany: document.getElementById('insuranceCompany').value,
+                policyNumber: document.getElementById('policyNumber').value,
+                agentName: document.getElementById('agentName').value,
+                agentPhone: document.getElementById('agentPhone').value,
+                effectiveDate: document.getElementById('effectiveDate').value,
+                expirationDate: document.getElementById('expirationDate').value,
+                dwellingCoverage: document.getElementById('dwellingCoverage').value,
+                personalProperty: document.getElementById('personalProperty').value,
+                liability: document.getElementById('liability').value,
+                deductible: document.getElementById('deductible').value,
+                lossAssessment: document.getElementById('lossAssessment').value,
+                additionalCoverage: document.getElementById('additionalCoverage').value,
+                confirmation: document.getElementById('confirmation').checked ? 'Yes' : 'No',
+                accuracy: document.getElementById('accuracy').checked ? 'Yes' : 'No',
+                signature: document.getElementById('signature').value,
+                date: document.getElementById('date').value
+            };
+            
+            // Create email body
+            let emailBody = "HO-6 INSURANCE PROOF SUBMISSION\n";
+            emailBody += "================================\n\n";
+            emailBody += "OWNER INFORMATION\n";
+            emailBody += "Name: " + formData.ownerName + "\n";
+            emailBody += "Unit Number: " + formData.unitNumber + "\n";
+            emailBody += "Phone: " + formData.phone + "\n";
+            emailBody += "Email: " + formData.email + "\n\n";
+            emailBody += "INSURANCE COMPANY INFORMATION\n";
+            emailBody += "Insurance Company: " + formData.insuranceCompany + "\n";
+            emailBody += "Policy Number: " + formData.policyNumber + "\n";
+            emailBody += "Agent Name: " + formData.agentName + "\n";
+            emailBody += "Agent Phone: " + formData.agentPhone + "\n\n";
+            emailBody += "POLICY PERIOD\n";
+            emailBody += "Effective Date: " + formData.effectiveDate + "\n";
+            emailBody += "Expiration Date: " + formData.expirationDate + "\n\n";
+            emailBody += "COVERAGE AMOUNTS\n";
+            emailBody += "Dwelling Coverage: $" + formData.dwellingCoverage + "\n";
+            emailBody += "Personal Property: $" + formData.personalProperty + "\n";
+            emailBody += "Personal Liability: $" + formData.liability + "\n";
+            emailBody += "Deductible: $" + formData.deductible + "\n";
+            emailBody += "Loss Assessment: $" + formData.lossAssessment + "\n\n";
+            emailBody += "ADDITIONAL COVERAGE\n";
+            emailBody += formData.additionalCoverage || "None specified" + "\n\n";
+            emailBody += "CONFIRMATIONS\n";
+            emailBody += "Policy attached confirmed: " + formData.confirmation + "\n";
+            emailBody += "Information accuracy confirmed: " + formData.accuracy + "\n\n";
+            emailBody += "SIGNATURE\n";
+            emailBody += "Signed: " + formData.signature + "\n";
+            emailBody += "Date: " + formData.date + "\n\n";
+            emailBody += "NOTE: Please attach a copy of your HO-6 insurance declaration page to this email.";
+            
+            // Create mailto link
+            const subject = "HO-6 Insurance Proof - Unit " + formData.unitNumber;
+            const mailtoLink = "mailto:service@manage369.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <a href="forms.html" class="back-link">← Back to Forms</a>
+        
+        <div class="header">
+            <div class="logo">Manage369 Property Management</div>
+            <div class="contact-info">
+                📞 (847) 652-2338 | ✉️ service@manage369.com<br>
+                📍 1400 Patriot Boulevard 357, Glenview, IL 60026
+            </div>
+        </div>
+        
+        <h1>HO-6 Insurance Proof Submission</h1>
+        
+        <div class="info-box">
+            📋 <strong>Annual Requirement:</strong> All unit owners must provide proof of HO-6 insurance annually. Please submit this form along with a copy of your insurance declaration page.
+        </div>
+        
+        <div class="requirements-list">
+            <h3>Minimum Coverage Requirements:</h3>
+            <ul>
+                <li>Dwelling Coverage: Minimum $25,000</li>
+                <li>Personal Property: Recommended minimum $25,000</li>
+                <li>Personal Liability: Minimum $300,000</li>
+                <li>Loss Assessment: Minimum $10,000</li>
+                <li>Deductible: Maximum $5,000</li>
+            </ul>
+        </div>
+        
+        <form onsubmit="return prepareEmail()">
+            <!-- Owner Information -->
+            <div class="form-section">
+                <div class="section-title">Unit Owner Information</div>
+                
+                <div class="form-group">
+                    <label for="ownerName">Owner Name(s) <span class="required">*</span></label>
+                    <input type="text" id="ownerName" name="ownerName" required>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="unitNumber">Unit Number <span class="required">*</span></label>
+                        <input type="text" id="unitNumber" name="unitNumber" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <!-- Insurance Information -->
+            <div class="form-section">
+                <div class="section-title">Insurance Company Information</div>
+                
+                <div class="form-group">
+                    <label for="insuranceCompany">Insurance Company Name <span class="required">*</span></label>
+                    <input type="text" id="insuranceCompany" name="insuranceCompany" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="policyNumber">Policy Number <span class="required">*</span></label>
+                    <input type="text" id="policyNumber" name="policyNumber" required>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="agentName">Agent/Broker Name</label>
+                        <input type="text" id="agentName" name="agentName">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="agentPhone">Agent/Broker Phone</label>
+                        <input type="tel" id="agentPhone" name="agentPhone">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Policy Period -->
+            <div class="form-section">
+                <div class="section-title">Policy Period</div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="effectiveDate">Effective Date <span class="required">*</span></label>
+                        <input type="date" id="effectiveDate" name="effectiveDate" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="expirationDate">Expiration Date <span class="required">*</span></label>
+                        <input type="date" id="expirationDate" name="expirationDate" required>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Coverage Amounts -->
+            <div class="form-section">
+                <div class="section-title">Coverage Amounts</div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="dwellingCoverage">Dwelling Coverage <span class="required">*</span></label>
+                        <input type="number" id="dwellingCoverage" name="dwellingCoverage" min="25000" required placeholder="Minimum $25,000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="personalProperty">Personal Property <span class="required">*</span></label>
+                        <input type="number" id="personalProperty" name="personalProperty" required placeholder="Amount">
+                    </div>
+                </div>
+                
+                <div class="two-column">
+                    <div class="form-group">
+                        <label for="liability">Personal Liability <span class="required">*</span></label>
+                        <input type="number" id="liability" name="liability" min="300000" required placeholder="Minimum $300,000">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="deductible">Deductible <span class="required">*</span></label>
+                        <input type="number" id="deductible" name="deductible" max="5000" required placeholder="Maximum $5,000">
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="lossAssessment">Loss Assessment Coverage <span class="required">*</span></label>
+                    <input type="number" id="lossAssessment" name="lossAssessment" min="10000" required placeholder="Minimum $10,000">
+                </div>
+                
+                <div class="form-group">
+                    <label for="additionalCoverage">Additional Coverage (if any)</label>
+                    <textarea id="additionalCoverage" name="additionalCoverage" placeholder="List any additional coverage such as water backup, identity theft, etc."></textarea>
+                </div>
+            </div>
+            
+            <!-- Confirmation -->
+            <div class="form-section">
+                <div class="section-title">Confirmation & Signature</div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="confirmation" name="confirmation" required>
+                    <label for="confirmation">I confirm that I will attach a copy of my HO-6 insurance declaration page to this submission <span class="required">*</span></label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="accuracy" name="accuracy" required>
+                    <label for="accuracy">I certify that all information provided is accurate and current <span class="required">*</span></label>
+                </div>
+                
+                <div class="form-group">
+                    <label for="signature">Digital Signature (Type your full name) <span class="required">*</span></label>
+                    <input type="text" id="signature" name="signature" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="date">Date <span class="required">*</span></label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Insurance Proof</button>
+        </form>
+    </div>
+</body>
+</html>
