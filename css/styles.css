@@ -2,7 +2,7 @@
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
         
         .hero {
-            height: 100vh;
+            min-height: 400px;
             background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
                         url('../images/manage369livingroomskokie.jpg');
             background-size: cover;
@@ -12,6 +12,13 @@
             justify-content: center;
             text-align: center;
             color: white;
+            padding: 80px 20px;
+        }
+        
+        /* Homepage hero specifically */
+        .homepage .hero {
+            height: 100vh;
+            padding: 0;
         }
         
         .hero-content h1 {
