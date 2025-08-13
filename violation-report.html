@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Illinois Condominium Violation Report - Manage369 Property Management</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .form-container {
+            max-width: 700px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+        }
+        
+        .contact-info {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.8;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #1e3a8a;
+            text-align: center;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .emergency-notice {
+            background: #fee2e2;
+            border-left: 4px solid #dc2626;
+            padding: 15px;
+            margin-bottom: 25px;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        .ombudsman-info {
+            background: #f0f9ff;
+            border: 1px solid #0ea5e9;
+            padding: 20px;
+            margin-top: 30px;
+            border-radius: 4px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        
+        .ombudsman-info h3 {
+            color: #0369a1;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+        
+        .form-section {
+            margin-bottom: 25px;
+        }
+        
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .form-group {
+            margin-bottom: 15px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: #555;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 10px;
+        }
+        
+        input[type="checkbox"] {
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+        
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            margin-top: 5px;
+        }
+        
+        .radio-item {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-item input[type="radio"] {
+            margin-right: 5px;
+        }
+        
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+        
+        .submit-btn {
+            background: #1e3a8a;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background: #1e40af;
+        }
+        
+        .required {
+            color: #dc2626;
+        }
+        
+        .back-link {
+            display: inline-block;
+            margin-bottom: 20px;
+            color: #1e3a8a;
+            text-decoration: none;
+        }
+        
+        .back-link:hover {
+            text-decoration: underline;
+        }
+        
+        .submit-note {
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        @media (max-width: 600px) {
+            .checkbox-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
+    <script>
+        function prepareEmail() {
+            // Gather violation types
+            let violationTypes = [];
+            if (document.getElementById('noise').checked) violationTypes.push('Noise/disturbance');
+            if (document.getElementById('construction').checked) violationTypes.push('Unauthorized construction/alteration');
+            if (document.getElementById('pet').checked) violationTypes.push('Pet violation');
+            if (document.getElementById('parking').checked) violationTypes.push('Parking/vehicle issue');
+            if (document.getElementById('harassment').checked) violationTypes.push('Harassment');
+            if (document.getElementById('other').checked) violationTypes.push('Other');
+            
+            // Gather requested actions
+            let requestedActions = [];
+            if (document.getElementById('warning').checked) requestedActions.push('Warning');
+            if (document.getElementById('fine').checked) requestedActions.push('Fine');
+            if (document.getElementById('hearing').checked) requestedActions.push('Hearing');
+            if (document.getElementById('otherAction').checked) requestedActions.push('Other');
+            
+            // Gather form data
+            const formData = {
+                reporterName: document.getElementById('reporterName').value,
+                unitAddress: document.getElementById('unitAddress').value,
+                contact: document.getElementById('contact').value,
+                reportDate: document.getElementById('reportDate').value,
+                violatorName: document.getElementById('violatorName').value,
+                violatorUnit: document.getElementById('violatorUnit').value,
+                violationTypes: violationTypes.join(', '),
+                details: document.getElementById('details').value,
+                previousReport: document.querySelector('input[name="previousReport"]:checked').value,
+                requestedActions: requestedActions.join(', '),
+                signature: document.getElementById('signature').value
+            };
+            
+            // Create email body
+            let emailBody = "ILLINOIS CONDOMINIUM VIOLATION REPORT\n";
+            emailBody += "Pursuant to Section 35 of the Ombudsperson Act\n";
+            emailBody += "=====================================\n\n";
+            emailBody += "REPORTER INFORMATION\n";
+            emailBody += "Name: " + formData.reporterName + "\n";
+            emailBody += "Unit Address: " + formData.unitAddress + "\n";
+            emailBody += "Contact: " + formData.contact + "\n";
+            emailBody += "Date of Report: " + formData.reportDate + "\n\n";
+            emailBody += "VIOLATOR INFORMATION\n";
+            emailBody += "Violator's Name: " + (formData.violatorName || "Not provided") + "\n";
+            emailBody += "Unit Number: " + (formData.violatorUnit || "Not provided") + "\n\n";
+            emailBody += "NATURE OF VIOLATION\n";
+            emailBody += formData.violationTypes || "None selected" + "\n\n";
+            emailBody += "DETAILS OF THE VIOLATION\n";
+            emailBody += formData.details + "\n\n";
+            emailBody += "PREVIOUS REPORT\n";
+            emailBody += "Has this been reported before: " + formData.previousReport + "\n\n";
+            emailBody += "REQUESTED ACTION\n";
+            emailBody += formData.requestedActions || "None selected" + "\n\n";
+            emailBody += "ACKNOWLEDGEMENTS\n";
+            emailBody += "- Reporter understands this report may be shared with relevant parties\n";
+            emailBody += "- Reporter certifies information is true and accurate\n";
+            emailBody += "- Reporter may be contacted for additional information\n\n";
+            emailBody += "SIGNATURE\n";
+            emailBody += "Signed: " + formData.signature + "\n";
+            emailBody += "Date: " + formData.reportDate;
+            
+            // Create mailto link
+            const subject = "Violation Report - " + formData.unitAddress;
+            const mailtoLink = "mailto:service@manage369.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
+            
+            // Open email client
+            window.location.href = mailtoLink;
+            
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <a href="forms.html" class="back-link">← Back to Forms</a>
+        
+        <div class="header">
+            <div class="logo">Manage369 Property Management</div>
+            <div class="contact-info">
+                📞 (847) 652-2338 | ✉️ service@manage369.com<br>
+                📍 1400 Patriot Boulevard 357, Glenview, IL 60026
+            </div>
+        </div>
+        
+        <h1>Illinois Condominium Violation Report</h1>
+        <p class="subtitle">Pursuant to Section 35 of the Ombudsperson Act</p>
+        
+        <div class="emergency-notice">
+            <strong>Important:</strong> This form is for reporting potential violations related to condominium properties in accordance with the Illinois Condominium Property Act. For emergencies, please call 911.
+        </div>
+        
+        <form onsubmit="return prepareEmail()">
+            <!-- Reporter Information -->
+            <div class="form-section">
+                <div class="section-title">Reporter Information</div>
+                
+                <div class="form-group">
+                    <label for="reporterName">Your Name <span class="required">*</span></label>
+                    <input type="text" id="reporterName" name="reporterName" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="unitAddress">Unit Address <span class="required">*</span></label>
+                    <input type="text" id="unitAddress" name="unitAddress" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="contact">Phone/Email <span class="required">*</span></label>
+                    <input type="text" id="contact" name="contact" required placeholder="Phone number or email address">
+                </div>
+                
+                <div class="form-group">
+                    <label for="reportDate">Date of Report <span class="required">*</span></label>
+                    <input type="date" id="reportDate" name="reportDate" required>
+                </div>
+            </div>
+            
+            <!-- Violator Information -->
+            <div class="form-section">
+                <div class="section-title">Violator Information</div>
+                
+                <div class="form-group">
+                    <label for="violatorName">Violator's Name (if known)</label>
+                    <input type="text" id="violatorName" name="violatorName">
+                </div>
+                
+                <div class="form-group">
+                    <label for="violatorUnit">Unit Number</label>
+                    <input type="text" id="violatorUnit" name="violatorUnit">
+                </div>
+            </div>
+            
+            <!-- Nature of Violation -->
+            <div class="form-section">
+                <div class="section-title">Nature of Violation (check all that apply)</div>
+                
+                <div class="checkbox-grid">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="noise" name="violationType">
+                        <label for="noise">Noise/disturbance</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="construction" name="violationType">
+                        <label for="construction">Unauthorized construction/alteration</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="pet" name="violationType">
+                        <label for="pet">Pet violation</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="parking" name="violationType">
+                        <label for="parking">Parking/vehicle issue</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="harassment" name="violationType">
+                        <label for="harassment">Harassment</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="other" name="violationType">
+                        <label for="other">Other</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Details -->
+            <div class="form-section">
+                <div class="section-title">Details of the Violation</div>
+                
+                <div class="form-group">
+                    <label for="details">Include dates, times, witnesses <span class="required">*</span></label>
+                    <textarea id="details" name="details" required placeholder="Please provide detailed information about the violation including specific dates, times, and any witnesses..."></textarea>
+                </div>
+                
+                <div class="form-group">
+                    <label>Have you reported this before? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <div class="radio-item">
+                            <input type="radio" id="reportedYes" name="previousReport" value="Yes" required>
+                            <label for="reportedYes">Yes</label>
+                        </div>
+                        <div class="radio-item">
+                            <input type="radio" id="reportedNo" name="previousReport" value="No" required>
+                            <label for="reportedNo">No</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Requested Action -->
+            <div class="form-section">
+                <div class="section-title">Requested Action</div>
+                
+                <div class="checkbox-grid">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="warning" name="requestedAction">
+                        <label for="warning">Warning</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="fine" name="requestedAction">
+                        <label for="fine">Fine</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="hearing" name="requestedAction">
+                        <label for="hearing">Hearing</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="otherAction" name="requestedAction">
+                        <label for="otherAction">Other</label>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Signature -->
+            <div class="form-section">
+                <div class="section-title">Signature</div>
+                
+                <div class="form-group">
+                    <label for="signature">Signature <span class="required">*</span></label>
+                    <input type="text" id="signature" name="signature" required placeholder="Type your full name as signature">
+                </div>
+            </div>
+            
+            <!-- Acknowledgements -->
+            <div class="form-section">
+                <div class="section-title">Acknowledgements</div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ack1" required>
+                    <label for="ack1">I understand that this report may be shared with the association board, management company, or other relevant parties as part of the investigation process. <span class="required">*</span></label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ack2" required>
+                    <label for="ack2">I certify that the information provided in this report is true and accurate to the best of my knowledge. <span class="required">*</span></label>
+                </div>
+                
+                <div class="checkbox-group">
+                    <input type="checkbox" id="ack3" required>
+                    <label for="ack3">I understand that I may be contacted for additional information regarding this report. <span class="required">*</span></label>
+                </div>
+            </div>
+            
+            <button type="submit" class="submit-btn">Submit Violation Report</button>
+            <p class="submit-note">* Required fields. Form will be submitted to service@manage369.com</p>
+        </form>
+        
+        <div class="ombudsman-info">
+            <h3>Illinois Ombudsman Act Information</h3>
+            <p>The Condominium and Common Interest Community Ombudsperson Act (765 ILCS 615/) provides a means by which unit owners can report potential violations of the Condominium Property Act or the Common Interest Community Association Act.</p>
+            <p style="margin-top: 10px;">For more information about the Illinois Ombudsman Act or to file a complaint directly with the state, visit the Illinois Department of Financial and Professional Regulation website.</p>
+        </div>
+    </div>
+</body>
+</html>
