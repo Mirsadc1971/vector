@@ -92,12 +92,16 @@
     color: #ff9500;
 }
 
-/* Hide or fix chat widget on blog pages */
+/* Hide chat widget and floating button on blog pages */
 .chat-widget {
     display: none !important;
 }
 
 .chat-window {
+    display: none !important;
+}
+
+.floating-quote-btn {
     display: none !important;
 }
 
