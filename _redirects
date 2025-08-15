@@ -1,0 +1,3 @@
+# SECURITY: Block all spam URLs
+/tinggi/*  /404.html  404!
+/*wow=*    /404.html  404!
