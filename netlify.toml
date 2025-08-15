@@ -1,0 +1,28 @@
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "geolocation=(), microphone=(), camera=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' www.googletagmanager.com www.google-analytics.com; style-src 'self' 'unsafe-inline' fonts.googleapis.com; font-src 'self' fonts.gstatic.com; img-src 'self' data: www.google-analytics.com; connect-src 'self' www.google-analytics.com"
+
+[[plugins]]
+  package = "@netlify/plugin-lighthouse"
+
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/tinggi/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/*"
+  query = {wow = ":param"}
+  to = "/404.html"
+  status = 404
+  force = true
