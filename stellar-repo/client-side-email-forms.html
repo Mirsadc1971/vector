@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client-Side Email Forms - Send from User's Email</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header { text-align: center; color: white; margin-bottom: 3rem; padding: 2rem 0; }
+        .header h1 { font-size: 3rem; margin-bottom: 1rem; }
+        .forms-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; }
+        .form-card { 
+            background: white; 
+            border-radius: 20px; 
+            padding: 2.5rem; 
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+        }
+        .form-title { 
+            font-size: 1.8rem; 
+            color: #333; 
+            margin-bottom: 1.5rem; 
+            padding-bottom: 1rem; 
+            border-bottom: 2px solid #667eea; 
+        }
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { 
+            display: block; 
+            margin-bottom: 0.5rem; 
+            color: #555; 
+            font-weight: 600; 
+        }
+        .form-group input, .form-group textarea, .form-group select { 
+            width: 100%; 
+            padding: 12px; 
+            border: 2px solid #e0e0e0; 
+            border-radius: 10px; 
+            font-size: 1rem; 
+        }
+        .btn { 
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); 
+            color: white; 
+            padding: 14px 30px; 
+            border: none; 
+            border-radius: 10px; 
+            font-size: 1.1rem; 
+            font-weight: 600; 
+            cursor: pointer; 
+            width: 100%; 
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .btn:hover { 
+            transform: translateY(-2px); 
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4); 
+        }
+        .method-badge {
+            background: #2ecc71;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 0.8rem;
+            margin-left: 10px;
+        }
+        .instructions {
+            background: #f0f4ff;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+        }
+        .copy-btn {
+            background: #4a90e2;
+            color: white;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+        .copy-btn:hover { background: #357abd; }
+        .email-preview {
+            background: #f8f9fa;
+            border: 1px solid #dee2e6;
+            border-radius: 10px;
+            padding: 1rem;
+            margin-top: 1rem;
+            font-family: monospace;
+            font-size: 0.9rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Client-Side Email Forms</h1>
+            <p>Let users send forms directly from their own email - No server needed!</p>
+        </div>
+        
+        <div class="forms-grid">
+            <!-- METHOD 1: Simple Mailto Link -->
+            <div class="form-card">
+                <h2 class="form-title">
+                    Method 1: Simple Mailto
+                    <span class="method-badge">SIMPLEST</span>
+                </h2>
+                
+                <form id="mailto-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="mailto-name" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" id="mailto-email" placeholder="john@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="mailto-phone" placeholder="(312) 555-0100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Property Type</label>
+                        <select id="mailto-property">
+                            <option value="">Select...</option>
+                            <option value="Residential">Residential</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Condo/HOA">Condo/HOA</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="mailto-message" rows="4" placeholder="Tell us about your needs..."></textarea>
+                    </div>
+                    
+                    <a href="#" id="mailto-link" class="btn" onclick="generateMailto()">
+                        📧 Open in Email Client
+                    </a>
+                </form>
+                
+                <div class="instructions">
+                    <strong>How it works:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Fill out the form</li>
+                        <li>Click "Open in Email Client"</li>
+                        <li>Your email app opens with everything filled in</li>
+                        <li>Just hit Send!</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- METHOD 2: Copy to Clipboard -->
+            <div class="form-card">
+                <h2 class="form-title">
+                    Method 2: Copy & Paste
+                    <span class="method-badge" style="background: #f39c12;">UNIVERSAL</span>
+                </h2>
+                
+                <form id="copy-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="copy-name" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" id="copy-email" placeholder="john@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="copy-phone" placeholder="(312) 555-0100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Property Address</label>
+                        <input type="text" id="copy-address" placeholder="123 Main St, Chicago, IL">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="copy-message" rows="4" placeholder="Describe your needs..."></textarea>
+                    </div>
+                    
+                    <button type="button" class="btn" onclick="generateEmailText()">
+                        📋 Generate Email Text
+                    </button>
+
+                    <button type="button" class="copy-btn" id="copy-button" style="display: none;" onclick="copyToClipboard()">
+                        📋 Copy to Clipboard
+                    </button>
+                </form>
+                
+                <div class="instructions">
+                    <strong>How it works:</strong>
+                    <ol style="margin-left: 20px; margin-top: 10px;">
+                        <li>Fill out the form</li>
+                        <li>Click "Generate Email Text"</li>
+                        <li>Copy the formatted text</li>
+                        <li>Paste into any email app</li>
+                        <li>Send to: service@stellarpropertygroup.com</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- METHOD 3: Gmail Compose URL -->
+            <div class="form-card">
+                <h2 class="form-title">
+                    Method 3: Gmail Direct
+                    <span class="method-badge" style="background: #ea4335;">GMAIL USERS</span>
+                </h2>
+                
+                <form id="gmail-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="gmail-name" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Email</label>
+                        <input type="email" id="gmail-email" placeholder="john@gmail.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Phone</label>
+                        <input type="tel" id="gmail-phone" placeholder="(312) 555-0100">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Service Needed</label>
+                        <select id="gmail-service">
+                            <option value="">Select...</option>
+                            <option value="Property Management">Property Management</option>
+                            <option value="Tenant Placement">Tenant Placement</option>
+                            <option value="Maintenance">Maintenance</option>
+                            <option value="Consulting">Consulting</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Message</label>
+                        <textarea id="gmail-message" rows="4" placeholder="Your message..."></textarea>
+                    </div>
+                    
+                    <a href="#" class="btn" onclick="openGmail(); return false;">
+                        📧 Open in Gmail
+                    </a>
+                </form>
+                
+                <div class="instructions">
+                    <strong>Gmail users only:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Must be logged into Gmail</li>
+                        <li>Opens Gmail compose window</li>
+                        <li>Everything pre-filled</li>
+                        <li>Just click Send!</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- METHOD 4: WhatsApp Business -->
+            <div class="form-card">
+                <h2 class="form-title">
+                    Method 4: WhatsApp
+                    <span class="method-badge" style="background: #25d366;">MOBILE</span>
+                </h2>
+                
+                <form id="whatsapp-form">
+                    <div class="form-group">
+                        <label>Your Name</label>
+                        <input type="text" id="wa-name" placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Property Type</label>
+                        <select id="wa-property">
+                            <option value="">Select...</option>
+                            <option value="Residential">Residential</option>
+                            <option value="Commercial">Commercial</option>
+                            <option value="Condo/HOA">Condo/HOA</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Your Message</label>
+                        <textarea id="wa-message" rows="4" placeholder="Tell us about your needs..."></textarea>
+                    </div>
+                    
+                    <a href="#" class="btn" style="background: #25d366;" onclick="openWhatsApp(); return false;">
+                        💬 Send via WhatsApp
+                    </a>
+                </form>
+                
+                <div class="instructions">
+                    <strong>For mobile users:</strong>
+                    <ul style="margin-left: 20px; margin-top: 10px;">
+                        <li>Opens WhatsApp with message</li>
+                        <li>Works on mobile & WhatsApp Web</li>
+                        <li>Instant messaging</li>
+                        <li>Phone: +1 (312) 555-0100</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Email Templates Section -->
+        <div style="margin-top: 3rem; background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+            <h2 style="font-size: 1.8rem; color: #333; margin-bottom: 1.5rem;">Ready-to-Use Email Templates</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                <!-- Template 1 -->
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">Property Inquiry</h3>
+                    
+                    <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+                </div>
+                
+                <!-- Template 2 -->
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">Maintenance Request</h3>
+                    
+                    <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+                </div>
+                
+                <!-- Template 3 -->
+                <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 10px;">
+                    <h3 style="color: #667eea; margin-bottom: 1rem;">HOA/Condo Board</h3>
+                    
+                    <button class="copy-btn" onclick="copyTemplate(this)">Copy Template</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Alternative Contact Methods -->
+        <div style="margin-top: 2rem; background: white; border-radius: 20px; padding: 2.5rem; box-shadow: 0 20px 60px rgba(0,0,0,0.2);">
+            <h2 style="font-size: 1.8rem; color: #333; margin-bottom: 1.5rem;">All Contact Methods</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <div style="text-align: center; padding: 1.5rem; background: #f0f4ff; border-radius: 10px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📧</div>
+                    <strong>Email</strong>
+                    <p>service@stellarpropertygroup.com</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: #f0fff4; border-radius: 10px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📱</div>
+                    <strong>Phone</strong>
+                    <p>(312) 555-0100</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: #fff0f0; border-radius: 10px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">💬</div>
+                    <strong>WhatsApp</strong>
+                    <p>+1 (312) 555-0100</p>
+                </div>
+                
+                <div style="text-align: center; padding: 1.5rem; background: #fffaf0; border-radius: 10px;">
+                    <div style="font-size: 2rem; margin-bottom: 0.5rem;">📍</div>
+                    <strong>Office</strong>
+                    <p>Chicago, IL</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Method 1: Generate Mailto Link
+        function generateMailto() {
+            const name = document.getElementById('mailto-name').value;
+            const email = document.getElementById('mailto-email').value;
+            const phone = document.getElementById('mailto-phone').value;
+            const property = document.getElementById('mailto-property').value;
+            const message = document.getElementById('mailto-message').value;
+            
+            const subject = 'Property Management Inquiry from ' + name;
+            const body = `Hello Stellar Property Group,\n\n` +
+                        `I am contacting you regarding property management services.\n\n` +
+                        `My Information:\n` +
+                        `Name: ${name}\n` +
+                        `Email: ${email}\n` +
+                        `Phone: ${phone}\n` +
+                        `Property Type: ${property}\n\n` +
+                        `Message:\n${message}\n\n` +
+                        `Please contact me at your earliest convenience.\n\n` +
+                        `Best regards,\n${name}`;
+            
+            const mailtoLink = `mailto:service@stellarpropertygroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            document.getElementById('mailto-link').href = mailtoLink;
+            window.location.href = mailtoLink;
+        }
+        
+        // Method 2: Generate Email Text
+        function generateEmailText() {
+            const name = document.getElementById('copy-name').value;
+            const email = document.getElementById('copy-email').value;
+            const phone = document.getElementById('copy-phone').value;
+            const address = document.getElementById('copy-address').value;
+            const message = document.getElementById('copy-message').value;
+            
+            const emailText = `To: service@stellarpropertygroup.com\n` +
+                             `Subject: Property Management Inquiry - ${name}\n\n` +
+                             `Hello Stellar Property Group,\n\n` +
+                             `I am interested in your property management services.\n\n` +
+                             `Contact Information:\n` +
+                             `Name: ${name}\n` +
+                             `Email: ${email}\n` +
+                             `Phone: ${phone}\n` +
+                             `Property Address: ${address}\n\n` +
+                             `Message:\n${message}\n\n` +
+                             `Thank you for your time. I look forward to hearing from you.\n\n` +
+                             `Best regards,\n${name}`;
+            
+            const preview = document.getElementById('email-preview');
+            preview.textContent = emailText;
+            preview.style.display = 'block';
+            document.getElementById('copy-button').style.display = 'block';
+        }
+        
+        // Copy to Clipboard
+        function copyToClipboard() {
+            const emailText = document.getElementById('email-preview').textContent;
+            navigator.clipboard.writeText(emailText).then(() => {
+                const btn = document.getElementById('copy-button');
+                btn.textContent = '✓ Copied!';
+                btn.style.background = '#2ecc71';
+                setTimeout(() => {
+                    btn.textContent = '📋 Copy to Clipboard';
+                    btn.style.background = '#4a90e2';
+                }, 2000);
+            });
+        }
+        
+        // Method 3: Open Gmail
+        function openGmail() {
+            const name = document.getElementById('gmail-name').value;
+            const email = document.getElementById('gmail-email').value;
+            const phone = document.getElementById('gmail-phone').value;
+            const service = document.getElementById('gmail-service').value;
+            const message = document.getElementById('gmail-message').value;
+            
+            const subject = `Property Management Inquiry - ${service}`;
+            const body = `Hello Stellar Property Group,\n\n` +
+                        `I am interested in your ${service} services.\n\n` +
+                        `My Information:\n` +
+                        `Name: ${name}\n` +
+                        `Email: ${email}\n` +
+                        `Phone: ${phone}\n\n` +
+                        `Message:\n${message}\n\n` +
+                        `Please contact me to discuss further.\n\n` +
+                        `Best regards,\n${name}`;
+            
+            const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=service@stellarpropertygroup.com&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            window.open(gmailUrl, '_blank');
+        }
+        
+        // Method 4: Open WhatsApp
+        function openWhatsApp() {
+            const name = document.getElementById('wa-name').value;
+            const property = document.getElementById('wa-property').value;
+            const message = document.getElementById('wa-message').value;
+            
+            const waMessage = `Hi Stellar Property Group! I'm ${name}. ` +
+                             `I need help with ${property} property management. ` +
+                             `${message}`;
+            
+            // Replace with actual WhatsApp business number
+            const phoneNumber = '13125550100'; // Format: country code + number
+            const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(waMessage)}`;
+            window.open(waUrl, '_blank');
+        }
+        
+        // Copy Template
+        function copyTemplate(button) {
+            const template = button.previousElementSibling.textContent;
+            navigator.clipboard.writeText(template).then(() => {
+                button.textContent = '✓ Copied!';
+                button.style.background = '#2ecc71';
+                setTimeout(() => {
+                    button.textContent = 'Copy Template';
+                    button.style.background = '#4a90e2';
+                }, 2000);
+            });
+        }
+        
+        // Format phone numbers
+        document.querySelectorAll('input[type="tel"]').forEach(input => {
+            input.addEventListener('input', function(e) {
+                let value = e.target.value.replace(/\D/g, '');
+                if (value.length > 0) {
+                    if (value.length <= 3) {
+                        value = `(${value}`;
+                    } else if (value.length <= 6) {
+                        value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                    } else {
+                        value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                    }
+                }
+                e.target.value = value;
+            });
+        });
+    </script>
+</body>
+</html>

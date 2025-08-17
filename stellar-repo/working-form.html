@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stellar Property Group - Contact Form</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        .form-container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 100%;
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .logo h1 {
+            color: #1e3c72;
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .logo p {
+            color: #666;
+        }
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 600;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-family: inherit;
+            transition: all 0.3s;
+        }
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: #1e3c72;
+            box-shadow: 0 0 0 3px rgba(30, 60, 114, 0.1);
+        }
+        textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        .required {
+            color: #e74c3c;
+        }
+        .btn {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 14px 30px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(30, 60, 114, 0.4);
+        }
+        .success-message {
+            display: none;
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 10px;
+            margin-top: 1rem;
+            text-align: center;
+        }
+        .info-box {
+            background: #f0f4ff;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border-left: 4px solid #1e3c72;
+        }
+        .info-box strong {
+            color: #1e3c72;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <div class="logo">
+            <h1>Stellar Property Group</h1>
+            <p>Professional Property Management in Chicago</p>
+        </div>
+        
+        <div class="info-box">
+            <strong>📧 This form sends directly to:</strong><br>
+            service@stellarpropertygroup.com
+        </div>
+        
+        <!-- WORKING FORM - Uses Web3Forms -->
+        <!-- Step 1: Go to https://web3forms.com -->
+        <!-- Step 2: Enter service@stellarpropertygroup.com -->
+        <!-- Step 3: Copy your access key -->
+        <!-- Step 4: Replace YOUR_ACCESS_KEY below -->
+        
+        <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+            <!-- IMPORTANT: Replace with your actual access key from web3forms.com -->
+            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY">
+            
+            <!-- Email settings -->
+            <input type="hidden" name="subject" value="New Contact Form Submission - Stellar Property">
+            <input type="hidden" name="from_name" value="Stellar Property Website">
+            <input type="hidden" name="redirect" value="https://stellarpropertygroup.com/thank-you">
+            
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" name="name" id="name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" name="email" id="email" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" name="phone" id="phone" placeholder="(312) 555-0100">
+            </div>
+            
+            <div class="form-group">
+                <label for="property_type">Property Type</label>
+                <select name="property_type" id="property_type">
+                    <option value="">Select Property Type</option>
+                    <option value="Residential">Residential</option>
+                    <option value="Commercial">Commercial</option>
+                    <option value="Condo/HOA">Condo/HOA</option>
+                    <option value="Multi-Family">Multi-Family</option>
+                    <option value="Mixed-Use">Mixed-Use</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="services">Services Needed</label>
+                <select name="services" id="services">
+                    <option value="">Select Service</option>
+                    <option value="Full Management">Full Property Management</option>
+                    <option value="Tenant Placement">Tenant Placement Only</option>
+                    <option value="Maintenance">Maintenance Services</option>
+                    <option value="Consulting">Consulting Services</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="message">Message <span class="required">*</span></label>
+                <textarea name="message" id="message" required placeholder="Tell us about your property management needs..."></textarea>
+            </div>
+            
+            <!-- Honeypot spam protection -->
+            <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+            
+            <button type="submit" class="btn">Send Message</button>
+            
+            <div class="success-message" id="success">
+                ✓ Thank you! Your message has been sent successfully.
+            </div>
+        </form>
+        
+        <div style="margin-top: 2rem; text-align: center; color: #666; font-size: 0.9rem;">
+            <p>Or call us directly at: <strong>(312) 555-0100</strong></p>
+        </div>
+    </div>
+    
+    <script>
+        // Format phone number as user types
+        document.getElementById('phone').addEventListener('input', function(e) {
+            let value = e.target.value.replace(/\D/g, '');
+            if (value.length > 0) {
+                if (value.length <= 3) {
+                    value = `(${value}`;
+                } else if (value.length <= 6) {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3)}`;
+                } else {
+                    value = `(${value.slice(0, 3)}) ${value.slice(3, 6)}-${value.slice(6, 10)}`;
+                }
+            }
+            e.target.value = value;
+        });
+        
+        // Show success message (for AJAX version)
+        const form = document.getElementById('contact-form');
+        const successMsg = document.getElementById('success');
+        
+        // Optional: Convert to AJAX submission
+        /*
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    successMsg.style.display = 'block';
+                    form.reset();
+                    setTimeout(() => {
+                        successMsg.style.display = 'none';
+                    }, 5000);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        });
+        */
+    </script>
+</body>
+</html>
