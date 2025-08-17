@@ -1,0 +1,9 @@
+# Duplicate titles that need unique values
+
+Title: Contact Forms | Manage369 Property Management
+Pages with this title:
+  - forms-clean.html
+  - forms.html
+
+Suggested fixes:
+

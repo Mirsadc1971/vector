@@ -1,0 +1,5 @@
+# SECURITY: Block all spam URLs
+/tinggi/*  https://manage369.com/404.html  404!
+/*?wow=*   https://manage369.com/404.html  404!
+/*?apk=*   https://manage369.com/404.html  404!
+/*?slot=*  https://manage369.com/404.html  404!

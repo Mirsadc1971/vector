@@ -3,555 +3,253 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- Primary Meta Tags -->
-    <title>Manage369 Sitemap - Complete Site Navigation | Property Management Chicago</title>
-    <meta name="title" content="Manage369 Sitemap - Complete Site Navigation | Property Management Chicago">
-    <meta name="description" content="Complete sitemap for Manage369 property management services. Find all pages for Chicago & North Shore condo, HOA & townhome management services.">
-    <meta name="keywords" content="Manage369 sitemap, property management sitemap, Chicago property management navigation, North Shore property management pages">
-    <meta name="robots" content="index, follow">
+    <title>Sitemap - Manage369 Property Management</title>
+    <meta name="description" content="Complete sitemap for Manage369 property management website. Find all our service pages, location pages, and resources.">
     <link rel="canonical" href="https://manage369.com/sitemap.html">
-    
-    <!-- Favicons -->
-    <link rel="icon" href="/images/favicon.ico" type="image/x-icon">
-    
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
             background: #f8f9fa;
         }
-        
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #2B5BA0 0%, #FF6B35 100%);
-            color: white;
-            padding: 2rem 0;
-            text-align: center;
+        h1 {
+            color: #1e40af;
+            border-bottom: 3px solid #ff6b35;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
         }
-        
-        .header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            font-weight: 300;
-            letter-spacing: 2px;
+        h2 {
+            color: #1e40af;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            padding-left: 10px;
+            border-left: 4px solid #ff6b35;
         }
-        
-        .header p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-        
-        /* SITEMAP SECTION */
-        .sitemap-container {
-            max-width: 1400px;
-            margin: 60px auto;
-            padding: 0 20px;
-        }
-        
-        .sitemap-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-        
         .sitemap-section {
             background: white;
-            border: 1px solid #e0e0e0;
             border-radius: 8px;
-            padding: 25px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .sitemap-section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
-        .sitemap-section h2 {
-            color: #FF6B35;
-            font-size: 20px;
+            padding: 20px;
             margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #FF6B35;
-            font-weight: 500;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
-        
-        .sitemap-list {
-            list-style: none;
-        }
-        
-        .sitemap-list li {
-            margin-bottom: 10px;
-            padding-left: 15px;
-            position: relative;
-        }
-        
-        .sitemap-list li:before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: #FF6B35;
-        }
-        
-        .sitemap-list a {
-            color: #2C4A5F;
-            text-decoration: none;
-            transition: color 0.3s;
-            font-size: 14px;
-        }
-        
-        .sitemap-list a:hover {
-            color: #FF6B35;
-        }
-        
-        .sitemap-sublist {
-            margin-top: 10px;
-            margin-left: 15px;
-            font-size: 13px;
-        }
-        
-        .sitemap-sublist li {
-            margin-bottom: 5px;
-            color: #666;
-        }
-        
-        /* Navigation Breadcrumb */
-        .breadcrumb {
-            background: white;
-            padding: 1rem 0;
-            border-bottom: 1px solid #e0e0e0;
-        }
-        
-        .breadcrumb-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        .breadcrumb a {
-            color: #2B5BA0;
-            text-decoration: none;
-        }
-        
-        .breadcrumb a:hover {
-            text-decoration: underline;
-        }
-        
-        /* FIXED ALIGNED FOOTER */
-        footer {
-            background: linear-gradient(135deg, #2C4A5F 0%, #1E3A4C 100%);
-            color: #ffffff;
-            font-size: 14px;
-            margin-top: 4rem;
-        }
-        
-        .footer-main {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 50px 20px 40px;
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr;
-            gap: 60px;
-        }
-        
-        .footer-column h3 {
-            color: #FF6B35;
-            font-size: 16px;
-            margin-bottom: 20px;
-            font-weight: 500;
-            letter-spacing: 1px;
-            border-bottom: 2px solid #FF6B35;
-            padding-bottom: 10px;
-        }
-        
-        .footer-logo {
-            font-size: 24px;
-            color: #FF6B35;
-            margin-bottom: 15px;
-            font-weight: 400;
-            letter-spacing: 2px;
-        }
-        
-        .footer-description {
-            color: #B8C5D6;
-            line-height: 1.8;
-            margin-bottom: 20px;
-            font-size: 14px;
-        }
-        
-        .footer-contact {
-            margin-top: 20px;
-        }
-        
-        .footer-contact div {
-            margin-bottom: 10px;
-            color: #B8C5D6;
-            display: flex;
-            align-items: center;
-        }
-        
-        .footer-contact a {
-            color: #FF6B35;
-            text-decoration: none;
-            margin-left: 5px;
-        }
-        
-        .footer-contact a:hover {
-            text-decoration: underline;
-        }
-        
-        .footer-links {
-            list-style: none;
+        ul {
+            list-style-type: none;
             padding: 0;
         }
-        
-        .footer-links li {
-            margin-bottom: 12px;
-            padding-left: 0;
+        li {
+            padding: 8px 0;
+            border-bottom: 1px solid #eee;
         }
-        
-        .footer-links a {
-            color: #B8C5D6;
+        li:last-child {
+            border-bottom: none;
+        }
+        a {
+            color: #1e40af;
             text-decoration: none;
             transition: color 0.3s;
-            font-size: 14px;
-            display: block;
-            padding: 2px 0;
         }
-        
-        .footer-links a:hover {
-            color: #FF6B35;
-            transform: translateX(3px);
-            transition: all 0.3s;
+        a:hover {
+            color: #ff6b35;
+            text-decoration: underline;
         }
-        
-        .footer-bottom {
-            background: #1A2F3F;
-            padding: 25px 20px;
-            border-top: 1px solid #3A566B;
-        }
-        
-        .certifications {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 30px;
+        .home-link {
+            display: inline-block;
             margin-bottom: 20px;
-            flex-wrap: wrap;
-            max-width: 1400px;
-            margin: 0 auto 20px;
-        }
-        
-        .cert-badge {
-            text-align: center;
             padding: 10px 20px;
-            background: rgba(255, 107, 53, 0.1);
-            border: 1px solid #FF6B35;
-            border-radius: 8px;
-            min-width: 100px;
+            background: #1e40af;
+            color: white;
+            border-radius: 5px;
+            text-decoration: none;
         }
-        
-        .cert-badge .cert-abbr {
-            color: #FF6B35;
-            font-weight: 600;
-            font-size: 16px;
-            display: block;
-            margin-bottom: 3px;
+        .home-link:hover {
+            background: #ff6b35;
+            color: white;
         }
-        
-        .cert-badge .cert-desc {
-            color: #8A9BAB;
-            font-size: 10px;
-            text-transform: capitalize;
+        .stats {
+            background: #e7f3ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 30px;
         }
-        
-        .footer-copyright {
+        .last-updated {
+            color: #666;
+            font-size: 0.9em;
+            margin-top: 30px;
             text-align: center;
-            color: #8A9BAB;
-            font-size: 13px;
-            padding-top: 20px;
-            border-top: 1px solid #2A3F4F;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        @media (max-width: 968px) {
-            .footer-main {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                text-align: center;
-            }
-            
-            .footer-links {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .header h1 {
-                font-size: 2rem;
-            }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <div class="header">
-        <h1>MANAGE369 SITEMAP</h1>
-        <p>Complete Site Navigation & Page Directory</p>
-    </div>
+    <a href="/" class="home-link">← Back to Homepage</a>
     
-    <!-- Breadcrumb -->
-    <div class="breadcrumb">
-        <div class="breadcrumb-container">
-            <a href="index.html">Home</a> &gt; Sitemap
-        </div>
-    </div>
+    <h1>Sitemap - Manage369 Property Management</h1>
     
-    <!-- COMPLETE SITEMAP -->
-    <div class="sitemap-container">
-        <div class="sitemap-grid">
-            <!-- Main Pages -->
-            <div class="sitemap-section">
-                <h2>Main Pages</h2>
-                <ul class="sitemap-list">
-                    <li><a href="index.html">Homepage</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
-                    <li><a href="blog/index.html">Property Management Blog</a></li>
-                    <li><a href="payment-methods/index.html">Payment Methods</a></li>
-                </ul>
-            </div>
-            
-            <!-- Services -->
-            <div class="sitemap-section">
-                <h2>Services</h2>
-                <ul class="sitemap-list">
-                    <li><a href="services.html">Services Overview</a></li>
-                    <li><a href="services/condominium-management/index.html">Condominium Management</a></li>
-                    <li><a href="services/hoa-management/index.html">HOA Management</a></li>
-                    <li><a href="services/townhome-management/index.html">Townhome Management</a></li>
-                    <li><a href="services/financial-management/index.html">Financial Management</a></li>
-                    <li><a href="services/maintenance-coordination/index.html">Maintenance Coordination</a></li>
-                    <li><a href="services/board-support/index.html">Board Support</a></li>
-                    <li><a href="services/administrative-services/index.html">Administrative Services</a></li>
-                    <li><a href="services/capital-project-management/index.html">Capital Project Management</a></li>
-                    <li><a href="services/resident-relations/index.html">Resident Relations</a></li>
-                </ul>
-            </div>
-            
-            <!-- North Shore Areas -->
-            <div class="sitemap-section">
-                <h2>North Shore Service Areas</h2>
-                <ul class="sitemap-list">
-                    <li><a href="property-management">All Service Areas</a></li>
-                    <li><a href="service-areas/wilmette/index.html">Wilmette Property Management</a></li>
-                    <li><a href="service-areas/winnetka/index.html">Winnetka Property Management</a></li>
-                    <li><a href="service-areas/highland-park/index.html">Highland Park Property Management</a></li>
-                    <li><a href="service-areas/glencoe/index.html">Glencoe Property Management</a></li>
-                    <li><a href="service-areas/evanston/index.html">Evanston Property Management</a></li>
-                    <li><a href="service-areas/northbrook/index.html">Northbrook Property Management</a></li>
-                    <li><a href="service-areas/glenview/index.html">Glenview Property Management</a></li>
-                    <li><a href="service-areas/lake-forest/index.html">Lake Forest Property Management</a></li>
-                    <li><a href="service-areas/deerfield/index.html">Deerfield Property Management</a></li>
-                    <li><a href="service-areas/lake-bluff/index.html">Lake Bluff Property Management</a></li>
-                    <li><a href="service-areas/kenilworth/index.html">Kenilworth Property Management</a></li>
-                    <li><a href="service-areas/northfield/index.html">Northfield Property Management</a></li>
-                    <li><a href="service-areas/bannockburn/index.html">Bannockburn Property Management</a></li>
-                    <li><a href="service-areas/riverwoods/index.html">Riverwoods Property Management</a></li>
-                    <li><a href="service-areas/golf/index.html">Golf Property Management</a></li>
-                    <li><a href="service-areas/lincolnshire/index.html">Lincolnshire Property Management</a></li>
-                    <li><a href="service-areas/highwood/index.html">Highwood Property Management</a></li>
-                    <li><a href="service-areas/skokie/index.html">Skokie Property Management</a></li>
-                    <li><a href="service-areas/park-ridge/index.html">Park Ridge Property Management</a></li>
-                    <li><a href="service-areas/des-plaines/index.html">Des Plaines Property Management</a></li>
-                    <li><a href="service-areas/arlington-heights/index.html">Arlington Heights Property Management</a></li>
-                    <li><a href="service-areas/mount-prospect/index.html">Mount Prospect Property Management</a></li>
-                    <li><a href="service-areas/buffalo-grove/index.html">Buffalo Grove Property Management</a></li>
-                    <li><a href="service-areas/morton-grove/index.html">Morton Grove Property Management</a></li>
-                    <li><a href="service-areas/lincolnwood/index.html">Lincolnwood Property Management</a></li>
-                    <li><a href="service-areas/wheeling/index.html">Wheeling Property Management</a></li>
-                    <li><a href="service-areas/prospect-heights/index.html">Prospect Heights Property Management</a></li>
-                    <li><a href="service-areas/rolling-meadows/index.html">Rolling Meadows Property Management</a></li>
-                    <li><a href="service-areas/elk-grove-village/index.html">Elk Grove Village Property Management</a></li>
-                    <li><a href="service-areas/vernon-hills/index.html">Vernon Hills Property Management</a></li>
-                    <li><a href="service-areas/itasca/index.html">Itasca Property Management</a></li>
-                    <li><a href="service-areas/wood-dale/index.html">Wood Dale Property Management</a></li>
-                </ul>
-            </div>
-            
-            <!-- Chicago Areas -->
-            <div class="sitemap-section">
-                <h2>Chicago Service Areas</h2>
-                <ul class="sitemap-list">
-                    <li><a href="service-areas/lincoln-park/index.html">Lincoln Park Property Management</a></li>
-                    <li><a href="service-areas/gold-coast/index.html">Gold Coast Property Management</a></li>
-                    <li><a href="service-areas/river-north/index.html">River North Property Management</a></li>
-                    <li><a href="service-areas/streeterville/index.html">Streeterville Property Management</a></li>
-                    <li><a href="service-areas/lakeview/index.html">Lakeview Property Management</a></li>
-                    <li><a href="service-areas/old-town/index.html">Old Town Property Management</a></li>
-                    <li><a href="service-areas/loop/index.html">Loop Property Management</a></li>
-                    <li><a href="service-areas/south-loop/index.html">South Loop Property Management</a></li>
-                    <li><a href="service-areas/west-loop/index.html">West Loop Property Management</a></li>
-                    <li><a href="service-areas/wicker-park/index.html">Wicker Park Property Management</a></li>
-                    <li><a href="service-areas/bucktown/index.html">Bucktown Property Management</a></li>
-                    <li><a href="service-areas/logan-square/index.html">Logan Square Property Management</a></li>
-                    <li><a href="service-areas/lincoln-square/index.html">Lincoln Square Property Management</a></li>
-                    <li><a href="service-areas/rogers-park/index.html">Rogers Park Property Management</a></li>
-                    <li><a href="service-areas/uptown/index.html">Uptown Property Management</a></li>
-                    <li><a href="service-areas/andersonville/index.html">Andersonville Property Management</a></li>
-                    <li><a href="service-areas/avondale/index.html">Avondale Property Management</a></li>
-                    <li><a href="service-areas/albany-park/index.html">Albany Park Property Management</a></li>
-                    <li><a href="service-areas/edison-park/index.html">Edison Park Property Management</a></li>
-                    <li><a href="service-areas/jefferson-park/index.html">Jefferson Park Property Management</a></li>
-                    <li><a href="service-areas/portage-park/index.html">Portage Park Property Management</a></li>
-                    <li><a href="service-areas/norwood-park/index.html">Norwood Park Property Management</a></li>
-                    <li><a href="service-areas/sauganash/index.html">Sauganash Property Management</a></li>
-                    <li><a href="service-areas/forest-glen/index.html">Forest Glen Property Management</a></li>
-                    <li><a href="service-areas/north-park/index.html">North Park Property Management</a></li>
-                    <li><a href="service-areas/mayfair/index.html">Mayfair Property Management</a></li>
-                    <li><a href="service-areas/pulaski-park/index.html">Pulaski Park Property Management</a></li>
-                    <li><a href="service-areas/dunning/index.html">Dunning Property Management</a></li>
-                    <li><a href="service-areas/west-ridge/index.html">West Ridge Property Management</a></li>
-                    <li><a href="service-areas/hyde-park/index.html">Hyde Park Property Management</a></li>
-                    <li><a href="service-areas/beverly/index.html">Beverly Property Management</a></li>
-                    <li><a href="service-areas/bridgeport/index.html">Bridgeport Property Management</a></li>
-                    <li><a href="service-areas/bronzeville/index.html">Bronzeville Property Management</a></li>
-                    <li><a href="service-areas/chinatown/index.html">Chinatown Property Management</a></li>
-                    <li><a href="service-areas/university-village/index.html">University Village Property Management</a></li>
-                    <li><a href="service-areas/pilsen/index.html">Pilsen Property Management</a></li>
-                </ul>
-            </div>
-            
-            <!-- Suburban Areas -->
-            <div class="sitemap-section">
-                <h2>Additional Suburban Areas</h2>
-                <ul class="sitemap-list">
-                    <li><a href="service-areas/oak-park/index.html">Oak Park Property Management</a></li>
-                    <li><a href="service-areas/norridge/index.html">Norridge Property Management</a></li>
-                    <li><a href="service-areas/harwood-heights/index.html">Harwood Heights Property Management</a></li>
-                    <li><a href="service-areas/elmwood-park/index.html">Elmwood Park Property Management</a></li>
-                    <li><a href="service-areas/schiller-park/index.html">Schiller Park Property Management</a></li>
-                    <li><a href="service-areas/franklin-park/index.html">Franklin Park Property Management</a></li>
-                    <li><a href="service-areas/the-glen/index.html">The Glen Property Management</a></li>
-                    <li><a href="service-areas/old-irving-park/index.html">Old Irving Park Property Management</a></li>
-                </ul>
-            </div>
-            
-            <!-- Blog Posts -->
-            <div class="sitemap-section">
-                <h2>Blog Posts</h2>
-                <ul class="sitemap-list">
-                    <li><a href="blog/index.html">All Blog Posts</a></li>
-                    <li><a href="blog/top-5-financial-mistakes-hoa-boards-avoid.html">Top 5 Financial Mistakes HOA Boards Should Avoid</a></li>
-                    <li><a href="blog/smoking-vaping-illinois-condominiums-law.html">Smoking & Vaping in Illinois Condominiums</a></li>
-                    <li><a href="blog/2025-illinois-hoa-law-changes.html">2025 Illinois HOA Law Changes</a></li>
-                    <li><a href="blog/illinois-condominium-property-act-guide.html">Illinois Condominium Property Act Guide</a></li>
-                    <li><a href="blog/winter-property-management-checklist.html">Winter Property Management Checklist</a></li>
-                    <li><a href="blog/hoa-board-responsibilities-illinois-guide.html">HOA Board Responsibilities Guide</a></li>
-                    <li><a href="blog/professional-vs-self-management-north-shore.html">Professional vs Self-Management</a></li>
-                    <li><a href="blog/property-management-cost-north-shore-chicago-guide.html">Property Management Cost Guide</a></li>
-                    <li><a href="blog/seasonal-property-maintenance-calendar-chicago.html">Seasonal Maintenance Calendar</a></li>
-                    <li><a href="blog/top-10-property-management-companies-north-shore.html">Top 10 Property Management Companies</a></li>
-                </ul>
-            </div>
-            
-            <!-- Legal & Resources -->
-            <div class="sitemap-section">
-                <h2>Legal & Resources</h2>
-                <ul class="sitemap-list">
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms-of-service.html">Terms of Service</a></li>
-                    <li><a href="legal-disclaimers.html">Legal Disclaimers</a></li>
-                    <li><a href="accessibility.html">Accessibility Statement</a></li>
-                    <li><a href="sitemap.html">HTML Sitemap (This Page)</a></li>
-                    <li><a href="sitemap.xml">XML Sitemap</a></li>
-                </ul>
-            </div>
-        </div>
+    <div class="stats">
+        <strong>Total Pages:</strong> 113<br>
+        <strong>Last Updated:</strong> August 15, 2025
     </div>
-    
-    <!-- PROPERLY ALIGNED FOOTER -->
-    <footer>
-        <div class="footer-main">
-            <!-- Company Info Column -->
-            <div class="footer-column">
-                <div class="footer-logo">Manage369</div>
-                <p class="footer-description">
-                    Premier Chicago & North Shore Property Management<br>
-                    18+ Years of Excellence • 50+ Properties • 2,450+ Units
-                </p>
-                <div class="footer-contact-line">
-                    📞 <a href="tel:8476522338">(847) 652-2338</a>
-                </div>
-                <div class="footer-contact-line">
-                    ✉️ <a href="mailto:service@manage369.com">service@manage369.com</a>
-                </div>
-                <div class="footer-contact-line">
-                    📍 1400 Patriot Boulevard 357, Glenview, IL 60026
-                </div>
-                <div class="footer-license">IDFPR Management Firm License 291.000211</div>
-            </div>
-            
-            <!-- Quick Links Column -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul class="footer-links">
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="property-management">Areas We Serve</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="blog/index.html">Blog</a></li>
-                    <li><a href="payment-methods/index.html">Payment Methods</a></li>
-                </ul>
-            </div>
-            
-            <!-- Resources Column -->
-            <div class="footer-column">
-                <h3>Resources</h3>
-                <ul class="footer-links">
-                    <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                    <li><a href="terms-of-service.html">Terms of Service</a></li>
-                    <li><a href="sitemap.html">Sitemap</a></li>
-                    <li><a href="accessibility.html">Accessibility</a></li>
-                    <li><a href="legal-disclaimers.html">Legal Disclaimers</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="footer-bottom">
-            <div class="certifications">
-                <div class="cert-badge">
-                    <span class="cert-abbr">CAI</span>
-                    <span class="cert-desc">Member</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">IREM</span>
-                    <span class="cert-desc">Certified</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">CCIM</span>
-                    <span class="cert-desc">Designated</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">NAR</span>
-                    <span class="cert-desc">Member</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">IDFPR</span>
-                    <span class="cert-desc">Licensed</span>
-                </div>
-            </div>
-            <div class="footer-copyright">
-                © 2025 Manage369. All Rights Reserved.
-            </div>
-        </div>
-    </footer>
+
+    <div class="sitemap-section">
+        <h2>Main Pages (2 pages)</h2>
+        <ul>
+            <li><a href="/">Homepage</a></li>
+            <li><a href="/contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="sitemap-section">
+        <h2>Property Management Locations (69 pages)</h2>
+        <ul>
+            <li><a href="/property-management/">Property Management > </a></li>
+            <li><a href="/property-management/albany-park/">Property Management > Albany Park > </a></li>
+            <li><a href="/property-management/andersonville/">Property Management > Andersonville > </a></li>
+            <li><a href="/property-management/arlington-heights/">Property Management > Arlington Heights > </a></li>
+            <li><a href="/property-management/avondale/">Property Management > Avondale > </a></li>
+            <li><a href="/property-management/bucktown/">Property Management > Bucktown > </a></li>
+            <li><a href="/property-management/buffalo-grove/">Property Management > Buffalo Grove > </a></li>
+            <li><a href="/property-management/deerfield/">Property Management > Deerfield > </a></li>
+            <li><a href="/property-management/des-plaines/">Property Management > Des Plaines > </a></li>
+            <li><a href="/property-management/dunning/">Property Management > Dunning > </a></li>
+            <li><a href="/property-management/edgewater/">Property Management > Edgewater > </a></li>
+            <li><a href="/property-management/edison-park/">Property Management > Edison Park > </a></li>
+            <li><a href="/property-management/elk-grove-village/">Property Management > Elk Grove Village > </a></li>
+            <li><a href="/property-management/elmwood-park/">Property Management > Elmwood Park > </a></li>
+            <li><a href="/property-management/evanston/">Property Management > Evanston > </a></li>
+            <li><a href="/property-management/forest-glen/">Property Management > Forest Glen > </a></li>
+            <li><a href="/property-management/franklin-park/">Property Management > Franklin Park > </a></li>
+            <li><a href="/property-management/glencoe/">Property Management > Glencoe > </a></li>
+            <li><a href="/property-management/glenview/">Property Management > Glenview > </a></li>
+            <li><a href="/property-management/gold-coast/">Property Management > Gold Coast > </a></li>
+            <li><a href="/property-management/golf/">Property Management > Golf > </a></li>
+            <li><a href="/property-management/harwood-heights/">Property Management > Harwood Heights > </a></li>
+            <li><a href="/property-management/highland-park/">Property Management > Highland Park > </a></li>
+            <li><a href="/property-management/hyde-park/">Property Management > Hyde Park > </a></li>
+            <li><a href="/property-management/itasca/">Property Management > Itasca > </a></li>
+            <li><a href="/property-management/jefferson-park/">Property Management > Jefferson Park > </a></li>
+            <li><a href="/property-management/lake-bluff/">Property Management > Lake Bluff > </a></li>
+            <li><a href="/property-management/lake-forest/">Property Management > Lake Forest > </a></li>
+            <li><a href="/property-management/lakeview/">Property Management > Lakeview > </a></li>
+            <li><a href="/property-management/lincoln-park/">Property Management > Lincoln Park > </a></li>
+            <li><a href="/property-management/lincoln-square/">Property Management > Lincoln Square > </a></li>
+            <li><a href="/property-management/lincolnshire/">Property Management > Lincolnshire > </a></li>
+            <li><a href="/property-management/lincolnwood/">Property Management > Lincolnwood > </a></li>
+            <li><a href="/property-management/logan-square/">Property Management > Logan Square > </a></li>
+            <li><a href="/property-management/loop/">Property Management > Loop > </a></li>
+            <li><a href="/property-management/mayfair/">Property Management > Mayfair > </a></li>
+            <li><a href="/property-management/morton-grove/">Property Management > Morton Grove > </a></li>
+            <li><a href="/property-management/mount-prospect/">Property Management > Mount Prospect > </a></li>
+            <li><a href="/property-management/norridge/">Property Management > Norridge > </a></li>
+            <li><a href="/property-management/north-park/">Property Management > North Park > </a></li>
+            <li><a href="/property-management/northbrook/">Property Management > Northbrook > </a></li>
+            <li><a href="/property-management/northfield/">Property Management > Northfield > </a></li>
+            <li><a href="/property-management/norwood-park/">Property Management > Norwood Park > </a></li>
+            <li><a href="/property-management/oak-park/">Property Management > Oak Park > </a></li>
+            <li><a href="/property-management/old-irving-park/">Property Management > Old Irving Park > </a></li>
+            <li><a href="/property-management/old-town/">Property Management > Old Town > </a></li>
+            <li><a href="/property-management/park-ridge/">Property Management > Park Ridge > </a></li>
+            <li><a href="/property-management/portage-park/">Property Management > Portage Park > </a></li>
+            <li><a href="/property-management/prospect-heights/">Property Management > Prospect Heights > </a></li>
+            <li><a href="/property-management/pulaski-park/">Property Management > Pulaski Park > </a></li>
+            <li><a href="/property-management/ravenswood/">Property Management > Ravenswood > </a></li>
+            <li><a href="/property-management/river-north/">Property Management > River North > </a></li>
+            <li><a href="/property-management/rogers-park/">Property Management > Rogers Park > </a></li>
+            <li><a href="/property-management/rolling-meadows/">Property Management > Rolling Meadows > </a></li>
+            <li><a href="/property-management/sauganash/">Property Management > Sauganash > </a></li>
+            <li><a href="/property-management/schiller-park/">Property Management > Schiller Park > </a></li>
+            <li><a href="/property-management/skokie/">Property Management > Skokie > </a></li>
+            <li><a href="/property-management/south-loop/">Property Management > South Loop > </a></li>
+            <li><a href="/property-management/streeterville/">Property Management > Streeterville > </a></li>
+            <li><a href="/property-management/the-glen/">Property Management > The Glen > </a></li>
+            <li><a href="/property-management/uptown/">Property Management > Uptown > </a></li>
+            <li><a href="/property-management/vernon-hills/">Property Management > Vernon Hills > </a></li>
+            <li><a href="/property-management/west-loop/">Property Management > West Loop > </a></li>
+            <li><a href="/property-management/west-ridge/">Property Management > West Ridge > </a></li>
+            <li><a href="/property-management/wheeling/">Property Management > Wheeling > </a></li>
+            <li><a href="/property-management/wicker-park/">Property Management > Wicker Park > </a></li>
+            <li><a href="/property-management/wilmette/">Property Management > Wilmette > </a></li>
+            <li><a href="/property-management/winnetka/">Property Management > Winnetka > </a></li>
+            <li><a href="/property-management/wood-dale/">Property Management > Wood Dale > </a></li>
+        </ul>
+    </div>
+
+    <div class="sitemap-section">
+        <h2>Services (10 pages)</h2>
+        <ul>
+            <li><a href="/services.html">Services</a></li>
+            <li><a href="/services/administrative-services/">Services > Administrative Services > </a></li>
+            <li><a href="/services/board-support/">Services > Board Support > </a></li>
+            <li><a href="/services/capital-project-management/">Services > Capital Project Management > </a></li>
+            <li><a href="/services/condominium-management/">Services > Condominium Management > </a></li>
+            <li><a href="/services/financial-management/">Services > Financial Management > </a></li>
+            <li><a href="/services/hoa-management/">Services > Hoa Management > </a></li>
+            <li><a href="/services/maintenance-coordination/">Services > Maintenance Coordination > </a></li>
+            <li><a href="/services/resident-relations/">Services > Resident Relations > </a></li>
+            <li><a href="/services/townhome-management/">Services > Townhome Management > </a></li>
+        </ul>
+    </div>
+
+    <div class="sitemap-section">
+        <h2>Blog Articles (11 pages)</h2>
+        <ul>
+            <li><a href="/blog/">Blog > </a></li>
+            <li><a href="/blog/2025-illinois-hoa-law-changes.html">Blog > 2025 Illinois Hoa Law Changes</a></li>
+            <li><a href="/blog/hoa-board-responsibilities-illinois-guide.html">Blog > Hoa Board Responsibilities Illinois Guide</a></li>
+            <li><a href="/blog/illinois-condominium-property-act-guide.html">Blog > Illinois Condominium Property Act Guide</a></li>
+            <li><a href="/blog/professional-vs-self-management-north-shore.html">Blog > Professional Vs Self Management North Shore</a></li>
+            <li><a href="/blog/property-management-cost-north-shore-chicago-guide.html">Blog > Property Management Cost North Shore Chicago Guide</a></li>
+            <li><a href="/blog/seasonal-property-maintenance-calendar-chicago.html">Blog > Seasonal Property Maintenance Calendar Chicago</a></li>
+            <li><a href="/blog/smoking-vaping-illinois-condominiums-law.html">Blog > Smoking Vaping Illinois Condominiums Law</a></li>
+            <li><a href="/blog/top-10-property-management-companies-north-shore.html">Blog > Top 10 Property Management Companies North Shore</a></li>
+            <li><a href="/blog/top-5-financial-mistakes-hoa-boards-avoid.html">Blog > Top 5 Financial Mistakes Hoa Boards Avoid</a></li>
+            <li><a href="/blog/winter-property-management-checklist.html">Blog > Winter Property Management Checklist</a></li>
+        </ul>
+    </div>
+
+    <div class="sitemap-section">
+        <h2>Forms & Resources (9 pages)</h2>
+        <ul>
+            <li><a href="/construction-request.html">Construction Request</a></li>
+            <li><a href="/forms.html">Forms</a></li>
+            <li><a href="/ho6-insurance.html">Ho6 Insurance</a></li>
+            <li><a href="/manage369-forms.html">Manage369 Forms</a></li>
+            <li><a href="/move-permit.html">Move Permit</a></li>
+            <li><a href="/pay-dues.html">Pay Dues</a></li>
+            <li><a href="/repair-request.html">Repair Request</a></li>
+            <li><a href="/resident-info.html">Resident Info</a></li>
+            <li><a href="/violation-report.html">Violation Report</a></li>
+        </ul>
+    </div>
+
+    <div class="sitemap-section">
+        <h2>Legal & Policies (4 pages)</h2>
+        <ul>
+            <li><a href="/accessibility.html">Accessibility</a></li>
+            <li><a href="/legal-disclaimers.html">Legal Disclaimers</a></li>
+            <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="/terms-of-service.html">Terms Of Service</a></li>
+        </ul>
+    </div>
+
+    <div class="sitemap-section">
+        <h2>Other Pages (8 pages)</h2>
+        <ul>
+            <li><a href="/chicago-property-management-companies.html">Chicago Property Management Companies</a></li>
+            <li><a href="/emergency-property-management-chicago.html">Emergency Property Management Chicago</a></li>
+            <li><a href="/leave-review.html">Leave Review</a></li>
+            <li><a href="/payment-methods.html">Payment Methods</a></li>
+            <li><a href="/property-management-cost-guide.html">Property Management Cost Guide</a></li>
+            <li><a href="/property-management-near-me.html">Property Management Near Me</a></li>
+            <li><a href="/service-areas/deerfield/">Service Areas > Deerfield > </a></li>
+            <li><a href="/sitemap.html">Sitemap</a></li>
+        </ul>
+    </div>
+
+    <div class="last-updated">
+        This sitemap was automatically generated on August 15, 2025 at 09:36 AM
+    </div>
 </body>
 </html>

@@ -1,0 +1,6 @@
+# Add these to _redirects file
+
+# Fix 404 errors
+//fonts.googleapis.com //fonts.googleapis.com.html 301!
+//www.googletagmanager.com //www.googletagmanager.com.html 301!
+/images/favicon.ico /images/favicon.ico.html 301!

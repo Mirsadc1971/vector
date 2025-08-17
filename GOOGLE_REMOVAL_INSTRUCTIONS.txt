@@ -1,0 +1,75 @@
+GOOGLE SEARCH CONSOLE - COMPLETE REMOVAL GUIDE
+===============================================
+
+You're already in Search Console. Follow these steps:
+
+1. BULK REMOVAL OF SPAM DIRECTORY:
+-----------------------------------
+- Click "Removals" in the left sidebar
+- Click "NEW REQUEST" button
+- Enter: https://manage369.com/tinggi/
+- Select: "Remove all URLs with this prefix"
+- Click "SUBMIT REQUEST"
+
+This will remove ALL spam pages at once!
+
+2. IF THAT DOESN'T WORK, USE TEMPORARY REMOVALS:
+------------------------------------------------
+- Go to "Temporary Removals" tab
+- Click "NEW REQUEST"
+- Choose "Temporarily remove URL"
+- Enter: https://manage369.com/tinggi/
+- Select: "Remove all URLs that start with this prefix"
+- Submit
+
+3. ALSO BLOCK THESE PATTERNS:
+-----------------------------
+Submit separate removal requests for:
+- https://manage369.com/?wow=
+- https://manage369.com/*slot*
+- https://manage369.com/*casino*
+- https://manage369.com/*mahjong*
+- https://manage369.com/*apk*
+- https://manage369.com/*login*
+
+4. REPORT THE HACK:
+------------------
+- Go to "Security & Manual Actions" → "Security Issues"
+- Report that your site was hacked
+- Mention: "Spam content injected at /tinggi/ directory"
+- Request review after cleanup
+
+5. UPDATE YOUR SITEMAP:
+----------------------
+- Go to "Sitemaps"
+- Resubmit: https://manage369.com/sitemap.xml
+- This tells Google what your REAL pages are
+
+6. USE URL INSPECTION TOOL:
+---------------------------
+For your legitimate pages that aren't indexed:
+- Use "URL Inspection" tool
+- Enter URLs like: https://manage369.com/property-management/winnetka/
+- Click "REQUEST INDEXING"
+
+IMPORTANT NOTES:
+================
+- Removals can take 24-48 hours to process
+- The /tinggi/ directory needs to be deleted from your server
+- Change all passwords (Netlify, hosting, etc.)
+- Enable 2-factor authentication everywhere
+
+LEGITIMATE PAGES TO PROTECT:
+============================
+Make sure these are in your sitemap:
+- /property-management/[all 68 locations]/
+- /services/[all service pages]/
+- /blog/[all articles]/
+- /contact.html
+- /index.html
+
+CONTACT NETLIFY:
+===============
+Email: support@netlify.com
+Subject: "URGENT: Site compromised with spam content"
+Message: "My site manage369.com has been hacked. There's a /tinggi/ directory serving spam content that's not in my GitHub repository. Please help remove it."

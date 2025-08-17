@@ -1,0 +1,26 @@
+URGENT: Submit these URL removals to Google Search Console immediately:
+
+https://manage369.com/tinggi/
+https://manage369.com/tinggi/?wow=demo-pragmatic-mahjong-wins-3-black-scatter
+https://manage369.com/tinggi/?wow=apk-uang-vip
+https://manage369.com/tinggi/?wow=lk21-official-home
+https://manage369.com/tinggi/?wow=aplikasi-lucky-svip
+https://manage369.com/tinggi/?wow=login-himoney
+https://manage369.com/tinggi/?wow=login-mahjongways-2
+https://manage369.com/tinggi/?wow=gems365
+https://manage369.com/tinggi/?wow=menang666
+https://manage369.com/tinggi/?wow=baladfilm
+https://manage369.com/tinggi/?wow=login-tger123
+
+Steps:
+1. Go to: https://search.google.com/search-console
+2. Click "Removals" in left menu
+3. Click "New Request"
+4. Enter: https://manage369.com/tinggi/
+5. Select "Remove all URLs with this prefix"
+6. Submit request
+
+ALSO:
+1. Go to "Security & Manual Actions"
+2. Report the hack to Google
+3. Request a security review after cleanup

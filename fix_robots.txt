@@ -1,0 +1,4 @@
+# Add these Allow rules before Disallow rules
+
+Add Allow rules for important pages:
+Allow: /services/administrative-services/index.html

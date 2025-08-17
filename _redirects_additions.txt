@@ -1,0 +1,16 @@
+# Add these redirects to fix 404 errors
+
+/images/favicon.ico /favicon.ico 301!
+/property-management-wilmette.html /property-management/wilmette/ 301!
+/property-management-highland-park.html /property-management/highland-park/ 301!
+/property-management-winnetka.html /property-management/winnetka/ 301!
+/property-management-rogers-park.html /property-management/rogers-park/ 301!
+/property-management-glencoe.html /property-management/glencoe/ 301!
+/property-management-kenilworth.html /property-management/kenilworth/ 301!
+/property-management-glenview.html /property-management/glenview/ 301!
+/property-management-evanston.html /property-management/evanston/ 301!
+/property-management-skokie.html /property-management/skokie/ 301!
+/property-management-lake-forest.html /property-management/lake-forest/ 301!
+/property-management-northbrook.html /property-management/northbrook/ 301!
+/blog/category/hoa-guidance.html /blog/ 301!
+/blog/category/* /blog/ 301!

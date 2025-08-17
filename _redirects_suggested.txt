@@ -1,0 +1,26 @@
+# Netlify Redirects File
+# Generated redirect map for manage369.com
+
+# Security: Block spam/hacked content
+/tinggi/*              /404.html              404!
+/*wow=*                /404.html              404!
+/*slot=*               /404.html              404!
+/*casino=*             /404.html              404!
+/*apk=*                /404.html              404!
+
+# SEO: Common redirects
+/index.html            /                      301!
+/home                  /                      301!
+/home.html             /                      301!
+
+# Old property management URLs to new structure
+/property-management-glenview.html       /property-management/glenview/           301!
+/glenview-property-management.html       /property-management/glenview/           301!
+/property-management-winnetka.html       /property-management/winnetka/           301!
+/winnetka-property-management.html       /property-management/winnetka/           301!
+/property-management-wilmette.html       /property-management/wilmette/           301!
+/wilmette-property-management.html       /property-management/wilmette/           301!
+/property-management-evanston.html       /property-management/evanston/           301!
+/evanston-property-management.html       /property-management/evanston/           301!
+/property-management-highland-park.html  /property-management/highland-park/      301!
+/highland-park-property-management.html  /property-management/highland-park/      301!

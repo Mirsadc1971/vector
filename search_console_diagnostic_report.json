@@ -1,0 +1,1942 @@
+{
+  "scan_date": "2025-08-15T10:32:39.241942",
+  "summary": {
+    "404_errors": 164,
+    "redirect_errors": 0,
+    "robots_blocked": 2,
+    "not_indexed": 75,
+    "duplicate_content": 0
+  },
+  "issues": {
+    "404_errors": [
+      {
+        "url": "//fonts.googleapis.com",
+        "found_in": [
+          "index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "//www.googletagmanager.com",
+        "found_in": [
+          "index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "/images/favicon.ico",
+        "found_in": [
+          "index.html",
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 2
+      },
+      {
+        "url": "category/hoa-guidance.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../property-management-wilmette.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html"
+        ],
+        "occurrences": 6
+      },
+      {
+        "url": "../property-management-highland-park.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-winnetka.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-rogers-park.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-glencoe.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-kenilworth.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html"
+        ],
+        "occurrences": 6
+      },
+      {
+        "url": "../property-management-lake-forest.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-evanston.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-northbrook.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-glenview.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-deerfield.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-skokie.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../property-management-park-ridge.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-des-plaines.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-arlington-heights.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-mount-prospect.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-buffalo-grove.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-lincolnshire.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-gold-coast.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-lincoln-park.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../property-management-morton-grove.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-river-north.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../property-management-oak-park.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-hyde-park.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-beverly.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-streeterville.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-lakeview.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-wicker-park.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-logan-square.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../property-management-south-loop.html",
+        "found_in": [
+          "blog\\hoa-board-responsibilities-illinois-guide.html",
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "category/property-management-tips.html",
+        "found_in": [
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html"
+        ],
+        "occurrences": 2
+      },
+      {
+        "url": "../property-management-albany-park.html",
+        "found_in": [
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../property-management-old-town.html",
+        "found_in": [
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../property-management-uptown.html",
+        "found_in": [
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../property-management-pilsen.html",
+        "found_in": [
+          "blog\\professional-vs-self-management-north-shore.html",
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "category/financial-planning.html",
+        "found_in": [
+          "blog\\property-management-cost-north-shore-chicago-guide.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../property-management-lincoln-square.html",
+        "found_in": [
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../property-management-edison-park.html",
+        "found_in": [
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../property-management-bucktown.html",
+        "found_in": [
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../property-management-bridgeport.html",
+        "found_in": [
+          "blog\\property-management-cost-north-shore-chicago-guide.html",
+          "blog\\seasonal-property-maintenance-calendar-chicago.html",
+          "blog\\top-10-property-management-companies-north-shore.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "emergency-response-plans-chicago.html",
+        "found_in": [
+          "blog\\winter-property-management-checklist.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "annual-budget-planning-guide.html",
+        "found_in": [
+          "blog\\winter-property-management-checklist.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "effective-hoa-board-meetings.html",
+        "found_in": [
+          "blog\\winter-property-management-checklist.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "//fonts.gstatic.com",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "//www.google-analytics.com",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "//www.facebook.com",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "images/manage369livingroomskokie.webp",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "images/manage369livingroomskokie.jpg",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "mobile-responsive.css",
+        "found_in": [
+          "property-management\\index-old.html",
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 2
+      },
+      {
+        "url": "blog/index.html",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "payment-methods/index.html",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "privacy-policy.html",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "terms-of-service.html",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "sitemap.html",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "accessibility.html",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "legal-disclaimers.html",
+        "found_in": [
+          "property-management\\index-old.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "/property-management-glenview.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-northbrook.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-highland-park.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-lake-forest.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-wilmette.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-winnetka.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-glencoe.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-kenilworth.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-evanston.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-deerfield.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-lake-bluff.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-libertyville.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-lincolnshire.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-highwood.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-buffalo-grove.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-vernon-hills.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-mundelein.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-wheeling.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-long-grove.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-kildeer.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-hawthorn-woods.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-lake-zurich.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-park-ridge.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-skokie.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-downtown-chicago.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-the-loop.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-river-north.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-gold-coast.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-streeterville.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-lincoln-park.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-lakeview.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-old-town.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-west-loop.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-south-loop.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-bucktown.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-logan-square.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-lincoln-square.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-north-center.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-andersonville.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-edgewater.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-uptown.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "/property-management-rogers-park.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\maintenance-coordination\\index.html",
+          "services\\resident-relations\\index.html"
+        ],
+        "occurrences": 5
+      },
+      {
+        "url": "../../blog.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 9
+      },
+      {
+        "url": "../../forms-documents.html",
+        "found_in": [
+          "services\\administrative-services\\index.html",
+          "services\\board-support\\index.html",
+          "services\\capital-project-management\\index.html",
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 9
+      },
+      {
+        "url": "../../property-management-gold-coast.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-river-north.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-streeterville.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-lincoln-park.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-lakeview.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-old-town.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-the-loop.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-south-loop.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-west-loop.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-uptown.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-edgewater.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-andersonville.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-rogers-park.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-logan-square.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-bucktown.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-north-center.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-lincoln-square.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-downtown-chicago.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-glenview.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-evanston.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-wilmette.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-winnetka.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-glencoe.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-highland-park.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-kenilworth.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-highwood.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-lake-forest.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-lake-bluff.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-northbrook.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-deerfield.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-libertyville.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-lincolnshire.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-mundelein.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-park-ridge.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-skokie.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-wheeling.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-buffalo-grove.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-vernon-hills.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 3
+      },
+      {
+        "url": "../../property-management-hawthorn-woods.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-long-grove.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-kildeer.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-lake-zurich.html",
+        "found_in": [
+          "services\\condominium-management\\index.html",
+          "services\\financial-management\\index.html",
+          "services\\hoa-management\\index.html",
+          "services\\townhome-management\\index.html"
+        ],
+        "occurrences": 4
+      },
+      {
+        "url": "../../property-management-morton-grove.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-niles.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-des-plaines.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-lincolnwood.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-loop.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-ravenswood.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-roscoe-village.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-irving-park.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-portage-park.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-bannockburn.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-riverwoods.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../property-management-mettawa.html",
+        "found_in": [
+          "services\\financial-management\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../highland-park/",
+        "found_in": [
+          "service-areas\\deerfield\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../northbrook/",
+        "found_in": [
+          "service-areas\\deerfield\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../glenview/",
+        "found_in": [
+          "service-areas\\deerfield\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../wilmette/",
+        "found_in": [
+          "service-areas\\deerfield\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../privacy.html",
+        "found_in": [
+          "service-areas\\deerfield\\index.html"
+        ],
+        "occurrences": 1
+      },
+      {
+        "url": "../../terms.html",
+        "found_in": [
+          "service-areas\\deerfield\\index.html"
+        ],
+        "occurrences": 1
+      }
+    ],
+    "redirect_errors": {
+      "chains": [],
+      "to_404": [
+        {
+          "from": "/tinggi/*",
+          "to": "/404.html",
+          "issue": "Redirects to non-existent page"
+        },
+        {
+          "from": "/*wow=*",
+          "to": "/404.html",
+          "issue": "Redirects to non-existent page"
+        },
+        {
+          "from": "/*slot=*",
+          "to": "/404.html",
+          "issue": "Redirects to non-existent page"
+        },
+        {
+          "from": "/*casino=*",
+          "to": "/404.html",
+          "issue": "Redirects to non-existent page"
+        },
+        {
+          "from": "/*apk=*",
+          "to": "/404.html",
+          "issue": "Redirects to non-existent page"
+        },
+        {
+          "from": "/*gambling=*",
+          "to": "/404.html",
+          "issue": "Redirects to non-existent page"
+        },
+        {
+          "from": "/*mahjong=*",
+          "to": "/404.html",
+          "issue": "Redirects to non-existent page"
+        },
+        {
+          "from": "/propery-management/*",
+          "to": "/property-management/:splat",
+          "issue": "Redirects to non-existent page"
+        },
+        {
+          "from": "/property-managment/*",
+          "to": "/property-management/:splat",
+          "issue": "Redirects to non-existent page"
+        },
+        {
+          "from": "/property-mangement/*",
+          "to": "/property-management/:splat",
+          "issue": "Redirects to non-existent page"
+        }
+      ],
+      "total_redirects": 38
+    },
+    "robots_blocked": [
+      {
+        "page": "admin/index.html",
+        "rule": "/admin/",
+        "url": "https://manage369.com/admin/index.html"
+      },
+      {
+        "page": "services/administrative-services/index.html",
+        "rule": "/admin/",
+        "url": "https://manage369.com/services/administrative-services/index.html"
+      }
+    ],
+    "not_indexed": {
+      "forms-clean.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "perfect-footer.html": [
+        "Missing canonical tag",
+        "Missing meta description",
+        "Missing title tag",
+        "Orphaned page (no internal links)"
+      ],
+      "test-image.html": [
+        "Thin content (85 words)",
+        "Missing meta description",
+        "Orphaned page (no internal links)"
+      ],
+      "admin/index.html": [
+        "Thin content (26 words)",
+        "Missing meta description",
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/index-old.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "service-areas/deerfield/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/albany-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/andersonville/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/arlington-heights/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/avondale/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/bucktown/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/buffalo-grove/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/deerfield/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/des-plaines/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/dunning/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/edgewater/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/edison-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/elk-grove-village/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/elmwood-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/evanston/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/forest-glen/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/franklin-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/glencoe/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/glenview/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/gold-coast/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/golf/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/harwood-heights/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/highland-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/hyde-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/itasca/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/jefferson-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/lake-bluff/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/lake-forest/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/lakeview/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/lincoln-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/lincoln-square/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/lincolnshire/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/lincolnwood/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/logan-square/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/loop/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/mayfair/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/morton-grove/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/mount-prospect/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/norridge/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/north-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/northbrook/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/northfield/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/norwood-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/oak-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/old-irving-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/old-town/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/park-ridge/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/portage-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/prospect-heights/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/pulaski-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/ravenswood/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/river-north/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/rogers-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/rolling-meadows/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/sauganash/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/schiller-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/skokie/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/south-loop/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/streeterville/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/the-glen/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/uptown/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/vernon-hills/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/west-loop/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/west-ridge/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/wheeling/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/wicker-park/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/wilmette/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/winnetka/index.html": [
+        "Orphaned page (no internal links)"
+      ],
+      "property-management/wood-dale/index.html": [
+        "Orphaned page (no internal links)"
+      ]
+    },
+    "duplicate_content": {
+      "identical_content": [],
+      "duplicate_titles": [
+        {
+          "title": "Contact Forms | Manage369 Property Management",
+          "pages": [
+            "forms-clean.html",
+            "forms.html"
+          ]
+        }
+      ],
+      "duplicate_meta": [
+        {
+          "meta": "Contact Manage369 for property management services in Chicago & North Shore. Req",
+          "pages": [
+            "forms-clean.html",
+            "forms.html"
+          ]
+        }
+      ]
+    },
+    "fixes_applied": []
+  },
+  "fixes": {
+    "redirects_to_add": [
+      "//fonts.googleapis.com //fonts.googleapis.com.html 301!",
+      "//www.googletagmanager.com //www.googletagmanager.com.html 301!",
+      "/images/favicon.ico /images/favicon.ico.html 301!"
+    ],
+    "robots_to_update": [
+      "Add Allow rules for important pages:",
+      "Allow: /services/administrative-services/index.html"
+    ],
+    "canonicals_to_fix": [
+      {
+        "page": "perfect-footer.html",
+        "canonical": "https://manage369.com/perfect-footer.html"
+      }
+    ],
+    "content_to_enhance": [
+      {
+        "page": "test-image.html",
+        "action": "Add 300+ words of relevant content"
+      },
+      {
+        "page": "admin/index.html",
+        "action": "Add 300+ words of relevant content"
+      }
+    ],
+    "duplicates_to_resolve": []
+  }
+}

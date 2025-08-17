@@ -1,0 +1,10 @@
+# Pages needing content enhancement
+
+Page: admin/index.html
+  Current: 26 words
+  Needs: 274 more words
+
+Page: test-image.html
+  Current: 85 words
+  Needs: 215 more words
+

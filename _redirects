@@ -37,6 +37,14 @@
 /property-management-highland-park.html      /property-management/highland-park/ 301!
 /highland-park-property-management.html      /property-management/highland-park/ 301!
 
+# Additional property management redirects (fixing 404s)
+/property-management-rogers-park.html        /property-management/rogers-park/    301!
+/property-management-glencoe.html            /property-management/glencoe/        301!
+/property-management-kenilworth.html         /property-management/kenilworth/     301!
+/property-management-skokie.html             /property-management/skokie/         301!
+/property-management-lake-forest.html        /property-management/lake-forest/    301!
+/property-management-northbrook.html         /property-management/northbrook/     301!
+
 # Service page redirects
 /condominium-management.html      /services/condominium-management/     301!
 /condo-management.html             /services/condominium-management/     301!
@@ -45,6 +53,13 @@
 /townhome-management.html          /services/townhome-management/        301!
 /financial-management.html         /services/financial-management/       301!
 /maintenance-coordination.html     /services/maintenance-coordination/   301!
+
+# Blog category redirects (fixing 404s)
+/blog/category/hoa-guidance.html   /blog/                                301!
+/blog/category/*                   /blog/                                301!
+
+# Favicon redirect
+/images/favicon.ico                /favicon.ico                          301!
 
 # Common misspellings and variations
 /propery-management/*              /property-management/:splat           301!
