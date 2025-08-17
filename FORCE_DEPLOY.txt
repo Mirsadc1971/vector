@@ -1,0 +1,2 @@
+Force deployment: All review sections have been removed from all 68 property management pages.
+Timestamp: 2025-08-17
