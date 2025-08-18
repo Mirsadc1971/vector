@@ -3,6 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Manage369">
+    <link rel="apple-touch-icon" href="/images/icon-192x192.png">
+    <meta name="msapplication-TileImage" content="/images/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#1e40af">
+
+    <meta name="robots" content="index, follow">
     <title>Deerfield Property Management | HOA & Condo Services | Manage369</title>
     <meta name="description" content="Deerfield property management: HOA, condo & rental services for Deerbrook, Briarwood, Kings Cove. 18+ years experience. Call (847) 652-2338.">
     <meta name="keywords" content="Deerfield property management, Deerfield HOA management, Deerfield condo association, property manager Deerfield IL, Briarwood management, Kings Cove HOA">
@@ -15,7 +26,7 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Manage369 - Deerfield Property Management",
-      "description": "Professional property management services in Deerfield, IL",
+      "description": "Professional <a href="services.html" style="color: #1e40af; text-decoration: underline;">property management services</a> in Deerfield, IL",
       "url": "https://manage369.com/service-areas/deerfield/",
       "telephone": "+1-847-652-2338",
       "address": {
@@ -298,10 +309,10 @@
         <div class="community-grid">
             <div class="community-card">
                 <h3>Briarwood</h3>
-                <p>Full-service management for this prestigious residential community. Landscape coordination, financial management, and board support.</p>
+                <p>Full-service management for this prestigious residential community. Landscape coordination, financial management, and <a href="services/board-support/" style="color: #1e40af; text-decoration: underline;">board support</a>.</p>
                 <ul style="margin-top: 1rem; padding-left: 1.5rem;">
                     <li>150+ unit management</li>
-                    <li>Common area maintenance</li>
+                    <li>Common area <a href="services/maintenance-coordination/" style="color: #1e40af; text-decoration: underline;">maintenance</a></li>
                     <li>Reserve planning</li>
                 </ul>
             </div>
@@ -413,7 +424,7 @@
             
             <div style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
                 <h3 style="color: #dc2626; margin-bottom: 1rem;">Deerfield Property Management Expertise</h3>
-                <p>Located just minutes from Deerfield, our team provides rapid response to all property needs. We understand the unique challenges of managing properties in this desirable North Shore community, from maintaining property values in established neighborhoods to supporting new development initiatives.</p>
+                <p>Located just minutes from Deerfield, our team provides rapid response to all property needs. We understand the unique challenges of managing properties in this desirable <a href="property-management/wilmette/" style="color: #1e40af; text-decoration: underline;">North Shore</a> community, from maintaining property values in established neighborhoods to supporting new development initiatives.</p>
                 <p style="margin-top: 1rem;">Our services are tailored to meet Deerfield's high standards, whether managing luxury estates near Deerfield Golf Club, townhomes in Deerbrook, or commercial properties along Waukegan Road.</p>
             </div>
         </div>
@@ -462,6 +473,87 @@
         <div style="text-align: center; margin-top: 2rem; padding-top: 2rem; border-top: 1px solid #374151;">
             <p>&copy; 2025 Manage369. All rights reserved. | <a href="../../privacy.html" style="color: #fbbf24;">Privacy Policy</a> | <a href="../../terms.html" style="color: #fbbf24;">Terms of Service</a></p>
         </div>
-    </footer>
+    
+    <!-- Our Services Section -->
+    <section style="background: white; padding: 3rem 2rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; color: #1e40af; margin-bottom: 2rem;">Our Property Management Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                <a href="services/hoa-management/" style="background: #f8f9fa; padding: 1.5rem; text-decoration: none; color: #333; border-radius: 8px; border-left: 4px solid #ff9500;">
+                    <h3 style="color: #1e40af; margin: 0 0 0.5rem 0;">HOA Management</h3>
+                    <p style="margin: 0; font-size: 0.9rem;">Complete homeowners association management services</p>
+                </a>
+                <a href="services/condominium-management/" style="background: #f8f9fa; padding: 1.5rem; text-decoration: none; color: #333; border-radius: 8px; border-left: 4px solid #ff9500;">
+                    <h3 style="color: #1e40af; margin: 0 0 0.5rem 0;">Condo Management</h3>
+                    <p style="margin: 0; font-size: 0.9rem;">High-rise and mid-rise condominium expertise</p>
+                </a>
+                <a href="services/financial-management/" style="background: #f8f9fa; padding: 1.5rem; text-decoration: none; color: #333; border-radius: 8px; border-left: 4px solid #ff9500;">
+                    <h3 style="color: #1e40af; margin: 0 0 0.5rem 0;">Financial Management</h3>
+                    <p style="margin: 0; font-size: 0.9rem;">Budget planning and financial reporting</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 3rem 2rem; margin-top: 3rem;">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <h2 style="color: white; margin-bottom: 1rem;">Ready to Get Started?</h2>
+            <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">Join 50+ properties that trust Manage369 for professional management</p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="contact.html" style="background: white; color: #667eea; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold;">Get Free Consultation</a>
+                <a href="services.html" style="background: transparent; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white;">View All Services</a>
+                <a href="tel:8476522338" style="background: #ff9500; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold;">Call (847) 652-2338</a>
+            </div>
+        </div>
+    </section>
+</footer>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered:', registration);
+                        
+                        // Check for updates every hour
+                        setInterval(() => {
+                            registration.update();
+                        }, 3600000);
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed:', err);
+                    });
+            });
+            
+            // PWA install prompt
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                
+                // Show install button if you have one
+                const installButton = document.getElementById('pwa-install-btn');
+                if (installButton) {
+                    installButton.style.display = 'block';
+                    installButton.addEventListener('click', () => {
+                        deferredPrompt.prompt();
+                        deferredPrompt.userChoice.then((choiceResult) => {
+                            if (choiceResult.outcome === 'accepted') {
+                                console.log('User accepted PWA install');
+                            }
+                            deferredPrompt = null;
+                        });
+                    });
+                }
+            });
+            
+            // Detect if app is installed
+            window.addEventListener('appinstalled', () => {
+                console.log('PWA was installed');
+            });
+        }
+    </script>
 </body>
 </html>

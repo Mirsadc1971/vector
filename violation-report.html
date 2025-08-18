@@ -3,6 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- PWA Support -->
+    <link rel="manifest" href="/manifest.json">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Manage369">
+    <link rel="apple-touch-icon" href="/images/icon-192x192.png">
+    <meta name="msapplication-TileImage" content="/images/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#1e40af">
+
     <meta name="robots" content="index, follow">
     <title>Illinois Condominium Violation Report - Manage369 Property Management</title>
     <meta name="description" content="Report HOA & condo rule violations in Chicago properties. Confidential submission, fair investigation process, prompt resolution. Illinois Condominium Property Act compliant.">
@@ -530,5 +540,52 @@
             <p style="margin-top: 10px;">For more information about the Illinois Ombudsman Act or to file a complaint directly with the state, visit the Illinois Department of Financial and Professional Regulation website.</p>
         </div>
     </div>
+
+    <!-- PWA Service Worker Registration -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(registration => {
+                        console.log('ServiceWorker registered:', registration);
+                        
+                        // Check for updates every hour
+                        setInterval(() => {
+                            registration.update();
+                        }, 3600000);
+                    })
+                    .catch(err => {
+                        console.log('ServiceWorker registration failed:', err);
+                    });
+            });
+            
+            // PWA install prompt
+            let deferredPrompt;
+            window.addEventListener('beforeinstallprompt', (e) => {
+                e.preventDefault();
+                deferredPrompt = e;
+                
+                // Show install button if you have one
+                const installButton = document.getElementById('pwa-install-btn');
+                if (installButton) {
+                    installButton.style.display = 'block';
+                    installButton.addEventListener('click', () => {
+                        deferredPrompt.prompt();
+                        deferredPrompt.userChoice.then((choiceResult) => {
+                            if (choiceResult.outcome === 'accepted') {
+                                console.log('User accepted PWA install');
+                            }
+                            deferredPrompt = null;
+                        });
+                    });
+                }
+            });
+            
+            // Detect if app is installed
+            window.addEventListener('appinstalled', () => {
+                console.log('PWA was installed');
+            });
+        }
+    </script>
 </body>
 </html>
