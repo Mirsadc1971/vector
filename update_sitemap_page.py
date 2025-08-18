@@ -1,4 +1,11 @@
-<!DOCTYPE html>
+"""
+Update sitemap.html page with all current pages and XML sitemap reference
+"""
+
+import os
+
+# Generate comprehensive HTML sitemap
+html_content = '''<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -292,4 +299,17 @@
         });
     </script>
 </body>
-</html>
+</html>'''
+
+# Write the updated sitemap.html
+with open('C:\\Users\\mirsa\\manage369-live\\sitemap.html', 'w', encoding='utf-8') as f:
+    f.write(html_content)
+
+print("Updated sitemap.html with:")
+print("- Link to XML sitemap")
+print("- All 68 property management locations")
+print("- All service pages")
+print("- All blog articles")
+print("- Organized by region")
+print("- Visual hierarchy with priority indicators")
+print("\nThe sitemap page now serves both users and search engines!")
