@@ -1,78 +1,29 @@
 User-agent: *
 Allow: /
-
-# Sitemap location
 Sitemap: https://manage369.com/sitemap.xml
 
-# Crawl delay for respectful crawling
-Crawl-delay: 1
-
-# Allow all major search engines
+# Specifically allow Googlebot
 User-agent: Googlebot
 Allow: /
+Crawl-delay: 0
 
-User-agent: Bingbot
+User-agent: Googlebot-Image
 Allow: /
 
-User-agent: Slurp
+User-agent: Googlebot-Mobile
 Allow: /
 
-User-agent: DuckDuckBot
-Allow: /
-
-User-agent: Baiduspider
-Allow: /
-
-User-agent: YandexBot
-Allow: /
-
-# Allow AI crawlers
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: CCBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Claude-Web
-Allow: /
-
-# Block unwanted bots
-User-agent: AhrefsBot
-Disallow: /
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-# Block access to sensitive areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /temp/
-Disallow: /cgi-bin/
-Disallow: /tinggi/
-
-# Allow access to important resources
+# Allow all assets
 Allow: /images/
 Allow: /css/
 Allow: /js/
-Allow: /*.css
-Allow: /*.js
-Allow: /*.png
-Allow: /*.jpg
-Allow: /*.jpeg
-Allow: /*.gif
-Allow: /*.webp
-Allow: /*.svg
+Allow: /*.css$
+Allow: /*.js$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.webp$
 
-
-# Host directive (helps with canonicalization)
-Host: https://manage369.com
-
+# No restrictions on crawling

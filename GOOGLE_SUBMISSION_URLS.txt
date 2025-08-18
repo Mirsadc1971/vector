@@ -1,0 +1,36 @@
+URGENT: Submit these URLs manually to Google Search Console
+
+1. Go to: https://search.google.com/search-console
+2. Select your property (manage369.com)
+3. Go to "URL Inspection" tool
+4. Paste each URL and click "Request Indexing"
+
+PRIORITY 1 - Submit immediately:
+https://manage369.com/
+https://manage369.com/contact.html
+https://manage369.com/services.html
+https://manage369.com/property-management/glenview/
+https://manage369.com/property-management/wilmette/
+https://manage369.com/property-management/winnetka/
+https://manage369.com/property-management/highland-park/
+https://manage369.com/property-management/northbrook/
+
+PRIORITY 2 - Submit after Priority 1:
+https://manage369.com/property-management/evanston/
+https://manage369.com/property-management/skokie/
+https://manage369.com/property-management/glencoe/
+https://manage369.com/property-management/deerfield/
+https://manage369.com/property-management/morton-grove/
+https://manage369.com/property-management/lincolnwood/
+https://manage369.com/property-management/golf/
+https://manage369.com/property-management/des-plaines/
+
+PRIORITY 3 - Chicago neighborhoods:
+https://manage369.com/property-management/lincoln-park/
+https://manage369.com/property-management/lakeview/
+https://manage369.com/property-management/gold-coast/
+https://manage369.com/property-management/river-north/
+https://manage369.com/property-management/loop/
+
+Also submit the sitemap:
+https://manage369.com/sitemap.xml
