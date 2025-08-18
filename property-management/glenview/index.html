@@ -111,7 +111,39 @@
   <link href="../../css/property-pages-master.css" rel="stylesheet"/>
   <link href="../../css/property-content-styles.css" rel="stylesheet"/>
   <link href="https://manage369.com/property-management/glenview/" rel="canonical"/>
- </head>
+ 
+    <style>
+        /* Prevent horizontal overflow on mobile */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Ensure all containers respect viewport width */
+        section, div, article, aside, header, footer, main {
+            max-width: 100vw;
+        }
+        
+        /* Fix for tables on mobile */
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+        
+        /* Ensure images don't cause overflow */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
  <body>
   <header class="header">
    <div class="header-content">

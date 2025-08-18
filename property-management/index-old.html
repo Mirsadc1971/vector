@@ -1435,6 +1435,38 @@
         }
     }
     </style>
+
+    <style>
+        /* Prevent horizontal overflow on mobile */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+        
+        /* Ensure all containers respect viewport width */
+        section, div, article, aside, header, footer, main {
+            max-width: 100vw;
+        }
+        
+        /* Fix for tables on mobile */
+        @media (max-width: 768px) {
+            table {
+                display: block;
+                overflow-x: auto;
+                white-space: nowrap;
+            }
+        }
+        
+        /* Ensure images don't cause overflow */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
 </head>
 <body>
     <header class="header">
@@ -1900,27 +1932,11 @@
         
         <div class="footer-bottom">
             <div class="certifications">
-                <div class="cert-badge">
-                    <span class="cert-abbr">CAI</span>
-                    <span class="cert-desc">Member</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">IREM</span>
-                    <span class="cert-desc">Certified</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">CCIM</span>
-                    <span class="cert-desc">Designated</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">NAR</span>
-                    <span class="cert-desc">Member</span>
-                </div>
-                <div class="cert-badge">
-                    <span class="cert-abbr">IDFPR</span>
-                    <span class="cert-desc">Licensed</span>
-                </div>
-            </div>
+            <div class="cert-badge">CAI</div>
+            <div class="cert-badge">CCIM</div>
+            <div class="cert-badge">IDFPR</div>
+            <div class="cert-badge">IREM</div>
+            <div class="cert-badge">NAR</div></div>
             <div class="footer-copyright">
                 © 2025 Manage369. All Rights Reserved.
             </div>
@@ -2073,12 +2089,11 @@
         
         <div class="footer-bottom">
             <div class="certifications">
-                <div class="cert-badge">CAI</div>
-                <div class="cert-badge">IREM</div>
-                <div class="cert-badge">CCIM</div>
-                <div class="cert-badge">NAR</div>
-                <div class="cert-badge">IDFPR</div>
-            </div>
+            <div class="cert-badge">CAI</div>
+            <div class="cert-badge">CCIM</div>
+            <div class="cert-badge">IDFPR</div>
+            <div class="cert-badge">IREM</div>
+            <div class="cert-badge">NAR</div></div>
             <div class="footer-copyright">
                 © 2025 Manage369. All Rights Reserved.
             </div>
