@@ -841,32 +841,159 @@
 </head>
 <body>
     <header class="header">
-        <!-- COMPANY LOGO/NAME -->
+        <a href="index.html" class="logo">MANAGE369</a>
         
+        <nav class="nav">
+            <a href="index.html" class="nav-link">Home</a>
+            
+            <div class="dropdown">
+                <a href="services.html" class="nav-link dropdown-trigger">
+                    Services <span class="dropdown-arrow">▼</span>
+                </a>
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Property Types</div>
+                        <a href="services/condominium-management/index.html">Condominium Management</a>
+                        <a href="services/hoa-management/index.html">HOA Management</a>
+                        <a href="services/townhome-management/index.html">Townhome Management</a>
                     </div>
-                    
-                    <!-- Sample Reviews -->
-                    <div style="border-top: 1px solid #eee; padding-top: 1.5rem;">
-                        <blockquote style="margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #ff9500;">
-                            <p style="color: #333; font-style: italic; margin-bottom: 0.5rem;">"Manage369 has been managing our 48-unit condo building for 3 years. Their professionalism and responsiveness are unmatched in the North Shore area."</p>
-                            <footer style="color: #666;">— Sarah M., Board President, Glenview</footer>
-                        </blockquote>
-                        
-                        <blockquote style="margin-bottom: 1.5rem; padding-left: 1rem; border-left: 3px solid #ff9500;">
-                            <p style="color: #333; font-style: italic; margin-bottom: 0.5rem;">"Outstanding financial management and maintenance coordination. They've saved our HOA thousands while improving property values."</p>
-                            <footer style="color: #666;">— Michael R., HOA Member, Northbrook</footer>
-                        </blockquote>
-                    </div>
-                    
-                    <div style="text-align: center; padding-top: 1rem;">
-                        <a href="https://g.page/r/CfdhSxOyYhY7EBM/review" 
-                           target="_blank" 
-                           style="color: #4285f4; text-decoration: none; font-weight: 600;">
-                           View All Reviews on Google →
-                        </a>
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Service Offerings</div>
+                        <a href="services/financial-management/index.html">Financial Management</a>
+                        <a href="services/maintenance-coordination/index.html">Maintenance Coordination</a>
+                        <a href="services/board-support/index.html">Board Support</a>
+                        <a href="services/administrative-services/index.html">Administrative Services</a>
+                        <a href="services/capital-project-management/index.html">Capital Project Management</a>
+                        <a href="services/resident-relations/index.html">Resident Relations</a>
                     </div>
                 </div>
             </div>
+            
+            <a href="property-management/" class="nav-link">Areas We Serve</a>
+            <a href="pay-dues.html" class="nav-link">Pay Dues</a>
+            <a href="contact.html" class="nav-link active">Contact</a>
+        </nav>
+        
+        <a href="tel:8476522338" class="phone">Call (847) 652-2338</a>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="property-management/">Areas We Serve</a>
+        <a href="pay-dues.html">Pay Dues</a>
+        <a href="contact.html">Contact</a>
+        <a href="tel:8476522338" style="background: #4a90e2; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">
+            Call (847) 652-2338
+        </a>
+    </div>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact Manage369</h1>
+            <p>Your Trusted Property Management Partner in Chicago & North Shore</p>
+            <div class="hero-buttons">
+                <a href="tel:8476522338" class="btn-primary">Call (847) 652-2338</a>
+                <a href="mailto:service@manage369.com" class="btn-secondary">Email Us</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Contact Information Section -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get in Touch With Our Expert Team</h2>
+                <p>18+ years of excellence serving Chicago and North Shore communities</p>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div class="contact-details">
+                            <h4>Main Office</h4>
+                            <p>1400 Patriot Boulevard 357</p>
+                            <p>Glenview, IL 60026</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">📞</div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p><a href="tel:8476522338">(847) 652-2338</a></p>
+                            <p>Monday - Friday: 9:00 AM - 5:00 PM</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">✉️</div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p><a href="mailto:service@manage369.com">service@manage369.com</a></p>
+                            <p>We respond within 24 hours</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">🚨</div>
+                        <div class="contact-details">
+                            <h4>24/7 Emergency Line</h4>
+                            <p><a href="tel:8476522338">(847) 652-2338</a></p>
+                            <p>For urgent maintenance issues</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form action="https://formspree.io/f/xpznzgnk" method="POST">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first-name">First Name *</label>
+                                <input type="text" id="first-name" name="first_name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="last-name">Last Name *</label>
+                                <input type="text" id="last-name" name="last_name" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="property">Property/Association Name</label>
+                            <input type="text" id="property" name="property">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
             
             <!-- Local Business Citations -->
             <div style="text-align: center;">
