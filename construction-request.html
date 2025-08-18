@@ -173,7 +173,56 @@
                 grid-template-columns: 1fr;
             }
         }
-    </style>
+    
+    /* Footer Readability Fix */
+    .site-footer, footer {
+        background: #1f2937 !important;
+        color: #e5e7eb !important;
+    }
+    
+    .site-footer a, footer a,
+    .footer-column a, .footer-content a {
+        color: #e5e7eb !important;
+        text-decoration: none;
+    }
+    
+    .site-footer a:hover, footer a:hover {
+        color: #ffffff !important;
+        text-decoration: underline;
+    }
+    
+    .footer-column h3, footer h3 {
+        color: #ffffff !important;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-column ul, footer ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-column li, footer li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom {
+        background: #111827 !important;
+        color: #9ca3af !important;
+        border-top: 1px solid #374151;
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+    }
+    
+    .footer-license, .footer-copyright {
+        color: #9ca3af !important;
+    }
+    
+    /* Remove/hide duplicate cert badges */
+    .cert-badge, .certifications {
+        display: none !important;
+    }
+
+</style>
     <script>
         function prepareEmail() {
             // Gather form data
@@ -281,7 +330,37 @@
             max-width: 100%;
             height: auto;
         }
-    </style>
+    
+    /* Footer Color Fix - High Contrast */
+    .site-footer, footer {
+        background: #1f2937 !important; /* Dark gray instead of purple */
+        color: #ffffff !important;
+    }
+    
+    .site-footer a, footer a,
+    .footer-column a, .footer-content a {
+        color: #e5e7eb !important; /* Light gray for links */
+        text-decoration: none;
+    }
+    
+    .site-footer a:hover, footer a:hover,
+    .footer-column a:hover, .footer-content a:hover {
+        color: #ffffff !important;
+        text-decoration: underline;
+    }
+    
+    .footer-column h3, .footer-column h4,
+    footer h3, footer h4 {
+        color: #ffffff !important;
+    }
+    
+    .footer-bottom, footer .footer-bottom {
+        background: #111827 !important; /* Even darker for bottom */
+        color: #9ca3af !important;
+        border-top: 1px solid #374151;
+    }
+    
+</style>
 </head>
 <body>
     <a href="#main" class="skip-link">Skip to main content</a>

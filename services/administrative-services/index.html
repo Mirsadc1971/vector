@@ -319,9 +319,58 @@
         }
         
         footer { background: #333; color: white; text-align: center; padding: 2rem 0; }
-        footer a { color: #ea580c; text-decoration: none; }
+        footer a { color: #e5e7eb; text-decoration: none; }
         footer a:hover { text-decoration: underline; }
-    </style>
+    
+    /* Footer Readability Fix */
+    .site-footer, footer {
+        background: #1f2937 !important;
+        color: #e5e7eb !important;
+    }
+    
+    .site-footer a, footer a,
+    .footer-column a, .footer-content a {
+        color: #e5e7eb !important;
+        text-decoration: none;
+    }
+    
+    .site-footer a:hover, footer a:hover {
+        color: #ffffff !important;
+        text-decoration: underline;
+    }
+    
+    .footer-column h3, footer h3 {
+        color: #ffffff !important;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-column ul, footer ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-column li, footer li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom {
+        background: #111827 !important;
+        color: #9ca3af !important;
+        border-top: 1px solid #374151;
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+    }
+    
+    .footer-license, .footer-copyright {
+        color: #9ca3af !important;
+    }
+    
+    /* Remove/hide duplicate cert badges */
+    .cert-badge, .certifications {
+        display: none !important;
+    }
+
+</style>
     <link rel="canonical" href="https://manage369.com/services/administrative-services/">
 </head>
 <body>
@@ -659,18 +708,18 @@
             <div style="display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px;">
                 <!-- Left Column: Company Info -->
                 <div>
-                    <h3 style="font-size: 24px; color: #ea580c; margin-bottom: 15px; font-weight: 700;">Manage369</h3>
+                    <h3 style="font-size: 24px; color: #ffffff; margin-bottom: 15px; font-weight: 700;">Manage369</h3>
                     <p style="margin-bottom: 15px; font-size: 14px;">Professional property management services for Chicago and North Shore communities. Serving condominiums, HOAs, and townhome associations with expert financial management, maintenance coordination, and board support.</p>
                     <p style="margin-bottom: 8px; font-size: 14px;"><strong>Address:</strong><br>1400 Patriot Boulevard 357<br>Glenview, IL 60026</p>
                     <p style="margin-bottom: 8px; font-size: 14px;"><strong>Phone:</strong> <a href="tel:8476522338" style="color: white; text-decoration: none;">(847) 652-2338</a></p>
                     <p style="margin-bottom: 8px; font-size: 14px;"><strong>Email:</strong> <a href="mailto:service@manage369.com" style="color: white; text-decoration: none;">service@manage369.com</a></p>
                     <p style="margin-bottom: 15px; font-size: 14px;"><strong>Hours:</strong> Monday-Friday 9:00 AM - 5:00 PM</p>
-                    <p style="color: #ea580c; font-weight: bold; font-size: 14px;">IDFPR Management Firm License 291.000211</p>
+                    <p style="color: #ffffff; font-weight: bold; font-size: 14px;">IDFPR Management Firm License 291.000211</p>
                 </div>
 
                 <!-- Center Column: Quick Links -->
                 <div>
-                    <h4 style="font-size: 18px; color: #ea580c; margin-bottom: 15px; font-weight: 600;">Quick Links</h4>
+                    <h4 style="font-size: 18px; color: #ffffff; margin-bottom: 15px; font-weight: 600;">Quick Links</h4>
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         <li style="margin-bottom: 8px;"><a href="../" style="color: white; text-decoration: none; font-size: 14px; transition: color 0.3s;" onmouseover="this.style.color='#ff6b35'" onmouseout="this.style.color='white'">Services</a></li>
                         <li style="margin-bottom: 8px;"><a href="../../property-management" style="color: white; text-decoration: none; font-size: 14px; transition: color 0.3s;" onmouseover="this.style.color='#ff6b35'" onmouseout="this.style.color='white'">Areas We Serve</a></li>
@@ -682,7 +731,7 @@
 
                 <!-- Right Column: Resources -->
                 <div>
-                    <h4 style="font-size: 18px; color: #ea580c; margin-bottom: 15px; font-weight: 600;">Resources</h4>
+                    <h4 style="font-size: 18px; color: #ffffff; margin-bottom: 15px; font-weight: 600;">Resources</h4>
                     <ul style="list-style: none; padding: 0; margin: 0;">
                         <li style="margin-bottom: 8px;"><a href="../../forms-documents.html" style="color: white; text-decoration: none; font-size: 14px; transition: color 0.3s;" onmouseover="this.style.color='#ff6b35'" onmouseout="this.style.color='white'">Forms & Documents</a></li>
                         <li style="margin-bottom: 8px;"><a href="../../privacy-policy.html" style="color: white; text-decoration: none; font-size: 14px; transition: color 0.3s;" onmouseover="this.style.color='#ff6b35'" onmouseout="this.style.color='white'">Privacy</a></li>
@@ -704,7 +753,7 @@
                     <img src="../../images/nar-logo.png" alt="NAR Member" style="height: 60px; filter: brightness(0) invert(1);" title="National Association of Realtors Member">
                 </div>
                 
-                <p style="font-size: 12px; color: #bdc3c7; margin: 0;">&copy; 2024 Manage369. All rights reserved. | Professional property management services for Chicago and North Shore communities.</p>
+                <p style="font-size: 12px; color: #ffffff; margin: 0;">&copy; 2024 Manage369. All rights reserved. | Professional property management services for Chicago and North Shore communities.</p>
             </div>
         </div>
 
@@ -722,7 +771,37 @@
                 height: 50px !important;
             }
         }
-        </style>
+        
+    /* Footer Color Fix - High Contrast */
+    .site-footer, footer {
+        background: #1f2937 !important; /* Dark gray instead of purple */
+        color: #ffffff !important;
+    }
+    
+    .site-footer a, footer a,
+    .footer-column a, .footer-content a {
+        color: #e5e7eb !important; /* Light gray for links */
+        text-decoration: none;
+    }
+    
+    .site-footer a:hover, footer a:hover,
+    .footer-column a:hover, .footer-content a:hover {
+        color: #ffffff !important;
+        text-decoration: underline;
+    }
+    
+    .footer-column h3, .footer-column h4,
+    footer h3, footer h4 {
+        color: #ffffff !important;
+    }
+    
+    .footer-bottom, footer .footer-bottom {
+        background: #111827 !important; /* Even darker for bottom */
+        color: #9ca3af !important;
+        border-top: 1px solid #374151;
+    }
+    
+</style>
     
     <!-- Our Services Section -->
     <section style="background: white; padding: 3rem 2rem;">

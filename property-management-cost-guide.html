@@ -393,7 +393,56 @@
             .nav { display: none; }
             .area-grid { grid-template-columns: 1fr; }
         }
-    </style>
+    
+    /* Footer Readability Fix */
+    .site-footer, footer {
+        background: #1f2937 !important;
+        color: #e5e7eb !important;
+    }
+    
+    .site-footer a, footer a,
+    .footer-column a, .footer-content a {
+        color: #e5e7eb !important;
+        text-decoration: none;
+    }
+    
+    .site-footer a:hover, footer a:hover {
+        color: #ffffff !important;
+        text-decoration: underline;
+    }
+    
+    .footer-column h3, footer h3 {
+        color: #ffffff !important;
+        margin-bottom: 1rem;
+    }
+    
+    .footer-column ul, footer ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .footer-column li, footer li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .footer-bottom {
+        background: #111827 !important;
+        color: #9ca3af !important;
+        border-top: 1px solid #374151;
+        padding: 1.5rem 0;
+        margin-top: 2rem;
+    }
+    
+    .footer-license, .footer-copyright {
+        color: #9ca3af !important;
+    }
+    
+    /* Remove/hide duplicate cert badges */
+    .cert-badge, .certifications {
+        display: none !important;
+    }
+
+</style>
 
     <style>
         /* Prevent horizontal overflow on mobile */
@@ -735,7 +784,7 @@
     
     .footer-logo {
         font-size: 24px;
-        color: #ea580c;
+        color: #ffffff;
         margin-bottom: 8px;
         font-weight: normal;
     }
@@ -770,13 +819,13 @@
     }
     
     .footer-license {
-        color: #ea580c;
+        color: #ffffff;
         font-weight: bold;
         line-height: 1.6;
     }
     
     .footer-column h3 {
-        color: #ea580c;
+        color: #ffffff;
         font-size: 18px;
         margin-bottom: 15px;
         font-weight: normal;
@@ -799,9 +848,39 @@
     }
     
     .footer-links a:hover {
-        color: #ea580c;
+        color: #ffffff;
     }
-    </style>
+    
+    /* Footer Color Fix - High Contrast */
+    .site-footer, footer {
+        background: #1f2937 !important; /* Dark gray instead of purple */
+        color: #ffffff !important;
+    }
+    
+    .site-footer a, footer a,
+    .footer-column a, .footer-content a {
+        color: #e5e7eb !important; /* Light gray for links */
+        text-decoration: none;
+    }
+    
+    .site-footer a:hover, footer a:hover,
+    .footer-column a:hover, .footer-content a:hover {
+        color: #ffffff !important;
+        text-decoration: underline;
+    }
+    
+    .footer-column h3, .footer-column h4,
+    footer h3, footer h4 {
+        color: #ffffff !important;
+    }
+    
+    .footer-bottom, footer .footer-bottom {
+        background: #111827 !important; /* Even darker for bottom */
+        color: #9ca3af !important;
+        border-top: 1px solid #374151;
+    }
+    
+</style>
 
     <footer>
         <div class="footer-main">
@@ -844,18 +923,18 @@
     <!-- Our Services Section -->
     <section style="background: white; padding: 3rem 2rem;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center; color: #1e40af; margin-bottom: 2rem;">Our Property Management Services</h2>
+            <h2 style="text-align: center; color: #ffffff; margin-bottom: 2rem;">Our Property Management Services</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                <a href="services/hoa-management/" style="background: #f8f9fa; padding: 1.5rem; text-decoration: none; color: #333; border-radius: 8px; border-left: 4px solid #ea580c;">
-                    <h3 style="color: #1e40af; margin: 0 0 0.5rem 0;">HOA Management</h3>
+                <a href="services/hoa-management/" style="background: #f8f9fa; padding: 1.5rem; text-decoration: none; color: #ffffff; border-radius: 8px; border-left: 4px solid #ea580c;">
+                    <h3 style="color: #ffffff; margin: 0 0 0.5rem 0;">HOA Management</h3>
                     <p style="margin: 0; font-size: 0.9rem;">Complete homeowners association management services</p>
                 </a>
-                <a href="services/condominium-management/" style="background: #f8f9fa; padding: 1.5rem; text-decoration: none; color: #333; border-radius: 8px; border-left: 4px solid #ea580c;">
-                    <h3 style="color: #1e40af; margin: 0 0 0.5rem 0;">Condo Management</h3>
+                <a href="services/condominium-management/" style="background: #f8f9fa; padding: 1.5rem; text-decoration: none; color: #ffffff; border-radius: 8px; border-left: 4px solid #ea580c;">
+                    <h3 style="color: #ffffff; margin: 0 0 0.5rem 0;">Condo Management</h3>
                     <p style="margin: 0; font-size: 0.9rem;">High-rise and mid-rise condominium expertise</p>
                 </a>
-                <a href="services/financial-management/" style="background: #f8f9fa; padding: 1.5rem; text-decoration: none; color: #333; border-radius: 8px; border-left: 4px solid #ea580c;">
-                    <h3 style="color: #1e40af; margin: 0 0 0.5rem 0;">Financial Management</h3>
+                <a href="services/financial-management/" style="background: #f8f9fa; padding: 1.5rem; text-decoration: none; color: #ffffff; border-radius: 8px; border-left: 4px solid #ea580c;">
+                    <h3 style="color: #ffffff; margin: 0 0 0.5rem 0;">Financial Management</h3>
                     <p style="margin: 0; font-size: 0.9rem;">Budget planning and financial reporting</p>
                 </a>
             </div>
@@ -864,27 +943,27 @@
 <!-- Related Areas Section -->
     <section style="background: #f8f9fa; padding: 3rem 2rem; margin-top: 3rem;">
         <div style="max-width: 1200px; margin: 0 auto;">
-            <h2 style="text-align: center; color: #1e40af; margin-bottom: 2rem;">Popular Areas We Serve</h2>
+            <h2 style="text-align: center; color: #ffffff; margin-bottom: 2rem;">Popular Areas We Serve</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
-                <a href="../wilmette/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #1e40af; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
+                <a href="../wilmette/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
                     <h3 style="margin: 0; font-size: 1.1rem;">Wilmette</h3>
-                    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">Property Management</p>
+                    <p style="margin: 0.5rem 0 0 0; color: #ffffff; font-size: 0.9rem;">Property Management</p>
                 </a>
-                <a href="../winnetka/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #1e40af; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
+                <a href="../winnetka/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
                     <h3 style="margin: 0; font-size: 1.1rem;">Winnetka</h3>
-                    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">Property Management</p>
+                    <p style="margin: 0.5rem 0 0 0; color: #ffffff; font-size: 0.9rem;">Property Management</p>
                 </a>
-                <a href="../glencoe/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #1e40af; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
+                <a href="../glencoe/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
                     <h3 style="margin: 0; font-size: 1.1rem;">Glencoe</h3>
-                    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">Property Management</p>
+                    <p style="margin: 0.5rem 0 0 0; color: #ffffff; font-size: 0.9rem;">Property Management</p>
                 </a>
-                <a href="../gold-coast/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #1e40af; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
+                <a href="../gold-coast/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
                     <h3 style="margin: 0; font-size: 1.1rem;">Gold Coast</h3>
-                    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">Property Management</p>
+                    <p style="margin: 0.5rem 0 0 0; color: #ffffff; font-size: 0.9rem;">Property Management</p>
                 </a>
-                <a href="../lincoln-park/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #1e40af; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
+                <a href="../lincoln-park/" style="background: white; padding: 1.5rem; text-align: center; text-decoration: none; color: #ffffff; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); transition: all 0.3s;">
                     <h3 style="margin: 0; font-size: 1.1rem;">Lincoln Park</h3>
-                    <p style="margin: 0.5rem 0 0 0; color: #666; font-size: 0.9rem;">Property Management</p>
+                    <p style="margin: 0.5rem 0 0 0; color: #ffffff; font-size: 0.9rem;">Property Management</p>
                 </a>
             </div>
         </div>
@@ -896,7 +975,7 @@
             <h2 style="color: white; margin-bottom: 1rem;">Ready to Get Started?</h2>
             <p style="color: rgba(255,255,255,0.9); margin-bottom: 2rem;">Join 50+ properties that trust Manage369 for professional management</p>
             <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                <a href="../../contact.html" style="background: white; color: #667eea; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold;">Get Free Consultation</a>
+                <a href="../../contact.html" style="background: white; color: #ffffff; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold;">Get Free Consultation</a>
                 <a href="../../services.html" style="background: transparent; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold; border: 2px solid white;">View All Services</a>
                 <a href="tel:8476522338" style="background: #ea580c; color: white; padding: 1rem 2rem; text-decoration: none; border-radius: 5px; font-weight: bold;">Call (847) 652-2338</a>
             </div>
