@@ -220,7 +220,7 @@
         }
         
         .btn { padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid; display: inline-block; text-align: center; }
-        .btn-primary { background: #ea580c; color: white; border-color: #ea580c; }
+        .btn-primary { background: #c4490c; color: white; border-color: #c4490c; }
         .btn-primary:hover { background: #e55a2b; transform: translateY(-2px); }
         .btn-secondary { background: transparent; color: #2c5aa0; border-color: #2c5aa0; }
         .btn-secondary:hover { background: #2c5aa0; color: white; }
@@ -259,7 +259,7 @@
         .service-card h3 { color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem; }
         .service-card ul { list-style: none; padding-left: 0; }
         .service-card li { padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; }
-        .service-card li:before { content: "✓"; color: #ea580c; font-weight: bold; margin-right: 0.5rem; font-size: 1.1rem; }
+        .service-card li:before { content: "✓"; color: #c4490c; font-weight: bold; margin-right: 0.5rem; font-size: 1.1rem; }
         
         /* Tablet Responsive */
         @media (max-width: 1024px) {
@@ -370,6 +370,45 @@
         display: none !important;
     }
 
+
+    /* High Contrast Text Fixes */
+    .btn-primary, button[type="submit"], .submit-btn {
+        background: #c4490c !important; /* Darker orange for better contrast */
+        color: white !important;
+    }
+    
+    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
+        background: #a03a0a !important;
+    }
+    
+    /* Service cards text contrast */
+    .service-card h3, .service-card h4 {
+        color: #1f2937 !important;
+    }
+    
+    .service-card p {
+        color: #4b5563 !important;
+    }
+    
+    /* Fix any orange text that needs more contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1f2937 !important;
+    }
+    
+    /* Ensure links have proper contrast */
+    a {
+        color: #0a58ca !important;
+    }
+    
+    a:hover {
+        color: #084298 !important;
+    }
+    
+    /* Footer links stay light on dark background */
+    .site-footer a, footer a {
+        color: #e5e7eb !important;
+    }
+
 </style>
     <link rel="canonical" href="https://manage369.com/services/administrative-services/">
 </head>
@@ -456,7 +495,7 @@
             <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; margin-bottom: 3rem; text-align: center;">
                 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Emergency Administrative Support Services</h3>
                 <p style="font-size: 1.1rem; margin-bottom: 1rem;">When your association faces urgent administrative needs or crisis situations, our North Shore property management team provides immediate administrative support and documentation assistance. From emergency board resolutions to crisis communication and regulatory filings during emergencies, we ensure all administrative requirements are met quickly and accurately.</p>
-                <p style="font-weight: 600; color: #ea580c;">Emergency administrative support available 24/7: (847) 652-2338</p>
+                <p style="font-weight: 600; color: #c4490c;">Emergency administrative support available 24/7: (847) 652-2338</p>
             </div>
             
             <div class="services-grid">
@@ -610,7 +649,7 @@
                 </a>
                 
                 <a href="/services/administrative-services/" style="background: white; padding: 1.5rem; border-radius: 8px; text-decoration: none; color: #333; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; border-left: 4px solid #ea580c;" onmouseover="this.style.transform='translateY(-3px)'" onmouseout="this.style.transform='translateY(0)'">
-                    <h3 style="color: #ea580c; margin-bottom: 1rem; font-size: 1.2rem;">Administrative Services (Current Page)</h3>
+                    <h3 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem;">Administrative Services (Current Page)</h3>
                     <p>Complete administrative support including document management and regulatory compliance.</p>
                 </a>
                 
@@ -632,7 +671,7 @@
             <h2 style="margin-bottom: 1rem; font-size: 2.2rem;">Ready for Professional Management?</h2>
             <p style="margin-bottom: 2rem; font-size: 1.1rem;">Contact us today to learn how we can help your property association.</p>
             <div style="text-align: center;">
-                <a href="../../contact.html" class="btn" style="background: white; color: #ea580c; border-color: white;">Get Started Today</a>
+                <a href="../../contact.html" class="btn" style="background: white; color: #c4490c; border-color: white;">Get Started Today</a>
             </div>
         </div>
     </section>

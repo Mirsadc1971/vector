@@ -412,9 +412,9 @@
         }
         
         .btn-primary {
-            background: #ea580c;
+            background: #c4490c;
             color: white;
-            border-color: #ea580c;
+            border-color: #c4490c;
         }
         
         .btn-primary:hover {
@@ -520,7 +520,7 @@
         
         .service-card li:before {
             content: "✓";
-            color: #ea580c;
+            color: #c4490c;
             font-weight: bold;
             margin-right: 0.5rem;
             font-size: 1.1rem;
@@ -663,6 +663,45 @@
     /* Remove/hide duplicate cert badges */
     .cert-badge, .certifications {
         display: none !important;
+    }
+
+
+    /* High Contrast Text Fixes */
+    .btn-primary, button[type="submit"], .submit-btn {
+        background: #c4490c !important; /* Darker orange for better contrast */
+        color: white !important;
+    }
+    
+    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
+        background: #a03a0a !important;
+    }
+    
+    /* Service cards text contrast */
+    .service-card h3, .service-card h4 {
+        color: #1f2937 !important;
+    }
+    
+    .service-card p {
+        color: #4b5563 !important;
+    }
+    
+    /* Fix any orange text that needs more contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1f2937 !important;
+    }
+    
+    /* Ensure links have proper contrast */
+    a {
+        color: #0a58ca !important;
+    }
+    
+    a:hover {
+        color: #084298 !important;
+    }
+    
+    /* Footer links stay light on dark background */
+    .site-footer a, footer a {
+        color: #e5e7eb !important;
     }
 
 </style>
@@ -821,10 +860,10 @@
                     <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">High-Rise Building Expertise</h3>
                     <p style="margin-bottom: 1rem;">Specialized management for Chicago's iconic high-rise condominium towers including vintage buildings from the 1920s-1960s and modern luxury developments. We understand the unique challenges of managing buildings with 20+ floors, multiple elevator systems, and complex mechanical infrastructure.</p>
                     <ul style="list-style: none; padding-left: 0;">
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Gold Coast luxury towers</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>River North high-rise buildings</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Streeterville waterfront condos</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Lincoln Park vintage conversions</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Gold Coast luxury towers</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>River North high-rise buildings</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Streeterville waterfront condos</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Lincoln Park vintage conversions</li>
                     </ul>
                 </div>
                 
@@ -832,10 +871,10 @@
                     <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">Illinois Condominium Law Compliance</h3>
                     <p style="margin-bottom: 1rem;">Expert knowledge of the Illinois Condominium Property Act, Chicago Building Code requirements, and Cook County property assessment procedures. Our CAI-certified team ensures full legal compliance and protects boards from potential liability issues.</p>
                     <ul style="list-style: none; padding-left: 0;">
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Annual disclosure compliance</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Reserve study requirements</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Board governance protocols</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Document amendment procedures</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Annual disclosure compliance</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Reserve study requirements</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Board governance protocols</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Document amendment procedures</li>
                     </ul>
                 </div>
             </div>
@@ -903,7 +942,7 @@
                 </div>
                 
                 <div style="text-align: center; padding: 2rem;">
-                    <div style="width: 80px; height: 80px; background: #ea580c; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">17+</div>
+                    <div style="width: 80px; height: 80px; background: #c4490c; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">17+</div>
                     <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Years of Experience</h3>
                     <p>Over 17 years managing Chicago and North Shore condominiums, with deep understanding of local markets, building systems, and regulatory requirements.</p>
                 </div>
@@ -924,7 +963,7 @@
                         <p>Comprehensive evaluation of building systems, financial health, and management needs</p>
                     </div>
                     <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: #ea580c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
+                        <div style="width: 60px; height: 60px; background: #c4490c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
                         <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Custom Management Plan</h4>
                         <p>Tailored service plan addressing your building's specific needs and board priorities</p>
                     </div>
@@ -934,7 +973,7 @@
                         <p>Smooth transition with minimal disruption to building operations and resident services</p>
                     </div>
                     <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: #ea580c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
+                        <div style="width: 60px; height: 60px; background: #c4490c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
                         <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Ongoing Excellence</h4>
                         <p>Continuous improvement with regular board communication and proactive management</p>
                     </div>
@@ -1101,7 +1140,7 @@
             <h2 style="margin-bottom: 1rem; font-size: 2.2rem;">Ready for Expert Condominium Management?</h2>
             <p style="margin-bottom: 2rem; font-size: 1.1rem;">Join the growing number of Chicago condominium boards who trust Manage369 with their building management.</p>
             <div style="text-align: center;">
-                <a href="../../contact.html" class="btn" style="background: white; color: #ea580c; border-color: white;">Get Started Today</a>
+                <a href="../../contact.html" class="btn" style="background: white; color: #c4490c; border-color: white;">Get Started Today</a>
             </div>
         </div>
     </section>

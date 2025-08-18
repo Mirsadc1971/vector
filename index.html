@@ -483,7 +483,7 @@
         
         .hero-subtitle {
             font-size: 2.5rem;
-            color: #ea580c;
+            color: #c4490c;
             margin-bottom: 2rem;
             font-weight: 300;
             text-shadow: 1px 1px 3px rgba(0,0,0,0.4);
@@ -519,7 +519,7 @@
         }
         
         .btn-primary {
-            background: #ea580c;
+            background: #c4490c;
             color: white;
             border: 2px solid #ea580c;
         }
@@ -755,7 +755,7 @@
         }
         
         .footer-section h3 {
-            color: #ffffff;
+            color: #1f2937;
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 1.5rem;
@@ -765,7 +765,7 @@
         }
         
         .footer-section p {
-            color: #ffffff;
+            color: #1f2937;
             line-height: 1.6;
             margin-bottom: 1rem;
         }
@@ -780,13 +780,13 @@
         }
         
         .footer-section ul li a {
-            color: #ffffff;
+            color: #1f2937;
             text-decoration: none;
             transition: color 0.3s ease;
         }
         
         .footer-section ul li a:hover {
-            color: #ffffff;
+            color: #1f2937;
         }
         
         .contact-info {
@@ -794,7 +794,7 @@
         }
         
         .contact-info strong {
-            color: #ffffff;
+            color: #1f2937;
             display: block;
             margin-bottom: 0.3rem;
         }
@@ -811,7 +811,7 @@
         }
         
         .office-location h4 {
-            color: #ea580c;
+            color: #c4490c;
             margin-bottom: 0.5rem;
             font-size: 1rem;
         }
@@ -856,7 +856,7 @@
         }
         
         .footer-bottom p {
-            color: #ffffff;
+            color: #1f2937;
             margin-bottom: 1rem;
         }
         
@@ -869,13 +869,13 @@
         }
         
         .footer-links a {
-            color: #ffffff;
+            color: #1f2937;
             text-decoration: none;
             font-size: 0.9rem;
         }
         
         .footer-links a:hover {
-            color: #ffffff;
+            color: #1f2937;
         }
         
         .emergency-contact {
@@ -887,12 +887,12 @@
         }
         
         .emergency-contact h4 {
-            color: #ffffff;
+            color: #1f2937;
             margin-bottom: 0.5rem;
         }
         
         .emergency-contact p {
-            color: #ffffff;
+            color: #1f2937;
             margin: 0;
             font-weight: bold;
         }
@@ -1066,6 +1066,45 @@
     /* Remove/hide duplicate cert badges */
     .cert-badge, .certifications {
         display: none !important;
+    }
+
+
+    /* High Contrast Text Fixes */
+    .btn-primary, button[type="submit"], .submit-btn {
+        background: #c4490c !important; /* Darker orange for better contrast */
+        color: white !important;
+    }
+    
+    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
+        background: #a03a0a !important;
+    }
+    
+    /* Service cards text contrast */
+    .service-card h3, .service-card h4 {
+        color: #1f2937 !important;
+    }
+    
+    .service-card p {
+        color: #4b5563 !important;
+    }
+    
+    /* Fix any orange text that needs more contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1f2937 !important;
+    }
+    
+    /* Ensure links have proper contrast */
+    a {
+        color: #0a58ca !important;
+    }
+    
+    a:hover {
+        color: #084298 !important;
+    }
+    
+    /* Footer links stay light on dark background */
+    .site-footer a, footer a {
+        color: #e5e7eb !important;
     }
 
 </style>
@@ -1421,37 +1460,37 @@
         
         <!-- Service Offerings -->
         <div class="service-offerings-section">
-            <h3 style="color: #ea580c; font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem;">Complete Service Offerings</h3>
+            <h3 style="color: #c4490c; font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem;">Complete Service Offerings</h3>
             <p style="margin-bottom: 2rem; color: #666; font-size: 1.1rem;">Comprehensive management services provided to all property types</p>
             <div class="service-offerings-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
                 <a href="services/financial-management/index.html" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #ea580c;">💰</div>
-                    <h4 style="color: #ea580c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Financial Management</h4>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">💰</div>
+                    <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Financial Management</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Comprehensive financial stewardship including budgeting, accounting, and reserve fund management.</p>
                 </a>
                 <a href="services/maintenance-coordination/index.html" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #ea580c;">🔧</div>
-                    <h4 style="color: #ea580c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Maintenance Coordination</h4>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">🔧</div>
+                    <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Maintenance Coordination</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Proactive maintenance programs, emergency response, and quality control for property value preservation.</p>
                 </a>
                 <a href="services/board-support/index.html" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #ea580c;">🤝</div>
-                    <h4 style="color: #ea580c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Board Support</h4>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">🤝</div>
+                    <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Board Support</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Expert guidance including meeting facilitation, governance consulting, and legal compliance support.</p>
                 </a>
                 <a href="services/administrative-services/index.html" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #ea580c;">📋</div>
-                    <h4 style="color: #ea580c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Administrative Services</h4>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">📋</div>
+                    <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Administrative Services</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Complete administrative support including record keeping, correspondence, and compliance management.</p>
                 </a>
                 <a href="services/capital-project-management/index.html" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #ea580c;">🏗️</div>
-                    <h4 style="color: #ea580c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Capital Project Management</h4>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">🏗️</div>
+                    <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Capital Project Management</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Expert oversight of major renovations ensuring projects stay on schedule and within budget.</p>
                 </a>
                 <a href="services/resident-relations/index.html" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
-                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #ea580c;">👥</div>
-                    <h4 style="color: #ea580c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Resident Relations</h4>
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">👥</div>
+                    <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Resident Relations</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Professional communication, conflict resolution, and community event coordination.</p>
                 </a>
             </div>
@@ -1464,32 +1503,32 @@
             <h2 style="font-size: 2.5rem; margin-bottom: 1rem; color: white;">Your Trusted North Shore Property Management Partner</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
                 <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <div style="font-size: 3rem; color: #ea580c; margin-bottom: 1rem;">18+</div>
+                    <div style="font-size: 3rem; color: #c4490c; margin-bottom: 1rem;">18+</div>
                     <div style="font-size: 1.2rem; font-weight: bold;">Years Serving Our Community</div>
                     <div>Established Relationships Throughout North Shore</div>
                 </div>
                 <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <div style="font-size: 3rem; color: #ea580c; margin-bottom: 1rem;">50+</div>
+                    <div style="font-size: 3rem; color: #c4490c; margin-bottom: 1rem;">50+</div>
                     <div style="font-size: 1.2rem; font-weight: bold;">Properties Under Management</div>
                     <div>From Highland Park to Lincoln Park</div>
                 </div>
                 <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <div style="font-size: 3rem; color: #ea580c; margin-bottom: 1rem;">2,450+</div>
+                    <div style="font-size: 3rem; color: #c4490c; margin-bottom: 1rem;">2,450+</div>
                     <div style="font-size: 1.2rem; font-weight: bold;">Residential Units Managed</div>
                     <div>Preserving $100M+ in Community Assets</div>
                 </div>
                 <div style="background: rgba(255,255,255,0.1); padding: 2rem; border-radius: 15px; backdrop-filter: blur(10px);">
-                    <div style="font-size: 3rem; color: #ea580c; margin-bottom: 1rem;">100%</div>
+                    <div style="font-size: 3rem; color: #c4490c; margin-bottom: 1rem;">100%</div>
                     <div style="font-size: 1.2rem; font-weight: bold;">Client Satisfaction</div>
                     <div>Long-term Partnership Focus</div>
                 </div>
             </div>
             
             <!-- PROFESSIONAL CONSULTATION CALL TO ACTION -->
-            <div style="background: #ea580c; padding: 2rem; border-radius: 15px; margin-top: 3rem;">
+            <div style="background: #c4490c; padding: 2rem; border-radius: 15px; margin-top: 3rem;">
                 <h3 style="font-size: 2rem; margin-bottom: 1rem; color: white;">Discover the Manage369 Difference</h3>
-                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: white;">Experience property management excellence built on 18+ years of North Shore community relationships and local expertise. We'd be honored to discuss how we can serve your community.</p>
-                <a href="tel:8476522338" style="background: white; color: #ea580c; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block;">Contact Us at (847) 652-2338</a>
+                <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #1f2937;">Experience property management excellence built on 18+ years of North Shore community relationships and local expertise. We'd be honored to discuss how we can serve your community.</p>
+                <a href="tel:8476522338" style="background: white; color: #c4490c; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block;">Contact Us at (847) 652-2338</a>
             </div>
         </div>
     </section>
@@ -1500,17 +1539,17 @@
             <h2 style="font-size: 2.5rem; margin-bottom: 3rem; color: #333; text-align: center;">Testimonials from Our Community Partners</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
                 <div style="background: white; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div style="color: #ea580c; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                    <div style="color: #c4490c; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
                     <p style="font-style: italic; margin-bottom: 1rem; color: #666; line-height: 1.6;">"We've worked with Manage369 for over a decade and have consistently been impressed by their professionalism and deep understanding of our Lincoln Park community. Their established vendor relationships and financial stewardship have enhanced our property values significantly."</p>
                     <div style="font-weight: bold; color: #0a58ca;">- Board President, Lincoln Park Condominiums</div>
                 </div>
                 <div style="background: white; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div style="color: #ea580c; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                    <div style="color: #c4490c; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
                     <p style="font-style: italic; margin-bottom: 1rem; color: #666; line-height: 1.6;">"Manage369 has been our trusted partner for eight years. Their comprehensive understanding of North Shore communities, meticulous financial management, and respect for our neighborhood character make them an invaluable part of our community's success."</p>
                     <div style="font-weight: bold; color: #0a58ca;">- HOA President, Glenview Townhomes</div>
                 </div>
                 <div style="background: white; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <div style="color: #ea580c; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
+                    <div style="color: #c4490c; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
                     <p style="font-style: italic; margin-bottom: 1rem; color: #666; line-height: 1.6;">"Manage369's long-term commitment to our Highland Park community shows in everything they do. Their respect for our neighborhood's heritage, combined with modern management practices, has steadily enhanced our property values while maintaining the character we cherish."</p>
                     <div style="font-weight: bold; color: #0a58ca;">- Condo Owner, Highland Park</div>
                 </div>
@@ -1649,7 +1688,7 @@
             <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; margin: 2rem 0; text-align: center;">
                 <h3 style="color: #0a58ca; margin-bottom: 1rem;">We'd Be Honored to Serve Your Community</h3>
                 <p style="margin-bottom: 1rem; font-size: 1.1rem;">Discover how nearly two decades of North Shore community service and established local relationships can benefit your property. We'd welcome the opportunity to discuss how we can serve your community's unique needs.</p>
-                <p style="font-size: 1.2rem; font-weight: bold; color: #ea580c;">Contact us at (847) 652-2338</p>
+                <p style="font-size: 1.2rem; font-weight: bold; color: #c4490c;">Contact us at (847) 652-2338</p>
             </div>
         </div>
     </section>
@@ -1667,19 +1706,19 @@
                     
                     <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 2rem;">
                         <p style="color: #666; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: #ea580c; font-size: 1.5rem;">📍</span>
+                            <span style="color: #c4490c; font-size: 1.5rem;">📍</span>
                             <strong>1400 Patriot Boulevard 357<br>Glenview, IL 60026</strong>
                         </p>
                         <p style="color: #666; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: #ea580c; font-size: 1.5rem;">📞</span>
+                            <span style="color: #c4490c; font-size: 1.5rem;">📞</span>
                             <a href="tel:8476522338" style="color: #0a58ca; text-decoration: none; font-weight: 600;">(847) 652-2338</a>
                         </p>
                         <p style="color: #666; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: #ea580c; font-size: 1.5rem;">⏰</span>
+                            <span style="color: #c4490c; font-size: 1.5rem;">⏰</span>
                             Monday - Friday: 9:00 AM - 5:00 PM
                         </p>
                         <p style="color: #666; display: flex; align-items: center; gap: 10px;">
-                            <span style="color: #ea580c; font-size: 1.5rem;">⭐</span>
+                            <span style="color: #c4490c; font-size: 1.5rem;">⭐</span>
                             <strong>4.8/5 Rating • 50+ Google Reviews</strong>
                         </p>
                     </div>
@@ -1696,7 +1735,7 @@
                            <span>🔍</span> Find on Google
                         </a>
                         <a href="leave-review.html" 
-                           style="background: #ea580c; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                           style="background: #c4490c; color: white; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
                            <span>⭐</span> Leave Review
                         </a>
                     </div>
@@ -1949,7 +1988,7 @@
     }
     
     .submit-btn {
-        background: #ea580c;
+        background: #c4490c;
         color: white;
         padding: 15px 40px;
         border: none;
@@ -1980,7 +2019,7 @@
     /* Footer Color Fix - High Contrast */
     .site-footer, footer {
         background: #1f2937 !important; /* Dark gray instead of purple */
-        color: #ffffff !important;
+        color: #1f2937 !important;
     }
     
     .site-footer a, footer a,
@@ -1991,13 +2030,13 @@
     
     .site-footer a:hover, footer a:hover,
     .footer-column a:hover, .footer-content a:hover {
-        color: #ffffff !important;
+        color: #1f2937 !important;
         text-decoration: underline;
     }
     
     .footer-column h3, .footer-column h4,
     footer h3, footer h4 {
-        color: #ffffff !important;
+        color: #1f2937 !important;
     }
     
     .footer-bottom, footer .footer-bottom {

@@ -106,12 +106,12 @@
         }
 
         .nav-link:hover {
-            color: #ea580c;
+            color: #c4490c;
             background: rgba(255, 149, 0, 0.1);
         }
 
         .nav-link.active {
-            background: #ea580c;
+            background: #c4490c;
             color: white;
         }
 
@@ -211,7 +211,7 @@
         }
 
         .dropdown-section a:hover {
-            color: #ea580c;
+            color: #c4490c;
         }
 
         /* Hero Section */
@@ -261,7 +261,7 @@
         }
 
         .btn-primary {
-            background: #ea580c;
+            background: #c4490c;
             color: white;
         }
 
@@ -326,7 +326,7 @@
         }
 
         .payment-card:hover {
-            border-color: #ea580c;
+            border-color: #c4490c;
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
@@ -359,7 +359,7 @@
         }
 
         .btn-orange {
-            background: #ea580c;
+            background: #c4490c;
             color: white;
         }
 
@@ -409,7 +409,7 @@
         .fee-amount {
             font-size: 1.2rem;
             font-weight: bold;
-            color: #ea580c;
+            color: #c4490c;
         }
 
         .free-badge {
@@ -439,7 +439,7 @@
         
         .footer-logo {
             font-size: 24px;
-            color: #ffffff;
+            color: #1f2937;
             margin-bottom: 8px;
             font-weight: normal;
         }
@@ -474,13 +474,13 @@
         }
         
         .footer-license {
-            color: #ffffff;
+            color: #1f2937;
             font-weight: bold;
             line-height: 1.6;
         }
         
         .footer-column h3 {
-            color: #ffffff;
+            color: #1f2937;
             font-size: 18px;
             margin-bottom: 15px;
             font-weight: normal;
@@ -503,7 +503,7 @@
         }
         
         .footer-links a:hover {
-            color: #ffffff;
+            color: #1f2937;
         }
         
         .footer-divider {
@@ -657,12 +657,12 @@
     }
     
     .site-footer a:hover, footer a:hover {
-        color: #ffffff !important;
+        color: #1f2937 !important;
         text-decoration: underline;
     }
     
     .footer-column h3, footer h3 {
-        color: #ffffff !important;
+        color: #1f2937 !important;
         margin-bottom: 1rem;
     }
     
@@ -690,6 +690,45 @@
     /* Remove/hide duplicate cert badges */
     .cert-badge, .certifications {
         display: none !important;
+    }
+
+
+    /* High Contrast Text Fixes */
+    .btn-primary, button[type="submit"], .submit-btn {
+        background: #c4490c !important; /* Darker orange for better contrast */
+        color: white !important;
+    }
+    
+    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
+        background: #a03a0a !important;
+    }
+    
+    /* Service cards text contrast */
+    .service-card h3, .service-card h4 {
+        color: #1f2937 !important;
+    }
+    
+    .service-card p {
+        color: #4b5563 !important;
+    }
+    
+    /* Fix any orange text that needs more contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1f2937 !important;
+    }
+    
+    /* Ensure links have proper contrast */
+    a {
+        color: #0a58ca !important;
+    }
+    
+    a:hover {
+        color: #084298 !important;
+    }
+    
+    /* Footer links stay light on dark background */
+    .site-footer a, footer a {
+        color: #e5e7eb !important;
     }
 
 </style>
@@ -882,19 +921,19 @@
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
                 <div style="text-align: center;">
-                    <h4 style="color: #ea580c; margin-bottom: 0.5rem;">Step 1</h4>
+                    <h4 style="color: #c4490c; margin-bottom: 0.5rem;">Step 1</h4>
                     <p>Go to the "Access Portal" button above</p>
                 </div>
                 <div style="text-align: center;">
-                    <h4 style="color: #ea580c; margin-bottom: 0.5rem;">Step 2</h4>
+                    <h4 style="color: #c4490c; margin-bottom: 0.5rem;">Step 2</h4>
                     <p>Enter your account credentials</p>
                 </div>
                 <div style="text-align: center;">
-                    <h4 style="color: #ea580c; margin-bottom: 0.5rem;">Step 3</h4>
+                    <h4 style="color: #c4490c; margin-bottom: 0.5rem;">Step 3</h4>
                     <p>Navigate to the "Payments" section</p>
                 </div>
                 <div style="text-align: center;">
-                    <h4 style="color: #ea580c; margin-bottom: 0.5rem;">Step 4</h4>
+                    <h4 style="color: #c4490c; margin-bottom: 0.5rem;">Step 4</h4>
                     <p>Follow the instructions to submit your payment</p>
                 </div>
             </div>
@@ -902,27 +941,27 @@
             <h3 style="color: #333; margin-bottom: 2rem; font-size: 1.5rem; text-align: center;">Portal Features</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem; max-width: 800px; margin: 0 auto;">
                 <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center;">
-                    <div style="color: #ea580c; font-size: 2rem; margin-bottom: 0.5rem;">🔒</div>
+                    <div style="color: #c4490c; font-size: 2rem; margin-bottom: 0.5rem;">🔒</div>
                     <h4 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">Secure Processing</h4>
                     <p style="color: #666; font-size: 0.95rem;">Bank-level encryption for all payment transactions</p>
                 </div>
                 <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center;">
-                    <div style="color: #ea580c; font-size: 2rem; margin-bottom: 0.5rem;">💰</div>
+                    <div style="color: #c4490c; font-size: 2rem; margin-bottom: 0.5rem;">💰</div>
                     <h4 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">Account Balance</h4>
                     <p style="color: #666; font-size: 0.95rem;">Real-time view of your current account status</p>
                 </div>
                 <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center;">
-                    <div style="color: #ea580c; font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
+                    <div style="color: #c4490c; font-size: 2rem; margin-bottom: 0.5rem;">📊</div>
                     <h4 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">Payment History</h4>
                     <p style="color: #666; font-size: 0.95rem;">Complete record of all past transactions</p>
                 </div>
                 <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center;">
-                    <div style="color: #ea580c; font-size: 2rem; margin-bottom: 0.5rem;">📄</div>
+                    <div style="color: #c4490c; font-size: 2rem; margin-bottom: 0.5rem;">📄</div>
                     <h4 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">Document Access</h4>
                     <p style="color: #666; font-size: 0.95rem;">Download statements and important documents</p>
                 </div>
                 <div style="background: white; padding: 1.5rem; border-radius: 10px; box-shadow: 0 3px 10px rgba(0,0,0,0.1); text-align: center; grid-column: span 1;">
-                    <div style="color: #ea580c; font-size: 2rem; margin-bottom: 0.5rem;">⏰</div>
+                    <div style="color: #c4490c; font-size: 2rem; margin-bottom: 0.5rem;">⏰</div>
                     <h4 style="color: #333; margin-bottom: 0.5rem; font-size: 1.1rem;">24/7 Availability</h4>
                     <p style="color: #666; font-size: 0.95rem;">Access your account anytime, anywhere</p>
                 </div>
@@ -935,7 +974,7 @@
             <p style="margin-bottom: 2rem; color: #666;">If you prefer to mail your payments, please send them to:</p>
             
             <div style="background: white; padding: 2rem; border-radius: 10px; text-align: center; margin-bottom: 2rem;">
-                <h3 style="color: #ea580c; margin-bottom: 1rem;">Mailing Address</h3>
+                <h3 style="color: #c4490c; margin-bottom: 1rem;">Mailing Address</h3>
                 <p style="font-weight: bold; color: #333;">Manage369</p>
                 <p style="color: #666;">1400 Patriot Boulevard 357</p>
                 <p style="color: #666;">Glenview, IL 60026</p>
@@ -962,7 +1001,7 @@
                 </div>
                 
                 <div style="background: white; padding: 2rem; border-radius: 10px;">
-                    <h3 style="color: #ea580c; margin-bottom: 1rem;">Payee Information</h3>
+                    <h3 style="color: #c4490c; margin-bottom: 1rem;">Payee Information</h3>
                     <p style="margin-bottom: 1rem;"><strong>Payee Name:</strong><br>Your Association</p>
                     <p style="margin-bottom: 1rem;"><strong>Mailing Address:</strong><br>1400 Patriot Boulevard 357<br>Glenview, IL 60026</p>
                     <p style="margin-bottom: 1rem;"><strong>Reference Field:</strong><br>Include your property address and unit number</p>

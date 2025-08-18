@@ -42,7 +42,7 @@
         }
         .xml-link {
             display: inline-block;
-            background: #ea580c;
+            background: #c4490c;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
@@ -123,12 +123,12 @@
     }
     
     .site-footer a:hover, footer a:hover {
-        color: #ffffff !important;
+        color: #1f2937 !important;
         text-decoration: underline;
     }
     
     .footer-column h3, footer h3 {
-        color: #ffffff !important;
+        color: #1f2937 !important;
         margin-bottom: 1rem;
     }
     
@@ -156,6 +156,45 @@
     /* Remove/hide duplicate cert badges */
     .cert-badge, .certifications {
         display: none !important;
+    }
+
+
+    /* High Contrast Text Fixes */
+    .btn-primary, button[type="submit"], .submit-btn {
+        background: #c4490c !important; /* Darker orange for better contrast */
+        color: white !important;
+    }
+    
+    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
+        background: #a03a0a !important;
+    }
+    
+    /* Service cards text contrast */
+    .service-card h3, .service-card h4 {
+        color: #1f2937 !important;
+    }
+    
+    .service-card p {
+        color: #4b5563 !important;
+    }
+    
+    /* Fix any orange text that needs more contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1f2937 !important;
+    }
+    
+    /* Ensure links have proper contrast */
+    a {
+        color: #0a58ca !important;
+    }
+    
+    a:hover {
+        color: #084298 !important;
+    }
+    
+    /* Footer links stay light on dark background */
+    .site-footer a, footer a {
+        color: #e5e7eb !important;
     }
 
 </style>

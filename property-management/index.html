@@ -129,7 +129,7 @@
         }
         
         .phone-button {
-            background: #ea580c;
+            background: #c4490c;
             color: white;
             padding: 10px 20px;
             border-radius: 25px;
@@ -185,7 +185,7 @@
         }
         
         .btn-primary {
-            background: #ea580c;
+            background: #c4490c;
             color: white;
         }
         
@@ -259,7 +259,7 @@
         }
         
         .btn-link {
-            color: #ea580c;
+            color: #c4490c;
             font-weight: 600;
             margin-top: 0.5rem;
             display: inline-block;
@@ -306,7 +306,7 @@
         }
         
         .footer-column h3 {
-            color: #ffffff;
+            color: #1f2937;
             margin-bottom: 1rem;
         }
         
@@ -321,14 +321,14 @@
         }
         
         .footer-column a:hover {
-            color: #ffffff;
+            color: #1f2937;
         }
         
         .footer-bottom {
             text-align: center;
             padding-top: 2rem;
             border-top: 1px solid #555;
-            color: #ffffff;
+            color: #1f2937;
         }
         
         .dropdown-trigger {
@@ -415,7 +415,46 @@
                 align-items: center;
             }
         }
-    </style>
+    
+    /* High Contrast Text Fixes */
+    .btn-primary, button[type="submit"], .submit-btn {
+        background: #c4490c !important; /* Darker orange for better contrast */
+        color: white !important;
+    }
+    
+    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
+        background: #a03a0a !important;
+    }
+    
+    /* Service cards text contrast */
+    .service-card h3, .service-card h4 {
+        color: #1f2937 !important;
+    }
+    
+    .service-card p {
+        color: #4b5563 !important;
+    }
+    
+    /* Fix any orange text that needs more contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1f2937 !important;
+    }
+    
+    /* Ensure links have proper contrast */
+    a {
+        color: #0a58ca !important;
+    }
+    
+    a:hover {
+        color: #084298 !important;
+    }
+    
+    /* Footer links stay light on dark background */
+    .site-footer a, footer a {
+        color: #e5e7eb !important;
+    }
+
+</style>
     <link rel="canonical" href="https://manage369.com/property-management/">
 
     <style>

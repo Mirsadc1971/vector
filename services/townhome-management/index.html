@@ -291,7 +291,7 @@
         }
         
         .btn { padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid; display: inline-block; text-align: center; }
-        .btn-primary { background: #ea580c; color: white; border-color: #ea580c; }
+        .btn-primary { background: #c4490c; color: white; border-color: #c4490c; }
         .btn-primary:hover { background: #e55a2b; transform: translateY(-2px); }
         .btn-secondary { background: transparent; color: #2c5aa0; border-color: #2c5aa0; }
         .btn-secondary:hover { background: #2c5aa0; color: white; }
@@ -330,7 +330,7 @@
         .service-card h3 { color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem; }
         .service-card ul { list-style: none; padding-left: 0; }
         .service-card li { padding: 0.5rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; }
-        .service-card li:before { content: "✓"; color: #ea580c; font-weight: bold; margin-right: 0.5rem; font-size: 1.1rem; }
+        .service-card li:before { content: "✓"; color: #c4490c; font-weight: bold; margin-right: 0.5rem; font-size: 1.1rem; }
         
         /* Tablet Responsive */
         @media (max-width: 1024px) {
@@ -459,6 +459,45 @@
     /* Remove/hide duplicate cert badges */
     .cert-badge, .certifications {
         display: none !important;
+    }
+
+
+    /* High Contrast Text Fixes */
+    .btn-primary, button[type="submit"], .submit-btn {
+        background: #c4490c !important; /* Darker orange for better contrast */
+        color: white !important;
+    }
+    
+    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
+        background: #a03a0a !important;
+    }
+    
+    /* Service cards text contrast */
+    .service-card h3, .service-card h4 {
+        color: #1f2937 !important;
+    }
+    
+    .service-card p {
+        color: #4b5563 !important;
+    }
+    
+    /* Fix any orange text that needs more contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1f2937 !important;
+    }
+    
+    /* Ensure links have proper contrast */
+    a {
+        color: #0a58ca !important;
+    }
+    
+    a:hover {
+        color: #084298 !important;
+    }
+    
+    /* Footer links stay light on dark background */
+    .site-footer a, footer a {
+        color: #e5e7eb !important;
     }
 
 </style>
@@ -625,10 +664,10 @@
                     <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">North Shore Property Management Excellence</h3>
                     <p style="margin-bottom: 1rem;">Specialized North Shore property management services tailored to the unique needs of prestigious North Shore communities. Our deep understanding of local regulations, architectural standards, and community expectations ensures exceptional property management that preserves and enhances property values.</p>
                     <ul style="list-style: none; padding-left: 0;">
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Local municipal relationship management</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Architectural review board coordination</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Premium vendor network management</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Property value optimization strategies</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Local municipal relationship management</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Architectural review board coordination</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Premium vendor network management</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Property value optimization strategies</li>
                     </ul>
                 </div>
                 
@@ -636,10 +675,10 @@
                     <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">Emergency Property Management Chicago</h3>
                     <p style="margin-bottom: 1rem;">Comprehensive emergency property management Chicago services provide 24/7 response capabilities for urgent property issues. Our emergency response system ensures rapid resolution of critical situations that could impact resident safety or property integrity across Chicago and North Shore communities.</p>
                     <ul style="list-style: none; padding-left: 0;">
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>24/7 emergency hotline and dispatch</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Rapid emergency contractor mobilization</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Crisis communication management</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Insurance claim emergency coordination</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>24/7 emergency hotline and dispatch</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Rapid emergency contractor mobilization</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Crisis communication management</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Insurance claim emergency coordination</li>
                     </ul>
                 </div>
             </div>
@@ -657,10 +696,10 @@
                     <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">Attached Housing Expertise</h3>
                     <p style="margin-bottom: 1rem;">Specialized management for attached townhome communities requiring unique expertise in shared wall maintenance, party wall agreements, exterior building envelope management, and complex ownership boundaries. We understand the intricate balance between individual unit responsibility and common area management.</p>
                     <ul style="list-style: none; padding-left: 0;">
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Shared wall maintenance coordination</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Building envelope management</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Party wall agreement enforcement</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Individual vs. common area boundaries</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Shared wall maintenance coordination</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Building envelope management</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Party wall agreement enforcement</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Individual vs. common area boundaries</li>
                     </ul>
                 </div>
                 
@@ -668,10 +707,10 @@
                     <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">Complex Insurance Management</h3>
                     <p style="margin-bottom: 1rem;">Expert coordination of townhome insurance coverage including master policies, individual unit coverage, shared liability, and complex claims processing. We navigate the unique insurance challenges of attached housing where individual and common coverage intersect.</p>
                     <ul style="list-style: none; padding-left: 0;">
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Master policy coordination</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Individual unit coverage guidance</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Claims processing coordination</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #ea580c; font-weight: bold; margin-right: 0.5rem;">✓</span>Liability coverage optimization</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Master policy coordination</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Individual unit coverage guidance</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Claims processing coordination</li>
+                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Liability coverage optimization</li>
                     </ul>
                 </div>
             </div>
@@ -739,7 +778,7 @@
                 </div>
                 
                 <div style="text-align: center; padding: 2rem;">
-                    <div style="width: 80px; height: 80px; background: #ea580c; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">⚡</div>
+                    <div style="width: 80px; height: 80px; background: #c4490c; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">⚡</div>
                     <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Utility System Experts</h3>
                     <p>Professional management of shared water, sewer, electrical systems with expertise in billing allocation and infrastructure maintenance.</p>
                 </div>
@@ -760,7 +799,7 @@
                         <p>Comprehensive evaluation of building systems, governance documents, and ownership boundaries</p>
                     </div>
                     <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: #ea580c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
+                        <div style="width: 60px; height: 60px; background: #c4490c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
                         <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Specialized Management Plan</h4>
                         <p>Tailored approach addressing townhome-specific needs and shared system requirements</p>
                     </div>
@@ -770,7 +809,7 @@
                         <p>Professional implementation with focus on shared systems and resident communication</p>
                     </div>
                     <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: #ea580c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
+                        <div style="width: 60px; height: 60px; background: #c4490c; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
                         <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Ongoing Optimization</h4>
                         <p>Continuous monitoring and improvement of building systems and community operations</p>
                     </div>
@@ -821,7 +860,7 @@
         <div class="container">
             <h2 style="margin-bottom: 1rem; font-size: 2.2rem;">Ready for Professional Management?</h2>
             <p style="margin-bottom: 2rem; font-size: 1.1rem;">Contact us today to learn how we can help your property association.</p>
-            <a href="../../contact.html" class="btn" style="background: white; color: #ea580c; border-color: white;">Get Started Today</a>
+            <a href="../../contact.html" class="btn" style="background: white; color: #c4490c; border-color: white;">Get Started Today</a>
         </div>
     </section>
 

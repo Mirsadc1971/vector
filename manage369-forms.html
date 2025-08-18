@@ -106,7 +106,7 @@
         .form-group select:focus,
         .form-group textarea:focus {
             outline: none;
-            border-color: #ea580c;
+            border-color: #c4490c;
             box-shadow: 0 0 0 3px rgba(255, 149, 0, 0.1);
         }
         
@@ -120,7 +120,7 @@
         }
         
         .btn {
-            background: #ea580c;
+            background: #c4490c;
             color: white;
             padding: 14px 30px;
             border: none;
@@ -203,12 +203,12 @@
     }
     
     .site-footer a:hover, footer a:hover {
-        color: #ffffff !important;
+        color: #1f2937 !important;
         text-decoration: underline;
     }
     
     .footer-column h3, footer h3 {
-        color: #ffffff !important;
+        color: #1f2937 !important;
         margin-bottom: 1rem;
     }
     
@@ -236,6 +236,45 @@
     /* Remove/hide duplicate cert badges */
     .cert-badge, .certifications {
         display: none !important;
+    }
+
+
+    /* High Contrast Text Fixes */
+    .btn-primary, button[type="submit"], .submit-btn {
+        background: #c4490c !important; /* Darker orange for better contrast */
+        color: white !important;
+    }
+    
+    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
+        background: #a03a0a !important;
+    }
+    
+    /* Service cards text contrast */
+    .service-card h3, .service-card h4 {
+        color: #1f2937 !important;
+    }
+    
+    .service-card p {
+        color: #4b5563 !important;
+    }
+    
+    /* Fix any orange text that needs more contrast */
+    h1, h2, h3, h4, h5, h6 {
+        color: #1f2937 !important;
+    }
+    
+    /* Ensure links have proper contrast */
+    a {
+        color: #0a58ca !important;
+    }
+    
+    a:hover {
+        color: #084298 !important;
+    }
+    
+    /* Footer links stay light on dark background */
+    .site-footer a, footer a {
+        color: #e5e7eb !important;
     }
 
 </style>
@@ -631,7 +670,7 @@
                 <div style="text-align: center; padding: 1.5rem; background: #fff3e0; border-radius: 10px;">
                     <div style="font-size: 2rem; margin-bottom: 0.5rem;">📞</div>
                     <strong>Call Us</strong>
-                    <p><a href="tel:8476522338" style="color: #ea580c; text-decoration: none; font-weight: bold;">(847) 652-2338</a></p>
+                    <p><a href="tel:8476522338" style="color: #c4490c; text-decoration: none; font-weight: bold;">(847) 652-2338</a></p>
                     <small>Mon-Fri 9AM-5PM</small>
                 </div>
                 
