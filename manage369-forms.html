@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="robots" content="index, follow">
     <meta name="description" content="Contact Manage369 Property Management - Chicago & North Shore. Professional HOA, Condo, and Townhome management services.">
     <title>Contact Forms - Manage369 Property Management</title>
     
@@ -587,7 +587,7 @@
                         `Please contact me to discuss your services and pricing.\n\n` +
                         `Best regards,\n${name}`;
             
-            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
         }
         
         function copyPropertyInquiry() {
@@ -625,7 +625,7 @@
                         `MESSAGE:\n${message || 'Please contact me to discuss.'}\n\n` +
                         `Thank you,\n${name}\n${position || 'Board Member'}\n${association}`;
             
-            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
         }
         
         // Maintenance Request
@@ -655,10 +655,10 @@
             
             if (urgency === 'Emergency') {
                 if (confirm('This is an EMERGENCY request. For immediate assistance, please call (847) 652-2338.\n\nContinue with email?')) {
-                    window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
                 }
             } else {
-                window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
             }
         }
         
@@ -691,7 +691,7 @@
                         `Please provide a detailed quote for management services.\n\n` +
                         `Thank you,\n${name}`;
             
-            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
         }
         
         // Format phone numbers

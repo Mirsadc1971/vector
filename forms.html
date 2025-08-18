@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="robots" content="index, follow">
     <title>Contact Forms | Manage369 Property Management</title>
     <meta name="description" content="Contact Manage369 for property management services in Chicago & North Shore. Request a quote, schedule consultation, or submit maintenance requests.">
     
@@ -1088,7 +1088,7 @@
                         `Submitted: ${new Date().toLocaleString()}\n` +
                         `From: ${name}`;
             
-            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
             alert('Thank you for your inquiry! We will contact you within 24 hours.');
         }
         
@@ -1132,11 +1132,11 @@
             
             if (urgency === 'Emergency') {
                 if (confirm('This is an EMERGENCY. For immediate help, call (847) 652-2338.\n\nContinue with email submission?')) {
-                    window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
                     alert('Emergency request submitted. We will contact you immediately.');
                 }
             } else {
-                window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
                 alert('Maintenance request submitted. We will contact you within 24 hours.');
             }
         }
@@ -1174,7 +1174,7 @@
                         `Submitted: ${new Date().toLocaleString()}\n` +
                         `From: ${name}`;
             
-            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
             alert('Consultation request submitted! We will contact you within 24 hours to schedule.');
         }
         
@@ -1212,7 +1212,7 @@
                         `Submitted: ${new Date().toLocaleString()}\n` +
                         `From: ${name}, ${role}`;
             
-            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
             alert('Thank you for your inquiry! A management specialist will contact you within 24 hours.');
         }
         

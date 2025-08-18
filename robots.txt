@@ -1,8 +1,4 @@
-User-agent: *
-Allow: /
-Sitemap: https://manage369.com/sitemap.xml
-
-# Specifically allow Googlebot
+# GOOGLE - PLEASE INDEX THIS SITE
 User-agent: Googlebot
 Allow: /
 Crawl-delay: 0
@@ -10,20 +6,14 @@ Crawl-delay: 0
 User-agent: Googlebot-Image
 Allow: /
 
-User-agent: Googlebot-Mobile
+User-agent: Googlebot-Mobile  
 Allow: /
 
-# Allow all assets
-Allow: /images/
-Allow: /css/
-Allow: /js/
-Allow: /*.css$
-Allow: /*.js$
-Allow: /*.jpg$
-Allow: /*.jpeg$
-Allow: /*.png$
-Allow: /*.gif$
-Allow: /*.svg$
-Allow: /*.webp$
+User-agent: *
+Allow: /
 
-# No restrictions on crawling
+# Sitemap
+Sitemap: https://manage369.com/sitemap.xml
+
+# No restrictions - index everything
+Disallow:

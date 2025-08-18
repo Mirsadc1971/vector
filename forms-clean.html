@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="robots" content="index, follow">
     <title>Contact Forms | Manage369 Property Management</title>
     <meta name="description" content="Contact Manage369 for property management services in Chicago & North Shore. Request a quote, schedule consultation, or submit maintenance requests.">
     
@@ -699,7 +699,7 @@
                         `Please contact me to discuss property management services.\n\n` +
                         `Submitted by: ${name}`;
             
-            window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
         }
         
         // Maintenance Request
@@ -733,10 +733,10 @@
             
             if (urgency === 'Emergency') {
                 if (confirm('This is an EMERGENCY. For immediate help, call (847) 652-2338.\n\nContinue with email?')) {
-                    window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                    
                 }
             } else {
-                window.location.href = `mailto:service@manage369.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+                
             }
         }
         
