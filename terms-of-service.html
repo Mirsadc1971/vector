@@ -9,7 +9,279 @@
 <!-- Bootstrap CSS -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
 <!-- Custom CSS -->
+<style>
+        :root {
+            --primary-color: #2c5aa0;
+            --secondary-color: #ff9500;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+        }
 
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        .navbar {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e3d72 100%);
+            padding: 1rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: white !important;
+        }
+
+        .navbar-nav .nav-link {
+            color: white !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            padding: 0.5rem 1rem !important;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-1px);
+        }
+
+        .navbar-nav .nav-link.active {
+            background: var(--secondary-color);
+            color: white !important;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #1e3d72 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .content-section {
+            padding: 4rem 0;
+        }
+
+        .content-section h2 {
+            color: var(--primary-color);
+            font-weight: bold;
+            margin-bottom: 1.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+        }
+
+        .content-section h3 {
+            color: var(--primary-color);
+            font-weight: 600;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .last-updated {
+            background: var(--light-bg);
+            padding: 1rem;
+            border-left: 4px solid var(--secondary-color);
+            margin-bottom: 2rem;
+        }
+
+        .contact-info {
+            background: var(--light-bg);
+            padding: 2rem;
+            border-radius: 10px;
+            margin-top: 2rem;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .contact-info a {
+            color: var(--secondary-color);
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        /* PERFECT FOOTER WITH EXACT SPECIFICATIONS */
+        footer {
+            background: #2c3e50;
+            color: white;
+            line-height: 1.6;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 2rem;
+        }
+        
+        .footer-main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 20px;
+        }
+        
+        .footer-column {
+            line-height: 1.6;
+        }
+        
+        .footer-logo {
+            font-size: 24px;
+            color: #ff6b35;
+            margin-bottom: 8px;
+            font-weight: normal;
+        }
+        
+        .footer-description {
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        
+        .footer-stats {
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        
+        .footer-contact-line {
+            color: white;
+            line-height: 1.6;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .footer-contact-line a {
+            color: white;
+            text-decoration: none;
+        }
+        
+        .footer-contact-line a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-license {
+            color: #ff6b35;
+            font-weight: bold;
+            line-height: 1.6;
+        }
+        
+        .footer-column h3 {
+            color: #ff6b35;
+            font-size: 18px;
+            margin-bottom: 15px;
+            font-weight: normal;
+        }
+        
+        .footer-links {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            line-height: 1.6;
+        }
+        
+        .footer-links a:hover {
+            color: #ff6b35;
+        }
+        
+        .footer-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            margin: 20px 0;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px;
+            text-align: center;
+        }
+        
+        .certifications {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .cert-badge {
+            height: 60px;
+            max-height: 60px;
+            background: white;
+            border-radius: 8px;
+            padding: 10px 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2c3e50;
+            font-weight: bold;
+            font-size: 14px;
+        }
+        
+        .footer-copyright {
+            text-align: center;
+            color: white;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        /* RESPONSIVE DESIGN */
+        @media (max-width: 768px) {
+            .footer-main {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                text-align: center;
+                padding: 40px 15px;
+            }
+            
+            .footer-contact-line {
+                justify-content: center;
+            }
+            
+            .certifications {
+                gap: 15px;
+            }
+            
+            .cert-badge {
+                height: 50px;
+                max-height: 50px;
+                padding: 8px 12px;
+                font-size: 12px;
+            }
+        }
+    </style>
 <link href="https://manage369.com/terms-of-service.html" rel="canonical"/>
 </head>
 <body>
@@ -125,9 +397,10 @@
 </div>
 </div>
 </section>
+
 <!-- Bootstrap JS -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-<!-- REORGANIZED FOOTER - 3 COLUMNS ALPHABETICAL --><!-- REORGANIZED FOOTER - 3 COLUMNS ALPHABETICAL --><style>
+<!-- REORGANIZED FOOTER - 3 COLUMNS ALPHABETICAL --><style>
 /* PERFECT FOOTER WITH 3 COLUMNS - ALPHABETICAL ORGANIZATION */
 footer {
     background: #2c3e50;
@@ -140,15 +413,13 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
 }
 
 .footer-column {
     line-height: 1.6;
-    flex: 1;
-    min-width: 250px;
 }
 
 .footer-logo {
@@ -269,7 +540,7 @@ footer {
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .footer-main {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
         padding: 40px 15px;

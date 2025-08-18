@@ -989,6 +989,7 @@
 </form>
 </div>
 </section>
+
 <script>
    function toggleMobileMenu() {
             const mobileMenu = document.getElementById('mobileMenu');
@@ -1005,7 +1006,7 @@
             }
         });
   </script>
-<!-- REORGANIZED FOOTER - 3 COLUMNS ALPHABETICAL --><!-- REORGANIZED FOOTER - 3 COLUMNS ALPHABETICAL --><style>
+<!-- REORGANIZED FOOTER - 3 COLUMNS ALPHABETICAL --><style>
 /* PERFECT FOOTER WITH 3 COLUMNS - ALPHABETICAL ORGANIZATION */
 footer {
     background: #2c3e50;
@@ -1018,15 +1019,13 @@ footer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 40px 20px;
-    display: flex;
-    justify-content: space-between;
-    gap: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
 }
 
 .footer-column {
     line-height: 1.6;
-    flex: 1;
-    min-width: 250px;
 }
 
 .footer-logo {
@@ -1147,7 +1146,7 @@ footer {
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
     .footer-main {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         gap: 30px;
         text-align: center;
         padding: 40px 15px;
