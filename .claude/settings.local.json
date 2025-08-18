@@ -30,7 +30,8 @@
       "Bash(test:*)",
       "Bash(del nul)",
       "Bash(rm:*)",
-      "Bash(del batch_2_property_pages_update.py cleanup_duplicate_consultation_forms.py final_cleanup_consultation_forms.py simple_duplicate_fix.py)"
+      "Bash(del batch_2_property_pages_update.py cleanup_duplicate_consultation_forms.py final_cleanup_consultation_forms.py simple_duplicate_fix.py)",
+      "Bash(pip install:*)"
     ],
     "deny": []
   }
