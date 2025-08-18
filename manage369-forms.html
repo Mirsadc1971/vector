@@ -248,7 +248,7 @@
                     <span class="success-badge">INSTANT</span>
                 </h2>
                 
-                <form id="pm-form">
+                <form id="pm-form" novalidate>
                     <div class="form-group">
                         <label for="pm-name">Your Name <span class="required">*</span></label>
                         <input type="text" id="pm-name" required>
@@ -332,7 +332,7 @@
                     <span class="success-badge">FOR BOARDS</span>
                 </h2>
                 
-                <form id="board-form">
+                <form id="board-form" novalidate>
                     <div class="form-group">
                         <label for="board-name">Your Name <span class="required">*</span></label>
                         <input type="text" id="board-name" required>
@@ -403,10 +403,10 @@
                     <span class="success-badge" style="background: #dc2626;">RESIDENTS</span>
                 </h2>
                 
-                <form id="maintenance-form">
+                <form id="maintenance-form" novalidate>
                     <div class="form-group">
                         <label for="maint-name">Your Name <span class="required">*</span></label>
-                        <input type="text" id="maint-name" required>
+                        <input type="text" id="maint-name" required autocomplete="name">
                     </div>
                     
                     <div class="form-group">
@@ -416,7 +416,7 @@
                     
                     <div class="form-group">
                         <label for="maint-unit">Unit Number</label>
-                        <input type="text" id="maint-unit" placeholder="e.g., 3B">
+                        <input type="text" id="maint-unit" placeholder="e.g., 3B" autocomplete="address-line2">
                     </div>
                     
                     <div class="form-group">
@@ -471,7 +471,7 @@
                     <span class="success-badge">NO OBLIGATION</span>
                 </h2>
                 
-                <form id="quote-form">
+                <form id="quote-form" novalidate>
                     <div class="form-group">
                         <label for="quote-name">Contact Name <span class="required">*</span></label>
                         <input type="text" id="quote-name" required>
@@ -771,5 +771,55 @@
             });
         }
     </script>
+
+    <!-- Form Validation for Accessibility -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add validation to all forms
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    let isValid = true;
+                    
+                    // Validate email fields
+                    const emailFields = form.querySelectorAll('input[type="email"], input[id*="email"]');
+                    emailFields.forEach(field => {
+                        const errorId = field.getAttribute('aria-describedby');
+                        if (errorId) {
+                            const errorElement = document.getElementById(errorId);
+                            if (errorElement) {
+                                if (!field.value || !field.value.includes('@')) {
+                                    errorElement.hidden = false;
+                                    field.setAttribute('aria-invalid', 'true');
+                                    if (isValid) field.focus();
+                                    isValid = false;
+                                } else {
+                                    errorElement.hidden = true;
+                                    field.setAttribute('aria-invalid', 'false');
+                                }
+                            }
+                        }
+                    });
+                    
+                    // Validate required fields
+                    const requiredFields = form.querySelectorAll('[required]');
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            field.setAttribute('aria-invalid', 'true');
+                            if (isValid) field.focus();
+                            isValid = false;
+                        } else {
+                            field.setAttribute('aria-invalid', 'false');
+                        }
+                    });
+                    
+                    if (!isValid) {
+                        e.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>

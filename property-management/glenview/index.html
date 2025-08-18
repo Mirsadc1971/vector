@@ -802,25 +802,27 @@
     <p>
      Schedule your complimentary Glenview property consultation and discover why leading associations choose Manage369.
     </p>
-    <form action="https://formspree.io/f/xpznzgnk" id="consultationForm" method="POST">
+    <form action="https://formspree.io/f/xpznzgnk" id="consultationForm" method="POST" novalidate>
      <div class="form-group">
       <label for="name">
        Full Name *
       </label>
-      <input id="name" name="name" required="" type="text"/>
+      <input id="name" name="name" required="" type="text"/ autocomplete="name">
      </div>
      <div class="form-group">
       <label for="email">
        Email Address *
       </label>
-      <input id="email" name="email" required="" type="email"/>
-     </div>
+      <input id="email" name="email" required="" type="email"/ aria-describedby="email-error">autocomplete="email">
+     
+                    <p id="email-error" role="alert" class="error-message" hidden>Please enter a valid email address.</p></div>
      <div class="form-group">
       <label for="phone">
        Phone Number *
       </label>
-      <input id="phone" name="phone" required="" type="tel"/>
-     </div>
+      <input id="phone" name="phone" required="" type="tel"/ autocomplete="tel">
+     
+                    <p id="phone-error" role="alert" class="error-message" hidden>Please enter a valid phone number.</p></div>
      <div class="form-group">
       <label for="property_type">
        Property Type

@@ -512,25 +512,26 @@
                 <h2>Request Management Services</h2>
                 <p>Get a free consultation and quote for your property</p>
                 
-                <form id="management-form">
+                <form id="management-form" novalidate>
                     <div class="form-group">
                         <label>Your Name <span class="required">*</span></label>
-                        <input type="text" id="mgmt-name" required>
+                        <input type="text" id="mgmt-name" required autocomplete="name">
                     </div>
                     
                     <div class="form-group">
                         <label>Email <span class="required">*</span></label>
-                        <input type="email" id="mgmt-email" required>
-                    </div>
+                        <input type="email" id="mgmt-email" required aria-describedby="mgmt-email-error">autocomplete="email">
+                    
+                    <p id="mgmt-email-error" role="alert" class="error-message" hidden>Please enter a valid email address.</p></div>
                     
                     <div class="form-group">
                         <label>Phone</label>
-                        <input type="tel" id="mgmt-phone" placeholder="(847) 555-0100">
+                        <input type="tel" id="mgmt-phone" placeholder="(847) 555-0100" autocomplete="tel">
                     </div>
                     
                     <div class="form-group">
                         <label>Property Type <span class="required">*</span></label>
-                        <select id="mgmt-type" required>
+                        <select id="mgmt-type" required aria-label="Property type">
                             <option value="">Select Property Type</option>
                             <option value="Condominium">Condominium Association</option>
                             <option value="HOA">Homeowners Association</option>
@@ -541,7 +542,7 @@
                     
                     <div class="form-group">
                         <label>Property Location</label>
-                        <input type="text" id="mgmt-location" placeholder="City or Neighborhood">
+                        <input type="text" id="mgmt-location" placeholder="City or Neighborhood" autocomplete="address-level2">
                     </div>
                     
                     <div class="form-group">
@@ -565,10 +566,10 @@
                 <h2>Maintenance Request</h2>
                 <p>For current residents - report maintenance issues</p>
                 
-                <form id="maintenance-form">
+                <form id="maintenance-form" novalidate>
                     <div class="form-group">
                         <label>Your Name <span class="required">*</span></label>
-                        <input type="text" id="maint-name" required>
+                        <input type="text" id="maint-name" required autocomplete="name">
                     </div>
                     
                     <div class="form-group">
@@ -578,17 +579,18 @@
                     
                     <div class="form-group">
                         <label>Unit Number</label>
-                        <input type="text" id="maint-unit" placeholder="e.g., 3B">
+                        <input type="text" id="maint-unit" placeholder="e.g., 3B" autocomplete="address-line2">
                     </div>
                     
                     <div class="form-group">
                         <label>Contact Phone <span class="required">*</span></label>
-                        <input type="tel" id="maint-phone" required>
-                    </div>
+                        <input type="tel" id="maint-phone" required autocomplete="tel">
+                    
+                    <p id="maint-phone-error" role="alert" class="error-message" hidden>Please enter a valid phone number.</p></div>
                     
                     <div class="form-group">
                         <label>Issue Type <span class="required">*</span></label>
-                        <select id="maint-type" required>
+                        <select id="maint-type" required aria-label="Property type">
                             <option value="">Select Issue Type</option>
                             <option value="Plumbing">Plumbing</option>
                             <option value="Electrical">Electrical</option>
@@ -601,7 +603,7 @@
                     
                     <div class="form-group">
                         <label>Urgency <span class="required">*</span></label>
-                        <select id="maint-urgency" required>
+                        <select id="maint-urgency" required aria-label="Urgency level">
                             <option value="">Select Urgency</option>
                             <option value="Emergency">🚨 Emergency (Immediate)</option>
                             <option value="Urgent">⚠️ Urgent (24-48 hours)</option>
@@ -851,5 +853,55 @@
             });
         }
     </script>
+
+    <!-- Form Validation for Accessibility -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Add validation to all forms
+            const forms = document.querySelectorAll('form');
+            forms.forEach(form => {
+                form.addEventListener('submit', function(e) {
+                    let isValid = true;
+                    
+                    // Validate email fields
+                    const emailFields = form.querySelectorAll('input[type="email"], input[id*="email"]');
+                    emailFields.forEach(field => {
+                        const errorId = field.getAttribute('aria-describedby');
+                        if (errorId) {
+                            const errorElement = document.getElementById(errorId);
+                            if (errorElement) {
+                                if (!field.value || !field.value.includes('@')) {
+                                    errorElement.hidden = false;
+                                    field.setAttribute('aria-invalid', 'true');
+                                    if (isValid) field.focus();
+                                    isValid = false;
+                                } else {
+                                    errorElement.hidden = true;
+                                    field.setAttribute('aria-invalid', 'false');
+                                }
+                            }
+                        }
+                    });
+                    
+                    // Validate required fields
+                    const requiredFields = form.querySelectorAll('[required]');
+                    requiredFields.forEach(field => {
+                        if (!field.value.trim()) {
+                            field.setAttribute('aria-invalid', 'true');
+                            if (isValid) field.focus();
+                            isValid = false;
+                        } else {
+                            field.setAttribute('aria-invalid', 'false');
+                        }
+                    });
+                    
+                    if (!isValid) {
+                        e.preventDefault();
+                    }
+                });
+            });
+        });
+    </script>
+
 </body>
 </html>
