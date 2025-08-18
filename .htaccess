@@ -210,6 +210,12 @@ RedirectMatch 301 ^/chicago/?$ /property-management-chicago
 RedirectMatch 301 ^/glenview/?$ /property-management-glenview
 RedirectMatch 301 ^/north-shore/?$ /service-areas
 
+# Fix 404 URLs found by Google
+RedirectMatch 301 ^/arlington-heights/?$ /property-management/arlington-heights/
+RedirectMatch 301 ^/communities/?$ /property-management/
+RedirectMatch 301 ^/resources/?$ /services.html
+RedirectMatch 301 ^/about/?$ /index.html#about
+
 # Canonical redirects for duplicate content
 RedirectMatch 301 ^/index\.php$ /
 RedirectMatch 301 ^/home/?$ /
