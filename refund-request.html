@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund Request Form - Manage369</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .form-container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #1e3a8a;
+            border-bottom: 3px solid #ea580c;
+            padding-bottom: 10px;
+        }
+        .form-group {
+            margin-bottom: 25px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: #333;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        input:focus, textarea:focus, select:focus {
+            border-color: #1e3a8a;
+            outline: none;
+        }
+        .amount-display {
+            font-size: 32px;
+            color: #ea580c;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+            padding: 20px;
+            background: #fff3e0;
+            border-radius: 10px;
+        }
+        button {
+            background: #ea580c;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #c4490c;
+        }
+        .required {
+            color: #ea580c;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Money Back Request Form</h1>
+        
+        <div class="amount-display">
+            Refund Amount: $200.00
+        </div>
+
+        <form action="mailto:info@manage369.com" method="post" enctype="text/plain">
+            
+            <div class="form-group">
+                <label for="name">Full Name <span class="required">*</span></label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address <span class="required">*</span></label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number <span class="required">*</span></label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="property">Property Address <span class="required">*</span></label>
+                <input type="text" id="property" name="property" required>
+            </div>
+
+            <div class="form-group">
+                <label for="unit">Unit Number</label>
+                <input type="text" id="unit" name="unit">
+            </div>
+
+            <div class="form-group">
+                <label for="payment-date">Original Payment Date <span class="required">*</span></label>
+                <input type="date" id="payment-date" name="payment_date" required>
+            </div>
+
+            <div class="form-group">
+                <label for="payment-method">Original Payment Method <span class="required">*</span></label>
+                <select id="payment-method" name="payment_method" required>
+                    <option value="">Select payment method</option>
+                    <option value="credit-card">Credit Card</option>
+                    <option value="debit-card">Debit Card</option>
+                    <option value="ach">ACH/Bank Transfer</option>
+                    <option value="check">Check</option>
+                    <option value="cash">Cash</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="transaction-id">Transaction/Check Number</label>
+                <input type="text" id="transaction-id" name="transaction_id">
+            </div>
+
+            <div class="form-group">
+                <label for="reason">Reason for Refund Request <span class="required">*</span></label>
+                <select id="reason" name="reason" required>
+                    <option value="">Select reason</option>
+                    <option value="duplicate-payment">Duplicate Payment</option>
+                    <option value="overpayment">Overpayment</option>
+                    <option value="incorrect-amount">Incorrect Amount Charged</option>
+                    <option value="service-not-provided">Service Not Provided</option>
+                    <option value="moved-out">Moved Out/Sold Property</option>
+                    <option value="billing-error">Billing Error</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="details">Additional Details <span class="required">*</span></label>
+                <textarea id="details" name="details" rows="5" required placeholder="Please provide details about your refund request..."></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="refund-method">Preferred Refund Method <span class="required">*</span></label>
+                <select id="refund-method" name="refund_method" required>
+                    <option value="">Select refund method</option>
+                    <option value="original-payment">Same as Original Payment Method</option>
+                    <option value="check">Check by Mail</option>
+                    <option value="ach">ACH/Direct Deposit</option>
+                    <option value="credit">Credit to Account</option>
+                </select>
+            </div>
+
+            <input type="hidden" name="amount" value="$200.00">
+            <input type="hidden" name="form_type" value="Refund Request">
+            
+            <button type="submit">Submit $200 Refund Request</button>
+        </form>
+
+        <p style="text-align: center; margin-top: 30px; color: #666; font-size: 14px;">
+            Processing time: 5-10 business days<br>
+            Questions? Call (847) 652-2338 or email info@manage369.com
+        </p>
+    </div>
+</body>
+</html>
