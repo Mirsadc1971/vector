@@ -1,0 +1,32 @@
+# Add these lines to your robots.txt file to prevent crawling of spam URLs
+
+# Block spam paths from all crawlers
+User-agent: *
+Disallow: /tinggi/
+Disallow: /tinggi-
+Disallow: /tinggi_
+Disallow: /*?wow=
+Disallow: /*?*apk
+Disallow: /*?*dy01
+Disallow: /*?*dy02
+Disallow: /*?*slot
+Disallow: /*?*casino
+Disallow: /*?*gambling
+Disallow: /wp-admin/
+Disallow: /wp-login
+Disallow: /*.php
+Disallow: /*.asp
+
+# Then keep your existing allow rules
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile  
+Allow: /
+
+# Sitemap
+Sitemap: https://manage369.com/sitemap.xml

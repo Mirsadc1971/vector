@@ -10,15 +10,15 @@
 
 :root {
     /* Primary Colors - High Contrast */
-    --text-primary: #1f2937;        /* Dark gray - 15.3:1 on white */
+    --text-primary: #111827;        /* Dark gray - 15.3:1 on white */
     --text-secondary: #4b5563;      /* Medium gray - 8.3:1 on white */
-    --text-light: #6b7280;           /* Light gray - 5.7:1 on white (min 4.5:1) */
+    --text-light: #4b5563;           /* Light gray - 5.7:1 on white (min 4.5:1) */
     
     /* Background Colors */
     --bg-white: #ffffff;
     --bg-light: #f9fafb;
     --bg-gray: #f3f4f6;
-    --bg-dark: #1f2937;
+    --bg-dark: #111827;
     
     /* Brand Colors - WCAG AA Compliant */
     --brand-primary: #1e40af;       /* Dark blue - 7.3:1 on white */
@@ -37,7 +37,7 @@
     --btn-secondary-bg: #dc2626;    /* 5.9:1 white text on this */
     --btn-secondary-hover: #b91c1c; /* 7.2:1 white text on this */
     --btn-text-light: #ffffff;
-    --btn-text-dark: #1f2937;
+    --btn-text-dark: #111827;
     
     /* Status Colors - Accessible */
     --success: #059669;              /* Green - 4.5:1 on white */

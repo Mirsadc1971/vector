@@ -1,0 +1,55 @@
+# Google Search Console - Remove WWW Version
+
+## The Issue
+Google is indexing https://www.manage369.com/ separately even though it redirects to https://manage369.com/
+
+## Immediate Actions Required in Google Search Console:
+
+### 1. Add WWW Property to Search Console
+1. Go to: https://search.google.com/search-console
+2. Click "Add property"
+3. Choose "URL prefix" method
+4. Enter: https://www.manage369.com
+5. Verify using "HTML tag" method (same as main site)
+
+### 2. Submit Removal Request
+1. In Search Console, select www.manage369.com property
+2. Go to "Removals" in left sidebar
+3. Click "New Request"
+4. Select "Remove all URLs with this prefix"
+5. Enter: https://www.manage369.com/
+6. Choose reason: "Duplicate, Google selected different canonical than user"
+7. Submit request
+
+### 3. Use URL Inspection Tool
+1. Stay in www property
+2. Go to "URL Inspection"
+3. Enter: https://www.manage369.com/
+4. You should see it redirects to https://manage369.com/
+5. This confirms redirect is working
+
+### 4. Link Both Properties
+1. Go to Settings in main property (manage369.com)
+2. Look for "Associate properties"
+3. Link www and non-www versions
+
+### 5. Update Your Canonical Tags (Already Done)
+All pages have: <link rel="canonical" href="https://manage369.com/...">
+
+## What's Already Fixed:
+✅ 301 redirect from www to non-www (confirmed working)
+✅ Canonical tags point to non-www version
+✅ Sitemap only lists non-www URLs
+✅ Robots.txt references non-www sitemap
+✅ Both _redirects and netlify.toml have redirect rules
+
+## Expected Timeline:
+- Removal request: 24-48 hours
+- Full de-indexing: 1-2 weeks
+- Complete cleanup: 2-4 weeks
+
+## To Monitor Progress:
+1. Check "Coverage" report in both properties
+2. Watch "Removals" status
+3. Search Google for: site:www.manage369.com
+   (Should show no results after removal)

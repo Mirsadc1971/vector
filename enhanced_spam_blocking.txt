@@ -1,0 +1,59 @@
+# Enhanced Spam Blocking Rules for _redirects
+# Add these to your existing _redirects file
+
+# Block all /tinggi/ variations
+/tinggi/*              /404.html              404!
+/tinggi-*              /404.html              404!
+/tinggi_*              /404.html              404!
+
+# Block all spam query parameters
+/*?wow=*               /404.html              404!
+/*&wow=*               /404.html              404!
+/*?*wow=*              /404.html              404!
+/*?*apk*               /404.html              404!
+/*?*dy01*              /404.html              404!
+/*?*dy02*              /404.html              404!
+/*?*dy03*              /404.html              404!
+/*?*slot*              /404.html              404!
+/*?*casino*            /404.html              404!
+/*?*gambling*          /404.html              404!
+/*?*mahjong*           /404.html              404!
+/*?*poker*             /404.html              404!
+/*?*betting*           /404.html              404!
+/*?*lottery*           /404.html              404!
+
+# Block specific spam patterns you're seeing
+/tinggi/?wow=apk-dy*   /404.html              404!
+/tinggi/?wow=*         /404.html              404!
+/tinggi/?*             /404.html              404!
+
+# Block other common spam paths
+/wp-admin/*            /404.html              404!
+/wp-login*             /404.html              404!
+/wordpress/*           /404.html              404!
+/.env                  /404.html              404!
+/admin/*               /404.html              404!
+/administrator/*       /404.html              404!
+
+# Block file extensions commonly used for spam
+/*.php                 /404.html              404!
+/*.asp                 /404.html              404!
+/*.aspx                /404.html              404!
+/*.cgi                 /404.html              404!
+/*.sql                 /404.html              404!
+/*.bak                 /404.html              404!
+/*.zip                 /404.html              404!
+/*.rar                 /404.html              404!
+
+# Google Search Console Removal Instructions:
+# 1. Go to Google Search Console
+# 2. Click "Removals" in the left sidebar
+# 3. Click "New Request"
+# 4. Choose "Remove all URLs with this prefix"
+# 5. Enter: https://manage369.com/tinggi/
+# 6. Submit the request
+
+# To remove from Google's index faster:
+# 1. Also submit a URL removal request for the prefix
+# 2. Update your robots.txt to disallow these paths
+# 3. Return 404 or 410 status codes (which you're already doing)

@@ -1,6 +1,19 @@
 [build]
   publish = "."
 
+# CRITICAL: Redirect non-www to www (NETLIFY RECOMMENDED)
+[[redirects]]
+  from = "https://manage369.com/*"
+  to = "https://www.manage369.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://manage369.com/*"
+  to = "https://www.manage369.com/:splat"
+  status = 301
+  force = true
+
 # Ensure site is accessible to crawlers
 [[headers]]
   for = "/*"

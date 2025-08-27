@@ -249,95 +249,10 @@
     
     <!-- Google Analytics 4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-MANAGE369PM"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-MANAGE369PM', {
-        'custom_map': {'custom_parameter_1': 'page_location'},
-        'send_page_view': true
-      });
-      
-      // Track phone clicks
-      function trackPhoneClick() {
-        gtag('event', 'phone_call', {
-          'event_category': 'Contact',
-          'event_label': 'Header Phone Number',
-          'value': 1
-        });
-      }
-      
-      // Track service area interest
-      function trackAreaInterest(area) {
-        gtag('event', 'area_interest', {
-          'event_category': 'Service Areas',
-          'event_label': area,
-          'value': 1
-        });
-      }
-
-      // Core Web Vitals Monitoring
-      function trackWebVitals() {
-        // Track Largest Contentful Paint (LCP)
-        new PerformanceObserver((entryList) => {
-          const entries = entryList.getEntries();
-          const lastEntry = entries[entries.length - 1];
-          gtag('event', 'web_vitals', {
-            'event_category': 'Performance',
-            'event_label': 'LCP',
-            'value': Math.round(lastEntry.startTime),
-            'custom_parameter': 'largest_contentful_paint'
-          });
-        }).observe({entryTypes: ['largest-contentful-paint']});
-
-        // Track First Input Delay (FID)
-        new PerformanceObserver((entryList) => {
-          for (const entry of entryList.getEntries()) {
-            gtag('event', 'web_vitals', {
-              'event_category': 'Performance',
-              'event_label': 'FID',
-              'value': Math.round(entry.processingStart - entry.startTime),
-              'custom_parameter': 'first_input_delay'
-            });
-          }
-        }).observe({entryTypes: ['first-input']});
-
-        // Track Cumulative Layout Shift (CLS)
-        let clsValue = 0;
-        new PerformanceObserver((entryList) => {
-          for (const entry of entryList.getEntries()) {
-            if (!entry.hadRecentInput) {
-              clsValue += entry.value;
-            }
-          }
-          gtag('event', 'web_vitals', {
-            'event_category': 'Performance',
-            'event_label': 'CLS',
-            'value': Math.round(clsValue * 1000),
-            'custom_parameter': 'cumulative_layout_shift'
-          });
-        }).observe({entryTypes: ['layout-shift']});
-      }
-
-      // Initialize performance tracking
-      if (window.PerformanceObserver) {
-        trackWebVitals();
-      }
-    </script>
+    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-MANAGE369PM', { 'custom_map': {'custom_parameter_1': 'page_location'}, 'send_page_view': true }); function trackPhoneClick() { gtag('event', 'phone_call', { 'event_category': 'Contact', 'event_label': 'Header Phone Number', 'value': 1 }); } function trackAreaInterest(area) { gtag('event', 'area_interest', { 'event_category': 'Service Areas', 'event_label': area, 'value': 1 }); } function trackWebVitals() { new PerformanceObserver((entryList) => { const entries = entryList.getEntries(); const lastEntry = entries[entries.length - 1]; gtag('event', 'web_vitals', { 'event_category': 'Performance', 'event_label': 'LCP', 'value': Math.round(lastEntry.startTime), 'custom_parameter': 'largest_contentful_paint' }); }).observe({entryTypes: ['largest-contentful-paint']}); new PerformanceObserver((entryList) => { for (const entry of entryList.getEntries()) { gtag('event', 'web_vitals', { 'event_category': 'Performance', 'event_label': 'FID', 'value': Math.round(entry.processingStart - entry.startTime), 'custom_parameter': 'first_input_delay' }); } }).observe({entryTypes: ['first-input']}); let clsValue = 0; new PerformanceObserver((entryList) => { for (const entry of entryList.getEntries()) { if (!entry.hadRecentInput) { clsValue += entry.value; } } gtag('event', 'web_vitals', { 'event_category': 'Performance', 'event_label': 'CLS', 'value': Math.round(clsValue * 1000), 'custom_parameter': 'cumulative_layout_shift' }); }).observe({entryTypes: ['layout-shift']}); } if (window.PerformanceObserver) { trackWebVitals(); }</script>
     
     <!-- Facebook Pixel -->
-    <script>
-      !function(f,b,e,v,n,t,s)
-      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-      n.queue=[];t=b.createElement(e);t.async=!0;
-      t.src=v;s=b.getElementsByTagName(e)[0];
-      s.parentNode.insertBefore(t,s)}(window, document,'script',
-      'https://connect.facebook.net/en_US/fbevents.js');
-      fbq('init', '1234567890123456'); // Replace with actual Facebook Pixel ID
-      fbq('track', 'PageView');
-    </script>
+    <script>!function(f,b,e,v,n,t,s) {if(f.fbq)return;n=f.fbq=function(){n.callMethod? n.callMethod.apply(n,arguments):n.queue.push(arguments)}; if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0'; n.queue=[];t=b.createElement(e);t.async=!0; t.src=v;s=b.getElementsByTagName(e)[0]; s.parentNode.insertBefore(t,s)}(window, document,'script', 'https: fbq('init', '1234567890123456'); fbq('track', 'PageView');</script>
     <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1234567890123456&ev=PageView&noscript=1"/ loading="lazy"></noscript>
     <style>
         /* Typography & Design System */
@@ -2016,100 +1931,7 @@
     </section>
 </footer>
     
-    <script>
-        // WebP Support Detection
-        function supportsWebp() {
-            return new Promise(resolve => {
-                const webP = new Image();
-                webP.onload = webP.onerror = () => resolve(webP.height === 2);
-                webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-            });
-        }
-
-        // Initialize WebP support detection
-        supportsWebp().then(supported => {
-            if (!supported) {
-                document.documentElement.classList.add('no-webp');
-            }
-        });
-
-        // Enhanced Lazy Loading Implementation
-        function initLazyLoading() {
-            // Use native lazy loading if supported
-            if ('loading' in HTMLImageElement.prototype) {
-                const images = document.querySelectorAll('img[data-src]');
-                images.forEach(img => {
-                    img.src = img.dataset.src;
-                    img.loading = 'lazy';
-                });
-            } else {
-                // Fallback to Intersection Observer
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            if (img.dataset.src) {
-                                img.src = img.dataset.src;
-                                img.classList.add('loaded');
-                                img.classList.remove('lazy');
-                                observer.unobserve(img);
-                            }
-                        }
-                    });
-                }, {
-                    rootMargin: '50px 0px',
-                    threshold: 0.01
-                });
-
-                document.querySelectorAll('img.lazy').forEach(img => {
-                    imageObserver.observe(img);
-                });
-            }
-        }
-
-        // Initialize lazy loading when DOM is ready
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', initLazyLoading);
-        } else {
-            initLazyLoading();
-        }
-
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            const isExpanded = mobileMenu.classList.contains('active');
-            
-            mobileMenu.classList.toggle('active');
-            toggle.setAttribute('aria-expanded', !isExpanded);
-            mobileMenu.setAttribute('aria-hidden', isExpanded);
-        }
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            
-            if (!mobileMenu.contains(event.target) && !toggle.contains(event.target)) {
-                mobileMenu.classList.remove('active');
-                toggle.setAttribute('aria-expanded', 'false');
-                mobileMenu.setAttribute('aria-hidden', 'true');
-            }
-        });
-        
-        // Handle escape key for mobile menu
-        document.addEventListener('keydown', function(event) {
-            if (event.key === 'Escape') {
-                const mobileMenu = document.getElementById('mobileMenu');
-                const toggle = document.querySelector('.mobile-menu-toggle');
-                if (mobileMenu.classList.contains('active')) {
-                    mobileMenu.classList.remove('active');
-                    toggle.setAttribute('aria-expanded', 'false');
-                    mobileMenu.setAttribute('aria-hidden', 'true');
-                    toggle.focus();
-                }
-            }
-        });
-    </script>
+    <script>function supportsWebp() { return new Promise(resolve => { const webP = new Image(); webP.onload = webP.onerror = () => resolve(webP.height === 2); webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA }); } supportsWebp().then(supported => { if (!supported) { document.documentElement.classList.add('no-webp'); } }); function initLazyLoading() { if ('loading' in HTMLImageElement.prototype) { const images = document.querySelectorAll('img[data-src]'); images.forEach(img => { img.src = img.dataset.src; img.loading = 'lazy'; }); } else { const imageObserver = new IntersectionObserver((entries, observer) => { entries.forEach(entry => { if (entry.isIntersecting) { const img = entry.target; if (img.dataset.src) { img.src = img.dataset.src; img.classList.add('loaded'); img.classList.remove('lazy'); observer.unobserve(img); } } }); }, { rootMargin: '50px 0px', threshold: 0.01 }); document.querySelectorAll('img.lazy').forEach(img => { imageObserver.observe(img); }); } } if (document.readyState === 'loading') { document.addEventListener('DOMContentLoaded', initLazyLoading); } else { initLazyLoading(); } function toggleMobileMenu() { const mobileMenu = document.getElementById('mobileMenu'); const toggle = document.querySelector('.mobile-menu-toggle'); const isExpanded = mobileMenu.classList.contains('active'); mobileMenu.classList.toggle('active'); toggle.setAttribute('aria-expanded', !isExpanded); mobileMenu.setAttribute('aria-hidden', isExpanded); } document.addEventListener('click', function(event) { const mobileMenu = document.getElementById('mobileMenu'); const toggle = document.querySelector('.mobile-menu-toggle'); if (!mobileMenu.contains(event.target) && !toggle.contains(event.target)) { mobileMenu.classList.remove('active'); toggle.setAttribute('aria-expanded', 'false'); mobileMenu.setAttribute('aria-hidden', 'true'); } }); document.addEventListener('keydown', function(event) { if (event.key === 'Escape') { const mobileMenu = document.getElementById('mobileMenu'); const toggle = document.querySelector('.mobile-menu-toggle'); if (mobileMenu.classList.contains('active')) { mobileMenu.classList.remove('active'); toggle.setAttribute('aria-expanded', 'false'); mobileMenu.setAttribute('aria-hidden', 'true'); toggle.focus(); } } });</script>
 <script defer src="mobile-navigation.js"></script>
 <script defer src="seo-enhancements.js"></script>
 
@@ -2237,51 +2059,7 @@
 </footer>
 
     <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registered:', registration);
-                        
-                        // Check for updates every hour
-                        setInterval(() => {
-                            registration.update();
-                        }, 3600000);
-                    })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed:', err);
-                    });
-            });
-            
-            // PWA install prompt
-            let deferredPrompt;
-            window.addEventListener('beforeinstallprompt', (e) => {
-                e.preventDefault();
-                deferredPrompt = e;
-                
-                // Show install button if you have one
-                const installButton = document.getElementById('pwa-install-btn');
-                if (installButton) {
-                    installButton.style.display = 'block';
-                    installButton.addEventListener('click', () => {
-                        deferredPrompt.prompt();
-                        deferredPrompt.userChoice.then((choiceResult) => {
-                            if (choiceResult.outcome === 'accepted') {
-                                console.log('User accepted PWA install');
-                            }
-                            deferredPrompt = null;
-                        });
-                    });
-                }
-            });
-            
-            // Detect if app is installed
-            window.addEventListener('appinstalled', () => {
-                console.log('PWA was installed');
-            });
-        }
-    </script>
+    <script>if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js') .then(registration => { console.log('ServiceWorker registered:', registration); setInterval(() => { registration.update(); }, 3600000); }) .catch(err => { console.log('ServiceWorker registration failed:', err); }); }); let deferredPrompt; window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; const installButton = document.getElementById('pwa-install-btn'); if (installButton) { installButton.style.display = 'block'; installButton.addEventListener('click', () => { deferredPrompt.prompt(); deferredPrompt.userChoice.then((choiceResult) => { if (choiceResult.outcome === 'accepted') { console.log('User accepted PWA install'); } deferredPrompt = null; }); }); } }); window.addEventListener('appinstalled', () => { console.log('PWA was installed'); }); }</script>
 </body>
 </html>
 

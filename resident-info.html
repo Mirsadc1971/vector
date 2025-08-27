@@ -265,14 +265,14 @@
     
     .footer-bottom {
         background: #111827 !important;
-        color: #9ca3af !important;
+        color: #6b7280 !important;
         border-top: 1px solid #374151;
         padding: 1.5rem 0;
         margin-top: 2rem;
     }
     
     .footer-license, .footer-copyright {
-        color: #9ca3af !important;
+        color: #6b7280 !important;
     }
     
     /* Remove/hide duplicate cert badges */
@@ -283,7 +283,7 @@
 
     /* High Contrast Text Fixes */
     .btn-primary, button[type="submit"], .submit-btn {
-        background: #c4490c !important; /* Darker orange for better contrast */
+        background: #9a3412 !important; /* Darker orange for better contrast */
         color: white !important;
     }
     
@@ -293,7 +293,7 @@
     
     /* Service cards text contrast */
     .service-card h3, .service-card h4 {
-        color: #1f2937 !important;
+        color: #111827 !important;
     }
     
     .service-card p {
@@ -302,7 +302,7 @@
     
     /* Fix any orange text that needs more contrast */
     h1, h2, h3, h4, h5, h6 {
-        color: #1f2937 !important;
+        color: #111827 !important;
     }
     
     /* Ensure links have proper contrast */
@@ -320,117 +320,7 @@
     }
 
 </style>
-    <script>
-        function toggleTenantInfo() {
-            const occupied = document.querySelector('input[name="occupied"]:checked').value;
-            const tenantSection = document.getElementById('tenantInfo');
-            
-            if (occupied === 'No') {
-                tenantSection.classList.add('show');
-            } else {
-                tenantSection.classList.remove('show');
-            }
-        }
-        
-        function prepareOwnerEmail() {
-            // Gather form data
-            const formData = {
-                associationName: document.getElementById('associationName').value,
-                homeowner1: document.getElementById('homeowner1').value,
-                cell1: document.getElementById('cell1').value,
-                homeowner2: document.getElementById('homeowner2').value,
-                cell2: document.getElementById('cell2').value,
-                address: document.getElementById('address').value,
-                unit: document.getElementById('unit').value,
-                homePhone: document.getElementById('homePhone').value,
-                email1: document.getElementById('email1').value,
-                email2: document.getElementById('email2').value,
-                parkingSpace: document.getElementById('parkingSpace').value,
-                locker: document.getElementById('locker').value,
-                legalOwner: document.getElementById('legalOwner').value,
-                insuranceCompany: document.getElementById('insuranceCompany').value,
-                occupied: document.querySelector('input[name="occupied"]:checked').value,
-                leaseHolders: document.getElementById('leaseHolders').value,
-                leaseStart: document.getElementById('leaseStart').value,
-                leaseEnd: document.getElementById('leaseEnd').value,
-                tenantHomePhone: document.getElementById('tenantHomePhone').value,
-                tenantCell1: document.getElementById('tenantCell1').value,
-                tenantCell2: document.getElementById('tenantCell2').value,
-                otherResidents: document.getElementById('otherResidents').value,
-                pets: document.getElementById('pets').value,
-                vehicleMake: document.getElementById('vehicleMake').value,
-                vehicleModel: document.getElementById('vehicleModel').value,
-                vehiclePlate: document.getElementById('vehiclePlate').value,
-                specialHelp: document.querySelector('input[name="specialHelp"]:checked').value,
-                emergencyName: document.getElementById('emergencyName').value,
-                emergencyPhone: document.getElementById('emergencyPhone').value,
-                correspondence: document.querySelector('input[name="correspondence"]:checked').value,
-                electronicAgreement: document.getElementById('electronicAgreement').checked ? 'Yes' : 'No',
-                signature: document.getElementById('signature').value
-            };
-            
-            // Create email body
-            let emailBody = "RESIDENT INFORMATION SHEET\n";
-            emailBody += "==========================\n\n";
-            emailBody += "ASSOCIATION INFORMATION\n";
-            emailBody += "Association Name: " + formData.associationName + "\n\n";
-            emailBody += "OWNER INFORMATION\n";
-            emailBody += "Homeowner 1: " + formData.homeowner1 + " | Cell: " + formData.cell1 + "\n";
-            emailBody += "Homeowner 2: " + formData.homeowner2 + " | Cell: " + formData.cell2 + "\n";
-            emailBody += "Address: " + formData.address + "\n";
-            emailBody += "Unit: " + formData.unit + "\n";
-            emailBody += "Home Phone: " + formData.homePhone + "\n";
-            emailBody += "Email 1: " + formData.email1 + "\n";
-            emailBody += "Email 2: " + formData.email2 + "\n";
-            emailBody += "Parking Space #: " + formData.parkingSpace + "\n";
-            emailBody += "Locker #: " + formData.locker + "\n";
-            emailBody += "Legal Owner(s): " + formData.legalOwner + "\n";
-            emailBody += "Insurance Company: " + formData.insuranceCompany + "\n\n";
-            emailBody += "OCCUPANT INFORMATION\n";
-            emailBody += "Owner Occupied: " + formData.occupied + "\n";
-            
-            if (formData.occupied === 'No') {
-                emailBody += "Lease Holders: " + formData.leaseHolders + "\n";
-                emailBody += "Lease Start: " + formData.leaseStart + "\n";
-                emailBody += "Lease End: " + formData.leaseEnd + "\n";
-                emailBody += "Tenant Home Phone: " + formData.tenantHomePhone + "\n";
-                emailBody += "Tenant Cell 1: " + formData.tenantCell1 + "\n";
-                emailBody += "Tenant Cell 2: " + formData.tenantCell2 + "\n";
-            }
-            
-            emailBody += "Other Residents: " + formData.otherResidents + "\n";
-            emailBody += "Pets: " + formData.pets + "\n\n";
-            emailBody += "VEHICLE INFORMATION\n";
-            emailBody += "Make: " + formData.vehicleMake + "\n";
-            emailBody += "Model: " + formData.vehicleModel + "\n";
-            emailBody += "License Plate: " + formData.vehiclePlate + "\n\n";
-            emailBody += "EMERGENCY CONTACT\n";
-            emailBody += "Special Help Needed: " + formData.specialHelp + "\n";
-            emailBody += "Emergency Contact: " + formData.emergencyName + "\n";
-            emailBody += "Emergency Phone: " + formData.emergencyPhone + "\n\n";
-            emailBody += "COMMUNICATION PREFERENCE\n";
-            emailBody += "Preferred Method: " + formData.correspondence + "\n";
-            emailBody += "Electronic Agreement: " + formData.electronicAgreement + "\n\n";
-            emailBody += "SIGNATURE\n";
-            emailBody += "Signed: " + formData.signature + "\n";
-            emailBody += "Date: " + new Date().toLocaleDateString() + "\n\n";
-            emailBody += "NOTE: Please attach insurance declaration page and lease document (if applicable) to this email.";
-            
-            // Create mailto link
-            const subject = "Resident Information Sheet - Unit " + formData.unit;
-            const mailtoLink = "mailto:service@manage369.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
-            
-            // Open email client
-            
-            
-            return false;
-        }
-        
-        function prepareTenantEmail() {
-            alert("This form is for property owners only. Tenants should contact the property owner to update resident information.");
-            return false;
-        }
-    </script>
+    <script>function toggleTenantInfo() { const occupied = document.querySelector('input[name="occupied"]:checked').value; const tenantSection = document.getElementById('tenantInfo'); if (occupied === 'No') { tenantSection.classList.add('show'); } else { tenantSection.classList.remove('show'); } } function prepareOwnerEmail() { const formData = { associationName: document.getElementById('associationName').value, homeowner1: document.getElementById('homeowner1').value, cell1: document.getElementById('cell1').value, homeowner2: document.getElementById('homeowner2').value, cell2: document.getElementById('cell2').value, address: document.getElementById('address').value, unit: document.getElementById('unit').value, homePhone: document.getElementById('homePhone').value, email1: document.getElementById('email1').value, email2: document.getElementById('email2').value, parkingSpace: document.getElementById('parkingSpace').value, locker: document.getElementById('locker').value, legalOwner: document.getElementById('legalOwner').value, insuranceCompany: document.getElementById('insuranceCompany').value, occupied: document.querySelector('input[name="occupied"]:checked').value, leaseHolders: document.getElementById('leaseHolders').value, leaseStart: document.getElementById('leaseStart').value, leaseEnd: document.getElementById('leaseEnd').value, tenantHomePhone: document.getElementById('tenantHomePhone').value, tenantCell1: document.getElementById('tenantCell1').value, tenantCell2: document.getElementById('tenantCell2').value, otherResidents: document.getElementById('otherResidents').value, pets: document.getElementById('pets').value, vehicleMake: document.getElementById('vehicleMake').value, vehicleModel: document.getElementById('vehicleModel').value, vehiclePlate: document.getElementById('vehiclePlate').value, specialHelp: document.querySelector('input[name="specialHelp"]:checked').value, emergencyName: document.getElementById('emergencyName').value, emergencyPhone: document.getElementById('emergencyPhone').value, correspondence: document.querySelector('input[name="correspondence"]:checked').value, electronicAgreement: document.getElementById('electronicAgreement').checked ? 'Yes' : 'No', signature: document.getElementById('signature').value }; let emailBody = "RESIDENT INFORMATION SHEET\n"; emailBody += "==========================\n\n"; emailBody += "ASSOCIATION INFORMATION\n"; emailBody += "Association Name: " + formData.associationName + "\n\n"; emailBody += "OWNER INFORMATION\n"; emailBody += "Homeowner 1: " + formData.homeowner1 + " | Cell: " + formData.cell1 + "\n"; emailBody += "Homeowner 2: " + formData.homeowner2 + " | Cell: " + formData.cell2 + "\n"; emailBody += "Address: " + formData.address + "\n"; emailBody += "Unit: " + formData.unit + "\n"; emailBody += "Home Phone: " + formData.homePhone + "\n"; emailBody += "Email 1: " + formData.email1 + "\n"; emailBody += "Email 2: " + formData.email2 + "\n"; emailBody += "Parking Space #: " + formData.parkingSpace + "\n"; emailBody += "Locker #: " + formData.locker + "\n"; emailBody += "Legal Owner(s): " + formData.legalOwner + "\n"; emailBody += "Insurance Company: " + formData.insuranceCompany + "\n\n"; emailBody += "OCCUPANT INFORMATION\n"; emailBody += "Owner Occupied: " + formData.occupied + "\n"; if (formData.occupied === 'No') { emailBody += "Lease Holders: " + formData.leaseHolders + "\n"; emailBody += "Lease Start: " + formData.leaseStart + "\n"; emailBody += "Lease End: " + formData.leaseEnd + "\n"; emailBody += "Tenant Home Phone: " + formData.tenantHomePhone + "\n"; emailBody += "Tenant Cell 1: " + formData.tenantCell1 + "\n"; emailBody += "Tenant Cell 2: " + formData.tenantCell2 + "\n"; } emailBody += "Other Residents: " + formData.otherResidents + "\n"; emailBody += "Pets: " + formData.pets + "\n\n"; emailBody += "VEHICLE INFORMATION\n"; emailBody += "Make: " + formData.vehicleMake + "\n"; emailBody += "Model: " + formData.vehicleModel + "\n"; emailBody += "License Plate: " + formData.vehiclePlate + "\n\n"; emailBody += "EMERGENCY CONTACT\n"; emailBody += "Special Help Needed: " + formData.specialHelp + "\n"; emailBody += "Emergency Contact: " + formData.emergencyName + "\n"; emailBody += "Emergency Phone: " + formData.emergencyPhone + "\n\n"; emailBody += "COMMUNICATION PREFERENCE\n"; emailBody += "Preferred Method: " + formData.correspondence + "\n"; emailBody += "Electronic Agreement: " + formData.electronicAgreement + "\n\n"; emailBody += "SIGNATURE\n"; emailBody += "Signed: " + formData.signature + "\n"; emailBody += "Date: " + new Date().toLocaleDateString() + "\n\n"; emailBody += "NOTE: Please attach insurance declaration page and lease document (if applicable) to this email."; const subject = "Resident Information Sheet - Unit " + formData.unit; const mailtoLink = "mailto:service@manage369.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody); return false; } function prepareTenantEmail() { alert("This form is for property owners only. Tenants should contact the property owner to update resident information."); return false; }</script>
     <link rel="canonical" href="https://manage369.com/resident-info.html">
 
     <style>
@@ -489,7 +379,7 @@
     
     .footer-bottom, footer .footer-bottom {
         background: #111827 !important; /* Even darker for bottom */
-        color: #9ca3af !important;
+        color: #6b7280 !important;
         border-top: 1px solid #374151;
     }
     
@@ -794,51 +684,7 @@
     </div>
 
     <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registered:', registration);
-                        
-                        // Check for updates every hour
-                        setInterval(() => {
-                            registration.update();
-                        }, 3600000);
-                    })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed:', err);
-                    });
-            });
-            
-            // PWA install prompt
-            let deferredPrompt;
-            window.addEventListener('beforeinstallprompt', (e) => {
-                e.preventDefault();
-                deferredPrompt = e;
-                
-                // Show install button if you have one
-                const installButton = document.getElementById('pwa-install-btn');
-                if (installButton) {
-                    installButton.style.display = 'block';
-                    installButton.addEventListener('click', () => {
-                        deferredPrompt.prompt();
-                        deferredPrompt.userChoice.then((choiceResult) => {
-                            if (choiceResult.outcome === 'accepted') {
-                                console.log('User accepted PWA install');
-                            }
-                            deferredPrompt = null;
-                        });
-                    });
-                }
-            });
-            
-            // Detect if app is installed
-            window.addEventListener('appinstalled', () => {
-                console.log('PWA was installed');
-            });
-        }
-    </script>
+    <script>if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js') .then(registration => { console.log('ServiceWorker registered:', registration); setInterval(() => { registration.update(); }, 3600000); }) .catch(err => { console.log('ServiceWorker registration failed:', err); }); }); let deferredPrompt; window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; const installButton = document.getElementById('pwa-install-btn'); if (installButton) { installButton.style.display = 'block'; installButton.addEventListener('click', () => { deferredPrompt.prompt(); deferredPrompt.userChoice.then((choiceResult) => { if (choiceResult.outcome === 'accepted') { console.log('User accepted PWA install'); } deferredPrompt = null; }); }); } }); window.addEventListener('appinstalled', () => { console.log('PWA was installed'); }); }</script>
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-content">
@@ -846,7 +692,7 @@
             <div class="footer-column">
                 <h3>Manage369</h3>
                 <p>1400 Patriot Boulevard 357<br>Glenview, IL 60026</p>
-                <p style="margin-top: 10px; color: #9ca3af; font-weight: 500;">IDFPR Management Firm License 291.000211</p>
+                <p style="margin-top: 10px; color: #4b5563; font-weight: 500;">IDFPR Management Firm License 291.000211</p>
                 <p style="margin-top: 10px;"><strong>Phone:</strong> <a href="tel:8476522338">(847) 652-2338</a><br>
                 <strong>Email:</strong> <a href="mailto:service@manage369.com">service@manage369.com</a></p>
             </div>
@@ -875,10 +721,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div style="text-align: center; margin-bottom: 10px; color: #9ca3af; font-size: 0.9rem;">
+            <div style="text-align: center; margin-bottom: 10px; color: #4b5563; font-size: 0.9rem;">
                 CAI National Member | IREM Certified | CCIM Designated | NAR Member | IDFPR Licensed
             </div>
-            <p style="text-align: center; color: #9ca3af;">&copy; 2025 Manage369. All rights reserved.</p>
+            <p style="text-align: center; color: #4b5563;">&copy; 2025 Manage369. All rights reserved.</p>
         </div>
     </footer>
 </body>

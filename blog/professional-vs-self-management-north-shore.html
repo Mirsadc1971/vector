@@ -1092,68 +1092,9 @@
     </section>
 </footer>
     
-    <script>
-        function toggleMobileMenu() {
-            const mobileMenu = document.getElementById('mobileMenu');
-            mobileMenu.classList.toggle('active');
-        }
-        
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', function(event) {
-            const mobileMenu = document.getElementById('mobileMenu');
-            const toggle = document.querySelector('.mobile-menu-toggle');
-            
-            if (!mobileMenu.contains(event.target) && !toggle.contains(event.target)) {
-                mobileMenu.classList.remove('active');
-            }
-        });
-    </script>
+    <script>function toggleMobileMenu() { const mobileMenu = document.getElementById('mobileMenu'); mobileMenu.classList.toggle('active'); } document.addEventListener('click', function(event) { const mobileMenu = document.getElementById('mobileMenu'); const toggle = document.querySelector('.mobile-menu-toggle'); if (!mobileMenu.contains(event.target) && !toggle.contains(event.target)) { mobileMenu.classList.remove('active'); } });</script>
 
     <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registered:', registration);
-                        
-                        // Check for updates every hour
-                        setInterval(() => {
-                            registration.update();
-                        }, 3600000);
-                    })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed:', err);
-                    });
-            });
-            
-            // PWA install prompt
-            let deferredPrompt;
-            window.addEventListener('beforeinstallprompt', (e) => {
-                e.preventDefault();
-                deferredPrompt = e;
-                
-                // Show install button if you have one
-                const installButton = document.getElementById('pwa-install-btn');
-                if (installButton) {
-                    installButton.style.display = 'block';
-                    installButton.addEventListener('click', () => {
-                        deferredPrompt.prompt();
-                        deferredPrompt.userChoice.then((choiceResult) => {
-                            if (choiceResult.outcome === 'accepted') {
-                                console.log('User accepted PWA install');
-                            }
-                            deferredPrompt = null;
-                        });
-                    });
-                }
-            });
-            
-            // Detect if app is installed
-            window.addEventListener('appinstalled', () => {
-                console.log('PWA was installed');
-            });
-        }
-    </script>
+    <script>if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js') .then(registration => { console.log('ServiceWorker registered:', registration); setInterval(() => { registration.update(); }, 3600000); }) .catch(err => { console.log('ServiceWorker registration failed:', err); }); }); let deferredPrompt; window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; const installButton = document.getElementById('pwa-install-btn'); if (installButton) { installButton.style.display = 'block'; installButton.addEventListener('click', () => { deferredPrompt.prompt(); deferredPrompt.userChoice.then((choiceResult) => { if (choiceResult.outcome === 'accepted') { console.log('User accepted PWA install'); } deferredPrompt = null; }); }); } }); window.addEventListener('appinstalled', () => { console.log('PWA was installed'); }); }</script>
 </body>
 </html>

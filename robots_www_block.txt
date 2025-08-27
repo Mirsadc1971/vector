@@ -1,0 +1,11 @@
+# Robots.txt specifically for www subdomain (if needed)
+# This file would be served at https://www.manage369.com/robots.txt
+
+User-agent: *
+Disallow: /
+
+# Canonical site
+# All content is available at https://manage369.com/
+# Please crawl the non-www version instead
+
+Sitemap: https://manage369.com/sitemap.xml

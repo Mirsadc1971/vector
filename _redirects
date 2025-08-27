@@ -1,6 +1,16 @@
 # Netlify Redirects - manage369.com
 # Last updated: 2025
 
+# CRITICAL: Redirect non-www to www (NETLIFY RECOMMENDED) - MUST BE FIRST
+https://manage369.com/*         https://www.manage369.com/:splat    301!
+http://manage369.com/*          https://www.manage369.com/:splat    301!
+manage369.com/*                 https://www.manage369.com/:splat    301!
+
+# Specific redirects for important files
+https://manage369.com/sitemap.xml    https://www.manage369.com/sitemap.xml    301!
+https://manage369.com/robots.txt     https://www.manage369.com/robots.txt     301!
+https://manage369.com/index.html     https://www.manage369.com/               301!
+
 # SECURITY: Block spam/hacked content (CRITICAL)
 /tinggi/*              /404.html              404!
 /*wow=*                /404.html              404!
@@ -9,6 +19,9 @@
 /*apk=*                /404.html              404!
 /*gambling=*           /404.html              404!
 /*mahjong=*            /404.html              404!
+
+# FIX: Incorrect Glencoe URL
+/glencoe               /property-management/glencoe/     301!
 
 # SEO: Remove index.html from URLs
 /index.html            /                      301!

@@ -1,6 +1,20 @@
-# GOOGLE - PLEASE INDEX THIS SITE
+# BLOCK SPAM URLS FIRST
+User-agent: *
+Disallow: /tinggi/
+Disallow: /*?wow=
+Disallow: /*?*wow=
+Disallow: /*?*apk*
+Disallow: /*?*casino*
+Disallow: /*?*slot*
+Disallow: /*?*bet*
+Disallow: /*?*rebahin*
+Disallow: /*?*777*
+
+# GOOGLE - PLEASE INDEX THIS SITE (except spam)
 User-agent: Googlebot
 Allow: /
+Disallow: /tinggi/
+Disallow: /*?wow=
 Crawl-delay: 0
 
 User-agent: Googlebot-Image
@@ -13,7 +27,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://manage369.com/sitemap.xml
+Sitemap: https://www.manage369.com/sitemap.xml
 
 # No restrictions - index everything
 Disallow:

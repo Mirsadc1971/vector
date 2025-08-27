@@ -258,14 +258,14 @@
     
     .footer-bottom {
         background: #111827 !important;
-        color: #9ca3af !important;
+        color: #6b7280 !important;
         border-top: 1px solid #374151;
         padding: 1.5rem 0;
         margin-top: 2rem;
     }
     
     .footer-license, .footer-copyright {
-        color: #9ca3af !important;
+        color: #6b7280 !important;
     }
     
     /* Remove/hide duplicate cert badges */
@@ -276,7 +276,7 @@
 
     /* High Contrast Text Fixes */
     .btn-primary, button[type="submit"], .submit-btn {
-        background: #c4490c !important; /* Darker orange for better contrast */
+        background: #9a3412 !important; /* Darker orange for better contrast */
         color: white !important;
     }
     
@@ -286,7 +286,7 @@
     
     /* Service cards text contrast */
     .service-card h3, .service-card h4 {
-        color: #1f2937 !important;
+        color: #111827 !important;
     }
     
     .service-card p {
@@ -295,7 +295,7 @@
     
     /* Fix any orange text that needs more contrast */
     h1, h2, h3, h4, h5, h6 {
-        color: #1f2937 !important;
+        color: #111827 !important;
     }
     
     /* Ensure links have proper contrast */
@@ -313,77 +313,7 @@
     }
 
 </style>
-    <script>
-        function prepareEmail() {
-            // Gather violation types
-            let violationTypes = [];
-            if (document.getElementById('noise').checked) violationTypes.push('Noise/disturbance');
-            if (document.getElementById('construction').checked) violationTypes.push('Unauthorized construction/alteration');
-            if (document.getElementById('pet').checked) violationTypes.push('Pet violation');
-            if (document.getElementById('parking').checked) violationTypes.push('Parking/vehicle issue');
-            if (document.getElementById('harassment').checked) violationTypes.push('Harassment');
-            if (document.getElementById('other').checked) violationTypes.push('Other');
-            
-            // Gather requested actions
-            let requestedActions = [];
-            if (document.getElementById('warning').checked) requestedActions.push('Warning');
-            if (document.getElementById('fine').checked) requestedActions.push('Fine');
-            if (document.getElementById('hearing').checked) requestedActions.push('Hearing');
-            if (document.getElementById('otherAction').checked) requestedActions.push('Other');
-            
-            // Gather form data
-            const formData = {
-                reporterName: document.getElementById('reporterName').value,
-                unitAddress: document.getElementById('unitAddress').value,
-                contact: document.getElementById('contact').value,
-                reportDate: document.getElementById('reportDate').value,
-                violatorName: document.getElementById('violatorName').value,
-                violatorUnit: document.getElementById('violatorUnit').value,
-                violationTypes: violationTypes.join(', '),
-                details: document.getElementById('details').value,
-                previousReport: document.querySelector('input[name="previousReport"]:checked').value,
-                requestedActions: requestedActions.join(', '),
-                signature: document.getElementById('signature').value
-            };
-            
-            // Create email body
-            let emailBody = "ILLINOIS CONDOMINIUM VIOLATION REPORT\n";
-            emailBody += "Pursuant to Section 35 of the Ombudsperson Act\n";
-            emailBody += "=====================================\n\n";
-            emailBody += "REPORTER INFORMATION\n";
-            emailBody += "Name: " + formData.reporterName + "\n";
-            emailBody += "Unit Address: " + formData.unitAddress + "\n";
-            emailBody += "Contact: " + formData.contact + "\n";
-            emailBody += "Date of Report: " + formData.reportDate + "\n\n";
-            emailBody += "VIOLATOR INFORMATION\n";
-            emailBody += "Violator's Name: " + (formData.violatorName || "Not provided") + "\n";
-            emailBody += "Unit Number: " + (formData.violatorUnit || "Not provided") + "\n\n";
-            emailBody += "NATURE OF VIOLATION\n";
-            emailBody += formData.violationTypes || "None selected" + "\n\n";
-            emailBody += "DETAILS OF THE VIOLATION\n";
-            emailBody += formData.details + "\n\n";
-            emailBody += "PREVIOUS REPORT\n";
-            emailBody += "Has this been reported before: " + formData.previousReport + "\n\n";
-            emailBody += "REQUESTED ACTION\n";
-            emailBody += formData.requestedActions || "None selected" + "\n\n";
-            emailBody += "ACKNOWLEDGEMENTS\n";
-            emailBody += "- Reporter understands this report may be shared with relevant parties\n";
-            emailBody += "- Reporter certifies information is true and accurate\n";
-            emailBody += "- Reporter may be contacted for additional information\n\n";
-            emailBody += "SIGNATURE\n";
-            emailBody += "Signed: " + formData.signature + "\n";
-            emailBody += "Date: " + formData.reportDate;
-            
-            // Create mailto link
-            const subject = "Violation Report - " + formData.unitAddress;
-            const mailtoLink = "mailto:service@manage369.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody);
-            
-            // Open email client
-            
-            
-            return false;
-        }
-    </script>
+    <script>function prepareEmail() { let violationTypes = []; if (document.getElementById('noise').checked) violationTypes.push('Noise/disturbance'); if (document.getElementById('construction').checked) violationTypes.push('Unauthorized construction/alteration'); if (document.getElementById('pet').checked) violationTypes.push('Pet violation'); if (document.getElementById('parking').checked) violationTypes.push('Parking/vehicle issue'); if (document.getElementById('harassment').checked) violationTypes.push('Harassment'); if (document.getElementById('other').checked) violationTypes.push('Other'); let requestedActions = []; if (document.getElementById('warning').checked) requestedActions.push('Warning'); if (document.getElementById('fine').checked) requestedActions.push('Fine'); if (document.getElementById('hearing').checked) requestedActions.push('Hearing'); if (document.getElementById('otherAction').checked) requestedActions.push('Other'); const formData = { reporterName: document.getElementById('reporterName').value, unitAddress: document.getElementById('unitAddress').value, contact: document.getElementById('contact').value, reportDate: document.getElementById('reportDate').value, violatorName: document.getElementById('violatorName').value, violatorUnit: document.getElementById('violatorUnit').value, violationTypes: violationTypes.join(', '), details: document.getElementById('details').value, previousReport: document.querySelector('input[name="previousReport"]:checked').value, requestedActions: requestedActions.join(', '), signature: document.getElementById('signature').value }; let emailBody = "ILLINOIS CONDOMINIUM VIOLATION REPORT\n"; emailBody += "Pursuant to Section 35 of the Ombudsperson Act\n"; emailBody += "=====================================\n\n"; emailBody += "REPORTER INFORMATION\n"; emailBody += "Name: " + formData.reporterName + "\n"; emailBody += "Unit Address: " + formData.unitAddress + "\n"; emailBody += "Contact: " + formData.contact + "\n"; emailBody += "Date of Report: " + formData.reportDate + "\n\n"; emailBody += "VIOLATOR INFORMATION\n"; emailBody += "Violator's Name: " + (formData.violatorName || "Not provided") + "\n"; emailBody += "Unit Number: " + (formData.violatorUnit || "Not provided") + "\n\n"; emailBody += "NATURE OF VIOLATION\n"; emailBody += formData.violationTypes || "None selected" + "\n\n"; emailBody += "DETAILS OF THE VIOLATION\n"; emailBody += formData.details + "\n\n"; emailBody += "PREVIOUS REPORT\n"; emailBody += "Has this been reported before: " + formData.previousReport + "\n\n"; emailBody += "REQUESTED ACTION\n"; emailBody += formData.requestedActions || "None selected" + "\n\n"; emailBody += "ACKNOWLEDGEMENTS\n"; emailBody += "- Reporter understands this report may be shared with relevant parties\n"; emailBody += "- Reporter certifies information is true and accurate\n"; emailBody += "- Reporter may be contacted for additional information\n\n"; emailBody += "SIGNATURE\n"; emailBody += "Signed: " + formData.signature + "\n"; emailBody += "Date: " + formData.reportDate; const subject = "Violation Report - " + formData.unitAddress; const mailtoLink = "mailto:service@manage369.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody); return false; }</script>
     <link rel="canonical" href="https://manage369.com/violation-report.html">
 
     <style>
@@ -442,7 +372,7 @@
     
     .footer-bottom, footer .footer-bottom {
         background: #111827 !important; /* Even darker for bottom */
-        color: #9ca3af !important;
+        color: #6b7280 !important;
         border-top: 1px solid #374151;
     }
     
@@ -663,100 +593,10 @@
     </div>
 
     <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registered:', registration);
-                        
-                        // Check for updates every hour
-                        setInterval(() => {
-                            registration.update();
-                        }, 3600000);
-                    })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed:', err);
-                    });
-            });
-            
-            // PWA install prompt
-            let deferredPrompt;
-            window.addEventListener('beforeinstallprompt', (e) => {
-                e.preventDefault();
-                deferredPrompt = e;
-                
-                // Show install button if you have one
-                const installButton = document.getElementById('pwa-install-btn');
-                if (installButton) {
-                    installButton.style.display = 'block';
-                    installButton.addEventListener('click', () => {
-                        deferredPrompt.prompt();
-                        deferredPrompt.userChoice.then((choiceResult) => {
-                            if (choiceResult.outcome === 'accepted') {
-                                console.log('User accepted PWA install');
-                            }
-                            deferredPrompt = null;
-                        });
-                    });
-                }
-            });
-            
-            // Detect if app is installed
-            window.addEventListener('appinstalled', () => {
-                console.log('PWA was installed');
-            });
-        }
-    </script>
+    <script>if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js') .then(registration => { console.log('ServiceWorker registered:', registration); setInterval(() => { registration.update(); }, 3600000); }) .catch(err => { console.log('ServiceWorker registration failed:', err); }); }); let deferredPrompt; window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; const installButton = document.getElementById('pwa-install-btn'); if (installButton) { installButton.style.display = 'block'; installButton.addEventListener('click', () => { deferredPrompt.prompt(); deferredPrompt.userChoice.then((choiceResult) => { if (choiceResult.outcome === 'accepted') { console.log('User accepted PWA install'); } deferredPrompt = null; }); }); } }); window.addEventListener('appinstalled', () => { console.log('PWA was installed'); }); }</script>
 
     <!-- Form Validation for Accessibility -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            // Add validation to all forms
-            const forms = document.querySelectorAll('form');
-            forms.forEach(form => {
-                form.addEventListener('submit', function(e) {
-                    let isValid = true;
-                    
-                    // Validate email fields
-                    const emailFields = form.querySelectorAll('input[type="email"], input[id*="email"]');
-                    emailFields.forEach(field => {
-                        const errorId = field.getAttribute('aria-describedby');
-                        if (errorId) {
-                            const errorElement = document.getElementById(errorId);
-                            if (errorElement) {
-                                if (!field.value || !field.value.includes('@')) {
-                                    errorElement.hidden = false;
-                                    field.setAttribute('aria-invalid', 'true');
-                                    if (isValid) field.focus();
-                                    isValid = false;
-                                } else {
-                                    errorElement.hidden = true;
-                                    field.setAttribute('aria-invalid', 'false');
-                                }
-                            }
-                        }
-                    });
-                    
-                    // Validate required fields
-                    const requiredFields = form.querySelectorAll('[required]');
-                    requiredFields.forEach(field => {
-                        if (!field.value.trim()) {
-                            field.setAttribute('aria-invalid', 'true');
-                            if (isValid) field.focus();
-                            isValid = false;
-                        } else {
-                            field.setAttribute('aria-invalid', 'false');
-                        }
-                    });
-                    
-                    if (!isValid) {
-                        e.preventDefault();
-                    }
-                });
-            });
-        });
-    </script>
+    <script>document.addEventListener('DOMContentLoaded', function() { const forms = document.querySelectorAll('form'); forms.forEach(form => { form.addEventListener('submit', function(e) { let isValid = true; const emailFields = form.querySelectorAll('input[type="email"], input[id*="email"]'); emailFields.forEach(field => { const errorId = field.getAttribute('aria-describedby'); if (errorId) { const errorElement = document.getElementById(errorId); if (errorElement) { if (!field.value || !field.value.includes('@')) { errorElement.hidden = false; field.setAttribute('aria-invalid', 'true'); if (isValid) field.focus(); isValid = false; } else { errorElement.hidden = true; field.setAttribute('aria-invalid', 'false'); } } } }); const requiredFields = form.querySelectorAll('[required]'); requiredFields.forEach(field => { if (!field.value.trim()) { field.setAttribute('aria-invalid', 'true'); if (isValid) field.focus(); isValid = false; } else { field.setAttribute('aria-invalid', 'false'); } }); if (!isValid) { e.preventDefault(); } }); }); });</script>
 
     <!-- Footer -->
     <footer class="site-footer">
@@ -765,7 +605,7 @@
             <div class="footer-column">
                 <h3>Manage369</h3>
                 <p>1400 Patriot Boulevard 357<br>Glenview, IL 60026</p>
-                <p style="margin-top: 10px; color: #9ca3af; font-weight: 500;">IDFPR Management Firm License 291.000211</p>
+                <p style="margin-top: 10px; color: #4b5563; font-weight: 500;">IDFPR Management Firm License 291.000211</p>
                 <p style="margin-top: 10px;"><strong>Phone:</strong> <a href="tel:8476522338">(847) 652-2338</a><br>
                 <strong>Email:</strong> <a href="mailto:service@manage369.com">service@manage369.com</a></p>
             </div>
@@ -794,10 +634,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div style="text-align: center; margin-bottom: 10px; color: #9ca3af; font-size: 0.9rem;">
+            <div style="text-align: center; margin-bottom: 10px; color: #4b5563; font-size: 0.9rem;">
                 CAI National Member | IREM Certified | CCIM Designated | NAR Member | IDFPR Licensed
             </div>
-            <p style="text-align: center; color: #9ca3af;">&copy; 2025 Manage369. All rights reserved.</p>
+            <p style="text-align: center; color: #4b5563;">&copy; 2025 Manage369. All rights reserved.</p>
         </div>
     </footer>
 </body>

@@ -121,7 +121,7 @@
         }
         
         .platform-cta {
-            background: #c4490c;
+            background: #9a3412;
             color: white;
             padding: 12px 30px;
             border-radius: 8px;
@@ -219,12 +219,12 @@
     }
     
     .site-footer a:hover, footer a:hover {
-        color: #1f2937 !important;
+        color: #111827 !important;
         text-decoration: underline;
     }
     
     .footer-column h3, footer h3 {
-        color: #1f2937 !important;
+        color: #111827 !important;
         margin-bottom: 1rem;
     }
     
@@ -239,14 +239,14 @@
     
     .footer-bottom {
         background: #111827 !important;
-        color: #9ca3af !important;
+        color: #6b7280 !important;
         border-top: 1px solid #374151;
         padding: 1.5rem 0;
         margin-top: 2rem;
     }
     
     .footer-license, .footer-copyright {
-        color: #9ca3af !important;
+        color: #6b7280 !important;
     }
     
     /* Remove/hide duplicate cert badges */
@@ -257,7 +257,7 @@
 
     /* High Contrast Text Fixes */
     .btn-primary, button[type="submit"], .submit-btn {
-        background: #c4490c !important; /* Darker orange for better contrast */
+        background: #9a3412 !important; /* Darker orange for better contrast */
         color: white !important;
     }
     
@@ -267,7 +267,7 @@
     
     /* Service cards text contrast */
     .service-card h3, .service-card h4 {
-        color: #1f2937 !important;
+        color: #111827 !important;
     }
     
     .service-card p {
@@ -276,7 +276,7 @@
     
     /* Fix any orange text that needs more contrast */
     h1, h2, h3, h4, h5, h6 {
-        color: #1f2937 !important;
+        color: #111827 !important;
     }
     
     /* Ensure links have proper contrast */
@@ -342,69 +342,10 @@
         </div>
     </div>
     
-    <script>
-        // Track review clicks
-        document.querySelectorAll('.platform-card').forEach(card => {
-            card.addEventListener('click', function(e) {
-                const platform = this.querySelector('.platform-name').textContent;
-                console.log('Review click:', platform);
-                // You can add Google Analytics tracking here
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'review_click', {
-                        'event_category': 'engagement',
-                        'event_label': platform
-                    });
-                }
-            });
-        });
-    </script>
+    <script>document.querySelectorAll('.platform-card').forEach(card => { card.addEventListener('click', function(e) { const platform = this.querySelector('.platform-name').textContent; console.log('Review click:', platform); if (typeof gtag !== 'undefined') { gtag('event', 'review_click', { 'event_category': 'engagement', 'event_label': platform }); } }); });</script>
 
     <!-- PWA Service Worker Registration -->
-    <script>
-        if ('serviceWorker' in navigator) {
-            window.addEventListener('load', () => {
-                navigator.serviceWorker.register('/service-worker.js')
-                    .then(registration => {
-                        console.log('ServiceWorker registered:', registration);
-                        
-                        // Check for updates every hour
-                        setInterval(() => {
-                            registration.update();
-                        }, 3600000);
-                    })
-                    .catch(err => {
-                        console.log('ServiceWorker registration failed:', err);
-                    });
-            });
-            
-            // PWA install prompt
-            let deferredPrompt;
-            window.addEventListener('beforeinstallprompt', (e) => {
-                e.preventDefault();
-                deferredPrompt = e;
-                
-                // Show install button if you have one
-                const installButton = document.getElementById('pwa-install-btn');
-                if (installButton) {
-                    installButton.style.display = 'block';
-                    installButton.addEventListener('click', () => {
-                        deferredPrompt.prompt();
-                        deferredPrompt.userChoice.then((choiceResult) => {
-                            if (choiceResult.outcome === 'accepted') {
-                                console.log('User accepted PWA install');
-                            }
-                            deferredPrompt = null;
-                        });
-                    });
-                }
-            });
-            
-            // Detect if app is installed
-            window.addEventListener('appinstalled', () => {
-                console.log('PWA was installed');
-            });
-        }
-    </script>
+    <script>if ('serviceWorker' in navigator) { window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js') .then(registration => { console.log('ServiceWorker registered:', registration); setInterval(() => { registration.update(); }, 3600000); }) .catch(err => { console.log('ServiceWorker registration failed:', err); }); }); let deferredPrompt; window.addEventListener('beforeinstallprompt', (e) => { e.preventDefault(); deferredPrompt = e; const installButton = document.getElementById('pwa-install-btn'); if (installButton) { installButton.style.display = 'block'; installButton.addEventListener('click', () => { deferredPrompt.prompt(); deferredPrompt.userChoice.then((choiceResult) => { if (choiceResult.outcome === 'accepted') { console.log('User accepted PWA install'); } deferredPrompt = null; }); }); } }); window.addEventListener('appinstalled', () => { console.log('PWA was installed'); }); }</script>
     <!-- Footer -->
     <footer class="site-footer">
         <div class="footer-content">
@@ -412,7 +353,7 @@
             <div class="footer-column">
                 <h3>Manage369</h3>
                 <p>1400 Patriot Boulevard 357<br>Glenview, IL 60026</p>
-                <p style="margin-top: 10px; color: #9ca3af; font-weight: 500;">IDFPR Management Firm License 291.000211</p>
+                <p style="margin-top: 10px; color: #4b5563; font-weight: 500;">IDFPR Management Firm License 291.000211</p>
                 <p style="margin-top: 10px;"><strong>Phone:</strong> <a href="tel:8476522338">(847) 652-2338</a><br>
                 <strong>Email:</strong> <a href="mailto:service@manage369.com">service@manage369.com</a></p>
             </div>
@@ -441,10 +382,10 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <div style="text-align: center; margin-bottom: 10px; color: #9ca3af; font-size: 0.9rem;">
+            <div style="text-align: center; margin-bottom: 10px; color: #4b5563; font-size: 0.9rem;">
                 CAI National Member | IREM Certified | CCIM Designated | NAR Member | IDFPR Licensed
             </div>
-            <p style="text-align: center; color: #9ca3af;">&copy; 2025 Manage369. All rights reserved.</p>
+            <p style="text-align: center; color: #4b5563;">&copy; 2025 Manage369. All rights reserved.</p>
         </div>
     </footer>
 </body>
