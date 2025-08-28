@@ -40,6 +40,9 @@
       "Bash(nslookup:*)",
       "WebSearch"
     ],
-    "deny": []
+    "deny": [],
+    "additionalDirectories": [
+      "C:\\Users\\mirsa"
+    ]
   }
 }

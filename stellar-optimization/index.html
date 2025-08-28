@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chicago Property Management | HOA & Condo Management | Stellar Property Group</title>
+    <meta name="description" content="Chicago's trusted property management company. Expert HOA and condominium management services for all Chicago neighborhoods. Call (773) 728-0652 for a free consultation.">
+    
+    <!-- Schema Markup for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Stellar Property Group",
+      "description": "Professional property management services for Chicago condominiums and HOAs",
+      "url": "https://www.stellarpropertygroup.com",
+      "telephone": "+1-773-728-0652",
+      "email": "mirsad@stellarpropertygroup.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5107 N Western Ave",
+        "addressLocality": "Chicago",
+        "addressRegion": "IL",
+        "postalCode": "60625",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 41.9742,
+        "longitude": -87.6880
+      },
+      "openingHours": "Mo-Fr 09:00-17:00",
+      "areaServed": {
+        "@type": "City",
+        "name": "Chicago",
+        "sameAs": "https://en.wikipedia.org/wiki/Chicago"
+      }
+    }
+    </script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #2563eb;
+        }
+        
+        .phone-btn {
+            background: #2563eb;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.9), rgba(249, 115, 22, 0.8)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800"><rect fill="%23f0f0f0"/><path fill="%23e0e0e0" d="M0 400h300v400H0zM300 0h300v400H300zM600 400h300v400H600zM900 0h300v400H900z"/></svg>');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 6rem 2rem;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: white;
+            color: #2563eb;
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: white;
+            border: 2px solid white;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            background: #f9fafb;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #111827;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: #6b7280;
+            margin-bottom: 3rem;
+            font-size: 1.2rem;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+        }
+        
+        .service-card h3 {
+            color: #2563eb;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+        
+        .service-card ul {
+            list-style: none;
+            color: #6b7280;
+        }
+        
+        .service-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .service-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        /* Areas Section */
+        .areas {
+            padding: 4rem 2rem;
+            background: white;
+        }
+        
+        .areas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+        
+        .area-tag {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 0.75rem 1rem;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: 500;
+            transition: background 0.3s;
+        }
+        
+        .area-tag:hover {
+            background: #dbeafe;
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(135deg, #2563eb, #f97316);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+        
+        .cta h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .cta p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Partner Section */
+        .partner {
+            background: #fef3c7;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        
+        .partner-box {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #1e40af;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #111827;
+            color: #e5e7eb;
+            padding: 3rem 2rem 2rem;
+        }
+        
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+        
+        .footer a {
+            color: #e5e7eb;
+            text-decoration: none;
+            display: block;
+            padding: 0.25rem 0;
+        }
+        
+        .footer a:hover {
+            color: white;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #374151;
+            color: #9ca3af;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Stellar Property Group</div>
+            <nav class="nav">
+                <a href="#services">Services</a>
+                <a href="#areas">Areas</a>
+                <a href="#contact">Contact</a>
+                <a href="tel:7737280652" class="phone-btn">(773) 728-0652</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Chicago's Trusted Property Management Company</h1>
+        <p>Professional HOA and condominium management services for all Chicago neighborhoods</p>
+        <div class="hero-buttons">
+            <a href="#contact" class="btn btn-primary">Get Free Consultation</a>
+            <a href="tel:7737280652" class="btn btn-secondary">Call Now</a>
+        </div>
+    </section>
+    
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Complete Property Management Services</h2>
+            <p class="section-subtitle">Comprehensive solutions for Chicago's urban properties</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Condominium Management</h3>
+                    <ul>
+                        <li>High-rise and mid-rise buildings</li>
+                        <li>Financial management & budgeting</li>
+                        <li>Board meeting support</li>
+                        <li>Vendor coordination</li>
+                        <li>24/7 emergency response</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>HOA Management</h3>
+                    <ul>
+                        <li>Community governance support</li>
+                        <li>Rules enforcement</li>
+                        <li>Landscaping coordination</li>
+                        <li>Assessment collection</li>
+                        <li>Resident communications</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Financial Services</h3>
+                    <ul>
+                        <li>Monthly financial reporting</li>
+                        <li>Budget preparation</li>
+                        <li>Assessment collection</li>
+                        <li>Accounts payable/receivable</li>
+                        <li>Reserve fund management</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Maintenance Coordination</h3>
+                    <ul>
+                        <li>Preventive maintenance programs</li>
+                        <li>Emergency repairs 24/7</li>
+                        <li>Vendor management</li>
+                        <li>Building inspections</li>
+                        <li>Capital project oversight</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Administrative Support</h3>
+                    <ul>
+                        <li>Document management</li>
+                        <li>Meeting coordination</li>
+                        <li>Compliance tracking</li>
+                        <li>Insurance coordination</li>
+                        <li>Legal liaison services</li>
+                    </ul>
+                </div>
+                
+                <div class="service-card">
+                    <h3>Resident Services</h3>
+                    <ul>
+                        <li>Online payment portal</li>
+                        <li>Maintenance requests</li>
+                        <li>Community communications</li>
+                        <li>Violation notices</li>
+                        <li>Move-in/move-out coordination</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Areas Section -->
+    <section class="areas" id="areas">
+        <div class="container">
+            <h2 class="section-title">Serving All Chicago Neighborhoods</h2>
+            <p class="section-subtitle">Expert local knowledge across Chicago's 77 community areas</p>
+            
+            <div class="areas-grid">
+                <div class="area-tag">The Loop</div>
+                <div class="area-tag">River North</div>
+                <div class="area-tag">Gold Coast</div>
+                <div class="area-tag">Lincoln Park</div>
+                <div class="area-tag">Lakeview</div>
+                <div class="area-tag">Old Town</div>
+                <div class="area-tag">West Loop</div>
+                <div class="area-tag">South Loop</div>
+                <div class="area-tag">Streeterville</div>
+                <div class="area-tag">Wicker Park</div>
+                <div class="area-tag">Bucktown</div>
+                <div class="area-tag">Logan Square</div>
+                <div class="area-tag">Lincoln Square</div>
+                <div class="area-tag">Uptown</div>
+                <div class="area-tag">Edgewater</div>
+                <div class="area-tag">Rogers Park</div>
+                <div class="area-tag">Hyde Park</div>
+                <div class="area-tag">Andersonville</div>
+                <div class="area-tag">Ravenswood</div>
+                <div class="area-tag">Albany Park</div>
+            </div>
+            
+            <p style="text-align: center; margin-top: 2rem; color: #6b7280; font-style: italic;">
+                ...and all other Chicago neighborhoods
+            </p>
+        </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta" id="contact">
+        <h2>Ready to Improve Your Property Management?</h2>
+        <p>Get a free consultation and see how we can help your Chicago property thrive</p>
+        <div class="hero-buttons">
+            <a href="tel:7737280652" class="btn btn-primary">Call (773) 728-0652</a>
+            <a href="mailto:mirsad@stellarpropertygroup.com" class="btn btn-secondary">Email Us</a>
+        </div>
+    </section>
+    
+    <!-- Partner Section -->
+    <section class="partner">
+        <div class="partner-box">
+            <h3 style="color: #1e40af; margin-bottom: 1rem;">Property in the Suburbs?</h3>
+            <p style="color: #4b5563; margin-bottom: 1rem;">
+                For properties in Chicago's north and northwest suburbs, we recommend our sister company 
+                specializing in suburban property management:
+            </p>
+            <p style="font-weight: 600; color: #1f2937; margin-bottom: 0.5rem;">
+                Manage369 - Premium Suburban Property Management
+            </p>
+            <p style="color: #6b7280; margin-bottom: 1.5rem;">
+                Serving Glenview, Northbrook, Arlington Heights, and 50+ suburban communities
+            </p>
+            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                <a href="https://www.manage369.com" target="_blank" 
+                   style="background: #1e40af; color: white; padding: 12px 24px; 
+                          border-radius: 6px; text-decoration: none; font-weight: 600;">
+                    Visit Manage369
+                </a>
+                <a href="tel:8476522338" 
+                   style="background: white; color: #1e40af; padding: 12px 24px; 
+                          border-radius: 6px; text-decoration: none; font-weight: 600; 
+                          border: 2px solid #1e40af;">
+                    (847) 652-2338
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div>
+                <h3>Stellar Property Group</h3>
+                <p>5107 N Western Ave<br>
+                Chicago, IL 60625</p>
+                <p style="margin-top: 1rem;">
+                    <strong>Phone:</strong> (773) 728-0652<br>
+                    <strong>Email:</strong> mirsad@stellarpropertygroup.com
+                </p>
+            </div>
+            
+            <div>
+                <h3>Quick Links</h3>
+                <a href="#services">Services</a>
+                <a href="#areas">Service Areas</a>
+                <a href="#contact">Contact</a>
+                <a href="/pay-assessments/">Pay Assessments</a>
+            </div>
+            
+            <div>
+                <h3>Services</h3>
+                <a href="#services">Condominium Management</a>
+                <a href="#services">HOA Management</a>
+                <a href="#services">Financial Services</a>
+                <a href="#services">Maintenance</a>
+            </div>
+            
+            <div>
+                <h3>Office Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 5:00 PM<br>
+                Saturday - Sunday: Emergency Only</p>
+                <p style="margin-top: 1rem;">
+                    24/7 Emergency Line:<br>
+                    <strong>(773) 728-0652</strong>
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Stellar Property Group. All rights reserved. | IDFPR License: 291.000211</p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem;">
+                Stellar Property Group and Manage369 are affiliated companies serving different Chicago markets.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
