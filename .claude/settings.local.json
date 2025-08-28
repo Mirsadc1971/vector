@@ -32,7 +32,13 @@
       "Bash(rm:*)",
       "Bash(del batch_2_property_pages_update.py cleanup_duplicate_consultation_forms.py final_cleanup_consultation_forms.py simple_duplicate_fix.py)",
       "Bash(pip install:*)",
-      "Bash(start chrome \"https://manage369.com/property-management/glenview/\")"
+      "Bash(start chrome \"https://manage369.com/property-management/glenview/\")",
+      "WebFetch(domain:mellow-froyo-3d8e3e.netlify.app)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:stellarpropertygroup.com)",
+      "WebFetch(domain:app.netlify.com)",
+      "Bash(nslookup:*)",
+      "WebSearch"
     ],
     "deny": []
   }
