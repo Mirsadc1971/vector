@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save 50% on Property Management | Switch from All County | Manage369</title>
+    <meta name="description" content="Limited time: Save 50% first year, 25% second year on HOA and condo management. 60-day money-back guarantee. Switch from All County and save thousands.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif; line-height: 1.6; color: #333; }
+        
+        /* Sticky Header with Countdown */
+        .sticky-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 12px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .countdown {
+            font-size: 18px;
+            font-weight: bold;
+        }
+        
+        .timer {
+            display: inline-block;
+            background: rgba(0,0,0,0.2);
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-left: 10px;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-top: 60px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            background: #4CAF50;
+            color: white;
+            padding: 20px 50px;
+            font-size: 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+        }
+        
+        /* Trust Badges */
+        .trust-badges {
+            background: #f8f9fa;
+            padding: 30px 20px;
+            text-align: center;
+        }
+        
+        .badges-container {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .badge {
+            text-align: center;
+        }
+        
+        .badge-number {
+            font-size: 32px;
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .badge-text {
+            color: #666;
+            font-size: 14px;
+        }
+        
+        /* Value Stack */
+        .value-stack {
+            max-width: 800px;
+            margin: 60px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .value-stack h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            font-size: 36px;
+        }
+        
+        .value-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .value-item:last-child {
+            border-bottom: none;
+            border-top: 3px solid #4CAF50;
+            margin-top: 20px;
+            font-size: 24px;
+            font-weight: bold;
+            color: #4CAF50;
+        }
+        
+        .value-description {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .check {
+            color: #4CAF50;
+            font-size: 24px;
+        }
+        
+        .value-price {
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        .crossed {
+            text-decoration: line-through;
+            color: #999;
+        }
+        
+        /* Calculator Section */
+        .calculator-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+        
+        .calculator {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .calculator h2 {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        
+        .calc-input {
+            margin-bottom: 20px;
+        }
+        
+        .calc-input label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+        
+        .calc-input input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        .savings-display {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 10px;
+            margin-top: 30px;
+            text-align: center;
+        }
+        
+        .savings-amount {
+            font-size: 48px;
+            font-weight: bold;
+            margin: 10px 0;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+        
+        .testimonials h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .stars {
+            color: #ffc107;
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        
+        .testimonial-text {
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+        
+        .testimonial-author {
+            font-weight: bold;
+            color: #667eea;
+        }
+        
+        /* FAQ Section */
+        .faq-section {
+            background: #f8f9fa;
+            padding: 60px 20px;
+        }
+        
+        .faq {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 36px;
+        }
+        
+        .faq-item {
+            background: white;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .faq-question {
+            padding: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #667eea;
+            color: white;
+        }
+        
+        .faq-answer {
+            padding: 20px;
+            display: none;
+        }
+        
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+        
+        /* Final CTA */
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .final-cta h2 {
+            font-size: 42px;
+            margin-bottom: 20px;
+        }
+        
+        .final-cta-subtitle {
+            font-size: 24px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .cta-button-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .cta-primary {
+            background: #4CAF50;
+            color: white;
+            padding: 20px 50px;
+            font-size: 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-secondary {
+            background: white;
+            color: #667eea;
+            padding: 20px 50px;
+            font-size: 24px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            display: inline-block;
+        }
+        
+        /* Guarantee Badge */
+        .guarantee {
+            max-width: 600px;
+            margin: 40px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+        }
+        
+        .guarantee-badge {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .guarantee h3 {
+            color: #333;
+            margin-bottom: 15px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .hero-subtitle { font-size: 18px; }
+            .savings-amount { font-size: 36px; }
+            .final-cta h2 { font-size: 28px; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sticky Header with Countdown -->
+    <div class="sticky-header">
+        <div class="countdown">
+            🔥 LIMITED TIME OFFER - Save 50% First Year + 25% Second Year
+            <span class="timer" id="countdown">Ends in: 3 days 14 hours</span>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Switch & Save 50% on Property Management</h1>
+            <p class="hero-subtitle">North Shore HOAs & Condos: Cut Your Management Fees in Half</p>
+            <a href="#quote-form" class="hero-cta">Calculate My Savings →</a>
+            <p style="margin-top: 20px; font-size: 18px;">
+                ✓ 60-Day Money Back Guarantee ✓ No Setup Fees ✓ Keep Your Vendors
+            </p>
+        </div>
+        
+        <!-- Trust Badges -->
+        <div class="trust-badges">
+            <div class="badges-container">
+                <div class="badge">
+                    <div class="badge-number">2,450+</div>
+                    <div class="badge-text">Units Managed</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-number">5.0★</div>
+                    <div class="badge-text">Google Rating</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-number">0</div>
+                    <div class="badge-text">Accounts Lost</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-number">5 Min</div>
+                    <div class="badge-text">Response Time</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Value Stack -->
+        <div class="value-stack">
+            <h2>Here's Everything You Get:</h2>
+            
+            <div class="value-item">
+                <div class="value-description">
+                    <span class="check">✓</span>
+                    <span>First Year: 50% Off Management Fees</span>
+                </div>
+                <div class="value-price">Value: $6,000+</div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-description">
+                    <span class="check">✓</span>
+                    <span>Second Year: 25% Off Management Fees</span>
+                </div>
+                <div class="value-price">Value: $3,000+</div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-description">
+                    <span class="check">✓</span>
+                    <span>60-Day Risk-Free Trial (Cancel Anytime)</span>
+                </div>
+                <div class="value-price">Value: $2,000</div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-description">
+                    <span class="check">✓</span>
+                    <span>Zero Setup or Transition Fees</span>
+                </div>
+                <div class="value-price">Value: $500</div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-description">
+                    <span class="check">✓</span>
+                    <span>24/7 Emergency Response</span>
+                </div>
+                <div class="value-price">Value: $1,200/yr</div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-description">
+                    <span class="check">✓</span>
+                    <span>CAM, CMCA, AMS Certified Team</span>
+                </div>
+                <div class="value-price">Value: Priceless</div>
+            </div>
+            
+            <div class="value-item">
+                <div class="value-description">
+                    <span>Total Value:</span>
+                </div>
+                <div class="value-price">
+                    <span class="crossed">$12,700+</span> Your Cost: $0 to Switch
+                </div>
+            </div>
+        </div>
+        
+        <!-- Calculator Section -->
+        <div class="calculator-section">
+            <div class="calculator">
+                <h2>Calculate Your Exact Savings</h2>
+                
+                <div class="calc-input">
+                    <label>Your Current Monthly Management Fee:</label>
+                    <input type="number" id="currentFee" placeholder="$1,000" value="1000">
+                </div>
+                
+                <div class="calc-input">
+                    <label>Number of Units in Your Property:</label>
+                    <input type="number" id="unitCount" placeholder="50" value="50">
+                </div>
+                
+                <button onclick="calculateSavings()" style="width: 100%; padding: 15px; background: #4CAF50; color: white; border: none; border-radius: 5px; font-size: 18px; font-weight: bold; cursor: pointer;">
+                    Calculate My Savings
+                </button>
+                
+                <div class="savings-display" id="savingsDisplay" style="display: none;">
+                    <div>Your 2-Year Savings:</div>
+                    <div class="savings-amount" id="totalSavings">$9,000</div>
+                    <div>That's <span id="monthsFreee">9</span> months of FREE management!</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Testimonials -->
+        <div class="testimonials">
+            <h2>Join 2,450+ Happy Units</h2>
+            
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "Switched from All County and saved $8,000 in the first year. Response time went from 45 minutes to 5 minutes."
+                    </div>
+                    <div class="testimonial-author">- Wilmette Terrace HOA</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "The 60-day trial made it risk-free. Within 2 weeks, we knew we made the right choice. Incredible service!"
+                    </div>
+                    <div class="testimonial-author">- Northbrook Condos</div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="stars">★★★★★</div>
+                    <div class="testimonial-text">
+                        "First company in 10 years that actually answers the phone. The savings are great, but the service is even better."
+                    </div>
+                    <div class="testimonial-author">- Highland Park Estates</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- FAQ Section -->
+        <div class="faq-section">
+            <div class="faq">
+                <h2>Common Questions</h2>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        What if we're locked in a contract?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We'll review your current contract for free. 90% of contracts have exit clauses for poor performance or allow 30-60 day termination. We'll help you navigate this at no cost.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Will switching disrupt our operations?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Zero disruption guaranteed. We handle the entire transition behind the scenes. Your residents won't even know we've switched until they experience our superior service.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        Can we keep our current vendors?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        Absolutely! Keep all your trusted vendors. We'll work with your existing relationships or introduce you to our pre-screened network if you prefer. Your choice.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        What areas do you serve?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        We serve all North Shore communities from our Glenview headquarters: Wilmette, Winnetka, Northbrook, Highland Park, Evanston, Glencoe, Lake Forest, and surrounding areas. Most properties are within 5-15 minutes.
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        What's the catch?
+                        <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        No catch. We're growing our North Shore presence and willing to operate at lower margins to earn your long-term business. The 60-day cancellation means we only succeed if you're happy.
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Guarantee -->
+        <div class="guarantee">
+            <div class="guarantee-badge">🛡️</div>
+            <h3>Our Iron-Clad Guarantee</h3>
+            <p>Try us for 60 days. If you're not completely satisfied with our service or savings, cancel with no questions asked. No fees, no penalties, no hard feelings.</p>
+        </div>
+        
+        <!-- Final CTA -->
+        <div class="final-cta">
+            <h2>Ready to Cut Your Management Fees in Half?</h2>
+            <p class="final-cta-subtitle">This offer expires October 31st - Lock in your savings now</p>
+            
+            <div class="cta-button-group">
+                <a href="#quote-form" class="cta-primary">Get My Custom Quote</a>
+                <a href="tel:8476522338" class="cta-secondary">📞 (847) 652-2338</a>
+            </div>
+            
+            <p style="margin-top: 30px; font-size: 16px; opacity: 0.9;">
+                Licensed & Insured | IDFPR #291.000211<br>
+                CAM | CMCA | AMS | P.E. | In-House Accountants
+            </p>
+        </div>
+        
+        <!-- Quote Form (Hidden, for demonstration) -->
+        <div id="quote-form" style="display: none;"></div>
+    </div>
+    
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const endDate = new Date('2024-10-31T23:59:59');
+            const now = new Date();
+            const diff = endDate - now;
+            
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            
+            document.getElementById('countdown').textContent = `Ends in: ${days} days ${hours} hours`;
+        }
+        
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+        
+        // Calculator
+        function calculateSavings() {
+            const monthlyFee = parseFloat(document.getElementById('currentFee').value) || 1000;
+            const yearlyFee = monthlyFee * 12;
+            
+            const year1Savings = yearlyFee * 0.5;
+            const year2Savings = yearlyFee * 0.25;
+            const totalSavings = year1Savings + year2Savings;
+            
+            const monthsFree = Math.round(totalSavings / monthlyFee);
+            
+            document.getElementById('totalSavings').textContent = `$${totalSavings.toLocaleString()}`;
+            document.getElementById('monthsFreee').textContent = monthsFree;
+            document.getElementById('savingsDisplay').style.display = 'block';
+        }
+        
+        // FAQ Toggle
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+            const symbol = element.querySelector('span');
+            symbol.textContent = faqItem.classList.contains('active') ? '−' : '+';
+        }
+        
+        // Source tracking
+        const urlParams = new URLSearchParams(window.location.search);
+        const source = urlParams.get('from');
+        if (source) {
+            // Personalize based on source city
+            const heroTitle = document.querySelector('.hero h1');
+            if (source === 'wilmette') {
+                heroTitle.textContent = 'Wilmette: Save 50% on Property Management';
+            } else if (source === 'evanston') {
+                heroTitle.textContent = 'Evanston: Save 50% on Property Management';
+            }
+            // Track source for analytics
+            console.log('Visitor from:', source);
+        }
+    </script>
+</body>
+</html>
