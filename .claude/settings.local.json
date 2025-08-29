@@ -46,7 +46,8 @@
       "Bash(npm run:*)",
       "Bash(dir:*)",
       "Bash(node:*)",
-      "Bash(start brand-enhanced-landing.html)"
+      "Bash(start brand-enhanced-landing.html)",
+      "WebFetch(domain:manage369.com)"
     ],
     "deny": [],
     "additionalDirectories": [
