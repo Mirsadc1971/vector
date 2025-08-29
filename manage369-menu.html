@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage369 - Special Offers & Programs</title>
+    <meta name="description" content="Save 75% on property management. $500 referral program. Limited time offers for North Shore HOAs and condos.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        .contact-info {
+            text-align: right;
+        }
+        
+        .phone {
+            font-size: 24px;
+            color: #4CAF50;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            font-size: 42px;
+            color: #1e3c72;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 50px;
+        }
+        
+        /* Landing Pages Grid */
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .page-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+        
+        .page-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        
+        .page-header {
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+        }
+        
+        .page-header.offer {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+        
+        .page-header.referral {
+            background: linear-gradient(135deg, #4CAF50, #45a049);
+        }
+        
+        .page-header.brand {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+        }
+        
+        .page-header.lsa {
+            background: linear-gradient(135deg, #ffa726, #fb8c00);
+        }
+        
+        .page-title-card {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .page-badge {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+        }
+        
+        .page-body {
+            padding: 25px;
+        }
+        
+        .page-description {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        
+        .page-highlights {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+        
+        .page-highlights li {
+            padding: 8px 0;
+            color: #333;
+        }
+        
+        .page-highlights li:before {
+            content: "✓ ";
+            color: #4CAF50;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .page-link {
+            display: block;
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: background 0.3s;
+        }
+        
+        .page-link:hover {
+            background: #45a049;
+        }
+        
+        /* Alert Banner */
+        .alert-banner {
+            background: linear-gradient(90deg, #d32f2f, #b71c1c);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            border-radius: 10px;
+        }
+        
+        .alert-text {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        
+        @media (max-width: 768px) {
+            .pages-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .contact-info {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Manage369</div>
+            <div class="contact-info">
+                <a href="tel:8476522338" class="phone">📞 (847) 652-2338</a>
+                <div style="color: #666; font-size: 14px;">Glenview, IL</div>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Main Content -->
+    <div class="container">
+        <h1 class="page-title">Special Offers & Landing Pages</h1>
+        <p class="subtitle">Limited Time: Save 75% on Property Management | Earn $500 Referrals</p>
+        
+        <!-- Alert Banner -->
+        <div class="alert-banner">
+            <div class="alert-text">
+                🔥 OFFER ENDS OCTOBER 31ST - Only 10 Areas Qualify for 75% Savings
+            </div>
+        </div>
+        
+        <!-- Landing Pages Grid -->
+        <div class="pages-grid">
+            <!-- Limited Offer Landing -->
+            <div class="page-card">
+                <div class="page-header offer">
+                    <h2 class="page-title-card">75% Savings Offer</h2>
+                    <span class="page-badge">LIMITED TIME</span>
+                </div>
+                <div class="page-body">
+                    <p class="page-description">
+                        Exclusive offer for properties in 10 qualifying North Shore areas. Save 50% Year 1, 25% Year 2.
+                    </p>
+                    <ul class="page-highlights">
+                        <li>10 qualifying areas only</li>
+                        <li>75% total savings over 2 years</li>
+                        <li>60-day money-back guarantee</li>
+                        <li>Ends October 31st</li>
+                    </ul>
+                    <a href="/limited-offer-landing.html" class="page-link">
+                        View 75% Offer →
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Referral Program -->
+            <div class="page-card">
+                <div class="page-header referral">
+                    <h2 class="page-title-card">$500 Referral Program</h2>
+                    <span class="page-badge">EARN CASH</span>
+                </div>
+                <div class="page-body">
+                    <p class="page-description">
+                        Earn $500 for every HOA or Condo you refer that signs up. No limit on referrals!
+                    </p>
+                    <ul class="page-highlights">
+                        <li>$500 per successful referral</li>
+                        <li>No limit - refer 5, earn $2,500</li>
+                        <li>We do all the work</li>
+                        <li>Email: service@manage369.com</li>
+                    </ul>
+                    <a href="/referral-500-landing.html" class="page-link">
+                        Start Earning $500 →
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Brand Enhanced -->
+            <div class="page-card">
+                <div class="page-header brand">
+                    <h2 class="page-title-card">Professional Overview</h2>
+                    <span class="page-badge">FULL BRAND</span>
+                </div>
+                <div class="page-body">
+                    <p class="page-description">
+                        Complete Manage369 presentation with full credentials, certifications, and professional branding.
+                    </p>
+                    <ul class="page-highlights">
+                        <li>2,450+ units managed</li>
+                        <li>CAM, CMCA, AMS certified</li>
+                        <li>Licensed IDFPR #291.000211</li>
+                        <li>5.0★ Google rating</li>
+                    </ul>
+                    <a href="/brand-enhanced-landing.html" class="page-link">
+                        View Full Presentation →
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Master Sales Page -->
+            <div class="page-card">
+                <div class="page-header">
+                    <h2 class="page-title-card">Main Sales Funnel</h2>
+                    <span class="page-badge">CONVERSION</span>
+                </div>
+                <div class="page-body">
+                    <p class="page-description">
+                        Primary conversion page where all area pages funnel to. Includes calculator and full value stack.
+                    </p>
+                    <ul class="page-highlights">
+                        <li>Savings calculator</li>
+                        <li>Complete value proposition</li>
+                        <li>Testimonials & FAQ</li>
+                        <li>Multiple CTAs</li>
+                    </ul>
+                    <a href="/master-sales-page.html" class="page-link">
+                        View Sales Page →
+                    </a>
+                </div>
+            </div>
+            
+            <!-- LSA Northbrook -->
+            <div class="page-card">
+                <div class="page-header lsa">
+                    <h2 class="page-title-card">Northbrook LSA Landing</h2>
+                    <span class="page-badge">GOOGLE ADS</span>
+                </div>
+                <div class="page-body">
+                    <p class="page-description">
+                        Optimized landing page for Google Local Service Ads traffic from Northbrook area.
+                    </p>
+                    <ul class="page-highlights">
+                        <li>Northbrook-specific content</li>
+                        <li>5-minute response time</li>
+                        <li>Local testimonials</li>
+                        <li>Google Ads optimized</li>
+                    </ul>
+                    <a href="/lsa-landing-northbrook.html" class="page-link">
+                        View Northbrook Page →
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Quick Stats -->
+        <div style="background: white; padding: 40px; border-radius: 10px; text-align: center; margin-top: 40px;">
+            <h2 style="color: #1e3c72; margin-bottom: 30px;">Why Choose Manage369?</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px;">
+                <div>
+                    <div style="font-size: 36px; font-weight: bold; color: #4CAF50;">2,450+</div>
+                    <div style="color: #666;">Units Managed</div>
+                </div>
+                <div>
+                    <div style="font-size: 36px; font-weight: bold; color: #4CAF50;">0</div>
+                    <div style="color: #666;">Accounts Lost</div>
+                </div>
+                <div>
+                    <div style="font-size: 36px; font-weight: bold; color: #4CAF50;">5.0★</div>
+                    <div style="color: #666;">Google Rating</div>
+                </div>
+                <div>
+                    <div style="font-size: 36px; font-weight: bold; color: #4CAF50;">24/7</div>
+                    <div style="color: #666;">Support</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>Manage369 Property Management</h3>
+        <p>1400 Patriot Blvd #357, Glenview, IL 60026</p>
+        <p>Phone: (847) 652-2338 | Email: service@manage369.com</p>
+        <p style="margin-top: 20px; font-size: 14px;">
+            Licensed & Insured | IDFPR #291.000211
+        </p>
+    </footer>
+</body>
+</html>

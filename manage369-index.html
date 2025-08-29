@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage369 Property Management | North Shore HOA & Condo Management</title>
+    <meta name="description" content="Save 75% on property management. Professional HOA and condo management for North Shore communities. 2,450 units managed. Call (847) 652-2338.">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        /* Header */
+        .header {
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        .nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .nav a:hover {
+            color: #1e3c72;
+        }
+        
+        .offer-btn {
+            background: linear-gradient(135deg, #ff6b6b, #d32f2f);
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .phone-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        
+        .hero-subtitle {
+            font-size: 24px;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+        
+        .hero-cta {
+            display: inline-block;
+            background: #ffeb3b;
+            color: #333;
+            padding: 20px 50px;
+            font-size: 24px;
+            font-weight: bold;
+            border-radius: 50px;
+            text-decoration: none;
+            margin: 10px;
+        }
+        
+        /* Inverted Silo Structure - Regional Hubs */
+        .regional-hubs {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+        
+        .hub-title {
+            text-align: center;
+            font-size: 36px;
+            color: #1e3c72;
+            margin-bottom: 40px;
+        }
+        
+        .hubs-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .hub-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+        
+        .hub-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .hub-name {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e3c72;
+            margin-bottom: 15px;
+        }
+        
+        .hub-areas {
+            color: #666;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        
+        .hub-link {
+            display: inline-block;
+            background: #1e3c72;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        
+        /* 10 Qualifying Areas Section */
+        .qualifying-areas {
+            padding: 60px 20px;
+            background: white;
+        }
+        
+        .areas-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .area-card {
+            background: white;
+            border: 2px solid #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            position: relative;
+        }
+        
+        .area-number {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #4CAF50;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .area-name {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+        
+        .area-link {
+            color: #4CAF50;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        /* Special Offer Banner */
+        .offer-banner {
+            background: linear-gradient(90deg, #d32f2f, #b71c1c);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+        .offer-text {
+            font-size: 32px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .offer-details {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        
+        /* Credentials */
+        .credentials {
+            padding: 60px 20px;
+            background: #f8f9fa;
+        }
+        
+        .cred-grid {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            text-align: center;
+        }
+        
+        .cred-item {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        .cred-value {
+            font-size: 36px;
+            font-weight: bold;
+            color: #1e3c72;
+        }
+        
+        .cred-label {
+            color: #666;
+            margin-top: 10px;
+        }
+        
+        /* Footer */
+        .footer {
+            background: #1e3c72;
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">Manage369</div>
+            <nav class="nav">
+                <a href="#regions">Service Areas</a>
+                <a href="#services">Services</a>
+                <a href="/limited-offer-landing.html" class="offer-btn">🔥 75% OFF</a>
+                <a href="/referral-500-landing.html">Earn $500</a>
+                <a href="tel:8476522338" class="phone-btn">📞 (847) 652-2338</a>
+            </nav>
+        </div>
+    </header>
+    
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>North Shore's Premier Property Management</h1>
+        <p class="hero-subtitle">Professional HOA & Condo Management from Glenview</p>
+        <div style="margin-top: 30px;">
+            <a href="/limited-offer-landing.html" class="hero-cta">Save 75% - Limited Time</a>
+            <a href="/referral-500-landing.html" class="hero-cta" style="background: #4CAF50; color: white;">Earn $500 Referrals</a>
+        </div>
+    </section>
+    
+    <!-- Special Offer Banner -->
+    <section class="offer-banner">
+        <div class="offer-text">🔥 LIMITED TIME: Save 75% on Management Fees</div>
+        <div class="offer-details">50% OFF Year 1 | 25% OFF Year 2 | Ends October 31st</div>
+        <a href="/limited-offer-landing.html" style="display: inline-block; background: white; color: #d32f2f; padding: 15px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 20px;">
+            See If You Qualify →
+        </a>
+    </section>
+    
+    <!-- INVERTED SILO: Regional Hubs -->
+    <section class="regional-hubs" id="regions">
+        <h2 class="hub-title">Service Areas - North Shore Communities</h2>
+        <div class="hubs-grid">
+            <!-- North Suburbs Hub -->
+            <div class="hub-card">
+                <h3 class="hub-name">North Suburbs</h3>
+                <p class="hub-areas">
+                    Wilmette • Winnetka<br>
+                    Kenilworth • Evanston
+                </p>
+                <p style="color: #4CAF50; font-weight: bold; margin-bottom: 15px;">
+                    10-15 min from office
+                </p>
+                <a href="#north-suburbs" class="hub-link">View Areas →</a>
+            </div>
+            
+            <!-- Northwest Suburbs Hub -->
+            <div class="hub-card">
+                <h3 class="hub-name">Northwest Suburbs</h3>
+                <p class="hub-areas">
+                    Glenview • Northbrook<br>
+                    Golf • Morton Grove • Niles
+                </p>
+                <p style="color: #4CAF50; font-weight: bold; margin-bottom: 15px;">
+                    0-8 min from office
+                </p>
+                <a href="#northwest-suburbs" class="hub-link">View Areas →</a>
+            </div>
+            
+            <!-- Lake County Hub -->
+            <div class="hub-card">
+                <h3 class="hub-name">Lake County</h3>
+                <p class="hub-areas">
+                    Highland Park • Lake Forest<br>
+                    Deerfield • Glencoe
+                </p>
+                <p style="color: #4CAF50; font-weight: bold; margin-bottom: 15px;">
+                    15-20 min from office
+                </p>
+                <a href="#lake-county" class="hub-link">View Areas →</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- 10 Qualifying Areas -->
+    <section class="qualifying-areas">
+        <h2 style="text-align: center; font-size: 36px; color: #1e3c72; margin-bottom: 40px;">
+            🎯 10 Areas Qualify for 75% Savings
+        </h2>
+        <div class="areas-grid">
+            <div class="area-card">
+                <div class="area-number">1</div>
+                <div class="area-name">Northbrook</div>
+                <a href="/property-management-northbrook" class="area-link">Learn More →</a>
+            </div>
+            <div class="area-card">
+                <div class="area-number">2</div>
+                <div class="area-name">Golf</div>
+                <a href="/property-management-golf" class="area-link">Learn More →</a>
+            </div>
+            <div class="area-card">
+                <div class="area-number">3</div>
+                <div class="area-name">Morton Grove</div>
+                <a href="/property-management-morton-grove" class="area-link">Learn More →</a>
+            </div>
+            <div class="area-card">
+                <div class="area-number">4</div>
+                <div class="area-name">Niles</div>
+                <a href="/property-management-niles" class="area-link">Learn More →</a>
+            </div>
+            <div class="area-card">
+                <div class="area-number">5</div>
+                <div class="area-name">Wilmette</div>
+                <a href="/property-management-wilmette" class="area-link">Learn More →</a>
+            </div>
+            <div class="area-card">
+                <div class="area-number">6</div>
+                <div class="area-name">Skokie</div>
+                <a href="/property-management-skokie" class="area-link">Learn More →</a>
+            </div>
+            <div class="area-card">
+                <div class="area-number">7</div>
+                <div class="area-name">Des Plaines</div>
+                <a href="/property-management-des-plaines" class="area-link">Learn More →</a>
+            </div>
+            <div class="area-card">
+                <div class="area-number">8</div>
+                <div class="area-name">Winnetka</div>
+                <a href="/property-management-winnetka" class="area-link">Learn More →</a>
+            </div>
+            <div class="area-card">
+                <div class="area-number">9</div>
+                <div class="area-name">Glencoe</div>
+                <a href="/property-management-glencoe" class="area-link">Learn More →</a>
+            </div>
+            <div class="area-card">
+                <div class="area-number">10</div>
+                <div class="area-name">Highland Park</div>
+                <a href="/property-management-highland-park" class="area-link">Learn More →</a>
+            </div>
+        </div>
+        <div style="text-align: center; margin-top: 40px;">
+            <a href="/limited-offer-landing.html" style="display: inline-block; background: #4CAF50; color: white; padding: 20px 50px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 24px;">
+                Check If Your Area Qualifies →
+            </a>
+        </div>
+    </section>
+    
+    <!-- Credentials -->
+    <section class="credentials">
+        <h2 style="text-align: center; font-size: 36px; color: #1e3c72; margin-bottom: 40px;">
+            Why Properties Choose Manage369
+        </h2>
+        <div class="cred-grid">
+            <div class="cred-item">
+                <div class="cred-value">2,450+</div>
+                <div class="cred-label">Units Managed</div>
+            </div>
+            <div class="cred-item">
+                <div class="cred-value">5.0★</div>
+                <div class="cred-label">Google Rating</div>
+            </div>
+            <div class="cred-item">
+                <div class="cred-value">0</div>
+                <div class="cred-label">Accounts Lost</div>
+            </div>
+            <div class="cred-item">
+                <div class="cred-value">24/7</div>
+                <div class="cred-label">Emergency Support</div>
+            </div>
+            <div class="cred-item">
+                <div class="cred-value">60 Days</div>
+                <div class="cred-label">Risk-Free Trial</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <h3>Manage369 Property Management</h3>
+        <p>1400 Patriot Blvd #357, Glenview, IL 60026</p>
+        <p>Phone: (847) 652-2338 | Email: service@manage369.com</p>
+        <p style="margin-top: 20px;">
+            Licensed IDFPR #291.000211 | CAM | CMCA | AMS | P.E.
+        </p>
+    </footer>
+</body>
+</html>
