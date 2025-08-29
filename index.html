@@ -1398,6 +1398,99 @@
         </div>
     </section>
     
+    <!-- Special Offers Section -->
+    <section style="background: #f8f9fa; padding: 3rem 1.5rem;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="font-size: 2rem; font-weight: 700; text-align: center; color: #2c3e50; margin-bottom: 2rem;">
+                Limited-Time Savings for Select North Shore Communities
+            </h2>
+            
+            <!-- Countdown Timer -->
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="display: inline-block; background: white; padding: 1rem 2rem; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+                    <span style="color: #6b7280; font-size: 0.9rem;">Offer Expires:</span>
+                    <div id="countdown" style="font-size: 1.5rem; font-weight: 600; color: #1e3a8a; margin-top: 0.5rem;">
+                        <span id="days">00</span>d : 
+                        <span id="hours">00</span>h : 
+                        <span id="minutes">00</span>m : 
+                        <span id="seconds">00</span>s
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; max-width: 900px; margin: 0 auto;">
+                
+                <!-- Offer 1 -->
+                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">
+                        Save 75% on Management Fees
+                    </h3>
+                    <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1rem;">
+                        Valid Aug 28 – Oct 31, 2025 · Don't miss out
+                    </p>
+                    <p style="color: #4b5563; margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">
+                        Switch to Manage369 and lock in significant savings for your HOA, condominium, or townhome:<br>
+                        <strong>1st Year: 50% Off · 2nd Year: 25% Off · 3rd Year: Standard Fee</strong>
+                    </p>
+                    <p style="color: #6b7280; font-size: 0.8rem; margin-bottom: 1rem;">
+                        Licensed & insured · IDFPR License 291.000211 · 2,450 units managed
+                    </p>
+                    <a href="#consultation-form" style="color: #1e3a8a; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Learn More <span style="margin-left: 0.5rem;">→</span>
+                    </a>
+                </div>
+
+                <!-- Offer 2 -->
+                <div style="background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 2rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05); transition: box-shadow 0.3s ease;" onmouseover="this.style.boxShadow='0 4px 12px rgba(0,0,0,0.1)'" onmouseout="this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
+                    <h3 style="font-size: 1.3rem; font-weight: 600; color: #2c3e50; margin-bottom: 0.5rem;">
+                        $500 Referral + 75% Savings
+                    </h3>
+                    <p style="color: #6b7280; font-size: 0.9rem; margin-bottom: 1rem;">
+                        Valid Aug 28 – Oct 31, 2025 · Limited availability
+                    </p>
+                    <p style="color: #4b5563; margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6;">
+                        Refer a property and receive $500 when they sign. Plus, they get the same 75% savings over 2 years.<br>
+                        <strong>You Get: $500 · They Get: 75% Total Savings</strong>
+                    </p>
+                    <p style="color: #6b7280; font-size: 0.8rem; margin-bottom: 1rem;">
+                        No limit on referrals · Payment within 30 days of contract signing
+                    </p>
+                    <a href="#consultation-form" style="color: #1e3a8a; font-weight: 500; text-decoration: none; display: inline-flex; align-items: center;" onmouseover="this.style.textDecoration='underline'" onmouseout="this.style.textDecoration='none'">
+                        Refer Now <span style="margin-left: 0.5rem;">→</span>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Countdown Timer Script -->
+    <script>
+    function updateCountdown() {
+        const endDate = new Date('2025-10-31T20:00:00-05:00'); // October 31, 2025 at 8:00 PM CST
+        const now = new Date();
+        const diff = endDate - now;
+        
+        if (diff > 0) {
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            
+            document.getElementById('days').textContent = String(days).padStart(2, '0');
+            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+        } else {
+            document.getElementById('countdown').innerHTML = '<span style="color: #dc2626;">Offer Expired</span>';
+        }
+    }
+    
+    // Update countdown every second
+    setInterval(updateCountdown, 1000);
+    updateCountdown(); // Initial call
+    </script>
+    
     <!-- SERVICES SECTION (MOVED UP) -->
     <section style="padding: 4rem 2rem; text-align: center; background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);">
         <h2 style="margin-bottom: 1.5rem; color: #1e3a8a; font-size: 2.5rem; font-weight: 700;">Our Complete Property Management Services</h2>
