@@ -1,24 +1,23 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- PWA Support -->
-    <link rel="manifest" href="/manifest.json">
-    <meta name="mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="Manage369">
-    <link rel="apple-touch-icon" href="/images/icon-192x192.png">
-    <meta name="msapplication-TileImage" content="/images/icon-144x144.png">
-    <meta name="msapplication-TileColor" content="#1e40af">
-
-    <meta name="robots" content="index, follow">
-    <title>Chicago HOA management Services | North Shore Homeowner Association Management | Manage369</title>
-    <meta name="description" content="Chicago HOA management: covenant enforcement, architectural review, community events, board support. CAI certified, 18+ years. Call (847) 652-2338.">
-    
-    <!-- Schema Markup for HOA Services -->
-    <script type="application/ld+json">
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<!-- PWA Support -->
+<link href="/manifest.json" rel="manifest"/>
+<meta content="yes" name="mobile-web-app-capable"/>
+<meta content="yes" name="apple-mobile-web-app-capable"/>
+<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
+<meta content="Manage369" name="apple-mobile-web-app-title"/>
+<link href="/images/icon-192x192.png" rel="apple-touch-icon"/>
+<meta content="/images/icon-144x144.png" name="msapplication-TileImage"/>
+<meta content="#1e40af" name="msapplication-TileColor"/>
+<meta content="index, follow" name="robots"/>
+<title>Chicago HOA management Services | North Shore Homeowner Association Management | Manage369</title>
+<meta content="Chicago HOA management: covenant enforcement, architectural review, community events, board support. CAI certified, 18+ years. Call (847) 652-2338." name="description"/>
+<!-- Schema Markup for HOA Services -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Service",
@@ -53,9 +52,8 @@
       }
     }
     </script>
-    
-    <!-- FAQ Schema for HOA -->
-    <script type="application/ld+json">
+<!-- FAQ Schema for HOA -->
+<script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
@@ -87,9 +85,8 @@
       ]
     }
     </script>
-    
-        <link rel="stylesheet" href="../../assets/css/main.css">
-    <style>
+<link href="../../assets/css/main.css" rel="stylesheet"/>
+<style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -649,483 +646,477 @@
     }
 
 </style>
-    <link rel="canonical" href="https://www.manage369.com/services/hoa-management/">
+<link href="https://www.manage369.com/services/hoa-management/" rel="canonical"/>
 </head>
 <body>
-    <a href="#main" class="skip-link">Skip to main content</a>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="header">
+<!-- COMPANY LOGO/NAME - Edit this to change your company name -->
+<div class="logo"><a href="../../index.html" style="text-decoration: none; color: inherit;">MANAGE369</a></div>
+<!-- Mobile Menu Toggle -->
+<button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+<!-- MAIN NAVIGATION MENU - Standardized Layout -->
+<nav aria-label="Primary navigation" class="nav">
+<a class="nav-link" href="../../index.html">Home</a>
+<div class="dropdown">
+<a class="nav-link dropdown-trigger active" href="../../services.html">Services <span class="dropdown-arrow">▼</span></a>
+<div class="dropdown-content">
+<div class="dropdown-section">
+<div class="dropdown-header">Property Types</div>
+<a href="../condominium-management/index.html">Condominium Management</a>
+<a href="../hoa-management/index.html">HOA Management</a>
+<a href="../townhome-management/index.html">Townhome Management</a>
+</div>
+<div class="dropdown-section">
+<div class="dropdown-header">Service Offerings</div>
+<a href="../financial-management/index.html"><a href="../../services/financial-management/" style="color: #1e40af; text-decoration: underline;">financial management</a></a>
+                        Maintenance Coordination
+<a href="../board-support/index.html">Board Support</a>
+<a href="../administrative-services/index.html">Administrative Services</a>
+<a href="../capital-project-management/index.html">Capital Project Management</a>
+<a href="../resident-relations/index.html">Resident Relations</a>
+</div>
+</div>
+</div>
+<a class="nav-link" href="../../property-management">Areas We Serve</a>
+<a class="nav-link" href="../../payment-methods.html">Pay Dues</a>
+<a class="nav-link" href="../../contact.html">Contact</a>
+</nav>
+<!-- PROFESSIONAL PHONE CTA -->
+<div class="header-cta">
+<a class="phone-button" href="tel:8476522338">Call (847) 652-2338</a>
+</div>
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+<a href="../../index.html">Home</a>
+<a href="../../services.html">Services</a>
+<a href="../../property-management">Areas We Serve</a>
+<a href="../../payment-methods.html">Pay Dues</a>
+<a href="../../contact.html">Contact</a>
+<a href="tel:8476522338" style="background: #0a58ca; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+</div>
+</header>
+<!-- Breadcrumb Navigation (Reverse Silo) -->
+<nav style="padding: 1rem 2rem; background: #f8f9fa; border-bottom: 1px solid #e5e7eb;">
+<ol style="list-style: none; display: flex; align-items: center; gap: 0.5rem; margin: 0; padding: 0; font-size: 0.9rem;">
+<li><a href="/" style="color: #1e3a8a; text-decoration: none; font-weight: 500;">Home</a></li>
+<li style="color: #6b7280;">›</li>
+<li><a href="/#services" style="color: #1e3a8a; text-decoration: none;">Services</a></li>
+<li style="color: #6b7280;">›</li>
+<li style="color: #4b5563;">Hoa Management</li>
+</ol>
+</nav>
 
-    <header class="header">
-        <!-- COMPANY LOGO/NAME - Edit this to change your company name -->
-        <div class="logo"><a href="../../index.html" style="text-decoration: none; color: inherit;">MANAGE369</a></div>
-        
-        <!-- Mobile Menu Toggle -->
-        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-        
-        <!-- MAIN NAVIGATION MENU - Standardized Layout -->
-        <nav aria-label="Primary navigation" class="nav">
-            <a href="../../index.html" class="nav-link">Home</a>
-            <div class="dropdown">
-                <a href="../../services.html" class="nav-link dropdown-trigger active">Services <span class="dropdown-arrow">▼</span></a>
-                <div class="dropdown-content">
-                    <div class="dropdown-section">
-                        <div class="dropdown-header">Property Types</div>
-                        <a href="../condominium-management/index.html">Condominium Management</a>
-                        <a href="../hoa-management/index.html">HOA Management</a>
-                        <a href="../townhome-management/index.html">Townhome Management</a>
-                    </div>
-                    <div class="dropdown-section">
-                        <div class="dropdown-header">Service Offerings</div>
-                        <a href="../financial-management/index.html"><a href="../../services/financial-management/" style="color: #1e40af; text-decoration: underline;">financial management</a></a>
-                        Maintenance Coordination</a>
-                        <a href="../board-support/index.html">Board Support</a>
-                        <a href="../administrative-services/index.html">Administrative Services</a>
-                        <a href="../capital-project-management/index.html">Capital Project Management</a>
-                        <a href="../resident-relations/index.html">Resident Relations</a>
-                    </div>
-                </div>
-            </div>
-            <a href="../../property-management" class="nav-link">Areas We Serve</a>
-            <a href="../../payment-methods.html" class="nav-link">Pay Dues</a>
-            <a href="../../contact.html" class="nav-link">Contact</a>
-        </nav>
-        
-        <!-- PROFESSIONAL PHONE CTA -->
-        <div class="header-cta">
-            <a href="tel:8476522338" class="phone-button">Call (847) 652-2338</a>
-        </div>
-        
-        <!-- Mobile Menu -->
-        <div class="mobile-menu" id="mobileMenu">
-            <a href="../../index.html">Home</a>
-            <a href="../../services.html">Services</a>
-            <a href="../../property-management">Areas We Serve</a>
-            <a href="../../payment-methods.html">Pay Dues</a>
-            <a href="../../contact.html">Contact</a>
-            <a href="tel:8476522338" style="background: #0a58ca; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
-        </div>
-    </header>
-    <nav style="padding: 1rem 2rem; background: #f8f9fa;">
-        <div style="max-width: 1200px; margin: 0 auto;">
-            <a href="../../" style="color: #666; text-decoration: none;">Home</a>
-            <span style="color: #4b5563; margin: 0 0.5rem;">›</span>
-            <a href="../../services.html" style="color: #666; text-decoration: none;">Services</a>
-            <span style="color: #4b5563; margin: 0 0.5rem;">›</span>
-            <span style="color: #1e40af;">Hoa Management</span>
-        </div>
-    </nav>
-
-
-    <section class="hero" id="main" role="main">
-        <div class="container">
-            <h1>Chicago HOA Management | North Shore Homeowner Association Services</h1>
-            <p>Expert homeowner association management for North Shore suburban communities and planned developments. CAI certified with 17+ years experience in covenant enforcement, architectural review, community events, landscaping coordination, and board governance. Serving 50+ HOA communities with proven results.</p>
-            <div class="cta-buttons">
-                <a href="../../contact.html" class="btn btn-primary">Request HOA Management Proposal</a>
-                <a href="tel:8476522338" class="btn btn-secondary">Call (847) 652-2338</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Comprehensive HOA Services</h2>
-            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">From community oversight to financial management, we handle every aspect of HOA operations.</p>
-            
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>Covenant Enforcement & Architectural Review</h3>
-                    <p>Professional enforcement of community standards and architectural guidelines to maintain property values.</p>
-                    <ul>
-                        <li>Covenant compliance monitoring</li>
-                        <li>Architectural review board support</li>
-                        <li>Violation notices and follow-up</li>
-                        <li>Design guideline enforcement</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Common Area & Amenity Management</h3>
-                    <p>Complete oversight of shared spaces, amenities, and community facilities for optimal resident experience.</p>
-                    <ul>
-                        <li>Pool and clubhouse management</li>
-                        <li>Playground and park maintenance</li>
-                        <li>Tennis court and recreation facilities</li>
-                        <li>Common area cleaning and upkeep</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Landscaping & Grounds Maintenance</h3>
-                    <p>Professional landscape management to enhance curb appeal and maintain beautiful community grounds.</p>
-                    <ul>
-                        <li>Seasonal landscaping programs</li>
-                        <li>Irrigation system management</li>
-                        <li>Tree and shrub care</li>
-                        <li>Snow removal coordination</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Community Events & Communications</h3>
-                    <p>Foster community spirit through organized events and effective resident communication programs.</p>
-                    <ul>
-                        <li>Annual meetings and social events</li>
-                        <li>Community newsletters and updates</li>
-                        <li>Resident welcome programs</li>
-                        <li>Holiday and seasonal celebrations</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>Dispute Resolution & Mediation</h3>
-                    <p>Professional conflict resolution services to maintain harmony and address resident concerns effectively.</p>
-                    <ul>
-                        <li>Neighbor dispute mediation</li>
-                        <li>Violation hearing coordination</li>
-                        <li>Complaint investigation and resolution</li>
-                        <li>Legal compliance guidance</li>
-                    </ul>
-                </div>
-                
-                <div class="service-card">
-                    <h3>HOA Board Support & Training</h3>
-                    <p>Comprehensive support for HOA boards including meeting facilitation and governance guidance.</p>
-                    <ul>
-                        <li>Board meeting preparation and minutes</li>
-                        <li>Policy development and updates</li>
-                        <li>Legal compliance training</li>
-                        <li>Strategic planning assistance</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- North Shore HOA Expertise Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">North Shore HOA Management Expertise</h2>
-            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Specialized knowledge of North Shore suburban communities, planned developments, and homeowner association governance.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; border-left: 4px solid #2c5aa0;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">Planned Community Management</h3>
-                    <p style="margin-bottom: 1rem;">Expert management of planned suburban developments including single-family home communities, townhome neighborhoods, and mixed-use residential developments. We understand the unique governance needs of North Shore planned communities with their emphasis on property values, aesthetic standards, and community amenities.</p>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Glenview planned communities</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Highland Park developments</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Northbrook neighborhoods</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Lake Forest communities</li>
-                    </ul>
-                </div>
-                
-                <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; border-left: 4px solid #2c5aa0;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">Covenant Enforcement Excellence</h3>
-                    <p style="margin-bottom: 1rem;">Professional covenant enforcement that maintains community standards while fostering positive neighbor relationships. Our approach balances strict adherence to community guidelines with diplomatic communication and fair enforcement procedures that protect property values.</p>
-                    <ul style="list-style: none; padding-left: 0;">
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Architectural guideline enforcement</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Landscaping standard monitoring</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Property maintenance compliance</li>
-                        <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Fair violation procedures</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOA Success Stories Section -->
-    <section class="section" style="background: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">HOA Management Success Stories</h2>
-            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Proven results from our North Shore homeowner association management partnerships.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Glenview Community Revitalization</h3>
-                    <p style="margin-bottom: 1rem;">Transformed a 120-home Glenview community from compliance issues to a model neighborhood. Implemented fair covenant enforcement, upgraded common areas, and restored community pride while increasing property values.</p>
-                    <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <strong style="color: #2c5aa0;">Community Improvements:</strong><br>
-                        • 85% increase in covenant compliance<br>
-                        • $350,000 amenity center renovation<br>
-                        • 12% average property value increase<br>
+<!-- Breadcrumb Navigation (Reverse Silo) -->
+<nav style="padding: 1rem 2rem; background: #f8f9fa; border-bottom: 1px solid #e5e7eb;">
+<ol style="list-style: none; display: flex; align-items: center; gap: 0.5rem; margin: 0; padding: 0; font-size: 0.9rem;">
+<li><a href="/" style="color: #1e3a8a; text-decoration: none; font-weight: 500;">Home</a></li>
+<li style="color: #6b7280;">›</li>
+<li><a href="/#services" style="color: #1e3a8a; text-decoration: none;">Services</a></li>
+<li style="color: #6b7280;">›</li>
+<li style="color: #4b5563;">Hoa Management</li>
+</ol>
+</nav>
+<!-- Breadcrumb Navigation (Reverse Silo) -->
+<nav style="padding: 1rem 2rem; background: #f8f9fa; border-bottom: 1px solid #e5e7eb;">
+<ol style="list-style: none; display: flex; align-items: center; gap: 0.5rem; margin: 0; padding: 0; font-size: 0.9rem;">
+<li><a href="/" style="color: #1e3a8a; text-decoration: none; font-weight: 500;">Home</a></li>
+<li style="color: #6b7280;">›</li>
+<li><a href="/#services" style="color: #1e3a8a; text-decoration: none;">Services</a></li>
+<li style="color: #6b7280;">›</li>
+<li style="color: #4b5563;">Hoa Management</li>
+</ol>
+</nav>
+<nav style="padding: 1rem 2rem; background: #f8f9fa;">
+<div style="max-width: 1200px; margin: 0 auto;">
+<a href="../../" style="color: #666; text-decoration: none;">Home</a>
+<span style="color: #4b5563; margin: 0 0.5rem;">›</span>
+<a href="../../services.html" style="color: #666; text-decoration: none;">Services</a>
+<span style="color: #4b5563; margin: 0 0.5rem;">›</span>
+<span style="color: #1e40af;">Hoa Management</span>
+</div>
+</nav>
+<section class="hero" id="main" role="main">
+<div class="container">
+<h1>Chicago HOA Management | North Shore Homeowner Association Services</h1>
+<p>Expert homeowner association management for North Shore suburban communities and planned developments. CAI certified with 17+ years experience in covenant enforcement, architectural review, community events, landscaping coordination, and board governance. Serving 50+ HOA communities with proven results.</p>
+<div class="cta-buttons">
+<a class="btn btn-primary" href="../../contact.html">Request HOA Management Proposal</a>
+<a class="btn btn-secondary" href="tel:8476522338">Call (847) 652-2338</a>
+</div>
+</div>
+</section>
+<section class="section">
+<div class="container">
+<h2 class="section-title">Comprehensive HOA Services</h2>
+<p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">From community oversight to financial management, we handle every aspect of HOA operations.</p>
+<div class="services-grid">
+<div class="service-card">
+<h3>Covenant Enforcement &amp; Architectural Review</h3>
+<p>Professional enforcement of community standards and architectural guidelines to maintain property values.</p>
+<ul>
+<li>Covenant compliance monitoring</li>
+<li>Architectural review board support</li>
+<li>Violation notices and follow-up</li>
+<li>Design guideline enforcement</li>
+</ul>
+</div>
+<div class="service-card">
+<h3>Common Area &amp; Amenity Management</h3>
+<p>Complete oversight of shared spaces, amenities, and community facilities for optimal resident experience.</p>
+<ul>
+<li>Pool and clubhouse management</li>
+<li>Playground and park maintenance</li>
+<li>Tennis court and recreation facilities</li>
+<li>Common area cleaning and upkeep</li>
+</ul>
+</div>
+<div class="service-card">
+<h3>Landscaping &amp; Grounds Maintenance</h3>
+<p>Professional landscape management to enhance curb appeal and maintain beautiful community grounds.</p>
+<ul>
+<li>Seasonal landscaping programs</li>
+<li>Irrigation system management</li>
+<li>Tree and shrub care</li>
+<li>Snow removal coordination</li>
+</ul>
+</div>
+<div class="service-card">
+<h3>Community Events &amp; Communications</h3>
+<p>Foster community spirit through organized events and effective resident communication programs.</p>
+<ul>
+<li>Annual meetings and social events</li>
+<li>Community newsletters and updates</li>
+<li>Resident welcome programs</li>
+<li>Holiday and seasonal celebrations</li>
+</ul>
+</div>
+<div class="service-card">
+<h3>Dispute Resolution &amp; Mediation</h3>
+<p>Professional conflict resolution services to maintain harmony and address resident concerns effectively.</p>
+<ul>
+<li>Neighbor dispute mediation</li>
+<li>Violation hearing coordination</li>
+<li>Complaint investigation and resolution</li>
+<li>Legal compliance guidance</li>
+</ul>
+</div>
+<div class="service-card">
+<h3>HOA Board Support &amp; Training</h3>
+<p>Comprehensive support for HOA boards including meeting facilitation and governance guidance.</p>
+<ul>
+<li>Board meeting preparation and minutes</li>
+<li>Policy development and updates</li>
+<li>Legal compliance training</li>
+<li>Strategic planning assistance</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- North Shore HOA Expertise Section -->
+<section class="section">
+<div class="container">
+<h2 class="section-title">North Shore HOA Management Expertise</h2>
+<p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Specialized knowledge of North Shore suburban communities, planned developments, and homeowner association governance.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; border-left: 4px solid #2c5aa0;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">Planned Community Management</h3>
+<p style="margin-bottom: 1rem;">Expert management of planned suburban developments including single-family home communities, townhome neighborhoods, and mixed-use residential developments. We understand the unique governance needs of North Shore planned communities with their emphasis on property values, aesthetic standards, and community amenities.</p>
+<ul style="list-style: none; padding-left: 0;">
+<li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Glenview planned communities</li>
+<li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Highland Park developments</li>
+<li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Northbrook neighborhoods</li>
+<li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Lake Forest communities</li>
+</ul>
+</div>
+<div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; border-left: 4px solid #2c5aa0;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">Covenant Enforcement Excellence</h3>
+<p style="margin-bottom: 1rem;">Professional covenant enforcement that maintains community standards while fostering positive neighbor relationships. Our approach balances strict adherence to community guidelines with diplomatic communication and fair enforcement procedures that protect property values.</p>
+<ul style="list-style: none; padding-left: 0;">
+<li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Architectural guideline enforcement</li>
+<li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Landscaping standard monitoring</li>
+<li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Property maintenance compliance</li>
+<li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Fair violation procedures</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- HOA Success Stories Section -->
+<section class="section" style="background: #f8f9fa;">
+<div class="container">
+<h2 class="section-title">HOA Management Success Stories</h2>
+<p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Proven results from our North Shore homeowner association management partnerships.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">Glenview Community Revitalization</h3>
+<p style="margin-bottom: 1rem;">Transformed a 120-home Glenview community from compliance issues to a model neighborhood. Implemented fair covenant enforcement, upgraded common areas, and restored community pride while increasing property values.</p>
+<div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+<strong style="color: #2c5aa0;">Community Improvements:</strong><br/>
+                        • 85% increase in covenant compliance<br/>
+                        • $350,000 amenity center renovation<br/>
+                        • 12% average property value increase<br/>
                         • 95% homeowner satisfaction rating
                     </div>
-                    <p style="font-style: italic; color: #666;">"The community has been transformed. Property values are up and neighbors are proud to live here again." - HOA Board President</p>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Highland Park Architectural Review Success</h3>
-                    <p style="margin-bottom: 1rem;">Streamlined architectural review process for a prestigious Highland Park development, reducing approval times while maintaining high aesthetic standards. Enhanced communication and fair review procedures.</p>
-                    <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <strong style="color: #2c5aa0;">Process Improvements:</strong><br>
-                        • 50% faster approval times<br>
-                        • 100% compliance with design guidelines<br>
-                        • Zero architectural disputes<br>
+<p style="font-style: italic; color: #666;">"The community has been transformed. Property values are up and neighbors are proud to live here again." - HOA Board President</p>
+</div>
+<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">Highland Park Architectural Review Success</h3>
+<p style="margin-bottom: 1rem;">Streamlined architectural review process for a prestigious Highland Park development, reducing approval times while maintaining high aesthetic standards. Enhanced communication and fair review procedures.</p>
+<div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+<strong style="color: #2c5aa0;">Process Improvements:</strong><br/>
+                        • 50% faster approval times<br/>
+                        • 100% compliance with design guidelines<br/>
+                        • Zero architectural disputes<br/>
                         • Enhanced digital submission process
                     </div>
-                    <p style="font-style: italic; color: #666;">"Excellent management of our architectural standards. The process is efficient and fair for all homeowners." - Architectural Review Committee Chair</p>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Lake Forest Community Events Program</h3>
-                    <p style="margin-bottom: 1rem;">Developed and managed comprehensive community events program for a Lake Forest neighborhood, fostering community spirit and increasing resident engagement through seasonal celebrations and social activities.</p>
-                    <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
-                        <strong style="color: #2c5aa0;">Event Highlights:</strong><br>
-                        • 12 annual community events<br>
-                        • 75% resident participation rate<br>
-                        • $25,000 annual events budget management<br>
+<p style="font-style: italic; color: #666;">"Excellent management of our architectural standards. The process is efficient and fair for all homeowners." - Architectural Review Committee Chair</p>
+</div>
+<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">Lake Forest Community Events Program</h3>
+<p style="margin-bottom: 1rem;">Developed and managed comprehensive community events program for a Lake Forest neighborhood, fostering community spirit and increasing resident engagement through seasonal celebrations and social activities.</p>
+<div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+<strong style="color: #2c5aa0;">Event Highlights:</strong><br/>
+                        • 12 annual community events<br/>
+                        • 75% resident participation rate<br/>
+                        • $25,000 annual events budget management<br/>
                         • Enhanced community newsletter program
                     </div>
-                    <p style="font-style: italic; color: #666;">"The community events have brought neighbors together. Our HOA feels like a real community now." - Resident Activities Committee</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HOA Services Deep Dive Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Comprehensive HOA Management Services</h2>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="width: 80px; height: 80px; background: #2c5aa0; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">🏡</div>
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Property Value Protection</h3>
-                    <p>Proactive covenant enforcement and architectural oversight to maintain and enhance property values throughout your community.</p>
-                </div>
-                
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="width: 80px; height: 80px; background: #9a3412; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">🌿</div>
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Landscaping Coordination</h3>
-                    <p>Professional landscaping management with seasonal programs, irrigation oversight, and contractor coordination for beautiful common areas.</p>
-                </div>
-                
-                <div style="text-align: center; padding: 2rem;">
-                    <div style="width: 80px; height: 80px; background: #2c5aa0; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">🎉</div>
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Community Building</h3>
-                    <p>Organized community events, resident communications, and programs that foster neighborhood spirit and resident satisfaction.</p>
-                </div>
-            </div>
-            
-            <div style="background: linear-gradient(135deg, rgba(44, 90, 160, 0.05), rgba(255, 107, 53, 0.05)); padding: 3rem; border-radius: 15px;">
-                <h3 style="color: #2c5aa0; text-align: center; font-size: 2rem; margin-bottom: 2rem;">Our HOA Management Approach</h3>
-                <div class="process-grid">
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: #2c5aa0; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">1</div>
-                        <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Community Analysis</h4>
-                        <p>Thorough evaluation of community needs, governance documents, and resident priorities</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: #9a3412; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
-                        <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Customized Management Plan</h4>
-                        <p>Tailored services addressing your community's unique characteristics and board objectives</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: #2c5aa0; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">3</div>
-                        <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Implementation & Communication</h4>
-                        <p>Professional implementation with transparent communication to board and residents</p>
-                    </div>
-                    <div style="text-align: center;">
-                        <div style="width: 60px; height: 60px; background: #9a3412; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
-                        <h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Continuous Improvement</h4>
-                        <p>Ongoing monitoring, feedback incorporation, and service enhancement for optimal results</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section" style="background: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">Frequently Asked Questions - HOA Management</h2>
-            <div style="max-width: 800px; margin: 0 auto;">
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What areas do you serve for HOA management?</h3>
-                    <p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We provide HOA management services throughout North Shore suburbs including Glenview, Northbrook, Highland Park, Lake Forest, Wilmette, Winnetka, Glencoe, Evanston, Buffalo Grove, Deerfield, and 20+ other suburban communities.</p>
-                </div>
-                
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">How do you handle covenant enforcement?</h3>
-                    <p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We provide professional covenant enforcement through regular community inspections, violation notices, architectural review coordination, and follow-up procedures while maintaining positive community relationships.</p>
-                </div>
-                
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What makes your HOA management different?</h3>
-                    <p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We specialize in suburban planned communities with expertise in landscaping coordination, amenity management, community events, architectural guidelines, and maintaining property values through proactive community oversight.</p>
-                </div>
-                
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What is included in your HOA management fees?</h3>
-                    <p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Our comprehensive HOA management includes board meeting support, covenant enforcement, architectural review coordination, vendor management, landscaping oversight, financial reporting, and resident communications. Transparent pricing with no hidden costs.</p>
-                </div>
-                
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">How do you coordinate landscaping and grounds maintenance?</h3>
-                    <p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We manage seasonal landscaping programs, coordinate with certified contractors, oversee irrigation systems, and ensure common areas maintain the high standards expected in North Shore communities.</p>
-                </div>
-                
-                <div style="margin-bottom: 2rem;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">Can you help organize community events?</h3>
-                    <p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Yes, we coordinate community events including seasonal celebrations, resident meetings, social activities, and special programs that build community spirit and enhance the neighborhood living experience.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Our Complete Services Section -->
-    <section class="section">
-        <div class="container">
-            <h2 class="section-title">Our Complete HOA Management Services</h2>
-            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional homeowner association management integrated with our comprehensive North Shore property management and emergency property management Chicago service offerings.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">💰 Financial Management</h3>
-                    <p style="margin-bottom: 1.5rem;">Comprehensive financial oversight with North Shore property management expertise and emergency financial management Chicago capabilities for homeowner associations.</p>
-                    <a href="/services/financial-management/" class="btn btn-secondary">Explore Financial Services →</a>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">🔧 Maintenance Coordination</h3>
-                    <p style="margin-bottom: 1.5rem;">Comprehensive maintenance management with emergency response capabilities for HOA common areas, landscaping, and community amenities.</p>
-                    <a href="/services/maintenance-coordination/" class="btn btn-secondary">Explore Maintenance Services →</a>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">👥 Board Support Services</h3>
-                    <p style="margin-bottom: 1.5rem;">Expert HOA board support and governance assistance with North Shore property management expertise and emergency decision-making support for homeowner associations.</p>
-                    <a href="/services/board-support/" class="btn btn-secondary">Discover Board Support →</a>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">📋 Administrative Services</h3>
-                    <p style="margin-bottom: 1.5rem;">Complete administrative management with integrated reporting and emergency communication protocols for Chicago and North Shore HOA properties.</p>
-                    <a href="/services/administrative-services/" class="btn btn-secondary">Learn About Administration →</a>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">🏗️ Capital Project Management</h3>
-                    <p style="margin-bottom: 1.5rem;">Expert capital project coordination for HOA communities with comprehensive management and emergency project funding solutions for major community improvements.</p>
-                    <a href="/services/capital-project-management/" class="btn btn-secondary">View Capital Projects →</a>
-                </div>
-                
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
-                    <h3 style="color: #2c5aa0; margin-bottom: 1rem;">🤝 Resident Relations</h3>
-                    <p style="margin-bottom: 1.5rem;">Professional homeowner communication and relationship management with integrated transparency and emergency communication protocols for HOA communities.</p>
-                    <a href="/services/resident-relations/" class="btn btn-secondary">Explore Resident Services →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Areas Served Section -->
-    <section class="section" style="background: #f8f9fa;">
-        <div class="container">
-            <h2 class="section-title">HOA Communities We Serve</h2>
-            <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional North Shore property management HOA services with emergency property management Chicago capabilities available throughout Chicago and the North Shore suburbs.</p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-                <a href="../../property-management-glenview.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Glenview HOA Management</a>
-                <a href="../../property-management-northbrook.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Northbrook HOA Management</a>
-                <a href="../../property-management-highland-park.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Highland Park HOA Management</a>
-                <a href="../../property-management-lake-forest.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lake Forest HOA Management</a>
-                <a href="../../property-management-wilmette.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Wilmette HOA Management</a>
-                <a href="../../property-management-winnetka.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Winnetka HOA Management</a>
-                <a href="../../property-management-glencoe.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Glencoe HOA Management</a>
-                <a href="../../property-management-evanston.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Evanston HOA Management</a>
-                <a href="../../property-management-kenilworth.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Kenilworth HOA Management</a>
-                <a href="../../property-management-highwood.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Highwood HOA Management</a>
-                <a href="../../property-management-lake-bluff.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lake Bluff HOA Management</a>
-                <a href="../../property-management-deerfield.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Deerfield HOA Management</a>
-                <a href="../../property-management-libertyville.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Libertyville HOA Management</a>
-                <a href="../../property-management-lincolnshire.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lincolnshire HOA Management</a>
-                <a href="../../property-management-mundelein.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Mundelein HOA Management</a>
-                <a href="../../property-management-park-ridge.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Park Ridge HOA Management</a>
-                <a href="../../property-management-skokie.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Skokie HOA Management</a>
-                <a href="../../property-management-wheeling.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Wheeling HOA Management</a>
-                <a href="../../property-management-buffalo-grove.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Buffalo Grove HOA Management</a>
-                <a href="../../property-management-vernon-hills.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Vernon Hills HOA Management</a>
-                <a href="../../property-management-hawthorn-woods.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Hawthorn Woods HOA Management</a>
-                <a href="../../property-management-long-grove.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Long Grove HOA Management</a>
-                <a href="../../property-management-kildeer.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Kildeer HOA Management</a>
-                <a href="../../property-management-lake-zurich.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lake Zurich HOA Management</a>
-                <a href="../../property-management-gold-coast.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Gold Coast HOA Management</a>
-                <a href="../../property-management-river-north.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">River North HOA Management</a>
-                <a href="../../property-management-streeterville.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Streeterville HOA Management</a>
-                <a href="../../property-management-lincoln-park.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lincoln Park HOA Management</a>
-                <a href="../../property-management-lakeview.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lakeview HOA Management</a>
-                <a href="../../property-management-old-town.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Old Town HOA Management</a>
-                <a href="../../property-management-the-loop.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">The Loop HOA Management</a>
-                <a href="../../property-management-south-loop.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">South Loop HOA Management</a>
-                <a href="../../property-management-west-loop.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">West Loop HOA Management</a>
-                <a href="../../property-management-uptown.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Uptown HOA Management</a>
-                <a href="../../property-management-edgewater.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Edgewater HOA Management</a>
-                <a href="../../property-management-andersonville.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Andersonville HOA Management</a>
-                <a href="../../property-management-rogers-park.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Rogers Park HOA Management</a>
-                <a href="../../property-management-logan-square.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Logan Square HOA Management</a>
-                <a href="../../property-management-bucktown.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Bucktown HOA Management</a>
-                <a href="../../property-management-north-center.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">North Center HOA Management</a>
-                <a href="../../property-management-lincoln-square.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Lincoln Square HOA Management</a>
-                <a href="../../property-management-downtown-chicago.html" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">Downtown Chicago HOA Management</a>
-            </div>
-            
-            <div style="text-align: center;">
-                <a href="../../property-management" class="btn btn-secondary">View All Areas We Serve</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section style="background: linear-gradient(135deg, #ea580c, #e55a2b); color: white; text-align: center; padding: 60px 0;">
-        <div class="container">
-            <h2 style="margin-bottom: 1rem; font-size: 2.2rem;">Ready to Enhance Your Community?</h2>
-            <p style="margin-bottom: 2rem; font-size: 1.1rem;">Join the growing number of HOA boards who trust Manage369 with their community management.</p>
-            <a href="../../contact.html" class="btn" style="background: white; color: #c4490c; border-color: white;">Get Started Today</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-        <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <!-- Company Info Column -->
-            <div class="footer-column">
-                <h3>Manage369</h3>
-                <p>1400 Patriot Boulevard 357<br>Glenview, IL 60026</p>
-                <p style="margin-top: 10px; color: #4b5563; font-weight: 500;">IDFPR Management Firm License 291.000211</p>
-                <p style="margin-top: 10px;"><strong>Phone:</strong> <a href="tel:8476522338">(847) 652-2338</a><br>
-                <strong>Email:</strong> <a href="mailto:service@manage369.com">service@manage369.com</a></p>
-            </div>
-            
-            <!-- Quick Links Column -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                <li><a href="../../property-management/">Areas We Serve</a></li>
-                <li><a href="../../blog/">Blog</a></li>
-                <li><a href="../../contact.html">Contact</a></li>
-                <li><a href="../../payment-methods.html">Payment Methods</a></li>
-                <li><a href="../../services.html">Services</a></li></ul>
-            </div>
-            
-            <!-- Resources Column -->
-            <div class="footer-column">
-                <h3>Resources</h3>
-                <ul>
-                <li><a href="../../accessibility.html">Accessibility</a></li>
-                <li><a href="../../forms.html">Forms & Documents</a></li>
-                <li><a href="../../legal-disclaimers.html">Legal Disclaimers</a></li>
-                <li><a href="../../privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="../../sitemap.html">Sitemap</a></li>
-                <li><a href="../../terms-of-service.html">Terms of Service</a></li></ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div style="text-align: center; margin-bottom: 10px; color: #4b5563; font-size: 0.9rem;">
+<p style="font-style: italic; color: #666;">"The community events have brought neighbors together. Our HOA feels like a real community now." - Resident Activities Committee</p>
+</div>
+</div>
+</div>
+</section>
+<!-- HOA Services Deep Dive Section -->
+<section class="section">
+<div class="container">
+<h2 class="section-title">Comprehensive HOA Management Services</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="text-align: center; padding: 2rem;">
+<div style="width: 80px; height: 80px; background: #2c5aa0; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">🏡</div>
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">Property Value Protection</h3>
+<p>Proactive covenant enforcement and architectural oversight to maintain and enhance property values throughout your community.</p>
+</div>
+<div style="text-align: center; padding: 2rem;">
+<div style="width: 80px; height: 80px; background: #9a3412; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">🌿</div>
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">Landscaping Coordination</h3>
+<p>Professional landscaping management with seasonal programs, irrigation oversight, and contractor coordination for beautiful common areas.</p>
+</div>
+<div style="text-align: center; padding: 2rem;">
+<div style="width: 80px; height: 80px; background: #2c5aa0; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">🎉</div>
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">Community Building</h3>
+<p>Organized community events, resident communications, and programs that foster neighborhood spirit and resident satisfaction.</p>
+</div>
+</div>
+<div style="background: linear-gradient(135deg, rgba(44, 90, 160, 0.05), rgba(255, 107, 53, 0.05)); padding: 3rem; border-radius: 15px;">
+<h3 style="color: #2c5aa0; text-align: center; font-size: 2rem; margin-bottom: 2rem;">Our HOA Management Approach</h3>
+<div class="process-grid">
+<div style="text-align: center;">
+<div style="width: 60px; height: 60px; background: #2c5aa0; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">1</div>
+<h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Community Analysis</h4>
+<p>Thorough evaluation of community needs, governance documents, and resident priorities</p>
+</div>
+<div style="text-align: center;">
+<div style="width: 60px; height: 60px; background: #9a3412; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
+<h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Customized Management Plan</h4>
+<p>Tailored services addressing your community's unique characteristics and board objectives</p>
+</div>
+<div style="text-align: center;">
+<div style="width: 60px; height: 60px; background: #2c5aa0; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">3</div>
+<h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Implementation &amp; Communication</h4>
+<p>Professional implementation with transparent communication to board and residents</p>
+</div>
+<div style="text-align: center;">
+<div style="width: 60px; height: 60px; background: #9a3412; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin: 0 auto 1rem;">4</div>
+<h4 style="color: #2c5aa0; margin-bottom: 0.5rem;">Continuous Improvement</h4>
+<p>Ongoing monitoring, feedback incorporation, and service enhancement for optimal results</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- FAQ Section -->
+<section class="section" style="background: #f8f9fa;">
+<div class="container">
+<h2 class="section-title">Frequently Asked Questions - HOA Management</h2>
+<div style="max-width: 800px; margin: 0 auto;">
+<div style="margin-bottom: 2rem;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What areas do you serve for HOA management?</h3>
+<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We provide HOA management services throughout North Shore suburbs including Glenview, Northbrook, Highland Park, Lake Forest, Wilmette, Winnetka, Glencoe, Evanston, Buffalo Grove, Deerfield, and 20+ other suburban communities.</p>
+</div>
+<div style="margin-bottom: 2rem;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">How do you handle covenant enforcement?</h3>
+<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We provide professional covenant enforcement through regular community inspections, violation notices, architectural review coordination, and follow-up procedures while maintaining positive community relationships.</p>
+</div>
+<div style="margin-bottom: 2rem;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What makes your HOA management different?</h3>
+<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We specialize in suburban planned communities with expertise in landscaping coordination, amenity management, community events, architectural guidelines, and maintaining property values through proactive community oversight.</p>
+</div>
+<div style="margin-bottom: 2rem;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What is included in your HOA management fees?</h3>
+<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Our comprehensive HOA management includes board meeting support, covenant enforcement, architectural review coordination, vendor management, landscaping oversight, financial reporting, and resident communications. Transparent pricing with no hidden costs.</p>
+</div>
+<div style="margin-bottom: 2rem;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">How do you coordinate landscaping and grounds maintenance?</h3>
+<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We manage seasonal landscaping programs, coordinate with certified contractors, oversee irrigation systems, and ensure common areas maintain the high standards expected in North Shore communities.</p>
+</div>
+<div style="margin-bottom: 2rem;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">Can you help organize community events?</h3>
+<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Yes, we coordinate community events including seasonal celebrations, resident meetings, social activities, and special programs that build community spirit and enhance the neighborhood living experience.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Our Complete Services Section -->
+<section class="section">
+<div class="container">
+<h2 class="section-title">Our Complete HOA Management Services</h2>
+<p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional homeowner association management integrated with our comprehensive North Shore property management and emergency property management Chicago service offerings.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">💰 Financial Management</h3>
+<p style="margin-bottom: 1.5rem;">Comprehensive financial oversight with North Shore property management expertise and emergency financial management Chicago capabilities for homeowner associations.</p>
+<a class="btn btn-secondary" href="/services/financial-management/">Explore Financial Services →</a>
+</div>
+<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">🔧 Maintenance Coordination</h3>
+<p style="margin-bottom: 1.5rem;">Comprehensive maintenance management with emergency response capabilities for HOA common areas, landscaping, and community amenities.</p>
+<a class="btn btn-secondary" href="/services/maintenance-coordination/">Explore Maintenance Services →</a>
+</div>
+<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">👥 Board Support Services</h3>
+<p style="margin-bottom: 1.5rem;">Expert HOA board support and governance assistance with North Shore property management expertise and emergency decision-making support for homeowner associations.</p>
+<a class="btn btn-secondary" href="/services/board-support/">Discover Board Support →</a>
+</div>
+<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">📋 Administrative Services</h3>
+<p style="margin-bottom: 1.5rem;">Complete administrative management with integrated reporting and emergency communication protocols for Chicago and North Shore HOA properties.</p>
+<a class="btn btn-secondary" href="/services/administrative-services/">Learn About Administration →</a>
+</div>
+<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">🏗️ Capital Project Management</h3>
+<p style="margin-bottom: 1.5rem;">Expert capital project coordination for HOA communities with comprehensive management and emergency project funding solutions for major community improvements.</p>
+<a class="btn btn-secondary" href="/services/capital-project-management/">View Capital Projects →</a>
+</div>
+<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<h3 style="color: #2c5aa0; margin-bottom: 1rem;">🤝 Resident Relations</h3>
+<p style="margin-bottom: 1.5rem;">Professional homeowner communication and relationship management with integrated transparency and emergency communication protocols for HOA communities.</p>
+<a class="btn btn-secondary" href="/services/resident-relations/">Explore Resident Services →</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Areas Served Section -->
+<section class="section" style="background: #f8f9fa;">
+<div class="container">
+<h2 class="section-title">HOA Communities We Serve</h2>
+<p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional North Shore property management HOA services with emergency property management Chicago capabilities available throughout Chicago and the North Shore suburbs.</p>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+<a href="../../property-management-glenview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glenview HOA Management</a>
+<a href="../../property-management-northbrook.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Northbrook HOA Management</a>
+<a href="../../property-management-highland-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highland Park HOA Management</a>
+<a href="../../property-management-lake-forest.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Forest HOA Management</a>
+<a href="../../property-management-wilmette.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wilmette HOA Management</a>
+<a href="../../property-management-winnetka.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Winnetka HOA Management</a>
+<a href="../../property-management-glencoe.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glencoe HOA Management</a>
+<a href="../../property-management-evanston.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Evanston HOA Management</a>
+<a href="../../property-management-kenilworth.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kenilworth HOA Management</a>
+<a href="../../property-management-highwood.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highwood HOA Management</a>
+<a href="../../property-management-lake-bluff.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Bluff HOA Management</a>
+<a href="../../property-management-deerfield.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Deerfield HOA Management</a>
+<a href="../../property-management-libertyville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Libertyville HOA Management</a>
+<a href="../../property-management-lincolnshire.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincolnshire HOA Management</a>
+<a href="../../property-management-mundelein.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Mundelein HOA Management</a>
+<a href="../../property-management-park-ridge.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Park Ridge HOA Management</a>
+<a href="../../property-management-skokie.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Skokie HOA Management</a>
+<a href="../../property-management-wheeling.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wheeling HOA Management</a>
+<a href="../../property-management-buffalo-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Buffalo Grove HOA Management</a>
+<a href="../../property-management-vernon-hills.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Vernon Hills HOA Management</a>
+<a href="../../property-management-hawthorn-woods.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Hawthorn Woods HOA Management</a>
+<a href="../../property-management-long-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Long Grove HOA Management</a>
+<a href="../../property-management-kildeer.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kildeer HOA Management</a>
+<a href="../../property-management-lake-zurich.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Zurich HOA Management</a>
+<a href="../../property-management-gold-coast.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Gold Coast HOA Management</a>
+<a href="../../property-management-river-north.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">River North HOA Management</a>
+<a href="../../property-management-streeterville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Streeterville HOA Management</a>
+<a href="../../property-management-lincoln-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Park HOA Management</a>
+<a href="../../property-management-lakeview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lakeview HOA Management</a>
+<a href="../../property-management-old-town.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Old Town HOA Management</a>
+<a href="../../property-management-the-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">The Loop HOA Management</a>
+<a href="../../property-management-south-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">South Loop HOA Management</a>
+<a href="../../property-management-west-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">West Loop HOA Management</a>
+<a href="../../property-management-uptown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Uptown HOA Management</a>
+<a href="../../property-management-edgewater.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Edgewater HOA Management</a>
+<a href="../../property-management-andersonville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Andersonville HOA Management</a>
+<a href="../../property-management-rogers-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Rogers Park HOA Management</a>
+<a href="../../property-management-logan-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Logan Square HOA Management</a>
+<a href="../../property-management-bucktown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Bucktown HOA Management</a>
+<a href="../../property-management-north-center.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">North Center HOA Management</a>
+<a href="../../property-management-lincoln-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Square HOA Management</a>
+<a href="../../property-management-downtown-chicago.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Downtown Chicago HOA Management</a>
+</div>
+<div style="text-align: center;">
+<a class="btn btn-secondary" href="../../property-management">View All Areas We Serve</a>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section style="background: linear-gradient(135deg, #ea580c, #e55a2b); color: white; text-align: center; padding: 60px 0;">
+<div class="container">
+<h2 style="margin-bottom: 1rem; font-size: 2.2rem;">Ready to Enhance Your Community?</h2>
+<p style="margin-bottom: 2rem; font-size: 1.1rem;">Join the growing number of HOA boards who trust Manage369 with their community management.</p>
+<a class="btn" href="../../contact.html" style="background: white; color: #c4490c; border-color: white;">Get Started Today</a>
+</div>
+</section>
+<!-- Footer -->
+<!-- Footer -->
+<footer class="site-footer">
+<div style="background: #1e3a8a; padding: 1.5rem; margin-bottom: 2rem; text-align: center; border-radius: 8px;">
+<p style="color: white; margin-bottom: 0.5rem; font-size: 1.1rem;">
+<strong>Limited Time:</strong> Save 75% on Property Management
+        </p>
+<a href="/" onmouseout="this.style.textDecoration='none'" onmouseover="this.style.textDecoration='underline'" style="color: #fbbf24; font-weight: 600; text-decoration: none;">
+            View Special Offer →
+        </a>
+</div>
+<div class="footer-content">
+<!-- Company Info Column -->
+<div class="footer-column">
+<h3>Manage369</h3>
+<p>1400 Patriot Boulevard 357<br/>Glenview, IL 60026</p>
+<p style="margin-top: 10px; color: #4b5563; font-weight: 500;">IDFPR Management Firm License 291.000211</p>
+<p style="margin-top: 10px;"><strong>Phone:</strong> <a href="tel:8476522338">(847) 652-2338</a><br/>
+<strong>Email:</strong> <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+</div>
+<!-- Quick Links Column -->
+<div class="footer-column">
+<h3>Quick Links</h3>
+<ul>
+<li><a href="../../property-management/">Areas We Serve</a></li>
+<li><a href="../../blog/">Blog</a></li>
+<li><a href="../../contact.html">Contact</a></li>
+<li><a href="../../payment-methods.html">Payment Methods</a></li>
+<li><a href="../../services.html">Services</a></li></ul>
+</div>
+<!-- Resources Column -->
+<div class="footer-column">
+<h3>Resources</h3>
+<ul>
+<li><a href="../../accessibility.html">Accessibility</a></li>
+<li><a href="../../forms.html">Forms &amp; Documents</a></li>
+<li><a href="../../legal-disclaimers.html">Legal Disclaimers</a></li>
+<li><a href="../../privacy-policy.html">Privacy Policy</a></li>
+<li><a href="../../sitemap.html">Sitemap</a></li>
+<li><a href="../../terms-of-service.html">Terms of Service</a></li></ul>
+</div>
+</div>
+<div class="footer-bottom">
+<div style="text-align: center; margin-bottom: 10px; color: #4b5563; font-size: 0.9rem;">
                 CAI National Member | IREM Certified | CCIM Designated | NAR Member | IDFPR Licensed
             </div>
-            <p style="text-align: center; color: #4b5563;">&copy; 2025 Manage369. All rights reserved.</p>
-        </div>
-    </footer>
+<p style="text-align: center; color: #4b5563;">© 2025 Manage369. All rights reserved.</p>
+</div>
+</footer>
 </body>
 </html>
