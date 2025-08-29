@@ -38,7 +38,15 @@
       "WebFetch(domain:stellarpropertygroup.com)",
       "WebFetch(domain:app.netlify.com)",
       "Bash(nslookup:*)",
-      "WebSearch"
+      "WebSearch",
+      "Bash(git remote add:*)",
+      "Bash(git branch:*)",
+      "Bash(git pull:*)",
+      "Bash(npm run dashboard:*)",
+      "Bash(npm run:*)",
+      "Bash(dir:*)",
+      "Bash(node:*)",
+      "Bash(start brand-enhanced-landing.html)"
     ],
     "deny": [],
     "additionalDirectories": [
