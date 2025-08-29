@@ -243,30 +243,44 @@
         }
         
         .cred-grid {
-            max-width: 1000px;
+            max-width: 1200px;
             margin: 0 auto;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
             text-align: center;
         }
         
         .cred-item {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            padding: 20px 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .cred-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         }
         
         .cred-value {
-            font-size: 36px;
+            font-size: 28px;
             font-weight: bold;
             color: #1e3c72;
+            line-height: 1;
         }
         
         .cred-label {
             color: #666;
-            margin-top: 10px;
+            margin-top: 8px;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 768px) {
+            .cred-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
         
         /* Footer */
