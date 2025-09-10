@@ -61,7 +61,10 @@
       "Read(C:\\c\\saas\\mapranx/**)",
       "Read(C:\\c\\saas\\mapranx/**)",
       "Read(C:\\c\\saas\\mapranx/**)",
-      "Bash(sed:*)"
+      "Bash(sed:*)",
+      "Bash(find:*)",
+      "Bash(powershell:*)",
+      "Bash(python:*)"
     ],
     "deny": [],
     "ask": [],
