@@ -1130,7 +1130,7 @@
     
     /* Premium gradient backgrounds */
     .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
                     url('images/manage369randolphstation.jpg') center/cover !important;
         position: relative;
         overflow: hidden;
@@ -1144,7 +1144,7 @@
         left: -100%;
         width: 200%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
         animation: shimmer 8s infinite;
     }
     
@@ -1155,7 +1155,7 @@
     
     /* Glass morphism effects for cards */
     .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.8) !important;
+        background: rgba(44, 62, 80, 0.7) !important;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(244, 162, 97, 0.2);
         box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
@@ -1379,6 +1379,82 @@
     
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
+    }
+
+    /* Premium Phone Number Styling */
+    .phone-button, a[href^="tel:"], a[href^="sms:"] {
+        background: #2C3E50 !important;
+        color: #F4A261 !important;
+        border: 1px solid #F4A261 !important;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
+        background: #1a252f !important;
+        color: #F1C40F !important;
+        border-color: #F1C40F !important;
+        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    /* Inline phone numbers */
+    .phone-inline {
+        color: #F4A261 !important;
+        font-weight: 600;
+    }
+
+    /* Image Visibility Fixes */
+    .hero {
+        background-blend-mode: multiply;
+    }
+    
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.3) 50%, 
+            rgba(0,0,0,0.4) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure text remains readable on lighter overlay */
+    .hero h1, .hero h2, .hero p {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+                     0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    /* Image sections should show images clearly */
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
 </style>
     
@@ -1673,7 +1749,7 @@
     
     /* Premium gradient backgrounds */
     .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
                     url('images/manage369randolphstation.jpg') center/cover !important;
         position: relative;
         overflow: hidden;
@@ -1687,7 +1763,7 @@
         left: -100%;
         width: 200%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
         animation: shimmer 8s infinite;
     }
     
@@ -1698,7 +1774,7 @@
     
     /* Glass morphism effects for cards */
     .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.8) !important;
+        background: rgba(44, 62, 80, 0.7) !important;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(244, 162, 97, 0.2);
         box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
@@ -1923,6 +1999,82 @@
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
     }
+
+    /* Premium Phone Number Styling */
+    .phone-button, a[href^="tel:"], a[href^="sms:"] {
+        background: #2C3E50 !important;
+        color: #F4A261 !important;
+        border: 1px solid #F4A261 !important;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
+        background: #1a252f !important;
+        color: #F1C40F !important;
+        border-color: #F1C40F !important;
+        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    /* Inline phone numbers */
+    .phone-inline {
+        color: #F4A261 !important;
+        font-weight: 600;
+    }
+
+    /* Image Visibility Fixes */
+    .hero {
+        background-blend-mode: multiply;
+    }
+    
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.3) 50%, 
+            rgba(0,0,0,0.4) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure text remains readable on lighter overlay */
+    .hero h1, .hero h2, .hero p {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+                     0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    /* Image sections should show images clearly */
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 </style>
     </head>
 <body>
@@ -1966,7 +2118,7 @@
         
         <!-- PROFESSIONAL PHONE CTA -->
         <div class="header-cta">
-            <a href="sms:8476522338" class="phone-button" style="background: #F4A261; color: #2C3E50;">📱 Text (847) 652-2338</a>
+            <a href="sms:8476522338" class="phone-button" style="background: #2C3E50; color: #F4A261; border: 1px solid #F4A261;">📱 Text (847) 652-2338</a>
         </div>
         
         <!-- Mobile Menu -->
@@ -1976,19 +2128,19 @@
             <a href="property-management/">Areas We Serve</a>
             <a href="pay-dues.html">Pay Dues</a>
             <a href="contact.html">Contact</a>
-            <a href="tel:8476522338" style="background: #F4A261; color: #2C3E50; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+            <a href="tel:8476522338" style="background: #2C3E50; color: #F4A261; border: 1px solid #F4A261; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
         </div>
     </header>
     
-    <section class="hero" style="background: linear-gradient(135deg, rgba(8,66,152,0.8) 0%, rgba(244,162,97,0.8) 100%), url('images/manage369randolphstation.jpg') center/cover; padding: 40px 20px 20px; text-align: center; color: white; min-height: 600px; display: flex; align-items: flex-start; justify-content: center; position: relative; overflow: hidden;" id="main" role="main">
+    <section class="hero" style="background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%), url('images/manage369randolphstation.jpg') center/cover; padding: 40px 20px 20px; text-align: center; color: white; min-height: 600px; display: flex; align-items: flex-start; justify-content: center; position: relative; overflow: hidden;" id="main" role="main">
         <div class="hero-content" style="max-width: 1200px; margin: 0 auto; margin-top: 80px;">
             <!-- SEO-OPTIMIZED H1 - Main Ranking Keyword -->
-            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #ffffff !important; text-shadow: 2px 2px 8px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5); line-height: 1.2;">
+            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #ffffff !important; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0,0,0,0.5); line-height: 1.2;">
                 <span>Manage369</span>
                 <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">Chicago & North Shore Property Management</span>
             </h1>
             <!-- Simple visible tagline -->
-            <p style="font-size: 1.3rem; color: #ffffff; margin-bottom: 2rem; font-weight: 400; text-shadow: 2px 2px 6px rgba(0,0,0,0.7);">
+            <p style="font-size: 1.3rem; color: #ffffff; margin-bottom: 2rem; font-weight: 400; text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.4);">
                 Professional Property Management
             </p>
             <!-- H2 - Secondary Keywords with Trust Focus - Visually Hidden for Cleaner Look -->
@@ -2001,7 +2153,7 @@
             </div>
             <div class="cta-buttons" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <!-- SIMPLIFIED CTAs - One for Leads, One for SEO -->
-                <a href="sms:8476522338" class="btn btn-primary" style="background: #F4A261; color: #2C3E50; border: 2px solid #F4A261; padding: 18px 36px; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.3s ease;" onmouseover="this.style.background='#F1C40F'; this.style.borderColor='#F1C40F'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#F4A261'; this.style.borderColor='#F4A261'; this.style.transform='translateY(0)';">
+                <a href="sms:8476522338" class="btn btn-primary" style="background: #2C3E50; color: #F4A261; border: 1px solid #F4A261; border: 2px solid #F4A261; padding: 18px 36px; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.3s ease;" onmouseover="this.style.background='#F1C40F'; this.style.borderColor='#F1C40F'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#F4A261'; this.style.borderColor='#F4A261'; this.style.transform='translateY(0)';">
                     Request a Consultation
                 </a>
                 <a href="property-management/" class="btn btn-secondary" style="background: transparent; color: #ffffff; border: 2px solid rgba(255,255,255,0.9); padding: 18px 36px; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='#ffffff'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.9)'; this.style.transform='translateY(0)';">
@@ -2449,7 +2601,7 @@
     
     /* Premium gradient backgrounds */
     .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
                     url('images/manage369randolphstation.jpg') center/cover !important;
         position: relative;
         overflow: hidden;
@@ -2463,7 +2615,7 @@
         left: -100%;
         width: 200%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
         animation: shimmer 8s infinite;
     }
     
@@ -2474,7 +2626,7 @@
     
     /* Glass morphism effects for cards */
     .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.8) !important;
+        background: rgba(44, 62, 80, 0.7) !important;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(244, 162, 97, 0.2);
         box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
@@ -2699,6 +2851,82 @@
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
     }
+
+    /* Premium Phone Number Styling */
+    .phone-button, a[href^="tel:"], a[href^="sms:"] {
+        background: #2C3E50 !important;
+        color: #F4A261 !important;
+        border: 1px solid #F4A261 !important;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
+        background: #1a252f !important;
+        color: #F1C40F !important;
+        border-color: #F1C40F !important;
+        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    /* Inline phone numbers */
+    .phone-inline {
+        color: #F4A261 !important;
+        font-weight: 600;
+    }
+
+    /* Image Visibility Fixes */
+    .hero {
+        background-blend-mode: multiply;
+    }
+    
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.3) 50%, 
+            rgba(0,0,0,0.4) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure text remains readable on lighter overlay */
+    .hero h1, .hero h2, .hero p {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+                     0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    /* Image sections should show images clearly */
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 </style>
     
     <script>document.addEventListener('DOMContentLoaded', function() { const propertyTypesGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .property-types-section > div'); const serviceOfferingsGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .service-offerings-section > div'); if (propertyTypesGrid) { propertyTypesGrid.classList.add('property-types-grid'); } if (serviceOfferingsGrid) { serviceOfferingsGrid.classList.add('service-offerings-grid'); } });</script>
@@ -2771,7 +2999,7 @@
                         </p>
                         <p style="color: #666; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
                             <span style="color: #c4490c; font-size: 1.5rem;">📞</span>
-                            <a href="tel:8476522338" style="color: #0a58ca; text-decoration: none; font-weight: 600;">(847) 652-2338</a>
+                            <a href="tel:8476522338" style="color: #0a58ca; text-decoration: none; font-weight: 600;" style="color: #F4A261; text-decoration: none;">(847) 652-2338</a>
                         </p>
                         <p style="color: #666; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
                             <span style="color: #c4490c; font-size: 1.5rem;">⏰</span>
@@ -2899,7 +3127,7 @@
                     Have more questions? We're here to help!
                 </p>
                 <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
-                    <a href="tel:8476522338" style="background: #F4A261; color: #2C3E50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem;">
+                    <a href="tel:8476522338" style="background: #2C3E50; color: #F4A261; border: 1px solid #F4A261; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem;">
                         📞 Call (847) 652-2338
                     </a>
                     <a href="contact.html" style="background: #1f2937; color: #0a58ca; border: 2px solid #0a58ca; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem;">
@@ -3304,7 +3532,7 @@
     
     /* Premium gradient backgrounds */
     .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
                     url('images/manage369randolphstation.jpg') center/cover !important;
         position: relative;
         overflow: hidden;
@@ -3318,7 +3546,7 @@
         left: -100%;
         width: 200%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
         animation: shimmer 8s infinite;
     }
     
@@ -3329,7 +3557,7 @@
     
     /* Glass morphism effects for cards */
     .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.8) !important;
+        background: rgba(44, 62, 80, 0.7) !important;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(244, 162, 97, 0.2);
         box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
@@ -3554,6 +3782,82 @@
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
     }
+
+    /* Premium Phone Number Styling */
+    .phone-button, a[href^="tel:"], a[href^="sms:"] {
+        background: #2C3E50 !important;
+        color: #F4A261 !important;
+        border: 1px solid #F4A261 !important;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
+        background: #1a252f !important;
+        color: #F1C40F !important;
+        border-color: #F1C40F !important;
+        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    /* Inline phone numbers */
+    .phone-inline {
+        color: #F4A261 !important;
+        font-weight: 600;
+    }
+
+    /* Image Visibility Fixes */
+    .hero {
+        background-blend-mode: multiply;
+    }
+    
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.3) 50%, 
+            rgba(0,0,0,0.4) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure text remains readable on lighter overlay */
+    .hero h1, .hero h2, .hero p {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+                     0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    /* Image sections should show images clearly */
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 </style>
 
     <!-- Quick Contact Form Section -->
@@ -3617,7 +3921,7 @@
                     <h3 style="font-size: 1.1rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;">MANAGE369</h3>
                     <p style="font-size: 0.85rem; margin: 0; line-height: 1.3; color: #e5e7eb;">
                         1400 Patriot Blvd #357, Glenview, IL<br>
-                        📱 Text: <a href="sms:8476522338" style="color: #60a5fa; text-decoration: none;">(847) 652-2338</a><br>
+                        📱 Text: <a href="sms:8476522338" style="color: #F4A261; text-decoration: none;">(847) 652-2338</a><br>
                         <a href="mailto:service@manage369.com" style="color: #60a5fa; text-decoration: none;">service@manage369.com</a>
                     </p>
                 </div>

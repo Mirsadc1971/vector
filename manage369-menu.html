@@ -270,7 +270,7 @@
     
     /* Premium gradient backgrounds */
     .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
                     url('images/manage369randolphstation.jpg') center/cover !important;
         position: relative;
         overflow: hidden;
@@ -284,7 +284,7 @@
         left: -100%;
         width: 200%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
         animation: shimmer 8s infinite;
     }
     
@@ -295,7 +295,7 @@
     
     /* Glass morphism effects for cards */
     .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.8) !important;
+        background: rgba(44, 62, 80, 0.7) !important;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(244, 162, 97, 0.2);
         box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
@@ -519,6 +519,55 @@
     
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
+    }
+
+    /* Image Visibility Fixes */
+    .hero {
+        background-blend-mode: multiply;
+    }
+    
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.3) 50%, 
+            rgba(0,0,0,0.4) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure text remains readable on lighter overlay */
+    .hero h1, .hero h2, .hero p {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+                     0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    /* Image sections should show images clearly */
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
 </style>
 </head>

@@ -373,7 +373,7 @@
     
     /* Premium gradient backgrounds */
     .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
                     url('images/manage369randolphstation.jpg') center/cover !important;
         position: relative;
         overflow: hidden;
@@ -387,7 +387,7 @@
         left: -100%;
         width: 200%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
         animation: shimmer 8s infinite;
     }
     
@@ -398,7 +398,7 @@
     
     /* Glass morphism effects for cards */
     .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.8) !important;
+        background: rgba(44, 62, 80, 0.7) !important;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(244, 162, 97, 0.2);
         box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
@@ -623,6 +623,82 @@
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
     }
+
+    /* Premium Phone Number Styling */
+    .phone-button, a[href^="tel:"], a[href^="sms:"] {
+        background: #2C3E50 !important;
+        color: #F4A261 !important;
+        border: 1px solid #F4A261 !important;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
+        background: #1a252f !important;
+        color: #F1C40F !important;
+        border-color: #F1C40F !important;
+        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    /* Inline phone numbers */
+    .phone-inline {
+        color: #F4A261 !important;
+        font-weight: 600;
+    }
+
+    /* Image Visibility Fixes */
+    .hero {
+        background-blend-mode: multiply;
+    }
+    
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.3) 50%, 
+            rgba(0,0,0,0.4) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure text remains readable on lighter overlay */
+    .hero h1, .hero h2, .hero p {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+                     0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    /* Image sections should show images clearly */
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
 </style>
 <link as="image" href="../../images/manstandingmanage369.jpg" rel="preload" type="image/jpeg"/>
 </head>
@@ -756,7 +832,7 @@
 <a href="../../contact.html">
      Contact
     </a>
-<a href="tel:8476522338">
+<a href="tel:8476522338" style="color: #F4A261; text-decoration: none; font-weight: 600;">
      Call (847) 652-2338
     </a>
 </div>
@@ -1056,7 +1132,7 @@
        </p>
 <p>
         Emergency response in suburban communities requires understanding local resources, maintaining relationships with trusted contractors who serve the area, and providing communication that keeps residents informed while managing emergency situations effectively. Call our emergency line at
-        <a href="tel:8476522338">
+        <a href="tel:8476522338" style="color: #F4A261; text-decoration: none; font-weight: 600;">
          (847) 652-2338
         </a>
         for immediate assistance.
@@ -1342,7 +1418,7 @@
 <p style="font-size: 1.2rem; font-weight: bold; margin-bottom: 20px;">
       Welcome to Manage369. Welcome to property management reimagined.
      </p>
-<a href="tel:8476522338" style="display: inline-block; padding: 15px 40px; background: #F4A261; color: #2C3E50; color: white; text-decoration: none; border-radius: 5px; font-size: 1.1rem; margin: 10px;">
+<a href="tel:8476522338" style="display: inline-block; padding: 15px 40px; background: #2C3E50; color: #F4A261; border: 1px solid #F4A261; color: white; text-decoration: none; border-radius: 5px; font-size: 1.1rem; margin: 10px;">
       Call (847) 652-2338 Today
      </a>
 </div>
@@ -1357,7 +1433,7 @@
    </p>
 <p>
     📞
-    <a href="tel:8476522338">
+    <a href="tel:8476522338" style="color: #F4A261; text-decoration: none; font-weight: 600;">
      (847) 652-2338
     </a>
     | ✉️
@@ -1545,7 +1621,7 @@
                     <h3 style="font-size: 1.1rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;">MANAGE369</h3>
                     <p style="font-size: 0.85rem; margin: 0; line-height: 1.3; color: #e5e7eb;">
                         1400 Patriot Blvd #357, Glenview, IL<br>
-                        📱 Text: <a href="sms:8476522338" style="color: #60a5fa; text-decoration: none;">(847) 652-2338</a><br>
+                        📱 Text: <a href="sms:8476522338" style="color: #F4A261; text-decoration: none;">(847) 652-2338</a><br>
                         <a href="mailto:service@manage369.com" style="color: #60a5fa; text-decoration: none;">service@manage369.com</a>
                     </p>
                 </div>
@@ -1683,7 +1759,7 @@
     
     /* Premium gradient backgrounds */
     .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
                     url('images/manage369randolphstation.jpg') center/cover !important;
         position: relative;
         overflow: hidden;
@@ -1697,7 +1773,7 @@
         left: -100%;
         width: 200%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
         animation: shimmer 8s infinite;
     }
     
@@ -1708,7 +1784,7 @@
     
     /* Glass morphism effects for cards */
     .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.8) !important;
+        background: rgba(44, 62, 80, 0.7) !important;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(244, 162, 97, 0.2);
         box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
@@ -1932,6 +2008,82 @@
     
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
+    }
+
+    /* Premium Phone Number Styling */
+    .phone-button, a[href^="tel:"], a[href^="sms:"] {
+        background: #2C3E50 !important;
+        color: #F4A261 !important;
+        border: 1px solid #F4A261 !important;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
+        background: #1a252f !important;
+        color: #F1C40F !important;
+        border-color: #F1C40F !important;
+        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    /* Inline phone numbers */
+    .phone-inline {
+        color: #F4A261 !important;
+        font-weight: 600;
+    }
+
+    /* Image Visibility Fixes */
+    .hero {
+        background-blend-mode: multiply;
+    }
+    
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.3) 50%, 
+            rgba(0,0,0,0.4) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure text remains readable on lighter overlay */
+    .hero h1, .hero h2, .hero p {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+                     0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    /* Image sections should show images clearly */
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
 </style>
 

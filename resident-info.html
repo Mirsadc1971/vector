@@ -376,7 +376,7 @@
     
     /* Premium gradient backgrounds */
     .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
                     url('images/manage369randolphstation.jpg') center/cover !important;
         position: relative;
         overflow: hidden;
@@ -390,7 +390,7 @@
         left: -100%;
         width: 200%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
         animation: shimmer 8s infinite;
     }
     
@@ -401,7 +401,7 @@
     
     /* Glass morphism effects for cards */
     .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.8) !important;
+        background: rgba(44, 62, 80, 0.7) !important;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(244, 162, 97, 0.2);
         box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
@@ -625,6 +625,82 @@
     
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
+    }
+
+    /* Premium Phone Number Styling */
+    .phone-button, a[href^="tel:"], a[href^="sms:"] {
+        background: #2C3E50 !important;
+        color: #F4A261 !important;
+        border: 1px solid #F4A261 !important;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
+        background: #1a252f !important;
+        color: #F1C40F !important;
+        border-color: #F1C40F !important;
+        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    /* Inline phone numbers */
+    .phone-inline {
+        color: #F4A261 !important;
+        font-weight: 600;
+    }
+
+    /* Image Visibility Fixes */
+    .hero {
+        background-blend-mode: multiply;
+    }
+    
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.3) 50%, 
+            rgba(0,0,0,0.4) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure text remains readable on lighter overlay */
+    .hero h1, .hero h2, .hero p {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+                     0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    /* Image sections should show images clearly */
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
 </style>
     <script>function toggleTenantInfo() { const occupied = document.querySelector('input[name="occupied"]:checked').value; const tenantSection = document.getElementById('tenantInfo'); if (occupied === 'No') { tenantSection.classList.add('show'); } else { tenantSection.classList.remove('show'); } } function prepareOwnerEmail() { const formData = { associationName: document.getElementById('associationName').value, homeowner1: document.getElementById('homeowner1').value, cell1: document.getElementById('cell1').value, homeowner2: document.getElementById('homeowner2').value, cell2: document.getElementById('cell2').value, address: document.getElementById('address').value, unit: document.getElementById('unit').value, homePhone: document.getElementById('homePhone').value, email1: document.getElementById('email1').value, email2: document.getElementById('email2').value, parkingSpace: document.getElementById('parkingSpace').value, locker: document.getElementById('locker').value, legalOwner: document.getElementById('legalOwner').value, insuranceCompany: document.getElementById('insuranceCompany').value, occupied: document.querySelector('input[name="occupied"]:checked').value, leaseHolders: document.getElementById('leaseHolders').value, leaseStart: document.getElementById('leaseStart').value, leaseEnd: document.getElementById('leaseEnd').value, tenantHomePhone: document.getElementById('tenantHomePhone').value, tenantCell1: document.getElementById('tenantCell1').value, tenantCell2: document.getElementById('tenantCell2').value, otherResidents: document.getElementById('otherResidents').value, pets: document.getElementById('pets').value, vehicleMake: document.getElementById('vehicleMake').value, vehicleModel: document.getElementById('vehicleModel').value, vehiclePlate: document.getElementById('vehiclePlate').value, specialHelp: document.querySelector('input[name="specialHelp"]:checked').value, emergencyName: document.getElementById('emergencyName').value, emergencyPhone: document.getElementById('emergencyPhone').value, correspondence: document.querySelector('input[name="correspondence"]:checked').value, electronicAgreement: document.getElementById('electronicAgreement').checked ? 'Yes' : 'No', signature: document.getElementById('signature').value }; let emailBody = "RESIDENT INFORMATION SHEET\n"; emailBody += "==========================\n\n"; emailBody += "ASSOCIATION INFORMATION\n"; emailBody += "Association Name: " + formData.associationName + "\n\n"; emailBody += "OWNER INFORMATION\n"; emailBody += "Homeowner 1: " + formData.homeowner1 + " | Cell: " + formData.cell1 + "\n"; emailBody += "Homeowner 2: " + formData.homeowner2 + " | Cell: " + formData.cell2 + "\n"; emailBody += "Address: " + formData.address + "\n"; emailBody += "Unit: " + formData.unit + "\n"; emailBody += "Home Phone: " + formData.homePhone + "\n"; emailBody += "Email 1: " + formData.email1 + "\n"; emailBody += "Email 2: " + formData.email2 + "\n"; emailBody += "Parking Space #: " + formData.parkingSpace + "\n"; emailBody += "Locker #: " + formData.locker + "\n"; emailBody += "Legal Owner(s): " + formData.legalOwner + "\n"; emailBody += "Insurance Company: " + formData.insuranceCompany + "\n\n"; emailBody += "OCCUPANT INFORMATION\n"; emailBody += "Owner Occupied: " + formData.occupied + "\n"; if (formData.occupied === 'No') { emailBody += "Lease Holders: " + formData.leaseHolders + "\n"; emailBody += "Lease Start: " + formData.leaseStart + "\n"; emailBody += "Lease End: " + formData.leaseEnd + "\n"; emailBody += "Tenant Home Phone: " + formData.tenantHomePhone + "\n"; emailBody += "Tenant Cell 1: " + formData.tenantCell1 + "\n"; emailBody += "Tenant Cell 2: " + formData.tenantCell2 + "\n"; } emailBody += "Other Residents: " + formData.otherResidents + "\n"; emailBody += "Pets: " + formData.pets + "\n\n"; emailBody += "VEHICLE INFORMATION\n"; emailBody += "Make: " + formData.vehicleMake + "\n"; emailBody += "Model: " + formData.vehicleModel + "\n"; emailBody += "License Plate: " + formData.vehiclePlate + "\n\n"; emailBody += "EMERGENCY CONTACT\n"; emailBody += "Special Help Needed: " + formData.specialHelp + "\n"; emailBody += "Emergency Contact: " + formData.emergencyName + "\n"; emailBody += "Emergency Phone: " + formData.emergencyPhone + "\n\n"; emailBody += "COMMUNICATION PREFERENCE\n"; emailBody += "Preferred Method: " + formData.correspondence + "\n"; emailBody += "Electronic Agreement: " + formData.electronicAgreement + "\n\n"; emailBody += "SIGNATURE\n"; emailBody += "Signed: " + formData.signature + "\n"; emailBody += "Date: " + new Date().toLocaleDateString() + "\n\n"; emailBody += "NOTE: Please attach insurance declaration page and lease document (if applicable) to this email."; const subject = "Resident Information Sheet - Unit " + formData.unit; const mailtoLink = "mailto:service@manage369.com?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(emailBody); return false; } function prepareTenantEmail() { alert("This form is for property owners only. Tenants should contact the property owner to update resident information."); return false; }</script>
@@ -747,7 +823,7 @@
     
     /* Premium gradient backgrounds */
     .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
                     url('images/manage369randolphstation.jpg') center/cover !important;
         position: relative;
         overflow: hidden;
@@ -761,7 +837,7 @@
         left: -100%;
         width: 200%;
         height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
         animation: shimmer 8s infinite;
     }
     
@@ -772,7 +848,7 @@
     
     /* Glass morphism effects for cards */
     .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.8) !important;
+        background: rgba(44, 62, 80, 0.7) !important;
         backdrop-filter: blur(10px);
         border: 1px solid rgba(244, 162, 97, 0.2);
         box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
@@ -996,6 +1072,82 @@
     
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
+    }
+
+    /* Premium Phone Number Styling */
+    .phone-button, a[href^="tel:"], a[href^="sms:"] {
+        background: #2C3E50 !important;
+        color: #F4A261 !important;
+        border: 1px solid #F4A261 !important;
+        padding: 10px 20px;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+    
+    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
+        background: #1a252f !important;
+        color: #F1C40F !important;
+        border-color: #F1C40F !important;
+        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
+        transform: translateY(-2px);
+    }
+    
+    /* Inline phone numbers */
+    .phone-inline {
+        color: #F4A261 !important;
+        font-weight: 600;
+    }
+
+    /* Image Visibility Fixes */
+    .hero {
+        background-blend-mode: multiply;
+    }
+    
+    .hero::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            rgba(0,0,0,0.2) 0%, 
+            rgba(0,0,0,0.3) 50%, 
+            rgba(0,0,0,0.4) 100%);
+        pointer-events: none;
+        z-index: 1;
+    }
+    
+    .hero-content {
+        position: relative;
+        z-index: 2;
+    }
+    
+    /* Ensure text remains readable on lighter overlay */
+    .hero h1, .hero h2, .hero p {
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
+                     0 0 20px rgba(0,0,0,0.6);
+    }
+    
+    /* Image sections should show images clearly */
+    .image-section {
+        background-size: cover;
+        background-position: center;
+        position: relative;
+    }
+    
+    .image-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
     }
 </style>
 </head>
@@ -1312,7 +1464,7 @@
                     <h3 style="font-size: 1.1rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;">MANAGE369</h3>
                     <p style="font-size: 0.85rem; margin: 0; line-height: 1.3; color: #e5e7eb;">
                         1400 Patriot Blvd #357, Glenview, IL<br>
-                        📱 Text: <a href="sms:8476522338" style="color: #60a5fa; text-decoration: none;">(847) 652-2338</a><br>
+                        📱 Text: <a href="sms:8476522338" style="color: #F4A261; text-decoration: none;">(847) 652-2338</a><br>
                         <a href="mailto:service@manage369.com" style="color: #60a5fa; text-decoration: none;">service@manage369.com</a>
                     </p>
                 </div>
