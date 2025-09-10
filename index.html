@@ -493,7 +493,7 @@
         }
         
         .btn-primary {
-            background: #9a3412;
+            background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
             color: white;
             border: 2px solid #ea580c;
         }
@@ -1073,6 +1073,313 @@
         color: #e5e7eb !important;
     }
 
+
+    /* Gradient Accents from Consultation Theme */
+    .section-header::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        margin: 1rem auto;
+    }
+    
+    .primary-gradient {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+    }
+    
+    .card:hover {
+        border: 2px solid #F4A261;
+        transform: translateY(-5px);
+    }
+    
+    /* Dark theme for all sections */
+    body {
+        background: #1a252f;
+        color: #e5e7eb;
+    }
+    
+    section {
+        background: #1f2937;
+        color: #e5e7eb;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #F4A261;
+    }
+    
+    /* Form inputs dark theme */
+    input, select, textarea {
+        background: #2C3E50;
+        color: #e5e7eb;
+        border: 1px solid #374151;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(244,162,97,0.1);
+    }
+
+    /* Premium Design Enhancements */
+    
+    /* Smooth animations throughout */
+    * {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Premium gradient backgrounds */
+    .hero {
+        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+                    url('images/manage369randolphstation.jpg') center/cover !important;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Animated gradient overlay */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        animation: shimmer 8s infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+    
+    /* Glass morphism effects for cards */
+    .card, .service-card, .offer-card {
+        background: rgba(44, 62, 80, 0.8) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
+    }
+    
+    .card:hover, .service-card:hover, .offer-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 45px rgba(244, 162, 97, 0.4);
+        border-color: #F4A261;
+    }
+    
+    /* Premium button styles */
+    .btn, button, .submit-btn {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
+        border: none !important;
+        color: white !important;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .btn::before, button::before, .submit-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s;
+        z-index: -1;
+    }
+    
+    .btn:hover::before, button:hover::before, .submit-btn:hover::before {
+        left: 100%;
+    }
+    
+    /* Glowing gold accents */
+    h1, h2, h3, h4 {
+        color: #F4A261 !important;
+        text-shadow: 0 0 20px rgba(244, 162, 97, 0.5);
+    }
+    
+    /* Premium navigation */
+    .header {
+        background: linear-gradient(180deg, #2C3E50 0%, rgba(44, 62, 80, 0.95) 100%) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-link {
+        position: relative;
+        color: #F4A261 !important;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    /* Premium form inputs */
+    input, select, textarea {
+        background: rgba(44, 62, 80, 0.9) !important;
+        border: 1px solid rgba(244, 162, 97, 0.3) !important;
+        color: #e5e7eb !important;
+        padding: 12px !important;
+        border-radius: 8px !important;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261 !important;
+        box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2), 
+                    0 0 20px rgba(244, 162, 97, 0.3) !important;
+        outline: none !important;
+    }
+    
+    /* Floating labels effect */
+    .form-group {
+        position: relative;
+    }
+    
+    .form-group label {
+        color: #F4A261 !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    /* Premium sections */
+    section {
+        background: linear-gradient(180deg, #1f2937 0%, #2C3E50 100%) !important;
+        position: relative;
+    }
+    
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #F4A261, transparent);
+    }
+    
+    /* Special offers with glow */
+    .special-offers {
+        background: linear-gradient(135deg, #084298 0%, #2C3E50 50%, #F4A261 100%) !important;
+        padding: 80px 20px;
+        position: relative;
+    }
+    
+    /* Countdown timer styling */
+    #countdown {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #F4A261;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.8);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.8; }
+    }
+    
+    /* Footer premium style */
+    footer {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        border-top: 2px solid rgba(244, 162, 97, 0.3);
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Loading animation for forms */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(244, 162, 97, 0.3);
+        border-top-color: #F4A261;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+    }
+    
+    /* Premium scroll indicator */
+    .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transform-origin: left;
+        z-index: 9999;
+    }
+    
+    /* Parallax effect for hero */
+    .hero-content {
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Premium mobile menu */
+    .mobile-menu {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        backdrop-filter: blur(20px);
+    }
+    
+    /* Gold hover glow for links */
+    a:hover {
+        color: #F4A261 !important;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.6);
+    }
+    
+    /* Premium table styling */
+    table {
+        background: rgba(44, 62, 80, 0.8);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        color: white;
+        padding: 15px;
+    }
+    
+    tr:hover {
+        background: rgba(244, 162, 97, 0.1);
+    }
 </style>
     
     <!-- Additional Schema Markup for Enhanced SEO -->
@@ -1309,9 +1616,317 @@
             max-width: 100%;
             height: auto;
         }
-    </style>
+    
+    /* Gradient Accents from Consultation Theme */
+    .section-header::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        margin: 1rem auto;
+    }
+    
+    .primary-gradient {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+    }
+    
+    .card:hover {
+        border: 2px solid #F4A261;
+        transform: translateY(-5px);
+    }
+    
+    /* Dark theme for all sections */
+    body {
+        background: #1a252f;
+        color: #e5e7eb;
+    }
+    
+    section {
+        background: #1f2937;
+        color: #e5e7eb;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #F4A261;
+    }
+    
+    /* Form inputs dark theme */
+    input, select, textarea {
+        background: #2C3E50;
+        color: #e5e7eb;
+        border: 1px solid #374151;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(244,162,97,0.1);
+    }
+
+    /* Premium Design Enhancements */
+    
+    /* Smooth animations throughout */
+    * {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Premium gradient backgrounds */
+    .hero {
+        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+                    url('images/manage369randolphstation.jpg') center/cover !important;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Animated gradient overlay */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        animation: shimmer 8s infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+    
+    /* Glass morphism effects for cards */
+    .card, .service-card, .offer-card {
+        background: rgba(44, 62, 80, 0.8) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
+    }
+    
+    .card:hover, .service-card:hover, .offer-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 45px rgba(244, 162, 97, 0.4);
+        border-color: #F4A261;
+    }
+    
+    /* Premium button styles */
+    .btn, button, .submit-btn {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
+        border: none !important;
+        color: white !important;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .btn::before, button::before, .submit-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s;
+        z-index: -1;
+    }
+    
+    .btn:hover::before, button:hover::before, .submit-btn:hover::before {
+        left: 100%;
+    }
+    
+    /* Glowing gold accents */
+    h1, h2, h3, h4 {
+        color: #F4A261 !important;
+        text-shadow: 0 0 20px rgba(244, 162, 97, 0.5);
+    }
+    
+    /* Premium navigation */
+    .header {
+        background: linear-gradient(180deg, #2C3E50 0%, rgba(44, 62, 80, 0.95) 100%) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-link {
+        position: relative;
+        color: #F4A261 !important;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    /* Premium form inputs */
+    input, select, textarea {
+        background: rgba(44, 62, 80, 0.9) !important;
+        border: 1px solid rgba(244, 162, 97, 0.3) !important;
+        color: #e5e7eb !important;
+        padding: 12px !important;
+        border-radius: 8px !important;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261 !important;
+        box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2), 
+                    0 0 20px rgba(244, 162, 97, 0.3) !important;
+        outline: none !important;
+    }
+    
+    /* Floating labels effect */
+    .form-group {
+        position: relative;
+    }
+    
+    .form-group label {
+        color: #F4A261 !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    /* Premium sections */
+    section {
+        background: linear-gradient(180deg, #1f2937 0%, #2C3E50 100%) !important;
+        position: relative;
+    }
+    
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #F4A261, transparent);
+    }
+    
+    /* Special offers with glow */
+    .special-offers {
+        background: linear-gradient(135deg, #084298 0%, #2C3E50 50%, #F4A261 100%) !important;
+        padding: 80px 20px;
+        position: relative;
+    }
+    
+    /* Countdown timer styling */
+    #countdown {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #F4A261;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.8);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.8; }
+    }
+    
+    /* Footer premium style */
+    footer {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        border-top: 2px solid rgba(244, 162, 97, 0.3);
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Loading animation for forms */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(244, 162, 97, 0.3);
+        border-top-color: #F4A261;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+    }
+    
+    /* Premium scroll indicator */
+    .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transform-origin: left;
+        z-index: 9999;
+    }
+    
+    /* Parallax effect for hero */
+    .hero-content {
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Premium mobile menu */
+    .mobile-menu {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        backdrop-filter: blur(20px);
+    }
+    
+    /* Gold hover glow for links */
+    a:hover {
+        color: #F4A261 !important;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.6);
+    }
+    
+    /* Premium table styling */
+    table {
+        background: rgba(44, 62, 80, 0.8);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        color: white;
+        padding: 15px;
+    }
+    
+    tr:hover {
+        background: rgba(244, 162, 97, 0.1);
+    }
+</style>
     </head>
 <body>
+<div class="scroll-indicator" id="scrollIndicator"></div>
     <a href="#main" class="skip-link">Skip to main content</a>
 
     <header class="header" style="background: #2C3E50;">
@@ -1365,7 +1980,7 @@
         </div>
     </header>
     
-    <section class="hero" style="background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), url('images/manage369randolphstation.jpg') center/cover; padding: 40px 20px 20px; text-align: center; color: white; min-height: 600px; display: flex; align-items: flex-start; justify-content: center; position: relative; overflow: hidden;" id="main" role="main">
+    <section class="hero" style="background: linear-gradient(135deg, rgba(8,66,152,0.8) 0%, rgba(244,162,97,0.8) 100%), url('images/manage369randolphstation.jpg') center/cover; padding: 40px 20px 20px; text-align: center; color: white; min-height: 600px; display: flex; align-items: flex-start; justify-content: center; position: relative; overflow: hidden;" id="main" role="main">
         <div class="hero-content" style="max-width: 1200px; margin: 0 auto; margin-top: 80px;">
             <!-- SEO-OPTIMIZED H1 - Main Ranking Keyword -->
             <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #ffffff !important; text-shadow: 2px 2px 8px rgba(0,0,0,0.7), 0 0 20px rgba(0,0,0,0.5); line-height: 1.2;">
@@ -1397,12 +2012,12 @@
     </section>
     
     <!-- Special Offers Section - Clean Professional Design -->
-    <section style="background: #FEF9E7; padding: 4rem 1.5rem;">
+    <section style="background: #2C3E50; padding: 4rem 1.5rem;">
         <div style="max-width: 1200px; margin: 0 auto;">
             
             <!-- Header with Countdown -->
             <div style="text-align: center; margin-bottom: 3rem;">
-                <div style="display: inline-block; background: white; border: 2px solid #e0e0e0; border-radius: 30px; padding: 1rem 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                <div style="display: inline-block; background: #1f2937; border: 2px solid #e0e0e0; border-radius: 30px; padding: 1rem 1.5rem; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
                     <div style="color: #666; font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem;">
                         🎯 <strong>OFFER EXPIRES</strong>
                     </div>
@@ -1420,7 +2035,7 @@
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 2.5rem;">
                 
                 <!-- FIRST CARD -->
-                <div style="background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 2rem; position: relative; display: flex; flex-direction: column; min-height: 600px; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.08)'">
+                <div style="background: #1f2937; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 2rem; position: relative; display: flex; flex-direction: column; min-height: 600px; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.08)'">
                     
                     <span style="position: absolute; top: 2rem; right: 2rem; background: #2C3E50; color: white; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
                         Limited Time
@@ -1481,7 +2096,7 @@
                 </div>
 
                 <!-- SECOND CARD -->
-                <div style="background: white; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 2rem; position: relative; display: flex; flex-direction: column; min-height: 600px; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.08)'">
+                <div style="background: #1f2937; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 2rem; position: relative; display: flex; flex-direction: column; min-height: 600px; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.08)'">
                     
                     <span style="position: absolute; top: 2rem; right: 2rem; background: #F4A261; color: white; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
                         $500 Bonus
@@ -1585,21 +2200,21 @@
         <div class="property-types-section" style="margin-bottom: 3rem;">
             <h3 style="color: #2C3E50; font-size: 1.8rem; font-weight: 600; margin-bottom: 2rem;">Property Types We Serve</h3>
             <div class="property-types-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: 1100px; margin: 0 auto;">
-                <a href="services/condominium-management/" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #ffffff; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.borderColor='#e5e7eb'">
+                <a href="services/condominium-management/" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #1f2937; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.borderColor='#e5e7eb'">
                     <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
                     <div style="font-size: 4rem; margin-bottom: 1.5rem; ">🏢</div>
                     <h4 style="color: #2C3E50; margin-bottom: 1.5rem; font-size: 1.6rem; font-weight: 700;">Condominium Management</h4>
                     <p style="line-height: 1.6; margin-bottom: 2rem; color: #4b5563; font-size: 1.05rem; padding-bottom: 4rem;">Expert management for high-rise and mid-rise condominium buildings, honoring the unique character of each North Shore and Chicago community.</p>
                     <div style="position: absolute; bottom: 2rem; left: 2.5rem; right: 2.5rem; text-align: center; color: #F4A261; font-weight: 700; font-size: 1.1rem; background: #eff6ff; padding: 12px 20px; border-radius: 8px;">Explore Services →</div>
                 </a>
-                <a href="services/hoa-management/" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #ffffff; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.borderColor='#e5e7eb'">
+                <a href="services/hoa-management/" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #1f2937; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.borderColor='#e5e7eb'">
                     <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
                     <div style="font-size: 4rem; margin-bottom: 1.5rem; ">🏘️</div>
                     <h4 style="color: #2C3E50; margin-bottom: 1.5rem; font-size: 1.6rem; font-weight: 700;">HOA Management</h4>
                     <p style="line-height: 1.6; margin-bottom: 2rem; color: #4b5563; font-size: 1.05rem; padding-bottom: 4rem;">Thoughtful homeowner association management that respects the heritage and values of North Shore suburban communities.</p>
                     <div style="position: absolute; bottom: 2rem; left: 2.5rem; right: 2.5rem; text-align: center; color: #F4A261; font-weight: 700; font-size: 1.1rem; background: #eff6ff; padding: 12px 20px; border-radius: 8px;">Explore Services →</div>
                 </a>
-                <a href="services/townhome-management/" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #ffffff; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.borderColor='#e5e7eb'">
+                <a href="services/townhome-management/" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #1f2937; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.borderColor='#e5e7eb'">
                     <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
                     <div style="font-size: 4rem; margin-bottom: 1.5rem; ">🏡</div>
                     <h4 style="color: #2C3E50; margin-bottom: 1.5rem; font-size: 1.6rem; font-weight: 700;">Townhome Management</h4>
@@ -1614,32 +2229,32 @@
             <h3 style="color: #c4490c; font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem;">Complete Service Offerings</h3>
             <p style="margin-bottom: 2rem; color: #666; font-size: 1.1rem;">Comprehensive management services provided to all property types</p>
             <div class="service-offerings-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
-                <a href="services/financial-management/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
+                <a href="services/financial-management/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">💰</div>
                     <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Financial Management</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Comprehensive financial stewardship including budgeting, accounting, and reserve fund management.</p>
                 </a>
-                <a href="services/maintenance-coordination/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
+                <a href="services/maintenance-coordination/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">🔧</div>
                     <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Maintenance Coordination</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Proactive maintenance programs, emergency response, and quality control for property value preservation.</p>
                 </a>
-                <a href="services/board-support/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
+                <a href="services/board-support/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">🤝</div>
                     <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Board Support</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Expert guidance including meeting facilitation, governance consulting, and legal compliance support.</p>
                 </a>
-                <a href="services/administrative-services/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
+                <a href="services/administrative-services/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">📋</div>
                     <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Administrative Services</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Complete administrative support including record keeping, correspondence, and compliance management.</p>
                 </a>
-                <a href="services/capital-project-management/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
+                <a href="services/capital-project-management/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">🏗️</div>
                     <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Capital Project Management</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Expert oversight of major renovations ensuring projects stay on schedule and within budget.</p>
                 </a>
-                <a href="services/resident-relations/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: white; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
+                <a href="services/resident-relations/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #c4490c;">👥</div>
                     <h4 style="color: #c4490c; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Resident Relations</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #666;">Professional communication, conflict resolution, and community event coordination.</p>
@@ -1679,7 +2294,7 @@
             <div style="background: #9a3412; padding: 2rem; border-radius: 15px; margin-top: 3rem;">
                 <h3 style="font-size: 2rem; margin-bottom: 1rem; color: white;">Discover the Manage369 Difference</h3>
                 <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #F4A261;">Experience property management excellence built on 18+ years of North Shore community relationships and local expertise. We'd be honored to discuss how we can serve your community.</p>
-                <a href="tel:8476522338" style="background: white; color: #c4490c; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block;">Contact Us at (847) 652-2338</a>
+                <a href="tel:8476522338" style="background: #1f2937; color: #c4490c; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block;">Contact Us at (847) 652-2338</a>
             </div>
         </div>
     </section>
@@ -1689,17 +2304,17 @@
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="font-size: 2.5rem; margin-bottom: 3rem; color: #333; text-align: center;">Testimonials from Our Community Partners</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem;">
-                <div style="background: white; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div style="background: #1f2937; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                     <div style="color: #c4490c; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
                     <p style="font-style: italic; margin-bottom: 1rem; color: #666; line-height: 1.6;">"We've worked with Manage369 for over a decade and have consistently been impressed by their professionalism and deep understanding of our Lincoln Park community. Their established vendor relationships and financial stewardship have enhanced our property values significantly."</p>
                     <div style="font-weight: bold; color: #0a58ca;">- Board President, Lincoln Park Condominiums</div>
                 </div>
-                <div style="background: white; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div style="background: #1f2937; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                     <div style="color: #c4490c; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
                     <p style="font-style: italic; margin-bottom: 1rem; color: #666; line-height: 1.6;">"Manage369 has been our trusted partner for eight years. Their comprehensive understanding of North Shore communities, meticulous financial management, and respect for our neighborhood character make them an invaluable part of our community's success."</p>
                     <div style="font-weight: bold; color: #0a58ca;">- HOA President, Glenview Townhomes</div>
                 </div>
-                <div style="background: white; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div style="background: #1f2937; color: #333; padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                     <div style="color: #c4490c; font-size: 1.5rem; margin-bottom: 1rem;">★★★★★</div>
                     <p style="font-style: italic; margin-bottom: 1rem; color: #666; line-height: 1.6;">"Manage369's long-term commitment to our Highland Park community shows in everything they do. Their respect for our neighborhood's heritage, combined with modern management practices, has steadily enhanced our property values while maintaining the character we cherish."</p>
                     <div style="font-weight: bold; color: #0a58ca;">- Condo Owner, Highland Park</div>
@@ -1713,19 +2328,19 @@
         <div style="max-width: 1200px; margin: 0 auto;">
             <h2 style="text-align: center; margin-bottom: 3rem; color: #333;">Common Questions About Our Services</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem;">
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                     <h3 style="color: #0a58ca; margin-bottom: 1rem;">What makes Manage369 the right choice for North Shore properties?</h3>
                     <p><strong>Established community relationships:</strong> Since 2007, we've built deep relationships throughout North Shore and Chicago communities. Our CAI/IREM/CCIM certifications, combined with our understanding of local character and municipal requirements, allow us to provide management services that honor your community's heritage while ensuring modern operational excellence.</p>
                 </div>
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                     <h3 style="color: #0a58ca; margin-bottom: 1rem;">How do you approach property management transitions?</h3>
                     <p><strong>Thoughtful, comprehensive transitions:</strong> We understand that changing management companies is a significant decision. Our experienced team carefully evaluates your property's unique needs and community character, ensuring a smooth transition that respects your established relationships while introducing enhanced service standards. We work closely with boards to ensure continuity and improvement.</p>
                 </div>
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                     <h3 style="color: #0a58ca; margin-bottom: 1rem;">How do you approach financial stewardship?</h3>
                     <p><strong>Meticulous financial management with local insight:</strong> Our comprehensive financial reporting provides complete transparency, while our established vendor relationships throughout North Shore communities ensure competitive pricing without compromising quality. We focus on long-term value preservation through strategic planning and prudent reserve management.</p>
                 </div>
-                <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
                     <h3 style="color: #0a58ca; margin-bottom: 1rem;">What is your commitment to service excellence?</h3>
                     <p><strong>Partnership-focused approach:</strong> Our long-term client relationships speak to our commitment to excellence. We view every property as a long-term partnership, working closely with boards and residents to continually enhance property values and community satisfaction. Our success is measured by the lasting relationships we've built throughout North Shore communities.</p>
                 </div>
@@ -1777,12 +2392,319 @@
                 padding: 1.5rem !important;
             }
         }
-    </style>
+    
+    /* Gradient Accents from Consultation Theme */
+    .section-header::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        margin: 1rem auto;
+    }
+    
+    .primary-gradient {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+    }
+    
+    .card:hover {
+        border: 2px solid #F4A261;
+        transform: translateY(-5px);
+    }
+    
+    /* Dark theme for all sections */
+    body {
+        background: #1a252f;
+        color: #e5e7eb;
+    }
+    
+    section {
+        background: #1f2937;
+        color: #e5e7eb;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #F4A261;
+    }
+    
+    /* Form inputs dark theme */
+    input, select, textarea {
+        background: #2C3E50;
+        color: #e5e7eb;
+        border: 1px solid #374151;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(244,162,97,0.1);
+    }
+
+    /* Premium Design Enhancements */
+    
+    /* Smooth animations throughout */
+    * {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Premium gradient backgrounds */
+    .hero {
+        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+                    url('images/manage369randolphstation.jpg') center/cover !important;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Animated gradient overlay */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        animation: shimmer 8s infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+    
+    /* Glass morphism effects for cards */
+    .card, .service-card, .offer-card {
+        background: rgba(44, 62, 80, 0.8) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
+    }
+    
+    .card:hover, .service-card:hover, .offer-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 45px rgba(244, 162, 97, 0.4);
+        border-color: #F4A261;
+    }
+    
+    /* Premium button styles */
+    .btn, button, .submit-btn {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
+        border: none !important;
+        color: white !important;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .btn::before, button::before, .submit-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s;
+        z-index: -1;
+    }
+    
+    .btn:hover::before, button:hover::before, .submit-btn:hover::before {
+        left: 100%;
+    }
+    
+    /* Glowing gold accents */
+    h1, h2, h3, h4 {
+        color: #F4A261 !important;
+        text-shadow: 0 0 20px rgba(244, 162, 97, 0.5);
+    }
+    
+    /* Premium navigation */
+    .header {
+        background: linear-gradient(180deg, #2C3E50 0%, rgba(44, 62, 80, 0.95) 100%) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-link {
+        position: relative;
+        color: #F4A261 !important;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    /* Premium form inputs */
+    input, select, textarea {
+        background: rgba(44, 62, 80, 0.9) !important;
+        border: 1px solid rgba(244, 162, 97, 0.3) !important;
+        color: #e5e7eb !important;
+        padding: 12px !important;
+        border-radius: 8px !important;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261 !important;
+        box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2), 
+                    0 0 20px rgba(244, 162, 97, 0.3) !important;
+        outline: none !important;
+    }
+    
+    /* Floating labels effect */
+    .form-group {
+        position: relative;
+    }
+    
+    .form-group label {
+        color: #F4A261 !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    /* Premium sections */
+    section {
+        background: linear-gradient(180deg, #1f2937 0%, #2C3E50 100%) !important;
+        position: relative;
+    }
+    
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #F4A261, transparent);
+    }
+    
+    /* Special offers with glow */
+    .special-offers {
+        background: linear-gradient(135deg, #084298 0%, #2C3E50 50%, #F4A261 100%) !important;
+        padding: 80px 20px;
+        position: relative;
+    }
+    
+    /* Countdown timer styling */
+    #countdown {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #F4A261;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.8);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.8; }
+    }
+    
+    /* Footer premium style */
+    footer {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        border-top: 2px solid rgba(244, 162, 97, 0.3);
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Loading animation for forms */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(244, 162, 97, 0.3);
+        border-top-color: #F4A261;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+    }
+    
+    /* Premium scroll indicator */
+    .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transform-origin: left;
+        z-index: 9999;
+    }
+    
+    /* Parallax effect for hero */
+    .hero-content {
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Premium mobile menu */
+    .mobile-menu {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        backdrop-filter: blur(20px);
+    }
+    
+    /* Gold hover glow for links */
+    a:hover {
+        color: #F4A261 !important;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.6);
+    }
+    
+    /* Premium table styling */
+    table {
+        background: rgba(44, 62, 80, 0.8);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        color: white;
+        padding: 15px;
+    }
+    
+    tr:hover {
+        background: rgba(244, 162, 97, 0.1);
+    }
+</style>
     
     <script>document.addEventListener('DOMContentLoaded', function() { const propertyTypesGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .property-types-section > div'); const serviceOfferingsGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .service-offerings-section > div'); if (propertyTypesGrid) { propertyTypesGrid.classList.add('property-types-grid'); } if (serviceOfferingsGrid) { serviceOfferingsGrid.classList.add('service-offerings-grid'); } });</script>
     
     <!-- Comprehensive Local Expertise Content Section -->
-    <section style="padding: 4rem 2rem; background: white; max-width: 1200px; margin: 0 auto;">
+    <section style="padding: 4rem 2rem; background: #1f2937; max-width: 1200px; margin: 0 auto;">
         <div style="max-width: 900px; margin: 0 auto; line-height: 1.8; color: #444;">
             <h2 style="color: #0a58ca; margin-bottom: 2rem; text-align: center; font-size: 2.5rem;">A Trusted Part of North Shore Communities Since 2007</h2>
             
@@ -1842,7 +2764,7 @@
                 <div>
                     <h3 style="color: #2C3E50; margin-bottom: 2rem; font-size: 1.8rem;">Visit Our Office</h3>
                     
-                    <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 2rem;">
+                    <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.08); margin-bottom: 2rem;">
                         <p style="color: #666; margin-bottom: 1rem; display: flex; align-items: center; gap: 10px;">
                             <span style="color: #c4490c; font-size: 1.5rem;">📍</span>
                             <strong>1400 Patriot Boulevard 357<br>Glenview, IL 60026</strong>
@@ -1869,7 +2791,7 @@
                         </a>
                         <a href="https://www.google.com/search?q=manage369+property+management+glenview" 
                            target="_blank" 
-                           style="background: white; color: #4285f4; border: 2px solid #4285f4; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
+                           style="background: #1f2937; color: #4285f4; border: 2px solid #4285f4; padding: 12px 24px; text-decoration: none; border-radius: 8px; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
                            <span>🔍</span> Find on Google
                         </a>
                         <a href="leave-review.html" 
@@ -1881,7 +2803,7 @@
             </div>
             
             <!-- Service Areas Quick Links -->
-            <div style="margin-top: 3rem; padding: 2rem; background: white; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
+            <div style="margin-top: 3rem; padding: 2rem; background: #1f2937; border-radius: 15px; box-shadow: 0 5px 15px rgba(0,0,0,0.08);">
                 <h3 style="color: #2C3E50; margin-bottom: 1.5rem; text-align: center;">Popular Service Areas Near You</h3>
                 <div style="display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center;">
                     <a href="property-management/glenview" style="background: #f0f4f8; color: #333; padding: 8px 16px; text-decoration: none; border-radius: 20px; font-size: 0.95rem; transition: all 0.3s;">Glenview</a>
@@ -1912,7 +2834,7 @@
             
             <div style="display: grid; gap: 1.5rem; max-width: 900px; margin: 0 auto;">
                 <!-- Question 1 -->
-                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #0a58ca;">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #0a58ca;">
                     <h3 style="color: #2C3E50; margin-bottom: 1rem; font-size: 1.3rem;">
                         How much does property management cost in Chicago?
                     </h3>
@@ -1922,7 +2844,7 @@
                 </div>
                 
                 <!-- Question 2 -->
-                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #28a745;">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #28a745;">
                     <h3 style="color: #2C3E50; margin-bottom: 1rem; font-size: 1.3rem;">
                         What services are included in professional property management?
                     </h3>
@@ -1932,7 +2854,7 @@
                 </div>
                 
                 <!-- Question 3 -->
-                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #ffc107;">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #ffc107;">
                     <h3 style="color: #2C3E50; margin-bottom: 1rem; font-size: 1.3rem;">
                         How quickly can you take over management of our property?
                     </h3>
@@ -1942,7 +2864,7 @@
                 </div>
                 
                 <!-- Question 4 -->
-                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #dc3545;">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #dc3545;">
                     <h3 style="color: #2C3E50; margin-bottom: 1rem; font-size: 1.3rem;">
                         Do you manage properties outside Chicago and the North Shore?
                     </h3>
@@ -1952,7 +2874,7 @@
                 </div>
                 
                 <!-- Question 5 -->
-                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #6f42c1;">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #6f42c1;">
                     <h3 style="color: #2C3E50; margin-bottom: 1rem; font-size: 1.3rem;">
                         What makes Manage369 different from other property management companies?
                     </h3>
@@ -1962,7 +2884,7 @@
                 </div>
                 
                 <!-- Question 6 -->
-                <div style="background: white; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #17a2b8;">
+                <div style="background: #1f2937; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.08); border-left: 4px solid #17a2b8;">
                     <h3 style="color: #2C3E50; margin-bottom: 1rem; font-size: 1.3rem;">
                         How do you handle emergency maintenance requests?
                     </h3>
@@ -1980,7 +2902,7 @@
                     <a href="tel:8476522338" style="background: #F4A261; color: #2C3E50; color: white; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem;">
                         📞 Call (847) 652-2338
                     </a>
-                    <a href="contact.html" style="background: white; color: #0a58ca; border: 2px solid #0a58ca; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem;">
+                    <a href="contact.html" style="background: #1f2937; color: #0a58ca; border: 2px solid #0a58ca; padding: 15px 30px; text-decoration: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem;">
                         📧 Contact Us Online
                     </a>
                 </div>
@@ -2325,6 +3247,313 @@
         border-top: 1px solid #374151;
     }
     
+
+    /* Gradient Accents from Consultation Theme */
+    .section-header::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        margin: 1rem auto;
+    }
+    
+    .primary-gradient {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+    }
+    
+    .card:hover {
+        border: 2px solid #F4A261;
+        transform: translateY(-5px);
+    }
+    
+    /* Dark theme for all sections */
+    body {
+        background: #1a252f;
+        color: #e5e7eb;
+    }
+    
+    section {
+        background: #1f2937;
+        color: #e5e7eb;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #F4A261;
+    }
+    
+    /* Form inputs dark theme */
+    input, select, textarea {
+        background: #2C3E50;
+        color: #e5e7eb;
+        border: 1px solid #374151;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(244,162,97,0.1);
+    }
+
+    /* Premium Design Enhancements */
+    
+    /* Smooth animations throughout */
+    * {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Premium gradient backgrounds */
+    .hero {
+        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+                    url('images/manage369randolphstation.jpg') center/cover !important;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Animated gradient overlay */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        animation: shimmer 8s infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+    
+    /* Glass morphism effects for cards */
+    .card, .service-card, .offer-card {
+        background: rgba(44, 62, 80, 0.8) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
+    }
+    
+    .card:hover, .service-card:hover, .offer-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 45px rgba(244, 162, 97, 0.4);
+        border-color: #F4A261;
+    }
+    
+    /* Premium button styles */
+    .btn, button, .submit-btn {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
+        border: none !important;
+        color: white !important;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .btn::before, button::before, .submit-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s;
+        z-index: -1;
+    }
+    
+    .btn:hover::before, button:hover::before, .submit-btn:hover::before {
+        left: 100%;
+    }
+    
+    /* Glowing gold accents */
+    h1, h2, h3, h4 {
+        color: #F4A261 !important;
+        text-shadow: 0 0 20px rgba(244, 162, 97, 0.5);
+    }
+    
+    /* Premium navigation */
+    .header {
+        background: linear-gradient(180deg, #2C3E50 0%, rgba(44, 62, 80, 0.95) 100%) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-link {
+        position: relative;
+        color: #F4A261 !important;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    /* Premium form inputs */
+    input, select, textarea {
+        background: rgba(44, 62, 80, 0.9) !important;
+        border: 1px solid rgba(244, 162, 97, 0.3) !important;
+        color: #e5e7eb !important;
+        padding: 12px !important;
+        border-radius: 8px !important;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261 !important;
+        box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2), 
+                    0 0 20px rgba(244, 162, 97, 0.3) !important;
+        outline: none !important;
+    }
+    
+    /* Floating labels effect */
+    .form-group {
+        position: relative;
+    }
+    
+    .form-group label {
+        color: #F4A261 !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    /* Premium sections */
+    section {
+        background: linear-gradient(180deg, #1f2937 0%, #2C3E50 100%) !important;
+        position: relative;
+    }
+    
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #F4A261, transparent);
+    }
+    
+    /* Special offers with glow */
+    .special-offers {
+        background: linear-gradient(135deg, #084298 0%, #2C3E50 50%, #F4A261 100%) !important;
+        padding: 80px 20px;
+        position: relative;
+    }
+    
+    /* Countdown timer styling */
+    #countdown {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #F4A261;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.8);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.8; }
+    }
+    
+    /* Footer premium style */
+    footer {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        border-top: 2px solid rgba(244, 162, 97, 0.3);
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Loading animation for forms */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(244, 162, 97, 0.3);
+        border-top-color: #F4A261;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+    }
+    
+    /* Premium scroll indicator */
+    .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transform-origin: left;
+        z-index: 9999;
+    }
+    
+    /* Parallax effect for hero */
+    .hero-content {
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Premium mobile menu */
+    .mobile-menu {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        backdrop-filter: blur(20px);
+    }
+    
+    /* Gold hover glow for links */
+    a:hover {
+        color: #F4A261 !important;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.6);
+    }
+    
+    /* Premium table styling */
+    table {
+        background: rgba(44, 62, 80, 0.8);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        color: white;
+        padding: 15px;
+    }
+    
+    tr:hover {
+        background: rgba(244, 162, 97, 0.1);
+    }
 </style>
 
     <!-- Quick Contact Form Section -->
@@ -2447,5 +3676,26 @@
             </div>
         </div>
     </footer>
+
+<script>
+// Scroll progress indicator
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const indicator = document.getElementById('scrollIndicator');
+    if (indicator) {
+        indicator.style.transform = `scaleX(${scrolled / 100})`;
+    }
+});
+
+// Add loading class to forms on submit
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function() {
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) btn.classList.add('loading');
+    });
+});
+</script>
 </body>
 </html>

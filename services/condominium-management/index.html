@@ -408,7 +408,7 @@
         }
         
         .btn-primary {
-            background: #9a3412;
+            background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
             color: white;
             border-color: #c4490c;
         }
@@ -700,10 +700,318 @@
         color: #e5e7eb !important;
     }
 
+
+    /* Gradient Accents from Consultation Theme */
+    .section-header::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        margin: 1rem auto;
+    }
+    
+    .primary-gradient {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+    }
+    
+    .card:hover {
+        border: 2px solid #F4A261;
+        transform: translateY(-5px);
+    }
+    
+    /* Dark theme for all sections */
+    body {
+        background: #1a252f;
+        color: #e5e7eb;
+    }
+    
+    section {
+        background: #1f2937;
+        color: #e5e7eb;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #F4A261;
+    }
+    
+    /* Form inputs dark theme */
+    input, select, textarea {
+        background: #2C3E50;
+        color: #e5e7eb;
+        border: 1px solid #374151;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(244,162,97,0.1);
+    }
+
+    /* Premium Design Enhancements */
+    
+    /* Smooth animations throughout */
+    * {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Premium gradient backgrounds */
+    .hero {
+        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+                    url('images/manage369randolphstation.jpg') center/cover !important;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Animated gradient overlay */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        animation: shimmer 8s infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+    
+    /* Glass morphism effects for cards */
+    .card, .service-card, .offer-card {
+        background: rgba(44, 62, 80, 0.8) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
+    }
+    
+    .card:hover, .service-card:hover, .offer-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 45px rgba(244, 162, 97, 0.4);
+        border-color: #F4A261;
+    }
+    
+    /* Premium button styles */
+    .btn, button, .submit-btn {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
+        border: none !important;
+        color: white !important;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .btn::before, button::before, .submit-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s;
+        z-index: -1;
+    }
+    
+    .btn:hover::before, button:hover::before, .submit-btn:hover::before {
+        left: 100%;
+    }
+    
+    /* Glowing gold accents */
+    h1, h2, h3, h4 {
+        color: #F4A261 !important;
+        text-shadow: 0 0 20px rgba(244, 162, 97, 0.5);
+    }
+    
+    /* Premium navigation */
+    .header {
+        background: linear-gradient(180deg, #2C3E50 0%, rgba(44, 62, 80, 0.95) 100%) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-link {
+        position: relative;
+        color: #F4A261 !important;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    /* Premium form inputs */
+    input, select, textarea {
+        background: rgba(44, 62, 80, 0.9) !important;
+        border: 1px solid rgba(244, 162, 97, 0.3) !important;
+        color: #e5e7eb !important;
+        padding: 12px !important;
+        border-radius: 8px !important;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261 !important;
+        box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2), 
+                    0 0 20px rgba(244, 162, 97, 0.3) !important;
+        outline: none !important;
+    }
+    
+    /* Floating labels effect */
+    .form-group {
+        position: relative;
+    }
+    
+    .form-group label {
+        color: #F4A261 !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    /* Premium sections */
+    section {
+        background: linear-gradient(180deg, #1f2937 0%, #2C3E50 100%) !important;
+        position: relative;
+    }
+    
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #F4A261, transparent);
+    }
+    
+    /* Special offers with glow */
+    .special-offers {
+        background: linear-gradient(135deg, #084298 0%, #2C3E50 50%, #F4A261 100%) !important;
+        padding: 80px 20px;
+        position: relative;
+    }
+    
+    /* Countdown timer styling */
+    #countdown {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #F4A261;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.8);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.8; }
+    }
+    
+    /* Footer premium style */
+    footer {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        border-top: 2px solid rgba(244, 162, 97, 0.3);
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Loading animation for forms */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(244, 162, 97, 0.3);
+        border-top-color: #F4A261;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+    }
+    
+    /* Premium scroll indicator */
+    .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transform-origin: left;
+        z-index: 9999;
+    }
+    
+    /* Parallax effect for hero */
+    .hero-content {
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Premium mobile menu */
+    .mobile-menu {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        backdrop-filter: blur(20px);
+    }
+    
+    /* Gold hover glow for links */
+    a:hover {
+        color: #F4A261 !important;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.6);
+    }
+    
+    /* Premium table styling */
+    table {
+        background: rgba(44, 62, 80, 0.8);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        color: white;
+        padding: 15px;
+    }
+    
+    tr:hover {
+        background: rgba(244, 162, 97, 0.1);
+    }
 </style>
 <link href="https://www.manage369.com/services/condominium-management/" rel="canonical"/>
 </head>
 <body>
+<div class="scroll-indicator" id="scrollIndicator"></div>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="header" style="background: #2C3E50;">
 <!-- COMPANY LOGO/NAME - Edit this to change your company name -->
@@ -866,7 +1174,7 @@
 <h2 class="section-title">Condominium Management Success Stories</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Real results from our Chicago and North Shore condominium management partnerships.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Gold Coast High-Rise Turnaround</h3>
 <p style="margin-bottom: 1rem;">Transformed a 45-unit Gold Coast building from financial distress to stable operations within 18 months. Reduced operating costs by 22% while improving building services and unit owner satisfaction.</p>
 <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
@@ -878,7 +1186,7 @@
                     </div>
 <p style="font-style: italic; color: #666;">"The building has never run smoother. Our reserve fund is strong and unit owners are confident in our management." - Board President</p>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Lakeview Building Operations Optimization</h3>
 <p style="margin-bottom: 1rem;">Implemented preventive maintenance programs and energy efficiency upgrades for a 68-unit Lakeview building, resulting in significant cost savings and improved building performance.</p>
 <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
@@ -890,7 +1198,7 @@
                     </div>
 <p style="font-style: italic; color: #666;">"Professional management with attention to detail. They've transformed how our building operates." - Unit Owner Representative</p>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">North Shore Elevator Modernization</h3>
 <p style="margin-bottom: 1rem;">Successfully managed a complex elevator modernization project for a Highland Park high-rise, coordinating with city inspectors, contractors, and residents to minimize disruption.</p>
 <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
@@ -960,27 +1268,27 @@
 <div style="max-width: 800px; margin: 0 auto;">
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What areas do you serve for condominium management?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We provide condominium management services throughout Chicago including Gold Coast, River North, Streeterville, Lincoln Park, and Lakeview, plus North Shore suburbs including Glenview, Highland Park, Evanston, Winnetka, and 30+ other communities.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">We provide condominium management services throughout Chicago including Gold Coast, River North, Streeterville, Lincoln Park, and Lakeview, plus North Shore suburbs including Glenview, Highland Park, Evanston, Winnetka, and 30+ other communities.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What makes your condominium management different?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We specialize in high-rise and mid-rise condominium buildings with expertise in elevator systems, building automation, Illinois Condominium Property Act compliance, and complex building operations that condos require.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">We specialize in high-rise and mid-rise condominium buildings with expertise in elevator systems, building automation, Illinois Condominium Property Act compliance, and complex building operations that condos require.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">How long have you been managing condominiums?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Manage369 has been providing professional condominium management services in Chicago and North Shore for over 17 years, with CAI certification and deep expertise in Illinois condominium law.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">Manage369 has been providing professional condominium management services in Chicago and North Shore for over 17 years, with CAI certification and deep expertise in Illinois condominium law.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What is included in your condominium management fees?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Our comprehensive management fees include board meeting facilitation, financial reporting, vendor coordination, emergency response, legal compliance monitoring, and unit owner communications. We provide transparent pricing with no hidden fees.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">Our comprehensive management fees include board meeting facilitation, financial reporting, vendor coordination, emergency response, legal compliance monitoring, and unit owner communications. We provide transparent pricing with no hidden fees.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">How do you handle elevator maintenance and emergencies?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We maintain relationships with certified elevator contractors and provide 24/7 emergency response for elevator issues. We coordinate regular inspections, preventive maintenance, and modernization projects while ensuring city compliance and resident safety.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">We maintain relationships with certified elevator contractors and provide 24/7 emergency response for elevator issues. We coordinate regular inspections, preventive maintenance, and modernization projects while ensuring city compliance and resident safety.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">Can you help with special assessments and reserve studies?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Yes, we coordinate professional reserve studies, help boards understand funding needs, and manage special assessment processes including board approvals, unit owner communications, and payment collection. Our goal is to maintain adequate reserves and avoid surprise assessments.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">Yes, we coordinate professional reserve studies, help boards understand funding needs, and manage special assessment processes including board approvals, unit owner communications, and payment collection. Our goal is to maintain adequate reserves and avoid surprise assessments.</p>
 </div>
 </div>
 </div>
@@ -991,42 +1299,42 @@
 <h2 class="section-title">Our Complete Condominium Management Services</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional condominium management integrated with our comprehensive North Shore property management and emergency property management Chicago service offerings.</p>
 <div class="services-grid">
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">💰 Financial Management</h3>
 <p style="margin-bottom: 1.5rem;">Comprehensive financial oversight with North Shore property management expertise and emergency financial management Chicago capabilities for condominium associations.</p>
 <div style="margin-top: auto; text-align: center; padding-top: 1rem;">
 <a class="btn btn-secondary" href="/services/financial-management/">Explore Financial Services →</a>
 </div>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">🔧 Maintenance Coordination</h3>
 <p style="margin-bottom: 1.5rem;">Comprehensive maintenance management with emergency response capabilities and integrated oversight for all condominium building systems and elevator maintenance.</p>
 <div style="margin-top: auto; text-align: center; padding-top: 1rem;">
 <a class="btn btn-secondary" href="/services/maintenance-coordination/">Explore Maintenance Services →</a>
 </div>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">👥 Board Support Services</h3>
 <p style="margin-bottom: 1.5rem;">Expert condominium board support and governance assistance with North Shore property management expertise and emergency decision-making support.</p>
 <div style="margin-top: auto; text-align: center; padding-top: 1rem;">
 <a class="btn btn-secondary" href="/services/board-support/">Discover Board Support →</a>
 </div>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">📋 Administrative Services</h3>
 <p style="margin-bottom: 1.5rem;">Complete administrative management with integrated reporting and emergency communication protocols for Chicago and North Shore condominium properties.</p>
 <div style="margin-top: auto; text-align: center; padding-top: 1rem;">
 <a class="btn btn-secondary" href="/services/administrative-services/">Learn About Administration →</a>
 </div>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">🏗️ Capital Project Management</h3>
 <p style="margin-bottom: 1.5rem;">Expert capital project coordination for condominium buildings with comprehensive management and emergency project funding solutions for major improvements.</p>
 <div style="margin-top: auto; text-align: center; padding-top: 1rem;">
 <a class="btn btn-secondary" href="/services/capital-project-management/">View Capital Projects →</a>
 </div>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">🤝 Resident Relations</h3>
 <p style="margin-bottom: 1.5rem;">Professional unit owner communication and relationship management with integrated transparency and emergency communication protocols for condominium communities.</p>
 <div style="margin-top: auto; text-align: center; padding-top: 1rem;">
@@ -1042,48 +1350,48 @@
 <h2 class="section-title">Condominium Management Areas We Serve</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional North Shore property management condominium services with emergency property management Chicago capabilities available throughout Chicago and the North Shore suburbs.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-<a href="../../property-management-gold-coast.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Gold Coast Condo Management</a>
-<a href="../../property-management-river-north.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">River North Condo Management</a>
-<a href="../../property-management-streeterville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Streeterville Condo Management</a>
-<a href="../../property-management-lincoln-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Park Condo Management</a>
-<a href="../../property-management-lakeview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lakeview Condo Management</a>
-<a href="../../property-management-old-town.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Old Town Condo Management</a>
-<a href="../../property-management-the-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">The Loop Condo Management</a>
-<a href="../../property-management-south-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">South Loop Condo Management</a>
-<a href="../../property-management-west-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">West Loop Condo Management</a>
-<a href="../../property-management-uptown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Uptown Condo Management</a>
-<a href="../../property-management-edgewater.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Edgewater Condo Management</a>
-<a href="../../property-management-andersonville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Andersonville Condo Management</a>
-<a href="../../property-management-rogers-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Rogers Park Condo Management</a>
-<a href="../../property-management-logan-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Logan Square Condo Management</a>
-<a href="../../property-management-bucktown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Bucktown Condo Management</a>
-<a href="../../property-management-north-center.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">North Center Condo Management</a>
-<a href="../../property-management-lincoln-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Square Condo Management</a>
-<a href="../../property-management-downtown-chicago.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Downtown Chicago Condo Management</a>
-<a href="../../property-management-glenview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glenview Condo Management</a>
-<a href="../../property-management-evanston.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Evanston Condo Management</a>
-<a href="../../property-management-wilmette.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wilmette Condo Management</a>
-<a href="../../property-management-winnetka.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Winnetka Condo Management</a>
-<a href="../../property-management-glencoe.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glencoe Condo Management</a>
-<a href="../../property-management-highland-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highland Park Condo Management</a>
-<a href="../../property-management-kenilworth.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kenilworth Condo Management</a>
-<a href="../../property-management-highwood.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highwood Condo Management</a>
-<a href="../../property-management-lake-forest.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Forest Condo Management</a>
-<a href="../../property-management-lake-bluff.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Bluff Condo Management</a>
-<a href="../../property-management-northbrook.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Northbrook Condo Management</a>
-<a href="../../property-management-deerfield.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Deerfield Condo Management</a>
-<a href="../../property-management-libertyville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Libertyville Condo Management</a>
-<a href="../../property-management-lincolnshire.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincolnshire Condo Management</a>
-<a href="../../property-management-mundelein.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Mundelein Condo Management</a>
-<a href="../../property-management-park-ridge.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Park Ridge Condo Management</a>
-<a href="../../property-management-skokie.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Skokie Condo Management</a>
-<a href="../../property-management-wheeling.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wheeling Condo Management</a>
-<a href="../../property-management-buffalo-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Buffalo Grove Condo Management</a>
-<a href="../../property-management-vernon-hills.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Vernon Hills Condo Management</a>
-<a href="../../property-management-hawthorn-woods.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Hawthorn Woods Condo Management</a>
-<a href="../../property-management-long-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Long Grove Condo Management</a>
-<a href="../../property-management-kildeer.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kildeer Condo Management</a>
-<a href="../../property-management-lake-zurich.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Zurich Condo Management</a>
+<a href="../../property-management-gold-coast.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Gold Coast Condo Management</a>
+<a href="../../property-management-river-north.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">River North Condo Management</a>
+<a href="../../property-management-streeterville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Streeterville Condo Management</a>
+<a href="../../property-management-lincoln-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Park Condo Management</a>
+<a href="../../property-management-lakeview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lakeview Condo Management</a>
+<a href="../../property-management-old-town.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Old Town Condo Management</a>
+<a href="../../property-management-the-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">The Loop Condo Management</a>
+<a href="../../property-management-south-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">South Loop Condo Management</a>
+<a href="../../property-management-west-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">West Loop Condo Management</a>
+<a href="../../property-management-uptown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Uptown Condo Management</a>
+<a href="../../property-management-edgewater.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Edgewater Condo Management</a>
+<a href="../../property-management-andersonville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Andersonville Condo Management</a>
+<a href="../../property-management-rogers-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Rogers Park Condo Management</a>
+<a href="../../property-management-logan-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Logan Square Condo Management</a>
+<a href="../../property-management-bucktown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Bucktown Condo Management</a>
+<a href="../../property-management-north-center.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">North Center Condo Management</a>
+<a href="../../property-management-lincoln-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Square Condo Management</a>
+<a href="../../property-management-downtown-chicago.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Downtown Chicago Condo Management</a>
+<a href="../../property-management-glenview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glenview Condo Management</a>
+<a href="../../property-management-evanston.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Evanston Condo Management</a>
+<a href="../../property-management-wilmette.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wilmette Condo Management</a>
+<a href="../../property-management-winnetka.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Winnetka Condo Management</a>
+<a href="../../property-management-glencoe.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glencoe Condo Management</a>
+<a href="../../property-management-highland-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highland Park Condo Management</a>
+<a href="../../property-management-kenilworth.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kenilworth Condo Management</a>
+<a href="../../property-management-highwood.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highwood Condo Management</a>
+<a href="../../property-management-lake-forest.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Forest Condo Management</a>
+<a href="../../property-management-lake-bluff.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Bluff Condo Management</a>
+<a href="../../property-management-northbrook.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Northbrook Condo Management</a>
+<a href="../../property-management-deerfield.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Deerfield Condo Management</a>
+<a href="../../property-management-libertyville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Libertyville Condo Management</a>
+<a href="../../property-management-lincolnshire.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincolnshire Condo Management</a>
+<a href="../../property-management-mundelein.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Mundelein Condo Management</a>
+<a href="../../property-management-park-ridge.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Park Ridge Condo Management</a>
+<a href="../../property-management-skokie.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Skokie Condo Management</a>
+<a href="../../property-management-wheeling.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wheeling Condo Management</a>
+<a href="../../property-management-buffalo-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Buffalo Grove Condo Management</a>
+<a href="../../property-management-vernon-hills.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Vernon Hills Condo Management</a>
+<a href="../../property-management-hawthorn-woods.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Hawthorn Woods Condo Management</a>
+<a href="../../property-management-long-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Long Grove Condo Management</a>
+<a href="../../property-management-kildeer.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kildeer Condo Management</a>
+<a href="../../property-management-lake-zurich.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Zurich Condo Management</a>
 </div>
 <div style="text-align: center;">
 <a class="btn btn-secondary" href="../../property-management">View All Areas We Serve</a>
@@ -1096,7 +1404,7 @@
 <h2 style="margin-bottom: 1rem; font-size: 2.2rem;">Ready for Expert Condominium Management?</h2>
 <p style="margin-bottom: 2rem; font-size: 1.1rem;">Join the growing number of Chicago condominium boards who trust Manage369 with their building management.</p>
 <div style="text-align: center;">
-<a class="btn" href="../../contact.html" style="background: white; color: #c4490c; border-color: white;">Get Started Today</a>
+<a class="btn" href="../../contact.html" style="background: #1f2937; color: #c4490c; border-color: white;">Get Started Today</a>
 </div>
 </div>
 </section>
@@ -1171,5 +1479,26 @@
             </div>
         </div>
     </footer>
+
+<script>
+// Scroll progress indicator
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const indicator = document.getElementById('scrollIndicator');
+    if (indicator) {
+        indicator.style.transform = `scaleX(${scrolled / 100})`;
+    }
+});
+
+// Add loading class to forms on submit
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function() {
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) btn.classList.add('loading');
+    });
+});
+</script>
 </body>
 </html>

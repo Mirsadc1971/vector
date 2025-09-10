@@ -1,187 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Offline - Manage369</title>
-    <style>
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            background: #f8f9fa;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .offline-container {
-            text-align: center;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            max-width: 400px;
-        }
-        h1 {
-            color: #1e40af;
-            margin-bottom: 1rem;
-        }
-        p {
-            color: #666;
-            margin-bottom: 1.5rem;
-        }
-        .offline-icon {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-        }
-        button {
-            background: #1e40af;
-            color: white;
-            border: none;
-            padding: 0.75rem 2rem;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 1rem;
-        }
-        button:hover {
-            background: #2C3E50;
-        }
-    
-    /* Footer Readability Fix */
-    .site-footer, footer {
-        background: #1f2937 !important;
-        color: #e5e7eb !important;
-    }
-    
-    .site-footer a, footer a,
-    .footer-column a, .footer-content a {
-        color: #e5e7eb !important;
-        text-decoration: none;
-    }
-    
-    .site-footer a:hover, footer a:hover {
-        color: #F4A261 !important;
-        text-decoration: underline;
-    }
-    
-    .footer-column h3, footer h3 {
-        color: #F4A261 !important;
-        margin-bottom: 1rem;
-    }
-    
-    .footer-column ul, footer ul {
-        list-style: none;
-        padding: 0;
-    }
-    
-    .footer-column li, footer li {
-        margin-bottom: 0.5rem;
-    }
-    
-    .footer-bottom {
-        background: #F4A261 !important;
-        color: #6b7280 !important;
-        border-top: 1px solid #374151;
-        padding: 1.5rem 0;
-        margin-top: 2rem;
-    }
-    
-    .footer-license, .footer-copyright {
-        color: #6b7280 !important;
-    }
-    
-    /* Remove/hide duplicate cert badges */
-    .cert-badge, .certifications {
-        display: none !important;
-    }
+#!/usr/bin/env python3
+"""
+Add premium styling enhancements to make the site stunning
+"""
 
+import re
+from pathlib import Path
 
-    /* High Contrast Text Fixes */
-    .btn-primary, button[type="submit"], .submit-btn {
-        background: #9a3412 !important; /* Darker orange for better contrast */
-        color: white !important;
-    }
-    
-    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
-        background: #a03a0a !important;
-    }
-    
-    /* Service cards text contrast */
-    .service-card h3, .service-card h4 {
-        color: #F4A261 !important;
-    }
-    
-    .service-card p {
-        color: #4b5563 !important;
-    }
-    
-    /* Fix any orange text that needs more contrast */
-    h1, h2, h3, h4, h5, h6 {
-        color: #F4A261 !important;
-    }
-    
-    /* Ensure links have proper contrast */
-    a {
-        color: #F4A261 !important;
-    }
-    
-    a:hover {
-        color: #084298 !important;
-    }
-    
-    /* Footer links stay light on dark background */
-    .site-footer a, footer a {
-        color: #e5e7eb !important;
-    }
-
-
-    /* Gradient Accents from Consultation Theme */
-    .section-header::after {
-        content: '';
-        display: block;
-        width: 100px;
-        height: 4px;
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
-        margin: 1rem auto;
-    }
-    
-    .primary-gradient {
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
-    }
-    
-    .card:hover {
-        border: 2px solid #F4A261;
-        transform: translateY(-5px);
-    }
-    
-    /* Dark theme for all sections */
-    body {
-        background: #1a252f;
-        color: #e5e7eb;
-    }
-    
-    section {
-        background: #1f2937;
-        color: #e5e7eb;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        color: #F4A261;
-    }
-    
-    /* Form inputs dark theme */
-    input, select, textarea {
-        background: #2C3E50;
-        color: #e5e7eb;
-        border: 1px solid #374151;
-    }
-    
-    input:focus, select:focus, textarea:focus {
-        border-color: #F4A261;
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(244,162,97,0.1);
-    }
-
+PREMIUM_STYLES = """
     /* Premium Design Enhancements */
     
     /* Smooth animations throughout */
@@ -441,60 +266,45 @@
     tr:hover {
         background: rgba(244, 162, 97, 0.1);
     }
-</style>
-</head>
-<body>
-<div class="scroll-indicator" id="scrollIndicator"></div>
-    <div class="offline-container">
-        <div class="offline-icon">📡</div>
-        <h1>You're Offline</h1>
-        <p>It looks like you've lost your internet connection. Please check your connection and try again.</p>
-        <button onclick="location.reload()">Try Again</button>
-    </div>
-    <script>window.addEventListener('online', () => { location.reload(); });</script>
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-content">
-            <!-- Company Info Column -->
-            <div class="footer-column">
-                <h3>Manage369</h3>
-                <p>1400 Patriot Boulevard 357<br>Glenview, IL 60026</p>
-                <p style="margin-top: 10px; color: #4b5563; font-weight: 500;">IDFPR Management Firm License 291.000211</p>
-                <p style="margin-top: 10px;"><strong>Phone:</strong> <a href="tel:8476522338">(847) 652-2338</a><br>
-                <strong>Email:</strong> <a href="mailto:service@manage369.com">service@manage369.com</a></p>
-            </div>
-            
-            <!-- Quick Links Column -->
-            <div class="footer-column">
-                <h3>Quick Links</h3>
-                <ul>
-                <li><a href="property-management/">Areas We Serve</a></li>
-                <li><a href="blog/">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="payment-methods.html">Payment Methods</a></li>
-                <li><a href="services.html">Services</a></li></ul>
-            </div>
-            
-            <!-- Resources Column -->
-            <div class="footer-column">
-                <h3>Resources</h3>
-                <ul>
-                <li><a href="accessibility.html">Accessibility</a></li>
-                <li><a href="forms.html">Forms & Documents</a></li>
-                <li><a href="legal-disclaimers.html">Legal Disclaimers</a></li>
-                <li><a href="privacy-policy.html">Privacy Policy</a></li>
-                <li><a href="sitemap.xml">Sitemap</a></li>
-                <li><a href="terms-of-service.html">Terms of Service</a></li></ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div style="text-align: center; margin-bottom: 10px; color: #4b5563; font-size: 0.9rem;">
-                CAI National Member | IREM Certified | CCIM Designated | NAR Member | IDFPR Licensed
-            </div>
-            <p style="text-align: center; color: #4b5563;">&copy; 2025 Manage369. All rights reserved.</p>
-        </div>
-    </footer>
+"""
 
+def add_premium_styles(file_path):
+    """Add premium styles to HTML file"""
+    
+    with open(file_path, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Check if styles already added
+    if "Premium Design Enhancements" in content:
+        return content, False
+    
+    # Add premium styles before closing </style> tag
+    if '</style>' in content:
+        content = re.sub(
+            r'(</style>)',
+            f'{PREMIUM_STYLES}\\1',
+            content
+        )
+    elif '</head>' in content:
+        # Add new style block if none exists
+        style_block = f'<style>{PREMIUM_STYLES}</style>'
+        content = re.sub(
+            r'(</head>)',
+            f'{style_block}\\1',
+            content
+        )
+    
+    # Add scroll indicator div after body
+    if '<body' in content:
+        scroll_indicator = '<div class="scroll-indicator" id="scrollIndicator"></div>'
+        content = re.sub(
+            r'(<body[^>]*>)',
+            f'\\1\\n{scroll_indicator}',
+            content
+        )
+    
+    # Add scroll indicator script
+    scroll_script = """
 <script>
 // Scroll progress indicator
 window.addEventListener('scroll', () => {
@@ -515,5 +325,54 @@ document.querySelectorAll('form').forEach(form => {
     });
 });
 </script>
-</body>
-</html>
+"""
+    
+    if '</body>' in content:
+        content = re.sub(
+            r'(</body>)',
+            f'{scroll_script}\\1',
+            content
+        )
+    
+    return content, True
+
+def main():
+    """Process all HTML files"""
+    
+    root_dir = Path('C:/Users/mirsa/manage369-live')
+    updated_files = []
+    
+    html_files = list(root_dir.rglob('*.html'))
+    html_files = [f for f in html_files if not any(
+        skip in str(f) for skip in ['.git', 'node_modules', 'dist', 'build']
+    )]
+    
+    print(f"Adding premium styling to {len(html_files)} files...")
+    print("-" * 60)
+    
+    for file_path in html_files:
+        try:
+            content, was_updated = add_premium_styles(file_path)
+            
+            if was_updated:
+                with open(file_path, 'w', encoding='utf-8') as f:
+                    f.write(content)
+                updated_files.append(file_path.relative_to(root_dir))
+                print(f"[PREMIUM] {file_path.relative_to(root_dir)}")
+                
+        except Exception as e:
+            print(f"[ERROR] {file_path}: {e}")
+    
+    print("\n" + "=" * 60)
+    print(f"Added premium styling to {len(updated_files)} files")
+    print("\nPremium features added:")
+    print("- Glass morphism effects")
+    print("- Gradient animations")
+    print("- Smooth transitions")
+    print("- Glowing gold accents")
+    print("- Scroll progress indicator")
+    print("- Hover animations")
+    print("- Loading states")
+
+if __name__ == "__main__":
+    main()

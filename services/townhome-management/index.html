@@ -288,7 +288,7 @@
         }
         
         .btn { padding: 0.75rem 1.5rem; border-radius: 5px; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid; display: inline-block; text-align: center; }
-        .btn-primary { background: #9a3412; color: white; border-color: #c4490c; }
+        .btn-primary { background: linear-gradient(135deg, #084298 0%, #F4A261 100%); color: white; border-color: #c4490c; }
         .btn-primary:hover { background: #e55a2b; transform: translateY(-2px); }
         .btn-secondary { background: transparent; color: #2c5aa0; border-color: #2c5aa0; }
         .btn-secondary:hover { background: #2c5aa0; color: white; }
@@ -497,10 +497,318 @@
         color: #e5e7eb !important;
     }
 
+
+    /* Gradient Accents from Consultation Theme */
+    .section-header::after {
+        content: '';
+        display: block;
+        width: 100px;
+        height: 4px;
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        margin: 1rem auto;
+    }
+    
+    .primary-gradient {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+    }
+    
+    .card:hover {
+        border: 2px solid #F4A261;
+        transform: translateY(-5px);
+    }
+    
+    /* Dark theme for all sections */
+    body {
+        background: #1a252f;
+        color: #e5e7eb;
+    }
+    
+    section {
+        background: #1f2937;
+        color: #e5e7eb;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #F4A261;
+    }
+    
+    /* Form inputs dark theme */
+    input, select, textarea {
+        background: #2C3E50;
+        color: #e5e7eb;
+        border: 1px solid #374151;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261;
+        outline: none;
+        box-shadow: 0 0 0 3px rgba(244,162,97,0.1);
+    }
+
+    /* Premium Design Enhancements */
+    
+    /* Smooth animations throughout */
+    * {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    
+    /* Premium gradient backgrounds */
+    .hero {
+        background: linear-gradient(135deg, rgba(8,66,152,0.95) 0%, rgba(244,162,97,0.95) 100%), 
+                    url('images/manage369randolphstation.jpg') center/cover !important;
+        position: relative;
+        overflow: hidden;
+    }
+    
+    /* Animated gradient overlay */
+    .hero::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 200%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
+        animation: shimmer 8s infinite;
+    }
+    
+    @keyframes shimmer {
+        0% { left: -100%; }
+        100% { left: 100%; }
+    }
+    
+    /* Glass morphism effects for cards */
+    .card, .service-card, .offer-card {
+        background: rgba(44, 62, 80, 0.8) !important;
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
+    }
+    
+    .card:hover, .service-card:hover, .offer-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 15px 45px rgba(244, 162, 97, 0.4);
+        border-color: #F4A261;
+    }
+    
+    /* Premium button styles */
+    .btn, button, .submit-btn {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
+        border: none !important;
+        color: white !important;
+        font-weight: 600;
+        letter-spacing: 1px;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+    }
+    
+    .btn::before, button::before, .submit-btn::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+        transition: left 0.5s;
+        z-index: -1;
+    }
+    
+    .btn:hover::before, button:hover::before, .submit-btn:hover::before {
+        left: 100%;
+    }
+    
+    /* Glowing gold accents */
+    h1, h2, h3, h4 {
+        color: #F4A261 !important;
+        text-shadow: 0 0 20px rgba(244, 162, 97, 0.5);
+    }
+    
+    /* Premium navigation */
+    .header {
+        background: linear-gradient(180deg, #2C3E50 0%, rgba(44, 62, 80, 0.95) 100%) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .nav-link {
+        position: relative;
+        color: #F4A261 !important;
+    }
+    
+    .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transition: width 0.3s;
+    }
+    
+    .nav-link:hover::after {
+        width: 100%;
+    }
+    
+    /* Premium form inputs */
+    input, select, textarea {
+        background: rgba(44, 62, 80, 0.9) !important;
+        border: 1px solid rgba(244, 162, 97, 0.3) !important;
+        color: #e5e7eb !important;
+        padding: 12px !important;
+        border-radius: 8px !important;
+    }
+    
+    input:focus, select:focus, textarea:focus {
+        border-color: #F4A261 !important;
+        box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2), 
+                    0 0 20px rgba(244, 162, 97, 0.3) !important;
+        outline: none !important;
+    }
+    
+    /* Floating labels effect */
+    .form-group {
+        position: relative;
+    }
+    
+    .form-group label {
+        color: #F4A261 !important;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 1px;
+    }
+    
+    /* Premium sections */
+    section {
+        background: linear-gradient(180deg, #1f2937 0%, #2C3E50 100%) !important;
+        position: relative;
+    }
+    
+    section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, #F4A261, transparent);
+    }
+    
+    /* Special offers with glow */
+    .special-offers {
+        background: linear-gradient(135deg, #084298 0%, #2C3E50 50%, #F4A261 100%) !important;
+        padding: 80px 20px;
+        position: relative;
+    }
+    
+    /* Countdown timer styling */
+    #countdown {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #F4A261;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.8);
+        animation: pulse 2s infinite;
+    }
+    
+    @keyframes pulse {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0.8; }
+    }
+    
+    /* Footer premium style */
+    footer {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        border-top: 2px solid rgba(244, 162, 97, 0.3);
+    }
+    
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    /* Loading animation for forms */
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+    
+    .loading::after {
+        content: '';
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        border: 3px solid rgba(244, 162, 97, 0.3);
+        border-top-color: #F4A261;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+        margin-left: 10px;
+    }
+    
+    /* Premium scroll indicator */
+    .scroll-indicator {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #084298, #F4A261);
+        transform-origin: left;
+        z-index: 9999;
+    }
+    
+    /* Parallax effect for hero */
+    .hero-content {
+        animation: fadeInUp 1s ease-out;
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Premium mobile menu */
+    .mobile-menu {
+        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
+        backdrop-filter: blur(20px);
+    }
+    
+    /* Gold hover glow for links */
+    a:hover {
+        color: #F4A261 !important;
+        text-shadow: 0 0 10px rgba(244, 162, 97, 0.6);
+    }
+    
+    /* Premium table styling */
+    table {
+        background: rgba(44, 62, 80, 0.8);
+        border: 1px solid rgba(244, 162, 97, 0.2);
+        border-radius: 8px;
+        overflow: hidden;
+    }
+    
+    th {
+        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
+        color: white;
+        padding: 15px;
+    }
+    
+    tr:hover {
+        background: rgba(244, 162, 97, 0.1);
+    }
 </style>
 <link href="https://www.manage369.com/services/townhome-management/" rel="canonical"/>
 </head>
 <body>
+<div class="scroll-indicator" id="scrollIndicator"></div>
 <a class="skip-link" href="#main">Skip to main content</a>
 <header class="header" style="background: #2C3E50;">
 <!-- COMPANY LOGO/NAME - Edit this to change your company name -->
@@ -632,7 +940,7 @@
 <h2 class="section-title">Premier North Shore Property Management with Emergency Response</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Combining professional North Shore property management with emergency property management Chicago expertise for comprehensive townhome community services.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-left: 4px solid #ea580c;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-left: 4px solid #ea580c;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">North Shore Property Management Excellence</h3>
 <p style="margin-bottom: 1rem;">Specialized North Shore property management services tailored to the unique needs of prestigious North Shore communities. Our deep understanding of local regulations, architectural standards, and community expectations ensures exceptional property management that preserves and enhances property values.</p>
 <ul style="list-style: none; padding-left: 0;">
@@ -642,7 +950,7 @@
 <li style="padding: 0.25rem 0; display: flex; align-items: center;"><span style="color: #c4490c; font-weight: bold; margin-right: 0.5rem;">✓</span>Property value optimization strategies</li>
 </ul>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-left: 4px solid #2c5aa0;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); border-left: 4px solid #2c5aa0;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.4rem;">Emergency Property Management Chicago</h3>
 <p style="margin-bottom: 1rem;">Comprehensive emergency property management Chicago services provide 24/7 response capabilities for urgent property issues. Our emergency response system ensures rapid resolution of critical situations that could impact resident safety or property integrity across Chicago and North Shore communities.</p>
 <ul style="list-style: none; padding-left: 0;">
@@ -690,7 +998,7 @@
 <h2 class="section-title">Townhome Management Success Stories</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Proven results from our specialized townhome community management projects.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Long Grove Roof Replacement Project</h3>
 <p style="margin-bottom: 1rem;">Successfully managed a comprehensive roof replacement project for a 28-unit Long Grove townhome community. Coordinated individual unit assessments, insurance claims, and contractor scheduling while maintaining resident satisfaction.</p>
 <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
@@ -702,7 +1010,7 @@
                     </div>
 <p style="font-style: italic; color: #666;">"Outstanding project management. They coordinated everything perfectly and kept all residents informed throughout the process." - Association President</p>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Hawthorn Woods Utility Optimization</h3>
 <p style="margin-bottom: 1rem;">Implemented shared utility optimization program for a 45-unit Hawthorn Woods townhome development, reducing costs and improving system efficiency while clarifying individual vs. common responsibilities.</p>
 <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
@@ -714,7 +1022,7 @@
                     </div>
 <p style="font-style: italic; color: #666;">"They solved complex utility issues that had plagued our community for years. Excellent technical expertise." - Board Treasurer</p>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">Kildeer Exterior Maintenance Program</h3>
 <p style="margin-bottom: 1rem;">Developed comprehensive exterior maintenance program for a Kildeer townhome community, establishing preventive schedules, contractor relationships, and maintenance standards that enhanced property values.</p>
 <div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
@@ -784,27 +1092,27 @@
 <div style="max-width: 800px; margin: 0 auto;">
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What areas do you serve for townhome management?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We provide townhome management services throughout North Shore suburbs including Hawthorn Woods, Long Grove, Kildeer, Lake Zurich, Lincolnshire, and other planned townhome developments in the Chicago area.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">We provide townhome management services throughout North Shore suburbs including Hawthorn Woods, Long Grove, Kildeer, Lake Zurich, Lincolnshire, and other planned townhome developments in the Chicago area.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What makes townhome management different from condos or HOAs?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Townhome management requires specialized expertise in exterior building maintenance, shared utility coordination, roof systems, individual vs. common area responsibilities, and complex insurance coverage coordination unique to attached housing.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">Townhome management requires specialized expertise in exterior building maintenance, shared utility coordination, roof systems, individual vs. common area responsibilities, and complex insurance coverage coordination unique to attached housing.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">How do you handle shared utilities in townhome communities?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We coordinate shared water, sewer, and electrical systems, manage utility billing allocation, oversee maintenance of common utility infrastructure, and implement energy efficiency programs for townhome communities.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">We coordinate shared water, sewer, and electrical systems, manage utility billing allocation, oversee maintenance of common utility infrastructure, and implement energy efficiency programs for townhome communities.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">What is included in your townhome management services?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Our comprehensive services include exterior maintenance coordination, shared utility management, roof and gutter systems, driveway maintenance, insurance coordination, and common area management with transparent pricing.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">Our comprehensive services include exterior maintenance coordination, shared utility management, roof and gutter systems, driveway maintenance, insurance coordination, and common area management with transparent pricing.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">How do you coordinate roof maintenance for townhome communities?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">We manage regular roof inspections, coordinate repairs and replacements across multiple units, work with insurance companies for claims, and ensure compliance with building codes and manufacturer warranties.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">We manage regular roof inspections, coordinate repairs and replacements across multiple units, work with insurance companies for claims, and ensure compliance with building codes and manufacturer warranties.</p>
 </div>
 <div style="margin-bottom: 2rem;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem; font-size: 1.3rem;">Can you help clarify individual vs. common area responsibilities?</h3>
-<p style="padding: 1rem; background: white; border-radius: 8px; border-left: 4px solid #ea580c;">Yes, we develop clear responsibility matrices, coordinate with legal counsel when needed, and help establish policies that define individual unit owner responsibilities versus common area maintenance obligations.</p>
+<p style="padding: 1rem; background: #1f2937; border-radius: 8px; border-left: 4px solid #ea580c;">Yes, we develop clear responsibility matrices, coordinate with legal counsel when needed, and help establish policies that define individual unit owner responsibilities versus common area maintenance obligations.</p>
 </div>
 </div>
 </div>
@@ -813,7 +1121,7 @@
 <div class="container">
 <h2 style="margin-bottom: 1rem; font-size: 2.2rem;">Ready for Professional Management?</h2>
 <p style="margin-bottom: 2rem; font-size: 1.1rem;">Contact us today to learn how we can help your property association.</p>
-<a class="btn" href="../../contact.html" style="background: white; color: #c4490c; border-color: white;">Get Started Today</a>
+<a class="btn" href="../../contact.html" style="background: #1f2937; color: #c4490c; border-color: white;">Get Started Today</a>
 </div>
 </section>
 <!-- Our Complete Services Section -->
@@ -822,32 +1130,32 @@
 <h2 class="section-title">Our Complete Townhome Management Services</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional townhome community management integrated with our comprehensive North Shore property management and emergency property management Chicago service offerings.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">💰 Financial Management</h3>
 <p style="margin-bottom: 1.5rem;">Comprehensive financial oversight with North Shore property management expertise and emergency financial management Chicago capabilities for townhome associations.</p>
 <a class="btn btn-secondary" href="/services/financial-management/">Explore Financial Services →</a>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">🔧 Maintenance Coordination</h3>
 <p style="margin-bottom: 1.5rem;">Comprehensive maintenance management with emergency response capabilities for townhome exterior maintenance, shared utilities, and community systems.</p>
 <a class="btn btn-secondary" href="/services/maintenance-coordination/">Explore Maintenance Services →</a>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">👥 Board Support Services</h3>
 <p style="margin-bottom: 1.5rem;">Expert townhome board support and governance assistance with North Shore property management expertise and emergency decision-making support for complex townhome issues.</p>
 <a class="btn btn-secondary" href="/services/board-support/">Discover Board Support →</a>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">📋 Administrative Services</h3>
 <p style="margin-bottom: 1.5rem;">Complete administrative management with integrated reporting and emergency communication protocols for Chicago and North Shore townhome properties.</p>
 <a class="btn btn-secondary" href="/services/administrative-services/">Learn About Administration →</a>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">🏗️ Capital Project Management</h3>
 <p style="margin-bottom: 1.5rem;">Expert capital project coordination for townhome communities with comprehensive management and emergency project funding solutions for roof replacements and building envelope improvements.</p>
 <a class="btn btn-secondary" href="/services/capital-project-management/">View Capital Projects →</a>
 </div>
-<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
+<div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #2c5aa0; margin-bottom: 1rem;">🤝 Resident Relations</h3>
 <p style="margin-bottom: 1.5rem;">Professional townhome resident communication and relationship management with integrated transparency and emergency communication protocols for attached housing communities.</p>
 <a class="btn btn-secondary" href="/services/resident-relations/">Explore Resident Services →</a>
@@ -861,48 +1169,48 @@
 <h2 class="section-title">Townhome Management Areas We Serve</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional North Shore property management townhome services with emergency property management Chicago capabilities available throughout Chicago and the North Shore suburbs.</p>
 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
-<a href="../../property-management-hawthorn-woods.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Hawthorn Woods Townhome Management</a>
-<a href="../../property-management-long-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Long Grove Townhome Management</a>
-<a href="../../property-management-kildeer.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kildeer Townhome Management</a>
-<a href="../../property-management-lake-zurich.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Zurich Townhome Management</a>
-<a href="../../property-management-lincolnshire.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincolnshire Townhome Management</a>
-<a href="../../property-management-glenview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glenview Townhome Management</a>
-<a href="../../property-management-northbrook.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Northbrook Townhome Management</a>
-<a href="../../property-management-highland-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highland Park Townhome Management</a>
-<a href="../../property-management-lake-forest.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Forest Townhome Management</a>
-<a href="../../property-management-wilmette.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wilmette Townhome Management</a>
-<a href="../../property-management-winnetka.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Winnetka Townhome Management</a>
-<a href="../../property-management-glencoe.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glencoe Townhome Management</a>
-<a href="../../property-management-evanston.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Evanston Townhome Management</a>
-<a href="../../property-management-kenilworth.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kenilworth Townhome Management</a>
-<a href="../../property-management-highwood.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highwood Townhome Management</a>
-<a href="../../property-management-lake-bluff.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Bluff Townhome Management</a>
-<a href="../../property-management-deerfield.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Deerfield Townhome Management</a>
-<a href="../../property-management-libertyville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Libertyville Townhome Management</a>
-<a href="../../property-management-mundelein.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Mundelein Townhome Management</a>
-<a href="../../property-management-park-ridge.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Park Ridge Townhome Management</a>
-<a href="../../property-management-skokie.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Skokie Townhome Management</a>
-<a href="../../property-management-wheeling.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wheeling Townhome Management</a>
-<a href="../../property-management-buffalo-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Buffalo Grove Townhome Management</a>
-<a href="../../property-management-vernon-hills.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Vernon Hills Townhome Management</a>
-<a href="../../property-management-gold-coast.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Gold Coast Townhome Management</a>
-<a href="../../property-management-river-north.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">River North Townhome Management</a>
-<a href="../../property-management-streeterville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Streeterville Townhome Management</a>
-<a href="../../property-management-lincoln-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Park Townhome Management</a>
-<a href="../../property-management-lakeview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lakeview Townhome Management</a>
-<a href="../../property-management-old-town.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Old Town Townhome Management</a>
-<a href="../../property-management-the-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">The Loop Townhome Management</a>
-<a href="../../property-management-south-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">South Loop Townhome Management</a>
-<a href="../../property-management-west-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">West Loop Townhome Management</a>
-<a href="../../property-management-uptown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Uptown Townhome Management</a>
-<a href="../../property-management-edgewater.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Edgewater Townhome Management</a>
-<a href="../../property-management-andersonville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Andersonville Townhome Management</a>
-<a href="../../property-management-rogers-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Rogers Park Townhome Management</a>
-<a href="../../property-management-logan-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Logan Square Townhome Management</a>
-<a href="../../property-management-bucktown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Bucktown Townhome Management</a>
-<a href="../../property-management-north-center.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">North Center Townhome Management</a>
-<a href="../../property-management-lincoln-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Square Townhome Management</a>
-<a href="../../property-management-downtown-chicago.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: white; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Downtown Chicago Townhome Management</a>
+<a href="../../property-management-hawthorn-woods.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Hawthorn Woods Townhome Management</a>
+<a href="../../property-management-long-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Long Grove Townhome Management</a>
+<a href="../../property-management-kildeer.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kildeer Townhome Management</a>
+<a href="../../property-management-lake-zurich.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Zurich Townhome Management</a>
+<a href="../../property-management-lincolnshire.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincolnshire Townhome Management</a>
+<a href="../../property-management-glenview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glenview Townhome Management</a>
+<a href="../../property-management-northbrook.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Northbrook Townhome Management</a>
+<a href="../../property-management-highland-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highland Park Townhome Management</a>
+<a href="../../property-management-lake-forest.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Forest Townhome Management</a>
+<a href="../../property-management-wilmette.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wilmette Townhome Management</a>
+<a href="../../property-management-winnetka.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Winnetka Townhome Management</a>
+<a href="../../property-management-glencoe.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glencoe Townhome Management</a>
+<a href="../../property-management-evanston.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Evanston Townhome Management</a>
+<a href="../../property-management-kenilworth.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Kenilworth Townhome Management</a>
+<a href="../../property-management-highwood.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highwood Townhome Management</a>
+<a href="../../property-management-lake-bluff.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lake Bluff Townhome Management</a>
+<a href="../../property-management-deerfield.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Deerfield Townhome Management</a>
+<a href="../../property-management-libertyville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Libertyville Townhome Management</a>
+<a href="../../property-management-mundelein.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Mundelein Townhome Management</a>
+<a href="../../property-management-park-ridge.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Park Ridge Townhome Management</a>
+<a href="../../property-management-skokie.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Skokie Townhome Management</a>
+<a href="../../property-management-wheeling.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Wheeling Townhome Management</a>
+<a href="../../property-management-buffalo-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Buffalo Grove Townhome Management</a>
+<a href="../../property-management-vernon-hills.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Vernon Hills Townhome Management</a>
+<a href="../../property-management-gold-coast.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Gold Coast Townhome Management</a>
+<a href="../../property-management-river-north.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">River North Townhome Management</a>
+<a href="../../property-management-streeterville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Streeterville Townhome Management</a>
+<a href="../../property-management-lincoln-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Park Townhome Management</a>
+<a href="../../property-management-lakeview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lakeview Townhome Management</a>
+<a href="../../property-management-old-town.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Old Town Townhome Management</a>
+<a href="../../property-management-the-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">The Loop Townhome Management</a>
+<a href="../../property-management-south-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">South Loop Townhome Management</a>
+<a href="../../property-management-west-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">West Loop Townhome Management</a>
+<a href="../../property-management-uptown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Uptown Townhome Management</a>
+<a href="../../property-management-edgewater.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Edgewater Townhome Management</a>
+<a href="../../property-management-andersonville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Andersonville Townhome Management</a>
+<a href="../../property-management-rogers-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Rogers Park Townhome Management</a>
+<a href="../../property-management-logan-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Logan Square Townhome Management</a>
+<a href="../../property-management-bucktown.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Bucktown Townhome Management</a>
+<a href="../../property-management-north-center.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">North Center Townhome Management</a>
+<a href="../../property-management-lincoln-square.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Lincoln Square Townhome Management</a>
+<a href="../../property-management-downtown-chicago.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Downtown Chicago Townhome Management</a>
 </div>
 <div style="text-align: center;">
 <a class="btn btn-secondary" href="../../property-management">View All Areas We Serve</a>
@@ -980,5 +1288,26 @@
             </div>
         </div>
     </footer>
+
+<script>
+// Scroll progress indicator
+window.addEventListener('scroll', () => {
+    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+    const scrolled = (winScroll / height) * 100;
+    const indicator = document.getElementById('scrollIndicator');
+    if (indicator) {
+        indicator.style.transform = `scaleX(${scrolled / 100})`;
+    }
+});
+
+// Add loading class to forms on submit
+document.querySelectorAll('form').forEach(form => {
+    form.addEventListener('submit', function() {
+        const btn = this.querySelector('button[type="submit"]');
+        if (btn) btn.classList.add('loading');
+    });
+});
+</script>
 </body>
 </html>
