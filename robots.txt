@@ -27,7 +27,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://manage369.com/sitemap.xml
+Sitemap: https://www.manage369.com/sitemap.xml
 
 # No restrictions - index everything
 Disallow:
