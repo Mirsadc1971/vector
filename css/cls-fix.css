@@ -1,0 +1,109 @@
+/* CLS (Cumulative Layout Shift) Fixes */
+
+/* Fix hero section ::before element CLS */
+.hero {
+    /* Ensure stable layout */
+    contain: layout style paint;
+    isolation: isolate;
+    overflow: hidden;
+    transform: translateZ(0); /* Force GPU acceleration */
+    will-change: auto; /* Remove will-change that causes repaints */
+}
+
+.hero::before {
+    /* Make animation more performant */
+    pointer-events: none;
+    z-index: 0;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform; /* Only animate transform, not position */
+}
+
+/* Optimize shimmer animation to use transform instead of left position */
+@keyframes shimmer-optimized {
+    0% {
+        transform: translateX(-100%) translateZ(0);
+    }
+    100% {
+        transform: translateX(100%) translateZ(0);
+    }
+}
+
+/* Override the problematic animation */
+.hero::before {
+    left: 0 !important; /* Keep position static */
+    animation: shimmer-optimized 8s infinite !important;
+}
+
+/* Fix section ::before elements */
+section::before {
+    /* Prevent layout shift by using transform */
+    contain: layout;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure main section has stable dimensions */
+#main, section#main {
+    min-height: 600px; /* Prevent height shifts */
+    contain: layout style;
+}
+
+/* Predefine space for images to prevent shift */
+img {
+    aspect-ratio: attr(width) / attr(height);
+    height: auto;
+}
+
+/* Fix any animated gradients */
+.animated-gradient,
+[class*="gradient"] {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Ensure fonts don't cause layout shift */
+body {
+    font-display: swap;
+}
+
+/* Reserve space for lazy-loaded content */
+[loading="lazy"] {
+    min-height: 1px;
+    display: block;
+}
+
+/* Stabilize button animations */
+.btn::before,
+button::before,
+.submit-btn::before {
+    transform: translateZ(0);
+    will-change: opacity, transform;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Prevent card hover shifts */
+.card,
+.service-card,
+.offer-card {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* Critical CSS for above-the-fold stability */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Ensure stable header */
+header,
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: var(--header-height, 60px);
+}
