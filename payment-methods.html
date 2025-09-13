@@ -1704,6 +1704,46 @@ footer {
 }
 
 </style>
+<style>
+
+/* Fix Navigation Alignment */
+.header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 1rem 2rem !important;
+}
+
+.logo {
+    flex-shrink: 0 !important;
+}
+
+.nav {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    margin: 0 auto !important;
+    justify-content: center !important;
+}
+
+.header-cta {
+    flex-shrink: 0 !important;
+    margin-left: auto !important;
+}
+
+/* Mobile menu fix */
+.mobile-menu-toggle {
+    margin-left: auto !important;
+}
+
+/* Remove any conflicting styles */
+nav {
+    position: static !important;
+    transform: none !important;
+    margin: 0 !important;
+}
+
+</style>
 </head>
 <body>
 <div class="scroll-indicator" id="scrollIndicator"></div>
