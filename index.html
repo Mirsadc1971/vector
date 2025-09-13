@@ -419,10 +419,12 @@ body {
                 document.documentElement.className += (webP.height == 2) ? ' webp' : ' no-webp';
             };
             webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-        }) : setTimeout(function() {
+        }) : requestIdleCallback(function() {
             var webP = new Image();
             webP.onload = webP.onerror = function() {
-                document.documentElement.className += (webP.height == 2) ? ' webp' : ' no-webp';
+                requestAnimationFrame(function() {
+                    document.documentElement.className += (webP.height == 2) ? ' webp' : ' no-webp';
+                });
             };
             webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
         }, 100);
@@ -3215,29 +3217,53 @@ img {
 
     <!-- Countdown Timer Script -->
     <script defer>
+    // Optimized countdown timer - breaks work into smaller chunks
     function updateCountdown() {
-        const endDate = new Date('2025-10-31T20:00:00-05:00'); // October 31, 2025 at 8:00 PM CST
-        const now = new Date();
-        const diff = endDate - now;
-        
-        if (diff > 0) {
-            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-            
-            document.getElementById('days').textContent = String(days).padStart(2, '0');
-            document.getElementById('hours').textContent = String(hours).padStart(2, '0');
-            document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
-        } else {
-            document.getElementById('countdown').innerHTML = '<span style="color: #F4A261;">Offer Expired</span>';
-        }
+        requestAnimationFrame(() => {
+            const endDate = new Date('2025-10-31T20:00:00-05:00');
+            const now = new Date();
+            const diff = endDate - now;
+
+            if (diff > 0) {
+                // Calculate in idle time
+                requestIdleCallback(() => {
+                    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+                    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+                    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+                    // Update DOM in next idle period
+                    const daysEl = document.getElementById('days');
+                    const hoursEl = document.getElementById('hours');
+                    const minutesEl = document.getElementById('minutes');
+                    const secondsEl = document.getElementById('seconds');
+
+                    if (daysEl) daysEl.textContent = String(days).padStart(2, '0');
+                    if (hoursEl) hoursEl.textContent = String(hours).padStart(2, '0');
+                    if (minutesEl) minutesEl.textContent = String(minutes).padStart(2, '0');
+                    if (secondsEl) secondsEl.textContent = String(seconds).padStart(2, '0');
+                }, {timeout: 50});
+            } else {
+                const countdown = document.getElementById('countdown');
+                if (countdown) countdown.innerHTML = '<span style="color: #F4A261;">Offer Expired</span>';
+            }
+        });
     }
-    
-    // Update countdown every second
-    setInterval(updateCountdown, 1000);
-    updateCountdown(); // Initial call
+
+    // Start with delay to not block initial render
+    if (document.readyState === 'complete') {
+        setTimeout(() => {
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }, 100);
+    } else {
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+            }, 100);
+        });
+    }
     </script>
     
     <!-- SERVICES SECTION (MOVED UP) -->
