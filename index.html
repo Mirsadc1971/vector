@@ -138,33 +138,7 @@
     <!-- Stylesheets -->
     
     <!-- Google Analytics GA4 -->
-    <!-- Optimized Google Analytics (Lazy Loading) -->
-<script>
-// Lazy load Google Analytics
-let analyticsLoaded = false;
-function loadAnalytics() {
-  if (!analyticsLoaded) {
-    analyticsLoaded = true;
-    const script = document.createElement('script');
-    script.async = true;
-    script.defer = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LCX4DTB57C';
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LCX4DTB57C', {'send_page_view': false});
-    gtag('event', 'page_view');
-  }
-}
-// Load on user interaction
-['scroll', 'click', 'touchstart'].forEach(event => {
-  window.addEventListener(event, loadAnalytics, {once: true, passive: true});
-});
-// Or after 3 seconds
-setTimeout(loadAnalytics, 3000);
-</script>
+    
     
     <!-- Enhanced LocalBusiness Schema for Google Business Profile -->
     <script type="application/ld+json">
@@ -1664,33 +1638,7 @@ setTimeout(loadAnalytics, 3000);
     </script>
     
     <!-- Google Analytics 4 -->
-    <!-- Optimized Google Analytics (Lazy Loading) -->
-<script>
-// Lazy load Google Analytics
-let analyticsLoaded = false;
-function loadAnalytics() {
-  if (!analyticsLoaded) {
-    analyticsLoaded = true;
-    const script = document.createElement('script');
-    script.async = true;
-    script.defer = true;
-    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LCX4DTB57C';
-    document.head.appendChild(script);
-
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-LCX4DTB57C', {'send_page_view': false});
-    gtag('event', 'page_view');
-  }
-}
-// Load on user interaction
-['scroll', 'click', 'touchstart'].forEach(event => {
-  window.addEventListener(event, loadAnalytics, {once: true, passive: true});
-});
-// Or after 3 seconds
-setTimeout(loadAnalytics, 3000);
-</script>
+    
 
     <!-- LocalBusiness Schema Markup for SEO -->
     <script type="application/ld+json">
@@ -4316,6 +4264,52 @@ document.querySelectorAll('form').forEach(form => {
         if (btn) btn.classList.add('loading');
     });
 });
+</script>
+<!-- Ultra-Delayed Google Analytics - Loads after 5 seconds or user interaction -->
+<script>
+(function() {
+  let analyticsLoaded = false;
+
+  function loadAnalytics() {
+    if (analyticsLoaded) return;
+    analyticsLoaded = true;
+
+    // Create and inject the script
+    const script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LCX4DTB57C';
+
+    script.onload = function() {
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LCX4DTB57C', {
+        'send_page_view': true,
+        'transport_type': 'beacon'
+      });
+    };
+
+    document.body.appendChild(script);
+  }
+
+  // Only load after DOM is fully ready and page has been idle
+  if (document.readyState === 'complete') {
+    setTimeout(loadAnalytics, 5000);
+  } else {
+    window.addEventListener('load', function() {
+      setTimeout(loadAnalytics, 5000);
+    });
+  }
+
+  // Also load on any user interaction (as backup)
+  let interactionEvents = ['scroll', 'click', 'touchstart', 'mousemove'];
+  interactionEvents.forEach(function(event) {
+    window.addEventListener(event, function() {
+      setTimeout(loadAnalytics, 100);
+    }, {once: true, passive: true});
+  });
+})();
 </script>
 </body>
 </html>
