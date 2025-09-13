@@ -1,0 +1,38 @@
+/* SCOPED CSS FIX - Following ChatGPT/Claude's exact instructions */
+/* This CSS is SCOPED to prevent framework conflicts */
+
+/* Only target hero sections with inline background styles */
+section.hero[style*="background"] {
+    /* Ensure the inline style takes precedence */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Kill ONLY pseudo-elements on hero sections with backgrounds */
+section.hero[style*="background"]::before,
+section.hero[style*="background"]::after {
+    display: none !important;
+}
+
+/* Scope hero content specifically */
+section.hero[style*="background"] .hero-content {
+    background: transparent !important;
+    position: relative;
+    z-index: 2;
+}
+
+/* Scope text within hero sections */
+section.hero[style*="background"] h1,
+section.hero[style*="background"] h2,
+section.hero[style*="background"] p {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* Remove any global resets that might affect hero */
+section.hero[style*="background"] * {
+    /* Don't reset margins/paddings globally */
+    margin: initial;
+    padding: initial;
+}
