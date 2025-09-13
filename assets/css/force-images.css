@@ -1,0 +1,36 @@
+/* FORCE IMAGES TO DISPLAY - OVERRIDE EVERYTHING */
+
+.hero {
+    /* Force the inline style background to show */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    position: relative !important;
+    min-height: 600px !important;
+}
+
+/* KILL ALL OVERLAYS */
+.hero::before,
+.hero::after,
+.hero > *::before,
+.hero > *::after {
+    display: none !important;
+    content: none !important;
+    background: none !important;
+    opacity: 0 !important;
+}
+
+/* Ensure content is visible but doesn't block background */
+.hero-content {
+    position: relative !important;
+    z-index: 1 !important;
+    background: transparent !important;
+}
+
+/* Force text to be readable */
+.hero h1,
+.hero h2, 
+.hero p {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9) !important;
+}
