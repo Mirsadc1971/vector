@@ -411,6 +411,16 @@ body {
     <link rel="preload" as="style" href="assets/css/combined-optimized.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/css/combined-optimized.css"></noscript>
 
+    <!-- Optimize LCP rendering -->
+    <style>
+        /* Ensure H1 renders immediately with system font */
+        h1 {
+            font-family: system-ui, -apple-system, 'Segoe UI', sans-serif !important;
+            font-synthesis: none;
+            text-rendering: optimizeLegibility;
+        }
+    </style>
+
     <!-- WebP detection script - deferred for performance -->
     <script async>
         requestIdleCallback ? requestIdleCallback(function() {
@@ -3034,7 +3044,7 @@ img {
     <section class="hero hero-optimized">
         <div class="hero-content" style="max-width: 1200px; margin: 0 auto; margin-top: 80px;">
             <!-- SEO-OPTIMIZED H1 - Main Ranking Keyword -->
-            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #ffffff !important; text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0,0,0,0.5); line-height: 1.2;">
+            <h1 style="font-size: 2.5rem; font-weight: 700; margin-bottom: 1rem; color: #ffffff !important; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); line-height: 1.2; font-display: swap;">
                 <span>Manage369</span>
                 <span style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;">Chicago & North Shore Property Management</span>
             </h1>
