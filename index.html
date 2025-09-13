@@ -2653,6 +2653,46 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 </script>
+
+<style>
+/* Minimal Contrast Fixes - Preserving Original Design */
+
+/* Fix only the specific problem areas identified by Lighthouse */
+
+/* Fix gray text specifically in offer cards on dark backgrounds */
+div[style*="background: rgb(44, 62, 80)"] span[style*="color: #475569"] {
+    color: #cbd5e1 !important; /* Light gray for dark backgrounds only */
+}
+
+div[style*="background: rgb(31, 41, 55)"] span {
+    color: #e2e8f0 !important; /* Ensure readability on very dark backgrounds */
+}
+
+/* Fix the referral section text */
+div[style*="background: rgb(44, 62, 80)"] div[style*="color: #475569"] {
+    color: #94a3b8 !important;
+}
+
+/* Ensure the green checkmarks are visible */
+div[style*="background: rgb(44, 62, 80)"] div[style*="color: #16a34a"] {
+    color: #10b981 !important; /* Brighter green for dark background */
+}
+
+/* Fix footer location links - make them more visible */
+a[href*="property-management/"][style*="background: rgb(240, 244, 248)"] {
+    color: #1e293b !important; /* Dark text on light background */
+}
+
+/* Keep focus indicators for accessibility */
+a:focus, button:focus {
+    outline: 2px solid #F4A261 !important;
+    outline-offset: 2px !important;
+}
+
+/* Don't change the main design colors - keep brand identity */
+/* Only fix the specific contrast failures */
+</style>
+
 </head>
 <body>
 <div class="scroll-indicator" id="scrollIndicator"></div>
@@ -2863,15 +2903,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     <div style="margin-bottom: 1.5rem; flex-grow: 1;">
                         <div style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; color: #475569; font-size: 0.875rem;">
-                            <span style="color: #16a34a; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
+                            <span style="color: #059669; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
                             <span>Licensed & Insured (IDFPR License: 291.000211)</span>
                         </div>
                         <div style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; color: #475569; font-size: 0.875rem;">
-                            <span style="color: #16a34a; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
+                            <span style="color: #059669; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
                             <span>CAM, PCAM, AMS, FIC, and In-House accounting</span>
                         </div>
                         <div style="display: flex; align-items: flex-start; color: #475569; font-size: 0.875rem;">
-                            <span style="color: #16a34a; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
+                            <span style="color: #059669; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
                             <span>2,450+ units managed with 100% retention</span>
                         </div>
                     </div>
@@ -2907,7 +2947,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             <span style="font-size: 1.75rem; font-weight: 700; color: #ffffff;">$500</span>
                             <span style="font-size: 1rem; color: #475569;">referral bonus when they sign</span>
                         </div>
-                        <div style="color: #16a34a; font-weight: 600; font-size: 0.875rem; margin-bottom: 1rem;">A guaranteed $500 referral bonus when they sign</div>
+                        <div style="color: #059669; font-weight: 600; font-size: 0.875rem; margin-bottom: 1rem;">A guaranteed $500 referral bonus when they sign</div>
                         
                         <div style="font-size: 0.875rem; color: #cbd5e1; margin-bottom: 0.3rem;">They receive:</div>
                         <div style="color: #475569; font-size: 0.875rem;">The same exclusive savings:</div>
@@ -2924,15 +2964,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     <div style="margin-bottom: 1.5rem; flex-grow: 1;">
                         <div style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; color: #475569; font-size: 0.875rem;">
-                            <span style="color: #16a34a; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
+                            <span style="color: #059669; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
                             <span>Transparent, trusted, and fully licensed</span>
                         </div>
                         <div style="display: flex; align-items: flex-start; margin-bottom: 0.75rem; color: #475569; font-size: 0.875rem;">
-                            <span style="color: #16a34a; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
+                            <span style="color: #059669; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
                             <span>Nearly two decades of proven results</span>
                         </div>
                         <div style="display: flex; align-items: flex-start; color: #475569; font-size: 0.875rem;">
-                            <span style="color: #16a34a; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
+                            <span style="color: #059669; margin-right: 0.625rem; font-size: 1.125rem;">✓</span>
                             <span>Never lost an account</span>
                         </div>
                     </div>
