@@ -1,0 +1,31 @@
+/* Hero Image Fix for Property Management Area Pages
+   This patch file fixes image display issues without breaking existing styles
+   Created: 2025-09-12
+*/
+
+/* Ensure hero images display properly */
+.hero {
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+}
+
+/* Remove pseudo-elements that may block images */
+.hero::before,
+.hero::after {
+    display: none !important;
+}
+
+/* Ensure hero content remains visible */
+.hero-content {
+    position: relative;
+    z-index: 10;
+}
+
+/* Maintain text readability */
+.hero h1,
+.hero h2,
+.hero p {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
