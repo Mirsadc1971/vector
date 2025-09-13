@@ -2664,8 +2664,8 @@ body {
 </style>
 
 <script defer>
-// Combined optimized initialization - all tasks deferred for maximum performance
-function optimizeNavigation() {
+// Optimize navigation loading to prevent FOUC - deferred for performance
+document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('.navigation');
     const mobileNav = document.querySelector('.mobile-nav');
 
@@ -2675,7 +2675,7 @@ function optimizeNavigation() {
     if (mobileNav) {
         mobileNav.classList.add('loaded');
     }
-}
+});
 </script>
 
 <style>
@@ -2876,8 +2876,8 @@ function supportsWebP(callback) {
     webP.src = "data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA";
 }
 
-// WebP and lazy loading initialization - deferred for performance
-function initializeWebPAndLazyLoading() {
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', function() {
     // Add WebP support class
     supportsWebP(function(supported) {
         document.documentElement.classList.add(supported ? 'webp' : 'no-webp');
@@ -2894,32 +2894,6 @@ function initializeWebPAndLazyLoading() {
             img.src = img.dataset.src;
             img.removeAttribute('data-src');
         });
-    }
-}
-
-// Unified high-performance initialization - all tasks deferred using requestIdleCallback
-document.addEventListener('DOMContentLoaded', function() {
-    // Use requestIdleCallback to defer all non-critical initialization
-    if ('requestIdleCallback' in window) {
-        // Schedule navigation optimization with highest priority
-        requestIdleCallback(function() {
-            optimizeNavigation();
-        }, {timeout: 100});
-
-        // Schedule WebP and lazy loading with medium priority
-        requestIdleCallback(function() {
-            initializeWebPAndLazyLoading();
-        }, {timeout: 200});
-
-        // Schedule grid classes with lower priority
-        requestIdleCallback(function() {
-            initializeGridClasses();
-        }, {timeout: 300});
-    } else {
-        // Fallback for older browsers - use setTimeout with minimal delay
-        setTimeout(optimizeNavigation, 0);
-        setTimeout(initializeWebPAndLazyLoading, 16);
-        setTimeout(initializeGridClasses, 32);
     }
 });
 </script>
@@ -3345,18 +3319,19 @@ img {
         });
     }
 
-    // Completely non-blocking countdown initialization
-    function initializeCountdown() {
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    }
-
-    // Defer countdown initialization to idle time for zero blocking
-    if ('requestIdleCallback' in window) {
-        requestIdleCallback(initializeCountdown, {timeout: 500});
+    // Start with delay to not block initial render
+    if (document.readyState === 'complete') {
+        setTimeout(() => {
+            updateCountdown();
+            setInterval(updateCountdown, 1000);
+        }, 100);
     } else {
-        // Fallback with minimal delay
-        setTimeout(initializeCountdown, 100);
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                updateCountdown();
+                setInterval(updateCountdown, 1000);
+            }, 100);
+        });
     }
     </script>
     
@@ -3965,13 +3940,13 @@ img {
 </style>
     
     <script defer>
-// Grid classes initialization - deferred for performance
-function initializeGridClasses() {
+// Grid classes for service sections - deferred for performance
+document.addEventListener('DOMContentLoaded', function() {
     const propertyTypesGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .property-types-section > div');
     const serviceOfferingsGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .service-offerings-section > div');
     if (propertyTypesGrid) { propertyTypesGrid.classList.add('property-types-grid'); }
     if (serviceOfferingsGrid) { serviceOfferingsGrid.classList.add('service-offerings-grid'); }
-}
+});
     </script>
     
     <!-- Comprehensive Local Expertise Content Section -->
@@ -5094,35 +5069,20 @@ document.querySelectorAll('form').forEach(form => {
     document.body.appendChild(script);
   }
 
-  // Completely deferred analytics loading using requestIdleCallback
-  function initAnalytics() {
-    if ('requestIdleCallback' in window) {
-      requestIdleCallback(function() {
-        // Wait additional time to ensure zero blocking
-        setTimeout(loadAnalytics, 3000);
-      }, {timeout: 8000});
-    } else {
-      // Fallback with longer delay
-      setTimeout(loadAnalytics, 8000);
-    }
-  }
-
-  // Start analytics initialization on page load
+  // Only load after DOM is fully ready and page has been idle
   if (document.readyState === 'complete') {
-    initAnalytics();
+    setTimeout(loadAnalytics, 5000);
   } else {
-    window.addEventListener('load', initAnalytics);
+    window.addEventListener('load', function() {
+      setTimeout(loadAnalytics, 5000);
+    });
   }
 
-  // Also load on user interaction with requestIdleCallback
+  // Also load on any user interaction (as backup)
   let interactionEvents = ['scroll', 'click', 'touchstart', 'mousemove'];
   interactionEvents.forEach(function(event) {
     window.addEventListener(event, function() {
-      if ('requestIdleCallback' in window) {
-        requestIdleCallback(loadAnalytics, {timeout: 200});
-      } else {
-        setTimeout(loadAnalytics, 100);
-      }
+      setTimeout(loadAnalytics, 100);
     }, {once: true, passive: true});
   });
 })();
