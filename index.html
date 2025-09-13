@@ -2886,7 +2886,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize lazy loading
     if ('IntersectionObserver' in window) {
         addLazyLoading();
-        initPortfolioLazyLoading();
+        // initPortfolioLazyLoading(); // Function not defined, commenting out
     } else {
         // Fallback for older browsers
         const images = document.querySelectorAll('img[data-src]');
