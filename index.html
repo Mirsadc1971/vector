@@ -2925,61 +2925,6 @@ img {
     background-image: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%),
                       url('images/manage369randolphstation_optimized.jpg') !important;
 }
-
-/* Performance optimization - Convert inline handlers to CSS hover effects */
-/* Hover effects for buttons and interactive elements */
-.hover-btn-primary:hover {
-    background: #F1C40F !important;
-    border-color: #F1C40F !important;
-    transform: translateY(-2px) !important;
-}
-
-.hover-btn-secondary:hover {
-    background: rgba(255,255,255,0.1) !important;
-    border-color: #ffffff !important;
-    transform: translateY(-2px) !important;
-}
-
-.hover-card:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.12) !important;
-}
-
-.hover-card-large:hover {
-    transform: translateY(-8px) !important;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.15) !important;
-    border-color: #2563eb !important;
-}
-
-.hover-card-small:hover {
-    transform: translateY(-5px) !important;
-    box-shadow: 0 12px 30px rgba(255,149,0,0.15) !important;
-    border-color: #ff9500 !important;
-}
-
-.hover-glow:hover {
-    opacity: 1 !important;
-}
-
-.hover-link-primary:hover {
-    background: #1d4ed8 !important;
-    transform: translateY(-2px) !important;
-}
-
-.hover-link-secondary:hover {
-    background: #15803d !important;
-    transform: translateY(-2px) !important;
-}
-
-.hover-link-incorrect:hover {
-    background: #10b981 !important;
-    transform: translateY(-2px) !important;
-}
-
-.hover-contact:hover {
-    background: #F1C40F !important;
-    border-color: #F1C40F !important;
-}
 </style>
 
 </head>
@@ -3121,10 +3066,10 @@ img {
             </div>
             <div class="cta-buttons" style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
                 <!-- SIMPLIFIED CTAs - One for Leads, One for SEO -->
-                <a href="sms:8476522338" class="btn btn-primary hover-btn-primary" style="background: #2C3E50; color: #F4A261; border: 1px solid #F4A261; border: 2px solid #F4A261; padding: 18px 36px; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                <a href="sms:8476522338" class="btn btn-primary" style="background: #2C3E50; color: #F4A261; border: 1px solid #F4A261; border: 2px solid #F4A261; padding: 18px 36px; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.3s ease;" onmouseover="this.style.background='#F1C40F'; this.style.borderColor='#F1C40F'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='#F4A261'; this.style.borderColor='#F4A261'; this.style.transform='translateY(0)';">
                     Request a Consultation
                 </a>
-                <a href="property-management/" class="btn btn-secondary hover-btn-secondary" style="background: transparent; color: #ffffff; border: 2px solid rgba(255,255,255,0.9); padding: 18px 36px; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.3s ease;">
+                <a href="property-management/" class="btn btn-secondary" style="background: transparent; color: #ffffff; border: 2px solid rgba(255,255,255,0.9); padding: 18px 36px; font-size: 1.2rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; box-shadow: 0 4px 20px rgba(0,0,0,0.2); transition: all 0.3s ease;" onmouseover="this.style.background='rgba(255,255,255,0.1)'; this.style.borderColor='#ffffff'; this.style.transform='translateY(-2px)';" onmouseout="this.style.background='transparent'; this.style.borderColor='rgba(255,255,255,0.9)'; this.style.transform='translateY(0)';">
                     View Our Service Areas
                 </a>
             </div>
@@ -3155,7 +3100,7 @@ img {
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 2.5rem;">
                 
                 <!-- FIRST CARD -->
-                <div class="hover-card" style="background: #1f2937; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 2rem; position: relative; display: flex; flex-direction: column; min-height: 600px; transition: transform 0.3s, box-shadow 0.3s;">
+                <div style="background: #1f2937; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 2rem; position: relative; display: flex; flex-direction: column; min-height: 600px; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.08)'">
                     
                     <span style="position: absolute; top: 2rem; right: 2rem; background: #2C3E50; color: white; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
                         Limited Time
@@ -3210,13 +3155,13 @@ img {
                         Northbrook, Golf, Morton Grove, Niles, Wilmette, Skokie, Des Plaines, Winnetka, Glencoe, and Highland Park
                     </div>
                     
-                    <a href="#consultation-form" class="hover-link-primary" style="background: #2563eb; color: white; border: none; border-radius: 8px; padding: 1rem 1.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; margin-top: auto; transition: background 0.3s, transform 0.2s;">
+                    <a href="#consultation-form" style="background: #2563eb; color: white; border: none; border-radius: 8px; padding: 1rem 1.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; margin-top: auto; transition: background 0.3s, transform 0.2s;" onmouseover="this.style.background='#1d4ed8'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#2563eb'; this.style.transform='translateY(0)'">
                         Get Your Free Quote
                     </a>
                 </div>
 
                 <!-- SECOND CARD -->
-                <div class="hover-card" style="background: #1f2937; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 2rem; position: relative; display: flex; flex-direction: column; min-height: 600px; transition: transform 0.3s, box-shadow 0.3s;">
+                <div style="background: #1f2937; border-radius: 12px; box-shadow: 0 2px 10px rgba(0,0,0,0.08); padding: 2rem; position: relative; display: flex; flex-direction: column; min-height: 600px; transition: transform 0.3s, box-shadow 0.3s;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 5px 20px rgba(0,0,0,0.12)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 10px rgba(0,0,0,0.08)'">
                     
                     <span style="position: absolute; top: 2rem; right: 2rem; background: #F4A261; color: white; padding: 0.3rem 0.9rem; border-radius: 20px; font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
                         $500 Bonus
@@ -3271,7 +3216,7 @@ img {
                         Northbrook, Golf, Morton Grove, Niles, Wilmette, Skokie, Des Plaines, Winnetka, Glencoe, and Highland Park
                     </div>
                     
-                    <a href="mailto:service@manage369.com" class="hover-link-incorrect" style="background: #F4A261; color: white; border: none; border-radius: 8px; padding: 1rem 1.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; margin-top: auto; transition: background 0.3s, transform 0.2s;">
+                    <a href="mailto:service@manage369.com" style="background: #F4A261; color: white; border: none; border-radius: 8px; padding: 1rem 1.5rem; font-size: 1rem; font-weight: 600; cursor: pointer; text-align: center; text-decoration: none; display: block; margin-top: auto; transition: background 0.3s, transform 0.2s;" onmouseover="this.style.background='#15803d'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#10b981'; this.style.transform='translateY(0)'">
                         Email Us to Refer
                     </a>
                 </div>
@@ -3344,22 +3289,22 @@ img {
         <div class="property-types-section" style="margin-bottom: 3rem;">
             <h3 style="color: #2C3E50; font-size: 1.8rem; font-weight: 600; margin-bottom: 2rem;">Property Types We Serve</h3>
             <div class="property-types-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 3rem; max-width: 1100px; margin: 0 auto;">
-                <a href="services/condominium-management/" class="hover-card-large" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #1f2937; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;">
-                    <div class="hover-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;"></div>
+                <a href="services/condominium-management/" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #1f2937; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.borderColor='#e5e7eb'">
+                    <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
                     <div style="font-size: 4rem; margin-bottom: 1.5rem; ">🏢</div>
                     <h4 style="color: #2C3E50; margin-bottom: 1.5rem; font-size: 1.6rem; font-weight: 700;">Condominium Management</h4>
                     <p style="line-height: 1.6; margin-bottom: 2rem; color: #9ca3af; font-size: 1.05rem; padding-bottom: 4rem;">Expert management for high-rise and mid-rise condominium buildings, honoring the unique character of each North Shore and Chicago community.</p>
                     <div style="position: absolute; bottom: 2rem; left: 2.5rem; right: 2.5rem; text-align: center; color: #F4A261; font-weight: 700; font-size: 1.1rem; background: #eff6ff; padding: 12px 20px; border-radius: 8px;">Explore Services →</div>
                 </a>
-                <a href="services/hoa-management/" class="hover-card-large" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #1f2937; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;">
-                    <div class="hover-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;"></div>
+                <a href="services/hoa-management/" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #1f2937; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.borderColor='#e5e7eb'">
+                    <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
                     <div style="font-size: 4rem; margin-bottom: 1.5rem; ">🏘️</div>
                     <h4 style="color: #2C3E50; margin-bottom: 1.5rem; font-size: 1.6rem; font-weight: 700;">HOA Management</h4>
                     <p style="line-height: 1.6; margin-bottom: 2rem; color: #9ca3af; font-size: 1.05rem; padding-bottom: 4rem;">Thoughtful homeowner association management that respects the heritage and values of North Shore suburban communities.</p>
                     <div style="position: absolute; bottom: 2rem; left: 2.5rem; right: 2.5rem; text-align: center; color: #F4A261; font-weight: 700; font-size: 1.1rem; background: #eff6ff; padding: 12px 20px; border-radius: 8px;">Explore Services →</div>
                 </a>
-                <a href="services/townhome-management/" class="hover-card-large" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #1f2937; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;">
-                    <div class="hover-glow" style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;"></div>
+                <a href="services/townhome-management/" style="text-decoration: none; color: inherit; display: block; padding: 3rem 2.5rem; border-radius: 20px; background: #1f2937; color: #2C3E50; box-shadow: 0 8px 25px rgba(0,0,0,0.1); transition: all 0.4s ease; min-height: 320px; position: relative; overflow: hidden; border: 2px solid #e5e7eb;" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 15px 35px rgba(0,0,0,0.15)'; this.style.borderColor='#2563eb'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 8px 25px rgba(0,0,0,0.1)'; this.style.borderColor='#e5e7eb'">
+                    <div style="position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); opacity: 0; transition: opacity 0.4s;" onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'"></div>
                     <div style="font-size: 4rem; margin-bottom: 1.5rem; ">🏡</div>
                     <h4 style="color: #2C3E50; margin-bottom: 1.5rem; font-size: 1.6rem; font-weight: 700;">Townhome Management</h4>
                     <p style="line-height: 1.6; margin-bottom: 2rem; color: #9ca3af; font-size: 1.05rem; padding-bottom: 4rem;">Dedicated management for townhome communities and mixed-use developments with established municipal relationships.</p>
@@ -3373,32 +3318,32 @@ img {
             <h3 style="color: #F4A261; font-size: 1.8rem; font-weight: 600; margin-bottom: 1rem;">Complete Service Offerings</h3>
             <p style="margin-bottom: 2rem; color: #e5e7eb; font-size: 1.1rem;">Comprehensive management services provided to all property types</p>
             <div class="service-offerings-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto;">
-                <a href="services/financial-management/" class="hover-card-small" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;">
+                <a href="services/financial-management/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #F4A261;">💰</div>
                     <h4 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Financial Management</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #e5e7eb;">Comprehensive financial stewardship including budgeting, accounting, and reserve fund management.</p>
                 </a>
-                <a href="services/maintenance-coordination/" class="hover-card-small" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;">
+                <a href="services/maintenance-coordination/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #F4A261;">🔧</div>
                     <h4 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Maintenance Coordination</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #e5e7eb;">Proactive maintenance programs, emergency response, and quality control for property value preservation.</p>
                 </a>
-                <a href="services/board-support/" class="hover-card-small" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;">
+                <a href="services/board-support/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #F4A261;">🤝</div>
                     <h4 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Board Support</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #e5e7eb;">Expert guidance including meeting facilitation, governance consulting, and legal compliance support.</p>
                 </a>
-                <a href="services/administrative-services/" class="hover-card-small" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;">
+                <a href="services/administrative-services/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #F4A261;">📋</div>
                     <h4 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Administrative Services</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #e5e7eb;">Complete administrative support including record keeping, correspondence, and compliance management.</p>
                 </a>
-                <a href="services/capital-project-management/" class="hover-card-small" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;">
+                <a href="services/capital-project-management/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #F4A261;">🏗️</div>
                     <h4 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Capital Project Management</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #e5e7eb;">Expert oversight of major renovations ensuring projects stay on schedule and within budget.</p>
                 </a>
-                <a href="services/resident-relations/" class="hover-card-small" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;">
+                <a href="services/resident-relations/" style="text-decoration: none; color: inherit; display: block; padding: 2rem; border-radius: 15px; background: #1f2937; box-shadow: 0 6px 20px rgba(0,0,0,0.08); transition: all 0.3s ease; min-height: 220px; border: 2px solid transparent;" onmouseover="this.style.transform='translateY(-5px)'; this.style.boxShadow='0 12px 30px rgba(255,149,0,0.15)'; this.style.borderColor='#ff9500'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 6px 20px rgba(0,0,0,0.08)'; this.style.borderColor='transparent'">
                     <div style="font-size: 2.5rem; margin-bottom: 1rem; color: #F4A261;">👥</div>
                     <h4 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.2rem; font-weight: 600;">Resident Relations</h4>
                     <p style="line-height: 1.5; font-size: 0.95rem; color: #e5e7eb;">Professional communication, conflict resolution, and community event coordination.</p>
@@ -3438,7 +3383,7 @@ img {
             <div style="background: linear-gradient(135deg, #084298 0%, #2C3E50 100%); padding: 3rem; border-radius: 15px; margin-top: 3rem; border: 1px solid rgba(244,162,97,0.3); box-shadow: 0 10px 30px rgba(0,0,0,0.3); position: relative; overflow: hidden;">
                 <h3 style="font-size: 2rem; margin-bottom: 1rem; color: #F4A261; text-shadow: 0 0 20px rgba(244,162,97,0.5);">Discover the Manage369 Difference</h3>
                 <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: #e5e7eb; line-height: 1.6;">Experience property management excellence built on 18+ years of North Shore community relationships and local expertise. We'd be honored to discuss how we can serve your community.</p>
-                <a href="tel:8476522338" class="hover-contact" style="background: #F4A261; color: #2C3E50; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block; border: 2px solid #F4A261; transition: all 0.3s ease;">Contact Us at (847) 652-2338</a>
+                <a href="tel:8476522338" style="background: #F4A261; color: #2C3E50; padding: 15px 30px; border-radius: 10px; text-decoration: none; font-weight: bold; font-size: 1.2rem; display: inline-block; border: 2px solid #F4A261; transition: all 0.3s ease;" onmouseover="this.style.background='#F1C40F'; this.style.borderColor='#F1C40F';" onmouseout="this.style.background='#F4A261'; this.style.borderColor='#F4A261';">Contact Us at (847) 652-2338</a>
             </div>
         </div>
     </section>
