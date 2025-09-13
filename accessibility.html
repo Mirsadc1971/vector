@@ -1270,7 +1270,8 @@ footer {
 </style>
 <style>
 
-/* Fix Navigation Alignment */
+
+/* Fix Navigation Layout - Proper Alignment */
 .header {
     display: flex !important;
     justify-content: space-between !important;
@@ -1279,22 +1280,43 @@ footer {
 }
 
 .logo {
-    flex-shrink: 0 !important;
+    flex: 0 0 auto !important;
+    margin-right: 2rem !important;
 }
 
 .nav {
     display: flex !important;
     align-items: center !important;
     gap: 0 !important;
-    margin: 0 auto !important;
-    justify-content: center !important;
+    flex: 1 1 auto !important;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
 }
 
 .header-cta {
-    flex-shrink: 0 !important;
+    flex: 0 0 auto !important;
+    margin-left: 2rem !important;
+}
+
+/* Ensure nav links stay together */
+.nav-link {
+    white-space: nowrap !important;
+}
+
+.dropdown {
+    position: relative !important;
+}
+
+/* Mobile menu stays on right */
+.mobile-menu-toggle {
     margin-left: auto !important;
 }
 
+/* Remove conflicting styles */
+nav {
+    position: static !important;
+    transform: none !important;
+}
 /* Mobile menu fix */
 .mobile-menu-toggle {
     margin-left: auto !important;

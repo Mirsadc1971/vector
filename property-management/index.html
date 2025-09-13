@@ -1340,7 +1340,8 @@ footer {
 </style>
 <style>
 
-/* Fix Navigation Alignment */
+
+/* Fix Navigation Layout - Proper Alignment */
 .header {
     display: flex !important;
     justify-content: space-between !important;
@@ -1349,22 +1350,43 @@ footer {
 }
 
 .logo {
-    flex-shrink: 0 !important;
+    flex: 0 0 auto !important;
+    margin-right: 2rem !important;
 }
 
 .nav {
     display: flex !important;
     align-items: center !important;
     gap: 0 !important;
-    margin: 0 auto !important;
-    justify-content: center !important;
+    flex: 1 1 auto !important;
+    justify-content: flex-start !important;
+    margin-left: 0 !important;
 }
 
 .header-cta {
-    flex-shrink: 0 !important;
+    flex: 0 0 auto !important;
+    margin-left: 2rem !important;
+}
+
+/* Ensure nav links stay together */
+.nav-link {
+    white-space: nowrap !important;
+}
+
+.dropdown {
+    position: relative !important;
+}
+
+/* Mobile menu stays on right */
+.mobile-menu-toggle {
     margin-left: auto !important;
 }
 
+/* Remove conflicting styles */
+nav {
+    position: static !important;
+    transform: none !important;
+}
 /* Mobile menu fix */
 .mobile-menu-toggle {
     margin-left: auto !important;
@@ -1811,14 +1833,14 @@ nav {
 </div>
 
     <!-- Bottom Strategic CTA - Complete the Reverse Silo -->
-    <div style="background: linear-gradient(135deg, #F4A261, #e67e22); padding: 3rem 2rem; text-align: center; margin-top: 3rem;">
-        <h2 style="color: white; font-size: 2rem; margin-bottom: 1rem;">Start Saving 50% on Property Management</h2>
-        <p style="color: white; font-size: 1.2rem; margin-bottom: 2rem;">Join Property Management's most satisfied property communities</p>
+    <div style="background: #2C3E50; padding: 3rem 2rem; text-align: center; margin-top: 3rem; border: 2px solid #F4A261;">
+        <h2 style="color: #F4A261; font-size: 2rem; margin-bottom: 1rem;">Start Saving 50% on Property Management</h2>
+        <p style="color: #e5e7eb; font-size: 1.2rem; margin-bottom: 2rem;">Join Property Management's most satisfied property communities</p>
         <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-            <a href="../../contact.html" style="background: #1f2937; color: #e67e22; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
+            <a href="../../contact.html" style="background: linear-gradient(135deg, #084298 0%, #F4A261 100%); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
                 📞 Request Consultation
             </a>
-            <a href="sms:8476522338" style="background: transparent; color: white; border: 2px solid white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
+            <a href="sms:8476522338" style="background: transparent; color: #F4A261; border: 2px solid #F4A261; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
                 📱 Text Us Now
             </a>
         </div>
