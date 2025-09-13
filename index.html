@@ -339,13 +339,77 @@ body {
     <link rel="preload" as="image" href="images/manage369randolphstation.webp" type="image/webp">
     <link rel="preload" as="image" href="images/manage369randolphstation.jpg" type="image/jpeg">
 
-    <!-- Non-critical CSS preloads -->
-    <link rel="preload" as="style" href="assets/css/main.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="assets/css/main.css"></noscript>
-    <link rel="preload" as="style" href="css/cls-fix.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/cls-fix.css"></noscript>
-    <link rel="preload" as="style" href="css/image-optimization.css" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="css/image-optimization.css"></noscript>
+    <!-- Critical CSS inlined for performance -->
+    <style>
+    /* Critical Above-the-Fold CSS */
+    :root {
+        --text-primary: #111827;
+        --bg-white: #ffffff;
+        --brand-primary: #1e40af;
+        --brand-accent: #ea580c;
+        --btn-text-light: #ffffff;
+    }
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+    header, nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        height: 60px;
+    }
+    .hero, .hero-optimized {
+        padding: 40px 20px 20px;
+        text-align: center;
+        color: white;
+        min-height: 600px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+        contain: layout style paint;
+        isolation: isolate;
+        transform: translateZ(0);
+        background-attachment: scroll;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+    .webp .hero-optimized {
+        background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%), url('images/manage369randolphstation.webp') center/cover !important;
+    }
+    .no-webp .hero-optimized, .hero-optimized {
+        background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%), url('images/manage369randolphstation.jpg') center/cover !important;
+    }
+    .hero-optimized .hero-content {
+        max-width: 1200px;
+        margin: 80px auto 0;
+        position: relative;
+        z-index: 2;
+    }
+    .hero-optimized h1, .hero h1 {
+        font-size: 2.5rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #ffffff !important;
+        text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0,0,0,0.5);
+        line-height: 1.2;
+    }
+    @media (max-width: 768px) {
+        .hero-optimized h1, .hero h1 { font-size: 2rem; margin-top: 1rem; }
+        .hero-optimized { min-height: 400px; padding: 20px 15px 15px; }
+        .hero-optimized .hero-content { margin-top: 40px; }
+    }
+    </style>
+
+    <!-- Combined optimized CSS -->
+    <link rel="preload" as="style" href="assets/css/combined-optimized.css" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="assets/css/combined-optimized.css"></noscript>
 
     <!-- WebP detection script -->
     <script>
@@ -2679,7 +2743,7 @@ div[style*="background: rgb(44, 62, 80)"] div[style*="color: #22c55e"] {
 }
 
 /* Fix footer location links - make them more visible */
-a[href*="property-management/"][style*="background: rgb(240, 244, 248)"] {
+a[href*="property-management/"][style*="background: #2C3E50"] {
     color: #1e293b !important; /* Dark text on light background */
 }
 

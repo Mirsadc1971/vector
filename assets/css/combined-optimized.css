@@ -1,0 +1,857 @@
+/* ============================
+   Manage369 Combined Optimized CSS
+   Includes main.css, cls-fix.css, and image-optimization.css
+   Accessibility & Global Styles
+   ============================ */
+
+/* ============================
+   CSS Variables for Consistent Colors
+   WCAG AA Compliant Contrast Ratios
+   ============================ */
+
+:root {
+    /* Primary Colors - High Contrast */
+    --text-primary: #111827;        /* Dark gray - 15.3:1 on white */
+    --text-secondary: #4b5563;      /* Medium gray - 8.3:1 on white */
+    --text-light: #4b5563;           /* Light gray - 5.7:1 on white (min 4.5:1) */
+
+    /* Background Colors */
+    --bg-white: #ffffff;
+    --bg-light: #f9fafb;
+    --bg-gray: #f3f4f6;
+    --bg-dark: #111827;
+
+    /* Brand Colors - WCAG AA Compliant */
+    --brand-primary: #1e40af;       /* Dark blue - 7.3:1 on white */
+    --brand-primary-dark: #1e3a8a;  /* Darker blue - 9.1:1 on white */
+    --brand-secondary: #dc2626;     /* Red - 5.9:1 on white */
+    --brand-accent: #ea580c;        /* Orange - 4.5:1 on white */
+
+    /* Link Colors - Meeting 4.5:1 minimum */
+    --link-color: #0a58ca;           /* Accessible blue - 4.7:1 on white */
+    --link-hover: #084298;           /* Darker blue - 8.3:1 on white */
+    --link-visited: #6b21a8;         /* Purple - 6.4:1 on white */
+
+    /* Button Colors - High Contrast */
+    --btn-primary-bg: #1e40af;      /* 7.3:1 white text on this */
+    --btn-primary-hover: #1e3a8a;   /* 9.1:1 white text on this */
+    --btn-secondary-bg: #dc2626;    /* 5.9:1 white text on this */
+    --btn-secondary-hover: #b91c1c; /* 7.2:1 white text on this */
+    --btn-text-light: #ffffff;
+    --btn-text-dark: #111827;
+
+    /* Status Colors - Accessible */
+    --success: #059669;              /* Green - 4.5:1 on white */
+    --warning: #d97706;              /* Amber - 4.5:1 on white */
+    --error: #dc2626;                /* Red - 5.9:1 on white */
+    --info: #0284c7;                 /* Sky blue - 4.5:1 on white */
+
+    /* Focus Colors */
+    --focus-color: #ea580c;          /* Orange for visibility */
+    --focus-outline: 3px solid var(--focus-color);
+}
+
+/* ============================
+   Critical Above-the-Fold Styles
+   ============================ */
+
+/* Container and Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header/Navigation - Critical for CLS */
+header,
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    height: var(--header-height, 60px);
+}
+
+/* Hero Section - Critical for performance */
+.hero,
+.hero-optimized {
+    /* Core styling */
+    padding: 40px 20px 20px;
+    text-align: center;
+    color: white;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    /* CLS Prevention */
+    contain: layout style paint;
+    isolation: isolate;
+    transform: translateZ(0); /* Force GPU acceleration */
+    will-change: auto; /* Remove will-change that causes repaints */
+
+    /* Background optimizations */
+    background-attachment: scroll; /* Better performance than fixed */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Hero Background Images */
+.webp .hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                url('../images/manage369randolphstation.webp') center/cover !important;
+}
+
+.no-webp .hero-optimized,
+.hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                url('../images/manage369randolphstation.jpg') center/cover !important;
+}
+
+/* Hero Content */
+.hero-optimized .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-optimized h1,
+.hero h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0,0,0,0.5);
+    line-height: 1.2;
+}
+
+/* ============================
+   Accessibility Improvements
+   ============================ */
+
+/* Visible focus indicators for keyboard navigation */
+:focus {
+    outline: 2px solid var(--brand-primary);
+    outline-offset: 2px;
+}
+
+/* Remove focus for mouse users but keep for keyboard */
+:focus:not(:focus-visible) {
+    outline: none;
+}
+
+/* Enhanced focus for keyboard users */
+:focus-visible {
+    outline: var(--focus-outline);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+/* Skip to main content link for screen readers */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    background: var(--brand-primary);
+    color: var(--btn-text-light);
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 4px;
+    z-index: 10000;
+}
+
+.skip-link:focus {
+    left: 8px;
+    top: 8px;
+    width: auto;
+    height: auto;
+    padding: 0.75rem 1.5rem;
+    z-index: 10000;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Ensure tap targets meet minimum size (44x44px) */
+button,
+.btn,
+a.button,
+.nav a,
+.nav-link,
+.phone-button,
+input[type="submit"],
+input[type="button"] {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Touch-friendly form elements */
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+input[type="password"],
+select,
+textarea {
+    min-height: 44px;
+    padding: 10px 12px;
+}
+
+/* Respect user's motion preferences */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* ============================
+   Color Contrast & Readability
+   ============================ */
+
+/* Ensure sufficient color contrast */
+body {
+    color: var(--text-primary);
+    background-color: var(--bg-white);
+}
+
+/* Links with sufficient contrast */
+a {
+    color: var(--link-color);
+    text-decoration: underline;
+}
+
+a:hover,
+a:focus {
+    color: var(--link-hover);
+    text-decoration: none;
+}
+
+/* Visited links */
+a:visited {
+    color: var(--link-visited);
+}
+
+/* ============================
+   Button Contrast Fixes
+   ============================ */
+
+/* Primary buttons with high contrast */
+.btn,
+.button,
+button,
+input[type="submit"],
+input[type="button"],
+.btn-primary {
+    background-color: var(--btn-primary-bg);
+    color: var(--btn-text-light);
+    border: 2px solid transparent;
+    font-weight: 600;
+}
+
+.btn:hover,
+.button:hover,
+button:hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+.btn-primary:hover {
+    background-color: var(--btn-primary-hover);
+}
+
+/* Secondary buttons */
+.btn-secondary {
+    background-color: var(--btn-secondary-bg);
+    color: var(--btn-text-light);
+}
+
+.btn-secondary:hover {
+    background-color: var(--btn-secondary-hover);
+}
+
+/* Light buttons (on dark backgrounds) */
+.btn-light {
+    background-color: var(--bg-white);
+    color: var(--text-primary);
+    border: 2px solid var(--text-primary);
+}
+
+/* Phone button specific fix */
+.phone-button {
+    background-color: var(--brand-accent) !important;
+    color: var(--btn-text-light) !important;
+    font-weight: 600;
+}
+
+/* ============================
+   CLS (Cumulative Layout Shift) Fixes
+   ============================ */
+
+/* Fix hero section ::before element CLS */
+.hero::before,
+.hero-optimized::before {
+    /* Make animation more performant */
+    pointer-events: none;
+    z-index: 0;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+    will-change: transform; /* Only animate transform, not position */
+}
+
+/* Optimize shimmer animation to use transform instead of left position */
+@keyframes shimmer-optimized {
+    0% {
+        transform: translateX(-100%) translateZ(0);
+    }
+    100% {
+        transform: translateX(100%) translateZ(0);
+    }
+}
+
+/* Override the problematic animation */
+.hero::before {
+    left: 0 !important; /* Keep position static */
+    animation: shimmer-optimized 8s infinite !important;
+}
+
+/* Fix section ::before elements */
+section::before {
+    /* Prevent layout shift by using transform */
+    contain: layout;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Ensure main section has stable dimensions */
+#main, section#main {
+    min-height: 600px; /* Prevent height shifts */
+    contain: layout style;
+}
+
+/* Predefine space for images to prevent shift */
+img {
+    aspect-ratio: attr(width) / attr(height);
+    height: auto;
+}
+
+/* Fix any animated gradients */
+.animated-gradient,
+[class*="gradient"] {
+    transform: translateZ(0);
+    backface-visibility: hidden;
+}
+
+/* Ensure fonts don't cause layout shift */
+body {
+    font-display: swap;
+}
+
+/* Reserve space for lazy-loaded content */
+[loading="lazy"] {
+    min-height: 1px;
+    display: block;
+}
+
+/* Stabilize button animations */
+.btn::before,
+button::before,
+.submit-btn::before {
+    transform: translateZ(0);
+    will-change: opacity, transform;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Prevent card hover shifts */
+.card,
+.service-card,
+.offer-card {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
+/* ============================
+   Responsive Design
+   ============================ */
+
+/* Responsive background images for different screen sizes */
+@media (max-width: 768px) {
+    .webp .hero-optimized {
+        background: linear-gradient(135deg, rgba(8,66,152,0.35) 0%, rgba(244,162,97,0.35) 100%),
+                    url('../images/manage369randolphstation.webp') center/cover !important;
+        background-size: cover;
+        background-position: center 30%;
+    }
+
+    .no-webp .hero-optimized,
+    .hero-optimized {
+        background: linear-gradient(135deg, rgba(8,66,152,0.35) 0%, rgba(244,162,97,0.35) 100%),
+                    url('../images/manage369randolphstation.jpg') center/cover !important;
+        background-size: cover;
+        background-position: center 30%;
+    }
+
+    .hero-optimized h1,
+    .hero h1 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .hero-optimized {
+        min-height: 400px;
+        padding: 20px 15px 15px;
+    }
+
+    .hero-optimized .hero-content {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-optimized h1,
+    .hero h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-optimized {
+        min-height: 350px;
+    }
+}
+
+/* High DPI displays optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .webp .hero-optimized {
+        background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                    url('../images/manage369randolphstation.webp') center/cover !important;
+    }
+}
+
+/* ============================
+   Screen Reader Helpers
+   ============================ */
+
+/* Visually hidden but accessible to screen readers */
+.sr-only,
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Show on focus (for skip links, etc.) */
+.sr-only-focusable:focus,
+.visually-hidden-focusable:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+/* ============================
+   Form Accessibility
+   ============================ */
+
+/* Required field indicators */
+.required,
+[aria-required="true"]::after {
+    color: var(--error);
+    font-weight: 600;
+}
+
+/* Form validation states */
+input:invalid,
+textarea:invalid,
+select:invalid {
+    border-color: var(--error);
+}
+
+input:valid:focus,
+textarea:valid:focus,
+select:valid:focus {
+    border-color: var(--success);
+}
+
+/* Error messages */
+.error-message,
+[role="alert"] {
+    color: var(--error);
+    font-weight: 500;
+    margin-top: 0.25rem;
+}
+
+/* ============================
+   Loading States
+   ============================ */
+
+/* Loading spinner for async operations */
+.loading {
+    position: relative;
+    pointer-events: none;
+    opacity: 0.6;
+}
+
+.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #1e40af;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ============================
+   Navigation & Dropdown
+   ============================ */
+
+/* Navigation links contrast */
+.nav-link,
+.nav a {
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.nav-link:hover,
+.nav a:hover {
+    color: var(--brand-primary);
+}
+
+/* Dropdown content contrast */
+.dropdown-content {
+    background-color: var(--bg-white);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.dropdown-content a {
+    color: var(--text-primary);
+}
+
+.dropdown-content a:hover {
+    background-color: var(--bg-light);
+    color: var(--brand-primary);
+}
+
+/* ============================
+   Service Cards & Components
+   ============================ */
+
+/* Service cards contrast */
+.service-card {
+    background-color: var(--bg-white);
+    border: 1px solid rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+    color: var(--brand-primary);
+}
+
+.service-card p {
+    color: var(--text-secondary);
+}
+
+.service-card a {
+    color: var(--link-color);
+    font-weight: 600;
+}
+
+/* ============================
+   Footer Styles
+   ============================ */
+
+/* Footer contrast fixes */
+footer {
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+}
+
+footer a {
+    color: var(--bg-light);
+}
+
+footer a:hover {
+    color: var(--brand-accent);
+}
+
+/* ============================
+   Utility Classes
+   ============================ */
+
+/* Text alignment */
+.text-left { text-align: left; }
+.text-center { text-align: center; }
+.text-right { text-align: right; }
+
+/* Spacing */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mt-3 { margin-top: 1.5rem; }
+.mt-4 { margin-top: 2rem; }
+
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+.mb-3 { margin-bottom: 1.5rem; }
+.mb-4 { margin-bottom: 2rem; }
+
+/* Flexbox utilities */
+.flex { display: flex; }
+.flex-wrap { flex-wrap: wrap; }
+.items-center { align-items: center; }
+.justify-center { justify-content: center; }
+.justify-between { justify-content: space-between; }
+.gap-1 { gap: 0.5rem; }
+.gap-2 { gap: 1rem; }
+.gap-3 { gap: 1.5rem; }
+
+/* ============================
+   Smooth Scrolling
+   ============================ */
+
+html {
+    scroll-behavior: smooth;
+    font-size: clamp(16px, 2.5vw, 18px);
+}
+
+/* Disable for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ============================
+   Typography
+   ============================ */
+
+/* Readable line lengths */
+p,
+li {
+    max-width: 70ch;
+}
+
+/* Heading hierarchy */
+h1 { font-size: clamp(1.75rem, 4vw, 2.5rem); }
+h2 { font-size: clamp(1.5rem, 3.5vw, 2rem); }
+h3 { font-size: clamp(1.25rem, 3vw, 1.75rem); }
+h4 { font-size: clamp(1.1rem, 2.5vw, 1.5rem); }
+
+/* ============================
+   Focus Management
+   ============================ */
+
+/* Remove outline from elements that shouldn't show focus */
+[tabindex="-1"]:focus {
+    outline: none;
+}
+
+/* Ensure interactive elements are clearly focusable */
+a,
+button,
+input,
+select,
+textarea,
+[tabindex="0"],
+[role="button"],
+[role="link"] {
+    position: relative;
+}
+
+/* Focus trap indicator for modals */
+.focus-trap {
+    position: relative;
+}
+
+.focus-trap::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border: 2px dashed #1e40af;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+
+.focus-trap:focus-within::before {
+    opacity: 1;
+}
+
+/* ============================
+   ARIA Live Regions
+   ============================ */
+
+/* Screen reader announcements */
+[aria-live="polite"] {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+[aria-live="assertive"] {
+    position: absolute;
+    left: -10000px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+/* ============================
+   High Contrast Mode Support
+   ============================ */
+
+@media (prefers-contrast: high) {
+    * {
+        border-color: currentColor !important;
+    }
+
+    button,
+    .btn,
+    input[type="submit"] {
+        border: 2px solid currentColor;
+    }
+
+    :focus {
+        outline-width: 3px;
+    }
+}
+
+/* ============================
+   Dark Mode Support
+   ============================ */
+
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e5e5e5;
+        background-color: #1a1a1a;
+    }
+
+    a {
+        color: #60a5fa;
+    }
+
+    a:hover,
+    a:focus {
+        color: #93bbfc;
+    }
+
+    a:visited {
+        color: #c084fc;
+    }
+
+    .skip-link {
+        background: #2563eb;
+    }
+
+    input,
+    textarea,
+    select {
+        background-color: #2d2d2d;
+        color: #e5e5e5;
+        border-color: #4a4a4a;
+    }
+}
+
+/* ============================
+   Print Styles
+   ============================ */
+
+@media print {
+    /* Hide navigation and non-essential elements */
+    .header,
+    .nav,
+    .phone-button,
+    .skip-link,
+    footer,
+    .dropdown-content {
+        display: none !important;
+    }
+
+    /* Ensure content is readable when printed */
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+        background: #fff;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    /* Show URLs for links */
+    a[href^="http"]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+    }
+
+    /* Remove background images for better printing */
+    .hero-optimized,
+    .section-with-bg {
+        background-image: none !important;
+        background: #f5f5f5 !important;
+        color: #333 !important;
+    }
+}
+
+/* ============================
+   Image Preloading and Lazy Loading
+   ============================ */
+
+/* Critical image preloading via CSS */
+@media (min-width: 768px) {
+    body::before {
+        content: '';
+        position: absolute;
+        left: -9999px;
+        background: url('../images/manage369randolphstation.webp');
+        background: url('../images/manage369randolphstation.jpg');
+    }
+}
+
+/* Lazy loading optimization for subsequent sections */
+.section-with-bg {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.webp .section-with-bg {
+    background-image: url('../images/manage369randolphstation.webp');
+}
+
+.no-webp .section-with-bg {
+    background-image: url('../images/manage369randolphstation.jpg');
+}
