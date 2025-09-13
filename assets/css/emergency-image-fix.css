@@ -1,0 +1,61 @@
+/* EMERGENCY FIX - FORCE HERO IMAGES TO DISPLAY */
+/* This overrides ALL other CSS with maximum specificity */
+
+/* Kill ALL pseudo-elements that create overlays */
+section.hero::before,
+section.hero::after,
+.hero::before,
+.hero::after,
+#main::before,
+#main::after,
+section#main::before,
+section#main::after {
+    display: none !important;
+    content: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    position: static !important;
+    z-index: -9999 !important;
+}
+
+/* Force the hero section to show its inline background */
+section.hero,
+section#main,
+.hero {
+    /* Don't override the inline style background */
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: scroll !important;
+    /* Remove any filters or blend modes */
+    filter: none !important;
+    backdrop-filter: none !important;
+    background-blend-mode: normal !important;
+    /* Ensure visibility */
+    opacity: 1 !important;
+    visibility: visible !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Ensure content doesn't block background */
+.hero-content,
+section.hero > div {
+    background: transparent !important;
+    backdrop-filter: none !important;
+}
+
+/* Force text to be visible */
+section.hero h1,
+section.hero h2,
+section.hero p,
+.hero h1,
+.hero h2,
+.hero p {
+    color: #ffffff !important;
+    text-shadow: 2px 2px 6px rgba(0,0,0,0.9), 
+                 0 0 20px rgba(0,0,0,0.8) !important;
+    position: relative !important;
+    z-index: 2 !important;
+}
