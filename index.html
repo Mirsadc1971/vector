@@ -15,7 +15,7 @@
 
 /* Body base styles - prevent layout shifts */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
     color: #e5e7eb;
     background: #1a252f;
@@ -55,7 +55,7 @@ body {
 /* Hero section - critical for LCP */
 .hero {
     background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%),
-                url('images/manage369randolphstation.webp') center/cover;
+                url('images/manage369randolphstation_compressed.webp') center/cover;
     background-attachment: scroll;
     background-repeat: no-repeat;
     background-size: cover;
@@ -262,12 +262,12 @@ body {
 /* WebP fallback for hero background */
 .webp .hero {
     background-image: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%),
-                      url('images/manage369randolphstation.webp');
+                      url('images/manage369randolphstation_compressed.webp');
 }
 
 .no-webp .hero {
     background-image: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%),
-                      url('images/manage369randolphstation.jpg');
+                      url('images/manage369randolphstation_compressed.jpg');
     background-image: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%),
 }
 
@@ -329,15 +329,19 @@ body {
     </style>
 
 
-    <!-- Critical font preloads -->
-    <link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <!-- Critical preconnect hints for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://www.googletagmanager.com">
+    <link rel="preconnect" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link rel="dns-prefetch" href="//www.googletagmanager.com">
+    <link rel="dns-prefetch" href="//www.google-analytics.com">
 
     <!-- Critical image preloads for LCP -->
-    <link rel="preload" as="image" href="images/manage369randolphstation.webp" type="image/webp">
-    <link rel="preload" as="image" href="images/manage369randolphstation.jpg" type="image/jpeg">
+    <link rel="preload" as="image" href="images/manage369randolphstation_compressed.webp" type="image/webp">
+    <link rel="preload" as="image" href="images/manage369randolphstation_compressed.jpg" type="image/jpeg">
 
     <!-- Critical CSS inlined for performance -->
     <style>
@@ -381,10 +385,10 @@ body {
         background-position: center;
     }
     .webp .hero-optimized {
-        background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%), url('images/manage369randolphstation.webp') center/cover !important;
+        background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%), url('images/manage369randolphstation_compressed.webp') center/cover !important;
     }
     .no-webp .hero-optimized, .hero-optimized {
-        background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%), url('images/manage369randolphstation.jpg') center/cover !important;
+        background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%), url('images/manage369randolphstation_compressed.jpg') center/cover !important;
     }
     .hero-optimized .hero-content {
         max-width: 1200px;
@@ -411,15 +415,21 @@ body {
     <link rel="preload" as="style" href="assets/css/combined-optimized.css" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="assets/css/combined-optimized.css"></noscript>
 
-    <!-- WebP detection script -->
-    <script>
-        (function() {
+    <!-- WebP detection script - deferred for performance -->
+    <script async>
+        requestIdleCallback ? requestIdleCallback(function() {
             var webP = new Image();
             webP.onload = webP.onerror = function() {
                 document.documentElement.className += (webP.height == 2) ? ' webp' : ' no-webp';
             };
             webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-        })();
+        }) : setTimeout(function() {
+            var webP = new Image();
+            webP.onload = webP.onerror = function() {
+                document.documentElement.className += (webP.height == 2) ? ' webp' : ' no-webp';
+            };
+            webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+        }, 100);
     </script>
 
 
@@ -577,10 +587,6 @@ body {
     
     <!-- Performance and Resource Hints -->
     <meta http-equiv="x-dns-prefetch-control" content="on">
-    <link rel="dns-prefetch" href="//fonts.googleapis.com">
-    <link rel="dns-prefetch" href="//www.googletagmanager.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preconnect" href="https://www.google-analytics.com">
     
     <!-- Critical Resource Preloads -->
     
@@ -956,7 +962,7 @@ body {
         .hero {
             height: 100vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('images/manstandingmanage369.jpg');
+                        url('images/manstandingmanage369_compressed.webp');
     background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
             background-size: cover;
             background-position: center;
@@ -1653,7 +1659,7 @@ body {
     /* Premium gradient backgrounds */
     .hero {
         background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
-                    url('images/manage369randolphstation.webp') center/cover !important;
+                    url('images/manage369randolphstation_compressed.webp') center/cover !important;
         position: relative;
         overflow: hidden;
     }
@@ -2289,7 +2295,7 @@ body {
     /* Premium gradient backgrounds */
     .hero {
         background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
-                    url('images/manage369randolphstation.webp') center/cover !important;
+                    url('images/manage369randolphstation_compressed.webp') center/cover !important;
         position: relative;
         overflow: hidden;
     }
@@ -2634,67 +2640,9 @@ body {
     }
 </style>
     
-<script>
-(function() {
-    'use strict';
+<!-- WebP detection moved to head for performance -->
 
-    // WebP detection function
-    function supportsWebP(callback) {
-        var webP = new Image();
-        webP.onload = webP.onerror = function () {
-            callback(webP.height == 2);
-        };
-        webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
-    }
-
-    // Add WebP support class to HTML element
-    supportsWebP(function(supported) {
-        var htmlElement = document.documentElement;
-        if (supported) {
-            htmlElement.classList.add('webp');
-        } else {
-            htmlElement.classList.add('no-webp');
-        }
-    });
-
-    // Preload critical background images
-    function preloadCriticalImages() {
-        var link1 = document.createElement('link');
-        link1.rel = 'preload';
-        link1.as = 'image';
-
-        var link2 = document.createElement('link');
-        link2.rel = 'preload';
-        link2.as = 'image';
-
-        // Check WebP support and preload appropriate format
-        supportsWebP(function(supported) {
-            if (supported) {
-                link1.href = 'images/manage369randolphstation.webp';
-                link1.type = 'image/webp';
-            } else {
-                link2.href = 'images/manage369randolphstation.webp';
-                link2.type = 'image/jpeg';
-            }
-
-            document.head.appendChild(link1);
-            document.head.appendChild(link2);
-        });
-    }
-
-    // Run preload on DOM ready
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', preloadCriticalImages);
-    } else {
-        preloadCriticalImages();
-    }
-
-})();
-</script>
-
-<link rel="preload" as="font" type="font/woff2" crossorigin href="https://fonts.gstatic.com/s/roboto/v30/KFOmCnqEu92Fr1Mu4mxK.woff2">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<!-- Google Fonts removed for performance -->
 <style>
 /* Critical CLS fixes */
 .hero{contain:layout style paint;overflow:hidden;transform:translateZ(0)}
@@ -2703,8 +2651,8 @@ body {
 #main{min-height:600px}
 </style>
 
-<script>
-// Optimize navigation loading to prevent FOUC
+<script defer>
+// Optimize navigation loading to prevent FOUC - deferred for performance
 document.addEventListener('DOMContentLoaded', function() {
     const nav = document.querySelector('.navigation');
     const mobileNav = document.querySelector('.mobile-nav');
@@ -3463,7 +3411,7 @@ nav {
     /* Premium gradient backgrounds */
     .hero {
         background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
-                    url('images/manage369randolphstation.webp') center/cover !important;
+                    url('images/manage369randolphstation_compressed.webp') center/cover !important;
         position: relative;
         overflow: hidden;
     }
@@ -3808,7 +3756,15 @@ nav {
     }
 </style>
     
-    <script>document.addEventListener('DOMContentLoaded', function() { const propertyTypesGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .property-types-section > div'); const serviceOfferingsGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .service-offerings-section > div'); if (propertyTypesGrid) { propertyTypesGrid.classList.add('property-types-grid'); } if (serviceOfferingsGrid) { serviceOfferingsGrid.classList.add('service-offerings-grid'); } });</script>
+    <script defer>
+// Grid classes for service sections - deferred for performance
+document.addEventListener('DOMContentLoaded', function() {
+    const propertyTypesGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .property-types-section > div');
+    const serviceOfferingsGrid = document.querySelector('section[style*="Our Complete Property Management Services"] .service-offerings-section > div');
+    if (propertyTypesGrid) { propertyTypesGrid.classList.add('property-types-grid'); }
+    if (serviceOfferingsGrid) { serviceOfferingsGrid.classList.add('service-offerings-grid'); }
+});
+    </script>
     
     <!-- Comprehensive Local Expertise Content Section -->
     <section style="padding: 4rem 2rem; background: #1f2937; max-width: 1200px; margin: 0 auto;">
@@ -4412,7 +4368,7 @@ nav {
     /* Premium gradient backgrounds */
     .hero {
         background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
-                    url('images/manage369randolphstation.webp') center/cover !important;
+                    url('images/manage369randolphstation_compressed.webp') center/cover !important;
         position: relative;
         overflow: hidden;
     }
