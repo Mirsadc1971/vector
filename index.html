@@ -138,8 +138,33 @@
     <!-- Stylesheets -->
     
     <!-- Google Analytics GA4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCX4DTB57C"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LCX4DTB57C');</script>
+    <!-- Optimized Google Analytics (Lazy Loading) -->
+<script>
+// Lazy load Google Analytics
+let analyticsLoaded = false;
+function loadAnalytics() {
+  if (!analyticsLoaded) {
+    analyticsLoaded = true;
+    const script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LCX4DTB57C';
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LCX4DTB57C', {'send_page_view': false});
+    gtag('event', 'page_view');
+  }
+}
+// Load on user interaction
+['scroll', 'click', 'touchstart'].forEach(event => {
+  window.addEventListener(event, loadAnalytics, {once: true, passive: true});
+});
+// Or after 3 seconds
+setTimeout(loadAnalytics, 3000);
+</script>
     
     <!-- Enhanced LocalBusiness Schema for Google Business Profile -->
     <script type="application/ld+json">
@@ -1639,8 +1664,33 @@
     </script>
     
     <!-- Google Analytics 4 -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LCX4DTB57C"></script>
-    <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-LCX4DTB57C');</script>
+    <!-- Optimized Google Analytics (Lazy Loading) -->
+<script>
+// Lazy load Google Analytics
+let analyticsLoaded = false;
+function loadAnalytics() {
+  if (!analyticsLoaded) {
+    analyticsLoaded = true;
+    const script = document.createElement('script');
+    script.async = true;
+    script.defer = true;
+    script.src = 'https://www.googletagmanager.com/gtag/js?id=G-LCX4DTB57C';
+    document.head.appendChild(script);
+
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-LCX4DTB57C', {'send_page_view': false});
+    gtag('event', 'page_view');
+  }
+}
+// Load on user interaction
+['scroll', 'click', 'touchstart'].forEach(event => {
+  window.addEventListener(event, loadAnalytics, {once: true, passive: true});
+});
+// Or after 3 seconds
+setTimeout(loadAnalytics, 3000);
+</script>
 
     <!-- LocalBusiness Schema Markup for SEO -->
     <script type="application/ld+json">
