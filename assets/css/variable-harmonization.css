@@ -1,0 +1,41 @@
+/* CSS Variable Harmonization
+   Ensures consistent variable naming across all stylesheets
+   Provides backward compatibility for legacy names
+*/
+
+:root {
+    /* Primary brand colors - single source of truth */
+    --brand-primary: #1e40af;
+    --brand-primary-dark: #1e3a8a;  
+    --brand-accent: #ea580c;
+    --brand-secondary: #dc2626;
+    
+    /* Text colors - consistent naming */
+    --text-primary: #111827;
+    --text-secondary: #4b5563;
+    
+    /* Legacy aliases for backward compatibility */
+    --primary-blue: var(--brand-primary);
+    --dark-blue: var(--brand-primary-dark);
+    --orange: var(--brand-accent);
+    --dark-orange: var(--brand-secondary);
+    --text-dark: var(--text-primary);
+    --text-gray: var(--text-secondary);
+}
+
+/* Override any conflicting definitions */
+.logo {
+    color: var(--brand-primary) !important;
+}
+
+.nav a:hover {
+    color: var(--brand-primary) !important;
+}
+
+.btn-primary {
+    background: var(--brand-primary) !important;
+}
+
+.btn-primary:hover {
+    background: var(--brand-primary-dark) !important;
+}
