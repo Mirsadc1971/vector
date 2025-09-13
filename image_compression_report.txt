@@ -1,0 +1,8 @@
+IMAGE COMPRESSION REPORT
+========================================
+Date: 1757783290.2467177
+Files processed: 13
+Files failed: 0
+Total original size: 5.8MB
+Total compressed size: 3.8MB
+Total space saved: 2.0MB (34.8%)

@@ -1,0 +1,167 @@
+/*
+ * Image Optimization CSS
+ * Handles WebP format support, responsive images, and performance optimization
+ */
+
+/* Critical image preloading via CSS */
+@media (min-width: 768px) {
+    body::before {
+        content: '';
+        position: absolute;
+        left: -9999px;
+        background: url('../images/manage369randolphstation.webp');
+        background: url('../images/manage369randolphstation.jpg');
+    }
+}
+
+/* WebP support detection and fallback */
+.webp .hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                url('../images/manage369randolphstation.webp') center/cover !important;
+}
+
+.no-webp .hero-optimized,
+.hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                url('../images/manage369randolphstation.jpg') center/cover !important;
+}
+
+/* Responsive background images for different screen sizes */
+@media (max-width: 768px) {
+    .webp .hero-optimized {
+        background: linear-gradient(135deg, rgba(8,66,152,0.35) 0%, rgba(244,162,97,0.35) 100%),
+                    url('../images/manage369randolphstation.webp') center/cover !important;
+        background-size: cover;
+        background-position: center 30%;
+    }
+
+    .no-webp .hero-optimized,
+    .hero-optimized {
+        background: linear-gradient(135deg, rgba(8,66,152,0.35) 0%, rgba(244,162,97,0.35) 100%),
+                    url('../images/manage369randolphstation.jpg') center/cover !important;
+        background-size: cover;
+        background-position: center 30%;
+    }
+}
+
+/* High DPI displays optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .webp .hero-optimized {
+        background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                    url('../images/manage369randolphstation.webp') center/cover !important;
+    }
+}
+
+/* Optimized hero section with performance improvements */
+.hero-optimized {
+    /* Core styling */
+    padding: 40px 20px 20px;
+    text-align: center;
+    color: white;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+
+    /* Performance optimizations */
+    will-change: transform;
+    transform: translateZ(0);
+    backface-visibility: hidden;
+
+    /* Background optimizations */
+    background-attachment: scroll; /* Better performance than fixed */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Critical above-the-fold styles for hero content */
+.hero-optimized .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-optimized h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0,0,0,0.5);
+    line-height: 1.2;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+    .hero-optimized h1 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+
+    .hero-optimized {
+        min-height: 400px;
+        padding: 20px 15px 15px;
+    }
+
+    .hero-optimized .hero-content {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-optimized h1 {
+        font-size: 1.75rem;
+    }
+
+    .hero-optimized {
+        min-height: 350px;
+    }
+}
+
+/* Lazy loading optimization for subsequent sections */
+.section-with-bg {
+    background-attachment: scroll;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.webp .section-with-bg {
+    background-image: url('../images/manage369randolphstation.webp');
+}
+
+.no-webp .section-with-bg {
+    background-image: url('../images/manage369randolphstation.jpg');
+}
+
+/* Performance hints for browsers */
+.hero-optimized::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit;
+    filter: blur(0);
+    transform: scale(1.1);
+    z-index: -1;
+}
+
+/* Preload critical images using link preload (to be added to HTML head) */
+/* <link rel="preload" as="image" href="images/manage369randolphstation.webp" type="image/webp"> */
+/* <link rel="preload" as="image" href="images/manage369randolphstation.jpg" type="image/jpeg"> */
+
+/* Print styles - remove background images for better printing */
+@media print {
+    .hero-optimized,
+    .section-with-bg {
+        background-image: none !important;
+        background: #f5f5f5 !important;
+        color: #333 !important;
+    }
+}

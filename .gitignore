@@ -1,2 +1,40 @@
 node_modules/
 .env
+
+# Image optimization temporary files
+*_compressed.*
+*_optimized.*
+*_temp.*
+*_backup.*
+*_original.*
+
+# Performance testing and reports
+lighthouse-report.html
+performance-report.json
+speed-test-results.*
+
+# Image processing temporary directories
+temp_images/
+optimized_images/
+compressed/
+
+# Development and testing files
+test-*.html
+debug-*.html
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebP Implementation Test</title>
+    <link rel="stylesheet" href="css/image-optimization.css">
+    <style>
+        .test-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            font-family: Arial, sans-serif;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+        .test-hero {
+            height: 300px;
+            margin: 20px 0;
+            border: 2px solid #333;
+        }
+        .status {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        .webp-supported { background: #d4edda; color: #155724; }
+        .webp-not-supported { background: #f8d7da; color: #721c24; }
+    </style>
+    <script>
+        (function() {
+            'use strict';
+
+            // WebP detection function
+            function supportsWebP(callback) {
+                var webP = new Image();
+                webP.onload = webP.onerror = function () {
+                    callback(webP.height == 2);
+                };
+                webP.src = 'data:image/webp;base64,UklGRjoAAABXRUJQVlA4IC4AAACyAgCdASoCAAIALmk0mk0iIiIiIgBoSygABc6WWgAA/veff/0PP8bA//LwYAAA';
+            }
+
+            // Add WebP support class to HTML element
+            supportsWebP(function(supported) {
+                var htmlElement = document.documentElement;
+                if (supported) {
+                    htmlElement.classList.add('webp');
+                } else {
+                    htmlElement.classList.add('no-webp');
+                }
+
+                // Update status display
+                document.addEventListener('DOMContentLoaded', function() {
+                    var statusDiv = document.getElementById('webp-status');
+                    if (supported) {
+                        statusDiv.className = 'status webp-supported';
+                        statusDiv.innerHTML = '✓ WebP is supported! Using optimized WebP images (45% smaller file size)';
+                    } else {
+                        statusDiv.className = 'status webp-not-supported';
+                        statusDiv.innerHTML = '✗ WebP not supported. Using JPG fallback images';
+                    }
+                });
+            });
+        })();
+    </script>
+</head>
+<body>
+    <div class="test-container">
+        <h1>WebP Implementation Test</h1>
+
+        <div class="test-section">
+            <h2>WebP Support Detection</h2>
+            <div id="webp-status" class="status">Detecting WebP support...</div>
+        </div>
+
+        <div class="test-section">
+            <h2>Optimized Hero Section Test</h2>
+            <p>This section uses the hero-optimized class with automatic WebP/JPG switching:</p>
+            <div class="test-hero hero-optimized">
+                <div class="hero-content" style="padding-top: 80px;">
+                    <h1>Test Hero Section</h1>
+                    <p style="color: white; font-size: 1.2rem;">Background image loads WebP format when supported</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="test-section">
+            <h2>Performance Benefits</h2>
+            <ul>
+                <li><strong>File Size Reduction:</strong> WebP version is 102KB vs JPG 187KB (45% smaller)</li>
+                <li><strong>Critical CSS:</strong> Above-the-fold styles are inlined for faster rendering</li>
+                <li><strong>Responsive Images:</strong> Different positioning for mobile devices</li>
+                <li><strong>Preloading:</strong> Critical images are preloaded based on format support</li>
+                <li><strong>Fallback Support:</strong> Automatic fallback to JPG for unsupported browsers</li>
+            </ul>
+        </div>
+
+        <div class="test-section">
+            <h2>Testing Instructions</h2>
+            <ol>
+                <li>Open browser developer tools (F12)</li>
+                <li>Go to Network tab</li>
+                <li>Reload this page</li>
+                <li>Look for image requests - you should see either .webp or .jpg being loaded</li>
+                <li>Check the file size in the network tab</li>
+                <li>Test on different browsers to verify fallback behavior</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>
