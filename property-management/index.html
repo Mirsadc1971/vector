@@ -1,1408 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<!-- PWA Support -->
-<link href="/manifest.json" rel="manifest"/>
-<meta content="yes" name="mobile-web-app-capable"/>
-<meta content="yes" name="apple-mobile-web-app-capable"/>
-<meta content="default" name="apple-mobile-web-app-status-bar-style"/>
-<meta content="Manage369" name="apple-mobile-web-app-title"/>
-<link href="/images/icon-192x192.png" rel="apple-touch-icon"/>
-<meta content="/images/icon-144x144.png" name="msapplication-TileImage"/>
-<meta content="#1e40af" name="msapplication-TileColor"/>
-<meta content="index, follow" name="robots"/>
-<title>Areas We Serve | 68 Communities | Manage369</title>
-<meta "="" ..="" content="Professional property management in 68 Chicago &amp; &lt;a href=" name="description" property-management="" style="color: #1e40af; text-decoration: underline;" wilmette=""/>North Shore communities. Expert HOA, condo &amp; townhome management. Call (847) 652-2338."&gt;
-    
-        <link href="../../assets/css/main.css" rel="stylesheet"/>
+<title>Areas We Serve — Property Management in Chicago & Suburbs | Manage369</title>
+<meta content="Professional property management services across 84 Chicago neighborhoods and suburbs. HOA, condominium & townhome experts since 2007." name="description"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<meta content="#1f2937" name="theme-color"/>
 <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #e5e7eb;
-            line-height: 1.6;
-        }
-        
-        /* Header Styles - Matching Main Site */
-        .header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: #1f2937;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #F4A261;
-        }
-        
-        .nav {
-            display: flex;
-            align-items: center;
-            gap: 0;
-        }
-        
-        .nav-link {
-            color: #F4A261;
-            text-decoration: none;
-            font-weight: 500;
-            padding: 12px 20px;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-link:hover {
-            color: #F4A261;
-            background: #1f2937;
-        }
-        
-        .nav-link.active {
-            color: #F4A261;
-            font-weight: 600;
-        }
-        
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background: #1f2937;
-            min-width: 250px;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
-            z-index: 1000;
-            border-radius: 8px;
-            padding: 1rem 0;
-            top: 100%;
-            left: 0;
-        }
-        
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        
-        .dropdown-content a {
-            color: #F4A261;
-            padding: 10px 20px;
-            text-decoration: none;
-            display: block;
-            transition: all 0.3s ease;
-        }
-        
-        .dropdown-content a:hover {
-            background: #1f2937;
-            color: #F4A261;
-        }
-        
-        .dropdown-section {
-            padding: 0.5rem 0;
-        }
-        
-        .dropdown-header {
-            padding: 10px 20px;
-            font-weight: 600;
-            color: #F4A261;
-            font-size: 0.9rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-        
-        .header-cta {
-            margin-left: auto;
-        }
-        
-        .phone-button {
-            background: #1f2937;
-            color: white;
-            padding: 10px 20px;
-            border-radius: 25px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .phone-button:hover {
-            background: #1f2937;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(255,149,0,0.3);
-        }
-        
-        /* Hero Section with Image */
-        .hero-section {
-            margin-top: 70px;
-            height: 400px;
-            background: url('../images/manage369livingroomskokie.jpg');
-            background-size: cover;
-            background-position: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
-        }
-        
-        .hero-content h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            text-shadow: none;
-        }
-        
-        .hero-subtitle {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-        }
-        
-        .hero-cta {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-        
-        .btn {
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-        }
-        
-        .btn-primary {
-            background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
-            color: white;
-        }
-        
-        .btn-primary:hover {
-            background: #1f2937;
-            transform: translateY(-2px);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: #1f2937;
-            color: #e5e7eb;
-        }
-        
-        /* Service Areas Grid */
-        .service-areas-section {
-            padding: 4rem 2rem;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        .area-group {
-            margin-bottom: 3rem;
-        }
-        
-        .area-group h2 {
-            color: #F4A261;
-            font-size: 2rem;
-            margin-bottom: 2rem;
-            padding-bottom: 1rem;
-            border-bottom: 3px solid #F4A261;
-        }
-        
-        .service-areas-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-        
-        .area-card {
-            background: #1f2937;
-            border: 1px solid #e0e0e0;
-            border-radius: 10px;
-            padding: 1.5rem;
-            text-decoration: none;
-            color: #e5e7eb;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-        }
-        
-        .area-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            border-color: #F4A261;
-        }
-        
-        .area-card h3 {
-            color: #F4A261;
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-        
-        .area-card p {
-            color: #e5e7eb;
-            font-size: 0.95rem;
-        }
-        
-        .btn-link {
-            color: #F4A261;
-            font-weight: 600;
-            margin-top: 0.5rem;
-            display: inline-block;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: linear-gradient(135deg, #F4A261, #357abd);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        .cta-section h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .cta-section p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .cta-buttons {
-            display: flex;
-            gap: 1.5rem;
-            justify-content: center;
-        }
-        
-        /* Footer */
-        .site-footer {
-            background: #1f2937;
-            color: white;
-            padding: 3rem 2rem 1rem;
-        }
-        
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .footer-column h3 {
-            color: #F4A261;
-            margin-bottom: 1rem;
-        }
-        
-        .footer-column ul {
-            list-style: none;
-        }
-        
-        .footer-column a {
-            color: #e5e7eb;
-            text-decoration: none;
-            line-height: 2;
-        }
-        
-        .footer-column a:hover {
-            color: #F4A261;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid #555;
-            color: #F4A261;
-        }
-        
-        .dropdown-trigger {
-            cursor: pointer;
-        }
-        
-        .dropdown-arrow {
-            margin-left: 5px;
-            font-size: 0.8rem;
-            transition: transform 0.3s ease;
-        }
-        
-        .dropdown:hover .dropdown-arrow {
-            transform: rotate(180deg);
-        }
-        
-        /* Mobile Navigation */
-        .mobile-menu-toggle {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: #e5e7eb;
-            cursor: pointer;
-        }
-        
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: #1f2937;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 1rem;
-            z-index: 1001;
-        }
-        
-        .mobile-menu.active {
-            display: block;
-        }
-        
-        .mobile-menu a {
-            display: block;
-            padding: 0.75rem 0;
-            border-bottom: 1px solid #eee;
-            color: #e5e7eb;
-            text-decoration: none;
-        }
-        
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .header {
-                padding: 1rem;
-            }
-            
-            .nav {
-                display: none;
-            }
-            
-            .mobile-menu-toggle {
-                display: block;
-            }
-            
-            .header-cta {
-                display: none;
-            }
-            
-            .hero-content h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-cta {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .service-areas-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .cta-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-    
-    /* High Contrast Text Fixes */
-    .btn-primary, button[type="submit"], .submit-btn {
-        background: #1f2937 !important; /* Darker orange for better contrast */
-        color: white !important;
-    }
-    
-    .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
-        background: #1f2937 !important;
-    }
-    
-    /* Service cards text contrast */
-    .service-card h3, .service-card h4 {
-        color: #F4A261 !important;
-    }
-    
-    .service-card p {
-        color: #e5e7eb !important;
-    }
-    
-    /* Fix any orange text that needs more contrast */
-    h1, h2, h3, h4, h5, h6 {
-        color: #F4A261 !important;
-    }
-    
-    /* Ensure links have proper contrast */
-    a {
-        color: #F4A261 !important;
-    }
-    
-    a:hover {
-        color: #084298 !important;
-    }
-    
-    /* Footer links stay light on dark background */
-    .site-footer a, footer a {
-        color: #e5e7eb !important;
-    }
-
-
-    /* Gradient Accents from Consultation Theme */
-    .section-header::after {
-        content: '';
-        display: block;
-        width: 100px;
-        height: 4px;
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
-        margin: 1rem auto;
-    }
-    
-    .primary-gradient {
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
-    }
-    
-    .card:hover {
-        border: 2px solid #F4A261;
-        transform: translateY(-5px);
-    }
-    
-    /* Dark theme for all sections */
-    body {
-        background: #1f2937;
-        color: #e5e7eb;
-    }
-    
-    section {
-        background: #1f2937;
-        color: #e5e7eb;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        color: #F4A261;
-    }
-    
-    /* Form inputs dark theme */
-    input, select, textarea {
-        background: #1f2937;
-        color: #e5e7eb;
-        border: 1px solid #374151;
-    }
-    
-    input:focus, select:focus, textarea:focus {
-        border-color: #F4A261;
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(244,162,97,0.1);
-    }
-
-    /* Premium Design Enhancements */
-    
-    /* Smooth animations throughout */
-    * {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    /* Premium gradient backgrounds */
-    .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
-                    url('images/manage369randolphstation.jpg') center/cover !important;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    /* Animated gradient overlay */
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        transform: translateX(-100%);
-        width: 200%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
-        animation: shimmer 8s infinite;
-    }
-    
-    @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-    
-    /* Glass morphism effects for cards */
-    .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.7) !important;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(244, 162, 97, 0.2);
-        box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
-    }
-    
-    .card:hover, .service-card:hover, .offer-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 15px 45px rgba(244, 162, 97, 0.4);
-        border-color: #F4A261;
-    }
-    
-    /* Premium button styles */
-    .btn, button, .submit-btn {
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
-        border: none !important;
-        color: white !important;
-        font-weight: 600;
-        letter-spacing: 1px;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-    }
-    
-    .btn::before, button::before, .submit-btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
-        transition: left 0.5s;
-        z-index: -1;
-    }
-    
-    .btn:hover::before, button:hover::before, .submit-btn:hover::before {
-        left: 100%;
-    }
-    
-    /* Glowing gold accents */
-    h1, h2, h3, h4 {
-        color: #F4A261 !important;
-        text-shadow: 0 0 20px rgba(244, 162, 97, 0.5);
-    }
-    
-    /* Premium navigation */
-    .header {
-        background: linear-gradient(180deg, #2C3E50 0%, rgba(44, 62, 80, 0.95) 100%) !important;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-    
-    .nav-link {
-        position: relative;
-        color: #F4A261 !important;
-    }
-    
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: linear-gradient(90deg, #084298, #F4A261);
-        transition: width 0.3s;
-    }
-    
-    .nav-link:hover::after {
-        width: 100%;
-    }
-    
-    /* Premium form inputs */
-    input, select, textarea {
-        background: rgba(44, 62, 80, 0.9) !important;
-        border: 1px solid rgba(244, 162, 97, 0.3) !important;
-        color: #e5e7eb !important;
-        padding: 12px !important;
-        border-radius: 8px !important;
-    }
-    
-    input:focus, select:focus, textarea:focus {
-        border-color: #F4A261 !important;
-        box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2), 
-                    0 0 20px rgba(244, 162, 97, 0.3) !important;
-        outline: none !important;
-    }
-    
-    /* Floating labels effect */
-    .form-group {
-        position: relative;
-    }
-    
-    .form-group label {
-        color: #F4A261 !important;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 0.85rem;
-        letter-spacing: 1px;
-    }
-    
-    /* Premium sections */
-    section {
-        background: linear-gradient(180deg, #1f2937 0%, #2C3E50 100%) !important;
-        position: relative;
-    }
-    
-    section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, #F4A261, transparent);
-    }
-    
-    /* Special offers with glow */
-    .special-offers {
-        background: linear-gradient(135deg, #084298 0%, #2C3E50 50%, #F4A261 100%) !important;
-        padding: 80px 20px;
-        position: relative;
-    }
-    
-    /* Countdown timer styling */
-    #countdown {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #F4A261;
-        text-shadow: 0 0 10px rgba(244, 162, 97, 0.8);
-        animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.8; }
-    }
-    
-    /* Footer premium style */
-    footer {
-        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
-        border-top: 2px solid rgba(244, 162, 97, 0.3);
-    }
-    
-    /* Smooth scrolling */
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    /* Loading animation for forms */
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-    
-    .loading::after {
-        content: '';
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: 3px solid rgba(244, 162, 97, 0.3);
-        border-top-color: #F4A261;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-left: 10px;
-    }
-    
-    /* Premium scroll indicator */
-    .scroll-indicator {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #084298, #F4A261);
-        transform-origin: left;
-        z-index: 9999;
-    }
-    
-    /* Parallax effect for hero */
-    .hero-content {
-        animation: fadeInUp 1s ease-out;
-    }
-    
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    /* Premium mobile menu */
-    .mobile-menu {
-        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
-        backdrop-filter: blur(20px);
-    }
-    
-    /* Gold hover glow for links */
-    a:hover {
-        color: #F4A261 !important;
-        text-shadow: 0 0 10px rgba(244, 162, 97, 0.6);
-    }
-    
-    /* Premium table styling */
-    table {
-        background: rgba(44, 62, 80, 0.8);
-        border: 1px solid rgba(244, 162, 97, 0.2);
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    
-    th {
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
-        color: white;
-        padding: 15px;
-    }
-    
-    tr:hover {
-        background: rgba(244, 162, 97, 0.1);
-    }
-
-    /* Premium Phone Number Styling */
-    .phone-button, a[href^="tel:"], a[href^="sms:"] {
-        background: #1f2937 !important;
-        color: #F4A261 !important;
-        border: 1px solid #F4A261 !important;
-        padding: 10px 20px;
-        border-radius: 8px;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-block;
-        transition: all 0.3s ease;
-    }
-    
-    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
-        background: #1f2937 !important;
-        color: #F1C40F !important;
-        border-color: #F1C40F !important;
-        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
-        transform: translateY(-2px);
-    }
-    
-    /* Inline phone numbers */
-    .phone-inline {
-        color: #F4A261 !important;
-        font-weight: 600;
-    }
-
-    /* Image Visibility Fixes */
-    .hero {
-        background-blend-mode: multiply;
-    }
-    
-    .hero::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, 
-            rgba(0,0,0,0.2) 0%, 
-            rgba(0,0,0,0.3) 50%, 
-            rgba(0,0,0,0.4) 100%);
-        pointer-events: none;
-        z-index: 1;
-    }
-    
-    .hero-content {
-        position: relative;
-        z-index: 2;
-    }
-    
-    /* Ensure text remains readable on lighter overlay */
-    .hero h1, .hero h2, .hero p {
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
-                     0 0 20px rgba(0,0,0,0.6);
-    }
-    
-    /* Image sections should show images clearly */
-    .image-section {
-        background-size: cover;
-        background-position: center;
-        position: relative;
-    }
-    
-    .image-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
-</style>
-<link href="https://www.manage369.com/property-management/" rel="canonical"/>
-<style>
-        /* Prevent horizontal overflow on mobile */
-        html, body {
-            overflow-x: hidden;
-            width: 100%;
-        }
-        
-        * {
-            box-sizing: border-box;
-        }
-        
-        /* Ensure all containers respect viewport width */
-        section, div, article, aside, header, footer, main {
-            max-width: 100vw;
-        }
-        
-        /* Fix for tables on mobile */
-        @media (max-width: 768px) {
-            table {
-                display: block;
-                overflow-x: auto;
-                white-space: nowrap;
-            }
-        }
-        
-        /* Ensure images don't cause overflow */
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-    
-    /* Footer Color Fix - High Contrast */
-    .site-footer, footer {
-        background: #1f2937 !important; /* Dark gray instead of purple */
-        color: #ffffff !important;
-    }
-    
-    .site-footer a, footer a,
-    .footer-column a, .footer-content a {
-        color: #e5e7eb !important; /* Light gray for links */
-        text-decoration: none;
-    }
-    
-    .site-footer a:hover, footer a:hover,
-    .footer-column a:hover, .footer-content a:hover {
-        color: #ffffff !important;
-        text-decoration: underline;
-    }
-    
-    .footer-column h3, .footer-column h4,
-    footer h3, footer h4 {
-        color: #ffffff !important;
-    }
-    
-    .footer-bottom, footer .footer-bottom {
-        background: #1f2937 !important; /* Even darker for bottom */
-        color: #e5e7eb !important;
-        border-top: 1px solid #374151;
-    }
-    
-
-    /* Gradient Accents from Consultation Theme */
-    .section-header::after {
-        content: '';
-        display: block;
-        width: 100px;
-        height: 4px;
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
-        margin: 1rem auto;
-    }
-    
-    .primary-gradient {
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
-    }
-    
-    .card:hover {
-        border: 2px solid #F4A261;
-        transform: translateY(-5px);
-    }
-    
-    /* Dark theme for all sections */
-    body {
-        background: #1f2937;
-        color: #e5e7eb;
-    }
-    
-    section {
-        background: #1f2937;
-        color: #e5e7eb;
-    }
-    
-    h1, h2, h3, h4, h5, h6 {
-        color: #F4A261;
-    }
-    
-    /* Form inputs dark theme */
-    input, select, textarea {
-        background: #1f2937;
-        color: #e5e7eb;
-        border: 1px solid #374151;
-    }
-    
-    input:focus, select:focus, textarea:focus {
-        border-color: #F4A261;
-        outline: none;
-        box-shadow: 0 0 0 3px rgba(244,162,97,0.1);
-    }
-
-    /* Premium Design Enhancements */
-    
-    /* Smooth animations throughout */
-    * {
-        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    }
-    
-    /* Premium gradient backgrounds */
-    .hero {
-        background: linear-gradient(135deg, rgba(8,66,152,0.2) 0%, rgba(244,162,97,0.2) 100%), 
-                    url('images/manage369randolphstation.jpg') center/cover !important;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    /* Animated gradient overlay */
-    .hero::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        transform: translateX(-100%);
-        width: 200%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.15), transparent);
-        animation: shimmer 8s infinite;
-    }
-    
-    @keyframes shimmer {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
-}
-    
-    /* Glass morphism effects for cards */
-    .card, .service-card, .offer-card {
-        background: rgba(44, 62, 80, 0.7) !important;
-        backdrop-filter: blur(10px);
-        border: 1px solid rgba(244, 162, 97, 0.2);
-        box-shadow: 0 8px 32px rgba(8, 66, 152, 0.3);
-    }
-    
-    .card:hover, .service-card:hover, .offer-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 15px 45px rgba(244, 162, 97, 0.4);
-        border-color: #F4A261;
-    }
-    
-    /* Premium button styles */
-    .btn, button, .submit-btn {
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
-        border: none !important;
-        color: white !important;
-        font-weight: 600;
-        letter-spacing: 1px;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-    }
-    
-    .btn::before, button::before, .submit-btn::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: -100%;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(90deg, transparent, rgba(244,162,97,0.3), transparent);
-        transition: left 0.5s;
-        z-index: -1;
-    }
-    
-    .btn:hover::before, button:hover::before, .submit-btn:hover::before {
-        left: 100%;
-    }
-    
-    /* Glowing gold accents */
-    h1, h2, h3, h4 {
-        color: #F4A261 !important;
-        text-shadow: 0 0 20px rgba(244, 162, 97, 0.5);
-    }
-    
-    /* Premium navigation */
-    .header {
-        background: linear-gradient(180deg, #2C3E50 0%, rgba(44, 62, 80, 0.95) 100%) !important;
-        backdrop-filter: blur(10px);
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-    
-    .nav-link {
-        position: relative;
-        color: #F4A261 !important;
-    }
-    
-    .nav-link::after {
-        content: '';
-        position: absolute;
-        bottom: -2px;
-        left: 0;
-        width: 0;
-        height: 2px;
-        background: linear-gradient(90deg, #084298, #F4A261);
-        transition: width 0.3s;
-    }
-    
-    .nav-link:hover::after {
-        width: 100%;
-    }
-    
-    /* Premium form inputs */
-    input, select, textarea {
-        background: rgba(44, 62, 80, 0.9) !important;
-        border: 1px solid rgba(244, 162, 97, 0.3) !important;
-        color: #e5e7eb !important;
-        padding: 12px !important;
-        border-radius: 8px !important;
-    }
-    
-    input:focus, select:focus, textarea:focus {
-        border-color: #F4A261 !important;
-        box-shadow: 0 0 0 3px rgba(244, 162, 97, 0.2), 
-                    0 0 20px rgba(244, 162, 97, 0.3) !important;
-        outline: none !important;
-    }
-    
-    /* Floating labels effect */
-    .form-group {
-        position: relative;
-    }
-    
-    .form-group label {
-        color: #F4A261 !important;
-        font-weight: 600;
-        text-transform: uppercase;
-        font-size: 0.85rem;
-        letter-spacing: 1px;
-    }
-    
-    /* Premium sections */
-    section {
-        background: linear-gradient(180deg, #1f2937 0%, #2C3E50 100%) !important;
-        position: relative;
-    }
-    
-    section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 1px;
-        background: linear-gradient(90deg, transparent, #F4A261, transparent);
-    }
-    
-    /* Special offers with glow */
-    .special-offers {
-        background: linear-gradient(135deg, #084298 0%, #2C3E50 50%, #F4A261 100%) !important;
-        padding: 80px 20px;
-        position: relative;
-    }
-    
-    /* Countdown timer styling */
-    #countdown {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #F4A261;
-        text-shadow: 0 0 10px rgba(244, 162, 97, 0.8);
-        animation: pulse 2s infinite;
-    }
-    
-    @keyframes pulse {
-        0%, 100% { opacity: 1; }
-        50% { opacity: 0.8; }
-    }
-    
-    /* Footer premium style */
-    footer {
-        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
-        border-top: 2px solid rgba(244, 162, 97, 0.3);
-    }
-    
-    /* Smooth scrolling */
-    html {
-        scroll-behavior: smooth;
-    }
-    
-    /* Loading animation for forms */
-    @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-    }
-    
-    .loading::after {
-        content: '';
-        display: inline-block;
-        width: 20px;
-        height: 20px;
-        border: 3px solid rgba(244, 162, 97, 0.3);
-        border-top-color: #F4A261;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-        margin-left: 10px;
-    }
-    
-    /* Premium scroll indicator */
-    .scroll-indicator {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        height: 3px;
-        background: linear-gradient(90deg, #084298, #F4A261);
-        transform-origin: left;
-        z-index: 9999;
-    }
-    
-    /* Parallax effect for hero */
-    .hero-content {
-        animation: fadeInUp 1s ease-out;
-    }
-    
-    @keyframes fadeInUp {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    /* Premium mobile menu */
-    .mobile-menu {
-        background: linear-gradient(180deg, #2C3E50 0%, #1a252f 100%) !important;
-        backdrop-filter: blur(20px);
-    }
-    
-    /* Gold hover glow for links */
-    a:hover {
-        color: #F4A261 !important;
-        text-shadow: 0 0 10px rgba(244, 162, 97, 0.6);
-    }
-    
-    /* Premium table styling */
-    table {
-        background: rgba(44, 62, 80, 0.8);
-        border: 1px solid rgba(244, 162, 97, 0.2);
-        border-radius: 8px;
-        overflow: hidden;
-    }
-    
-    th {
-        background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
-        color: white;
-        padding: 15px;
-    }
-    
-    tr:hover {
-        background: rgba(244, 162, 97, 0.1);
-    }
-
-    /* Premium Phone Number Styling */
-    .phone-button, a[href^="tel:"], a[href^="sms:"] {
-        background: #1f2937 !important;
-        color: #F4A261 !important;
-        border: 1px solid #F4A261 !important;
-        padding: 10px 20px;
-        border-radius: 8px;
-        font-weight: 600;
-        text-decoration: none;
-        display: inline-block;
-        transition: all 0.3s ease;
-    }
-    
-    .phone-button:hover, a[href^="tel:"]:hover, a[href^="sms:"]:hover {
-        background: #1f2937 !important;
-        color: #F1C40F !important;
-        border-color: #F1C40F !important;
-        box-shadow: 0 0 20px rgba(241, 196, 15, 0.4);
-        transform: translateY(-2px);
-    }
-    
-    /* Inline phone numbers */
-    .phone-inline {
-        color: #F4A261 !important;
-        font-weight: 600;
-    }
-
-    /* Image Visibility Fixes */
-    .hero {
-        background-blend-mode: multiply;
-    }
-    
-    .hero::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, 
-            rgba(0,0,0,0.2) 0%, 
-            rgba(0,0,0,0.3) 50%, 
-            rgba(0,0,0,0.4) 100%);
-        pointer-events: none;
-        z-index: 1;
-    }
-    
-    .hero-content {
-        position: relative;
-        z-index: 2;
-    }
-    
-    /* Ensure text remains readable on lighter overlay */
-    .hero h1, .hero h2, .hero p {
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.8), 
-                     0 0 20px rgba(0,0,0,0.6);
-    }
-    
-    /* Image sections should show images clearly */
-    .image-section {
-        background-size: cover;
-        background-position: center;
-        position: relative;
-    }
-    
-    .image-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: rgba(0, 0, 0, 0.2);
-        z-index: 1;
-    }
-</style>
-<style>
-
-/* MANAGE369 CONSISTENT COLOR SCHEME */
-body {
-    background: #1f2937 !important;
-    color: #e5e7eb !important;
-}
-
-section {
-    background: #1f2937 !important;
-    color: #e5e7eb !important;
-}
-
-.header, header, nav {
-    background: #1f2937 !important;
-}
-
-h1, h2, h3, h4, h5, h6 {
-    color: #F4A261 !important;
-}
-
-.card, .area-card, .service-card {
-    background: #1f2937 !important;
-    color: #e5e7eb !important;
-    border: 1px solid #374151 !important;
-}
-
-.card:hover, .area-card:hover, .service-card:hover {
-    border-color: #F4A261 !important;
-}
-
-a {
-    color: #F4A261 !important;
-}
-
-.btn, button {
-    background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
-    color: white !important;
-}
-
-footer {
-    background: #1f2937 !important;
-    color: #e5e7eb !important;
-}
-
-/* Remove any white backgrounds */
-[style*="background: #1f2937"],
-[style*="background: #1f2937"],
-[style*="background: #1f2937"],
-[style*="background-color: #1f2937"],
-[style*="background-color: #1f2937"],
-[style*="background-color: #1f2937"] {
-    background: #1f2937 !important;
-}
-
-</style>
-<style>
-
-
-/* Fix Navigation Layout - Proper Alignment */
-.header {
-    display: flex !important;
-    justify-content: space-between !important;
-    align-items: center !important;
-    padding: 1rem 2rem !important;
-}
-
-.logo {
-    flex: 0 0 auto !important;
-    margin-right: 2rem !important;
-}
-
-.nav {
-    display: flex !important;
-    align-items: center !important;
-    gap: 0 !important;
-    flex: 1 1 auto !important;
-    justify-content: flex-start !important;
-    margin-left: 0 !important;
-}
-
-.header-cta {
-    flex: 0 0 auto !important;
-    margin-left: 2rem !important;
-}
-
-/* Ensure nav links stay together */
-.nav-link {
-    white-space: nowrap !important;
-}
-
-.dropdown {
-    position: relative !important;
-}
-
-/* Mobile menu stays on right */
-.mobile-menu-toggle {
-    margin-left: auto !important;
-}
-
-/* Remove conflicting styles */
-nav {
-    position: static !important;
-    transform: none !important;
-}
-/* Mobile menu fix */
-.mobile-menu-toggle {
-    margin-left: auto !important;
-}
-
-/* Remove any conflicting styles */
-nav {
-    position: static !important;
-    transform: none !important;
-    margin: 0 !important;
-}
-
-</style>
-
-<style>
-/* Homepage Color Scheme */
 :root {
     --primary-gold: #F4A261;
     --primary-navy: #2C3E50;
@@ -1411,573 +18,590 @@ nav {
     --accent-blue: #084298;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     background: var(--background-dark) !important;
     color: var(--text-light) !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2 {
     color: var(--primary-gold) !important;
+    text-align: center;
+    margin-bottom: 2rem;
 }
 
-.service-card, .card {
-    background: var(--primary-navy) !important;
-    color: var(--text-light) !important;
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; margin: 3rem 0 2rem; }
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.btn-primary {
-    background: var(--primary-gold) !important;
-    color: #1f2937 !important;
+.header {
+    background: var(--background-dark);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(244,162,97,0.2);
 }
 
-section {
-    background: var(--background-dark) !important;
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-a {
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
     color: var(--primary-gold);
 }
 
-a:hover {
-    color: #F4A261;
-    opacity: 0.8;
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: var(--primary-gold);
+}
+
+/* Areas Grid - 21 rows x 4 columns */
+.areas-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+
+@media (max-width: 1200px) {
+    .areas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .areas-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.area-card {
+    background: rgba(44, 62, 80, 0.3);
+    border: 1px solid rgba(244, 162, 97, 0.3);
+    border-radius: 8px;
+    padding: 25px;
+    text-align: center;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.area-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(244, 162, 97, 0.3);
+    border-color: var(--primary-gold);
+    background: rgba(244, 162, 97, 0.1);
+}
+
+.area-card h3 {
+    color: var(--primary-gold);
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.area-card p {
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.hero-section {
+    background: linear-gradient(135deg, rgba(244,162,97,0.1), rgba(44,62,80,0.2));
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin: 60px 0;
+    padding: 40px;
+    background: rgba(44, 62, 80, 0.2);
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.stat {
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    color: var(--primary-gold);
+    font-weight: bold;
+}
+
+.stat-label {
+    color: var(--text-light);
+    margin-top: 10px;
 }
 </style>
 </head>
-<body style="background: #1f2937; color: #e5e7eb;">
-<div class="scroll-indicator" id="scrollIndicator"></div>
-<a class="skip-link" href="#main">Skip to main content</a>
-<!-- Navigation Header -->
-<header class="header" style="background: #1f2937;">
-<!-- COMPANY LOGO/NAME -->
-<div class="logo" style="color: #F4A261;">MANAGE369</div>
-<!-- Mobile Menu Toggle -->
-<button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-<!-- MAIN NAVIGATION MENU - Standardized Layout -->
-<nav aria-label="Primary navigation" class="nav">
-<a class="nav-link" href="/">Home</a>
-<div class="dropdown">
-<a class="nav-link dropdown-trigger" href="../services.html">Services <span class="dropdown-arrow">▼</span></a>
-<div class="dropdown-content">
-<div class="dropdown-section">
-<div class="dropdown-header">Property Types</div>
-<a href="../services/condominium-management/">Condominium Management</a>
-<a href="../services/hoa-management/">HOA Management</a>
-<a href="../services/townhome-management/">Townhome Management</a>
-</div>
-<div class="dropdown-section">
-<div class="dropdown-header">Service Offerings</div>
-<a href="../services/financial-management/">Financial Management</a>
-                        Maintenance Coordination
-<a href="../services/board-support/">Board Support</a>
-<a href="../services/administrative-services/">Administrative Services</a>
-<a href="../services/capital-project-management/">Capital Project Management</a>
-<a href="../services/resident-relations/">Resident Relations</a>
-</div>
-</div>
-</div>
-<a class="nav-link active" href="./">Areas We Serve</a>
-<a class="nav-link" href="../payment-methods.html">Pay Dues</a>
-<a class="nav-link" href="../contact.html">Contact</a>
+<body>
+
+<!-- Header -->
+<header class="header">
+<div class="header-content">
+<div class="logo">MANAGE369</div>
+<nav>
+<ul class="nav-menu">
+<li><a href="/">Home</a></li>
+<li><a href="/services">Services</a></li>
+<li><a href="/property-management">Areas</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
 </nav>
-<!-- PROFESSIONAL PHONE CTA -->
-<div class="header-cta">
-<a class="phone-button" href="tel:8476522338">Call (847) 652-2338</a>
-</div>
-<!-- Mobile Menu -->
-<div class="mobile-menu" id="mobileMenu">
-<a href="/">Home</a>
-<a href="../services.html">Services</a>
-<a href="./">Areas We Serve</a>
-<a href="../payment-methods.html">Pay Dues</a>
-<a href="../contact.html">Contact</a>
-<a href="tel:8476522338" style="background: #1f2937; color: #F4A261; border: 1px solid #F4A261; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
 </div>
 </header>
+
 <!-- Hero Section -->
-<section class="hero-section" id="main" role="main">
-<div class="hero-content">
-<h1 style="color: #F4A261 !important; text-shadow: none; font-size: 2.5rem; font-weight: 700;" style="color: #F4A261;">Areas We Serve</h1>
-<p class="hero-subtitle" style="color: #ffffff !important; text-shadow: none; font-size: 1.8rem; font-weight: 700;">68 Communities Across Chicago &amp; North Shore</p>
-<div class="hero-cta">
-<a class="btn btn-primary" href="../contact.html">Get Started</a>
-<a class="btn btn-secondary" href="tel:8476522338">Call Now</a>
-</div><p style="margin-top: 2rem; text-align: center;"><a href="/" style="color: #2C3E50; font-weight: 600; text-decoration: none;">← Back to Homepage | View Current Special Offer</a></p>
+<section class="hero-section">
+<div class="container">
+<h1>Property Management Services Across Chicagoland</h1>
+<p style="font-size: 1.3rem; color: var(--primary-gold); margin: 20px 0;">
+84 Communities. One Trusted Partner.
+</p>
+<p style="max-width: 800px; margin: 0 auto; font-size: 1.1rem;">
+From Chicago's vibrant neighborhoods to the North Shore's prestigious suburbs, Manage369 delivers professional HOA, condominium, and townhome management services tailored to each community's unique needs.
+</p>
 </div>
 </section>
-<!-- Service Areas Grid -->
-<section class="service-areas-section">
-<!-- North Shore Areas -->
-<div class="area-group">
-<h2 style="color: #F4A261;">North Shore Property Management (16 Communities)</h2>
-<div class="service-areas-grid">
-<a class="area-card" href="wilmette">
-<h3 style="color: #F4A261;">Wilmette</h3>
-<p>Expert property management in Wilmette's distinguished communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="winnetka">
-<h3 style="color: #F4A261;">Winnetka</h3>
-<p>Premium management for Winnetka's elite properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="highland-park">
-<h3 style="color: #F4A261;">Highland Park</h3>
-<p>Trusted management in Highland Park's finest neighborhoods</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="glencoe">
-<h3 style="color: #F4A261;">Glencoe</h3>
-<p>Premium property management for Glencoe's luxury properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="evanston">
-<h3 style="color: #F4A261;">Evanston</h3>
-<p>Professional HOA &amp; condo management serving Evanston</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="northbrook">
-<h3 style="color: #F4A261;">Northbrook</h3>
-<p>Comprehensive property management throughout Northbrook</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="glenview">
-<h3 style="color: #F4A261;">Glenview</h3>
-<p>Expert management for Glenview communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="lake-forest">
-<h3 style="color: #F4A261;">Lake Forest</h3>
-<p>Premium management serving Lake Forest estates</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="deerfield">
-<h3 style="color: #F4A261;">Deerfield</h3>
-<p>Professional management in Deerfield's prestigious communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="northfield">
-<h3 style="color: #F4A261;">Northfield</h3>
-<p>Expert HOA &amp; condo management in Northfield</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="golf">
-<h3 style="color: #F4A261;">Golf</h3>
-<p>Premium management services for Golf communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="lake-bluff">
-<h3 style="color: #F4A261;">Lake Bluff</h3>
-<p>Expert HOA management for Lake Bluff's lakefront communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="the-glen">
-<h3 style="color: #F4A261;">The Glen</h3>
-<p>Specialized management for The Glen's modern developments</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="skokie">
-<h3 style="color: #F4A261;">Skokie</h3>
-<p>Professional property management serving Skokie communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="lincolnshire">
-<h3 style="color: #F4A261;">Lincolnshire</h3>
-<p>Professional management for Lincolnshire residential communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="morton-grove">
-<h3 style="color: #F4A261;">Morton Grove</h3>
-<p>Trusted management for Morton Grove residential properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
+
+<!-- Stats Bar -->
+<section>
+<div class="container">
+<div class="stats-bar">
+<div class="stat">
+<div class="stat-number">84</div>
+<div class="stat-label">Communities Served</div>
 </div>
+<div class="stat">
+<div class="stat-number">18+</div>
+<div class="stat-label">Years Experience</div>
 </div>
-<!-- Northwest Suburbs -->
-<div class="area-group">
-<h2 style="color: #F4A261;">Northwest Suburbs Property Management (20 Communities)</h2>
-<div class="service-areas-grid">
-<a class="area-card" href="park-ridge">
-<h3 style="color: #F4A261;">Park Ridge</h3>
-<p>Expert property management serving Park Ridge communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="des-plaines">
-<h3 style="color: #F4A261;">Des Plaines</h3>
-<p>Professional property management serving Des Plaines</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="arlington-heights">
-<h3 style="color: #F4A261;">Arlington Heights</h3>
-<p>Comprehensive property management throughout Arlington Heights</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="mount-prospect">
-<h3 style="color: #F4A261;">Mount Prospect</h3>
-<p>Professional management in Mount Prospect</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="buffalo-grove">
-<h3 style="color: #F4A261;">Buffalo Grove</h3>
-<p>Expert HOA &amp; condo management in Buffalo Grove</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="lincolnwood">
-<h3 style="color: #F4A261;">Lincolnwood</h3>
-<p>Expert property management in Lincolnwood communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="norridge">
-<h3 style="color: #F4A261;">Norridge</h3>
-<p>Professional HOA management throughout Norridge</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="harwood-heights">
-<h3 style="color: #F4A261;">Harwood Heights</h3>
-<p>Comprehensive property management in Harwood Heights</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="elmwood-park">
-<h3 style="color: #F4A261;">Elmwood Park</h3>
-<p>Professional HOA management in Elmwood Park</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="schiller-park">
-<h3 style="color: #F4A261;">Schiller Park</h3>
-<p>Expert property management throughout Schiller Park</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="franklin-park">
-<h3 style="color: #F4A261;">Franklin Park</h3>
-<p>Expert property management throughout Franklin Park</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="elk-grove-village">
-<h3 style="color: #F4A261;">Elk Grove Village</h3>
-<p>Trusted management for Elk Grove Village properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="rolling-meadows">
-<h3 style="color: #F4A261;">Rolling Meadows</h3>
-<p>Comprehensive HOA management in Rolling Meadows</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="wheeling">
-<h3 style="color: #F4A261;">Wheeling</h3>
-<p>Trusted HOA &amp; condo management in Wheeling</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="prospect-heights">
-<h3 style="color: #F4A261;">Prospect Heights</h3>
-<p>Professional management for Prospect Heights properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="vernon-hills">
-<h3 style="color: #F4A261;">Vernon Hills</h3>
-<p>Professional property management across Vernon Hills</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="itasca">
-<h3 style="color: #F4A261;">Itasca</h3>
-<p>Professional HOA &amp; condo management serving Itasca</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="wood-dale">
-<h3 style="color: #F4A261;">Wood Dale</h3>
-<p>Expert property management for Wood Dale communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="edison-park">
-<h3 style="color: #F4A261;">Edison Park</h3>
-<p>Expert property management in Edison Park neighborhoods</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="old-irving-park">
-<h3 style="color: #F4A261;">Old Irving Park</h3>
-<p>Trusted HOA management in Old Irving Park</p>
-<span class="btn-link">Learn More →</span>
-</a>
+<div class="stat">
+<div class="stat-number">200+</div>
+<div class="stat-label">Associations Managed</div>
 </div>
+<div class="stat">
+<div class="stat-number">24/7</div>
+<div class="stat-label">Emergency Support</div>
 </div>
-<!-- Chicago Neighborhoods -->
-<div class="area-group">
-<h2 style="color: #F4A261;">Chicago Property Management (32 Communities)</h2>
-<div class="service-areas-grid">
-<a class="area-card" href="lincoln-park">
-<h3 style="color: #F4A261;">Lincoln Park</h3>
-<p>Premium property management in Lincoln Park neighborhoods</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="gold-coast">
-<h3 style="color: #F4A261;">Gold Coast</h3>
-<p>Premium HOA management for Gold Coast luxury buildings</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="river-north">
-<h3 style="color: #F4A261;">River North</h3>
-<p>Premium high-rise management in River North</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="streeterville">
-<h3 style="color: #F4A261;">Streeterville</h3>
-<p>Premium property management for Streeterville towers</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="lakeview">
-<h3 style="color: #F4A261;">Lakeview</h3>
-<p>Professional HOA &amp; condo management throughout Lakeview</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="old-town">
-<h3 style="color: #F4A261;">Old Town</h3>
-<p>Premium property management for Old Town's historic properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="rogers-park">
-<h3 style="color: #F4A261;">Rogers Park</h3>
-<p>Professional property management throughout Rogers Park</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="uptown">
-<h3 style="color: #F4A261;">Uptown</h3>
-<p>Professional HOA management serving Uptown communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="lincoln-square">
-<h3 style="color: #F4A261;">Lincoln Square</h3>
-<p>Expert management for Lincoln Square residential properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="albany-park">
-<h3 style="color: #F4A261;">Albany Park</h3>
-<p>Professional property management in Albany Park's diverse communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="portage-park">
-<h3 style="color: #F4A261;">Portage Park</h3>
-<p>Professional management throughout Portage Park neighborhoods</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="jefferson-park">
-<h3 style="color: #F4A261;">Jefferson Park</h3>
-<p>Comprehensive management for Jefferson Park properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="norwood-park">
-<h3 style="color: #F4A261;">Norwood Park</h3>
-<p>Professional management for Norwood Park properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="sauganash">
-<h3 style="color: #F4A261;">Sauganash</h3>
-<p>Expert HOA management for Sauganash properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="forest-glen">
-<h3 style="color: #F4A261;">Forest Glen</h3>
-<p>Professional property management in Forest Glen</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="north-park">
-<h3 style="color: #F4A261;">North Park</h3>
-<p>Comprehensive property management in North Park</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="mayfair">
-<h3 style="color: #F4A261;">Mayfair</h3>
-<p>Expert HOA management throughout Mayfair communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="pulaski-park">
-<h3 style="color: #F4A261;">Pulaski Park</h3>
-<p>Expert HOA management serving Pulaski Park communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="west-ridge">
-<h3 style="color: #F4A261;">West Ridge</h3>
-<p>Comprehensive management for West Ridge properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="dunning">
-<h3 style="color: #F4A261;">Dunning</h3>
-<p>Professional HOA management serving Dunning communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="avondale">
-<h3 style="color: #F4A261;">Avondale</h3>
-<p>Comprehensive property management throughout Avondale</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="andersonville">
-<h3 style="color: #F4A261;">Andersonville</h3>
-<p>Expert HOA management in Andersonville's historic buildings</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="wicker-park">
-<h3 style="color: #F4A261;">Wicker Park</h3>
-<p>Premium property management in Wicker Park's vibrant community</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="bucktown">
-<h3 style="color: #F4A261;">Bucktown</h3>
-<p>Premium management for Bucktown's trendy properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="logan-square">
-<h3 style="color: #F4A261;">Logan Square</h3>
-<p>Trusted property management serving Logan Square</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="west-loop">
-<h3 style="color: #F4A261;">West Loop</h3>
-<p>Expert property management in West Loop developments</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="south-loop">
-<h3 style="color: #F4A261;">South Loop</h3>
-<p>Trusted high-rise management in the South Loop</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="loop">
-<h3 style="color: #F4A261;">Loop</h3>
-<p>Professional high-rise management in Chicago's Loop</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="hyde-park">
-<h3 style="color: #F4A261;">Hyde Park</h3>
-<p>Expert property management serving Hyde Park communities</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="oak-park">
-<h3 style="color: #F4A261;">Oak Park</h3>
-<p>Expert property management serving Oak Park's historic homes</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="edgewater">
-<h3 style="color: #F4A261;">Edgewater</h3>
-<p>Trusted management for Edgewater's lakefront properties</p>
-<span class="btn-link">Learn More →</span>
-</a>
-<a class="area-card" href="ravenswood">
-<h3 style="color: #F4A261;">Ravenswood</h3>
-<p>Comprehensive property management in Ravenswood</p>
-<span class="btn-link">Learn More →</span>
-</a>
 </div>
 </div>
 </section>
+
+<!-- Areas Grid -->
+<section>
+<div class="container">
+<h2>Choose Your Community</h2>
+<div class="areas-grid">
+<a href="./addison" class="area-card">
+<h3>Addison</h3>
+<p>Professional property management</p>
+</a>
+<a href="./albany-park" class="area-card">
+<h3>Albany Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./andersonville" class="area-card">
+<h3>Andersonville</h3>
+<p>Professional property management</p>
+</a>
+<a href="./arlington-heights" class="area-card">
+<h3>Arlington Heights</h3>
+<p>Professional property management</p>
+</a>
+<a href="./avondale" class="area-card">
+<h3>Avondale</h3>
+<p>Professional property management</p>
+</a>
+<a href="./bartlett" class="area-card">
+<h3>Bartlett</h3>
+<p>Professional property management</p>
+</a>
+<a href="./bensenville" class="area-card">
+<h3>Bensenville</h3>
+<p>Professional property management</p>
+</a>
+<a href="./bloomingdale" class="area-card">
+<h3>Bloomingdale</h3>
+<p>Professional property management</p>
+</a>
+<a href="./bucktown" class="area-card">
+<h3>Bucktown</h3>
+<p>Professional property management</p>
+</a>
+<a href="./buffalo-grove" class="area-card">
+<h3>Buffalo Grove</h3>
+<p>Professional property management</p>
+</a>
+<a href="./deerfield" class="area-card">
+<h3>Deerfield</h3>
+<p>Professional property management</p>
+</a>
+<a href="./des-plaines" class="area-card">
+<h3>Des Plaines</h3>
+<p>Professional property management</p>
+</a>
+<a href="./dunning" class="area-card">
+<h3>Dunning</h3>
+<p>Professional property management</p>
+</a>
+<a href="./edgewater" class="area-card">
+<h3>Edgewater</h3>
+<p>Professional property management</p>
+</a>
+<a href="./edison-park" class="area-card">
+<h3>Edison Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./elk-grove-village" class="area-card">
+<h3>Elk Grove Village</h3>
+<p>Professional property management</p>
+</a>
+<a href="./elmwood-park" class="area-card">
+<h3>Elmwood Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./evanston" class="area-card">
+<h3>Evanston</h3>
+<p>Professional property management</p>
+</a>
+<a href="./forest-glen" class="area-card">
+<h3>Forest Glen</h3>
+<p>Professional property management</p>
+</a>
+<a href="./forest-park" class="area-card">
+<h3>Forest Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./franklin-park" class="area-card">
+<h3>Franklin Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./glencoe" class="area-card">
+<h3>Glencoe</h3>
+<p>Professional property management</p>
+</a>
+<a href="./glenview" class="area-card">
+<h3>Glenview</h3>
+<p>Professional property management</p>
+</a>
+<a href="./gold-coast" class="area-card">
+<h3>Gold Coast</h3>
+<p>Professional property management</p>
+</a>
+<a href="./golf" class="area-card">
+<h3>Golf</h3>
+<p>Professional property management</p>
+</a>
+<a href="./hanover-park" class="area-card">
+<h3>Hanover Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./harwood-heights" class="area-card">
+<h3>Harwood Heights</h3>
+<p>Professional property management</p>
+</a>
+<a href="./highland-park" class="area-card">
+<h3>Highland Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./hoffman-estates" class="area-card">
+<h3>Hoffman Estates</h3>
+<p>Professional property management</p>
+</a>
+<a href="./hyde-park" class="area-card">
+<h3>Hyde Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./jefferson-park" class="area-card">
+<h3>Jefferson Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./kenilworth" class="area-card">
+<h3>Kenilworth</h3>
+<p>Professional property management</p>
+</a>
+<a href="./lake-bluff" class="area-card">
+<h3>Lake Bluff</h3>
+<p>Professional property management</p>
+</a>
+<a href="./lake-forest" class="area-card">
+<h3>Lake Forest</h3>
+<p>Professional property management</p>
+</a>
+<a href="./lakeview" class="area-card">
+<h3>Lakeview</h3>
+<p>Professional property management</p>
+</a>
+<a href="./libertyville" class="area-card">
+<h3>Libertyville</h3>
+<p>Professional property management</p>
+</a>
+<a href="./lincoln-park" class="area-card">
+<h3>Lincoln Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./lincoln-square" class="area-card">
+<h3>Lincoln Square</h3>
+<p>Professional property management</p>
+</a>
+<a href="./lincolnshire" class="area-card">
+<h3>Lincolnshire</h3>
+<p>Professional property management</p>
+</a>
+<a href="./lincolnwood" class="area-card">
+<h3>Lincolnwood</h3>
+<p>Professional property management</p>
+</a>
+<a href="./logan-square" class="area-card">
+<h3>Logan Square</h3>
+<p>Professional property management</p>
+</a>
+<a href="./loop" class="area-card">
+<h3>Loop</h3>
+<p>Professional property management</p>
+</a>
+<a href="./mayfair" class="area-card">
+<h3>Mayfair</h3>
+<p>Professional property management</p>
+</a>
+<a href="./morton-grove" class="area-card">
+<h3>Morton Grove</h3>
+<p>Professional property management</p>
+</a>
+<a href="./mount-prospect" class="area-card">
+<h3>Mount Prospect</h3>
+<p>Professional property management</p>
+</a>
+<a href="./mundelein" class="area-card">
+<h3>Mundelein</h3>
+<p>Professional property management</p>
+</a>
+<a href="./niles" class="area-card">
+<h3>Niles</h3>
+<p>Professional property management</p>
+</a>
+<a href="./norridge" class="area-card">
+<h3>Norridge</h3>
+<p>Professional property management</p>
+</a>
+<a href="./north-park" class="area-card">
+<h3>North Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./northbrook" class="area-card">
+<h3>Northbrook</h3>
+<p>Professional property management</p>
+</a>
+<a href="./northfield" class="area-card">
+<h3>Northfield</h3>
+<p>Professional property management</p>
+</a>
+<a href="./norwood-park" class="area-card">
+<h3>Norwood Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./oak-park" class="area-card">
+<h3>Oak Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./old-irving-park" class="area-card">
+<h3>Old Irving Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./old-town" class="area-card">
+<h3>Old Town</h3>
+<p>Professional property management</p>
+</a>
+<a href="./palatine" class="area-card">
+<h3>Palatine</h3>
+<p>Professional property management</p>
+</a>
+<a href="./park-ridge" class="area-card">
+<h3>Park Ridge</h3>
+<p>Professional property management</p>
+</a>
+<a href="./portage-park" class="area-card">
+<h3>Portage Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./prospect-heights" class="area-card">
+<h3>Prospect Heights</h3>
+<p>Professional property management</p>
+</a>
+<a href="./pulaski-park" class="area-card">
+<h3>Pulaski Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./ravenswood" class="area-card">
+<h3>Ravenswood</h3>
+<p>Professional property management</p>
+</a>
+<a href="./river-grove" class="area-card">
+<h3>River Grove</h3>
+<p>Professional property management</p>
+</a>
+<a href="./river-north" class="area-card">
+<h3>River North</h3>
+<p>Professional property management</p>
+</a>
+<a href="./rogers-park" class="area-card">
+<h3>Rogers Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./rolling-meadows" class="area-card">
+<h3>Rolling Meadows</h3>
+<p>Professional property management</p>
+</a>
+<a href="./roselle" class="area-card">
+<h3>Roselle</h3>
+<p>Professional property management</p>
+</a>
+<a href="./rosemont" class="area-card">
+<h3>Rosemont</h3>
+<p>Professional property management</p>
+</a>
+<a href="./sauganash" class="area-card">
+<h3>Sauganash</h3>
+<p>Professional property management</p>
+</a>
+<a href="./schaumburg" class="area-card">
+<h3>Schaumburg</h3>
+<p>Professional property management</p>
+</a>
+<a href="./schiller-park" class="area-card">
+<h3>Schiller Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./skokie" class="area-card">
+<h3>Skokie</h3>
+<p>Professional property management</p>
+</a>
+<a href="./south-loop" class="area-card">
+<h3>South Loop</h3>
+<p>Professional property management</p>
+</a>
+<a href="./streamwood" class="area-card">
+<h3>Streamwood</h3>
+<p>Professional property management</p>
+</a>
+<a href="./streeterville" class="area-card">
+<h3>Streeterville</h3>
+<p>Professional property management</p>
+</a>
+<a href="./the-glen" class="area-card">
+<h3>The Glen</h3>
+<p>Professional property management</p>
+</a>
+<a href="./uptown" class="area-card">
+<h3>Uptown</h3>
+<p>Professional property management</p>
+</a>
+<a href="./vernon-hills" class="area-card">
+<h3>Vernon Hills</h3>
+<p>Professional property management</p>
+</a>
+<a href="./west-loop" class="area-card">
+<h3>West Loop</h3>
+<p>Professional property management</p>
+</a>
+<a href="./west-ridge" class="area-card">
+<h3>West Ridge</h3>
+<p>Professional property management</p>
+</a>
+<a href="./wheeling" class="area-card">
+<h3>Wheeling</h3>
+<p>Professional property management</p>
+</a>
+<a href="./wicker-park" class="area-card">
+<h3>Wicker Park</h3>
+<p>Professional property management</p>
+</a>
+<a href="./wilmette" class="area-card">
+<h3>Wilmette</h3>
+<p>Professional property management</p>
+</a>
+<a href="./winnetka" class="area-card">
+<h3>Winnetka</h3>
+<p>Professional property management</p>
+</a>
+<a href="./wood-dale" class="area-card">
+<h3>Wood Dale</h3>
+<p>Professional property management</p>
+</a>
+</div>
+</div>
+</section>
+
 <!-- CTA Section -->
-<section class="cta-section">
-<h2 style="color: #F4A261;">Ready to Experience Professional Property Management?</h2>
-<div class="cta-buttons">
-<a class="btn btn-primary" href="../contact.html">Get Started</a>
-<a class="btn btn-secondary" href="tel:8476522338">Call (847) 652-2338</a>
+<section style="background: rgba(44,62,80,0.1); padding: 80px 20px;">
+<div class="container">
+<div style="background: linear-gradient(135deg, rgba(244, 162, 97, 0.1), rgba(44, 62, 80, 0.2)); border: 2px solid var(--primary-gold); border-radius: 12px; padding: 60px 40px; text-align: center;">
+<h2>Ready to Experience Better Property Management?</h2>
+<p style="font-size: 1.2rem; margin: 30px 0;">
+Join 200+ satisfied communities across Chicagoland
+</p>
+<a href="tel:8478344131" style="display: inline-block; background: var(--primary-gold); color: var(--background-dark); padding: 15px 40px; border-radius: 50px; font-weight: bold; font-size: 1.1rem; text-decoration: none; transition: all 0.3s ease;">
+Call (847) 834-4131
+</a>
 </div>
+</div>
+</section>
 
-    <!-- Bottom Strategic CTA - Complete the Reverse Silo -->
-    <div style="background: #1f2937; padding: 3rem 2rem; text-align: center; margin-top: 3rem; border: 2px solid #F4A261;">
-        <h2 style="color: #F4A261; font-size: 2rem; margin-bottom: 1rem; text-align: center;" style="color: #F4A261;">Start Saving 50% on Property Management</h2>
-        <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap;">
-            <a href="../../contact.html" style="background: linear-gradient(135deg, #084298 0%, #F4A261 100%); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem; box-shadow: 0 4px 15px rgba(0,0,0,0.2);">
-                📞 Request Consultation
-            </a>
-            <a href="sms:8476522338" style="background: transparent; color: #F4A261; border: 2px solid #F4A261; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.1rem;">
-                📱 Text Us Now
-            </a>
-        </div>
-    </div>
-    
-    
 <!-- Footer -->
-    <!-- Footer -->
-        <!-- Footer -->
-    <footer style="background: #1f2937; color: #e5e7eb; padding: 1.5rem 0; margin-top: 2rem;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
-            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap: 2rem; align-items: start;">
-                <!-- Company Info -->
-                <div>
-                    <h3 style="font-size: 1.1rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;" style="color: #F4A261;">MANAGE369</h3>
-                    <p style="font-size: 0.85rem; margin: 0; line-height: 1.3; color: #e5e7eb;">
-                        1400 Patriot Blvd #357, Glenview, IL<br>
-                        📱 Text: <a href="sms:8476522338" style="color: #F4A261; text-decoration: none;">(847) 652-2338</a><br>
-                        <a href="mailto:service@manage369.com" style="color: #60a5fa; text-decoration: none;">service@manage369.com</a>
-                    </p>
-                </div>
-                
-                <!-- Services -->
-                <div>
-                    <h4 style="font-size: 0.9rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;" style="color: #F4A261;">Services</h4>
-                    <div style="font-size: 0.8rem; line-height: 1.3;">
-                        <a href="services/condominium-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Condominium</a>
-                        <a href="services/hoa-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">HOA</a>
-                        <a href="services/townhome-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Townhome</a>
-                        <a href="services/financial-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Financial</a>
-                        <a href="services/maintenance-coordination/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Maintenance</a>
-                        <a href="services/board-support/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Board Support</a>
-                    </div>
-                </div>
-                
-                <!-- Quick Links -->
-                <div>
-                    <h4 style="font-size: 0.9rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;" style="color: #F4A261;">Quick Links</h4>
-                    <div style="font-size: 0.8rem; line-height: 1.3;">
-                        <a href="property-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Areas We Serve</a>
-                        <a href="contact.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Contact</a>
-                        <a href="forms.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Forms</a>
-                        <a href="payment-methods.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Pay Dues</a>
-                        <a href="blog/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Blog</a>
-                        <a href="sitemap.xml" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Sitemap</a>
-                    </div>
-                </div>
-                
-                <!-- Resources -->
-                <div>
-                    <h4 style="font-size: 0.9rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;" style="color: #F4A261;">Resources</h4>
-                    <div style="font-size: 0.8rem; line-height: 1.3;">
-                        <a href="legal-disclaimers.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Legal</a>
-                        <a href="privacy-policy.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Privacy</a>
-                        <a href="terms-of-service.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Terms</a>
-                        <a href="accessibility.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Accessibility</a>
-                        <a href="leave-review.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Leave Review</a>
-                    </div>
-                </div>
-                
-                <!-- Certifications & Copyright -->
-                <div style="text-align: right;">
-                    <div style="font-size: 0.75rem; color: #F4A261; line-height: 1.4; margin-bottom: 0.5rem; font-weight: 600;">CAI National Member<br>
-                        AMS<br>
-                        CMCA<br>
-                        IDFPR Licensed<br>
-                        License: 291.000211
-                    </div>
-                    <div style="font-size: 0.75rem; color: #e5e7eb; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #374151;">
-                        © 2025 Manage369<br>
-                        All rights reserved
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
+<footer style="background: rgba(44,62,80,0.3); padding: 60px 20px;">
+<div class="container">
+<p style="text-align: center;">
+© 2025 Manage369. All rights reserved. | Licensed Property Management Company | License: 291.000211
+</p>
+</div>
+</footer>
 
-<script>
-// Scroll progress indicator
-window.addEventListener('scroll', () => {
-    const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-    const scrolled = (winScroll / height) * 100;
-    const indicator = document.getElementById('scrollIndicator');
-    if (indicator) {
-        indicator.style.transform = `scaleX(${scrolled / 100})`;
-    }
-});
-
-// Add loading class to forms on submit
-document.querySelectorAll('form').forEach(form => {
-    form.addEventListener('submit', function() {
-        const btn = this.querySelector('button[type="submit"]');
-        if (btn) btn.classList.add('loading');
-    });
-});
-</script>
 </body>
 </html>
