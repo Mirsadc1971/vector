@@ -150,19 +150,31 @@ body {
     min-width: 44px;
     align-items: center;
     justify-content: center;
-}
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
 
 .btn-primary {
     background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
     color: white;
     border-color: #F4A261;
-}
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
 
 .btn-secondary {
     background: transparent;
     color: #F4A261;
     border-color: #F4A261;
-}
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
 
 /* Navigation - critical for above fold */
 .nav {
@@ -233,7 +245,11 @@ body {
     .btn {
         width: 100%;
         max-width: 280px;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
 }
 
 @media (max-width: 480px) {
@@ -516,6 +532,10 @@ body {
     text-decoration: none;
     font-weight: 600;
     transition: background-color 0.2s ease;
+
+    display: inline-block !important;
+    text-align: center !important;
+    min-width: 200px !important;
 }
 
 /* Prevent FOUC and layout shifts */
@@ -1029,33 +1049,53 @@ body {
             text-transform: uppercase;
             letter-spacing: 0.5px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-        }
+        
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
         
         .btn-primary {
             background: linear-gradient(135deg, #084298 0%, #F4A261 100%);
             color: white;
             border: 1px solid #F4A261;
-        }
+        
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
         
         .btn-secondary {
             border: 2px solid white;
             color: white;
             background: rgba(255,255,255,0.1);
             backdrop-filter: blur(10px);
-        }
+        
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
         
         .btn-primary:hover {
             background: #2C3E50;
             border-color: #F4A261;
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255,149,0,0.4);
-        }
+        
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
         
         .btn-secondary:hover {
             background: rgba(255,255,255,0.2);
             transform: translateY(-3px);
             box-shadow: 0 6px 20px rgba(255,255,255,0.2);
-        }
+        
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
         
         .header {
             position: fixed;
@@ -1473,7 +1513,11 @@ body {
                 text-align: center;
                 font-size: 0.95rem;
                 padding: 14px 24px;
-            }
+            
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
             
             .footer-grid {
                 grid-template-columns: 1fr;
@@ -1522,7 +1566,11 @@ body {
             .btn {
                 font-size: 0.9rem;
                 padding: 12px 18px;
-            }
+            
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
             
             .logo {
                 font-size: 1.3rem;
@@ -1582,11 +1630,19 @@ body {
     .btn-primary, button[type="submit"], .submit-btn {
         background: #2C3E50 !important; /* Darker orange for better contrast */
         color: white !important;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     .btn-primary:hover, button[type="submit"]:hover, .submit-btn:hover {
         background: #a03a0a !important;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     /* Service cards text contrast */
     .service-card h3, .service-card h4 {
@@ -1716,7 +1772,11 @@ body {
         position: relative;
         overflow: hidden;
         z-index: 1;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     .btn::before, button::before, .submit-btn::before {
         content: '';
@@ -1728,11 +1788,19 @@ body {
         background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
         transition: left 0.5s;
         z-index: -1;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     .btn:hover::before, button:hover::before, .submit-btn:hover::before {
         left: 100%;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     /* Glowing gold accents */
     h1, h2, h3, h4 {
@@ -2352,7 +2420,11 @@ body {
         position: relative;
         overflow: hidden;
         z-index: 1;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     .btn::before, button::before, .submit-btn::before {
         content: '';
@@ -2364,11 +2436,19 @@ body {
         background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
         transition: left 0.5s;
         z-index: -1;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     .btn:hover::before, button:hover::before, .submit-btn:hover::before {
         left: 100%;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     /* Glowing gold accents */
     h1, h2, h3, h4 {
@@ -2754,7 +2834,11 @@ a {
 .btn, button {
     background: linear-gradient(135deg, #084298 0%, #F4A261 100%) !important;
     color: white !important;
-}
+
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
 
 footer {
     background: #2C3E50 !important;
@@ -3588,7 +3672,11 @@ img {
         position: relative;
         overflow: hidden;
         z-index: 1;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     .btn::before, button::before, .submit-btn::before {
         content: '';
@@ -3600,11 +3688,19 @@ img {
         background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
         transition: left 0.5s;
         z-index: -1;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     .btn:hover::before, button:hover::before, .submit-btn:hover::before {
         left: 100%;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     /* Glowing gold accents */
     h1, h2, h3, h4 {
@@ -4545,7 +4641,11 @@ document.addEventListener('DOMContentLoaded', function() {
         position: relative;
         overflow: hidden;
         z-index: 1;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     .btn::before, button::before, .submit-btn::before {
         content: '';
@@ -4557,11 +4657,19 @@ document.addEventListener('DOMContentLoaded', function() {
         background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
         transition: left 0.5s;
         z-index: -1;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     .btn:hover::before, button:hover::before, .submit-btn:hover::before {
         left: 100%;
-    }
+    
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;}
     
     /* Glowing gold accents */
     h1, h2, h3, h4 {
