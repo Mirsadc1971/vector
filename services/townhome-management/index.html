@@ -83,7 +83,13 @@
     }
     </script>
 <link href="../../assets/css/main.css" rel="stylesheet"/>
+<link href="/fix-all-pages.css" rel="stylesheet">
 <style>
+/* UNIVERSAL FIXES */
+h1, h2, h3, h4, h5, h6, p { text-align: center !important; }
+.btn, .btn-primary, .btn-secondary { width: 250px !important; height: 48px !important; padding: 12px 20px !important; font-size: 1rem !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; margin: 10px auto !important; }
+.services-grid > div { display: flex !important; flex-direction: column !important; justify-content: space-between !important; min-height: 300px !important; }
+.services-grid > div > div:last-child { margin-top: auto !important; display: flex !important; justify-content: center !important; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #e5e7eb; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -329,12 +335,12 @@
         /* Tablet Responsive */
         @media (max-width: 1024px) {
             .services-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
             }
             
             .property-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
         
@@ -390,13 +396,13 @@
         /* Process Grid Responsive Design */
         .process-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
         
         @media (max-width: 1024px) {
             .process-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
         
@@ -999,6 +1005,7 @@ nav {
 </style>
 <link href="/fix-service-card-buttons.css" rel="stylesheet">
 <link href="/fix-service-grid-alignment.css" rel="stylesheet">
+<link href="/fix-all-pages.css" rel="stylesheet">
 </head>
 <body style="background: #2C3E50; color: #e5e7eb;">
 <div class="scroll-indicator" id="scrollIndicator"></div>
@@ -1132,7 +1139,7 @@ nav {
 <div class="container">
 <h2 class="section-title">Premier North Shore Property Management with Emergency Response</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Combining professional North Shore property management with emergency property management Chicago expertise for comprehensive townhome community services.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); ">
 <h3 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.4rem;">North Shore Property Management Excellence</h3>
 <p style="margin-bottom: 1rem;">Specialized North Shore property management services tailored to the unique needs of prestigious North Shore communities. Our deep understanding of local regulations, architectural standards, and community expectations ensures exceptional property management that preserves and enhances property values.</p>
@@ -1161,7 +1168,7 @@ nav {
 <div class="container">
 <h2 class="section-title">Specialized Townhome Management Expertise</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Unique expertise in managing attached housing communities with complex shared systems and individual unit responsibilities.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <div style="background: #2C3E50; padding: 2rem; border-radius: 10px; ">
 <h3 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.4rem;">Attached Housing Expertise</h3>
 <p style="margin-bottom: 1rem;">Specialized management for attached townhome communities requiring unique expertise in shared wall maintenance, party wall agreements, exterior building envelope management, and complex ownership boundaries. We understand the intricate balance between individual unit responsibility and common area management.</p>
@@ -1190,11 +1197,11 @@ nav {
 <div class="container">
 <h2 class="section-title">Townhome Management Success Stories</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Proven results from our specialized townhome community management projects.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #F4A261; margin-bottom: 1rem;">Roof Replacement Project</h3>
 <p style="margin-bottom: 1rem;">Successfully managed a comprehensive roof replacement project for a 28-unit townhome community. Coordinated individual unit assessments, insurance claims, and contractor scheduling while maintaining resident satisfaction.</p>
-<div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+<div style="background: #1f2937; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
 <strong style="color: #2c5aa0;">Project Results:</strong><br/>
                         • $420,000 roof replacement project<br/>
                         • 100% insurance claim approval rate<br/>
@@ -1206,7 +1213,7 @@ nav {
 <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #F4A261; margin-bottom: 1rem;">Utility Optimization Program</h3>
 <p style="margin-bottom: 1rem;">Implemented shared utility optimization program for a 45-unit townhome development, reducing costs and improving system efficiency while clarifying individual vs. common responsibilities.</p>
-<div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+<div style="background: #1f2937; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
 <strong style="color: #2c5aa0;">Optimization Results:</strong><br/>
                         • 28% reduction in utility costs<br/>
                         • New digital billing allocation system<br/>
@@ -1218,7 +1225,7 @@ nav {
 <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #F4A261; margin-bottom: 1rem;">Exterior Maintenance Program</h3>
 <p style="margin-bottom: 1rem;">Developed comprehensive exterior maintenance program for a townhome community, establishing preventive schedules, contractor relationships, and maintenance standards that enhanced property values.</p>
-<div style="background: #e8f4fd; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
+<div style="background: #1f2937; padding: 1rem; border-radius: 8px; margin-bottom: 1rem;">
 <strong style="color: #2c5aa0;">Program Achievements:</strong><br/>
                         • 40% reduction in emergency repairs<br/>
                         • Established 5-year maintenance schedule<br/>
@@ -1234,7 +1241,7 @@ nav {
 <section class="section">
 <div class="container">
 <h2 class="section-title">Why Choose Manage369 for Townhome Management</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <div style="text-align: center; padding: 2rem;">
 <div style="width: 80px; height: 80px; background: #2c5aa0; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">🏘️</div>
 <h3 style="color: #F4A261; margin-bottom: 1rem;">Attached Housing Specialists</h3>
@@ -1322,7 +1329,7 @@ nav {
 <div class="container">
 <h2 class="section-title">Our Complete Townhome Management Services</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional townhome community management integrated with our comprehensive North Shore property management and emergency property management Chicago service offerings.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); text-align: center;">
 <h3 style="color: #F4A261; margin-bottom: 1rem;">💰 Financial Management</h3>
 <p style="margin-bottom: 1.5rem;">Comprehensive financial oversight with North Shore property management expertise and emergency financial management Chicago capabilities for townhome associations.</p>
@@ -1367,7 +1374,7 @@ nav {
 <p><strong>Contact us to discuss your townhome community's specific management needs.</strong></p>
 </div>
 <div style="text-align: center;">
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <a href="../../property-management-gold-coast.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Gold Coast Townhome Management</a>
 <a href="../../property-management-river-north.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">River North Townhome Management</a>
 <a href="../../property-management-streeterville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Streeterville Townhome Management</a>

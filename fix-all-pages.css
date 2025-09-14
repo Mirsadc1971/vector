@@ -1,0 +1,80 @@
+/* UNIVERSAL FIXES FOR ALL PAGES */
+
+/* Force center all text elements */
+h1, h2, h3, h4, h5, h6, p {
+    text-align: center !important;
+}
+
+/* Fix all buttons to be uniform */
+.btn, .btn-primary, .btn-secondary, a[class*="btn"] {
+    width: 250px !important;
+    height: 48px !important;
+    padding: 12px 20px !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 10px auto !important;
+    box-sizing: border-box !important;
+    text-decoration: none !important;
+}
+
+/* Fix service grids */
+.services-grid, div[style*="grid"] {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+    align-items: stretch !important;
+}
+
+/* Fix service cards */
+.services-grid > div, .service-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 300px !important;
+    background: #1f2937 !important;
+    padding: 2rem !important;
+    border-radius: 10px !important;
+}
+
+/* Push buttons to bottom of cards */
+.services-grid > div > div:last-child,
+.service-card > div:last-child {
+    margin-top: auto !important;
+    padding-top: 1rem !important;
+    display: flex !important;
+    justify-content: center !important;
+}
+
+/* Remove white backgrounds from nested cards */
+div[style*="background: #e8f4fd"],
+div[style*="background: white"],
+div[style*="background: #fff"] {
+    background: transparent !important;
+    padding: 0 !important;
+}
+
+/* Center containers */
+.container {
+    text-align: center !important;
+}
+
+/* Responsive fixes */
+@media (max-width: 1024px) {
+    .services-grid, div[style*="grid"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid, div[style*="grid"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    .btn, .btn-primary, .btn-secondary, a[class*="btn"] {
+        width: 100% !important;
+        max-width: 250px !important;
+    }
+}

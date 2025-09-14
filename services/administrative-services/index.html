@@ -18,6 +18,11 @@
 <meta content="Administrative services: document management, compliance, insurance coordination. 24/7 emergency response. Call (847) 652-2338." name="description"/>
 <link href="../../assets/css/main.css" rel="stylesheet"/>
 <style>
+/* UNIVERSAL FIXES */
+h1, h2, h3, h4, h5, h6, p { text-align: center !important; }
+.btn, .btn-primary, .btn-secondary { width: 250px !important; height: 48px !important; padding: 12px 20px !important; font-size: 1rem !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; margin: 10px auto !important; }
+.services-grid > div { display: flex !important; flex-direction: column !important; justify-content: space-between !important; min-height: 300px !important; }
+.services-grid > div > div:last-child { margin-top: auto !important; display: flex !important; justify-content: center !important; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #e5e7eb; }
         .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -263,12 +268,12 @@
         /* Tablet Responsive */
         @media (max-width: 1024px) {
             .services-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
             }
             
             .property-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
         
@@ -912,6 +917,7 @@ nav {
 
 </style>
 <link href="/fix-service-grid-alignment.css" rel="stylesheet">
+<link href="/fix-all-pages.css" rel="stylesheet">
 </head>
 <body style="background: #2C3E50; color: #e5e7eb;">
 <div class="scroll-indicator" id="scrollIndicator"></div>
@@ -1104,7 +1110,7 @@ nav {
 <div class="container">
 <h2 class="section-title">Our Complete North Shore Property Management Services</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Beyond administrative services, we provide comprehensive property management services to support every aspect of your community's operations and emergency property management Chicago needs.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <a href="/services/financial-management/" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-3px)'" style="background: #1f2937; padding: 1.5rem; border-radius: 8px; text-decoration: none; color: #e5e7eb; box-shadow: 0 3px 10px rgba(0,0,0,0.1); transition: transform 0.3s; ">
 <h3 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.2rem;">Financial Management</h3>
 <p>Comprehensive budget planning, accounting, and financial reporting services for your association.</p>
@@ -1147,7 +1153,7 @@ nav {
 <h2 class="section-title">North Shore Property Management Administrative Services - Areas We Serve</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional administrative services and emergency property management Chicago coordination throughout the Greater Chicago area and North Shore suburbs. Our experienced administrative team provides expert document management, regulatory compliance, and professional support services to property associations across all of Chicagoland.</p>
 <h3 style="color: #F4A261; text-align: center; margin-bottom: 2rem;">North Shore Communities</h3>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <a href="/property-management-glenview.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Glenview Property Management</a>
 <a href="/property-management-northbrook.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Northbrook Property Management</a>
 <a href="/property-management-highland-park.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highland Park Property Management</a>
@@ -1164,7 +1170,7 @@ nav {
 <a href="/property-management-highwood.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Highwood Property Management</a>
 </div>
 <h3 style="color: #F4A261; text-align: center; margin-bottom: 2rem;">Northwest Suburbs</h3>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <a href="/property-management-buffalo-grove.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Buffalo Grove Property Management</a>
 <a href="/property-management-vernon-hills.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Vernon Hills Property Management</a>
 <a href="/property-management-mundelein.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Mundelein Property Management</a>
@@ -1177,7 +1183,7 @@ nav {
 <a href="/property-management-skokie.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Skokie Property Management</a>
 </div>
 <h3 style="color: #F4A261; text-align: center; margin-bottom: 2rem;">Chicago Neighborhoods</h3>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <a href="/property-management-downtown-chicago.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Downtown Chicago Property Management</a>
 <a href="/property-management-the-loop.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">The Loop Property Management</a>
 <a href="/property-management-river-north.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">River North Property Management</a>

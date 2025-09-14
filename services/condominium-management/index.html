@@ -183,7 +183,13 @@
     }
     </script>
 <link href="../../assets/css/main.css" rel="stylesheet"/>
+<link href="/fix-all-pages.css" rel="stylesheet">
 <style>
+/* UNIVERSAL FIXES */
+h1, h2, h3, h4, h5, h6, p { text-align: center !important; }
+.btn, .btn-primary, .btn-secondary { width: 250px !important; height: 48px !important; padding: 12px 20px !important; font-size: 1rem !important; display: inline-flex !important; align-items: center !important; justify-content: center !important; margin: 10px auto !important; }
+.services-grid > div { display: flex !important; flex-direction: column !important; justify-content: space-between !important; min-height: 300px !important; }
+.services-grid > div > div:last-child { margin-top: auto !important; display: flex !important; justify-content: center !important; }
         * {
             margin: 0;
             padding: 0;
@@ -544,22 +550,22 @@
         /* Process Grid Responsive Design */
         .process-grid {
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(3, 1fr);
             gap: 2rem;
         }
         
         @media (max-width: 1024px) {
             .process-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
             
             .services-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
                 gap: 1.5rem;
             }
             
             .property-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(3, 1fr);
             }
         }
         
@@ -1207,6 +1213,7 @@ nav {
 </style>
 <link href="/fix-service-card-buttons.css" rel="stylesheet">
 <link href="/fix-service-grid-alignment.css" rel="stylesheet">
+<link href="/fix-all-pages.css" rel="stylesheet">
 </head>
 <body style="background: #2C3E50; color: #e5e7eb;">
 <div class="scroll-indicator" id="scrollIndicator"></div>
@@ -1342,7 +1349,7 @@ nav {
 <div class="container">
 <h2 class="section-title">Chicago Condominium Management Expertise</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Deep understanding of Chicago and North Shore condominium markets, building types, and regulatory requirements.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <div style="background: #2C3E50; padding: 2rem; border-radius: 10px; ">
 <h3 style="color: #F4A261; margin-bottom: 1rem; font-size: 1.4rem;">High-Rise Building Expertise</h3>
 <p style="margin-bottom: 1rem;">Specialized management for Chicago's iconic high-rise condominium towers including vintage buildings from the 1920s-1960s and modern luxury developments. We understand the unique challenges of managing buildings with 20+ floors, multiple elevator systems, and complex mechanical infrastructure.</p>
@@ -1371,7 +1378,7 @@ nav {
 <div class="container">
 <h2 class="section-title">Condominium Management Success Stories</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Real results from our Chicago and North Shore condominium management partnerships.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <div style="background: #1f2937; padding: 2rem; border-radius: 10px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
 <h3 style="color: #F4A261; margin-bottom: 1rem;">Gold Coast High-Rise Turnaround</h3>
 <p style="margin-bottom: 1rem;">Transformed a 45-unit Gold Coast building from financial distress to stable operations within 18 months. Reduced operating costs by 22% while improving building services and unit owner satisfaction.</p>
@@ -1415,7 +1422,7 @@ nav {
 <section class="section">
 <div class="container">
 <h2 class="section-title">Why Choose Manage369 for Condominium Management</h2>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <div style="text-align: center; padding: 2rem;">
 <div style="width: 80px; height: 80px; background: #2c5aa0; border-radius: 50%; margin: 0 auto 1rem; display: flex; align-items: center; justify-content: center; color: white; font-size: 2rem; font-weight: bold;">CAI</div>
 <h3 style="color: #F4A261; margin-bottom: 1rem;">CAI Certified Management</h3>
@@ -1547,7 +1554,7 @@ nav {
 <div class="container">
 <h2 class="section-title">Condominium Management Areas We Serve</h2>
 <p style="text-align: center; margin-bottom: 3rem; font-size: 1.1rem;">Professional North Shore property management condominium services with emergency property management Chicago capabilities available throughout Chicago and the North Shore suburbs.</p>
-<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-bottom: 2rem;">
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem;">
 <a href="../../property-management-gold-coast.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Gold Coast Condo Management</a>
 <a href="../../property-management-river-north.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">River North Condo Management</a>
 <a href="../../property-management-streeterville.html" onmouseout="this.style.transform='translateY(0)'" onmouseover="this.style.transform='translateY(-2px)'" style="background: #1f2937; padding: 1rem; border-radius: 8px; text-decoration: none; color: #2c5aa0; font-weight: 600; text-align: center; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: transform 0.3s;">Streeterville Condo Management</a>
