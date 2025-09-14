@@ -895,6 +895,126 @@ areas = [
         'links': '''<a href="../northbrook" class="area-link">Northbrook</a>
 <a href="../highland-park" class="area-link">Highland Park</a>
 <a href="../riverwoods" class="area-link">Riverwoods</a>'''
+    },
+    {
+        'city': 'Glencoe',
+        'slug': 'glencoe',
+        'intro': "Glencoe's lakefront location and historic charm create unique management challenges for associations:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Lakefront erosion threatening property foundations and common areas</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Luxury HOA budgets requiring sophisticated financial management</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Historic district preservation requirements affecting renovations</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards balancing modern amenities with architectural integrity</li>''',
+        'links': '''<a href="../winnetka" class="area-link">Winnetka</a>
+<a href="../highland-park" class="area-link">Highland Park</a>
+<a href="../wilmette" class="area-link">Wilmette</a>'''
+    },
+    {
+        'city': 'Kenilworth',
+        'slug': 'kenilworth',
+        'intro': "Kenilworth's exclusive community demands the highest standards in property management:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Exclusive HOA boards requiring discreet professional management</li>
+<li style="padding: 10px 0; color: var(--text-light);">• High-value homes exceeding $3M demanding premium services</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Strict architectural standards requiring meticulous oversight</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards expecting exceptional vendor vetting and supervision</li>''',
+        'links': '''<a href="../winnetka" class="area-link">Winnetka</a>
+<a href="../wilmette" class="area-link">Wilmette</a>
+<a href="../glencoe" class="area-link">Glencoe</a>'''
+    },
+    {
+        'city': 'Lake Bluff',
+        'slug': 'lake-bluff',
+        'intro': "Lake Bluff combines lakefront beauty with community challenges that require experienced management:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• HOA reserves planning for shoreline erosion protection</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Snow removal costs straining winter maintenance budgets</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Mid-size condo communities requiring balanced financial planning</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards managing aging infrastructure and capital improvements</li>''',
+        'links': '''<a href="../lake-forest" class="area-link">Lake Forest</a>
+<a href="../highland-park" class="area-link">Highland Park</a>
+<a href="../libertyville" class="area-link">Libertyville</a>'''
+    },
+    {
+        'city': 'Morton Grove',
+        'slug': 'morton-grove',
+        'intro': "Morton Grove's diverse housing stock presents unique management opportunities:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo buildings requiring frequent maintenance coordination</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budget-conscious HOAs needing cost-effective solutions</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Stormwater drainage projects requiring professional oversight</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards balancing affordability with necessary improvements</li>''',
+        'links': '''<a href="../skokie" class="area-link">Skokie</a>
+<a href="../niles" class="area-link">Niles</a>
+<a href="../lincolnwood" class="area-link">Lincolnwood</a>'''
+    },
+    {
+        'city': 'Niles',
+        'slug': 'niles',
+        'intro': "Niles features established communities with infrastructure that demands proactive management:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Aging infrastructure requiring strategic capital planning</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Multi-building condo associations needing coordinated management</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Snow removal costs impacting winter budget planning</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards seeking professional guidance for major renovations</li>''',
+        'links': '''<a href="../morton-grove" class="area-link">Morton Grove</a>
+<a href="../skokie" class="area-link">Skokie</a>
+<a href="../park-ridge" class="area-link">Park Ridge</a>'''
+    },
+    {
+        'city': 'Riverwoods',
+        'slug': 'riverwoods',
+        'intro': "Riverwoods' wooded setting and privacy create distinct management needs:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Gated HOA management requiring specialized security coordination</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Stormwater basin maintenance in natural settings</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Wooded property upkeep balancing nature and safety</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards managing private roads and infrastructure</li>''',
+        'links': '''<a href="../deerfield" class="area-link">Deerfield</a>
+<a href="../lincolnshire" class="area-link">Lincolnshire</a>
+<a href="../buffalo-grove" class="area-link">Buffalo Grove</a>'''
+    },
+    {
+        'city': 'Northfield',
+        'slug': 'northfield',
+        'intro': "Northfield's small luxury HOAs require personalized professional management:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Small luxury HOAs demanding personalized attention</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome maintenance reserves requiring careful planning</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Older private roads needing assessment and repairs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards expecting boutique-level management services</li>''',
+        'links': '''<a href="../winnetka" class="area-link">Winnetka</a>
+<a href="../glenview" class="area-link">Glenview</a>
+<a href="../northbrook" class="area-link">Northbrook</a>'''
+    },
+    {
+        'city': 'Wheeling',
+        'slug': 'wheeling',
+        'intro': "Wheeling's diverse housing mix creates varied management requirements:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Mid-rise condos near Milwaukee Ave requiring elevator maintenance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Affordable townhomes with tight budgets needing efficiency</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Delinquency reduction strategies for mixed-income properties</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards seeking cost-effective vendor management</li>''',
+        'links': '''<a href="../buffalo-grove" class="area-link">Buffalo Grove</a>
+<a href="../prospect-heights" class="area-link">Prospect Heights</a>
+<a href="../northbrook" class="area-link">Northbrook</a>'''
+    },
+    {
+        'city': 'Vernon Hills',
+        'slug': 'vernon-hills',
+        'intro': "Vernon Hills' master-planned communities require comprehensive management expertise:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Master-planned HOAs with complex governance structures</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Large townhome developments requiring coordinated maintenance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Reserve planning for capital projects and amenities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards managing multiple vendor relationships efficiently</li>''',
+        'links': '''<a href="../libertyville" class="area-link">Libertyville</a>
+<a href="../mundelein" class="area-link">Mundelein</a>
+<a href="../lincolnshire" class="area-link">Lincolnshire</a>'''
+    },
+    {
+        'city': 'Libertyville',
+        'slug': 'libertyville',
+        'intro': "Libertyville blends historic charm with modern development challenges:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Historic downtown condos requiring specialized maintenance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Newer suburban HOAs balancing growth with services</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Reserve studies for stormwater retention infrastructure</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards navigating mixed-use development complexities</li>''',
+        'links': '''<a href="../lake-bluff" class="area-link">Lake Bluff</a>
+<a href="../vernon-hills" class="area-link">Vernon Hills</a>
+<a href="../mundelein" class="area-link">Mundelein</a>'''
     }
 ]
 
