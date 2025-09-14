@@ -606,45 +606,121 @@ footer {
     letter-spacing: 1px;
 }
 </style>
+<link rel="stylesheet" href="/assets/css/universal-sticky-header.css">
 </head>
 <body>
-<header class="header">
-<div class="header-content">
-<a class="logo" href="../../index.html">MANAGE369</a>
-<button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
-<nav class="nav">
-<a href="/">Home</a>
-<div class="services-dropdown">
-<a href="../../services.html">Services <span>▼</span></a>
-<div class="dropdown-content">
-<div class="dropdown-header">Property Types</div>
-<a href="../../services/condominium-management/">Condominium Management</a>
-<a href="../../services/hoa-management/">HOA Management</a>
-<a href="../../services/townhome-management/">Townhome Management</a>
-<div class="dropdown-header">Service Offerings</div>
-<a href="../../services/financial-management/">Financial Management</a>
-<a href="../../services/maintenance-coordination/">Maintenance Coordination</a>
-<a href="../../services/board-support/">Board Support</a>
-<a href="../../services/administrative-services/">Administrative Services</a>
-<a href="../../services/capital-project-management/">Capital Project Management</a>
-<a href="../../services/resident-relations/">Resident Relations</a>
-</div>
-</div>
-<a href="../">Areas We Serve</a>
-<a href="../../pay-dues.html">Pay Dues</a>
-<a href="../../contact.html">Contact</a>
-</nav>
-<a class="phone" href="tel:8478344131" style="color: var(--primary-gold); font-weight: 600;">Call (847) 834-4131</a>
-</div>
-<div class="mobile-menu" id="mobileMenu">
-<a href="/">Home</a>
-<a href="../../services.html">Services</a>
-<a href="../">Areas We Serve</a>
-<a href="../../pay-dues.html">Pay Dues</a>
-<a href="../../contact.html">Contact</a>
-<a href="tel:8478344131" style="background: var(--primary-gold); color: var(--background-dark); padding: 12px; border-radius: 8px; margin-top: 10px; text-align: center;">Call (847) 834-4131</a>
-</div>
-</header>
+<header class="header" style="background: #2C3E50;">
+
+<style>
+/* Critical CSS for above-the-fold content */
+.hero-optimized {
+    padding: 40px 20px 20px;
+    text-align: center;
+    color: white;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+    transform: translateZ(0);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.webp .hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                url('images/manage369randolphstation_ultra.webp') center/cover !important;
+}
+
+.no-webp .hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                url('images/manage369randolphstation_optimized.jpg') center/cover !important;
+}
+
+.hero-optimized .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-optimized h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0,0,0,0.5);
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .hero-optimized {
+        min-height: 400px;
+        padding: 20px 15px 15px;
+    }
+    .hero-optimized .hero-content {
+        margin-top: 40px;
+    }
+    .hero-optimized h1 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}
+</style>
+        <!-- COMPANY LOGO/NAME - Edit this to change your company name -->
+        <div class="logo" style="color: #F4A261;">MANAGE369</div>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+        
+        <!-- MAIN NAVIGATION MENU - Standardized Layout -->
+        <nav aria-label="Primary navigation" class="nav" style="margin-left: 2rem; margin-right: auto; flex: 1;">
+            <a href="index.html" class="nav-link">Home</a>
+            <div class="dropdown">
+                <a href="services.html" class="nav-link dropdown-trigger">Services <span class="dropdown-arrow">▼</span></a>
+                <div class="dropdown-content">
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Property Types</div>
+                        <a href="services/condominium-management/">Condominium Management</a>
+                        <a href="services/hoa-management/">HOA Management</a>
+                        <a href="services/townhome-management/">Townhome Management</a>
+                    </div>
+                    <div class="dropdown-section">
+                        <div class="dropdown-header">Service Offerings</div>
+                        <a href="services/financial-management/">Financial Management</a>
+                        <a href="services/maintenance-coordination/">Maintenance Coordination</a>
+                        <a href="services/board-support/">Board Support</a>
+                        <a href="services/administrative-services/">Administrative Services</a>
+                        <a href="services/capital-project-management/">Capital Project Management</a>
+                        <a href="services/resident-relations/">Resident Relations</a>
+                    </div>
+                </div>
+            </div>
+            <a href="property-management/" class="nav-link">Areas We Serve</a>
+            <a href="payment-methods.html" class="nav-link">Pay Dues</a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </nav>
+        
+        <!-- PROFESSIONAL PHONE CTA -->
+        <div class="header-cta">
+            <a href="sms:8476522338" class="phone-button" style="background: #2C3E50; color: #F4A261 !important; border: 1px solid #F4A261; border: 1px solid #F4A261;">📱 Text (847) 652-2338</a>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="services.html">Services</a>
+            <a href="property-management/">Areas We Serve</a>
+            <a href="pay-dues.html">Pay Dues</a>
+            <a href="contact.html">Contact</a>
+            <a href="tel:8476522338" style="background: #2C3E50; color: #F4A261 !important; border: 1px solid #F4A261; border: 1px solid #F4A261; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+        </div>
+    </header>
 
 <!-- Hero Section -->
 <section class="hero">
@@ -977,40 +1053,73 @@ Request Your Free Proposal from Manage369
 </section>
 
 <!-- Footer -->
-<footer>
-<div class="container">
-<div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px;">
-<div>
-<h3 style="color: var(--primary-gold); margin-bottom: 15px;">MANAGE369</h3>
-<p>1400 Patriot Blvd #357<br>Glenview, IL 60026</p>
-<p>📱 Text: <a href="sms:8478344131" style="color: var(--primary-gold);">(847) 834-4131</a><br>
-📧 <a href="mailto:service@manage369.com" style="color: var(--primary-gold);">service@manage369.com</a></p>
-</div>
-<div>
-<h4 style="color: var(--primary-gold); margin-bottom: 15px;">Services</h4>
-<a href="../../services/condominium-management/" style="display: block; margin: 5px 0;">Condominium Management</a>
-<a href="../../services/hoa-management/" style="display: block; margin: 5px 0;">HOA Management</a>
-<a href="../../services/townhome-management/" style="display: block; margin: 5px 0;">Townhome Management</a>
-<a href="../../services/financial-management/" style="display: block; margin: 5px 0;">Financial Management</a>
-</div>
-<div>
-<h4 style="color: var(--primary-gold); margin-bottom: 15px;">Quick Links</h4>
-<a href="../" style="display: block; margin: 5px 0;">Areas We Serve</a>
-<a href="../../contact.html" style="display: block; margin: 5px 0;">Contact</a>
-<a href="../../forms.html" style="display: block; margin: 5px 0;">Forms</a>
-<a href="../../pay-dues.html" style="display: block; margin: 5px 0;">Pay Dues</a>
-</div>
-<div>
-<h4 style="color: var(--primary-gold); margin-bottom: 15px;">Certifications</h4>
-<p>CAI National Member<br>
-AMS • CMCA<br>
-IDFPR Licensed<br>
-License: 291.000211</p>
-<p style="margin-top: 20px;">© 2025 Manage369<br>All rights reserved</p>
-</div>
-</div>
-</div>
-</footer>
+<footer style="color: #F4A261; padding: 1.5rem 0; margin-top: 2rem;">
+        <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
+            <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap: 2rem; align-items: start;">
+                <!-- Company Info -->
+                <div>
+                    <h3 style="font-size: 1.1rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;">MANAGE369</h3>
+                    <p style="font-size: 0.85rem; margin: 0; line-height: 1.3; color: #e5e7eb;">
+                        1400 Patriot Blvd #357, Glenview, IL<br>
+                        📱 Text: <a href="sms:8476522338" style="color: #F4A261; text-decoration: none;">(847) 652-2338</a><br>
+                        <a href="mailto:service@manage369.com" style="color: #60a5fa; text-decoration: none;">service@manage369.com</a>
+                    </p>
+                </div>
+                
+                <!-- Services -->
+                <div>
+                    <h4 style="font-size: 0.9rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;">Services</h4>
+                    <div style="font-size: 0.8rem; line-height: 1.3;">
+                        <a href="services/condominium-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Condominium</a>
+                        <a href="services/hoa-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">HOA</a>
+                        <a href="services/townhome-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Townhome</a>
+                        <a href="services/financial-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Financial</a>
+                        <a href="services/maintenance-coordination/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Maintenance</a>
+                        <a href="services/board-support/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Board Support</a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 style="font-size: 0.9rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;">Quick Links</h4>
+                    <div style="font-size: 0.8rem; line-height: 1.3;">
+                        <a href="property-management/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Areas We Serve</a>
+                        <a href="contact.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Contact</a>
+                        <a href="forms.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Forms</a>
+                        <a href="payment-methods.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Pay Dues</a>
+                        <a href="blog/" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Blog</a>
+                        <a href="sitemap.xml" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Sitemap</a>
+                    </div>
+                </div>
+                
+                <!-- Resources -->
+                <div>
+                    <h4 style="font-size: 0.9rem; margin: 0 0 0.3rem 0; color: #F4A261; font-weight: 600;">Resources</h4>
+                    <div style="font-size: 0.8rem; line-height: 1.3;">
+                        <a href="legal-disclaimers.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Legal</a>
+                        <a href="privacy-policy.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Privacy</a>
+                        <a href="terms-of-service.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Terms</a>
+                        <a href="accessibility.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Accessibility</a>
+                        <a href="leave-review.html" style="color: #e5e7eb; text-decoration: none; display: block; padding: 2px 0;">Leave Review</a>
+                    </div>
+                </div>
+                
+                <!-- Certifications & Copyright -->
+                <div style="text-align: right;">
+                    <div style="font-size: 0.75rem; color: #F4A261; line-height: 1.4; margin-bottom: 0.5rem; font-weight: 600;">CAI National Member<br>
+                        AMS<br>
+                        CMCA<br>
+                        IDFPR Licensed<br>
+                        License: 291.000211
+                    </div>
+                    <div style="font-size: 0.75rem; color: #e5e7eb; margin-top: 0.5rem; padding-top: 0.5rem; border-top: 1px solid #374151;">
+                        © 2025 Manage369<br>
+                        All rights reserved
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
 
 <!-- Mobile Sticky CTA -->
 <div style="position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(135deg, var(--accent-blue), var(--primary-gold)); padding: 15px; text-align: center; z-index: 9999; display: none;" id="mobileStickyFooter">

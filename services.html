@@ -1729,6 +1729,7 @@ nav {
 }
 
 </style>
+<link rel="stylesheet" href="/assets/css/universal-sticky-header.css">
 </head>
 <body style="background: #2C3E50; color: #e5e7eb;">
 <div class="scroll-indicator" id="scrollIndicator"></div>
@@ -1736,17 +1737,79 @@ nav {
 
     <!-- Navigation -->
     <header class="header" style="background: #2C3E50;">
-        <!-- COMPANY LOGO/NAME -->
+
+<style>
+/* Critical CSS for above-the-fold content */
+.hero-optimized {
+    padding: 40px 20px 20px;
+    text-align: center;
+    color: white;
+    min-height: 600px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    will-change: transform;
+    transform: translateZ(0);
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.webp .hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                url('images/manage369randolphstation_ultra.webp') center/cover !important;
+}
+
+.no-webp .hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.25) 0%, rgba(244,162,97,0.25) 100%),
+                url('images/manage369randolphstation_optimized.jpg') center/cover !important;
+}
+
+.hero-optimized .hero-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 80px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-optimized h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    color: #ffffff !important;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4), 0 0 20px rgba(0,0,0,0.5);
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .hero-optimized {
+        min-height: 400px;
+        padding: 20px 15px 15px;
+    }
+    .hero-optimized .hero-content {
+        margin-top: 40px;
+    }
+    .hero-optimized h1 {
+        font-size: 2rem;
+        margin-top: 1rem;
+    }
+}
+</style>
+        <!-- COMPANY LOGO/NAME - Edit this to change your company name -->
         <div class="logo" style="color: #F4A261;">MANAGE369</div>
         
         <!-- Mobile Menu Toggle -->
         <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
         
         <!-- MAIN NAVIGATION MENU - Standardized Layout -->
-        <nav aria-label="Primary navigation" class="nav">
-            <a href="index.html" class="nav-link">Home</a>
+        <nav aria-label="Primary navigation" class="nav" style="margin-left: 2rem; margin-right: auto; flex: 1;">
+            <a href="index.html" class="nav-link active">Home</a>
             <div class="dropdown">
-                <a href="services.html" class="nav-link dropdown-trigger active">Services <span class="dropdown-arrow">▼</span></a>
+                <a href="services.html" class="nav-link active dropdown-trigger">Services <span class="dropdown-arrow">▼</span></a>
                 <div class="dropdown-content">
                     <div class="dropdown-section">
                         <div class="dropdown-header">Property Types</div>
@@ -1765,24 +1828,24 @@ nav {
                     </div>
                 </div>
             </div>
-            <a href="property-management" class="nav-link">Areas We Serve</a>
+            <a href="property-management/" class="nav-link">Areas We Serve</a>
             <a href="payment-methods.html" class="nav-link">Pay Dues</a>
             <a href="contact.html" class="nav-link">Contact</a>
         </nav>
         
         <!-- PROFESSIONAL PHONE CTA -->
         <div class="header-cta">
-            <a href="tel:8476522338" class="phone-button">Call (847) 652-2338</a>
+            <a href="sms:8476522338" class="phone-button" style="background: #2C3E50; color: #F4A261 !important; border: 1px solid #F4A261; border: 1px solid #F4A261;">📱 Text (847) 652-2338</a>
         </div>
         
         <!-- Mobile Menu -->
         <div class="mobile-menu" id="mobileMenu">
             <a href="index.html">Home</a>
             <a href="services.html">Services</a>
-            <a href="property-management">Areas We Serve</a>
-            <a href="payment-methods.html">Pay Dues</a>
+            <a href="property-management/">Areas We Serve</a>
+            <a href="pay-dues.html">Pay Dues</a>
             <a href="contact.html">Contact</a>
-            <a href="tel:8476522338" style="background: #2C3E50; color: #F4A261; border: 1px solid #F4A261; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+            <a href="tel:8476522338" style="background: #2C3E50; color: #F4A261 !important; border: 1px solid #F4A261; border: 1px solid #F4A261; color: white; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
         </div>
     </header>
 
@@ -2544,7 +2607,7 @@ nav {
     <!-- Footer -->
     <!-- Footer -->
         <!-- Footer -->
-    <footer style="background: #2C3E50; color: #e5e7eb; padding: 1.5rem 0; margin-top: 2rem;">
+    <footer style="color: #F4A261; padding: 1.5rem 0; margin-top: 2rem;">
         <div style="max-width: 1200px; margin: 0 auto; padding: 0 2rem;">
             <div style="display: grid; grid-template-columns: 2fr 1fr 1fr 1fr 1.5fr; gap: 2rem; align-items: start;">
                 <!-- Company Info -->
