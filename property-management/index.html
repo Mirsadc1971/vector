@@ -179,6 +179,48 @@ h2 { font-size: 2rem; margin: 3rem 0 2rem; }
     color: var(--text-light);
     margin-top: 10px;
 }
+
+/* Fix the service cards grid layout */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Make all cards equal height */
+.service-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 300px;
+    padding: 2rem;
+}
+
+/* Push buttons to bottom of cards */
+.service-card .btn {
+    margin-top: auto;
+    align-self: center;
+}
+
+/* Fix the 6-card bottom section */
+.complete-services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .services-grid,
+    .complete-services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 </style>
 </head>
 <body>
