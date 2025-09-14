@@ -1,0 +1,41 @@
+/* NO COLORED BORDERS - NEVER APPLY WITHOUT PERMISSION */
+
+/* This CSS file prevents colored borders from being added to FAQ sections and other elements */
+
+/* Remove any existing colored borders */
+.faq-item, .question-item, .faq-container div {
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+    border-bottom: none !important;
+}
+
+/* Prevent colored border-left styles */
+* {
+    border-left-color: transparent !important;
+}
+
+/* Override any inline border styles on FAQ items */
+div[style*="border-left"]:not(.allowed-border) {
+    border-left: none !important;
+}
+
+/* Clean FAQ styling without colors */
+.faq-item {
+    background: #1f2937 !important;
+    padding: 25px !important;
+    margin-bottom: 20px !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08) !important;
+    border: none !important;
+}
+
+.faq-item h4 {
+    color: #F4A261 !important;
+    margin-bottom: 15px !important;
+}
+
+.faq-item p {
+    color: #e5e7eb !important;
+    line-height: 1.8 !important;
+}
