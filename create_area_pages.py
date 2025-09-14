@@ -1,79 +1,92 @@
-<!DOCTYPE html>
+#!/usr/bin/env python3
+import os
+
+# Master template with homepage design and colors
+def create_area_page(city_data):
+    """Create a property management page for a specific city"""
+
+    city = city_data['city']
+    slug = city_data['slug']
+    intro = city_data['intro']
+    challenges = city_data['challenges']
+    links = city_data['links']
+
+    template = f'''<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Lake Forest Property Management — HOA, Condo & Townhome Experts | Manage369</title>
-<meta content="Premier Lake Forest property management since 2007. Expert HOA, condominium & townhome management. 110% Service Guarantee. Call (847) 834-4131." name="description"/>
+<title>{city} Property Management — HOA, Condo & Townhome Experts | Manage369</title>
+<meta content="Premier {city} property management since 2007. Expert HOA, condominium & townhome management. 110% Service Guarantee. Call (847) 834-4131." name="description"/>
 <link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
 <link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <link href="../../site.webmanifest" rel="manifest"/>
 <meta content="#2C3E50" name="msapplication-TileColor"/>
 <meta content="#1f2937" name="theme-color"/>
-<link href="https://www.manage369.com/property-management/lake-forest/" rel="canonical"/>
+<link href="https://www.manage369.com/property-management/{slug}/" rel="canonical"/>
 <style>
 /* Master Color Scheme */
-:root {
+:root {{
     --primary-gold: #F4A261;
     --primary-navy: #2C3E50;
     --background-dark: #1f2937;
     --text-light: #e5e7eb;
     --accent-blue: #084298;
-}
+}}
 
-* {
+* {{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+}}
 
-body {
+body {{
     background: var(--background-dark) !important;
     color: var(--text-light) !important;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     line-height: 1.6;
-}
+}}
 
 /* Typography */
-h1, h2, h3, h4 {
+h1, h2, h3, h4 {{
     color: var(--primary-gold) !important;
     margin-bottom: 1.5rem;
-}
+}}
 
-h1 { font-size: 2.5rem; text-align: center; }
-h2 { font-size: 2rem; text-align: center; margin: 3rem 0 2rem; }
-h3 { font-size: 1.5rem; }
+h1 {{ font-size: 2.5rem; text-align: center; }}
+h2 {{ font-size: 2rem; text-align: center; margin: 3rem 0 2rem; }}
+h3 {{ font-size: 1.5rem; }}
 
-p {
+p {{
     margin-bottom: 1.25rem;
     color: var(--text-light);
     line-height: 1.8;
-}
+}}
 
-a {
+a {{
     color: var(--primary-gold);
     text-decoration: none;
     transition: all 0.3s ease;
-}
+}}
 
-a:hover {
+a:hover {{
     opacity: 0.9;
-}
+}}
 
 /* Container */
-.container {
+.container {{
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
-}
+}}
 
-section {
+section {{
     padding: 80px 20px;
-}
+}}
 
 /* Header */
-.header {
+.header {{
     background: var(--background-dark);
     padding: 1rem 2rem;
     position: sticky;
@@ -81,43 +94,43 @@ section {
     z-index: 1000;
     box-shadow: 0 2px 20px rgba(0,0,0,0.2);
     border-bottom: 1px solid rgba(244,162,97,0.2);
-}
+}}
 
-.header-content {
+.header-content {{
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
+}}
 
-.logo {
+.logo {{
     font-size: 1.75rem;
     font-weight: 900;
     color: var(--primary-gold) !important;
-}
+}}
 
-.nav {
+.nav {{
     display: flex;
     gap: 2rem;
     align-items: center;
-}
+}}
 
-.nav a {
+.nav a {{
     color: var(--text-light);
     font-weight: 500;
-}
+}}
 
-.phone-header {
+.phone-header {{
     color: var(--primary-gold) !important;
     font-weight: 700;
     padding: 8px 20px;
     border: 2px solid var(--primary-gold);
     border-radius: 50px;
-}
+}}
 
 /* Hero Section */
-.hero {
+.hero {{
     background: linear-gradient(135deg, rgba(8,66,152,0.95), rgba(244,162,97,0.95)), url('/images/buck4manage369.jpg') center/cover;
     padding: 120px 20px;
     text-align: center;
@@ -125,34 +138,34 @@ section {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+}}
 
-.hero-content {
+.hero-content {{
     max-width: 1000px;
-}
+}}
 
-.hero h1 {
+.hero h1 {{
     color: white !important;
     font-size: 3rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
-}
+}}
 
-.hero p {
+.hero p {{
     color: white !important;
     font-size: 1.3rem;
     margin-bottom: 2rem;
-}
+}}
 
-.cta-buttons {
+.cta-buttons {{
     display: flex;
     gap: 20px;
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 2rem;
-}
+}}
 
-.btn {
+.btn {{
     display: inline-block;
     padding: 16px 36px;
     border-radius: 50px;
@@ -161,92 +174,92 @@ section {
     letter-spacing: 1px;
     transition: all 0.3s ease;
     text-decoration: none !important;
-}
+}}
 
-.btn-primary {
+.btn-primary {{
     background: var(--primary-gold) !important;
     color: var(--background-dark) !important;
     border: 2px solid var(--primary-gold);
-}
+}}
 
-.btn-secondary {
+.btn-secondary {{
     background: transparent !important;
     color: white !important;
     border: 2px solid white;
-}
+}}
 
 /* Promise Section */
-.promise-section {
+.promise-section {{
     background: linear-gradient(135deg, var(--accent-blue), var(--primary-gold));
     padding: 60px 40px;
     border-radius: 20px;
     margin: 60px 0;
-}
+}}
 
-.promise-grid {
+.promise-grid {{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin-top: 40px;
-}
+}}
 
-.promise-card {
+.promise-card {{
     background: rgba(255,255,255,0.15);
     backdrop-filter: blur(10px);
     padding: 25px;
     border-radius: 12px;
     text-align: center;
     color: white;
-}
+}}
 
 /* Service Cards */
-.services-grid {
+.services-grid {{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin: 40px 0;
-}
+}}
 
-.service-card {
+.service-card {{
     background: var(--primary-navy);
     padding: 35px 30px;
     border-radius: 15px;
     border: 1px solid rgba(244,162,97,0.2);
     transition: all 0.3s ease;
-}
+}}
 
-.service-card:hover {
+.service-card:hover {{
     transform: translateY(-8px);
     box-shadow: 0 20px 40px rgba(244,162,97,0.25);
-}
+}}
 
-.service-card h3 {
+.service-card h3 {{
     color: var(--primary-gold) !important;
     margin-bottom: 20px;
-}
+}}
 
-.service-card ul {
+.service-card ul {{
     list-style: none;
     padding: 0;
     margin: 20px 0;
-}
+}}
 
-.service-card li {
+.service-card li {{
     padding: 8px 0;
     color: var(--text-light);
     padding-left: 25px;
     position: relative;
-}
+}}
 
-.service-card li::before {
+.service-card li::before {{
     content: '•';
     position: absolute;
     left: 0;
     color: var(--primary-gold);
     font-weight: bold;
-}
+}}
 
-.learn-more {
+.learn-more {{
     display: inline-block;
     margin-top: 20px;
     background: var(--primary-gold);
@@ -255,128 +268,128 @@ section {
     border-radius: 8px;
     font-weight: 600;
     text-align: center;
-}
+}}
 
 /* Specialized Services */
-.features-grid {
+.features-grid {{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
     margin: 50px 0;
-}
+}}
 
-.feature-item {
+.feature-item {{
     background: rgba(44,62,80,0.6);
     padding: 30px;
     border-radius: 12px;
     border-left: 4px solid var(--primary-gold);
     text-align: center;
-}
+}}
 
-.feature-icon {
+.feature-icon {{
     font-size: 2.5rem;
     margin-bottom: 15px;
-}
+}}
 
 /* Trust Section */
-.trust-section {
+.trust-section {{
     background: var(--primary-navy);
     padding: 60px 40px;
     border-radius: 20px;
     margin: 60px 0;
-}
+}}
 
-.stats-grid {
+.stats-grid {{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
     margin-top: 40px;
-}
+}}
 
-.stat-item {
+.stat-item {{
     text-align: center;
-}
+}}
 
-.stat-icon {
+.stat-icon {{
     font-size: 3rem;
     margin-bottom: 15px;
-}
+}}
 
 /* FAQ Section */
-.faq-container {
+.faq-container {{
     max-width: 900px;
     margin: 0 auto;
-}
+}}
 
-.faq-item {
+.faq-item {{
     background: var(--primary-navy);
     padding: 30px;
     margin-bottom: 25px;
     border-radius: 15px;
     border-left: 4px solid var(--primary-gold);
-}
+}}
 
-.faq-item h4 {
+.faq-item h4 {{
     color: var(--primary-gold) !important;
     margin-bottom: 15px;
-}
+}}
 
 /* CTA Section */
-.cta-section {
+.cta-section {{
     background: linear-gradient(135deg, var(--primary-gold), #e67e22);
     padding: 80px 40px;
     border-radius: 20px;
     text-align: center;
     margin: 60px 0;
-}
+}}
 
-.cta-section h2 {
+.cta-section h2 {{
     color: var(--background-dark) !important;
     font-size: 2.5rem;
     margin-bottom: 25px;
-}
+}}
 
-.cta-section p {
+.cta-section p {{
     color: var(--background-dark) !important;
     font-size: 1.2rem;
-}
+}}
 
 /* Contact Form */
-.form-section {
+.form-section {{
     background: var(--primary-navy);
     padding: 60px 40px;
     border-radius: 20px;
     margin: 60px 0;
-}
+}}
 
-.form-container {
+.form-container {{
     max-width: 700px;
     margin: 0 auto;
-}
+}}
 
-.form-group {
+.form-group {{
     margin-bottom: 25px;
-}
+}}
 
-.form-group label {
+.form-group label {{
     display: block;
     color: var(--primary-gold);
     margin-bottom: 10px;
     font-weight: 600;
-}
+}}
 
 .form-group input,
 .form-group select,
-.form-group textarea {
+.form-group textarea {{
     width: 100%;
     padding: 15px;
     background: var(--background-dark);
     border: 2px solid transparent;
     border-radius: 10px;
     color: var(--text-light);
-}
+}}
 
-.form-submit {
+.form-submit {{
     background: var(--primary-gold) !important;
     color: var(--background-dark) !important;
     padding: 18px 50px;
@@ -386,58 +399,58 @@ section {
     font-weight: 700;
     cursor: pointer;
     width: 100%;
-}
+}}
 
 /* Related Areas */
-.related-areas {
+.related-areas {{
     background: var(--primary-navy);
     padding: 40px;
     border-radius: 20px;
     margin: 60px 0;
-}
+}}
 
-.area-links {
+.area-links {{
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
     justify-content: center;
     margin-top: 25px;
-}
+}}
 
-.area-link {
+.area-link {{
     background: var(--background-dark);
     color: var(--primary-gold) !important;
     padding: 12px 24px;
     border-radius: 8px;
     border: 2px solid var(--primary-gold);
     font-weight: 600;
-}
+}}
 
 /* Footer */
-footer {
+footer {{
     background: var(--background-dark);
     color: var(--text-light);
     padding: 60px 20px 30px;
     border-top: 1px solid rgba(244,162,97,0.2);
-}
+}}
 
 /* Mobile Responsive */
-@media (max-width: 768px) {
+@media (max-width: 768px) {{
     .promise-grid,
     .services-grid,
     .features-grid,
-    .stats-grid {
+    .stats-grid {{
         grid-template-columns: 1fr;
-    }
+    }}
 
-    .hero h1 {
+    .hero h1 {{
         font-size: 2rem;
-    }
+    }}
 
-    .nav {
+    .nav {{
         display: none;
-    }
-}
+    }}
+}}
 </style>
 </head>
 <body>
@@ -459,8 +472,8 @@ footer {
 <!-- Hero Section -->
 <section class="hero">
 <div class="hero-content">
-<h1>Lake Forest Property Management — HOA, Condo & Townhome Experts</h1>
-<p>Why Lake Forest Associations Choose Manage369</p>
+<h1>{city} Property Management — HOA, Condo & Townhome Experts</h1>
+<p>Why {city} Associations Choose Manage369</p>
 <div class="cta-buttons">
 <a class="btn btn-primary" href="tel:8478344131">Schedule Consultation</a>
 <a class="btn btn-secondary" href="/contact">Request Free Proposal</a>
@@ -474,24 +487,21 @@ footer {
 
 <!-- Introduction -->
 <p style="font-size: 1.2rem; line-height: 1.8; margin-bottom: 2rem;">
-Lake Forest is known for its estates, gated HOAs, and exclusive townhome developments. Associations often deal with:
+{intro}
 </p>
 
 <!-- Challenges List -->
 <ul style="list-style: none; padding: 0; margin: 40px 0;">
-<li style="padding: 10px 0; color: var(--text-light);">• Historic preservation requirements for older homes</li>
-<li style="padding: 10px 0; color: var(--text-light);">• Large common areas requiring landscaping and vendor oversight</li>
-<li style="padding: 10px 0; color: var(--text-light);">• High operating costs that demand disciplined budgeting</li>
-<li style="padding: 10px 0; color: var(--text-light);">• Exclusive resident expectations for responsiveness and privacy</li>
+{challenges}
 </ul>
 
 <p style="font-size: 1.1rem;">
-Since 2007, Manage369 has supported Lake Forest boards with disciplined financials, vendor coordination, and hands-on governance support.
+Since 2007, Manage369 has supported {city} boards with disciplined financials, vendor coordination, and hands-on governance support.
 </p>
 
 <!-- Promise Section -->
 <div class="promise-section">
-<h2 style="color: white !important;">Our Promise to Lake Forest Communities</h2>
+<h2 style="color: white !important;">Our Promise to {city} Communities</h2>
 <div class="promise-grid">
 <div class="promise-card">
 <strong style="font-size: 1.2rem;">110% Service Guarantee</strong><br>
@@ -511,7 +521,7 @@ Since 2007, Manage369 has supported Lake Forest boards with disciplined financia
 </div>
 <div class="promise-card">
 <strong style="font-size: 1.2rem;">24/7 Support</strong><br>
-<span style="opacity: 0.95;">Rapid vendor response in Lake Forest</span>
+<span style="opacity: 0.95;">Rapid vendor response in {city}</span>
 </div>
 <div class="promise-card">
 <strong style="font-size: 1.2rem;">Local Expertise</strong><br>
@@ -523,8 +533,8 @@ Since 2007, Manage369 has supported Lake Forest boards with disciplined financia
 <!-- Service Cards -->
 <div class="services-grid">
 <div class="service-card">
-<h3>🏢 Condominium Management in Lake Forest</h3>
-<p>Expert management for Lake Forest's diverse condominium communities.</p>
+<h3>🏢 Condominium Management in {city}</h3>
+<p>Expert management for {city}'s diverse condominium communities.</p>
 <ul>
 <li>Monthly financial reporting</li>
 <li>Reserve planning and audits</li>
@@ -537,8 +547,8 @@ Since 2007, Manage369 has supported Lake Forest boards with disciplined financia
 </div>
 
 <div class="service-card">
-<h3>🏘️ HOA Management in Lake Forest</h3>
-<p>Protecting lifestyle and property values in Lake Forest neighborhoods.</p>
+<h3>🏘️ HOA Management in {city}</h3>
+<p>Protecting lifestyle and property values in {city} neighborhoods.</p>
 <ul>
 <li>Annual budgets and reserve studies</li>
 <li>Board meeting facilitation</li>
@@ -551,8 +561,8 @@ Since 2007, Manage369 has supported Lake Forest boards with disciplined financia
 </div>
 
 <div class="service-card">
-<h3>🏡 Townhome Management in Lake Forest</h3>
-<p>Balancing shared spaces and private ownership in Lake Forest.</p>
+<h3>🏡 Townhome Management in {city}</h3>
+<p>Balancing shared spaces and private ownership in {city}.</p>
 <ul>
 <li>Exterior and common area upkeep</li>
 <li>Insurance and compliance oversight</li>
@@ -566,7 +576,7 @@ Since 2007, Manage369 has supported Lake Forest boards with disciplined financia
 </div>
 
 <!-- Specialized Services -->
-<h2>Specialized Services for Lake Forest Boards</h2>
+<h2>Specialized Services for {city} Boards</h2>
 <div class="features-grid">
 <div class="feature-item">
 <div class="feature-icon">💰</div>
@@ -602,12 +612,12 @@ Since 2007, Manage369 has supported Lake Forest boards with disciplined financia
 
 <!-- Trust Section -->
 <div class="trust-section">
-<h2 style="color: white !important;">Why Boards in Lake Forest Trust Manage369</h2>
+<h2 style="color: white !important;">Why Boards in {city} Trust Manage369</h2>
 <div class="stats-grid">
 <div class="stat-item">
 <div class="stat-icon">📈</div>
 <strong style="color: var(--primary-gold);">Protecting Property Values</strong><br>
-<span style="color: var(--text-light);">Reserve planning for Lake Forest's market</span>
+<span style="color: var(--text-light);">Reserve planning for {city}'s market</span>
 </div>
 <div class="stat-item">
 <div class="stat-icon">💬</div>
@@ -622,7 +632,7 @@ Since 2007, Manage369 has supported Lake Forest boards with disciplined financia
 <div class="stat-item">
 <div class="stat-icon">🗺️</div>
 <strong style="color: var(--primary-gold);">Local Knowledge</strong><br>
-<span style="color: var(--text-light);">Lake Forest codes and vendors</span>
+<span style="color: var(--text-light);">{city} codes and vendors</span>
 </div>
 </div>
 </div>
@@ -631,27 +641,27 @@ Since 2007, Manage369 has supported Lake Forest boards with disciplined financia
 <h2>Frequently Asked Questions</h2>
 <div class="faq-container">
 <div class="faq-item">
-<h4>Q: What makes property management in Lake Forest unique?</h4>
-<p>A: Lake Forest's specific challenges require specialized financial and maintenance strategies tailored to local needs.</p>
+<h4>Q: What makes property management in {city} unique?</h4>
+<p>A: {city}'s specific challenges require specialized financial and maintenance strategies tailored to local needs.</p>
 </div>
 <div class="faq-item">
 <h4>Q: Do you work with local vendors?</h4>
-<p>A: Yes — we partner with trusted contractors in Lake Forest for HVAC, roofing, landscaping, and more.</p>
+<p>A: Yes — we partner with trusted contractors in {city} for HVAC, roofing, landscaping, and more.</p>
 </div>
 <div class="faq-item">
 <h4>Q: How quickly do you respond to emergencies?</h4>
-<p>A: Our 24/7 line connects you to a live manager, with response times in Lake Forest typically under one hour.</p>
+<p>A: Our 24/7 line connects you to a live manager, with response times in {city} typically under one hour.</p>
 </div>
 <div class="faq-item">
 <h4>Q: Can you help us rebuild reserves?</h4>
-<p>A: Absolutely. Manage369 has guided boards in Lake Forest to restore reserves within 12–18 months.</p>
+<p>A: Absolutely. Manage369 has guided boards in {city} to restore reserves within 12–18 months.</p>
 </div>
 </div>
 
 <!-- CTA Section -->
 <div class="cta-section">
-<h2>Your Lake Forest Property Deserves Excellence</h2>
-<p>Lake Forest represents more than a neighborhood — it's an investment in community, lifestyle, and long-term property value.</p>
+<h2>Your {city} Property Deserves Excellence</h2>
+<p>{city} represents more than a neighborhood — it's an investment in community, lifestyle, and long-term property value.</p>
 <div class="cta-buttons" style="margin-top: 30px;">
 <a href="tel:8478344131" class="btn" style="background: var(--background-dark) !important; color: var(--primary-gold) !important;">
 📞 Call (847) 834-4131
@@ -664,7 +674,7 @@ Since 2007, Manage369 has supported Lake Forest boards with disciplined financia
 Request Your Free Proposal from Manage369
 </p>
 <p style="margin-top: 20px; color: var(--background-dark) !important;">
-"Manage369 — Where Experience Meets Excellence in Lake Forest Property Management".
+"Manage369 — Where Experience Meets Excellence in {city} Property Management".
 </p>
 </div>
 
@@ -673,9 +683,7 @@ Request Your Free Proposal from Manage369
 <h3 style="text-align: center; margin-bottom: 20px;">Explore Nearby Property Management Services</h3>
 <p style="text-align: center; margin-bottom: 30px;">Manage369 proudly serves communities throughout Chicago and the North Shore:</p>
 <div class="area-links">
-<a href="../lake-bluff" class="area-link">Lake Bluff</a>
-<a href="../highland-park" class="area-link">Highland Park</a>
-<a href="../glenview" class="area-link">Glenview</a>
+{links}
 </div>
 <p style="text-align: center; margin-top: 30px;">
 <a href="/property-management" style="color: var(--primary-gold); text-decoration: underline; font-size: 1.1rem; font-weight: 600;">
@@ -691,8 +699,8 @@ View all 68 service areas
 <section>
 <div class="container">
 <div class="form-section">
-<h2 style="color: var(--primary-gold); text-align: center;">Schedule Your Free Lake Forest Property Management Consultation</h2>
-<p style="text-align: center; margin-bottom: 40px;">Discover how our experience can enhance your Lake Forest property.</p>
+<h2 style="color: var(--primary-gold); text-align: center;">Schedule Your Free {city} Property Management Consultation</h2>
+<p style="text-align: center; margin-bottom: 40px;">Discover how our experience can enhance your {city} property.</p>
 <form action="https://formspree.io/f/xpznzgnk" method="POST" class="form-container">
 <div class="form-group">
 <label for="name">Full Name *</label>
@@ -730,7 +738,7 @@ View all 68 service areas
 <option value="exploring">Just exploring options</option>
 </select>
 </div>
-<input type="hidden" name="location" value="Lake Forest Property Management Inquiry">
+<input type="hidden" name="location" value="{city} Property Management Inquiry">
 <button type="submit" class="form-submit">Schedule Free Consultation</button>
 </form>
 </div>
@@ -774,4 +782,144 @@ License: 291.000211</p>
 </footer>
 
 </body>
-</html>
+</html>'''
+
+    return template
+
+# Data for all 10 areas
+areas = [
+    {
+        'city': 'Glenview',
+        'slug': 'glenview',
+        'intro': "Glenview blends family-friendly neighborhoods, strong schools, and a thriving commercial corridor along Waukegan Road. Associations here often deal with:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Mixed property types — from luxury condos near The Glen to large single-family HOAs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Aging infrastructure in mid-century townhome communities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Stormwater management issues due to flood-prone zones</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Board turnover in diverse, fast-growing neighborhoods</li>''',
+        'links': '''<a href="../northbrook" class="area-link">Northbrook</a>
+<a href="../skokie" class="area-link">Skokie</a>
+<a href="../wilmette" class="area-link">Wilmette</a>'''
+    },
+    {
+        'city': 'Northbrook',
+        'slug': 'northbrook',
+        'intro': "Northbrook's combination of high-value homes, corporate campuses, and retail centers creates unique pressures for associations:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Luxury condominiums near Northbrook Court with demanding maintenance needs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs facing heavy snow management costs in winter</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Large-scale roofing and paving projects in aging townhome communities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards requiring sophisticated financial reporting to manage reserves</li>''',
+        'links': '''<a href="../glenview" class="area-link">Glenview</a>
+<a href="../deerfield" class="area-link">Deerfield</a>
+<a href="../lincolnwood" class="area-link">Lincolnwood</a>'''
+    },
+    {
+        'city': 'Wilmette',
+        'slug': 'wilmette',
+        'intro': "Wilmette is known for its historic lakefront homes, thriving downtown, and proximity to Northwestern University. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Historic building preservation in east Wilmette</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs balancing lakefront erosion and stormwater issues</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome communities near Green Bay Road dealing with traffic & parking</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing financial expertise for multimillion-dollar reserves</li>''',
+        'links': '''<a href="../evanston" class="area-link">Evanston</a>
+<a href="../winnetka" class="area-link">Winnetka</a>
+<a href="../skokie" class="area-link">Skokie</a>'''
+    },
+    {
+        'city': 'Evanston',
+        'slug': 'evanston',
+        'intro': "Evanston combines university life, lakefront condos, and diverse housing. Boards here often face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Condo subleasing issues near Northwestern University</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Noise and parking complaints in dense downtown developments</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Older elevator buildings needing capital project oversight</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs navigating compliance with Chicago-adjacent ordinances</li>''',
+        'links': '''<a href="../wilmette" class="area-link">Wilmette</a>
+<a href="../skokie" class="area-link">Skokie</a>
+<a href="../chicago" class="area-link">Rogers Park</a>'''
+    },
+    {
+        'city': 'Skokie',
+        'slug': 'skokie',
+        'intro': "Skokie offers a mix of cultural diversity, older buildings, and newer developments near Westfield Old Orchard. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Garden-style condos from the 1960s–70s requiring frequent maintenance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome communities facing rising utility and vendor costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards struggling with delinquencies in mixed-income properties</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Aging HVAC and plumbing systems needing professional oversight</li>''',
+        'links': '''<a href="../lincolnwood" class="area-link">Lincolnwood</a>
+<a href="../evanston" class="area-link">Evanston</a>
+<a href="../niles" class="area-link">Niles</a>'''
+    },
+    {
+        'city': 'Highland Park',
+        'slug': 'highland-park',
+        'intro': "Highland Park combines lakefront estates with active HOAs in residential neighborhoods. Challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Lakefront erosion management for associations along Sheridan Road</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Large-scale reserve studies for aging communities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome boards managing stormwater basins and green space</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Affluent residents expecting premium communication and reporting</li>''',
+        'links': '''<a href="../highwood" class="area-link">Highwood</a>
+<a href="../lake-forest" class="area-link">Lake Forest</a>
+<a href="../deerfield" class="area-link">Deerfield</a>'''
+    },
+    {
+        'city': 'Lake Forest',
+        'slug': 'lake-forest',
+        'intro': "Lake Forest is known for its estates, gated HOAs, and exclusive townhome developments. Associations often deal with:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Historic preservation requirements for older homes</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Large common areas requiring landscaping and vendor oversight</li>
+<li style="padding: 10px 0; color: var(--text-light);">• High operating costs that demand disciplined budgeting</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Exclusive resident expectations for responsiveness and privacy</li>''',
+        'links': '''<a href="../lake-bluff" class="area-link">Lake Bluff</a>
+<a href="../highland-park" class="area-link">Highland Park</a>
+<a href="../glenview" class="area-link">Glenview</a>'''
+    },
+    {
+        'city': 'Lincolnwood',
+        'slug': 'lincolnwood',
+        'intro': "Lincolnwood combines suburban HOAs with older condo buildings near Touhy Avenue. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Deferred maintenance in mid-century condominiums</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs managing shared amenities like pools & clubhouses</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Parking and snow removal costs straining budgets</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards requiring strict financial reporting</li>''',
+        'links': '''<a href="../skokie" class="area-link">Skokie</a>
+<a href="../niles" class="area-link">Niles</a>
+<a href="../morton-grove" class="area-link">Morton Grove</a>'''
+    },
+    {
+        'city': 'Deerfield',
+        'slug': 'deerfield',
+        'intro': "Deerfield is a family-oriented suburb with both luxury HOAs and older townhomes. Common challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Townhome roofing and siding replacements</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs managing stormwater and common green space</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards planning reserves for capital projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Condo associations balancing rising vendor costs</li>''',
+        'links': '''<a href="../northbrook" class="area-link">Northbrook</a>
+<a href="../highland-park" class="area-link">Highland Park</a>
+<a href="../riverwoods" class="area-link">Riverwoods</a>'''
+    }
+]
+
+def main():
+    os.chdir('C:\\Users\\mirsa\\Documents\\manage369-live\\property-management')
+
+    for area in areas:
+        # Skip Winnetka as it's already done
+        if area['slug'] == 'winnetka':
+            continue
+
+        # Create directory if it doesn't exist
+        dir_path = area['slug']
+        if not os.path.exists(dir_path):
+            os.makedirs(dir_path)
+
+        # Generate HTML content
+        html_content = create_area_page(area)
+
+        # Write to file
+        file_path = os.path.join(dir_path, 'index.html')
+        with open(file_path, 'w', encoding='utf-8') as f:
+            f.write(html_content)
+
+        print(f"Created: {file_path}")
+
+if __name__ == "__main__":
+    main()
