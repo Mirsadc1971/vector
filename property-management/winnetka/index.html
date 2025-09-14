@@ -860,6 +860,17 @@ Manage369 — Where Experience Meets Excellence in Winnetka Property Management.
 <input type="number" id="units" name="units" placeholder="e.g., 24">
 </div>
 <div class="form-group">
+<label for="current_management">Current Management Situation</label>
+<select id="current_management" name="current_management">
+<option value="">Select Current Situation</option>
+<option value="self_managed">Self-Managed</option>
+<option value="management_company">Have Management Company</option>
+<option value="board_managed">Board-Managed</option>
+<option value="new_development">New Development</option>
+<option value="transition">In Transition</option>
+</select>
+</div>
+<div class="form-group">
 <label for="timeline">When are you looking to make a change?</label>
 <select id="timeline" name="timeline">
 <option value="">Select Timeline</option>
@@ -871,9 +882,12 @@ Manage369 — Where Experience Meets Excellence in Winnetka Property Management.
 </div>
 <div class="form-group">
 <label for="challenges">What are your main property management challenges? (Optional)</label>
-<textarea id="challenges" name="challenges" rows="4" placeholder="e.g., Financial reporting, maintenance issues, board support..."></textarea>
+<textarea id="challenges" name="challenges" rows="4" placeholder="e.g., Financial reporting, maintenance issues, board support, resident relations..."></textarea>
 </div>
-<input type="hidden" name="location" value="Winnetka Property Management Inquiry">
+<div class="form-group">
+<label for="location_specific">Specific to Winnetka:</label>
+<input type="text" name="location_specific" value="Winnetka Property Management Inquiry" readonly style="background: rgba(244,162,97,0.1); cursor: not-allowed;">
+</div>
 <button type="submit" class="form-submit">Schedule Free Consultation</button>
 </form>
 </div>
