@@ -1,23 +1,28 @@
-/* Dark gray buttons with gold text for better contrast */
-.btn, button, .service-area-button, .area-link {
+/* Fix button visibility - Dark gray with gold text */
+.btn, button, .service-area-button, .area-link, .city-button {
     background: #2C3E50 !important;
     color: #F4A261 !important;
-    border: 1px solid #F4A261 !important;
+    border: 2px solid #F4A261 !important;
     font-weight: 600 !important;
     padding: 12px 24px !important;
     border-radius: 8px !important;
     text-decoration: none !important;
+    font-size: 1rem !important;
 }
 
 .btn:hover, button:hover, .service-area-button:hover {
     background: #1a252f !important;
-    color: #F1C40F !important;
-    border-color: #F1C40F !important;
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
 }
 
-/* Specific fix for the orange pill buttons */
-.service-area-buttons a, .area-buttons a {
-    background: #2C3E50 !important;
-    color: #F4A261 !important;
-    border: 1px solid #F4A261 !important;
+/* Three button alignment */
+.action-buttons, .button-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 20px 0;
 }
