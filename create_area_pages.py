@@ -1135,6 +1135,126 @@ areas = [
         'links': '''<a href="../palatine" class="area-link">Palatine</a>
 <a href="../arlington-heights" class="area-link">Arlington Heights</a>
 <a href="../schaumburg" class="area-link">Schaumburg</a>'''
+    },
+    {
+        'city': 'Schaumburg',
+        'slug': 'schaumburg',
+        'intro': "Schaumburg is a major hub with large condo complexes, master-planned HOAs, and townhomes near Woodfield Mall. Boards here often face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• High-rise condo maintenance with elevators and shared systems</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs managing pools, clubhouses, and fitness centers</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Large reserve planning for capital projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budgeting challenges in communities with hundreds of units</li>''',
+        'links': '''<a href="../rolling-meadows" class="area-link">Rolling Meadows</a>
+<a href="../hoffman-estates" class="area-link">Hoffman Estates</a>
+<a href="../roselle" class="area-link">Roselle</a>'''
+    },
+    {
+        'city': 'Hoffman Estates',
+        'slug': 'hoffman-estates',
+        'intro': "Hoffman Estates features suburban HOAs, condo associations, and newer developments. Boards must handle:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Large reserves for roofing and paving projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Snow removal and landscaping across big communities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs balancing amenity upkeep with budgets</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting fast response times</li>''',
+        'links': '''<a href="../schaumburg" class="area-link">Schaumburg</a>
+<a href="../palatine" class="area-link">Palatine</a>
+<a href="../streamwood" class="area-link">Streamwood</a>'''
+    },
+    {
+        'city': 'Streamwood',
+        'slug': 'streamwood',
+        'intro': "Streamwood is home to affordable condos and mid-size HOAs. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo buildings with deferred maintenance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing delinquency reduction strategies</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Stormwater management for low-lying areas</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Tight budgets in cost-sensitive associations</li>''',
+        'links': '''<a href="../hoffman-estates" class="area-link">Hoffman Estates</a>
+<a href="../elgin" class="area-link">Elgin</a>
+<a href="../hanover-park" class="area-link">Hanover Park</a>'''
+    },
+    {
+        'city': 'Elgin',
+        'slug': 'elgin',
+        'intro': "Elgin blends historic neighborhoods with large condo developments. Boards often manage:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Historic building preservation in downtown districts</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome reserves for siding and roof replacements</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs with large common grounds requiring landscaping contracts</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting bilingual communication</li>''',
+        'links': '''<a href="../streamwood" class="area-link">Streamwood</a>
+<a href="../south-elgin" class="area-link">South Elgin</a>
+<a href="../bartlett" class="area-link">Bartlett</a>'''
+    },
+    {
+        'city': 'Hanover Park',
+        'slug': 'hanover-park',
+        'intro': "Hanover Park is a diverse suburb with many mid-size associations. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo HVAC and plumbing systems</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing strict financial controls</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs balancing rising vendor costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting clear board communication</li>''',
+        'links': '''<a href="../streamwood" class="area-link">Streamwood</a>
+<a href="../schaumburg" class="area-link">Schaumburg</a>
+<a href="../bartlett" class="area-link">Bartlett</a>'''
+    },
+    {
+        'city': 'Bartlett',
+        'slug': 'bartlett',
+        'intro': "Bartlett offers a mix of townhome associations and suburban HOAs. Boards often deal with:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Reserve planning for large townhome complexes</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Shared amenities like pools and playgrounds</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Snow removal costs during long winters</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting consistent board communication</li>''',
+        'links': '''<a href="../hanover-park" class="area-link">Hanover Park</a>
+<a href="../elgin" class="area-link">Elgin</a>
+<a href="../wayne" class="area-link">Wayne</a>'''
+    },
+    {
+        'city': 'Des Plaines',
+        'slug': 'des-plaines',
+        'intro': "Des Plaines is home to high-density condos and suburban HOAs. Boards must manage:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Mid-rise condo associations with elevators and shared utilities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Parking and stormwater drainage issues</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome capital projects for roofing and paving</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting professional service and transparency</li>''',
+        'links': '''<a href="../mount-prospect" class="area-link">Mount Prospect</a>
+<a href="../park-ridge" class="area-link">Park Ridge</a>
+<a href="../rosemont" class="area-link">Rosemont</a>'''
+    },
+    {
+        'city': 'Park Ridge',
+        'slug': 'park-ridge',
+        'intro': "Park Ridge combines historic architecture with upscale HOAs. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Historic preservation in downtown condos</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOA reserves for luxury amenities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Snow removal and landscaping contracts</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards requiring detailed financial reporting</li>''',
+        'links': '''<a href="../des-plaines" class="area-link">Des Plaines</a>
+<a href="../niles" class="area-link">Niles</a>
+<a href="../edison-park" class="area-link">Edison Park</a>'''
+    },
+    {
+        'city': 'Prospect Heights',
+        'slug': 'prospect-heights',
+        'intro': "Prospect Heights has diverse housing, from affordable condos to upscale townhomes. Boards face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo systems needing frequent repairs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome boards balancing reserve planning</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Parking and compliance enforcement</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting prompt maintenance response</li>''',
+        'links': '''<a href="../wheeling" class="area-link">Wheeling</a>
+<a href="../mount-prospect" class="area-link">Mount Prospect</a>
+<a href="../arlington-heights" class="area-link">Arlington Heights</a>'''
+    },
+    {
+        'city': 'Rosemont',
+        'slug': 'rosemont',
+        'intro': "Rosemont combines residential communities with a busy commercial and entertainment district. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• High operating costs due to location</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Noise and parking complaints in mixed-use developments</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Small HOAs needing strong governance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards expecting professional financial oversight</li>''',
+        'links': '''<a href="../des-plaines" class="area-link">Des Plaines</a>
+<a href="../park-ridge" class="area-link">Park Ridge</a>
+<a href="../schiller-park" class="area-link">Schiller Park</a>'''
     }
 ]
 
