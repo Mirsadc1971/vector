@@ -1,0 +1,154 @@
+/* FIX ALL ALIGNMENT AND CENTERING ISSUES */
+
+/* Center ALL headings */
+h1, h2, h3, h4, h5, h6 {
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Center all section text */
+.section p,
+.container p,
+section p {
+    text-align: center !important;
+    max-width: 900px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Fix service cards to have equal height and aligned buttons */
+.service-card,
+.services-grid > div,
+div[style*="background: #1f2937"] {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 400px !important;
+    height: 100% !important;
+    padding: 2rem !important;
+}
+
+/* Ensure card content takes proper space */
+.service-card h3,
+.services-grid h3 {
+    text-align: center !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.service-card p,
+.services-grid p {
+    flex-grow: 1 !important;
+    text-align: center !important;
+    margin-bottom: 2rem !important;
+}
+
+/* FIX ALL BUTTONS - Make them align at bottom */
+.service-card a,
+.services-grid a,
+.btn,
+a[href*="Learn More"],
+a.btn-primary,
+a.btn-secondary {
+    margin-top: auto !important;
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding: 14px 24px !important;
+    background: #2C3E50 !important;
+    color: #F4A261 !important;
+    border: 2px solid #F4A261 !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: all 0.3s ease !important;
+}
+
+.service-card a:hover,
+.services-grid a:hover,
+.btn:hover {
+    background: #F4A261 !important;
+    color: #2C3E50 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Fix grids to be properly aligned */
+.services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+    align-items: stretch !important;
+    margin: 2rem auto !important;
+    max-width: 1200px !important;
+}
+
+/* Center CTA sections */
+.cta-section,
+.payment-assistance-section,
+.contact-section {
+    text-align: center !important;
+}
+
+.cta-section .container,
+.payment-assistance-section .container {
+    text-align: center !important;
+}
+
+/* Center contact info */
+.contact-info {
+    text-align: center !important;
+    margin: 2rem auto !important;
+}
+
+.contact-info p {
+    text-align: center !important;
+    margin: 0.5rem auto !important;
+}
+
+/* Fix phone and email links */
+a[href^="tel:"],
+a[href^="mailto:"] {
+    color: #F4A261 !important;
+    text-decoration: none !important;
+}
+
+/* Responsive - 2 columns on tablet */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Responsive - 1 column on mobile */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .service-card {
+        min-height: 300px !important;
+    }
+}
+
+/* Force dark backgrounds where needed */
+body {
+    background: #1f2937 !important;
+}
+
+section {
+    background: #1f2937 !important;
+}
+
+.section {
+    background: #1f2937 !important;
+}
+
+/* Ensure text is readable */
+p, li, span {
+    color: #e5e7eb !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #F4A261 !important;
+}
