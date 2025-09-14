@@ -1,0 +1,20 @@
+/* Make service area button text gold */
+.service-area-button, .area-link, .city-button {
+    color: #F4A261 !important;
+    font-weight: 600 !important;
+    text-shadow: none !important;
+}
+
+/* Specifically target those button elements */
+a[href*="glenview"],
+a[href*="northbrook"],
+a[href*="wilmette"],
+a[href*="winnetka"],
+a[href*="evanston"],
+a[href*="skokie"],
+a[href*="highland-park"],
+a[href*="deerfield"],
+a[href*="park-ridge"] {
+    color: #F4A261 !important;
+    font-weight: 600 !important;
+}
