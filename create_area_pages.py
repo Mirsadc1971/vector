@@ -1015,6 +1015,126 @@ areas = [
         'links': '''<a href="../lake-bluff" class="area-link">Lake Bluff</a>
 <a href="../vernon-hills" class="area-link">Vernon Hills</a>
 <a href="../mundelein" class="area-link">Mundelein</a>'''
+    },
+    {
+        'city': 'Mundelein',
+        'slug': 'mundelein',
+        'intro': "Mundelein offers a blend of newer subdivisions and older townhome communities. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Large townhome HOAs with significant reserve needs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Older condo infrastructure requiring capital projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budget-conscious boards balancing rising vendor costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting fast communication and transparency</li>''',
+        'links': '''<a href="../vernon-hills" class="area-link">Vernon Hills</a>
+<a href="../libertyville" class="area-link">Libertyville</a>
+<a href="../hawthorn-woods" class="area-link">Hawthorn Woods</a>'''
+    },
+    {
+        'city': 'Long Grove',
+        'slug': 'long-grove',
+        'intro': "Long Grove is known for its gated communities and estate-style properties. Challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Private roads and infrastructure requiring HOA management</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Large reserve studies for capital projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Stormwater basin maintenance in natural settings</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards serving affluent residents with high expectations</li>''',
+        'links': '''<a href="../buffalo-grove" class="area-link">Buffalo Grove</a>
+<a href="../kildeer" class="area-link">Kildeer</a>
+<a href="../hawthorn-woods" class="area-link">Hawthorn Woods</a>'''
+    },
+    {
+        'city': 'Hawthorn Woods',
+        'slug': 'hawthorn-woods',
+        'intro': "Hawthorn Woods is home to golf course communities and family-focused HOAs. Boards often manage:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• HOAs with large common areas including ponds and trails</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Reserve planning for amenities like pools and clubhouses</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Capital projects for roofs, siding, and paving</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing transparency to maintain resident trust</li>''',
+        'links': '''<a href="../long-grove" class="area-link">Long Grove</a>
+<a href="../lake-zurich" class="area-link">Lake Zurich</a>
+<a href="../mundelein" class="area-link">Mundelein</a>'''
+    },
+    {
+        'city': 'Lake Zurich',
+        'slug': 'lake-zurich',
+        'intro': "Lake Zurich combines lakefront living with large suburban HOAs. Common challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Stormwater and shoreline management for lakefront properties</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome communities needing reserve planning</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs balancing budgets with rising utility costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents demanding digital tools for communication</li>''',
+        'links': '''<a href="../hawthorn-woods" class="area-link">Hawthorn Woods</a>
+<a href="../kildeer" class="area-link">Kildeer</a>
+<a href="../buffalo-grove" class="area-link">Buffalo Grove</a>'''
+    },
+    {
+        'city': 'Kildeer',
+        'slug': 'kildeer',
+        'intro': "Kildeer features estate-style HOAs and townhome communities with significant common areas. Boards manage:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Stormwater retention ponds requiring maintenance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Large landscaping contracts needing oversight</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Capital projects for private roads</li>
+<li style="padding: 10px 0; color: var(--text-light);">• High-value homes needing disciplined reserve planning</li>''',
+        'links': '''<a href="../long-grove" class="area-link">Long Grove</a>
+<a href="../lake-zurich" class="area-link">Lake Zurich</a>
+<a href="../deer-park" class="area-link">Deer Park</a>'''
+    },
+    {
+        'city': 'Deer Park',
+        'slug': 'deer-park',
+        'intro': "Deer Park offers a mix of luxury subdivisions and townhome communities. Boards face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Private infrastructure maintenance (roads, signage, landscaping)</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budget planning for mid-size HOAs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Reserve studies for townhome communities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting responsive, professional service</li>''',
+        'links': '''<a href="../kildeer" class="area-link">Kildeer</a>
+<a href="../long-grove" class="area-link">Long Grove</a>
+<a href="../palatine" class="area-link">Palatine</a>'''
+    },
+    {
+        'city': 'Palatine',
+        'slug': 'palatine',
+        'intro': "Palatine is one of the largest suburbs, with a wide range of HOAs and condos. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Large condo complexes needing strict financial management</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome boards balancing reserves and vendor costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Older buildings requiring HVAC and roof replacements</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting professional digital communication</li>''',
+        'links': '''<a href="../arlington-heights" class="area-link">Arlington Heights</a>
+<a href="../hoffman-estates" class="area-link">Hoffman Estates</a>
+<a href="../deer-park" class="area-link">Deer Park</a>'''
+    },
+    {
+        'city': 'Arlington Heights',
+        'slug': 'arlington-heights',
+        'intro': "Arlington Heights combines urban-style condos with suburban HOAs. Boards often deal with:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Downtown condo developments with high resident turnover</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Large-scale HOAs requiring governance and compliance support</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budgeting for shared amenities like pools and clubhouses</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Capital projects in older townhome associations</li>''',
+        'links': '''<a href="../palatine" class="area-link">Palatine</a>
+<a href="../mount-prospect" class="area-link">Mount Prospect</a>
+<a href="../rolling-meadows" class="area-link">Rolling Meadows</a>'''
+    },
+    {
+        'city': 'Mount Prospect',
+        'slug': 'mount-prospect',
+        'intro': "Mount Prospect features both affordable condo buildings and upscale HOAs. Challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo associations with deferred maintenance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs requiring strong vendor coordination</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Parking and snow removal costs straining budgets</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing transparent financial reporting</li>''',
+        'links': '''<a href="../arlington-heights" class="area-link">Arlington Heights</a>
+<a href="../des-plaines" class="area-link">Des Plaines</a>
+<a href="../prospect-heights" class="area-link">Prospect Heights</a>'''
+    },
+    {
+        'city': 'Rolling Meadows',
+        'slug': 'rolling-meadows',
+        'intro': "Rolling Meadows is home to diverse communities, from older condos to newer townhomes. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Budget-conscious HOAs balancing rising costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Deferred maintenance in aging condo buildings</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome communities needing reserve studies</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting clear communication</li>''',
+        'links': '''<a href="../palatine" class="area-link">Palatine</a>
+<a href="../arlington-heights" class="area-link">Arlington Heights</a>
+<a href="../schaumburg" class="area-link">Schaumburg</a>'''
     }
 ]
 
