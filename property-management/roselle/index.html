@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Roselle Property Management — HOA, Condo & Townhome Experts | Manage369</title>
+<meta content="Premier Roselle property management since 2007. Expert HOA, condominium & townhome management. 110% Service Guarantee. Call (847) 834-4131." name="description"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
+<link href="../../site.webmanifest" rel="manifest"/>
+<meta content="#2C3E50" name="msapplication-TileColor"/>
+<meta content="#1f2937" name="theme-color"/>
+<link href="https://www.manage369.com/property-management/roselle/" rel="canonical"/>
+<style>
+/* Master Color Scheme */
+:root {
+    --primary-gold: #F4A261;
+    --primary-navy: #2C3E50;
+    --background-dark: #1f2937;
+    --text-light: #e5e7eb;
+    --accent-blue: #084298;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background-dark) !important;
+    color: var(--text-light) !important;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    line-height: 1.6;
+}
+
+/* Typography */
+h1, h2, h3, h4 {
+    color: var(--primary-gold) !important;
+    margin-bottom: 1.5rem;
+}
+
+h1 { font-size: 2.5rem; text-align: center; }
+h2 { font-size: 2rem; text-align: center; margin: 3rem 0 2rem; }
+h3 { font-size: 1.5rem; }
+
+p {
+    margin-bottom: 1.25rem;
+    color: var(--text-light);
+    line-height: 1.8;
+}
+
+a {
+    color: var(--primary-gold);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    opacity: 0.9;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+section {
+    padding: 80px 20px;
+}
+
+/* Header */
+.header {
+    background: var(--background-dark);
+    padding: 1rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.2);
+    border-bottom: 1px solid rgba(244,162,97,0.2);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-gold);
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: var(--text-light);
+    font-weight: 500;
+}
+
+/* Service Cards - PERFECTLY ALIGNED */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin: 40px 0;
+}
+
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.service-card {
+    background: rgba(44, 62, 80, 0.3);
+    border: 1px solid rgba(244, 162, 97, 0.3);
+    border-radius: 8px;
+    padding: 30px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(244, 162, 97, 0.2);
+}
+
+.service-card h3 {
+    color: var(--primary-gold);
+    margin-bottom: 15px;
+}
+
+/* Promise Cards - PERFECTLY ALIGNED 3x2 GRID */
+.promise-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 40px 0;
+}
+
+@media (max-width: 992px) {
+    .promise-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .promise-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.promise-card {
+    background: linear-gradient(135deg, var(--primary-gold), #e8974f);
+    color: var(--background-dark);
+    padding: 25px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(244, 162, 97, 0.3);
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* CTA Section */
+.cta-section {
+    background: linear-gradient(135deg, rgba(244, 162, 97, 0.1), rgba(44, 62, 80, 0.2));
+    border: 2px solid var(--primary-gold);
+    border-radius: 12px;
+    padding: 60px 40px;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    background: var(--primary-gold);
+    color: var(--background-dark);
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 30px rgba(244, 162, 97, 0.4);
+}
+
+/* Contact Form */
+.contact-form {
+    background: rgba(44, 62, 80, 0.3);
+    border: 1px solid rgba(244, 162, 97, 0.3);
+    border-radius: 12px;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    color: var(--primary-gold);
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    background: rgba(31, 41, 55, 0.8);
+    border: 1px solid rgba(244, 162, 97, 0.3);
+    border-radius: 6px;
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-gold);
+    box-shadow: 0 0 10px rgba(244, 162, 97, 0.2);
+}
+
+/* Specialized Services List */
+.specialized-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+    list-style: none;
+    margin: 30px 0;
+}
+
+.specialized-list li {
+    padding: 12px;
+    background: rgba(44, 62, 80, 0.2);
+    border-left: 3px solid var(--primary-gold);
+    border-radius: 4px;
+}
+
+/* Area Links */
+.area-links {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 30px 0;
+}
+
+.area-link {
+    padding: 10px 20px;
+    background: rgba(44, 62, 80, 0.3);
+    border: 1px solid var(--primary-gold);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+.area-link:hover {
+    background: var(--primary-gold);
+    color: var(--background-dark);
+}
+
+/* Trust Stats - PERFECTLY ALIGNED 4 COLUMNS */
+.trust-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    text-align: center;
+    margin: 40px 0;
+}
+
+@media (max-width: 992px) {
+    .trust-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .trust-stats {
+        grid-template-columns: 1fr;
+    }
+}
+
+.stat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    color: var(--primary-gold);
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<!-- Header -->
+<header class="header">
+<div class="header-content">
+<div class="logo">MANAGE369</div>
+<nav>
+<ul class="nav-menu">
+<li><a href="/">Home</a></li>
+<li><a href="/services">Services</a></li>
+<li><a href="/property-management">Areas</a></li>
+<li><a href="/contact">Contact</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+<!-- Hero Section -->
+<section style="background: linear-gradient(135deg, rgba(244,162,97,0.1), rgba(44,62,80,0.2)); padding: 100px 20px;">
+<div class="container">
+<h1>Roselle Property Management</h1>
+<p style="font-size: 1.3rem; text-align: center; color: var(--primary-gold); margin-bottom: 30px;">
+HOA, Condo & Townhome Management Experts
+</p>
+<p style="max-width: 800px; margin: 0 auto; text-align: center; font-size: 1.1rem;">
+Professional property management services in Roselle since 2007. We specialize in condominium associations, homeowner associations, and townhome communities.
+</p>
+</div>
+</section>
+
+<!-- Why Choose Section -->
+<section>
+<div class="container">
+<h2>Why Roselle Associations Choose Manage369</h2>
+<p style="max-width: 900px; margin: 0 auto 40px; text-align: center;">
+Roselle combines family-friendly neighborhoods with a strong business district. Boards here face:
+</p>
+<ul style="max-width: 800px; margin: 0 auto; list-style: none;">
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome communities with aging infrastructure</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs managing stormwater retention ponds</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Capital planning for roofing and siding projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards balancing amenity costs with budgets</li>
+</ul>
+<p style="max-width: 900px; margin: 40px auto 0; text-align: center;">
+With 18+ years serving Chicago's North Shore and Northwest suburbs, Manage369 understands Roselle's unique property management needs. Our certified managers provide the expertise, transparency, and hands-on service your board deserves.
+</p>
+</div>
+</section>
+
+<!-- Promise Section -->
+<section style="background: rgba(44,62,80,0.1);">
+<div class="container">
+<h2 style="text-align: center;">Our Promise to Roselle Communities</h2>
+<div class="promise-grid">
+<div class="promise-card">
+<strong style="font-size: 1.2rem;">110% Service Guarantee</strong><br>
+<span style="opacity: 0.95;">3 months free if we don't deliver</span>
+</div>
+<div class="promise-card">
+<strong style="font-size: 1.2rem;">24/7 Emergency Response</strong><br>
+<span style="opacity: 0.95;">Always available when you need us</span>
+</div>
+<div class="promise-card">
+<strong style="font-size: 1.2rem;">Transparent Pricing</strong><br>
+<span style="opacity: 0.95;">No hidden fees or surprises</span>
+</div>
+<div class="promise-card">
+<strong style="font-size: 1.2rem;">Board Education</strong><br>
+<span style="opacity: 0.95;">Free monthly workshops</span>
+</div>
+<div class="promise-card">
+<strong style="font-size: 1.2rem;">Vendor Network</strong><br>
+<span style="opacity: 0.95;">Pre-vetted, insured contractors</span>
+</div>
+<div class="promise-card">
+<strong style="font-size: 1.2rem;">Technology Included</strong><br>
+<span style="opacity: 0.95;">Modern tools at no extra cost</span>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Services Section -->
+<section>
+<div class="container">
+<h2>Property Management Services in Roselle</h2>
+<div class="services-grid">
+<div class="service-card">
+<h3>Condominium Management</h3>
+<p>Full-service management for condo associations of all sizes. From high-rises to garden-style buildings.</p>
+<a href="/services/condominium-management" class="cta-button" style="margin-top: 20px; padding: 10px 25px; font-size: 1rem;">Learn More</a>
+</div>
+<div class="service-card">
+<h3>HOA Management</h3>
+<p>Professional governance and operational support for homeowner associations and residential subdivisions.</p>
+<a href="/services/hoa-management" class="cta-button" style="margin-top: 20px; padding: 10px 25px; font-size: 1rem;">Learn More</a>
+</div>
+<div class="service-card">
+<h3>Townhome Management</h3>
+<p>Specialized management for townhome communities, handling both individual and shared maintenance needs.</p>
+<a href="/services/townhome-management" class="cta-button" style="margin-top: 20px; padding: 10px 25px; font-size: 1rem;">Learn More</a>
+</div>
+</div>
+</div>
+</section>
+
+<!-- Specialized Services -->
+<section style="background: rgba(44,62,80,0.1);">
+<div class="container">
+<h2>Specialized Services for Roselle Properties</h2>
+<ul class="specialized-list">
+<li>Financial Management & Reserve Studies</li>
+<li>Vendor Coordination & Bid Management</li>
+<li>Board Meeting Support & Minutes</li>
+<li>Compliance & Violation Management</li>
+<li>Emergency Response Coordination</li>
+<li>Resident Communication Portals</li>
+</ul>
+</div>
+</section>
+
+<!-- Trust Section -->
+<section>
+<div class="container">
+<h2>Trusted by Roselle Boards Since 2007</h2>
+<div class="trust-stats">
+<div class="stat-item">
+<div class="stat-number">18+</div>
+<p>Years of Experience</p>
+</div>
+<div class="stat-item">
+<div class="stat-number">200+</div>
+<p>Communities Managed</p>
+</div>
+<div class="stat-item">
+<div class="stat-number">110%</div>
+<p>Service Guarantee</p>
+</div>
+<div class="stat-item">
+<div class="stat-number">24/7</div>
+<p>Emergency Support</p>
+</div>
+</div>
+</div>
+</section>
+
+<!-- FAQ Section -->
+<section style="background: rgba(44,62,80,0.1);">
+<div class="container">
+<h2>Frequently Asked Questions</h2>
+<div style="max-width: 800px; margin: 0 auto;">
+<details style="margin: 20px 0; padding: 20px; background: rgba(44,62,80,0.3); border-radius: 8px;">
+<summary style="cursor: pointer; color: var(--primary-gold); font-weight: bold;">What types of properties do you manage in Roselle?</summary>
+<p style="margin-top: 15px;">We manage condominium associations, homeowner associations (HOAs), and townhome communities of all sizes throughout Roselle and surrounding areas.</p>
+</details>
+<details style="margin: 20px 0; padding: 20px; background: rgba(44,62,80,0.3); border-radius: 8px;">
+<summary style="cursor: pointer; color: var(--primary-gold); font-weight: bold;">How quickly can you take over management?</summary>
+<p style="margin-top: 15px;">We can typically transition management within 30-45 days, ensuring a smooth handoff with no disruption to services.</p>
+</details>
+<details style="margin: 20px 0; padding: 20px; background: rgba(44,62,80,0.3); border-radius: 8px;">
+<summary style="cursor: pointer; color: var(--primary-gold); font-weight: bold;">What makes Manage369 different?</summary>
+<p style="margin-top: 15px;">Our 110% Service Guarantee, transparent pricing, certified managers, and 18+ years of local experience set us apart. We're large enough to handle complex needs but small enough to provide personal attention.</p>
+</details>
+</div>
+</div>
+</section>
+
+<!-- CTA Section -->
+<section>
+<div class="container">
+<div class="cta-section">
+<h2 style="margin-bottom: 20px;">Request Your Free Proposal from Manage369</h2>
+<p style="font-size: 1.2rem; margin-bottom: 30px;">
+Join 200+ satisfied communities across Chicago's North Shore
+</p>
+<a href="tel:8478344131" class="cta-button">Call (847) 834-4131</a>
+</div>
+</div>
+</section>
+
+<!-- Contact Form -->
+<section style="background: rgba(44,62,80,0.1);">
+<div class="container">
+<h2>Get Your Free Management Proposal</h2>
+<form class="contact-form">
+<div class="form-group">
+<label>Association Name</label>
+<input type="text" placeholder="Enter your association name" required>
+</div>
+<div class="form-group">
+<label>Your Name</label>
+<input type="text" placeholder="Enter your name" required>
+</div>
+<div class="form-group">
+<label>Email</label>
+<input type="email" placeholder="Enter your email" required>
+</div>
+<div class="form-group">
+<label>Phone</label>
+<input type="tel" placeholder="Enter your phone number">
+</div>
+<div class="form-group">
+<label>Number of Units</label>
+<input type="text" placeholder="How many units in your association?">
+</div>
+<div class="form-group">
+<label>Message</label>
+<textarea rows="4" placeholder="Tell us about your property management needs"></textarea>
+</div>
+<button type="submit" class="cta-button" style="width: 100%;">Submit Request</button>
+</form>
+</div>
+</section>
+
+<!-- Nearby Areas -->
+<section>
+<div class="container">
+<h2 style="text-align: center;">Explore Nearby Property Management Services</h2>
+<div class="area-links">
+<a href="../schaumburg" class="area-link">Schaumburg</a>
+<a href="../bloomingdale" class="area-link">Bloomingdale</a>
+<a href="../itasca" class="area-link">Itasca</a>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer style="background: rgba(44,62,80,0.3); padding: 60px 20px; margin-top: 80px;">
+<div class="container">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px;">
+<div>
+<h3 style="color: var(--primary-gold);">MANAGE369</h3>
+<p>1400 Patriot Blvd #357<br>Glenview, IL 60026</p>
+<p>📱 <a href="tel:8478344131">(847) 834-4131</a><br>
+📧 <a href="mailto:service@manage369.com">service@manage369.com</a></p>
+</div>
+<div>
+<h4 style="color: var(--primary-gold);">Services</h4>
+<a href="/services/condominium-management" style="display: block; margin: 5px 0;">Condominium Management</a>
+<a href="/services/hoa-management" style="display: block; margin: 5px 0;">HOA Management</a>
+<a href="/services/townhome-management" style="display: block; margin: 5px 0;">Townhome Management</a>
+</div>
+<div>
+<h4 style="color: var(--primary-gold);">Quick Links</h4>
+<a href="/property-management" style="display: block; margin: 5px 0;">Areas We Serve</a>
+<a href="/contact" style="display: block; margin: 5px 0;">Contact</a>
+<a href="/pay-dues" style="display: block; margin: 5px 0;">Pay Dues</a>
+</div>
+<div>
+<h4 style="color: var(--primary-gold);">Certifications</h4>
+<p>CAI National Member<br>
+AMS • CMCA<br>
+IDFPR Licensed<br>
+License: 291.000211</p>
+</div>
+</div>
+<p style="text-align: center; margin-top: 40px; padding-top: 30px; border-top: 1px solid rgba(244,162,97,0.2);">
+© 2025 Manage369. All rights reserved.
+</p>
+</div>
+</footer>
+
+</body>
+</html>
