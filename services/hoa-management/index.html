@@ -117,19 +117,27 @@
         }
 
         /* Make all service buttons consistent size */
-        .btn, .btn-secondary {
-            width: 100% !important;
-            max-width: 250px !important;
-            min-height: 50px !important;
+        .btn-secondary {
+            width: 250px !important;
+            height: 48px !important;
             padding: 12px 20px !important;
-            font-size: 1rem !important;
+            font-size: 0.95rem !important;
             font-weight: 600 !important;
             text-align: center !important;
-            display: flex !important;
+            display: inline-flex !important;
             align-items: center !important;
             justify-content: center !important;
             margin: 0 auto !important;
             box-sizing: border-box !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+        }
+
+        /* Ensure button containers are centered */
+        div[style*="text-align: center"] {
+            display: flex !important;
+            justify-content: center !important;
         }
         
         .header {
