@@ -1,0 +1,67 @@
+/* Fix Service Grid Button Alignment */
+.services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+    align-items: stretch !important;
+}
+
+/* Ensure all service cards have equal height and proper flex layout */
+.services-grid > div {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 280px !important;
+    background: #1f2937 !important;
+    padding: 2rem !important;
+    border-radius: 10px !important;
+}
+
+/* Ensure content grows to push button to bottom */
+.services-grid > div > p {
+    flex-grow: 1 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Fix button container positioning */
+.services-grid > div > div:last-child {
+    margin-top: auto !important;
+    padding-top: 1rem !important;
+    text-align: center !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Our Complete Property Management Services specific fix */
+section:has(h2:contains("Our Complete Property Management Services")) .services-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+}
+
+section:has(h2:contains("Our Complete Property Management Services")) .services-grid > div {
+    min-height: 320px !important;
+}
+
+/* Ensure Financial Management service grid also aligns properly */
+section:has(h2:contains("Why Choose Our Financial Management")) .benefits-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 2rem !important;
+}
+
+section:has(h2:contains("Why Choose Our Financial Management")) .benefit-item {
+    min-height: 150px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+}
