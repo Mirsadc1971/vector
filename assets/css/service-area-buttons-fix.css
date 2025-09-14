@@ -1,20 +1,28 @@
-/* Make service area button text gold */
-.service-area-button, .area-link, .city-button {
+/* FORCE GOLD TEXT ON SERVICE AREA BUTTONS */
+a[href*="property-management/"] {
     color: #F4A261 !important;
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     text-shadow: none !important;
 }
 
-/* Specifically target those button elements */
-a[href*="glenview"],
-a[href*="northbrook"],
-a[href*="wilmette"],
-a[href*="winnetka"],
-a[href*="evanston"],
-a[href*="skokie"],
-a[href*="highland-park"],
-a[href*="deerfield"],
-a[href*="park-ridge"] {
+/* Popular Service Areas - FORCE GOLD TEXT */
+div a[href*="property-management/glenview"],
+div a[href*="property-management/northbrook"],
+div a[href*="property-management/wilmette"],
+div a[href*="property-management/winnetka"],
+div a[href*="property-management/evanston"],
+div a[href*="property-management/skokie"],
+div a[href*="property-management/highland-park"],
+div a[href*="property-management/deerfield"],
+div a[href*="property-management/park-ridge"] {
     color: #F4A261 !important;
-    font-weight: 600 !important;
+    background: #2C3E50 !important;
+    border: 2px solid #F4A261 !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+}
+
+/* Override ANY color property */
+[style*="color"] a[href*="property-management/"] {
+    color: #F4A261 !important;
 }
