@@ -1,0 +1,28 @@
+.action-buttons, .cta-buttons, .button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+}
+
+.action-buttons .btn,
+.cta-buttons .btn,
+.button-group .btn {
+    flex: 0 0 auto;
+    min-width: 180px;
+    text-align: center;
+}
+
+/* Ensure consistent button sizing */
+.btn[href*="directions"],
+.btn[href*="google"],
+.btn[href*="review"] {
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}

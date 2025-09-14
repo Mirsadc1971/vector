@@ -1,0 +1,14 @@
+.three-button-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    .three-button-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
