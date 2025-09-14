@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas We Serve - 84 Chicago & North Shore Communities | Manage369</title>
+    <meta name="description" content="Manage369 provides property management services to 84 communities across Chicago and the North Shore. Find your community and learn about our local expertise.">
+
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="universal-design-system.css">
+    <link rel="stylesheet" href="fix-service-card-buttons.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #1f2937;
+            color: #e5e7eb;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #2C3E50;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            border-bottom: 2px solid #F4A261;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #F4A261;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            gap: 0;
+        }
+
+        .nav a {
+            color: #F4A261;
+            text-decoration: none;
+            padding: 12px 20px;
+            transition: color 0.3s;
+        }
+
+        .nav a:hover {
+            color: #084298;
+        }
+
+        /* Hero Section */
+        .hero {
+            margin-top: 80px;
+            padding: 60px 20px;
+            text-align: center;
+            background: linear-gradient(135deg, rgba(44,62,80,0.9), rgba(244,162,97,0.1));
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #F4A261;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: #e5e7eb;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Community Grid - 14 rows x 6 columns = 84 cards */
+        .communities-section {
+            padding: 40px 20px 80px;
+        }
+
+        .communities-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 1.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        /* Community Card */
+        .community-card {
+            background: #2C3E50;
+            border: 2px solid #374151;
+            border-radius: 10px;
+            padding: 1.5rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            min-height: 120px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .community-card:hover {
+            background: #374151;
+            border-color: #F4A261;
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(244,162,97,0.3);
+        }
+
+        .community-card a {
+            color: #F4A261;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: block;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .community-card a:hover {
+            color: #ffffff;
+        }
+
+        /* Tablet Responsive - 8 rows x 4 columns */
+        @media (max-width: 1024px) {
+            .communities-grid {
+                grid-template-columns: repeat(4, 1fr);
+                gap: 1.2rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* Mobile Responsive - 42 rows x 2 columns */
+        @media (max-width: 768px) {
+            .communities-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .community-card {
+                min-height: 100px;
+                padding: 1rem;
+            }
+        }
+
+        /* Small Mobile - 84 rows x 1 column */
+        @media (max-width: 480px) {
+            .communities-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Footer */
+        .footer {
+            background: #2C3E50;
+            color: #e5e7eb;
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 2px solid #F4A261;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer h3 {
+            color: #F4A261;
+            margin-bottom: 1rem;
+        }
+
+        .footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer a {
+            color: #F4A261;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">
+            <a href="/" style="color: #F4A261; text-decoration: none;">Manage369</a>
+        </div>
+        <nav class="nav">
+            <a href="/">Home</a>
+            <a href="/services/hoa-management/">HOA Management</a>
+            <a href="/services/condominium-management/">Condo Management</a>
+            <a href="/services/townhome-management/">Townhome Management</a>
+            <a href="/areas-we-serve.html" class="active">Areas We Serve</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Areas We Serve</h1>
+            <p>84 Communities Across Chicago & The North Shore</p>
+            <p style="margin-top: 1rem; font-size: 1.1rem;">Professional property management services tailored to each community's unique needs</p>
+        </div>
+    </section>
+
+    <!-- Communities Grid Section -->
+    <section class="communities-section">
+        <div class="container">
+            <div class="communities-grid">
+                <!-- Row 1 -->
+                <div class="community-card">
+                    <a href="/property-management/addison/">Addison</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/albany-park/">Albany Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/andersonville/">Andersonville</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/arlington-heights/">Arlington Heights</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/avondale/">Avondale</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/bartlett/">Bartlett</a>
+                </div>
+
+                <!-- Row 2 -->
+                <div class="community-card">
+                    <a href="/property-management/bensenville/">Bensenville</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/bloomingdale/">Bloomingdale</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/bucktown/">Bucktown</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/buffalo-grove/">Buffalo Grove</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/deerfield/">Deerfield</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/des-plaines/">Des Plaines</a>
+                </div>
+
+                <!-- Row 3 -->
+                <div class="community-card">
+                    <a href="/property-management/dunning/">Dunning</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/edgewater/">Edgewater</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/edison-park/">Edison Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/elk-grove-village/">Elk Grove Village</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/elmwood-park/">Elmwood Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/evanston/">Evanston</a>
+                </div>
+
+                <!-- Row 4 -->
+                <div class="community-card">
+                    <a href="/property-management/forest-glen/">Forest Glen</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/forest-park/">Forest Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/franklin-park/">Franklin Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/glencoe/">Glencoe</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/glenview/">Glenview</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/gold-coast/">Gold Coast</a>
+                </div>
+
+                <!-- Row 5 -->
+                <div class="community-card">
+                    <a href="/property-management/golf/">Golf</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/hanover-park/">Hanover Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/harwood-heights/">Harwood Heights</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/highland-park/">Highland Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/hoffman-estates/">Hoffman Estates</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/hyde-park/">Hyde Park</a>
+                </div>
+
+                <!-- Row 6 -->
+                <div class="community-card">
+                    <a href="/property-management/jefferson-park/">Jefferson Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/kenilworth/">Kenilworth</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/lake-bluff/">Lake Bluff</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/lake-forest/">Lake Forest</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/lakeview/">Lakeview</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/libertyville/">Libertyville</a>
+                </div>
+
+                <!-- Row 7 -->
+                <div class="community-card">
+                    <a href="/property-management/lincoln-park/">Lincoln Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/lincolnshire/">Lincolnshire</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/lincoln-square/">Lincoln Square</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/lincolnwood/">Lincolnwood</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/logan-square/">Logan Square</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/loop/">Loop</a>
+                </div>
+
+                <!-- Row 8 -->
+                <div class="community-card">
+                    <a href="/property-management/mayfair/">Mayfair</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/morton-grove/">Morton Grove</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/mount-prospect/">Mount Prospect</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/mundelein/">Mundelein</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/niles/">Niles</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/norridge/">Norridge</a>
+                </div>
+
+                <!-- Row 9 -->
+                <div class="community-card">
+                    <a href="/property-management/northbrook/">Northbrook</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/northfield/">Northfield</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/north-park/">North Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/norwood-park/">Norwood Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/oak-park/">Oak Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/old-irving-park/">Old Irving Park</a>
+                </div>
+
+                <!-- Row 10 -->
+                <div class="community-card">
+                    <a href="/property-management/old-town/">Old Town</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/palatine/">Palatine</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/park-ridge/">Park Ridge</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/portage-park/">Portage Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/prospect-heights/">Prospect Heights</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/pulaski-park/">Pulaski Park</a>
+                </div>
+
+                <!-- Row 11 -->
+                <div class="community-card">
+                    <a href="/property-management/ravenswood/">Ravenswood</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/river-grove/">River Grove</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/river-north/">River North</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/rogers-park/">Rogers Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/rolling-meadows/">Rolling Meadows</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/roselle/">Roselle</a>
+                </div>
+
+                <!-- Row 12 -->
+                <div class="community-card">
+                    <a href="/property-management/rosemont/">Rosemont</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/sauganash/">Sauganash</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/schaumburg/">Schaumburg</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/schiller-park/">Schiller Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/skokie/">Skokie</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/south-loop/">South Loop</a>
+                </div>
+
+                <!-- Row 13 -->
+                <div class="community-card">
+                    <a href="/property-management/streamwood/">Streamwood</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/streeterville/">Streeterville</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/the-glen/">The Glen</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/uptown/">Uptown</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/vernon-hills/">Vernon Hills</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/west-loop/">West Loop</a>
+                </div>
+
+                <!-- Row 14 -->
+                <div class="community-card">
+                    <a href="/property-management/west-ridge/">West Ridge</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/wheeling/">Wheeling</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/wicker-park/">Wicker Park</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/wilmette/">Wilmette</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/winnetka/">Winnetka</a>
+                </div>
+                <div class="community-card">
+                    <a href="/property-management/wood-dale/">Wood Dale</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <h3>Manage369 Property Management</h3>
+            <p>Serving 84 Communities Across Chicago & The North Shore</p>
+            <p>1400 Patriot Boulevard, Suite 357<br>Glenview, Illinois 60026</p>
+            <p>
+                <a href="tel:8478344131">(847) 834-4131</a> |
+                <a href="mailto:info@manage369.com">info@manage369.com</a>
+            </p>
+            <p style="margin-top: 2rem;">© 2025 Manage369. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

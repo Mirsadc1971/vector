@@ -1,0 +1,159 @@
+/* FIX CAPITAL PROJECT MANAGEMENT PAGE LAYOUT ISSUES */
+
+/* Fix the top services section - proper 3x2 grid */
+.services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 2rem !important;
+    max-width: 1200px !important;
+    margin: 2rem auto !important;
+    padding: 0 2rem !important;
+    align-items: stretch !important;
+}
+
+/* Make all service cards equal height with flexbox */
+.service-card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 350px !important;
+    padding: 2rem !important;
+    background: #2C3E50 !important;
+    border: 2px solid #374151 !important;
+    border-radius: 10px !important;
+    height: 100% !important;
+}
+
+.service-card h3 {
+    color: #F4A261 !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.3rem !important;
+}
+
+.service-card p {
+    color: #e5e7eb !important;
+    margin-bottom: 1rem !important;
+    flex-grow: 0 !important;
+}
+
+.service-card ul {
+    flex-grow: 1 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+/* Fix inline styled cards to match */
+.services-grid > div[style*="background"] {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    min-height: 350px !important;
+    height: 100% !important;
+}
+
+/* Fix button alignment in all cards */
+.service-card .btn,
+.services-grid .btn,
+div[style*="background"] .btn {
+    margin-top: auto !important;
+    display: inline-block !important;
+    background: #2C3E50 !important;
+    color: #F4A261 !important;
+    border: 2px solid #F4A261 !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+    width: 100% !important;
+}
+
+.service-card .btn:hover,
+.services-grid .btn:hover,
+div[style*="background"] .btn:hover {
+    background: #F4A261 !important;
+    color: #2C3E50 !important;
+    transform: translateY(-2px) !important;
+}
+
+/* Fix button container div */
+div[style*="margin-top: auto"] {
+    margin-top: auto !important;
+    padding-top: 1rem !important;
+    width: 100% !important;
+}
+
+/* Fix North Shore Communities section if it exists */
+.communities-grid,
+.property-grid {
+    display: grid !important;
+    grid-template-columns: repeat(5, 1fr) !important;
+    gap: 1rem !important;
+    max-width: 1200px !important;
+    margin: 2rem auto !important;
+    padding: 0 2rem !important;
+}
+
+.community-card,
+.property-card {
+    min-height: 120px !important;
+    padding: 1rem !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center !important;
+    background: #2C3E50 !important;
+    border: 1px solid #374151 !important;
+    border-radius: 8px !important;
+}
+
+/* Tablet responsive */
+@media (max-width: 1024px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .communities-grid,
+    .property-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .communities-grid,
+    .property-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    .service-card {
+        min-height: 280px !important;
+    }
+}
+
+/* Ensure proper spacing between sections */
+.section {
+    padding: 60px 0 !important;
+}
+
+/* Fix any cards that use inline styles */
+.services-grid > div {
+    background: #1f2937 !important;
+    padding: 2rem !important;
+    border-radius: 10px !important;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1) !important;
+    text-align: left !important;
+    border: 2px solid #374151 !important;
+}
+
+/* Center align the buttons in project type cards */
+.services-grid > div > div[style*="text-align: center"] {
+    margin-top: auto !important;
+    width: 100% !important;
+    text-align: center !important;
+    padding-top: 1rem !important;
+}
