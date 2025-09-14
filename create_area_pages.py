@@ -1375,6 +1375,126 @@ areas = [
         'links': '''<a href="../bensenville" class="area-link">Bensenville</a>
 <a href="../rosemont" class="area-link">Rosemont</a>
 <a href="../schiller-park" class="area-link">Schiller Park</a>'''
+    },
+    {
+        'city': 'Schiller Park',
+        'slug': 'schiller-park',
+        'intro': "Schiller Park is a compact community near O'Hare with older condo buildings and small HOAs. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Aircraft noise and building insulation issues</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Deferred maintenance in mid-century condos</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budgeting pressures in smaller associations</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing professional compliance support</li>''',
+        'links': '''<a href="../franklin-park" class="area-link">Franklin Park</a>
+<a href="../rosemont" class="area-link">Rosemont</a>
+<a href="../harwood-heights" class="area-link">Harwood Heights</a>'''
+    },
+    {
+        'city': 'Harwood Heights',
+        'slug': 'harwood-heights',
+        'intro': "Harwood Heights blends small-town living with urban density. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Smaller condo boards with limited resources</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Parking and compliance enforcement</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Aging infrastructure requiring vendor coordination</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting responsive board communication</li>''',
+        'links': '''<a href="../norridge" class="area-link">Norridge</a>
+<a href="../schiller-park" class="area-link">Schiller Park</a>
+<a href="../elmwood-park" class="area-link">Elmwood Park</a>'''
+    },
+    {
+        'city': 'Norridge',
+        'slug': 'norridge',
+        'intro': "Norridge features mid-rise condos and small HOAs in dense neighborhoods. Boards must handle:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo HVAC and plumbing systems</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budget limitations in cost-sensitive communities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Snow removal and vendor costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing clear financial reporting</li>''',
+        'links': '''<a href="../harwood-heights" class="area-link">Harwood Heights</a>
+<a href="../elmwood-park" class="area-link">Elmwood Park</a>
+<a href="../portage-park" class="area-link">Portage Park</a>'''
+    },
+    {
+        'city': 'Elmwood Park',
+        'slug': 'elmwood-park',
+        'intro': "Elmwood Park is home to vintage condos and townhome communities. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Historic brick condo buildings needing capital projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome reserve planning for exterior upkeep</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Parking and resident compliance issues</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards expecting accurate financial reporting</li>''',
+        'links': '''<a href="../norridge" class="area-link">Norridge</a>
+<a href="../river-grove" class="area-link">River Grove</a>
+<a href="../belmont-cragin" class="area-link">Belmont Cragin</a>'''
+    },
+    {
+        'city': 'River Grove',
+        'slug': 'river-grove',
+        'intro': "River Grove offers affordable condos and small townhome HOAs. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older buildings with deferred maintenance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budget-conscious communities needing strict cost control</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Vendor coordination for roofing, HVAC, and paving</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards requiring governance and compliance support</li>''',
+        'links': '''<a href="../elmwood-park" class="area-link">Elmwood Park</a>
+<a href="../franklin-park" class="area-link">Franklin Park</a>
+<a href="../melrose-park" class="area-link">Melrose Park</a>'''
+    },
+    {
+        'city': 'Melrose Park',
+        'slug': 'melrose-park',
+        'intro': "Melrose Park has a mix of affordable condos and suburban HOAs. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Aging condo infrastructure needing updates</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budget-conscious boards managing rising vendor costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Delinquency reduction in cost-sensitive communities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting fast maintenance response</li>''',
+        'links': '''<a href="../river-grove" class="area-link">River Grove</a>
+<a href="../stone-park" class="area-link">Stone Park</a>
+<a href="../franklin-park" class="area-link">Franklin Park</a>'''
+    },
+    {
+        'city': 'Stone Park',
+        'slug': 'stone-park',
+        'intro': "Stone Park is a small community with compact condo associations and HOAs. Boards must handle:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo systems requiring frequent repairs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Small budgets and limited reserves</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Parking and compliance enforcement</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing professional vendor oversight</li>''',
+        'links': '''<a href="../melrose-park" class="area-link">Melrose Park</a>
+<a href="../franklin-park" class="area-link">Franklin Park</a>
+<a href="../bellwood" class="area-link">Bellwood</a>'''
+    },
+    {
+        'city': 'Bellwood',
+        'slug': 'bellwood',
+        'intro': "Bellwood offers affordable housing with small HOAs and condo buildings. Challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Aging condo infrastructure needing constant vendor attention</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budget-conscious associations with limited reserves</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards facing delinquency challenges</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting clear communication</li>''',
+        'links': '''<a href="../stone-park" class="area-link">Stone Park</a>
+<a href="../hillside" class="area-link">Hillside</a>
+<a href="../maywood" class="area-link">Maywood</a>'''
+    },
+    {
+        'city': 'Maywood',
+        'slug': 'maywood',
+        'intro': "Maywood has historic neighborhoods alongside older condo associations. Boards here manage:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Preservation of vintage condo buildings</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs with tight budgets</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Vendor coordination for capital projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting responsive management</li>''',
+        'links': '''<a href="../bellwood" class="area-link">Bellwood</a>
+<a href="../forest-park" class="area-link">Forest Park</a>
+<a href="../broadview" class="area-link">Broadview</a>'''
+    },
+    {
+        'city': 'Forest Park',
+        'slug': 'forest-park',
+        'intro': "Forest Park offers a mix of condos near Madison Street and suburban HOAs. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo infrastructure needing reserve planning</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome communities with shared amenities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budgeting pressures in mid-size associations</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting professional board support</li>''',
+        'links': '''<a href="../oak-park" class="area-link">Oak Park</a>
+<a href="../maywood" class="area-link">Maywood</a>
+<a href="../berwyn" class="area-link">Berwyn</a>'''
     }
 ]
 
