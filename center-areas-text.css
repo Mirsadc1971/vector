@@ -1,0 +1,66 @@
+/* CENTER TEXT FOR AREAS WE SERVE SECTIONS */
+
+/* Center all Areas We Serve headings and content */
+.areas-we-serve,
+section[id*="areas"],
+section[class*="areas"],
+.section-title:contains("Areas We Serve"),
+h2:contains("Areas We Serve"),
+h3:contains("Areas We Serve") {
+    text-align: center !important;
+}
+
+/* Center the descriptive paragraphs in Areas We Serve sections */
+.areas-we-serve p,
+section[id*="areas"] p,
+section[class*="areas"] p {
+    text-align: center !important;
+    max-width: 1000px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Specifically center the capital project management description */
+.section p[style*="text-align"],
+.container > p {
+    text-align: center !important;
+    margin: 0 auto 2rem auto !important;
+    max-width: 1000px !important;
+}
+
+/* Center any community grids */
+.communities-grid,
+.areas-grid,
+.property-grid {
+    margin: 0 auto !important;
+    text-align: center !important;
+}
+
+/* Ensure all area cards are centered */
+.community-card,
+.area-card,
+.property-card {
+    text-align: center !important;
+}
+
+/* Center the hero content on areas pages */
+.hero h1,
+.hero h2,
+.hero p {
+    text-align: center !important;
+}
+
+/* Center section titles */
+.section-title {
+    text-align: center !important;
+    width: 100% !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .areas-we-serve p,
+    section[id*="areas"] p,
+    section[class*="areas"] p {
+        padding: 0 1rem !important;
+    }
+}
