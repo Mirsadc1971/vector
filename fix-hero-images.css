@@ -1,0 +1,53 @@
+/* FIX FOR HERO BACKGROUND IMAGES */
+
+/* Ensure hero images are visible with proper overlay */
+.hero {
+    position: relative !important;
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+}
+
+/* Adjust overlay to not completely hide the image */
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4) !important; /* Reduced opacity from 0.6 to 0.4 */
+    z-index: 1;
+}
+
+/* Ensure content stays above overlay */
+.hero-content {
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* Force background images to show - specific overrides */
+section.hero[style*="background"] {
+    background-attachment: fixed !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+/* Remove any conflicting background colors that might hide images */
+.hero {
+    background-color: transparent !important;
+}
+
+/* Ensure text remains readable */
+.hero h1, .hero h2, .hero h3, .hero p, .hero div {
+    position: relative;
+    z-index: 3;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero {
+        background-attachment: scroll !important; /* Better performance on mobile */
+    }
+}
