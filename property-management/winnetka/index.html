@@ -463,6 +463,31 @@ footer {
     }
 }
 
+/* Responsive for 3-column service cards */
+@media (max-width: 1024px) {
+    div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1400px) {
+    div[style*="grid-template-columns: repeat(3, 1fr)"] {
+        gap: 20px !important;
+    }
+
+    .service-card {
+        padding: 20px !important;
+    }
+
+    .service-card h3 {
+        font-size: 1.2rem !important;
+    }
+
+    .service-card p, .service-card ul {
+        font-size: 0.95rem !important;
+    }
+}
+
 /* Special Styles */
 .highlight-box {
     background: linear-gradient(135deg, var(--accent-blue), var(--primary-gold));
@@ -643,8 +668,8 @@ Since 2007, Manage369 has partnered with Winnetka condominium, townhome, and HOA
 </div>
 </div>
 
-<!-- Services Grid -->
-<div class="services-grid">
+<!-- Services Grid - 3 columns horizontal layout -->
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin: 40px 0;">
 <div class="service-card">
 <h3>🏢 Condominium Management in Winnetka</h3>
 <p>From boutique condos near Elm Street to luxury lakefront residences, Winnetka condominium boards require precision and accountability. Manage369 provides:</p>
