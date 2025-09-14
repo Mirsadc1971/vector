@@ -9,6 +9,7 @@
 <link href="/images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
 <link href="/images/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png"/>
 <meta content="#1f2937" name="theme-color"/>
+<link rel="stylesheet" href="/assets/css/universal-sticky-header.css">
 <style>
 :root {
     --primary-gold: #F4A261;
@@ -183,18 +184,55 @@ h2 { font-size: 2rem; margin: 3rem 0 2rem; }
 <body>
 
 <!-- Header -->
-<header class="header">
-<div class="header-content">
-<div class="logo">MANAGE369</div>
-<nav>
-<ul class="nav-menu">
-<li><a href="/">Home</a></li>
-<li><a href="/services">Services</a></li>
-<li><a href="/property-management">Areas</a></li>
-<li><a href="/contact">Contact</a></li>
-</ul>
-</nav>
-</div>
+<header class="header" style="background: #2C3E50;">
+    <!-- COMPANY LOGO/NAME -->
+    <div class="logo" style="color: #F4A261;">MANAGE369</div>
+
+    <!-- Mobile Menu Toggle -->
+    <button class="mobile-menu-toggle" onclick="toggleMobileMenu()">☰</button>
+
+    <!-- MAIN NAVIGATION MENU -->
+    <nav aria-label="Primary navigation" class="nav" style="margin-left: 2rem; margin-right: auto; flex: 1;">
+        <a href="/" class="nav-link">Home</a>
+        <div class="dropdown">
+            <a href="/services" class="nav-link dropdown-trigger">Services <span class="dropdown-arrow">▼</span></a>
+            <div class="dropdown-content">
+                <div class="dropdown-section">
+                    <div class="dropdown-header" style="color: #F4A261; padding: 8px 16px; font-weight: 600;">Property Types</div>
+                    <a href="/services/condominium-management/">Condominium Management</a>
+                    <a href="/services/hoa-management/">HOA Management</a>
+                    <a href="/services/townhome-management/">Townhome Management</a>
+                </div>
+                <div class="dropdown-section">
+                    <div class="dropdown-header" style="color: #F4A261; padding: 8px 16px; font-weight: 600;">Service Offerings</div>
+                    <a href="/services/financial-management/">Financial Management</a>
+                    <a href="/services/maintenance-coordination/">Maintenance Coordination</a>
+                    <a href="/services/board-support/">Board Support</a>
+                    <a href="/services/administrative-services/">Administrative Services</a>
+                    <a href="/services/capital-project-management/">Capital Project Management</a>
+                    <a href="/services/resident-relations/">Resident Relations</a>
+                </div>
+            </div>
+        </div>
+        <a href="/property-management/" class="nav-link active">Areas We Serve</a>
+        <a href="/payment-methods.html" class="nav-link">Pay Dues</a>
+        <a href="/contact.html" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- PROFESSIONAL PHONE CTA -->
+    <div class="header-cta">
+        <a href="sms:8476522338" class="phone-button" style="background: #2C3E50; color: #F4A261 !important; border: 1px solid #F4A261;">📱 Text (847) 652-2338</a>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/">Home</a>
+        <a href="/services">Services</a>
+        <a href="/property-management/">Areas We Serve</a>
+        <a href="/pay-dues.html">Pay Dues</a>
+        <a href="/contact">Contact</a>
+        <a href="tel:8476522338" style="background: #2C3E50; color: #F4A261 !important; border: 1px solid #F4A261; padding: 0.75rem; border-radius: 5px; margin-top: 1rem; text-align: center;">Call (847) 652-2338</a>
+    </div>
 </header>
 
 <!-- Hero Section -->
@@ -604,4 +642,9 @@ Call (847) 834-4131
 </footer>
 
 </body>
-</html>
+</html><script>
+function toggleMobileMenu() {
+    const menu = document.getElementById(\"mobileMenu\");
+    menu.style.display = menu.style.display === \"block\" ? \"none\" : \"block\";
+}
+</script>

@@ -1,0 +1,130 @@
+/* UNIVERSAL STICKY HEADER FOR ALL PAGES */
+.header {
+    position: fixed !important;
+    top: 0 !important;
+    width: 100% !important;
+    background: linear-gradient(180deg, #2C3E50 0%, rgba(44, 62, 80, 0.95) 100%) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 1rem 2rem !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    z-index: 1000 !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+    height: 60px !important;
+}
+
+/* Ensure body has padding for fixed header */
+body {
+    padding-top: 60px !important;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 1.5rem !important;
+    font-weight: bold !important;
+    color: #F4A261 !important;
+}
+
+/* Navigation styling */
+.nav {
+    display: flex !important;
+    gap: 2rem !important;
+    align-items: center !important;
+    margin-left: 2rem !important;
+    margin-right: auto !important;
+    flex: 1 !important;
+}
+
+.nav-link {
+    color: #e5e7eb !important;
+    text-decoration: none !important;
+    font-weight: 500 !important;
+    padding: 0.5rem 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #F4A261 !important;
+}
+
+/* Dropdown styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: #2C3E50;
+    min-width: 250px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    z-index: 1001;
+    border-radius: 8px;
+    top: 100%;
+    left: 0;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown-content a {
+    color: #e5e7eb !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background: rgba(244,162,97,0.1);
+    color: #F4A261 !important;
+}
+
+/* Phone button */
+.phone-button {
+    background: #2C3E50 !important;
+    color: #F4A261 !important;
+    border: 1px solid #F4A261 !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 5px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+}
+
+/* Mobile menu */
+.mobile-menu {
+    display: none;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: #2C3E50;
+    padding: 1rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    color: #F4A261;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        display: none !important;
+    }
+
+    .header-cta {
+        display: none !important;
+    }
+
+    .mobile-menu-toggle {
+        display: block !important;
+    }
+}
