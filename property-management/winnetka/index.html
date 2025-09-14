@@ -123,6 +123,16 @@ setTimeout(loadAnalytics, 3000);
     --accent-blue: #084298;
 }
 
+/* Force center alignment for CTA section */
+.cta-quote,
+.bottom-quote,
+.tagline {
+    text-align: center !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+    display: block !important;
+}
+
 /* Base styles */
 * {
     margin: 0;
@@ -834,12 +844,12 @@ Managing property in Winnetka isn't about routine oversight — it's about prote
 </a>
 </div>
 <div style="width: 100%; text-align: center; margin-top: 30px;">
-<p style="color: var(--background-dark) !important; font-size: 1.3rem; font-weight: 700; margin: 0; display: block; text-align: center;">
+<p class="cta-quote" style="color: var(--background-dark) !important; font-size: 1.3rem; font-weight: 700; margin: 0 auto; display: block; text-align: center;">
 Request Your Free Proposal from Manage369
 </p>
 </div>
 <div style="width: 100%; text-align: center; margin-top: 20px;">
-<p style="color: var(--background-dark) !important; font-size: 1.1rem; font-weight: 500; margin: 0; display: block; text-align: center;">
+<p class="tagline" style="color: var(--background-dark) !important; font-size: 1.1rem; font-weight: 500; margin: 0 auto; display: block; text-align: center;">
 "Manage369 — Where Experience Meets Excellence in Winnetka Property Management".
 </p>
 </div>
