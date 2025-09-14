@@ -1,0 +1,23 @@
+/* Dark gray buttons with gold text for better contrast */
+.btn, button, .service-area-button, .area-link {
+    background: #2C3E50 !important;
+    color: #F4A261 !important;
+    border: 1px solid #F4A261 !important;
+    font-weight: 600 !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+}
+
+.btn:hover, button:hover, .service-area-button:hover {
+    background: #1a252f !important;
+    color: #F1C40F !important;
+    border-color: #F1C40F !important;
+}
+
+/* Specific fix for the orange pill buttons */
+.service-area-buttons a, .area-buttons a {
+    background: #2C3E50 !important;
+    color: #F4A261 !important;
+    border: 1px solid #F4A261 !important;
+}
