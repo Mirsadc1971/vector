@@ -1255,6 +1255,126 @@ areas = [
         'links': '''<a href="../des-plaines" class="area-link">Des Plaines</a>
 <a href="../park-ridge" class="area-link">Park Ridge</a>
 <a href="../schiller-park" class="area-link">Schiller Park</a>'''
+    },
+    {
+        'city': 'Oak Brook',
+        'slug': 'oak-brook',
+        'intro': "Oak Brook is known for luxury gated communities, golf course estates, and corporate centers. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• High-value reserves for multimillion-dollar properties</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs with golf course & clubhouse amenities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Private infrastructure maintenance including roads and gates</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting board transparency and discretion</li>''',
+        'links': '''<a href="../hinsdale" class="area-link">Hinsdale</a>
+<a href="../elmhurst" class="area-link">Elmhurst</a>
+<a href="../downers-grove" class="area-link">Downers Grove</a>'''
+    },
+    {
+        'city': 'Hinsdale',
+        'slug': 'hinsdale',
+        'intro': "Hinsdale offers historic homes, luxury townhomes, and exclusive HOAs. Local challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Preservation of historic architecture</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOA reserve studies for high-value projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Snow removal & landscaping costs in large communities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Affluent residents expecting rapid communication</li>''',
+        'links': '''<a href="../oak-brook" class="area-link">Oak Brook</a>
+<a href="../clarendon-hills" class="area-link">Clarendon Hills</a>
+<a href="../western-springs" class="area-link">Western Springs</a>'''
+    },
+    {
+        'city': 'Elmhurst',
+        'slug': 'elmhurst',
+        'intro': "Elmhurst combines a vibrant downtown with family-oriented HOAs. Boards here must handle:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Condo associations in mixed-use developments</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome reserves for roofing & siding projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs managing playgrounds and pools</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards requiring financial transparency</li>''',
+        'links': '''<a href="../oak-brook" class="area-link">Oak Brook</a>
+<a href="../villa-park" class="area-link">Villa Park</a>
+<a href="../lombard" class="area-link">Lombard</a>'''
+    },
+    {
+        'city': 'Downers Grove',
+        'slug': 'downers-grove',
+        'intro': "Downers Grove has a mix of historic neighborhoods and large HOAs. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Aging condo infrastructure needing capital projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome reserve planning for exterior replacements</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs balancing amenity costs like pools and green space</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting consistent communication</li>''',
+        'links': '''<a href="../oak-brook" class="area-link">Oak Brook</a>
+<a href="../lombard" class="area-link">Lombard</a>
+<a href="../westmont" class="area-link">Westmont</a>'''
+    },
+    {
+        'city': 'Lombard',
+        'slug': 'lombard',
+        'intro': "Lombard, 'the Lilac Village,' blends historic properties with suburban HOAs. Challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older garden-style condos requiring frequent repairs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs with tight budgets</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Stormwater management for low-lying areas</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards requiring hands-on governance</li>''',
+        'links': '''<a href="../elmhurst" class="area-link">Elmhurst</a>
+<a href="../downers-grove" class="area-link">Downers Grove</a>
+<a href="../villa-park" class="area-link">Villa Park</a>'''
+    },
+    {
+        'city': 'Villa Park',
+        'slug': 'villa-park',
+        'intro': "Villa Park offers affordable condos and mid-sized HOAs. Boards often manage:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Deferred maintenance in aging condos</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome reserves for exterior upkeep</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budget challenges in cost-sensitive communities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting clear communication</li>''',
+        'links': '''<a href="../elmhurst" class="area-link">Elmhurst</a>
+<a href="../lombard" class="area-link">Lombard</a>
+<a href="../addison" class="area-link">Addison</a>'''
+    },
+    {
+        'city': 'Addison',
+        'slug': 'addison',
+        'intro': "Addison is home to diverse condos, townhomes, and small HOAs. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older infrastructure in condo associations</li>
+<li style="padding: 10px 0; color: var(--text-light);">• HOAs balancing snow removal and landscaping costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Capital projects for roofing & paving</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing strong financial planning</li>''',
+        'links': '''<a href="../villa-park" class="area-link">Villa Park</a>
+<a href="../elmhurst" class="area-link">Elmhurst</a>
+<a href="../wood-dale" class="area-link">Wood Dale</a>'''
+    },
+    {
+        'city': 'Wood Dale',
+        'slug': 'wood-dale',
+        'intro': "Wood Dale blends residential neighborhoods with condo and townhome associations. Challenges include:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Proximity to O'Hare leading to noise concerns in condos</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Townhome communities with shared amenities</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Reserve studies for capital projects</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards needing professional financial oversight</li>''',
+        'links': '''<a href="../addison" class="area-link">Addison</a>
+<a href="../itasca" class="area-link">Itasca</a>
+<a href="../bensenville" class="area-link">Bensenville</a>'''
+    },
+    {
+        'city': 'Bensenville',
+        'slug': 'bensenville',
+        'intro': "Bensenville combines affordable housing with suburban HOAs near O'Hare. Boards here manage:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo HVAC & plumbing systems</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Snow removal contracts</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budget challenges in cost-sensitive associations</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Residents expecting consistent communication</li>''',
+        'links': '''<a href="../wood-dale" class="area-link">Wood Dale</a>
+<a href="../elmhurst" class="area-link">Elmhurst</a>
+<a href="../franklin-park" class="area-link">Franklin Park</a>'''
+    },
+    {
+        'city': 'Franklin Park',
+        'slug': 'franklin-park',
+        'intro': "Franklin Park has a strong mix of working-class condos and townhome HOAs. Boards here face:",
+        'challenges': '''<li style="padding: 10px 0; color: var(--text-light);">• Older condo buildings with deferred maintenance</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Stormwater and flooding challenges</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Budgeting pressure from rising vendor costs</li>
+<li style="padding: 10px 0; color: var(--text-light);">• Boards requiring clear governance support</li>''',
+        'links': '''<a href="../bensenville" class="area-link">Bensenville</a>
+<a href="../rosemont" class="area-link">Rosemont</a>
+<a href="../schiller-park" class="area-link">Schiller Park</a>'''
     }
 ]
 
