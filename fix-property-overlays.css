@@ -1,0 +1,34 @@
+/* Fix for property management page image overlays - make images more visible */
+
+/* Hero sections - reduce overlay opacity from 0.95 to 0.3 for better image visibility */
+.hero {
+    background: linear-gradient(135deg, rgba(8,66,152,0.3), rgba(244,162,97,0.3)), url('/images/buck4manage369.jpg') center/cover !important;
+}
+
+/* Hero optimized sections - reduce overlay opacity from 0.05 to 0.2 for slight tint */
+.hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.2), rgba(244,162,97,0.2)), url('/images/buck4manage369_optimized.jpg') center/cover !important;
+}
+
+.webp .hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.2), rgba(244,162,97,0.2)), url('/images/buck4manage369_compressed.webp') center/cover !important;
+}
+
+.no-webp .hero-optimized {
+    background: linear-gradient(135deg, rgba(8,66,152,0.2), rgba(244,162,97,0.2)), url('/images/buck4manage369_optimized.jpg') center/cover !important;
+}
+
+@media (max-width: 768px) {
+    .hero-optimized {
+        background: linear-gradient(135deg, rgba(8,66,152,0.2), rgba(244,162,97,0.2)), url('/images/buck4manage369_optimized.jpg') center/cover !important;
+    }
+}
+
+/* Ensure text remains readable with stronger shadow */
+.hero h1, .hero-optimized h1 {
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7), 0 0 30px rgba(0,0,0,0.8) !important;
+}
+
+.hero p, .hero-optimized p {
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.7), 0 0 20px rgba(0,0,0,0.7) !important;
+}
