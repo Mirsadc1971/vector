@@ -3,10 +3,6 @@
 
 # Enable mod_rewrite
 RewriteEngine On
-n# CRITICAL REDIRECTS - Fix broken URLs in Google
-Redirect 301 /communities/river-north-chicago https://manage369.com/property-management/river-north/
-Redirect 301 /communities/ https://manage369.com/property-management/
-
 
 # Force HTTPS redirect
 RewriteCond %{HTTPS} off
