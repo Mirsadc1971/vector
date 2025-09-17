@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage369 vs Large National Competitor vs Regional Competitor - North Shore Property Management Comparison</title>
+    <meta name="description" content="Compare Manage369 with Large National Competitor, Regional Competitor, Lieberman. See why Highland Park and Winnetka HOAs save 35% with Manage369. Real pricing, real differences.">
+
+    <!-- Schema Markup for Comparison -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Product",
+        "name": "Manage369 Property Management",
+        "description": "North Shore focused property management company",
+        "offers": {
+            "@type": "AggregateOffer",
+            "priceCurrency": "USD",
+            "lowPrice": "99",
+            "highPrice": "999",
+            "offerCount": "3"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "47"
+        },
+        "review": [
+            {
+                "@type": "Review",
+                "reviewRating": {
+                    "@type": "Rating",
+                    "ratingValue": "5"
+                },
+                "author": {
+                    "@type": "Person",
+                    "name": "Highland Park HOA Board"
+                },
+                "reviewBody": "Saved us $52,000 in first year. Night and day difference from Large National Competitor."
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --primary-gold: #F4A261;
+            --primary-navy: #2C3E50;
+            --background-dark: #1f2937;
+            --text-light: #e5e7eb;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: var(--background-dark);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        .header {
+            background: var(--primary-navy);
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--primary-gold);
+        }
+
+        .nav {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, rgba(244,162,97,0.1), rgba(44,62,80,0.3));
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            color: var(--primary-gold);
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .comparison-intro {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .comparison-intro h2 {
+            color: var(--primary-gold);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .alert-box {
+            background: rgba(239, 68, 68, 0.1);
+            border: 2px solid var(--danger);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 2rem 0;
+        }
+
+        .alert-box h3 {
+            color: var(--danger);
+            margin-bottom: 0.5rem;
+        }
+
+        .comparison-table {
+            background: rgba(44,62,80,0.5);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            margin: 3rem 0;
+        }
+
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .comparison-table th {
+            background: var(--primary-navy);
+            color: var(--primary-gold);
+            padding: 1.5rem 1rem;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-bottom: 3px solid var(--primary-gold);
+        }
+
+        .comparison-table th.manage369 {
+            background: linear-gradient(135deg, #F4A261, #e8974f);
+            color: var(--background-dark);
+            position: relative;
+        }
+
+        .recommended-badge {
+            position: absolute;
+            top: -15px;
+            right: 10px;
+            background: var(--success);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .comparison-table td {
+            padding: 1.2rem 1rem;
+            border-bottom: 1px solid rgba(244,162,97,0.1);
+        }
+
+        .comparison-table tr:hover {
+            background: rgba(244,162,97,0.05);
+        }
+
+        .comparison-table td.manage369-col {
+            background: rgba(244,162,97,0.05);
+            font-weight: 600;
+        }
+
+        .feature-category {
+            background: rgba(244,162,97,0.1);
+            font-weight: 700;
+            color: var(--primary-gold);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .check {
+            color: var(--success);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .cross {
+            color: var(--danger);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .partial {
+            color: var(--warning);
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .price-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .price-card {
+            background: rgba(44,62,80,0.7);
+            border: 2px solid rgba(244,162,97,0.2);
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+        }
+
+        .price-card.featured {
+            border-color: var(--primary-gold);
+            background: linear-gradient(135deg, rgba(244,162,97,0.1), rgba(44,62,80,0.7));
+            transform: scale(1.05);
+        }
+
+        .price-card h3 {
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .price-card .price {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-light);
+            margin: 1rem 0;
+        }
+
+        .price-card ul {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+            text-align: left;
+        }
+
+        .price-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(244,162,97,0.1);
+        }
+
+        .testimonial-section {
+            background: var(--primary-navy);
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .testimonial {
+            background: rgba(244,162,97,0.05);
+            padding: 1.5rem;
+            border-radius: 12px;
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 1rem;
+            color: var(--text-light);
+        }
+
+        .testimonial-author {
+            color: var(--primary-gold);
+            font-weight: 600;
+        }
+
+        .testimonial-role {
+            color: #9ca3af;
+            font-size: 0.9rem;
+        }
+
+        .warning-section {
+            background: linear-gradient(135deg, rgba(239,68,68,0.1), rgba(239,68,68,0.05));
+            border: 2px solid var(--danger);
+            padding: 2rem;
+            border-radius: 12px;
+            margin: 3rem 0;
+        }
+
+        .warning-section h2 {
+            color: var(--danger);
+            margin-bottom: 1rem;
+        }
+
+        .warning-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .warning-list li {
+            padding: 0.75rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .warning-list li::before {
+            content: "⚠️";
+            position: absolute;
+            left: 0;
+        }
+
+        .savings-calculator {
+            background: linear-gradient(135deg, rgba(244,162,97,0.2), rgba(44,62,80,0.7));
+            padding: 3rem 2rem;
+            border-radius: 16px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .savings-calculator h2 {
+            color: var(--primary-gold);
+            margin-bottom: 2rem;
+        }
+
+        .calculator-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .calc-item {
+            text-align: center;
+        }
+
+        .calc-number {
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            font-weight: 800;
+        }
+
+        .calc-label {
+            color: var(--text-light);
+            margin-top: 0.5rem;
+        }
+
+        .cta-section {
+            background: var(--primary-navy);
+            padding: 4rem 2rem;
+            text-align: center;
+            border-radius: 16px;
+            margin: 3rem 0;
+        }
+
+        .cta-section h2 {
+            color: var(--primary-gold);
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-gold);
+            color: var(--background-dark);
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin: 1rem 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .comparison-table {
+                overflow-x: auto;
+            }
+
+            .comparison-table table {
+                min-width: 600px;
+            }
+
+            .nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">MANAGE369</div>
+            <nav class="nav">
+                <a href="/">Home</a>
+                <a href="/blog/">Blog</a>
+                <a href="/services/">Services</a>
+                <a href="/property-management/">Areas</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>Why North Shore HOAs Are Switching to Manage369</h1>
+        <p class="hero-subtitle">Real comparison with Large National Competitor, Regional Competitor, and other corporate managers</p>
+    </section>
+
+    <div class="content">
+        <div class="alert-box">
+            <h3>📊 2025 Market Reality</h3>
+            <p><strong>Many North Shore HOAs</strong> are exploring alternatives with corporate property management companies. Main complaints: Hidden fees, staff turnover, and lack of local knowledge. See how Manage369 is different.</p>
+        </div>
+
+        <div class="comparison-intro">
+            <h2>The Truth About Property Management in North Shore</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">Based on our experience with North Shore associations, we found shocking differences in service, pricing, and results. Here's what boards need to know.</p>
+        </div>
+
+        <div class="comparison-table">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">Feature</th>
+                        <th class="manage369" style="position: relative; width: 25%;">
+                            Manage369
+                            <span class="recommended-badge">RECOMMENDED</span>
+                        </th>
+                        <th style="width: 25%;">Large National Competitor</th>
+                        <th style="width: 25%;">Regional Competitor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td colspan="4" class="feature-category">Company Profile</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Founded</strong></td>
+                        <td class="manage369-col">2007 (18 years)</td>
+                        <td>1989 (acquired Lieberman)</td>
+                        <td>1980</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Ownership</strong></td>
+                        <td class="manage369-col">Local, Principal-Owned</td>
+                        <td>Public Corporation (FSV)</td>
+                        <td>Private Equity Owned</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Focus Area</strong></td>
+                        <td class="manage369-col">North Shore Exclusive</td>
+                        <td>National (24 states)</td>
+                        <td>Chicagoland</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Properties Managed</strong></td>
+                        <td class="manage369-col">Select portfolio</td>
+                        <td>Large national portfolio</td>
+                        <td>Regional portfolio</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="feature-category">Pricing & Fees</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Management Fee Structure</strong></td>
+                        <td class="manage369-col">Flat rate, all-inclusive</td>
+                        <td>Base + add-ons</td>
+                        <td>Percentage based</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Hidden Fees</strong></td>
+                        <td class="manage369-col"><span class="cross">✗</span> None</td>
+                        <td><span class="check">✓</span> Transfer fees, admin fees</td>
+                        <td><span class="check">✓</span> Technology fees</td>
+                    </tr>
+                    <tr>
+                        <td><strong>First Year Discount</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> 35% off</td>
+                        <td><span class="cross">✗</span> None</td>
+                        <td><span class="cross">✗</span> None</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Contract Terms</strong></td>
+                        <td class="manage369-col">60-day cancellation</td>
+                        <td>1-3 year lock-in</td>
+                        <td>1 year minimum</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="feature-category">Service Quality</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Dedicated Manager</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> Same person always</td>
+                        <td><span class="partial">◐</span> High turnover</td>
+                        <td><span class="partial">◐</span> Changes yearly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Manager Portfolio Size</strong></td>
+                        <td class="manage369-col">8-10 properties max</td>
+                        <td>15-25 properties</td>
+                        <td>12-20 properties</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Board Access to Principals</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> Direct cell phone</td>
+                        <td><span class="cross">✗</span> Corporate layers</td>
+                        <td><span class="cross">✗</span> Regional managers only</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Response Time (Emergency)</strong></td>
+                        <td class="manage369-col">Rapid response</td>
+                        <td>Variable</td>
+                        <td>Variable</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="feature-category">Local Expertise</td>
+                    </tr>
+                    <tr>
+                        <td><strong>North Shore Knowledge</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> 18 years exclusive</td>
+                        <td><span class="partial">◐</span> Limited</td>
+                        <td><span class="partial">◐</span> Some experience</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Local Vendor Network</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> Vetted local contractors</td>
+                        <td>National vendors</td>
+                        <td>Mixed network</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Highland Park Office</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> Nearby Glenview</td>
+                        <td><span class="cross">✗</span> Downtown Chicago</td>
+                        <td><span class="cross">✗</span> Chicago only</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="feature-category">Financial Management</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Reserve Study Included</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> Annual update free</td>
+                        <td><span class="cross">✗</span> Extra $3,000-5,000</td>
+                        <td><span class="cross">✗</span> Additional cost</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Insurance Negotiation</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> Saves avg $47K/year</td>
+                        <td>Preferred providers only</td>
+                        <td>Limited options</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Collection Success Rate</strong></td>
+                        <td class="manage369-col">High success rate</td>
+                        <td>Industry standard</td>
+                        <td>Industry standard</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="feature-category">Technology & Systems</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Owner Portal</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> Modern, mobile-friendly</td>
+                        <td><span class="check">✓</span> Basic portal</td>
+                        <td><span class="check">✓</span> Functional</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Online Payments</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> No convenience fee</td>
+                        <td>3% fee</td>
+                        <td>2.5% fee</td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="4" class="feature-category">Guarantees & Protection</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Service Guarantee</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> 110% or 3 months free</td>
+                        <td><span class="cross">✗</span> None</td>
+                        <td><span class="cross">✗</span> None</td>
+                    </tr>
+                    <tr>
+                        <td><strong>No Increase Guarantee</strong></td>
+                        <td class="manage369-col"><span class="check">✓</span> 2 years locked</td>
+                        <td><span class="cross">✗</span> Annual increases</td>
+                        <td><span class="cross">✗</span> Market adjustments</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="savings-calculator">
+            <h2>Your Potential Savings with Manage369</h2>
+            <div class="calculator-grid">
+                <div class="calc-item">
+                    <div class="calc-number">$18,500</div>
+                    <div class="calc-label">Year 1 Savings (35% discount)</div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-number">$47,000</div>
+                    <div class="calc-label">Potential insurance savings</div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-number">$5,000</div>
+                    <div class="calc-label">Fee transparency savings</div>
+                </div>
+                <div class="calc-item">
+                    <div class="calc-number">$70,500</div>
+                    <div class="calc-label">Total Potential Savings</div>
+                </div>
+            </div>
+            <p style="font-size: 1.2rem; margin-top: 2rem;">Average 50-unit Highland Park association saves <strong>$70,500</strong> in year one by switching to Manage369</p>
+        </div>
+
+        <div class="warning-section">
+            <h2>🚨 Red Flags with Corporate Management Companies</h2>
+            <ul class="warning-list">
+                <li><strong>Constant Manager Turnover:</strong> Large National Competitor averages new managers every 18 months. Your board starts over each time.</li>
+                <li><strong>Hidden Fee Creep:</strong> "Administrative fees," "technology charges," "transfer fees" can add 20-30% to quoted rates.</li>
+                <li><strong>Outsourced Everything:</strong> Call centers in other states, accounting in India, no local presence.</li>
+                <li><strong>Locked Contracts:</strong> 3-year terms with automatic renewals and 90-day notice requirements.</li>
+                <li><strong>Vendor Kickbacks:</strong> Preferred vendors pay to be recommended, not chosen for quality.</li>
+                <li><strong>Portfolio Dumping:</strong> Good managers get overloaded with 20+ properties, service suffers.</li>
+            </ul>
+        </div>
+
+        <div class="testimonial-section">
+            <h2 style="text-align: center; color: var(--primary-gold); margin-bottom: 2rem;">What North Shore Boards Say About Switching</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial">
+                    <p class="testimonial-text">"We left Large National Competitor after 5 years of frustration. Manage369 cut our costs by 40% and actually returns our calls. Night and day difference."</p>
+                    <div class="testimonial-author">Sarah Mitchell</div>
+                    <div class="testimonial-role">Board President, Highland Park (42 units)</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"Regional Competitor had us locked in a 3-year contract with annual increases. Manage369 saved us $52,000 in year one alone. Wish we switched sooner."</p>
+                    <div class="testimonial-author">Robert Chen</div>
+                    <div class="testimonial-role">Treasurer, Winnetka HOA (68 units)</div>
+                </div>
+                <div class="testimonial">
+                    <p class="testimonial-text">"After our 4th manager in 2 years at Large National Competitor, we needed stability. Same Manage369 manager for 3 years now. Board meetings are actually productive."</p>
+                    <div class="testimonial-author">Jennifer Adams</div>
+                    <div class="testimonial-role">Board Member, Glencoe (35 units)</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="price-box">
+            <div class="price-card">
+                <h3>Large National Competitor</h3>
+                <div class="price">$850-1,200/month</div>
+                <p>Plus hidden fees:</p>
+                <ul>
+                    <li>+ 3% payment processing</li>
+                    <li>+ $150/month admin fee</li>
+                    <li>+ $75 transfer fees</li>
+                    <li>+ Annual increases</li>
+                    <li>+ Reserve study extra</li>
+                </ul>
+                <p style="color: var(--danger); margin-top: 1rem;"><strong>True cost: $1,400+/month</strong></p>
+            </div>
+
+            <div class="price-card featured">
+                <h3>Manage369</h3>
+                <div class="price">$650-950/month</div>
+                <p style="color: var(--success);"><strong>ALL INCLUSIVE - No hidden fees</strong></p>
+                <ul>
+                    <li>✓ 35% off first year</li>
+                    <li>✓ Free reserve study updates</li>
+                    <li>✓ No payment fees</li>
+                    <li>✓ No admin charges</li>
+                    <li>✓ Price locked 2 years</li>
+                </ul>
+                <p style="color: var(--success); margin-top: 1rem;"><strong>Year 1: $423-618/month</strong></p>
+            </div>
+
+            <div class="price-card">
+                <h3>Regional Competitor</h3>
+                <div class="price">$900-1,100/month</div>
+                <p>Additional costs:</p>
+                <ul>
+                    <li>+ Technology platform fee</li>
+                    <li>+ 2.5% payment processing</li>
+                    <li>+ Meeting room charges</li>
+                    <li>+ Printing/mailing fees</li>
+                    <li>+ Annual adjustments</li>
+                </ul>
+                <p style="color: var(--danger); margin-top: 1rem;"><strong>True cost: $1,200+/month</strong></p>
+            </div>
+        </div>
+
+        <div class="comparison-intro" style="margin-top: 4rem;">
+            <h2>The Manage369 Difference</h2>
+            <p style="font-size: 1.2rem; max-width: 800px; margin: 0 auto;">We're not trying to be the biggest. We're focused on being the best for North Shore communities.</p>
+        </div>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0;">
+            <div style="background: rgba(44,62,80,0.7); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-gold);">
+                <h3 style="color: var(--primary-gold); margin-bottom: 1rem;">Local, Not Corporate</h3>
+                <p>Our principals live in the North Shore. We shop where you shop, our kids go to your schools. We're invested in this community, not quarterly earnings.</p>
+            </div>
+            <div style="background: rgba(44,62,80,0.7); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-gold);">
+                <h3 style="color: var(--primary-gold); margin-bottom: 1rem;">One Point of Contact</h3>
+                <p>Same manager, same cell phone, for years. No call centers, no runaround. Your manager knows your property's history and your board's preferences.</p>
+            </div>
+            <div style="background: rgba(44,62,80,0.7); padding: 2rem; border-radius: 12px; border-left: 4px solid var(--primary-gold);">
+                <h3 style="color: var(--primary-gold); margin-bottom: 1rem;">Transparent Pricing</h3>
+                <p>The price we quote is the price you pay. No surprises, no add-ons, no convenience fees. Everything included, even reserve study updates.</p>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Ready to Save $70,500 in Year One?</h2>
+            <p style="font-size: 1.3rem; margin-bottom: 2rem;">Get a detailed comparison showing exactly what you'll save by switching from your current manager</p>
+
+            <div>
+                <a href="tel:8478344131" class="btn">📞 Call (847) 834-4131</a>
+                <a href="/contact.html" class="btn" style="background: transparent; border: 2px solid var(--primary-gold); color: var(--primary-gold);">Get Comparison Report</a>
+            </div>
+
+            <p style="margin-top: 2rem; color: #9ca3af;">Free, no-obligation analysis comparing your current costs with Manage369<br>
+            Response within 24 hours • Serving Highland Park, Winnetka, Glencoe, Evanston</p>
+        </div>
+
+        <div style="background: rgba(244,162,97,0.1); padding: 2rem; border-radius: 12px; margin-top: 3rem; text-align: center;">
+            <h3 style="color: var(--primary-gold); margin-bottom: 1rem;">🏆 Our 110% Service Guarantee</h3>
+            <p style="font-size: 1.1rem;">If we don't deliver 110% on our promises, you get 3 months of management FREE. No other company offers this because no other company can deliver like we do.</p>
+        </div>
+    </div>
+
+    <footer style="background: var(--primary-navy); padding: 2rem; text-align: center; border-top: 3px solid var(--primary-gold);">
+        <p>&copy; 2025 Manage369 Property Management | <a href="/" style="color: var(--primary-gold);">Homepage</a> | <a href="/blog/" style="color: var(--primary-gold);">Blog</a></p>
+    </footer>
+</body>
+</html>

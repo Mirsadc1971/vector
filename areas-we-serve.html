@@ -85,7 +85,42 @@
             font-size: 1.3rem;
             color: #e5e7eb;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 0 auto 2rem;
+        }
+
+        /* Service Area Map Section */
+        .service-map {
+            background: rgba(244,162,97,0.05);
+            padding: 3rem 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            border: 1px solid rgba(244,162,97,0.2);
+        }
+
+        .map-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .stat-card {
+            text-align: center;
+            background: rgba(8,66,152,0.1);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #F4A261;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            color: #F4A261;
+            font-weight: bold;
+        }
+
+        .stat-label {
+            color: #e5e7eb;
+            margin-top: 0.5rem;
         }
 
         /* Community Grid - 14 rows x 6 columns = 84 cards */
@@ -236,6 +271,55 @@
             <h1>Areas We Serve</h1>
             <p>84 Communities Across Chicago & The North Shore</p>
             <p style="margin-top: 1rem; font-size: 1.1rem;">Professional property management services tailored to each community's unique needs</p>
+        </div>
+    </section>
+
+    <!-- Service Area Statistics Section -->
+    <section class="container">
+        <div class="service-map">
+            <h2 style="text-align: center; color: #F4A261; font-size: 2.2rem; margin-bottom: 1rem;">
+                Comprehensive Coverage Across Chicagoland
+            </h2>
+            <p style="text-align: center; color: #e5e7eb; font-size: 1.1rem; max-width: 800px; margin: 0 auto;">
+                From downtown Chicago's luxury high-rises to North Shore's prestigious communities, we provide tailored property management solutions that meet each neighborhood's unique character and needs.
+            </p>
+
+            <div class="map-stats">
+                <div class="stat-card">
+                    <div class="stat-number">84</div>
+                    <div class="stat-label">Communities Served</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">18+</div>
+                    <div class="stat-label">Years of Experience</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$25M+</div>
+                    <div class="stat-label">Assets Managed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">24/7</div>
+                    <div class="stat-label">Emergency Response</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 3rem; padding-top: 2rem; border-top: 1px solid rgba(244,162,97,0.2);">
+                <h3 style="color: #F4A261; text-align: center; margin-bottom: 1.5rem;">Why Choose Local Expertise?</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h4 style="color: #F4A261; margin-bottom: 0.5rem;">North Shore Specialists</h4>
+                        <p style="color: #e5e7eb;">Deep understanding of Highland Park, Winnetka, Glencoe, and surrounding areas' specific HOA requirements and property values.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #F4A261; margin-bottom: 0.5rem;">Chicago Market Knowledge</h4>
+                        <p style="color: #e5e7eb;">Expert navigation of Chicago's complex property management regulations and building codes for high-rise and mid-rise properties.</p>
+                    </div>
+                    <div>
+                        <h4 style="color: #F4A261; margin-bottom: 0.5rem;">Local Vendor Network</h4>
+                        <p style="color: #e5e7eb;">Established relationships with trusted contractors, suppliers, and service providers in each community we serve.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
