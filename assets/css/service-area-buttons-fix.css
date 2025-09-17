@@ -1,4 +1,4 @@
-/* FORCE GOLD TEXT ONLY - NO BORDER CHANGES */
+/* FIX POPULAR SERVICE AREA BUTTONS - BLACK BACKGROUND WITH GOLD TEXT */
 a[href*="property-management/glenview"],
 a[href*="property-management/northbrook"],
 a[href*="property-management/wilmette"],
@@ -7,6 +7,33 @@ a[href*="property-management/evanston"],
 a[href*="property-management/skokie"],
 a[href*="property-management/highland-park"],
 a[href*="property-management/deerfield"],
-a[href*="property-management/park-ridge"] {
+a[href*="property-management/park-ridge"],
+a[href*="property-management/des-plaines"] {
+    background: #000000 !important;
     color: #F4A261 !important;
+    border: 1px solid #F4A261 !important;
+    box-shadow: 0 0 10px rgba(244, 162, 97, 0.3) !important;
+    padding: 8px 16px !important;
+    text-decoration: none !important;
+    border-radius: 20px !important;
+    font-size: 0.95rem !important;
+    transition: all 0.3s !important;
+    display: inline-block !important;
+}
+
+a[href*="property-management/glenview"]:hover,
+a[href*="property-management/northbrook"]:hover,
+a[href*="property-management/wilmette"]:hover,
+a[href*="property-management/winnetka"]:hover,
+a[href*="property-management/evanston"]:hover,
+a[href*="property-management/skokie"]:hover,
+a[href*="property-management/highland-park"]:hover,
+a[href*="property-management/deerfield"]:hover,
+a[href*="property-management/park-ridge"]:hover,
+a[href*="property-management/des-plaines"]:hover {
+    background: #1a1a1a !important;
+    color: #FFD700 !important;
+    border-color: #FFD700 !important;
+    box-shadow: 0 0 15px rgba(244, 162, 97, 0.5) !important;
+    transform: translateY(-2px) !important;
 }
