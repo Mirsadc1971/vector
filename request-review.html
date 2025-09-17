@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave a Review | Help Others Find Great Property Management | Manage369</title>
+    <meta name="description" content="Share your experience with Manage369 Property Management. Your review helps other HOAs and condo associations in Chicago and North Shore find quality management.">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a252f 0%, #2C3E50 100%);
+            color: #e5e7eb;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 800px;
+            width: 100%;
+            background: rgba(44, 62, 80, 0.95);
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border: 1px solid rgba(244,162,97,0.2);
+        }
+
+        h1 {
+            color: #F4A261;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: #9ca3af;
+            margin-bottom: 3rem;
+        }
+
+        .review-intro {
+            background: rgba(244,162,97,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #F4A261;
+        }
+
+        .review-intro p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .review-platforms {
+            display: grid;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .platform-card {
+            background: rgba(8,66,152,0.1);
+            border: 2px solid transparent;
+            padding: 1.5rem;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .platform-card:hover {
+            border-color: #F4A261;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(244,162,97,0.2);
+        }
+
+        .platform-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .platform-name {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #F4A261;
+        }
+
+        .platform-logo {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .recommended {
+            background: #F4A261;
+            color: #1a252f;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .platform-description {
+            color: #9ca3af;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .review-button {
+            display: inline-block;
+            background: #F4A261;
+            color: #1a252f;
+            padding: 12px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            width: 100%;
+            text-align: center;
+        }
+
+        .review-button:hover {
+            background: #ffffff;
+            transform: scale(1.05);
+        }
+
+        .review-tips {
+            background: rgba(244,162,97,0.05);
+            padding: 2rem;
+            border-radius: 12px;
+            margin-bottom: 3rem;
+        }
+
+        .review-tips h2 {
+            color: #F4A261;
+            margin-bottom: 1rem;
+        }
+
+        .review-tips ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .review-tips li {
+            padding: 0.5rem 0;
+            padding-left: 2rem;
+            position: relative;
+        }
+
+        .review-tips li:before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #F4A261;
+            font-weight: bold;
+        }
+
+        .incentive-box {
+            background: linear-gradient(135deg, rgba(244,162,97,0.2), rgba(8,66,152,0.1));
+            padding: 2rem;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid #F4A261;
+            margin-bottom: 2rem;
+        }
+
+        .incentive-box h3 {
+            color: #F4A261;
+            margin-bottom: 1rem;
+        }
+
+        .incentive-box p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .back-link {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .back-link a {
+            color: #F4A261;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: color 0.3s;
+        }
+
+        .back-link a:hover {
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+
+        /* QR Code Section */
+        .qr-section {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(8,66,152,0.05);
+            border-radius: 12px;
+            margin-top: 3rem;
+        }
+
+        .qr-code {
+            background: white;
+            padding: 1rem;
+            border-radius: 8px;
+            display: inline-block;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Share Your Experience</h1>
+        <p class="subtitle">Your review helps other HOAs and property managers make informed decisions</p>
+
+        <div class="review-intro">
+            <p><strong>Dear Valued Client,</strong></p>
+            <p>We're committed to providing exceptional property management services to Chicago and North Shore communities. Your feedback helps us improve and helps other associations find trusted management.</p>
+            <p>Please take 2 minutes to share your experience on one of the platforms below.</p>
+        </div>
+
+        <div class="incentive-box">
+            <h3>🎁 Thank You Gift</h3>
+            <p>As a token of appreciation, board members who leave a review will receive a $25 credit toward their next month's management fees. Just email us at <a href="mailto:reviews@manage369.com" style="color: #F4A261;">reviews@manage369.com</a> after posting.</p>
+        </div>
+
+        <div class="review-platforms">
+            <!-- Google Reviews - Most Important -->
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div class="platform-name">
+                        <span class="platform-logo">
+                            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0iI0ZGQzEwNyIgZD0iTTQzLjYxMSwyMC4wODNINDJWMjBIMjR2OGgxMS4zMDNjLTEuNjQ5LDQuNjU3LTYuMDgxLDgtMTEuMzAzLDhjLTYuNjI3LDAtMTItNS4zNzMtMTItMTJjMC02LjYyNyw1LjM3My0xMiwxMi0xMmMzLjA1OSwwLDUuODQyLDEuMTU0LDcuOTYxLDMuMDM5bDUuNjU3LTUuNjU3QzM0LjA0Niw2LjA1MywyOS4yNjgsNCwyNCw0QzEyLjk1NSw0LDQsMTIuOTU1LDQsMjRjMCwxMS4wNDUsOC45NTUsMjAsMjAsMjBjMTEuMDQ1LDAsMjAtOC45NTUsMjAtMjBDNDQsMjIuNjU5LDQzLjg2MiwyMS4zNSw0My42MTEsMjAuMDgzeiIvPjxwYXRoIGZpbGw9IiNGRjNEMDAiIGQ9Ik02LjMwNiwxNC42OTFsNi41NzEsNC44MTlDMTQuNjU1LDE1LjEwOCwxOC45NjEsMTIsMjQsMTJjMy4wNTksMCw1Ljg0MiwxLjE1NCw3Ljk2MSwzLjAzOWw1LjY1Ny01LjY1N0MzNC4wNDYsNi4wNTMsMjkuMjY4LDQsMjQsNEMxNi4zMTgsNCw5LjY1Niw4LjMzNyw2LjMwNiwxNC42OTF6Ii8+PHBhdGggZmlsbD0iIzRDQUY1MCIgZD0iTTI0LDQ0YzUuMTY2LDAsOS44Ni0xLjk3NywxMy40MDktNS4xOTJsLTYuMTktNS4yMzhDMjkuMjExLDM1LjA5MSwyNi43MTUsMzYsMjQsMzZjLTUuMjAyLDAtOS42MTktMy4zMTctMTEuMjgzLTcuOTQ2bC02LjUyMiw1LjAyNUM5LjUwNSwzOS41NTYsMTYuMjI3LDQ0LDI0LDQ0eiIvPjxwYXRoIGZpbGw9IiMxOTc2RDIiIGQ9Ik00My42MTEsMjAuMDgzSDQyVjIwSDI0djhoMTEuMzAzYy0wLjc5MiwyLjIzNy0yLjIzMSw0LjE2Ni00LjA4Nyw1LjU3MWMwLjAwMS0wLjAwMSwwLjAwMi0wLjAwMSwwLjAwMy0wLjAwMmw2LjE5LDUuMjM4QzM2Ljk3MSwzOS4yMDUsNDQsMzQsNDQsMjRDNDQsMjIuNjU5LDQzLjg2MiwyMS4zNSw0My42MTEsMjAuMDgzeiIvPjwvc3ZnPg=="
+                                 alt="Google" style="width: 40px; height: 40px;">
+                        </span>
+                        <span>Google Reviews</span>
+                    </div>
+                    <span class="recommended">RECOMMENDED</span>
+                </div>
+                <p class="platform-description">
+                    Most important for local SEO and visibility. Your Google review directly impacts how we appear in search results and Google Maps.
+                </p>
+                <a href="https://g.page/r/YOUR_GOOGLE_REVIEW_LINK/review" target="_blank" class="review-button">
+                    Write a Google Review →
+                </a>
+            </div>
+
+            <!-- Facebook Reviews -->
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div class="platform-name">
+                        <span class="platform-logo">📘</span>
+                        <span>Facebook</span>
+                    </div>
+                </div>
+                <p class="platform-description">
+                    Help us build our community presence. Facebook reviews are visible to your network and help build trust.
+                </p>
+                <a href="https://www.facebook.com/manage369/reviews" target="_blank" class="review-button">
+                    Review on Facebook →
+                </a>
+            </div>
+
+            <!-- Yelp Reviews -->
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div class="platform-name">
+                        <span class="platform-logo" style="color: #d32323;">📍</span>
+                        <span>Yelp</span>
+                    </div>
+                </div>
+                <p class="platform-description">
+                    Yelp reviews help new clients find us when searching for property management services in Chicago.
+                </p>
+                <a href="https://www.yelp.com/biz/manage369-property-management-glenview" target="_blank" class="review-button">
+                    Review on Yelp →
+                </a>
+            </div>
+
+            <!-- BBB Reviews -->
+            <div class="platform-card">
+                <div class="platform-header">
+                    <div class="platform-name">
+                        <span class="platform-logo">🏆</span>
+                        <span>Better Business Bureau</span>
+                    </div>
+                </div>
+                <p class="platform-description">
+                    BBB reviews demonstrate our commitment to ethical business practices and customer satisfaction.
+                </p>
+                <a href="https://www.bbb.org/us/il/glenview/profile/property-management/manage369" target="_blank" class="review-button">
+                    Review on BBB →
+                </a>
+            </div>
+        </div>
+
+        <div class="review-tips">
+            <h2>💡 Review Writing Tips</h2>
+            <ul>
+                <li>Mention your property name and location (e.g., "Highland Park HOA")</li>
+                <li>Share specific examples of how we've helped your community</li>
+                <li>Mention cost savings, improved communication, or problem resolution</li>
+                <li>Include how long we've managed your property</li>
+                <li>Mention our team members by name if they've been especially helpful</li>
+                <li>Be authentic - your genuine experience is most valuable</li>
+            </ul>
+        </div>
+
+        <div class="review-tips">
+            <h2>📝 Sample Review Template</h2>
+            <p style="background: rgba(8,66,152,0.2); padding: 1rem; border-radius: 8px; margin-top: 1rem; font-style: italic;">
+                "Manage369 has been managing our [property type] in [location] for [time period]. They've [specific achievement like 'reduced our operating costs', 'improved collections', 'handled emergency repairs quickly'].
+                [Manager name] is always responsive and professional.
+                I would recommend them to other [HOAs/condo associations] in the [Chicago/North Shore] area looking for reliable property management."
+            </p>
+        </div>
+
+        <div class="qr-section">
+            <h3 style="color: #F4A261; margin-bottom: 1rem;">📱 Scan to Review on Mobile</h3>
+            <p>Scan this QR code with your phone to quickly access our Google review page:</p>
+            <div class="qr-code">
+                <!-- This would be replaced with actual QR code image -->
+                <div style="width: 150px; height: 150px; background: #e5e7eb; display: flex; align-items: center; justify-content: center; color: #666;">
+                    [QR Code Here]
+                </div>
+            </div>
+        </div>
+
+        <div class="back-link">
+            <a href="/">← Back to Homepage</a>
+        </div>
+    </div>
+
+    <script>
+        // Track which review platform was clicked
+        document.querySelectorAll('.review-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                const platform = this.closest('.platform-card').querySelector('.platform-name span:last-child').textContent;
+                console.log('Review clicked:', platform);
+
+                // Optional: Send to analytics
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'review_click', {
+                        'event_category': 'engagement',
+                        'event_label': platform
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

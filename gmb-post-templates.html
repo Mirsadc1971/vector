@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google My Business Post Templates | Manage369 Internal</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+        }
+
+        h1 {
+            color: #084298;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .intro {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            border-left: 5px solid #F4A261;
+        }
+
+        .post-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .post-template {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .post-template:hover {
+            transform: translateY(-5px);
+        }
+
+        .post-header {
+            background: linear-gradient(135deg, #084298, #F4A261);
+            color: white;
+            padding: 1rem;
+            font-weight: bold;
+        }
+
+        .post-type {
+            background: rgba(255,255,255,0.2);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            display: inline-block;
+            margin-top: 0.5rem;
+        }
+
+        .post-content {
+            padding: 1.5rem;
+        }
+
+        .post-text {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            white-space: pre-wrap;
+            font-size: 0.95rem;
+        }
+
+        .cta-button {
+            background: #1a73e8;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            display: inline-block;
+            text-decoration: none;
+            margin: 0.5rem 0;
+        }
+
+        .hashtags {
+            color: #1a73e8;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+
+        .char-count {
+            color: #666;
+            font-size: 0.85rem;
+            text-align: right;
+        }
+
+        .copy-btn {
+            background: #F4A261;
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 1rem;
+        }
+
+        .copy-btn:hover {
+            background: #e89240;
+        }
+
+        .schedule-grid {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .schedule-grid h2 {
+            color: #084298;
+            margin-bottom: 1rem;
+        }
+
+        .schedule-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .schedule-table th,
+        .schedule-table td {
+            padding: 0.75rem;
+            text-align: left;
+            border-bottom: 1px solid #dee2e6;
+        }
+
+        .schedule-table th {
+            background: #f8f9fa;
+            color: #084298;
+            font-weight: 600;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .badge-offer { background: #d4edda; color: #155724; }
+        .badge-update { background: #d1ecf1; color: #0c5460; }
+        .badge-event { background: #fff3cd; color: #856404; }
+        .badge-tips { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>🌟 Google My Business Post Templates</h1>
+
+    <div class="intro">
+        <h2>📍 GMB Posting Strategy for Local SEO</h2>
+        <p><strong>Goal:</strong> Post 2-3 times per week to stay active in Google's algorithm</p>
+        <p><strong>Best Times:</strong> Tuesday-Thursday, 10 AM - 2 PM</p>
+        <p><strong>Character Limits:</strong> 1,500 characters max (300-400 optimal)</p>
+        <p><strong>Must Include:</strong> Local keywords, call-to-action button, relevant photo</p>
+        <p><strong>Rotate Types:</strong> Offers → Updates → Events → What's New</p>
+    </div>
+
+    <div class="post-grid">
+        <!-- Template 1: Seasonal Offer -->
+        <div class="post-template">
+            <div class="post-header">
+                Winter Special Offer
+                <div class="post-type">OFFER POST</div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">❄️ Winter Property Management Special
+
+North Shore HOAs & Condos: Secure professional management before year-end!
+
+✅ FREE property assessment ($500 value)
+✅ First month management FREE
+✅ 2025 budget preparation included
+
+Managing properties in Highland Park, Winnetka, Glencoe, and throughout Chicago's North Shore for 18+ years.
+
+Limited time offer expires [Date].
+
+Call (847) 652-2338 for your free consultation.</div>
+                <div class="cta-button">Learn More</div>
+                <div class="hashtags">#PropertyManagement #NorthShore #HOAManagement #Chicago #Winnetka #HighlandPark</div>
+                <div class="char-count">Characters: 425</div>
+                <button class="copy-btn" onclick="copyPost(this)">Copy Post</button>
+            </div>
+        </div>
+
+        <!-- Template 2: Insurance Crisis Update -->
+        <div class="post-template">
+            <div class="post-header">
+                Insurance Cost Alert
+                <div class="post-type">UPDATE POST</div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">⚠️ Is Your HOA Insurance Up 40%?
+
+Illinois associations are facing dramatic insurance increases in 2025. We're helping North Shore communities fight back.
+
+Our insurance negotiation team has:
+• Saved clients an average of $28K annually
+• Access to 15+ carriers
+• Former underwriters on staff
+
+Don't renew without a second opinion!
+
+Free insurance review for Highland Park, Winnetka & Glencoe HOAs.
+
+📞 (847) 652-2338</div>
+                <div class="cta-button">Call Now</div>
+                <div class="hashtags">#HOAInsurance #PropertyManagement #NorthShoreChicago #SaveMoney</div>
+                <div class="char-count">Characters: 480</div>
+                <button class="copy-btn" onclick="copyPost(this)">Copy Post</button>
+            </div>
+        </div>
+
+        <!-- Template 3: Success Story -->
+        <div class="post-template">
+            <div class="post-header">
+                Client Success Story
+                <div class="post-type">UPDATE POST</div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">🎉 Success Story
+
+Just helped a 68-unit Highland Park HOA:
+• Reduce operating costs by 22%
+• Improve collection rate to 98%
+• Negotiate insurance down $15,000
+
+18+ years serving Chicago's North Shore communities.
+
+Your property could be next!
+
+Get your FREE management assessment today.</div>
+                <div class="cta-button">Get Free Assessment</div>
+                <div class="hashtags">#ClientSuccess #PropertyManagement #HighlandPark #HOA</div>
+                <div class="char-count">Characters: 335</div>
+                <button class="copy-btn" onclick="copyPost(this)">Copy Post</button>
+            </div>
+        </div>
+
+        <!-- Template 4: Local Event -->
+        <div class="post-template">
+            <div class="post-header">
+                Community Event
+                <div class="post-type">EVENT POST</div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">📅 FREE HOA Board Training Workshop
+
+Join us for: "2025 Illinois HOA Law Changes"
+
+📍 Where: Northbrook Public Library
+📅 When: [Date], 6:00 PM
+💰 Cost: FREE
+
+Topics covered:
+• New Illinois HOA regulations
+• Insurance requirements
+• Budget planning for 2025
+• Board member responsibilities
+
+Reserve your spot - Limited to 30 attendees
+
+RSVP: (847) 652-2338</div>
+                <div class="cta-button">Sign Up</div>
+                <div class="hashtags">#HOAEducation #FreeWorkshop #Northbrook #PropertyManagement</div>
+                <div class="char-count">Characters: 395</div>
+                <button class="copy-btn" onclick="copyPost(this)">Copy Post</button>
+            </div>
+        </div>
+
+        <!-- Template 5: Maintenance Tips -->
+        <div class="post-template">
+            <div class="post-header">
+                Seasonal Tips
+                <div class="post-type">WHAT'S NEW POST</div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">🔧 Winter Property Prep Checklist
+
+Protect your North Shore property:
+
+✓ Inspect roof for ice dam prevention
+✓ Service heating systems NOW
+✓ Winterize irrigation systems
+✓ Check parking lot salt supplies
+✓ Review snow removal contracts
+
+Need help? We manage 84 communities across Chicago & North Shore.
+
+Free winter inspection for new clients!</div>
+                <div class="cta-button">Schedule Inspection</div>
+                <div class="hashtags">#WinterMaintenance #PropertyTips #ChicagoWinter #HOATips</div>
+                <div class="char-count">Characters: 380</div>
+                <button class="copy-btn" onclick="copyPost(this)">Copy Post</button>
+            </div>
+        </div>
+
+        <!-- Template 6: Award/Recognition -->
+        <div class="post-template">
+            <div class="post-header">
+                Company Update
+                <div class="post-type">UPDATE POST</div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">🏆 Proud to Announce
+
+Manage369 has been recognized as a Top Property Management Company in Chicago's North Shore!
+
+• 18+ years of service
+• 84 communities managed
+• 4.9 ⭐ Google rating
+• 24/7 emergency response
+
+Thank you to our amazing clients in Highland Park, Winnetka, Glencoe, and beyond!
+
+Considering new management? Let's talk!</div>
+                <div class="cta-button">Contact Us</div>
+                <div class="hashtags">#Award #PropertyManagement #NorthShore #ThankYou</div>
+                <div class="char-count">Characters: 365</div>
+                <button class="copy-btn" onclick="copyPost(this)">Copy Post</button>
+            </div>
+        </div>
+
+        <!-- Template 7: Question Post -->
+        <div class="post-template">
+            <div class="post-header">
+                Engagement Question
+                <div class="post-type">UPDATE POST</div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">❓ Quick Question for HOA Boards
+
+What's your biggest property management challenge in 2025?
+
+A) Rising insurance costs
+B) Deferred maintenance
+C) Budget constraints
+D) Finding reliable vendors
+
+Comment below! 👇
+
+We've helped 84 North Shore communities overcome these challenges. Let us help you too!
+
+Free consultation: (847) 652-2338</div>
+                <div class="cta-button">Share Your Challenge</div>
+                <div class="hashtags">#HOAChallenges #CommunityEngagement #PropertyManagement</div>
+                <div class="char-count">Characters: 390</div>
+                <button class="copy-btn" onclick="copyPost(this)">Copy Post</button>
+            </div>
+        </div>
+
+        <!-- Template 8: Emergency Service -->
+        <div class="post-template">
+            <div class="post-header">
+                Service Highlight
+                <div class="post-type">UPDATE POST</div>
+            </div>
+            <div class="post-content">
+                <div class="post-text">🚨 24/7 Emergency Response
+
+Pipe burst at 2 AM? We answer.
+Weekend flooding? We're there.
+Holiday emergency? We've got you.
+
+Real 24/7 service for Chicago & North Shore properties.
+No answering service. Direct to management.
+
+84 communities trust us. You should too.
+
+Emergency line: (847) 652-2338</div>
+                <div class="cta-button">Save Our Number</div>
+                <div class="hashtags">#EmergencyResponse #PropertyManagement #24HourService</div>
+                <div class="char-count">Characters: 320</div>
+                <button class="copy-btn" onclick="copyPost(this)">Copy Post</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="schedule-grid">
+        <h2>📅 Recommended Posting Schedule</h2>
+        <table class="schedule-table">
+            <thead>
+                <tr>
+                    <th>Week</th>
+                    <th>Monday</th>
+                    <th>Wednesday</th>
+                    <th>Friday</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Week 1</strong></td>
+                    <td><span class="badge badge-offer">Special Offer</span></td>
+                    <td><span class="badge badge-tips">Maintenance Tips</span></td>
+                    <td><span class="badge badge-update">Success Story</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Week 2</strong></td>
+                    <td><span class="badge badge-update">Insurance Alert</span></td>
+                    <td><span class="badge badge-event">Workshop/Event</span></td>
+                    <td><span class="badge badge-offer">Free Assessment</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Week 3</strong></td>
+                    <td><span class="badge badge-tips">Seasonal Tips</span></td>
+                    <td><span class="badge badge-update">Company News</span></td>
+                    <td><span class="badge badge-update">Question Post</span></td>
+                </tr>
+                <tr>
+                    <td><strong>Week 4</strong></td>
+                    <td><span class="badge badge-offer">Monthly Special</span></td>
+                    <td><span class="badge badge-update">Emergency Service</span></td>
+                    <td><span class="badge badge-tips">Weekend Tips</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="intro" style="margin-top: 3rem;">
+        <h2>📸 Photo Requirements</h2>
+        <ul>
+            <li><strong>Size:</strong> 1200 x 900 pixels (landscape) or 1200 x 1200 (square)</li>
+            <li><strong>Format:</strong> JPG or PNG, under 5MB</li>
+            <li><strong>Content:</strong> Professional property photos, team photos, infographics</li>
+            <li><strong>Avoid:</strong> Stock photos, low quality images, unrelated content</li>
+        </ul>
+
+        <h3 style="margin-top: 1.5rem;">🎯 Call-to-Action Buttons</h3>
+        <ul>
+            <li><strong>Learn More:</strong> Links to website pages</li>
+            <li><strong>Call Now:</strong> Direct phone dialer</li>
+            <li><strong>Sign Up:</strong> For events/workshops</li>
+            <li><strong>Get Offer:</strong> For special promotions</li>
+            <li><strong>Book Online:</strong> For consultations</li>
+        </ul>
+
+        <h3 style="margin-top: 1.5rem;">✅ GMB Best Practices</h3>
+        <ul>
+            <li>Post 2-3 times per week minimum</li>
+            <li>Include local keywords (Highland Park, Winnetka, North Shore)</li>
+            <li>Use high-quality, relevant photos</li>
+            <li>Respond to comments within 24 hours</li>
+            <li>Track clicks and views in GMB Insights</li>
+            <li>Create posts for holidays and local events</li>
+            <li>Include phone number in every post</li>
+            <li>Use emojis sparingly but effectively</li>
+        </ul>
+    </div>
+
+    <script>
+        function copyPost(button) {
+            const postContent = button.parentElement.querySelector('.post-text').textContent;
+            const hashtags = button.parentElement.querySelector('.hashtags').textContent;
+            const fullText = postContent + '\n\n' + hashtags;
+
+            navigator.clipboard.writeText(fullText).then(() => {
+                const originalText = button.textContent;
+                button.textContent = '✓ Copied!';
+                button.style.background = '#28a745';
+
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = '#F4A261';
+                }, 2000);
+            });
+        }
+    </script>
+</body>
+</html>
