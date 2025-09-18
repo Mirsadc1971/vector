@@ -5750,5 +5750,45 @@ h3:contains("Areas We Serve") {
 }
 </style>
 
+<script>
+// Countdown timer
+function updateCountdown() {
+    // Set the offer end date (30 days from now)
+    const now = new Date();
+    const endDate = new Date(now.getTime() + (30 * 24 * 60 * 60 * 1000)); // 30 days from now
+
+    // Store end date in localStorage to persist across page loads
+    if (!localStorage.getItem('offerEndDate')) {
+        localStorage.setItem('offerEndDate', endDate.toISOString());
+    }
+
+    const storedEndDate = new Date(localStorage.getItem('offerEndDate'));
+    const currentTime = new Date().getTime();
+    const distance = storedEndDate.getTime() - currentTime;
+
+    if (distance > 0) {
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        document.getElementById('days').textContent = String(days).padStart(2, '0');
+        document.getElementById('hours').textContent = String(hours).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(seconds).padStart(2, '0');
+    } else {
+        // Reset the timer for another 30 days
+        localStorage.removeItem('offerEndDate');
+        updateCountdown();
+    }
+}
+
+// Start the countdown timer
+if (document.getElementById('countdown')) {
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+}
+</script>
+
 </body>
 </html>
