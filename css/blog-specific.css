@@ -15,6 +15,13 @@
     background: #f8f9fa;
 }
 
+/* Force flexbox layout for proper alignment */
+article.blog-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+}
+
 .section-title {
     text-align: center;
     font-size: 2.5rem;
@@ -90,26 +97,27 @@
     flex-grow: 1;
 }
 
-.read-more {
-    background: #2C3E50;
-    color: #e5e7eb;
-    padding: 10px 20px;
-    border-radius: 5px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: all 0.3s;
-    border: 1px solid #F4A261;
-    text-align: center;
-    margin-top: auto;
-    align-self: center;
-    display: inline-block;
+a.read-more, .read-more {
+    background: #2C3E50 !important;
+    color: #e5e7eb !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    font-weight: 600 !important;
+    text-decoration: none !important;
+    transition: all 0.3s !important;
+    border: 1px solid #F4A261 !important;
+    text-align: center !important;
+    margin-top: auto !important;
+    align-self: center !important;
+    display: inline-block !important;
+    width: auto !important;
 }
 
-.read-more:hover {
-    background: #F4A261;
-    color: #2C3E50;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+a.read-more:hover, .read-more:hover {
+    background: #F4A261 !important;
+    color: #2C3E50 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
 }
 
 /* Hide chat widget and floating button on blog pages */
