@@ -1,71 +1,33 @@
-/* Blog Button Alignment Fix - MUST LOAD LAST */
+/* Simple Blog Card Button Alignment */
 
-/* Force grid to equal heights */
-.blog-grid {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important;
-    gap: 2rem !important;
-    align-items: stretch !important;
+.blog-card {
+    display: flex;
+    flex-direction: column;
 }
 
-/* Force all cards to flex layout */
-.blog-card,
-article.blog-card {
-    display: flex !important;
-    flex-direction: column !important;
-    height: 100% !important;
-    min-height: 500px !important;
-}
-
-/* Fixed height for images */
-.blog-card img {
-    height: 200px !important;
-    object-fit: cover !important;
-    width: 100% !important;
-}
-
-/* Content area flexes */
 .blog-card-content {
-    display: flex !important;
-    flex-direction: column !important;
-    flex-grow: 1 !important;
-    padding: 1.5rem !important;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-/* Title with minimum height for alignment */
-.blog-card h3 {
-    min-height: 3.5rem !important;
+/* Button container at bottom */
+.blog-card-content .read-more {
+    margin-top: auto;
+    align-self: center;
+    background: #2C3E50;
+    color: #e5e7eb;
+    padding: 10px 30px;
+    border-radius: 5px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid #F4A261;
+    display: inline-block;
 }
 
-/* Excerpt grows to push button down */
-.blog-excerpt,
-p.blog-excerpt {
-    flex-grow: 1 !important;
-    margin-bottom: 1.5rem !important;
-}
-
-/* Force buttons to bottom center */
-a.read-more,
-.read-more {
-    background: #2C3E50 !important;
-    color: #e5e7eb !important;
-    padding: 10px 30px !important;
-    border-radius: 5px !important;
-    font-weight: 600 !important;
-    text-decoration: none !important;
-    border: 1px solid #F4A261 !important;
-    text-align: center !important;
-    margin-top: auto !important;
-    align-self: center !important;
-    display: block !important;
-    width: fit-content !important;
-    transition: all 0.3s !important;
-}
-
-a.read-more:hover,
-.read-more:hover {
-    background: #F4A261 !important;
-    color: #2C3E50 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2) !important;
+.blog-card-content .read-more:hover {
+    background: #F4A261;
+    color: #2C3E50;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
