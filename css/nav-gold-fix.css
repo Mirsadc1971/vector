@@ -1,0 +1,59 @@
+/* Universal Navigation Gold Color Fix */
+/* This ensures ALL navigation items are consistently gold across the entire site */
+
+.nav-link,
+.nav-link:link,
+.nav-link:visited,
+.nav a,
+nav a,
+.nav-menu a,
+.mobile-menu a {
+    color: #F4A261 !important;
+}
+
+.nav-link:hover,
+.nav a:hover,
+nav a:hover,
+.nav-menu a:hover,
+.mobile-menu a:hover {
+    color: #F4A261 !important;
+    opacity: 0.8;
+    text-shadow: 0 0 10px rgba(244, 162, 97, 0.5);
+}
+
+.nav-link.active {
+    color: #F4A261 !important;
+    font-weight: 600;
+}
+
+/* Dropdown items should also be gold */
+.dropdown-content a,
+.dropdown-content a:link,
+.dropdown-content a:visited {
+    color: #F4A261 !important;
+}
+
+.dropdown-content a:hover {
+    color: #F4A261 !important;
+    background: rgba(244, 162, 97, 0.1) !important;
+}
+
+/* Mobile menu specific */
+.mobile-menu a {
+    color: #F4A261 !important;
+}
+
+.mobile-menu a:hover {
+    color: #F4A261 !important;
+    background: rgba(244, 162, 97, 0.1) !important;
+}
+
+/* Remove any white color overrides */
+.nav-link {
+    color: #F4A261 !important;
+}
+
+/* Dropdown arrow */
+.dropdown-arrow {
+    color: #F4A261 !important;
+}
