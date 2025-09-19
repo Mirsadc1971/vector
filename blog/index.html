@@ -26,6 +26,49 @@ a:hover {
     opacity: 0.8;
 }
 
+/* Blog grid for equal height cards */
+.blog-grid {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)) !important;
+    gap: 2rem !important;
+    align-items: stretch !important;
+}
+
+/* Blog card layout for button alignment */
+.blog-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 100% !important;
+    min-height: 450px !important;
+}
+
+.blog-card img {
+    height: 200px !important;
+    object-fit: cover !important;
+    width: 100% !important;
+}
+
+.blog-card-content {
+    display: flex !important;
+    flex-direction: column !important;
+    flex-grow: 1 !important;
+    padding: 1.5rem !important;
+}
+
+.blog-card h3 {
+    margin-bottom: 1rem !important;
+    min-height: 3rem !important;
+}
+
+.blog-meta {
+    margin-bottom: 0.5rem !important;
+}
+
+.blog-excerpt {
+    flex-grow: 1 !important;
+    margin-bottom: 1.5rem !important;
+}
+
 .read-more {
     display: inline-block !important;
     background: #2C3E50 !important;
@@ -36,6 +79,9 @@ a:hover {
     text-decoration: none !important;
     transition: all 0.3s !important;
     border: 1px solid #F4A261 !important;
+    text-align: center !important;
+    margin-top: auto !important;
+    align-self: center !important;
 }
 
 .read-more:hover {
