@@ -1,0 +1,197 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import servicesData from '../../../data/services.json';
+
+const service = servicesData.interior.find(s => s.id === 'office-build-outs');
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Office Build-Out Services Chicago",
+  "description": service?.description,
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Vector Building Services",
+    "telephone": "+13125225355"
+  },
+  "areaServed": ["Chicago", "Cook County", "DuPage County", "Lake County"]
+};
+---
+
+<BaseLayout
+  title="Office Build-Out Services Chicago | Tenant Improvements & Construction"
+  description="Complete office build-out and tenant improvement services in Chicago. Space planning, construction, electrical, HVAC, and finishing. Call (312) 522-5355."
+  canonical="https://vectorbuildingservices.com/services/interior/office-build-outs/"
+  schema={schema}
+>
+  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-12">
+    <div class="container mx-auto px-4">
+      <nav class="text-sm mb-4">
+        <a href="/" class="hover:underline">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/services/" class="hover:underline">Services</a>
+        <span class="mx-2">/</span>
+        <a href="/services/interior/" class="hover:underline">Interior Services</a>
+        <span class="mx-2">/</span>
+        <span>Office Build-Outs</span>
+      </nav>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">{service?.name}</h1>
+      <p class="text-xl text-blue-100">{service?.description}</p>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold mb-6">Transform Your Space with Professional Office Build-Outs</h2>
+
+          <p class="text-lg text-gray-700 mb-6">
+            Vector Building Services specializes in complete office build-outs and tenant improvements throughout Chicago.
+            Whether you're moving into raw space or renovating existing offices, our experienced team manages every aspect
+            of your project from initial design through final punch list.
+          </p>
+
+          <h3 class="text-2xl font-semibold mb-4">Our Office Build-Out Services</h3>
+          <ul class="space-y-3 mb-8">
+            {service?.features.map(feature => (
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <div>
+                  <span class="font-semibold">{feature}:</span>
+                  <span class="text-gray-700 ml-2">
+                    {feature === "Space planning and design" && "Optimize your floor plan for productivity and collaboration"}
+                    {feature === "Partition walls and glass offices" && "Create private offices and meeting spaces with modern glass systems"}
+                    {feature === "Conference room construction" && "Build state-of-the-art conference rooms with AV integration"}
+                    {feature === "Reception area build-outs" && "Design impressive reception areas that reflect your brand"}
+                    {feature === "IT infrastructure installation" && "Complete data, power, and communication system installation"}
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ul>
+
+          <h3 class="text-2xl font-semibold mb-4">Office Build-Out Process</h3>
+          <div class="bg-gray-50 p-6 rounded-lg mb-8">
+            <div class="space-y-4">
+              <div class="flex items-start">
+                <span class="bg-primary-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">1</span>
+                <div>
+                  <h4 class="font-semibold">Initial Consultation</h4>
+                  <p class="text-sm text-gray-600">Review your needs, space, and budget requirements</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="bg-primary-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">2</span>
+                <div>
+                  <h4 class="font-semibold">Design & Planning</h4>
+                  <p class="text-sm text-gray-600">Create detailed plans and obtain necessary permits</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="bg-primary-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">3</span>
+                <div>
+                  <h4 class="font-semibold">Construction Phase</h4>
+                  <p class="text-sm text-gray-600">Execute build-out with minimal disruption to your operations</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <span class="bg-primary-600 text-white rounded-full w-8 h-8 flex items-center justify-center mr-3 flex-shrink-0">4</span>
+                <div>
+                  <h4 class="font-semibold">Final Inspection</h4>
+                  <p class="text-sm text-gray-600">Complete punch list and ensure everything meets specifications</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">Types of Offices We Build</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <ul class="space-y-2">
+              <li class="text-gray-700">• Law firms and legal offices</li>
+              <li class="text-gray-700">• Medical and dental practices</li>
+              <li class="text-gray-700">• Tech startups and IT companies</li>
+              <li class="text-gray-700">• Financial services firms</li>
+            </ul>
+            <ul class="space-y-2">
+              <li class="text-gray-700">• Marketing and creative agencies</li>
+              <li class="text-gray-700">• Corporate headquarters</li>
+              <li class="text-gray-700">• Co-working spaces</li>
+              <li class="text-gray-700">• Government offices</li>
+            </ul>
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">Service Areas</h3>
+          <p class="text-gray-700 mb-4">We provide office build-out services throughout Chicago and suburbs:</p>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-2 mb-8">
+            <a href="/locations/chicago/office-build-outs/" class="text-primary-600 hover:underline">Downtown Chicago</a>
+            <a href="/locations/chicago/office-build-outs/" class="text-primary-600 hover:underline">The Loop</a>
+            <a href="/locations/chicago/office-build-outs/" class="text-primary-600 hover:underline">River North</a>
+            <a href="/locations/glenview/office-build-outs/" class="text-primary-600 hover:underline">Glenview</a>
+            <a href="/locations/northbrook/office-build-outs/" class="text-primary-600 hover:underline">Northbrook</a>
+            <a href="/locations/naperville/office-build-outs/" class="text-primary-600 hover:underline">Naperville</a>
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">Related Services</h3>
+          <p class="text-gray-700 mb-4">Complete your office project with these related services:</p>
+          <div class="grid md:grid-cols-2 gap-3">
+            <a href="/services/interior/electrical/" class="text-primary-600 hover:underline">Electrical Systems →</a>
+            <a href="/services/interior/hvac/" class="text-primary-600 hover:underline">HVAC Installation →</a>
+            <a href="/services/interior/flooring/" class="text-primary-600 hover:underline">Flooring Solutions →</a>
+            <a href="/services/interior/lighting/" class="text-primary-600 hover:underline">Lighting Systems →</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="bg-primary-50 border border-primary-200 rounded-lg p-6 mb-6 sticky top-24">
+            <h3 class="text-xl font-semibold mb-4">Get a Free Quote</h3>
+            <p class="text-gray-700 mb-4">Transform your office space with our expert build-out services</p>
+            <ul class="text-sm text-gray-600 space-y-1 mb-4">
+              <li>✓ Free consultation</li>
+              <li>✓ Detailed proposals</li>
+              <li>✓ Competitive pricing</li>
+              <li>✓ Licensed contractors</li>
+            </ul>
+            <a href="/contact/" class="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 block text-center mb-3">
+              Request Quote
+            </a>
+            <a href="tel:3125225355" class="border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 block text-center">
+              (312) 522-5355
+            </a>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6">
+            <h4 class="font-semibold mb-3">Why Choose Vector?</h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li>• 15+ years experience</li>
+              <li>• Licensed & insured</li>
+              <li>• On-time completion</li>
+              <li>• Transparent pricing</li>
+              <li>• Quality guarantee</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Start Your Office Build-Out Project</h2>
+      <p class="text-center text-lg text-gray-700 mb-8">
+        Join hundreds of Chicago businesses that trust Vector for their office construction needs
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 text-center">
+          Schedule Consultation
+        </a>
+        <a href="tel:3125225355" class="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 text-center">
+          Call: (312) 522-5355
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

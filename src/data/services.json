@@ -1,146 +1,360 @@
 {
   "interior": [
     {
-      "id": "janitorial",
-      "name": "Janitorial Services",
-      "shortDescription": "Daily, weekly, and specialized cleaning for commercial buildings",
-      "description": "Comprehensive janitorial services including daily office cleaning, restroom maintenance, trash removal, and specialized cleaning protocols for healthcare and industrial facilities.",
+      "id": "office-build-outs",
+      "name": "Office Build-Outs",
+      "shortDescription": "Complete office construction and tenant improvements",
+      "description": "Transform raw space into functional offices with our comprehensive build-out services including framing, electrical, plumbing, and finishing.",
       "features": [
-        "Daily office cleaning",
-        "Restroom sanitization",
-        "Trash and recycling management",
-        "Break room and kitchen cleaning",
-        "COVID-19 disinfection protocols"
+        "Space planning and design",
+        "Partition walls and glass offices",
+        "Conference room construction",
+        "Reception area build-outs",
+        "IT infrastructure installation"
       ],
-      "slug": "janitorial"
+      "slug": "office-build-outs"
     },
     {
-      "id": "floor-care",
-      "name": "Floor Care & Maintenance",
-      "shortDescription": "Strip, wax, buff, and maintain all floor types",
-      "description": "Professional floor care including stripping, waxing, buffing, carpet cleaning, and specialized treatments for tile, concrete, and hardwood floors.",
+      "id": "lobby-upgrades",
+      "name": "Lobby/Common Area Upgrades",
+      "shortDescription": "Modernize building entrances and shared spaces",
+      "description": "Create impressive first impressions with lobby renovations, including new finishes, lighting, seating areas, and security desk installations.",
       "features": [
-        "Strip and wax services",
-        "High-speed burnishing",
-        "Carpet cleaning and extraction",
-        "Tile and grout restoration",
-        "Hardwood floor refinishing"
+        "Reception desk installation",
+        "Security system integration",
+        "Custom millwork and fixtures",
+        "Decorative ceiling treatments",
+        "ADA compliant upgrades"
       ],
-      "slug": "floor-care"
+      "slug": "lobby-upgrades"
     },
     {
-      "id": "porter",
-      "name": "Day Porter Services",
-      "shortDescription": "On-site staff for continuous maintenance throughout the day",
-      "description": "Professional day porters maintain your facility's appearance throughout business hours, handling immediate needs and maintaining high-traffic areas.",
+      "id": "kitchen-bath",
+      "name": "Kitchen/Bath Remodeling",
+      "shortDescription": "Commercial kitchen and restroom renovations",
+      "description": "Complete kitchen and bathroom renovations for offices, restaurants, and multi-family buildings with code-compliant fixtures and finishes.",
       "features": [
-        "Lobby and entrance maintenance",
-        "Continuous restroom checks",
-        "Meeting room setup and cleanup",
-        "Spill response",
-        "Supply restocking"
+        "Commercial kitchen equipment",
+        "ADA compliant fixtures",
+        "Tile and stone work",
+        "Plumbing system upgrades",
+        "Ventilation improvements"
       ],
-      "slug": "porter"
+      "slug": "kitchen-bath"
     },
     {
-      "id": "disinfection",
-      "name": "Disinfection Services",
-      "shortDescription": "EPA-approved disinfection and sanitization protocols",
-      "description": "Advanced disinfection services using EPA-approved products and electrostatic spraying technology for comprehensive pathogen control.",
+      "id": "electrical",
+      "name": "Electrical Systems",
+      "shortDescription": "Complete electrical installation and upgrades",
+      "description": "Licensed electrical services from panel upgrades to complete rewiring, including emergency power systems and LED retrofits.",
       "features": [
-        "Electrostatic spraying",
-        "EPA-approved disinfectants",
-        "High-touch surface protocols",
-        "Air quality improvement",
-        "Certification documentation"
+        "Panel upgrades and replacements",
+        "Commercial lighting systems",
+        "Emergency generators",
+        "Data and communication wiring",
+        "Energy management systems"
       ],
-      "slug": "disinfection"
+      "slug": "electrical"
     },
     {
-      "id": "construction-cleanup",
-      "name": "Construction Cleanup",
-      "shortDescription": "Post-construction and renovation cleaning services",
-      "description": "Specialized cleanup services for construction sites, including rough cleanup, final cleaning, and move-in ready preparation.",
+      "id": "plumbing",
+      "name": "Plumbing Services",
+      "shortDescription": "Commercial plumbing installation and repairs",
+      "description": "Full-service plumbing for new construction, renovations, and repairs including water, waste, and gas systems.",
       "features": [
-        "Debris removal",
-        "Dust and particle cleanup",
-        "Window and fixture cleaning",
-        "Floor preparation",
-        "Final detail cleaning"
+        "Water line installation",
+        "Drain and sewer systems",
+        "Fixture installation",
+        "Backflow prevention",
+        "Gas line services"
       ],
-      "slug": "construction-cleanup"
+      "slug": "plumbing"
+    },
+    {
+      "id": "hvac",
+      "name": "HVAC Systems",
+      "shortDescription": "Heating, cooling, and ventilation solutions",
+      "description": "Complete HVAC services including installation, replacement, and maintenance of commercial heating and cooling systems.",
+      "features": [
+        "Rooftop unit installation",
+        "Ductwork fabrication",
+        "Zone control systems",
+        "Indoor air quality solutions",
+        "Preventive maintenance plans"
+      ],
+      "slug": "hvac"
+    },
+    {
+      "id": "drywall-paint",
+      "name": "Drywall & Painting",
+      "shortDescription": "Interior wall construction and finishing",
+      "description": "Professional drywall installation, taping, texturing, and painting services for commercial properties.",
+      "features": [
+        "Metal stud framing",
+        "Drywall hanging and finishing",
+        "Texture applications",
+        "Interior painting",
+        "Wall covering installation"
+      ],
+      "slug": "drywall-paint"
+    },
+    {
+      "id": "flooring",
+      "name": "Flooring Installation",
+      "shortDescription": "Commercial flooring solutions for every space",
+      "description": "Expert installation of all commercial flooring types including carpet, tile, hardwood, LVT, and polished concrete.",
+      "features": [
+        "Carpet tile systems",
+        "Luxury vinyl tile (LVT)",
+        "Polished concrete",
+        "Hardwood installation",
+        "Epoxy floor coatings"
+      ],
+      "slug": "flooring"
+    },
+    {
+      "id": "lighting",
+      "name": "Lighting Systems",
+      "shortDescription": "Energy-efficient lighting design and installation",
+      "description": "Complete lighting solutions from design to installation, including LED retrofits and smart lighting controls.",
+      "features": [
+        "LED retrofit projects",
+        "Architectural lighting",
+        "Emergency lighting",
+        "Lighting controls",
+        "Exterior illumination"
+      ],
+      "slug": "lighting"
+    },
+    {
+      "id": "fire-life-safety",
+      "name": "Fire/Life Safety Systems",
+      "shortDescription": "Code-compliant safety system installation",
+      "description": "Installation and maintenance of fire suppression, alarm systems, and emergency egress solutions.",
+      "features": [
+        "Fire alarm systems",
+        "Sprinkler installation",
+        "Emergency lighting",
+        "Exit signage",
+        "Fire extinguisher services"
+      ],
+      "slug": "fire-life-safety"
     }
   ],
   "exterior": [
     {
-      "id": "pressure-washing",
-      "name": "Pressure Washing",
-      "shortDescription": "Building exteriors, walkways, parking lots, and equipment",
-      "description": "Professional pressure washing for building facades, concrete surfaces, parking structures, and specialized equipment cleaning.",
+      "id": "roofing",
+      "name": "Roofing Services",
+      "shortDescription": "Commercial roofing installation and repairs",
+      "description": "Complete roofing solutions including new installation, replacement, and repairs for flat and sloped commercial roofs.",
       "features": [
-        "Building facade cleaning",
-        "Concrete and sidewalk washing",
-        "Parking lot and garage cleaning",
-        "Graffiti removal",
-        "Gum removal"
+        "TPO and EPDM systems",
+        "Modified bitumen",
+        "Metal roofing",
+        "Green roof systems",
+        "Preventive maintenance"
       ],
-      "slug": "pressure-washing"
+      "slug": "roofing"
     },
     {
-      "id": "window-cleaning",
-      "name": "Window Cleaning",
-      "shortDescription": "Interior and exterior window cleaning for all building types",
-      "description": "Professional window cleaning services for commercial buildings of all sizes, including high-rise and difficult access areas.",
+      "id": "tuckpointing-facade",
+      "name": "Tuckpointing & Façade",
+      "shortDescription": "Masonry restoration and façade repairs",
+      "description": "Expert tuckpointing, brick repair, and façade restoration to protect and beautify building exteriors.",
       "features": [
-        "Interior and exterior cleaning",
-        "High-rise window cleaning",
-        "Post-construction window cleanup",
-        "Screen cleaning",
-        "Frame and sill detailing"
+        "Mortar joint repair",
+        "Brick replacement",
+        "Stone restoration",
+        "Façade cleaning",
+        "Waterproof coatings"
       ],
-      "slug": "window-cleaning"
+      "slug": "tuckpointing-facade"
     },
     {
-      "id": "landscaping",
-      "name": "Landscaping & Grounds",
-      "shortDescription": "Complete grounds maintenance and seasonal services",
-      "description": "Full-service landscaping including lawn care, seasonal plantings, mulching, and grounds maintenance for commercial properties.",
+      "id": "windows-doors",
+      "name": "Windows & Doors",
+      "shortDescription": "Commercial window and door installation",
+      "description": "Energy-efficient window and door replacement including storefronts, curtain walls, and security entrances.",
       "features": [
-        "Lawn mowing and edging",
-        "Seasonal plantings",
-        "Mulching and bed maintenance",
-        "Shrub trimming",
-        "Leaf removal"
+        "Storefront systems",
+        "Curtain wall installation",
+        "Security doors",
+        "Automatic doors",
+        "Window restoration"
       ],
-      "slug": "landscaping"
+      "slug": "windows-doors"
     },
     {
-      "id": "snow-removal",
-      "name": "Snow Removal",
-      "shortDescription": "24/7 snow plowing, salting, and sidewalk clearing",
-      "description": "Comprehensive snow and ice management including plowing, salting, sidewalk clearing, and 24/7 emergency response.",
+      "id": "waterproofing",
+      "name": "Waterproofing",
+      "shortDescription": "Building envelope protection solutions",
+      "description": "Comprehensive waterproofing services to protect foundations, walls, and decks from water infiltration.",
       "features": [
-        "24/7 snow plowing",
-        "Salt and ice melt application",
-        "Sidewalk shoveling",
-        "Parking lot management",
-        "Snow hauling"
+        "Foundation waterproofing",
+        "Deck coatings",
+        "Below-grade systems",
+        "Joint sealants",
+        "Drainage solutions"
       ],
-      "slug": "snow-removal"
+      "slug": "waterproofing"
     },
     {
-      "id": "parking-lot",
-      "name": "Parking Lot Maintenance",
-      "shortDescription": "Sweeping, striping, and maintenance services",
-      "description": "Complete parking lot maintenance including sweeping, striping, seal coating, and minor repair services.",
+      "id": "concrete-masonry",
+      "name": "Concrete & Masonry",
+      "shortDescription": "Structural concrete and masonry work",
+      "description": "New concrete construction, repairs, and decorative concrete solutions for commercial properties.",
       "features": [
-        "Power sweeping",
+        "Concrete foundations",
+        "Sidewalk installation",
+        "Retaining walls",
+        "Decorative concrete",
+        "Structural repairs"
+      ],
+      "slug": "concrete-masonry"
+    },
+    {
+      "id": "drainage",
+      "name": "Sitework & Drainage",
+      "shortDescription": "Site preparation and stormwater management",
+      "description": "Complete site development including grading, drainage systems, and stormwater management solutions.",
+      "features": [
+        "Site grading",
+        "Storm sewer installation",
+        "Retention ponds",
+        "French drains",
+        "Erosion control"
+      ],
+      "slug": "drainage"
+    },
+    {
+      "id": "painting-coatings",
+      "name": "Exterior Painting & Coatings",
+      "shortDescription": "Protective and decorative exterior finishes",
+      "description": "Professional exterior painting and specialized coating applications for all building types.",
+      "features": [
+        "Elastomeric coatings",
+        "Anti-graffiti treatments",
+        "Rust prevention",
+        "Pressure washing",
+        "Lead paint remediation"
+      ],
+      "slug": "painting-coatings"
+    },
+    {
+      "id": "parking-lots",
+      "name": "Parking Lots & Striping",
+      "shortDescription": "Asphalt paving and parking lot maintenance",
+      "description": "Complete parking lot services from new construction to maintenance, including paving, striping, and repairs.",
+      "features": [
+        "Asphalt paving",
+        "Sealcoating",
         "Line striping",
-        "Seal coating",
-        "Pothole patching",
-        "Signage installation"
+        "ADA compliance",
+        "Speed bump installation"
       ],
-      "slug": "parking-lot"
+      "slug": "parking-lots"
+    },
+    {
+      "id": "snow-ice",
+      "name": "Snow & Ice Management",
+      "shortDescription": "24/7 winter weather services",
+      "description": "Comprehensive snow removal and ice management to keep properties safe and accessible all winter.",
+      "features": [
+        "Snow plowing",
+        "Salt application",
+        "Sidewalk clearing",
+        "Roof snow removal",
+        "24/7 emergency response"
+      ],
+      "slug": "snow-ice"
+    },
+    {
+      "id": "fencing-gates",
+      "name": "Fencing & Gates",
+      "shortDescription": "Security fencing and access control",
+      "description": "Installation of commercial fencing, gates, and access control systems for property security.",
+      "features": [
+        "Chain link fencing",
+        "Ornamental iron",
+        "Automatic gates",
+        "Access control systems",
+        "Bollard installation"
+      ],
+      "slug": "fencing-gates"
+    }
+  ],
+  "maintenance": [
+    {
+      "id": "preventive",
+      "name": "Preventive Maintenance Plans",
+      "shortDescription": "Scheduled maintenance to prevent costly repairs",
+      "description": "Customized preventive maintenance programs to extend equipment life and prevent unexpected failures.",
+      "features": [
+        "HVAC maintenance",
+        "Roof inspections",
+        "Plumbing checks",
+        "Electrical testing",
+        "Detailed reporting"
+      ],
+      "slug": "preventive"
+    }
+  ],
+  "specialty": [
+    {
+      "id": "emergency",
+      "name": "24/7 Emergency Services",
+      "shortDescription": "Rapid response for urgent repairs",
+      "description": "Round-the-clock emergency response for plumbing, electrical, HVAC, and storm damage repairs.",
+      "features": [
+        "Water damage response",
+        "Power restoration",
+        "HVAC emergencies",
+        "Board-up services",
+        "Storm damage repairs"
+      ],
+      "slug": "emergency"
+    },
+    {
+      "id": "energy",
+      "name": "Energy Efficiency & LED",
+      "shortDescription": "Reduce energy costs with efficient upgrades",
+      "description": "Energy audits and efficiency upgrades including LED retrofits, insulation, and HVAC optimization.",
+      "features": [
+        "Energy audits",
+        "LED conversions",
+        "Insulation upgrades",
+        "Smart controls",
+        "Utility rebate assistance"
+      ],
+      "slug": "energy"
+    },
+    {
+      "id": "ada",
+      "name": "ADA & Accessibility",
+      "shortDescription": "Compliance upgrades for accessibility",
+      "description": "ADA compliance assessments and modifications to ensure your property meets accessibility requirements.",
+      "features": [
+        "Ramp installation",
+        "Bathroom modifications",
+        "Door widening",
+        "Signage updates",
+        "Parking compliance"
+      ],
+      "slug": "ada"
+    },
+    {
+      "id": "permitting",
+      "name": "Permitting & Inspections",
+      "shortDescription": "Navigate Chicago building codes and permits",
+      "description": "Expert handling of permit applications, code compliance, and inspection coordination for all projects.",
+      "features": [
+        "Permit applications",
+        "Code consulting",
+        "Inspection scheduling",
+        "Violation remediation",
+        "Certificate of occupancy"
+      ],
+      "slug": "permitting"
     }
   ]
 }
