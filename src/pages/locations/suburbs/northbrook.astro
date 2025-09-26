@@ -1,5 +1,5 @@
 ---
-import Layout from '../../../../layouts/Layout.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
 
 const meta = {
   title: "Northbrook HOA & Condo Services | Vector Building Services",
@@ -8,7 +8,7 @@ const meta = {
 };
 ---
 
-<Layout title={meta.title} description={meta.description}>
+<BaseLayout title={meta.title} description={meta.description}>
   <main>
     <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
       <div class="container mx-auto px-4">
@@ -81,4 +81,4 @@ const meta = {
       </div>
     </section>
   </main>
-</Layout>
+</BaseLayout>
