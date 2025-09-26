@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -27,23 +28,22 @@ const schema = {
   schema={schema}
 >
   <!-- Hero Section -->
-  <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-24">
+  <Hero
+    title="Complete Property Services for HOAs, Offices, Restaurants & Commercial Properties"
+    subtitle="From snow removal and landscaping to interior renovations and emergency response, Vector Building Services delivers reliable, professional care across Chicago and the suburbs."
+    image="/images/glenview-hoa.jpg"
+  />
+
+  <!-- CTA Buttons -->
+  <section class="py-8 bg-gray-50">
     <div class="container mx-auto px-4">
-      <div class="max-w-5xl mx-auto text-center">
-        <h1 class="text-4xl md:text-6xl font-bold mb-6">
-          Complete Property Services for HOAs, Offices, Restaurants & Commercial Properties
-        </h1>
-        <p class="text-xl md:text-2xl mb-8 opacity-95">
-          From snow removal and landscaping to interior renovations and emergency response, Vector Building Services delivers reliable, professional care across Chicago and the suburbs.
-        </p>
-        <div class="flex flex-wrap gap-4 justify-center">
-          <a href="/services/" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-gray-100 transition">
-            Explore Services
-          </a>
-          <a href="/contact/" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-white/10 transition">
-            Request a Proposal
-          </a>
-        </div>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/services/" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-700 transition">
+          Explore Services
+        </a>
+        <a href="/contact/" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold text-lg hover:bg-blue-50 transition">
+          Request a Proposal
+        </a>
       </div>
     </div>
   </section>
