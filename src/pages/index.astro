@@ -1,0 +1,173 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Vector Building Services",
+  "description": "Professional commercial cleaning and building maintenance services in Chicago and suburbs",
+  "url": "https://vectorbuildingservices.com",
+  "telephone": "+13125225355",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1400 Patriot Boulevard #2042",
+    "addressLocality": "Glenview",
+    "addressRegion": "IL",
+    "postalCode": "60026",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 42.0697,
+    "longitude": -87.7878
+  },
+  "areaServed": [
+    "Chicago",
+    "Glenview",
+    "Northbrook",
+    "Skokie",
+    "Evanston",
+    "Naperville",
+    "Schaumburg",
+    "Oak Brook"
+  ]
+};
+---
+
+<BaseLayout
+  title="Commercial Cleaning & Building Services Chicago"
+  description="Vector Building Services provides professional janitorial, maintenance, and facility services throughout Chicago and suburbs. Call (312) 522-5355 for a free quote."
+  schema={schema}
+>
+  <section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          Professional Building Services for Chicago & Suburbs
+        </h1>
+        <p class="text-xl mb-8 text-blue-100">
+          From daily janitorial services to specialized maintenance, Vector Building Services keeps your facility clean, safe, and professional.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="/contact/" class="bg-white text-primary-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 text-center">
+            Get Free Quote
+          </a>
+          <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-700 text-center">
+            (312) 522-5355
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-primary-700">Interior Services</h3>
+          <div class="space-y-4">
+            <a href="/services/interior/janitorial/" class="block p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+              <h4 class="font-semibold text-lg mb-2">Janitorial Services</h4>
+              <p class="text-gray-600">Daily, weekly, and specialized cleaning for commercial buildings</p>
+            </a>
+            <a href="/services/interior/floor-care/" class="block p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+              <h4 class="font-semibold text-lg mb-2">Floor Care & Maintenance</h4>
+              <p class="text-gray-600">Strip, wax, buff, and maintain all floor types</p>
+            </a>
+            <a href="/services/interior/porter/" class="block p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+              <h4 class="font-semibold text-lg mb-2">Day Porter Services</h4>
+              <p class="text-gray-600">On-site staff for continuous maintenance throughout the day</p>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="text-2xl font-semibold mb-6 text-primary-700">Exterior Services</h3>
+          <div class="space-y-4">
+            <a href="/services/exterior/pressure-washing/" class="block p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+              <h4 class="font-semibold text-lg mb-2">Pressure Washing</h4>
+              <p class="text-gray-600">Building exteriors, walkways, parking lots, and equipment</p>
+            </a>
+            <a href="/services/exterior/window-cleaning/" class="block p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+              <h4 class="font-semibold text-lg mb-2">Window Cleaning</h4>
+              <p class="text-gray-600">Interior and exterior window cleaning for all building types</p>
+            </a>
+            <a href="/services/exterior/snow-removal/" class="block p-4 border border-gray-200 rounded-lg hover:shadow-lg transition-shadow">
+              <h4 class="font-semibold text-lg mb-2">Snow Removal</h4>
+              <p class="text-gray-600">24/7 snow plowing, salting, and sidewalk clearing</p>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/services/" class="text-primary-600 font-semibold hover:text-primary-700">
+          View All Services →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Service Areas</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">Chicago</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><a href="/locations/chicago/loop/" class="hover:text-primary-600">The Loop</a></li>
+            <li><a href="/locations/chicago/river-north/" class="hover:text-primary-600">River North</a></li>
+            <li><a href="/locations/chicago/west-loop/" class="hover:text-primary-600">West Loop</a></li>
+            <li><a href="/locations/chicago/lincoln-park/" class="hover:text-primary-600">Lincoln Park</a></li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">North Suburbs</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><a href="/locations/suburbs/glenview/" class="hover:text-primary-600">Glenview</a></li>
+            <li><a href="/locations/suburbs/northbrook/" class="hover:text-primary-600">Northbrook</a></li>
+            <li><a href="/locations/suburbs/skokie/" class="hover:text-primary-600">Skokie</a></li>
+            <li><a href="/locations/suburbs/evanston/" class="hover:text-primary-600">Evanston</a></li>
+          </ul>
+        </div>
+
+        <div class="bg-white p-6 rounded-lg shadow-md">
+          <h3 class="text-xl font-semibold mb-4">West Suburbs</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li><a href="/locations/suburbs/naperville/" class="hover:text-primary-600">Naperville</a></li>
+            <li><a href="/locations/suburbs/oak-brook/" class="hover:text-primary-600">Oak Brook</a></li>
+            <li><a href="/locations/suburbs/schaumburg/" class="hover:text-primary-600">Schaumburg</a></li>
+            <li><a href="/locations/suburbs/elmhurst/" class="hover:text-primary-600">Elmhurst</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-8">
+        <a href="/locations/" class="text-primary-600 font-semibold hover:text-primary-700">
+          View All Locations →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="bg-primary-600 text-white rounded-2xl p-8 md:p-12 text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+        <p class="text-xl mb-8">Get a free quote for your building maintenance needs</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/contact/" class="bg-white text-primary-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">
+            Request Quote
+          </a>
+          <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-primary-700">
+            Call Now: (312) 522-5355
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

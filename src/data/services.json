@@ -1,0 +1,146 @@
+{
+  "interior": [
+    {
+      "id": "janitorial",
+      "name": "Janitorial Services",
+      "shortDescription": "Daily, weekly, and specialized cleaning for commercial buildings",
+      "description": "Comprehensive janitorial services including daily office cleaning, restroom maintenance, trash removal, and specialized cleaning protocols for healthcare and industrial facilities.",
+      "features": [
+        "Daily office cleaning",
+        "Restroom sanitization",
+        "Trash and recycling management",
+        "Break room and kitchen cleaning",
+        "COVID-19 disinfection protocols"
+      ],
+      "slug": "janitorial"
+    },
+    {
+      "id": "floor-care",
+      "name": "Floor Care & Maintenance",
+      "shortDescription": "Strip, wax, buff, and maintain all floor types",
+      "description": "Professional floor care including stripping, waxing, buffing, carpet cleaning, and specialized treatments for tile, concrete, and hardwood floors.",
+      "features": [
+        "Strip and wax services",
+        "High-speed burnishing",
+        "Carpet cleaning and extraction",
+        "Tile and grout restoration",
+        "Hardwood floor refinishing"
+      ],
+      "slug": "floor-care"
+    },
+    {
+      "id": "porter",
+      "name": "Day Porter Services",
+      "shortDescription": "On-site staff for continuous maintenance throughout the day",
+      "description": "Professional day porters maintain your facility's appearance throughout business hours, handling immediate needs and maintaining high-traffic areas.",
+      "features": [
+        "Lobby and entrance maintenance",
+        "Continuous restroom checks",
+        "Meeting room setup and cleanup",
+        "Spill response",
+        "Supply restocking"
+      ],
+      "slug": "porter"
+    },
+    {
+      "id": "disinfection",
+      "name": "Disinfection Services",
+      "shortDescription": "EPA-approved disinfection and sanitization protocols",
+      "description": "Advanced disinfection services using EPA-approved products and electrostatic spraying technology for comprehensive pathogen control.",
+      "features": [
+        "Electrostatic spraying",
+        "EPA-approved disinfectants",
+        "High-touch surface protocols",
+        "Air quality improvement",
+        "Certification documentation"
+      ],
+      "slug": "disinfection"
+    },
+    {
+      "id": "construction-cleanup",
+      "name": "Construction Cleanup",
+      "shortDescription": "Post-construction and renovation cleaning services",
+      "description": "Specialized cleanup services for construction sites, including rough cleanup, final cleaning, and move-in ready preparation.",
+      "features": [
+        "Debris removal",
+        "Dust and particle cleanup",
+        "Window and fixture cleaning",
+        "Floor preparation",
+        "Final detail cleaning"
+      ],
+      "slug": "construction-cleanup"
+    }
+  ],
+  "exterior": [
+    {
+      "id": "pressure-washing",
+      "name": "Pressure Washing",
+      "shortDescription": "Building exteriors, walkways, parking lots, and equipment",
+      "description": "Professional pressure washing for building facades, concrete surfaces, parking structures, and specialized equipment cleaning.",
+      "features": [
+        "Building facade cleaning",
+        "Concrete and sidewalk washing",
+        "Parking lot and garage cleaning",
+        "Graffiti removal",
+        "Gum removal"
+      ],
+      "slug": "pressure-washing"
+    },
+    {
+      "id": "window-cleaning",
+      "name": "Window Cleaning",
+      "shortDescription": "Interior and exterior window cleaning for all building types",
+      "description": "Professional window cleaning services for commercial buildings of all sizes, including high-rise and difficult access areas.",
+      "features": [
+        "Interior and exterior cleaning",
+        "High-rise window cleaning",
+        "Post-construction window cleanup",
+        "Screen cleaning",
+        "Frame and sill detailing"
+      ],
+      "slug": "window-cleaning"
+    },
+    {
+      "id": "landscaping",
+      "name": "Landscaping & Grounds",
+      "shortDescription": "Complete grounds maintenance and seasonal services",
+      "description": "Full-service landscaping including lawn care, seasonal plantings, mulching, and grounds maintenance for commercial properties.",
+      "features": [
+        "Lawn mowing and edging",
+        "Seasonal plantings",
+        "Mulching and bed maintenance",
+        "Shrub trimming",
+        "Leaf removal"
+      ],
+      "slug": "landscaping"
+    },
+    {
+      "id": "snow-removal",
+      "name": "Snow Removal",
+      "shortDescription": "24/7 snow plowing, salting, and sidewalk clearing",
+      "description": "Comprehensive snow and ice management including plowing, salting, sidewalk clearing, and 24/7 emergency response.",
+      "features": [
+        "24/7 snow plowing",
+        "Salt and ice melt application",
+        "Sidewalk shoveling",
+        "Parking lot management",
+        "Snow hauling"
+      ],
+      "slug": "snow-removal"
+    },
+    {
+      "id": "parking-lot",
+      "name": "Parking Lot Maintenance",
+      "shortDescription": "Sweeping, striping, and maintenance services",
+      "description": "Complete parking lot maintenance including sweeping, striping, seal coating, and minor repair services.",
+      "features": [
+        "Power sweeping",
+        "Line striping",
+        "Seal coating",
+        "Pothole patching",
+        "Signage installation"
+      ],
+      "slug": "parking-lot"
+    }
+  ]
+}

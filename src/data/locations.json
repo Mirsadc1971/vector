@@ -1,0 +1,144 @@
+{
+  "chicago": {
+    "neighborhoods": [
+      {
+        "id": "loop",
+        "name": "The Loop",
+        "description": "Chicago's central business district with high-rise offices and commercial buildings"
+      },
+      {
+        "id": "river-north",
+        "name": "River North",
+        "description": "Mixed commercial and residential area with galleries and restaurants"
+      },
+      {
+        "id": "lincoln-park",
+        "name": "Lincoln Park",
+        "description": "Upscale neighborhood with boutiques, offices, and residential properties"
+      },
+      {
+        "id": "gold-coast",
+        "name": "Gold Coast",
+        "description": "Historic luxury district with high-end retail and residential buildings"
+      },
+      {
+        "id": "west-loop",
+        "name": "West Loop",
+        "description": "Tech hub and restaurant district with modern office buildings"
+      },
+      {
+        "id": "south-loop",
+        "name": "South Loop",
+        "description": "Growing area with universities, museums, and residential towers"
+      },
+      {
+        "id": "lakeview",
+        "name": "Lakeview",
+        "description": "Diverse neighborhood with retail corridors and mixed-use buildings"
+      },
+      {
+        "id": "wicker-park",
+        "name": "Wicker Park",
+        "description": "Trendy area with boutiques, restaurants, and creative businesses"
+      }
+    ]
+  },
+  "suburbs": {
+    "north": [
+      {
+        "id": "glenview",
+        "name": "Glenview",
+        "description": "Affluent suburb with corporate offices and shopping centers"
+      },
+      {
+        "id": "northbrook",
+        "name": "Northbrook",
+        "description": "Business-friendly community with corporate headquarters"
+      },
+      {
+        "id": "skokie",
+        "name": "Skokie",
+        "description": "Diverse community with retail and light industrial facilities"
+      },
+      {
+        "id": "evanston",
+        "name": "Evanston",
+        "description": "University town with mixed commercial and educational facilities"
+      },
+      {
+        "id": "wilmette",
+        "name": "Wilmette",
+        "description": "Lakefront community with boutique retail and professional offices"
+      },
+      {
+        "id": "winnetka",
+        "name": "Winnetka",
+        "description": "Upscale village with luxury retail and service businesses"
+      },
+      {
+        "id": "highland-park",
+        "name": "Highland Park",
+        "description": "Historic downtown with retail, dining, and professional services"
+      },
+      {
+        "id": "lake-forest",
+        "name": "Lake Forest",
+        "description": "Prestigious community with corporate campuses and estates"
+      }
+    ],
+    "west": [
+      {
+        "id": "naperville",
+        "name": "Naperville",
+        "description": "Major business hub with corporate offices and retail centers"
+      },
+      {
+        "id": "oak-brook",
+        "name": "Oak Brook",
+        "description": "Corporate center with office towers and luxury retail"
+      },
+      {
+        "id": "schaumburg",
+        "name": "Schaumburg",
+        "description": "Commercial powerhouse with Woodfield Mall and office parks"
+      },
+      {
+        "id": "hoffman-estates",
+        "name": "Hoffman Estates",
+        "description": "Growing suburb with corporate headquarters and retail"
+      },
+      {
+        "id": "elmhurst",
+        "name": "Elmhurst",
+        "description": "Historic city with mixed commercial and healthcare facilities"
+      },
+      {
+        "id": "lombard",
+        "name": "Lombard",
+        "description": "Business-friendly village with diverse commercial properties"
+      }
+    ],
+    "south": [
+      {
+        "id": "oak-lawn",
+        "name": "Oak Lawn",
+        "description": "Regional retail hub with medical facilities"
+      },
+      {
+        "id": "orland-park",
+        "name": "Orland Park",
+        "description": "Shopping destination with commercial developments"
+      },
+      {
+        "id": "tinley-park",
+        "name": "Tinley Park",
+        "description": "Convention center location with retail and hospitality"
+      },
+      {
+        "id": "oak-forest",
+        "name": "Oak Forest",
+        "description": "Growing community with retail and healthcare facilities"
+      }
+    ]
+  }
+}

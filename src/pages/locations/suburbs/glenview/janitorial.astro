@@ -1,0 +1,216 @@
+---
+import BaseLayout from '../../../../layouts/BaseLayout.astro';
+import servicesData from '../../../../data/services.json';
+
+const service = servicesData.interior.find(s => s.id === 'janitorial');
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Janitorial Services Glenview IL",
+  "description": "Professional janitorial and commercial cleaning services in Glenview, Illinois",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Vector Building Services",
+    "telephone": "+13125225355",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1400 Patriot Boulevard #2042",
+      "addressLocality": "Glenview",
+      "addressRegion": "IL",
+      "postalCode": "60026"
+    }
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Glenview"
+  }
+};
+---
+
+<BaseLayout
+  title="Janitorial Services Glenview IL - Commercial Cleaning"
+  description="Professional janitorial services in Glenview, IL. Daily office cleaning, medical facility sanitization, and retail maintenance. Local team, rapid response. Call (312) 522-5355."
+  canonical="https://vectorbuildingservices.com/locations/suburbs/glenview/janitorial/"
+  schema={schema}
+>
+  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-12">
+    <div class="container mx-auto px-4">
+      <nav class="text-sm mb-4">
+        <a href="/" class="hover:underline">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/locations/" class="hover:underline">Locations</a>
+        <span class="mx-2">/</span>
+        <a href="/locations/suburbs/" class="hover:underline">Suburbs</a>
+        <span class="mx-2">/</span>
+        <a href="/locations/suburbs/glenview/" class="hover:underline">Glenview</a>
+        <span class="mx-2">/</span>
+        <span>Janitorial</span>
+      </nav>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Janitorial Services in Glenview, IL</h1>
+      <p class="text-xl text-blue-100">Local commercial cleaning team serving Glenview businesses since 2010</p>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2">
+          <h2 class="text-3xl font-bold mb-6">Professional Janitorial Services for Glenview Businesses</h2>
+
+          <p class="text-lg text-gray-700 mb-6">
+            Vector Building Services provides comprehensive janitorial solutions to Glenview's diverse business community. From our local headquarters on Patriot Boulevard, our experienced team delivers reliable, high-quality cleaning services tailored to each facility's unique requirements.
+          </p>
+
+          <h3 class="text-2xl font-semibold mb-4">Glenview Facilities We Service</h3>
+          <div class="grid md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold mb-2">The Glen Town Center</h4>
+              <p class="text-gray-700">Retail stores, restaurants, and professional offices</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold mb-2">Glenview Corporate Park</h4>
+              <p class="text-gray-700">Multi-tenant office buildings and corporate headquarters</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold mb-2">Milwaukee Avenue Corridor</h4>
+              <p class="text-gray-700">Retail spaces, banks, and professional services</p>
+            </div>
+            <div class="bg-gray-50 p-4 rounded-lg">
+              <h4 class="font-semibold mb-2">Medical Districts</h4>
+              <p class="text-gray-700">Healthcare facilities requiring specialized cleaning protocols</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">Our Glenview Janitorial Services</h3>
+          <ul class="space-y-3 mb-8">
+            {service?.features.map(feature => (
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-green-500 mt-1 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-700">{feature}</span>
+              </li>
+            ))}
+          </ul>
+
+          <h3 class="text-2xl font-semibold mb-4">Local Glenview Clients</h3>
+          <p class="text-gray-700 mb-4">We proudly serve various Glenview organizations including:</p>
+          <ul class="grid grid-cols-2 gap-2 mb-8">
+            <li class="text-gray-700">• Professional office buildings</li>
+            <li class="text-gray-700">• Medical and dental practices</li>
+            <li class="text-gray-700">• Retail establishments</li>
+            <li class="text-gray-700">• Educational facilities</li>
+            <li class="text-gray-700">• Financial institutions</li>
+            <li class="text-gray-700">• Property management companies</li>
+          </ul>
+
+          <h3 class="text-2xl font-semibold mb-4">Why Glenview Chooses Vector</h3>
+          <div class="bg-primary-50 p-6 rounded-lg mb-8">
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <span class="font-semibold mr-2">Local Headquarters:</span>
+                <span class="text-gray-700">Based in Glenview at 1400 Patriot Boulevard for quick response times</span>
+              </li>
+              <li class="flex items-start">
+                <span class="font-semibold mr-2">Community Knowledge:</span>
+                <span class="text-gray-700">Familiar with Glenview building codes and requirements</span>
+              </li>
+              <li class="flex items-start">
+                <span class="font-semibold mr-2">Trusted Partner:</span>
+                <span class="text-gray-700">Serving Glenview businesses for over a decade</span>
+              </li>
+              <li class="flex items-start">
+                <span class="font-semibold mr-2">Flexible Service:</span>
+                <span class="text-gray-700">Customized schedules to minimize business disruption</span>
+              </li>
+            </ul>
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">Service Schedule Options</h3>
+          <p class="text-gray-700 mb-4">We offer flexible janitorial schedules for Glenview businesses:</p>
+          <div class="grid md:grid-cols-3 gap-4 mb-8">
+            <div class="border border-gray-200 p-4 rounded-lg">
+              <h4 class="font-semibold mb-2">Daily Service</h4>
+              <p class="text-sm text-gray-600">5-7 days per week for high-traffic facilities</p>
+            </div>
+            <div class="border border-gray-200 p-4 rounded-lg">
+              <h4 class="font-semibold mb-2">Weekly Service</h4>
+              <p class="text-sm text-gray-600">1-3 times per week for standard offices</p>
+            </div>
+            <div class="border border-gray-200 p-4 rounded-lg">
+              <h4 class="font-semibold mb-2">Custom Schedule</h4>
+              <p class="text-sm text-gray-600">Tailored to your specific needs</p>
+            </div>
+          </div>
+
+          <h3 class="text-2xl font-semibold mb-4">Additional Services in Glenview</h3>
+          <p class="text-gray-700 mb-4">Complement your janitorial service with:</p>
+          <div class="grid md:grid-cols-2 gap-3">
+            <a href="/locations/suburbs/glenview/floor-care/" class="text-primary-600 hover:underline">Floor Care & Maintenance</a>
+            <a href="/locations/suburbs/glenview/porter/" class="text-primary-600 hover:underline">Day Porter Services</a>
+            <a href="/locations/suburbs/glenview/disinfection/" class="text-primary-600 hover:underline">Disinfection Services</a>
+            <a href="/locations/suburbs/glenview/window-cleaning/" class="text-primary-600 hover:underline">Window Cleaning</a>
+            <a href="/locations/suburbs/glenview/pressure-washing/" class="text-primary-600 hover:underline">Pressure Washing</a>
+            <a href="/locations/suburbs/glenview/snow-removal/" class="text-primary-600 hover:underline">Snow Removal</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="bg-primary-50 border border-primary-200 rounded-lg p-6 mb-6 sticky top-24">
+            <h3 class="text-xl font-semibold mb-4">Get a Free Quote</h3>
+            <p class="text-gray-700 mb-2">Glenview Office:</p>
+            <address class="not-italic text-gray-700 mb-4">
+              1400 Patriot Boulevard #2042<br>
+              Glenview, IL 60026
+            </address>
+            <a href="/contact/" class="bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700 block text-center mb-3">
+              Request Quote
+            </a>
+            <a href="tel:3125225355" class="border-2 border-primary-600 text-primary-600 px-6 py-3 rounded-lg font-semibold hover:bg-primary-50 block text-center">
+              Call: (312) 522-5355
+            </a>
+            <p class="text-sm text-gray-600 mt-3 text-center">Response within 2 hours</p>
+          </div>
+
+          <div class="bg-white border border-gray-200 rounded-lg p-6 mb-6">
+            <h4 class="font-semibold mb-3">Service Areas Near Glenview</h4>
+            <ul class="space-y-2">
+              <li><a href="/locations/suburbs/northbrook/janitorial/" class="text-primary-600 hover:underline">Northbrook</a></li>
+              <li><a href="/locations/suburbs/skokie/janitorial/" class="text-primary-600 hover:underline">Skokie</a></li>
+              <li><a href="/locations/suburbs/wilmette/janitorial/" class="text-primary-600 hover:underline">Wilmette</a></li>
+              <li><a href="/locations/suburbs/evanston/janitorial/" class="text-primary-600 hover:underline">Evanston</a></li>
+            </ul>
+          </div>
+
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-6">
+            <h4 class="font-semibold mb-3">Quick Links</h4>
+            <ul class="space-y-2 text-sm">
+              <li><a href="/services/interior/janitorial/" class="text-primary-600 hover:underline">About Our Janitorial Services</a></li>
+              <li><a href="/locations/suburbs/glenview/" class="text-primary-600 hover:underline">All Glenview Services</a></li>
+              <li><a href="/contact/" class="text-primary-600 hover:underline">Contact Us</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-gray-50 py-12">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-8">Start Your Glenview Janitorial Service Today</h2>
+      <p class="text-center text-lg text-gray-700 mb-8">
+        Join dozens of satisfied Glenview businesses who trust Vector Building Services for their janitorial needs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 text-center">
+          Get Free Quote
+        </a>
+        <a href="tel:3125225355" class="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50 text-center">
+          Call: (312) 522-5355
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
