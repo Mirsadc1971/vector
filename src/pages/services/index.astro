@@ -82,7 +82,7 @@ const serviceCategories = [
       </nav>
 
       <h1 class="text-4xl md:text-5xl font-bold mb-4">Complete Property Management Services</h1>
-      <p class="text-xl text-blue-100">
+      <p class="text-xl text-gray-300">
         From janitorial services to security systems to major equipment replacement - we provide all services necessary for the full functioning of your commercial property
       </p>
     </div>
@@ -100,13 +100,13 @@ const serviceCategories = [
 
       <div class="grid md:grid-cols-2 gap-8 mb-16">
         {serviceCategories.map(category => (
-          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-            <div class={`bg-${category.color}-600 text-white p-6`}>
+          <div class="bg-white rounded-lg shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300 border border-gray-100">
+            <div class="bg-gradient-to-r from-gray-800 to-gray-900 text-white p-6">
               <h3 class="text-2xl font-bold flex items-center gap-3">
                 <span class="text-3xl">{category.icon}</span>
                 <span>{category.title}</span>
               </h3>
-              <p class="mt-2 text-blue-100">{category.description}</p>
+              <p class="mt-2 text-gray-300">{category.description}</p>
             </div>
             <div class="p-6">
               <h4 class="font-semibold mb-4 text-gray-800">Services Include:</h4>
@@ -118,7 +118,7 @@ const serviceCategories = [
                   </div>
                 ))}
               </div>
-              <a href={category.href} class={`inline-block bg-${category.color}-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-${category.color}-700`}>
+              <a href={category.href} class="inline-block bg-gray-800 text-white px-6 py-2 rounded-lg font-semibold hover:bg-gray-900 transition-colors duration-200">
                 View All {category.title}
               </a>
             </div>
@@ -196,7 +196,7 @@ const serviceCategories = [
           </div>
 
           <!-- Emergency Services -->
-          <div class="bg-white rounded-lg p-6 border-l-4 border-red-500">
+          <div class="bg-white rounded-lg p-6 shadow-lg border border-gray-200">
             <h3 class="text-red-500 font-bold text-lg mb-3 flex items-center gap-2">
               <span>⚡</span>
               24/7 Emergency
@@ -232,7 +232,7 @@ const serviceCategories = [
   </section>
 
   <!-- Why Choose Section -->
-  <section class="py-16 bg-primary-50">
+  <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
       <h2 class="text-3xl font-bold mb-8 text-center">Why Choose Vector Building Services</h2>
 

@@ -76,48 +76,79 @@ const schema = {
             <form id="contact-form" class="space-y-4">
               <div>
                 <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name *</label>
-                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500" />
+                <input type="text" id="name" name="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-400 focus:border-gray-400" />
               </div>
 
               <div>
                 <label for="company" class="block text-sm font-medium text-gray-700 mb-1">Company *</label>
-                <input type="text" id="company" name="company" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500" />
+                <input type="text" id="company" name="company" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-400 focus:border-gray-400" />
               </div>
 
               <div>
                 <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email *</label>
-                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500" />
+                <input type="email" id="email" name="email" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-400 focus:border-gray-400" />
               </div>
 
               <div>
                 <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Phone *</label>
-                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500" />
+                <input type="tel" id="phone" name="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-400 focus:border-gray-400" />
               </div>
 
               <div>
                 <label for="location" class="block text-sm font-medium text-gray-700 mb-1">Service Location</label>
-                <input type="text" id="location" name="location" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500" />
+                <input type="text" id="location" name="location" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-400 focus:border-gray-400" />
               </div>
 
               <div>
                 <label for="services" class="block text-sm font-medium text-gray-700 mb-1">Services Needed</label>
-                <select id="services" name="services" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500">
+                <select id="services" name="services" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-400 focus:border-gray-400">
                   <option value="">Select a service</option>
-                  <option value="janitorial">Janitorial Services</option>
-                  <option value="floor-care">Floor Care & Maintenance</option>
-                  <option value="porter">Day Porter Services</option>
-                  <option value="disinfection">Disinfection Services</option>
-                  <option value="pressure-washing">Pressure Washing</option>
-                  <option value="window-cleaning">Window Cleaning</option>
-                  <option value="landscaping">Landscaping & Grounds</option>
-                  <option value="snow-removal">Snow Removal</option>
-                  <option value="multiple">Multiple Services</option>
+                  <optgroup label="Interior Services">
+                    <option value="janitorial-cleaning">Janitorial & Cleaning</option>
+                    <option value="hvac-systems">HVAC Systems</option>
+                    <option value="electrical-systems">Electrical Systems</option>
+                    <option value="plumbing-services">Plumbing Services</option>
+                    <option value="office-build-outs">Office Build-Outs</option>
+                    <option value="lobby-upgrades">Lobby/Common Area Upgrades</option>
+                    <option value="flooring">Flooring Installation</option>
+                    <option value="drywall-painting">Drywall & Painting</option>
+                  </optgroup>
+                  <optgroup label="Exterior Services">
+                    <option value="roofing">Roofing Services</option>
+                    <option value="masonry-facade">Masonry & Façade</option>
+                    <option value="windows-doors">Windows & Doors</option>
+                    <option value="waterproofing">Waterproofing</option>
+                    <option value="pressure-washing">Pressure Washing</option>
+                    <option value="parking-lots">Parking Lot Maintenance</option>
+                    <option value="landscaping">Landscaping & Grounds</option>
+                  </optgroup>
+                  <optgroup label="Specialized Services">
+                    <option value="snow-removal">24/7 Snow Removal</option>
+                    <option value="emergency-response">Emergency Response</option>
+                    <option value="security-systems">Security & Access Control</option>
+                    <option value="life-safety">Life Safety Systems</option>
+                    <option value="boiler-chiller">Boiler/Chiller Services</option>
+                    <option value="elevator-services">Elevator Services</option>
+                    <option value="garage-doors">Garage Door Services</option>
+                  </optgroup>
+                  <optgroup label="Consulting & Compliance">
+                    <option value="reserve-studies">Reserve Studies & Budget Planning</option>
+                    <option value="code-compliance">Chicago Building Code Compliance</option>
+                    <option value="ada-reviews">ADA Accessibility Reviews</option>
+                  </optgroup>
+                  <option value="multiple">Multiple Services Needed</option>
+                  <option value="other">Other Service Request</option>
                 </select>
+              </div>
+
+              <div id="other-service-field" style="display: none;">
+                <label for="other-service" class="block text-sm font-medium text-gray-700 mb-1">Please Specify Other Service</label>
+                <input type="text" id="other-service" name="other-service" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-400 focus:border-gray-400" placeholder="Describe the service you need" />
               </div>
 
               <div>
                 <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
-                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-primary-500 focus:border-primary-500"></textarea>
+                <textarea id="message" name="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-gray-400 focus:border-gray-400"></textarea>
               </div>
 
               <button type="submit" class="w-full bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700">
@@ -135,7 +166,7 @@ const schema = {
       <h2 class="text-3xl font-bold text-center mb-8">Why Choose Vector Building Services?</h2>
       <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
         <div class="text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
@@ -145,7 +176,7 @@ const schema = {
         </div>
 
         <div class="text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
@@ -155,7 +186,7 @@ const schema = {
         </div>
 
         <div class="text-center">
-          <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-gradient-to-br from-gray-50 to-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
             <svg class="w-8 h-8 text-primary-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
             </svg>
@@ -166,4 +197,15 @@ const schema = {
       </div>
     </div>
   </section>
+
+  <script>
+    document.getElementById('services').addEventListener('change', function() {
+      const otherField = document.getElementById('other-service-field');
+      if (this.value === 'other') {
+        otherField.style.display = 'block';
+      } else {
+        otherField.style.display = 'none';
+      }
+    });
+  </script>
 </BaseLayout>

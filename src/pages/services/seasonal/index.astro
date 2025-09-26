@@ -1,0 +1,257 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Seasonal Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Vector Building Services"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Chicago"
+  },
+  "description": "Year-round seasonal services including 24/7 snow removal, professional landscaping, and storm-flood response for Chicago properties."
+};
+---
+
+<BaseLayout
+  title="Seasonal Services | 24/7 Snow Removal, Landscaping, Storm Response | Vector"
+  description="Comprehensive year-round seasonal services in Chicago. 24/7 snow & ice removal, professional landscaping April-October, storm & flood response. Call (312) 522-5355."
+  schema={schema}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
+    <div class="container mx-auto px-4">
+      <nav class="text-sm mb-4">
+        <a href="/" class="hover:underline">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/services/" class="hover:underline">Services</a>
+        <span class="mx-2">/</span>
+        <span>Seasonal</span>
+      </nav>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Seasonal Services by Vector Building Services</h1>
+      <p class="text-xl text-gray-300">Year-round property care through Chicago's changing seasons</p>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 mb-8">
+          Chicago weather changes fast — from blizzards in January to thunderstorms in July. That's why your property needs a partner who can adapt with the seasons. At Vector Building Services, we provide comprehensive year-round care for condominium associations, HOAs, and commercial properties across Chicagoland. Our seasonal services ensure your buildings, grounds, and common areas stay safe, attractive, and well-maintained no matter the conditions.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24/7 Snow & Ice Removal -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">24/7 Snow & Ice Removal</h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+          Winters in Chicago are long, unpredictable, and demanding. Snow and ice aren't just inconveniences — they're safety hazards for residents, guests, and employees. With Vector Building Services on call 24/7, you'll never have to worry about accessibility or liability.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4">We offer flexible service options to match your property's needs and budget:</h3>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-100">
+            <h4 class="font-bold text-xl mb-3">Per-Push Service</h4>
+            <p class="text-gray-600">Pay only when snow falls and service is needed. This option works well for smaller properties or those with variable budgets.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-100">
+            <h4 class="font-bold text-xl mb-3">Seasonal Agreements</h4>
+            <p class="text-gray-600">Guarantee reliable coverage all winter long at a fixed monthly or seasonal cost. This ensures peace of mind and predictable expenses regardless of snowfall levels.</p>
+          </div>
+        </div>
+
+        <p class="text-gray-700">
+          Our snow removal crews are equipped with professional-grade plows, salters, and shovels, and we monitor weather forecasts to dispatch crews before, during, and after storms. From driveways and parking lots to sidewalks, stairs, and entryways, we keep your property safe, compliant, and accessible day and night.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Professional Landscaping -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Professional Landscaping (April 1 – October 31)</h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+          Once the snow melts, Chicago properties shift into a new season of maintenance. Our landscaping services run from April 1 through October 31, keeping your property fresh, green, and inviting.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4">Our services include:</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Weekly Mowing & Trimming</p>
+              <p class="text-gray-600">Neat, consistent lawn care that improves curb appeal.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Seasonal Plantings & Flower Beds</p>
+              <p class="text-gray-600">Bright, colorful displays that enhance common areas and entrances.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Mulching, Aeration & Fertilization</p>
+              <p class="text-gray-600">Healthy, vibrant lawns that withstand the summer heat.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Leaf Removal & Fall Cleanups</p>
+              <p class="text-gray-600">Proper seasonal transitions that prepare your property for winter.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-gray-700">
+          Landscaping is more than just cutting grass — it's about creating an environment where residents feel proud to live and guests are impressed the moment they arrive. With Vector Building Services, you'll see attention to detail in every blade of grass, every flowerbed, and every seasonal change.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Storm & Flood Response -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Storm & Flood Response</h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+          Storms and heavy rains can arrive with little warning. Flooded basements, blocked drains, and storm debris create urgent challenges for property managers. Our storm-response crews are always ready to step in when severe weather strikes.
+        </p>
+
+        <h3 class="text-2xl font-bold mb-4">We provide:</h3>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Emergency Water Removal & Pumping</p>
+              <p class="text-gray-600">Preventing long-term damage from flooding.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Debris Clearance</p>
+              <p class="text-gray-600">Removing branches, trash, and hazards from walkways and entrances.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Drainage Inspections</p>
+              <p class="text-gray-600">Making sure water flows away from buildings to reduce future flooding risks.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Vendor Coordination</p>
+              <p class="text-gray-600">Working with restoration contractors if specialized repairs are needed.</p>
+            </div>
+          </div>
+        </div>
+
+        <p class="text-gray-700">
+          With Vector Building Services, you're never alone when disaster hits. We respond quickly, minimize downtime, and protect your property investment.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Vector -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Why Choose Vector Building Services?</h2>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-gray-900">24/7 Availability</h3>
+            <p class="text-gray-600">Our crews are always on call, whether it's 2 a.m. during a snowstorm or 4 p.m. after a summer storm.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-gray-900">Flexible Agreements</h3>
+            <p class="text-gray-600">Choose between per-service pricing or seasonal contracts for cost control.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-gray-900">Local Expertise</h3>
+            <p class="text-gray-600">We know Chicago weather patterns and prepare ahead of time to minimize disruption.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow-xl border border-gray-100">
+            <h3 class="font-bold text-xl mb-3 text-gray-900">Full-Service Approach</h3>
+            <p class="text-gray-600">One partner for snow, landscaping, and storm response, with seamless year-round coverage.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-gray-900 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Keep Your Property Covered in Every Season</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        From the first snowflake of winter to the last leaf of autumn, Vector Building Services provides dependable, professional seasonal services across Chicago and the suburbs. Whether you need per-push snow plowing, a seasonal landscaping program, or rapid storm response, we're ready to help protect and enhance your property.
+      </p>
+      <p class="text-lg mb-8">
+        Contact Vector Building Services today to request a seasonal service agreement or schedule a consultation.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-white text-gray-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">
+          Request Quote
+        </a>
+        <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10">
+          (312) 522-5355
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-12 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h3 class="text-2xl font-bold mb-4">Serving Chicago and Suburbs</h3>
+        <p class="text-gray-600 mb-6">We provide seasonal services throughout Chicagoland</p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/locations/chicago/" class="text-primary-600 hover:underline font-medium">Chicago Neighborhoods</a>
+          <span class="text-gray-400">•</span>
+          <a href="/locations/suburbs/" class="text-primary-600 hover:underline font-medium">Suburban Communities</a>
+          <span class="text-gray-400">•</span>
+          <a href="/contact/" class="text-primary-600 hover:underline font-medium">Get Quote for Your Location</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
