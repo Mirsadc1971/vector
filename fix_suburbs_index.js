@@ -1,87 +1,48 @@
----
-import BaseLayout from '../../../layouts/BaseLayout.astro';
+const fs = require('fs');
 
-const schema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  "name": "Vector Building Services - Chicago Suburbs",
-  "description": "Building services for condominium associations and HOAs throughout Chicago's suburbs. Full janitorial, maintenance, and contracting support.",
-  "url": "https://vectorbuildingservices.com/locations/suburbs/",
-  "telephone": "+13125225355",
-  "areaServed": [
-    "Evanston", "Wilmette", "Winnetka", "Kenilworth", "Glencoe", "Highland Park",
-    "Lake Forest", "Glenview", "Northbrook", "Deerfield", "Buffalo Grove",
-    "Wheeling", "Lincolnshire", "Oak Brook", "Downers Grove", "Naperville",
-    "Elmhurst", "Libertyville", "Vernon Hills", "Lake Zurich", "Barrington"
-  ]
-};
+// Read the current file
+let content = fs.readFileSync('src/pages/locations/suburbs/index.astro', 'utf-8');
 
-const serviceAreas = [
-  {
-    region: "North Shore",
-    cities: [
-      { name: "Evanston", link: "/locations/suburbs/evanston/" },
-      { name: "Wilmette", link: "/locations/suburbs/wilmette/" },
-      { name: "Winnetka", link: "/locations/suburbs/winnetka/" },
-      { name: "Kenilworth", link: "/locations/suburbs/kenilworth/" },
-      { name: "Glencoe", link: "/locations/suburbs/glencoe/" },
-      { name: "Highland Park", link: "/locations/suburbs/highland-park/" },
-      { name: "Lake Forest", link: "/locations/suburbs/lake-forest/" }
-    ]
-  },
-  {
-    region: "Northwest Suburbs",
-    cities: [
-      { name: "Glenview", link: "/locations/suburbs/glenview/" },
-      { name: "Northbrook", link: "/locations/suburbs/northbrook/" },
-      { name: "Deerfield", link: "/locations/suburbs/deerfield/" },
-      { name: "Buffalo Grove", link: "/locations/suburbs/buffalo-grove/" },
-      { name: "Wheeling", link: "/locations/suburbs/wheeling/" },
-      { name: "Lincolnshire", link: "/locations/suburbs/lincolnshire/" }
-    ]
-  },
-  {
-    region: "Western Suburbs",
-    cities: [
-      { name: "Oak Brook", link: "/locations/suburbs/oak-brook/" },
-      { name: "Downers Grove", link: "/locations/suburbs/downers-grove/" },
-      { name: "Naperville", link: "/locations/suburbs/naperville/" },
-      { name: "Elmhurst", link: "/locations/suburbs/elmhurst/" }
-    ]
-  },
-  {
-    region: "Farther Suburbs",
-    cities: [
-      { name: "Libertyville", link: "/locations/suburbs/libertyville/" },
-      { name: "Vernon Hills", link: "/locations/suburbs/vernon-hills/" },
-      { name: "Lake Zurich", link: "/locations/suburbs/lake-zurich/" },
-      { name: "Barrington", link: "/locations/suburbs/barrington/" }
-    ]
-  }
-];
----
+// Remove the old intro and tailored solutions sections
+content = content.replace(/  <!-- Intro Section -->[\s\S]*?<!-- Tailored Solutions -->[\s\S]*?<\/section>\n\n/, '');
 
-<BaseLayout
-  title="Suburban HOA & Condo Services | Vector Building Services"
-  description="Expert HOA & condo services across Chicagoland suburbs. Snow removal, landscaping, maintenance & contracting. Trusted by boards for reliable results."
-  schema={schema}
->
-  <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
+// Replace Areas We Serve section with card layout
+const oldAreas = `  <!-- Areas We Serve -->
+  <section class="py-16">
     <div class="container mx-auto px-4">
-      <nav class="text-sm mb-4">
-        <a href="/" class="hover:underline">Home</a>
-        <span class="mx-2">/</span>
-        <a href="/locations/" class="hover:underline">Locations</a>
-        <span class="mx-2">/</span>
-        <span>Suburbs</span>
-      </nav>
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Areas We Serve</h2>
 
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Suburban Property Services by Vector Building Services</h1>
+        <p class="text-lg text-gray-700 mb-8">
+          We provide building services across many suburbs, including:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          {serviceAreas.map(area => (
+            <div class="bg-white border border-gray-200 p-6 rounded-lg">
+              <h3 class="font-bold text-xl mb-4 text-primary-600">{area.region}:</h3>
+              <div class="flex flex-wrap gap-2">
+                {area.cities.map((city, index) => (
+                  <>
+                    <a href={city.link} class="text-primary-600 hover:underline">
+                      {city.name}
+                    </a>
+                    {index < area.cities.length - 1 && <span class="text-gray-400">•</span>}
+                  </>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-sm text-gray-600 italic">
+          (Each of these locations should link to its own dedicated page for SEO.)
+        </p>
+      </div>
     </div>
-  </section>
+  </section>`;
 
-  <!-- Areas We Serve -->
+const newAreas = `  <!-- Areas We Serve -->
   <section class="py-16">
     <div class="container mx-auto px-4">
       <div class="max-w-7xl mx-auto">
@@ -180,79 +141,12 @@ const serviceAreas = [
         </div>
       </div>
     </div>
-  </section>
+  </section>`;
 
-  <!-- Why Suburban Associations Partner with Vector -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
-        <h2 class="text-3xl font-bold mb-8">Why Suburban Associations Choose Vector</h2>
+// Replace the old areas section
+content = content.replace(oldAreas, newAreas);
 
-        <div class="grid md:grid-cols-2 gap-6">
-          <div class="flex items-start">
-            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
-            <div>
-              <p class="font-semibold mb-1">Flexible maintenance programs built for HOA and condo boards</p>
-            </div>
-          </div>
+// Save the file
+fs.writeFileSync('src/pages/locations/suburbs/index.astro', content);
 
-          <div class="flex items-start">
-            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
-            <div>
-              <p class="font-semibold mb-1">Proven reputation in North Shore and suburban markets</p>
-            </div>
-          </div>
-
-          <div class="flex items-start">
-            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
-            <div>
-              <p class="font-semibold mb-1">Scalable solutions for both small associations and large multi-building complexes</p>
-            </div>
-          </div>
-
-          <div class="flex items-start">
-            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
-            <div>
-              <p class="font-semibold mb-1">Preventive maintenance that saves money over time</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-16 bg-gray-900 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Partner with Vector for Suburban Property Success</h2>
-      <p class="text-xl mb-8 max-w-3xl mx-auto">Your suburban community deserves a partner that understands its unique challenges. At Vector Building Services, we provide professional, reliable, and cost-effective building services tailored to suburban associations.</p>
-      <p class="text-lg mb-8">Schedule a consultation today to discover how Vector can improve operations, reduce costs, and protect the value of your property.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact/" class="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700">
-          Get Free Quote
-        </a>
-        <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10">
-          (312) 522-5355
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Related Links -->
-  <section class="py-12">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto">
-        <h3 class="text-xl font-bold mb-4">Explore Our Services</h3>
-        <div class="flex flex-wrap gap-4">
-          <a href="/services/interior/" class="text-primary-600 hover:underline">Interior Services</a>
-          <span class="text-gray-400">•</span>
-          <a href="/services/exterior/" class="text-primary-600 hover:underline">Exterior Services</a>
-          <span class="text-gray-400">•</span>
-          <a href="/services/seasonal/" class="text-primary-600 hover:underline">Snow & Seasonal</a>
-          <span class="text-gray-400">•</span>
-          <a href="/locations/chicago/" class="text-primary-600 hover:underline">Chicago Locations</a>
-        </div>
-      </div>
-    </div>
-  </section>
-</BaseLayout>
+console.log('Successfully updated suburbs index page with 17 card layout!');
