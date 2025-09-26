@@ -125,20 +125,6 @@
         "Exterior illumination"
       ],
       "slug": "lighting"
-    },
-    {
-      "id": "fire-life-safety",
-      "name": "Fire/Life Safety Systems",
-      "shortDescription": "Code-compliant safety system installation",
-      "description": "Installation and maintenance of fire suppression, alarm systems, and emergency egress solutions.",
-      "features": [
-        "Fire alarm systems",
-        "Sprinkler installation",
-        "Emergency lighting",
-        "Exit signage",
-        "Fire extinguisher services"
-      ],
-      "slug": "fire-life-safety"
     }
   ],
   "exterior": [
