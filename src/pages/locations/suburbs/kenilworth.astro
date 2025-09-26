@@ -1,0 +1,72 @@
+---
+import Layout from '../../../../layouts/Layout.astro';
+
+const meta = {
+  title: "Kenilworth HOA & Condo Services | Vector Building Services",
+  description: "Professional property services for HOAs & condos in Kenilworth, IL. Maintenance, landscaping & snow removal with 24/7 reliability.",
+  keywords: "Kenilworth HOA condominium property services, HOA maintenance Kenilworth Illinois, Snow removal Kenilworth"
+};
+---
+
+<Layout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏡 Kenilworth HOA & Condominium Property Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Property services for HOA and condo associations in one of the North Shore's most exclusive communities.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services provides property services for HOA and condo associations in Kenilworth, Illinois, one of the North Shore's most exclusive communities. With elegant residences and tightly knit neighborhoods, associations here expect discreet, high-quality service and preventive care.
+          </p>
+
+          <p class="text-lg leading-relaxed mb-8">
+            Whether your community is along Sheridan Road or set back on Kenilworth Avenue, we deliver maintenance, landscaping, snow removal, and contracting support that matches the expectations of residents.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Why Kenilworth Associations Trust Vector</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Familiar with high-end HOA needs</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Flexible agreements tailored to boards</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Preventive maintenance focus</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ On-call 24/7 for snow & storm events</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services Overview</h2>
+          <p class="mb-4"><strong>Interior:</strong> lobby/clubhouse upgrades, fitness centers, janitorial, lighting</p>
+          <p class="mb-4"><strong>Exterior:</strong> roofing, siding, drainage, masonry, parking areas</p>
+          <p class="mb-8"><strong>Seasonal:</strong> snow removal (per-push or seasonal), landscaping April–October, storm response</p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Serving Kenilworth & Nearby Areas</h2>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="/locations/suburbs/wilmette" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Wilmette</a>
+            <a href="/locations/suburbs/winnetka" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Winnetka</a>
+            <a href="/locations/suburbs/glencoe" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Glencoe</a>
+          </div>
+
+          <div class="text-center mb-12">
+            <a href="/locations/suburbs" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Suburbs Hub</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Schedule a consultation today to see how Vector can support your Kenilworth association.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Schedule Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
