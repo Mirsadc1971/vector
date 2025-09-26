@@ -1,14 +1,14 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import '../styles/global.css';
 
 const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Vector Building Services",
-  "description": "Full-service commercial property management in Chicago. Interior, exterior, security, maintenance, and emergency services for condominium associations and commercial properties.",
+  "description": "Professional commercial building services in Chicago and North Shore. Interior build-outs, exterior maintenance, emergency repairs, and compliance solutions.",
   "url": "https://vectorbuildingservices.com",
   "telephone": "+13125225355",
+  "email": "service@vectorbuildingservices.com",
   "address": {
     "@type": "PostalAddress",
     "streetAddress": "1400 Patriot Boulevard #2042",
@@ -17,78 +17,58 @@ const schema = {
     "postalCode": "60026",
     "addressCountry": "US"
   },
-  "areaServed": [
-    "Chicago",
-    "Glenview",
-    "Northbrook",
-    "Wilmette",
-    "Winnetka",
-    "Evanston",
-    "Skokie",
-    "North Shore"
-  ]
+  "areaServed": ["Chicago", "Glenview", "Northbrook", "Wilmette", "Winnetka", "Evanston", "North Shore"]
 };
 ---
 
 <BaseLayout
-  title="Full-Service Commercial Property Management Chicago | Vector Building Services"
-  description="Complete property management solutions for Chicago commercial properties. Janitorial, security, HVAC, electrical, plumbing, emergency repairs. Call (312) 522-5355."
+  title="Vector Building Services - Commercial Building Solutions"
+  description="Professional commercial building services in Chicago and North Shore. Interior build-outs, exterior maintenance, emergency repairs, and compliance solutions."
   schema={schema}
 >
+  <style>
+    .gradient-text {
+      background: linear-gradient(45deg, #007bff, #0056b3);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .service-card {
+      transition: all 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+    }
+
+    .feature-icon {
+      background: linear-gradient(45deg, #007bff, #0056b3);
+    }
+  </style>
+
   <!-- Hero Section -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-600">
-    <div class="absolute inset-0 bg-black/30"></div>
-
-    <div class="container mx-auto px-4 relative z-20">
-      <div class="max-w-5xl mx-auto text-center">
-        <!-- Trust Badge -->
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
-          <span class="text-green-400">✓</span>
-          <span class="text-white text-sm font-medium">Trusted by 200+ Condominium Associations</span>
-        </div>
-
-        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
-          Complete Property Management<br>
-          <span class="text-gradient">Solutions</span>
-        </h1>
-
-        <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
-          Comprehensive interior, exterior, security, and maintenance solutions for Chicago and North Shore commercial properties. From daily operations to emergency repairs to full building systems - we handle everything.
-        </p>
-
-        <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-          <a href="/contact/" class="px-8 py-4 bg-white text-primary-700 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all">
-            Get Free Quote
-          </a>
-          <a href="tel:3125225355" class="px-8 py-4 border-2 border-white text-white rounded-lg font-bold text-lg backdrop-blur-sm hover:bg-white/10 transition-all">
-            📞 (312) 522-5355
-          </a>
-          <a href="#emergency" class="px-8 py-4 bg-red-600 text-white rounded-lg font-bold text-lg hover:bg-red-700 transition-all">
-            24/7 Emergency Service
-          </a>
-        </div>
-
-        <!-- Stats -->
-        <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-white">15+</div>
-            <div class="text-sm text-blue-200">Years Experience</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-white">24/7</div>
-            <div class="text-sm text-blue-200">Emergency Service</div>
-          </div>
-          <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-white">Full</div>
-            <div class="text-sm text-blue-200">Service Company</div>
-          </div>
-        </div>
+  <section class="hero bg-gradient-to-br from-gray-900 via-gray-800 to-gray-700 text-white py-24 text-center relative">
+    <div class="container mx-auto px-4 relative z-10">
+      <h1 class="text-5xl md:text-7xl font-bold mb-5">
+        Complete Property Management
+        <span class="gradient-text block">Solutions</span>
+      </h1>
+      <p class="text-xl md:text-2xl mb-8 max-w-4xl mx-auto opacity-95">
+        Comprehensive interior, exterior, security, and maintenance solutions for Chicago and North Shore commercial properties. From daily operations to emergency repairs to full building systems - we handle everything.
+      </p>
+      <div class="flex flex-wrap gap-4 justify-center">
+        <a href="/contact/" class="bg-blue-600 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-blue-700">
+          Get Free Quote
+        </a>
+        <a href="#emergency" class="bg-red-600 text-white px-8 py-3 rounded-full font-semibold text-lg hover:bg-red-700">
+          24/7 Emergency Service
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- Complete Services Overview -->
+  <!-- Services Overview -->
   <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
@@ -98,34 +78,33 @@ const schema = {
         </p>
       </div>
 
-      <!-- Main Service Categories -->
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <!-- Interior Services -->
-        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-blue-600">
-          <div class="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl text-white">🏢</span>
+        <div class="service-card bg-white rounded-xl p-8 shadow-lg border-t-4 border-blue-600">
+          <div class="w-16 h-16 bg-blue-600 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">🏢</span>
           </div>
-          <h3 class="text-2xl font-bold mb-4">Interior Services</h3>
-          <p class="text-gray-600 mb-4">Comprehensive interior services from daily janitorial to major renovations.</p>
-          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+          <h3 class="text-2xl font-bold mb-3">Interior Services</h3>
+          <p class="text-gray-600 mb-4">Comprehensive interior services from daily janitorial to major renovations, keeping your commercial property pristine and functional.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-5">
             <li>• Daily/Weekly Janitorial & Cleaning</li>
             <li>• Critical Building Systems (HVAC, Electrical, Plumbing)</li>
             <li>• Major Equipment (Boilers, Chillers, Elevators)</li>
             <li>• Security Systems & Access Control</li>
-            <li>• Life Safety Systems (Fire Pumps, Panels)</li>
+            <li>• Life Safety Systems (Fire Pumps, Panels, Extinguishers)</li>
             <li>• Chicago DOB Code Compliance</li>
           </ul>
-          <a href="/services/interior/" class="text-blue-600 font-semibold">View All Interior Services</a>
+          <a href="/services/interior/" class="text-blue-600 font-semibold">View Interior Services</a>
         </div>
 
         <!-- Exterior Services -->
-        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-green-600">
-          <div class="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl text-white">🏗️</span>
+        <div class="service-card bg-white rounded-xl p-8 shadow-lg border-t-4 border-green-600">
+          <div class="w-16 h-16 bg-green-600 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">🏗️</span>
           </div>
-          <h3 class="text-2xl font-bold mb-4">Exterior Services</h3>
-          <p class="text-gray-600 mb-4">Complete exterior maintenance from routine cleaning to major façade work.</p>
-          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+          <h3 class="text-2xl font-bold mb-3">Exterior Services</h3>
+          <p class="text-gray-600 mb-4">Complete exterior maintenance from routine cleaning to major façade work, protecting your building's structure and appearance.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-5">
             <li>• Exterior Cleaning & Pressure Washing</li>
             <li>• Roof & Window Leak Repairs</li>
             <li>• Masonry, Façade & Deck Construction</li>
@@ -133,17 +112,17 @@ const schema = {
             <li>• Parking Lot & Drainage Maintenance</li>
             <li>• Waterproofing & Structural Repairs</li>
           </ul>
-          <a href="/services/exterior/" class="text-green-600 font-semibold">View All Exterior Services</a>
+          <a href="/services/exterior/" class="text-green-600 font-semibold">View Exterior Services</a>
         </div>
 
         <!-- Snow & Seasonal -->
-        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-purple-600">
-          <div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl text-white">❄️</span>
+        <div class="service-card bg-white rounded-xl p-8 shadow-lg border-t-4 border-purple-600">
+          <div class="w-16 h-16 bg-purple-600 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">❄️</span>
           </div>
-          <h3 class="text-2xl font-bold mb-4">Snow & Seasonal</h3>
-          <p class="text-gray-600 mb-4">Critical Chicago winter services with 24/7 snow removal.</p>
-          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+          <h3 class="text-2xl font-bold mb-3">Snow & Seasonal</h3>
+          <p class="text-gray-600 mb-4">Critical Chicago winter services with 24/7 snow removal and comprehensive seasonal preparation to keep your property accessible.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-5">
             <li>• 24/7 Snow Plowing & Removal</li>
             <li>• Sidewalk Shoveling (Chicago Ordinance)</li>
             <li>• Ice Management & Salt Application</li>
@@ -151,144 +130,230 @@ const schema = {
             <li>• Seasonal HVAC Preparation</li>
             <li>• Post-Storm Safety Inspections</li>
           </ul>
-          <a href="/services/seasonal/" class="text-purple-600 font-semibold">View Snow & Seasonal Services</a>
+          <a href="/services/seasonal/" class="text-purple-600 font-semibold">View Snow & Seasonal</a>
         </div>
 
-        <!-- Security & Access -->
-        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-teal-600">
-          <div class="w-16 h-16 bg-teal-600 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl text-white">🔐</span>
+        <!-- Maintenance & Emergency -->
+        <div class="service-card bg-white rounded-xl p-8 shadow-lg border-t-4 border-gray-600">
+          <div class="w-16 h-16 bg-gray-600 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">🔧</span>
           </div>
-          <h3 class="text-2xl font-bold mb-4">Security & Access Control</h3>
-          <p class="text-gray-600 mb-4">Complete security solutions for your property.</p>
-          <ul class="space-y-2 text-sm text-gray-700 mb-6">
-            <li>• Security Camera Installation</li>
-            <li>• Access Control Systems</li>
-            <li>• Key Fob Programming</li>
-            <li>• Garage Door Opener Setup</li>
-            <li>• Intercom Systems</li>
-            <li>• System Integration & Monitoring</li>
+          <h3 class="text-2xl font-bold mb-3">Maintenance & Emergency</h3>
+          <p class="text-gray-600 mb-4">Preventive maintenance plans and 24/7 emergency response to keep your property operating smoothly.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-5">
+            <li>• Preventive Maintenance Plans</li>
+            <li>• 24/7 Emergency Response</li>
+            <li>• Energy Efficiency Solutions</li>
+            <li>• ADA Compliance Services</li>
+            <li>• Permitting & Inspections</li>
+            <li>• Facility Management</li>
           </ul>
-          <a href="/services/specialty/security/" class="text-teal-600 font-semibold">View Security Services</a>
+          <a href="/services/maintenance/" class="text-gray-600 font-semibold">View Maintenance Plans</a>
         </div>
 
-        <!-- Life Safety -->
-        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-red-600">
-          <div class="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl text-white">🚨</span>
+        <!-- Complete Building Systems -->
+        <div class="service-card bg-white rounded-xl p-8 shadow-lg border-t-4 border-gray-600">
+          <div class="w-16 h-16 bg-gray-600 rounded-xl flex items-center justify-center mb-4">
+            <span class="text-2xl">🔧</span>
           </div>
-          <h3 class="text-2xl font-bold mb-4">Life Safety Systems</h3>
-          <p class="text-gray-600 mb-4">Fire and life safety system maintenance.</p>
-          <ul class="space-y-2 text-sm text-gray-700 mb-6">
-            <li>• Fire Pump Installation & Testing</li>
-            <li>• Fire Extinguisher Service</li>
-            <li>• Fire Panel Maintenance</li>
-            <li>• Sprinkler System Service</li>
-            <li>• Emergency Lighting</li>
-            <li>• Smoke Detector Testing</li>
+          <h3 class="text-2xl font-bold mb-3">Complete Building Systems</h3>
+          <p class="text-gray-600 mb-4">Full-service property management with security systems, access control, and all building operations to keep your property fully functional.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-5">
+            <li>• Security Camera Installation & Commissioning</li>
+            <li>• Access Control (Fobs, Garage Openers)</li>
+            <li>• Preventive Maintenance Programs</li>
+            <li>• 24/7 Emergency Response</li>
+            <li>• Building Systems Monitoring</li>
+            <li>• Complete Property Operations</li>
           </ul>
-          <a href="/services/interior/fire-life-safety/" class="text-red-600 font-semibold">View Life Safety Services</a>
-        </div>
-
-        <!-- Compliance -->
-        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-orange-600">
-          <div class="w-16 h-16 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
-            <span class="text-2xl text-white">🏛️</span>
-          </div>
-          <h3 class="text-2xl font-bold mb-4">Chicago DOB Compliance</h3>
-          <p class="text-gray-600 mb-4">Navigate city codes and compliance requirements.</p>
-          <ul class="space-y-2 text-sm text-gray-700 mb-6">
-            <li>• Building Code Compliance</li>
-            <li>• Permit Expediting</li>
-            <li>• Elevator Certifications</li>
-            <li>• Fire Safety Code</li>
-            <li>• ADA Accessibility</li>
-            <li>• Violation Remediation</li>
-          </ul>
-          <a href="/services/specialty/compliance/" class="text-orange-600 font-semibold">View Compliance Services</a>
+          <a href="/services/specialty/" class="text-gray-600 font-semibold">View All Systems</a>
         </div>
       </div>
 
       <!-- Detailed Service Breakdown -->
-      <div class="bg-white rounded-xl shadow-xl p-8 mb-12">
-        <h3 class="text-3xl font-bold mb-8 text-center">Complete Service Capabilities</h3>
+      <div class="mt-16">
+        <div class="text-center mb-12">
+          <h2 class="text-4xl font-bold mb-4">Complete Service Capabilities</h2>
+          <p class="text-xl text-gray-600">Every aspect of commercial building management, from routine maintenance to major construction projects.</p>
+        </div>
 
-        <div class="grid md:grid-cols-2 gap-8">
-          <!-- Interior Column -->
-          <div>
-            <h4 class="text-xl font-bold mb-4 text-blue-600">Interior Services</h4>
-
-            <div class="mb-6">
-              <h5 class="font-semibold mb-2">Janitorial & Cleaning:</h5>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Common area cleaning (lobbies, hallways, elevators)</li>
-                <li>• Trash/recycling & chute maintenance</li>
-                <li>• Carpet cleaning & floor care</li>
-                <li>• Restroom cleaning & supply restocking</li>
-                <li>• High-touch surface sanitization</li>
-              </ul>
-            </div>
-
-            <div class="mb-6">
-              <h5 class="font-semibold mb-2">Building Systems:</h5>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• HVAC maintenance & filter changes</li>
-                <li>• Electrical repairs & upgrades</li>
-                <li>• Plumbing repairs & riser replacement</li>
-                <li>• Boiler & chiller replacement/repairs</li>
-                <li>• Elevator upgrades & maintenance</li>
-                <li>• Exhaust fan systems</li>
-              </ul>
-            </div>
-
-            <div class="mb-6">
-              <h5 class="font-semibold mb-2">General Contracting:</h5>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Drywall repairs & painting</li>
-                <li>• Flooring replacement</li>
-                <li>• Community room renovations</li>
-                <li>• ADA compliance upgrades</li>
-                <li>• Mechanical/electrical upgrades</li>
-              </ul>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <!-- Janitorial & Cleaning -->
+          <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-blue-600">
+            <h3 class="text-blue-600 mb-5 flex items-center gap-2">
+              <span class="text-2xl">🧹</span>
+              <span class="font-bold text-xl">Janitorial & Cleaning</span>
+            </h3>
+            <div class="text-sm leading-relaxed text-gray-600">
+              <strong>Daily/Weekly Services:</strong><br>
+              • Common area cleaning (lobbies, hallways, elevators)<br>
+              • Trash/recycling & chute maintenance<br>
+              • Carpet cleaning & stain removal<br>
+              • Floor care (mopping, waxing, buffing)<br>
+              • Restroom cleaning & supply restocking<br>
+              • Interior window & glass cleaning<br>
+              • High-touch surface sanitization<br>
+              • Move-in/out cleaning coordination
             </div>
           </div>
 
-          <!-- Exterior Column -->
-          <div>
-            <h4 class="text-xl font-bold mb-4 text-green-600">Exterior Services</h4>
-
-            <div class="mb-6">
-              <h5 class="font-semibold mb-2">Cleaning & Grounds:</h5>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Pressure washing sidewalks & entrances</li>
-                <li>• Exterior window cleaning</li>
-                <li>• Graffiti removal</li>
-                <li>• Trash enclosure maintenance</li>
-                <li>• Landscaping & grounds keeping</li>
-              </ul>
+          <!-- Building Maintenance -->
+          <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-green-500">
+            <h3 class="text-green-500 mb-5 flex items-center gap-2">
+              <span class="text-2xl">🔧</span>
+              <span class="font-bold text-xl">Building Maintenance</span>
+            </h3>
+            <div class="text-sm leading-relaxed text-gray-600">
+              <strong>Systems & Repairs:</strong><br>
+              • Lighting inspection & bulb replacement<br>
+              • HVAC filter changes (common areas)<br>
+              • Plumbing repairs (leaks, faucets, drains)<br>
+              • Electrical repairs (outlets, switches, panels)<br>
+              • Fire/safety system inspections<br>
+              • Door & lock adjustments<br>
+              • Elevator coordination & upgrades<br>
+              • Preventive maintenance schedules<br>
+              • Chute repairs & maintenance<br>
+              • Window leak sealing & repairs<br>
+              • Exhaust fan replacement & repairs<br>
+              • Garage door replacement & repairs
             </div>
+          </div>
 
-            <div class="mb-6">
-              <h5 class="font-semibold mb-2">Building Maintenance:</h5>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Roof inspections & leak repairs</li>
-                <li>• Window leak sealing</li>
-                <li>• Gutter & downspout cleaning</li>
-                <li>• Concrete crack sealing</li>
-                <li>• Garage door replacement/repairs</li>
-                <li>• Drainage system maintenance</li>
-              </ul>
+          <!-- Interior Contracting -->
+          <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-yellow-500">
+            <h3 class="text-yellow-500 mb-5 flex items-center gap-2">
+              <span class="text-2xl">🏗️</span>
+              <span class="font-bold text-xl">Interior Contracting</span>
+            </h3>
+            <div class="text-sm leading-relaxed text-gray-600">
+              <strong>Renovation & Construction:</strong><br>
+              • Drywall repairs & interior painting<br>
+              • Flooring replacement (tile, vinyl, carpet)<br>
+              • Community room renovations<br>
+              • Millwork & cabinetry installation<br>
+              • Ceiling & acoustic panel work<br>
+              • Mechanical/electrical upgrades<br>
+              • ADA compliance improvements<br>
+              • Building decks & outdoor structures<br>
+              • Boiler replacement & repairs<br>
+              • Chiller replacement & repairs<br>
+              • Riser replacement & upgrades
             </div>
+          </div>
 
-            <div class="mb-6">
-              <h5 class="font-semibold mb-2">Construction & Repairs:</h5>
-              <ul class="text-sm text-gray-600 space-y-1">
-                <li>• Masonry & façade repairs</li>
-                <li>• Deck construction & repairs</li>
-                <li>• Parking lot maintenance</li>
-                <li>• Waterproofing & sealing</li>
-                <li>• Retaining wall repairs</li>
-              </ul>
+          <!-- Exterior Cleaning -->
+          <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-cyan-500">
+            <h3 class="text-cyan-500 mb-5 flex items-center gap-2">
+              <span class="text-2xl">🏢</span>
+              <span class="font-bold text-xl">Exterior Cleaning</span>
+            </h3>
+            <div class="text-sm leading-relaxed text-gray-600">
+              <strong>Cleaning & Grounds:</strong><br>
+              • Pressure washing (sidewalks, entrances)<br>
+              • Exterior window cleaning<br>
+              • Graffiti removal<br>
+              • Trash enclosure cleaning<br>
+              • Outdoor furniture maintenance<br>
+              • Walkway & garage cleaning
+            </div>
+          </div>
+
+          <!-- Exterior Maintenance -->
+          <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-500">
+            <h3 class="text-red-500 mb-5 flex items-center gap-2">
+              <span class="text-2xl">🔨</span>
+              <span class="font-bold text-xl">Exterior Maintenance</span>
+            </h3>
+            <div class="text-sm leading-relaxed text-gray-600">
+              <strong>Building Envelope:</strong><br>
+              • Parking lot & walkway lighting<br>
+              • Roof inspections & leak repairs<br>
+              • Gutter & downspout cleaning<br>
+              • Fence/gate maintenance<br>
+              • Drainage system inspections<br>
+              • Concrete crack sealing<br>
+              • Exterior painting & sealants<br>
+              • Masonry & façade repairs<br>
+              • Balcony & deck construction<br>
+              • Waterproofing & leak sealing
+            </div>
+          </div>
+
+          <!-- Snow & Seasonal -->
+          <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-purple-600">
+            <h3 class="text-purple-600 mb-5 flex items-center gap-2">
+              <span class="text-2xl">❄️</span>
+              <span class="font-bold text-xl">Snow & Seasonal</span>
+            </h3>
+            <div class="text-sm leading-relaxed text-gray-600">
+              <strong>Chicago Winter Critical:</strong><br>
+              • 24/7 snow plowing (lots, driveways, alleys)<br>
+              • Sidewalk shoveling (ordinance compliance)<br>
+              • Ice melt/salt application<br>
+              • Roof snow removal (prevent ice dams)<br>
+              • Post-storm safety inspections<br>
+              • Seasonal HVAC preparation<br>
+              • Spring/fall landscaping services
+            </div>
+          </div>
+
+          <!-- Security & Access Control -->
+          <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-teal-600">
+            <h3 class="text-teal-600 mb-5 flex items-center gap-2">
+              <span class="text-2xl">🔐</span>
+              <span class="font-bold text-xl">Security & Access Control</span>
+            </h3>
+            <div class="text-sm leading-relaxed text-gray-600">
+              <strong>Complete Security Solutions:</strong><br>
+              • Security camera installation & commissioning<br>
+              • Video surveillance system setup<br>
+              • Access control system installation<br>
+              • Key fob programming & distribution<br>
+              • Garage door opener programming<br>
+              • Intercom system installation<br>
+              • Card reader system setup<br>
+              • Security system maintenance & monitoring<br>
+              • Remote access configuration<br>
+              • System integration & upgrades
+            </div>
+          </div>
+
+          <!-- Life Safety Systems -->
+          <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-red-600">
+            <h3 class="text-red-600 mb-5 flex items-center gap-2">
+              <span class="text-2xl">🚨</span>
+              <span class="font-bold text-xl">Life Safety Systems</span>
+            </h3>
+            <div class="text-sm leading-relaxed text-gray-600">
+              <strong>Fire & Life Safety:</strong><br>
+              • Fire pump installation & maintenance<br>
+              • Fire extinguisher service & replacement<br>
+              • Fire panel testing & repairs<br>
+              • Sprinkler system maintenance<br>
+              • Emergency lighting systems<br>
+              • Exit sign maintenance<br>
+              • Smoke detector testing<br>
+              • Fire door inspections & repairs
+            </div>
+          </div>
+
+          <!-- Chicago DOB Compliance -->
+          <div class="bg-white rounded-xl p-8 shadow-lg border-l-4 border-orange-600">
+            <h3 class="text-orange-600 mb-5 flex items-center gap-2">
+              <span class="text-2xl">🏛️</span>
+              <span class="font-bold text-xl">Chicago DOB Compliance</span>
+            </h3>
+            <div class="text-sm leading-relaxed text-gray-600">
+              <strong>City Code Compliance:</strong><br>
+              • Chicago Department of Buildings permits<br>
+              • Building code compliance inspections<br>
+              • Elevator compliance & certifications<br>
+              • Fire safety code compliance<br>
+              • ADA accessibility compliance<br>
+              • Permit expediting services<br>
+              • Code violation remediation<br>
+              • DOB inspection coordination
             </div>
           </div>
         </div>
@@ -296,134 +361,122 @@ const schema = {
     </div>
   </section>
 
-  <!-- Why Choose Vector -->
-  <section class="py-16 bg-primary-900 text-white">
+  <!-- Locations -->
+  <section class="py-20 bg-white">
     <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12">Why Choose Vector Building Services</h2>
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Serving Chicago & North Shore</h2>
+        <p class="text-xl text-gray-600">Local expertise with deep knowledge of building codes, regulations, and community requirements across our service areas.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+          <h4 class="text-xl font-bold mb-2">Chicago</h4>
+          <p class="text-gray-600">Downtown, Loop, River North, and surrounding commercial districts</p>
+          <a href="/locations/chicago/" class="text-blue-600 font-semibold mt-3 inline-block">Chicago Services</a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+          <h4 class="text-xl font-bold mb-2">Glenview</h4>
+          <p class="text-gray-600">Commercial properties and office complexes</p>
+          <a href="/locations/glenview/" class="text-blue-600 font-semibold mt-3 inline-block">Glenview Services</a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+          <h4 class="text-xl font-bold mb-2">Northbrook</h4>
+          <p class="text-gray-600">Business parks and retail centers</p>
+          <a href="/locations/northbrook/" class="text-blue-600 font-semibold mt-3 inline-block">Northbrook Services</a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+          <h4 class="text-xl font-bold mb-2">Wilmette</h4>
+          <p class="text-gray-600">Mixed-use developments and commercial spaces</p>
+          <a href="/locations/wilmette/" class="text-blue-600 font-semibold mt-3 inline-block">Wilmette Services</a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+          <h4 class="text-xl font-bold mb-2">Evanston</h4>
+          <p class="text-gray-600">University and corporate facilities</p>
+          <a href="/locations/evanston/" class="text-blue-600 font-semibold mt-3 inline-block">Evanston Services</a>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-xl text-center hover:shadow-lg transition-shadow">
+          <h4 class="text-xl font-bold mb-2">All North Shore</h4>
+          <p class="text-gray-600">Complete coverage of Chicagoland commercial markets</p>
+          <a href="/locations/north-shore/" class="text-blue-600 font-semibold mt-3 inline-block">View All Locations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="py-20 bg-gray-900 text-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-4xl font-bold mb-4">Why Choose Vector Building Services</h2>
+        <p class="text-xl opacity-90">Professional excellence, reliable service, and comprehensive solutions that keep your commercial property operating at its best.</p>
+      </div>
 
       <div class="grid md:grid-cols-3 gap-8">
         <div class="text-center">
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">🎯</span>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Full-Service Company</h3>
-          <p class="text-blue-100">Complete property management from janitorial to major construction - one company, all solutions.</p>
+          <h4 class="text-xl font-bold mb-3">Local Expertise</h4>
+          <p class="opacity-90">Deep knowledge of Chicago and North Shore building codes, permits, and regulations. We navigate local requirements efficiently.</p>
         </div>
 
         <div class="text-center">
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">⚡</span>
           </div>
-          <h3 class="text-xl font-semibold mb-2">24/7 Emergency Response</h3>
-          <p class="text-blue-100">Round-the-clock emergency service for all building issues - we're always ready.</p>
+          <h4 class="text-xl font-bold mb-3">24/7 Emergency Service</h4>
+          <p class="opacity-90">Round-the-clock emergency response for critical building issues. We're always ready when you need us most.</p>
         </div>
 
         <div class="text-center">
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">✅</span>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Licensed & Insured</h3>
-          <p class="text-blue-100">Fully licensed contractors with comprehensive insurance - your property is protected.</p>
+          <h4 class="text-xl font-bold mb-3">Licensed & Insured</h4>
+          <p class="opacity-90">Fully licensed contractors with comprehensive insurance coverage. Your property and investment are protected.</p>
         </div>
 
         <div class="text-center">
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">🏆</span>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Chicago Expertise</h3>
-          <p class="text-blue-100">Deep knowledge of Chicago codes, permits, and regulations - we navigate compliance efficiently.</p>
+          <h4 class="text-xl font-bold mb-3">Quality Guarantee</h4>
+          <p class="opacity-90">We stand behind our work with comprehensive warranties and a commitment to excellence on every project.</p>
         </div>
 
         <div class="text-center">
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">📋</span>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Single Point of Contact</h3>
-          <p class="text-blue-100">One call handles everything - no more managing multiple vendors and contractors.</p>
+          <h4 class="text-xl font-bold mb-3">Project Management</h4>
+          <p class="opacity-90">Dedicated project coordinators ensure clear communication, timely completion, and minimal disruption to your operations.</p>
         </div>
 
         <div class="text-center">
-          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+          <div class="feature-icon w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
             <span class="text-2xl">💡</span>
           </div>
-          <h3 class="text-xl font-semibold mb-2">Cost-Effective Solutions</h3>
-          <p class="text-blue-100">Bundled services and preventive maintenance save money versus emergency repairs.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Service Areas -->
-  <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-      <h2 class="text-4xl font-bold text-center mb-12">Serving Chicago & North Shore</h2>
-      <p class="text-center text-xl text-gray-600 mb-8">Local expertise with deep knowledge of building requirements across our service areas.</p>
-
-      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="font-bold text-lg mb-2">Chicago</h3>
-          <p class="text-gray-600 text-sm">Downtown, Loop, River North</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="font-bold text-lg mb-2">Glenview</h3>
-          <p class="text-gray-600 text-sm">Corporate headquarters</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="font-bold text-lg mb-2">Northbrook</h3>
-          <p class="text-gray-600 text-sm">Business parks</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="font-bold text-lg mb-2">Wilmette</h3>
-          <p class="text-gray-600 text-sm">Mixed-use properties</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="font-bold text-lg mb-2">Winnetka</h3>
-          <p class="text-gray-600 text-sm">Commercial centers</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="font-bold text-lg mb-2">Evanston</h3>
-          <p class="text-gray-600 text-sm">University facilities</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="font-bold text-lg mb-2">Skokie</h3>
-          <p class="text-gray-600 text-sm">Office complexes</p>
-        </div>
-        <div class="bg-white p-6 rounded-lg shadow text-center">
-          <h3 class="font-bold text-lg mb-2">All North Shore</h3>
-          <p class="text-gray-600 text-sm">Complete coverage</p>
+          <h4 class="text-xl font-bold mb-3">Innovative Solutions</h4>
+          <p class="opacity-90">Energy-efficient upgrades, smart building technologies, and sustainable practices that save money long-term.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Emergency Banner -->
-  <section class="bg-red-600 text-white py-12" id="emergency">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">24/7 Emergency Service</h2>
-      <p class="text-xl mb-6">Building emergency? We respond immediately to protect your property.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:3125225355" class="text-4xl font-bold hover:underline">
-          📞 (312) 522-5355
-        </a>
-        <a href="/services/specialty/emergency/" class="px-8 py-3 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100">
-          Emergency Services Details
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- CTA Section -->
-  <section class="py-16 bg-primary-600 text-white">
-    <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Ready to Experience Full-Service Property Management?</h2>
-      <p class="text-xl mb-8">One company. All services. Complete peace of mind.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact/" class="px-8 py-3 bg-white text-primary-700 rounded-lg font-semibold hover:bg-gray-100">
-          Get Free Quote
-        </a>
-        <a href="/services/" class="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10">
-          View All Services
-        </a>
+  <section class="bg-red-600 text-white py-16 text-center" id="emergency">
+    <div class="container mx-auto px-4">
+      <h3 class="text-3xl font-bold mb-4">24/7 Emergency Service</h3>
+      <p class="text-xl mb-8">Building emergency? We respond immediately to protect your property and business operations.</p>
+      <div class="flex flex-wrap gap-6 justify-center items-center">
+        <a href="tel:3125225355" class="text-4xl font-bold hover:underline">(312) 522-5355</a>
+        <a href="/services/specialty/emergency/" class="bg-white text-red-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100">Emergency Services</a>
       </div>
     </div>
   </section>
