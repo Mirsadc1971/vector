@@ -5,5 +5,8 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://vectorbuildingservices.com',
   integrations: [tailwind(), sitemap()],
-  trailingSlash: 'always',
+  trailingSlash: 'ignore',
+  build: {
+    format: 'directory'
+  }
 });

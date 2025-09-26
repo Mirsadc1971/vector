@@ -1,0 +1,61 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Page Not Found - Vector Building Services"
+  description="The page you're looking for doesn't exist. Return to our homepage for commercial cleaning services in Chicago."
+>
+  <section class="min-h-screen flex items-center justify-center py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-6xl font-bold text-primary-600 mb-4">404</h1>
+      <h2 class="text-3xl font-semibold mb-4">Page Not Found</h2>
+      <p class="text-xl text-gray-600 mb-8">
+        Sorry, we couldn't find the page you're looking for.
+      </p>
+
+      <div class="space-y-4 mb-8">
+        <p class="text-gray-600">Here are some helpful links:</p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <a href="/" class="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700">
+            Go to Homepage
+          </a>
+          <a href="/contact/" class="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50">
+            Contact Us
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12">
+        <h3 class="text-xl font-semibold mb-4">Popular Services</h3>
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 max-w-3xl mx-auto">
+          <a href="/commercial-office-cleaning-downtown-chicago/" class="text-primary-600 hover:underline">
+            Office Cleaning Chicago
+          </a>
+          <a href="/medical-facility-cleaning-glenview/" class="text-primary-600 hover:underline">
+            Medical Facility Cleaning
+          </a>
+          <a href="/retail-store-janitorial-northbrook/" class="text-primary-600 hover:underline">
+            Retail Store Cleaning
+          </a>
+          <a href="/restaurant-cleaning-services-naperville/" class="text-primary-600 hover:underline">
+            Restaurant Cleaning
+          </a>
+          <a href="/warehouse-floor-care-schaumburg/" class="text-primary-600 hover:underline">
+            Warehouse Floor Care
+          </a>
+          <a href="/services/interior/janitorial/" class="text-primary-600 hover:underline">
+            Janitorial Services
+          </a>
+        </div>
+      </div>
+
+      <div class="mt-12 text-gray-600">
+        <p>Need immediate assistance?</p>
+        <a href="tel:3125225355" class="text-2xl text-primary-600 hover:text-primary-700 font-semibold">
+          (312) 522-5355
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
