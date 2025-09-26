@@ -1,0 +1,190 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Vector Building Services - Chicago",
+  "description": "Building services for condominium associations and HOAs throughout Chicago. Interior, exterior, and seasonal services for all Chicago neighborhoods.",
+  "url": "https://vectorbuildingservices.com/locations/chicago/",
+  "telephone": "+13125225355",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Chicago",
+    "addressRegion": "IL",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Chicago"
+  }
+};
+
+const neighborhoods = [
+  { name: "Downtown / Loop", description: "high-rise condos, commercial build-outs, and office spaces" },
+  { name: "North Side", description: "Lakeview, Lincoln Park, Uptown, and Rogers Park associations" },
+  { name: "West Side", description: "West Loop, Ukrainian Village, Logan Square" },
+  { name: "South Side", description: "Hyde Park, Bronzeville, South Loop communities" }
+];
+---
+
+<BaseLayout
+  title="Building Services in Chicago, IL | Vector Building Services"
+  description="Professional building services for Chicago condominium associations and HOAs. Interior, exterior, janitorial, maintenance, and emergency repairs throughout Chicago neighborhoods."
+  schema={schema}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
+    <div class="container mx-auto px-4">
+      <nav class="text-sm mb-4">
+        <a href="/" class="hover:underline">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/locations/" class="hover:underline">Locations</a>
+        <span class="mx-2">/</span>
+        <span>Chicago</span>
+      </nav>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Building Services in Chicago, IL</h1>
+    </div>
+  </section>
+
+  <!-- Intro Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 mb-8">
+          At Vector Building Services, we proudly serve condominium associations, HOAs, and multi-unit properties throughout Chicago's diverse neighborhoods. From historic brownstones on the North Side to high-rise condominiums in the Loop, our team brings the local knowledge, craftsmanship, and reliability that Chicago communities expect.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interior & Exterior Expertise -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Interior & Exterior Expertise Across the City</h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+          We understand the unique needs of Chicago properties. Our services cover everything from janitorial and preventive maintenance to major renovations and emergency repairs. With decades of combined experience, we help buildings withstand Chicago's tough winters, humid summers, and strict city codes.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Interior</h3>
+            <p class="text-gray-600">Lobby upgrades, elevator modernization, electrical, plumbing, fire/life safety.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Exterior</h3>
+            <p class="text-gray-600">Roofing, tuckpointing, waterproofing, parking lots, and façade repairs.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Seasonal</h3>
+            <p class="text-gray-600">24/7 snow removal, salting, and storm response.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Neighborhoods We Serve -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Neighborhoods We Serve in Chicago</h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+          Our service extends across the city, including but not limited to:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          {neighborhoods.map(neighborhood => (
+            <div class="bg-white border border-gray-200 p-6 rounded-lg">
+              <h3 class="font-bold text-xl mb-2">{neighborhood.name}</h3>
+              <p class="text-gray-600">{neighborhood.description}</p>
+            </div>
+          ))}
+        </div>
+
+        <p class="text-gray-700">
+          Each neighborhood presents its own challenges — from older masonry buildings to modern glass towers — and Vector delivers tailored solutions for all.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Chicago Associations Choose Vector -->
+  <section class="py-16 bg-primary-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Why Chicago Associations Choose Vector</h2>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Familiarity with Chicago building codes and ordinances</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">24/7 emergency response within city limits</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Experience with condo boards and property managers</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <p class="font-semibold mb-1">Proven results with local references and case studies</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Contact us today for a consultation in Chicago</h2>
+      <p class="text-xl mb-8">Let us show you how Vector can serve your Chicago property</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-white text-primary-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">
+          Get Free Quote
+        </a>
+        <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10">
+          (312) 522-5355
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Links -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-xl font-bold mb-4">Explore Our Services</h3>
+        <div class="flex flex-wrap gap-4">
+          <a href="/services/interior/" class="text-primary-600 hover:underline">Interior Services</a>
+          <span class="text-gray-400">•</span>
+          <a href="/services/exterior/" class="text-primary-600 hover:underline">Exterior Services</a>
+          <span class="text-gray-400">•</span>
+          <a href="/services/seasonal/" class="text-primary-600 hover:underline">Snow & Seasonal</a>
+          <span class="text-gray-400">•</span>
+          <a href="/locations/suburbs/" class="text-primary-600 hover:underline">Suburban Locations</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
