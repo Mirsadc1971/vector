@@ -1,0 +1,243 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "HVAC Services",
+  "provider": {
+    "@type": "Organization",
+    "name": "Vector Building Services"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Chicago"
+  },
+  "description": "Complete HVAC services for HOAs and condominiums including maintenance, repairs, replacements, and 24/7 emergency response."
+};
+---
+
+<BaseLayout
+  title="HVAC Services for HOAs & Condominiums | Vector Building Services"
+  description="Professional HVAC services for Chicago HOAs and condominiums. Heating, cooling, ventilation maintenance, repairs, replacements. 24/7 emergency service. Call (312) 522-5355."
+  schema={schema}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
+    <div class="container mx-auto px-4">
+      <nav class="text-sm mb-4">
+        <a href="/" class="hover:underline">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/services/" class="hover:underline">Services</a>
+        <span class="mx-2">/</span>
+        <a href="/services/interior/" class="hover:underline">Interior</a>
+        <span class="mx-2">/</span>
+        <span>HVAC</span>
+      </nav>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">HVAC Services for HOAs & Condominiums</h1>
+      <p class="text-xl text-gray-300">Reliable heating, cooling, and ventilation solutions for Chicago properties</p>
+    </div>
+  </section>
+
+  <!-- Our Work Process -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center">Our HVAC Service Process</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+        <div class="text-center">
+          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">📞</span>
+          </div>
+          <h3 class="font-bold text-xl mb-2">01 Let's Talk Needs</h3>
+          <p class="text-gray-600">Boards share HVAC concerns — temperature complaints, high energy bills, or aging equipment. We assess and outline solutions.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">📝</span>
+          </div>
+          <h3 class="font-bold text-xl mb-2">02 Plan It Out</h3>
+          <p class="text-gray-600">We inspect all units and common areas, create maintenance schedules, and provide clear pricing for repairs or replacements.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">🛠️</span>
+          </div>
+          <h3 class="font-bold text-xl mb-2">03 Get to Work</h3>
+          <p class="text-gray-600">Our certified technicians handle everything from filter changes to emergency repairs — keeping residents comfortable year-round.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-3xl">✅</span>
+          </div>
+          <h3 class="font-bold text-xl mb-2">04 Review & Maintain</h3>
+          <p class="text-gray-600">Regular preventive maintenance, seasonal tune-ups, and 24/7 emergency support keep your systems running efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 mb-8">
+          HVAC systems are the backbone of resident comfort in Chicago's extreme weather. From sub-zero winters to humid summers, your heating and cooling systems work overtime. Vector Building Services provides comprehensive HVAC services specifically designed for HOAs and condominium associations, ensuring optimal performance, energy efficiency, and resident satisfaction.
+        </p>
+        <p class="text-lg text-gray-700 mb-8">
+          We understand that HVAC issues can't wait. That's why we offer 24/7 emergency response alongside scheduled maintenance programs that prevent problems before they start.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Grid -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-12 text-center">Complete HVAC Services</h2>
+
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-xl mb-3 text-blue-900">Preventive Maintenance</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>• Monthly/quarterly filter changes</li>
+            <li>• Seasonal system tune-ups</li>
+            <li>• Coil cleaning and inspection</li>
+            <li>• Belt and motor lubrication</li>
+            <li>• Refrigerant level checks</li>
+            <li>• Thermostat calibration</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-xl mb-3 text-blue-900">Repairs & Troubleshooting</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>• No heat/cooling diagnostics</li>
+            <li>• Compressor repairs</li>
+            <li>• Fan motor replacement</li>
+            <li>• Control board repairs</li>
+            <li>• Leak detection and repair</li>
+            <li>• Ductwork sealing</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-xl mb-3 text-blue-900">System Replacements</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>• Boiler replacement</li>
+            <li>• Chiller upgrades</li>
+            <li>• Rooftop unit installation</li>
+            <li>• Heat pump systems</li>
+            <li>• Energy-efficient upgrades</li>
+            <li>• Smart thermostat installation</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-xl mb-3 text-blue-900">Indoor Air Quality</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>• Air purification systems</li>
+            <li>• Humidity control</li>
+            <li>• UV light installation</li>
+            <li>• Ventilation improvements</li>
+            <li>• Exhaust fan repairs</li>
+            <li>• Fresh air intake systems</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-xl mb-3 text-blue-900">Emergency Services</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>• 24/7 emergency response</li>
+            <li>• Heating failures in winter</li>
+            <li>• Cooling failures in summer</li>
+            <li>• Gas leak response</li>
+            <li>• Water leak from HVAC</li>
+            <li>• Temporary heating/cooling</li>
+          </ul>
+        </div>
+
+        <div class="bg-gray-50 p-6 rounded-lg">
+          <h3 class="font-bold text-xl mb-3 text-blue-900">Energy Management</h3>
+          <ul class="space-y-2 text-gray-600">
+            <li>• Energy audits</li>
+            <li>• System optimization</li>
+            <li>• Programmable controls</li>
+            <li>• Building automation</li>
+            <li>• Utility rebate assistance</li>
+            <li>• LEED compliance support</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Common Issues -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-8">Common HVAC Issues in Chicago HOAs</h2>
+
+        <div class="space-y-6">
+          <div>
+            <h3 class="text-xl font-bold mb-2">Uneven Heating/Cooling</h3>
+            <p class="text-gray-700">Multi-story buildings often struggle with temperature consistency. Top floors too hot, ground floors too cold. We balance systems for uniform comfort.</p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-2">High Energy Bills</h3>
+            <p class="text-gray-700">Aging equipment and poor maintenance drive up costs. Our efficiency upgrades and maintenance programs can reduce bills by 20-30%.</p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-2">Noise Complaints</h3>
+            <p class="text-gray-700">Rattling ducts, squealing fans, and vibrating equipment disturb residents. We diagnose and eliminate HVAC noise issues.</p>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-2">Poor Air Quality</h3>
+            <p class="text-gray-700">Dust, allergens, and odors circulate through poorly maintained systems. Regular filter changes and duct cleaning improve air quality.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-8">Serving Chicago & Suburbs</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          We provide HVAC services throughout Chicagoland, with rapid response times for emergency calls.
+        </p>
+        <div class="flex flex-wrap gap-4 justify-center">
+          <a href="/locations/chicago/" class="bg-blue-100 hover:bg-blue-200 px-6 py-2 rounded-lg transition">Chicago Neighborhoods</a>
+          <a href="/locations/suburbs/" class="bg-blue-100 hover:bg-blue-200 px-6 py-2 rounded-lg transition">North Shore Suburbs</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-blue-900 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Keep Your Building Comfortable Year-Round</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        Don't wait for HVAC failures. Schedule preventive maintenance or get emergency repairs from Chicago's trusted HVAC professionals.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">
+          Get Free Quote
+        </a>
+        <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10">
+          (312) 522-5355
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
