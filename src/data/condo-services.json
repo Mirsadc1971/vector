@@ -1,0 +1,118 @@
+{
+  "interior": [
+    {
+      "category": "Janitorial & Cleaning",
+      "services": [
+        "Daily/weekly cleaning of common areas (lobbies, hallways, stairwells, elevators)",
+        "Trash/recycling collection & chute maintenance",
+        "Carpet cleaning & stain removal",
+        "Floor care (mopping, waxing, polishing, buffing)",
+        "Restroom cleaning & restocking supplies",
+        "Window & glass cleaning (interior side)",
+        "Sanitization of high-touch surfaces (buttons, handles, railings)",
+        "Move-in/move-out cleaning of common areas"
+      ]
+    },
+    {
+      "category": "Maintenance",
+      "services": [
+        "Lighting inspection & bulb replacement",
+        "HVAC filter changes (common spaces)",
+        "Minor plumbing (leaks, faucet replacements, drain unclogging)",
+        "Electrical repairs (outlet, switch, breaker resets, fixture repair)",
+        "Fire/safety system checks (alarms, extinguishers, sprinklers)",
+        "Fire pump maintenance and testing",
+        "Fire panel monitoring and maintenance",
+        "Door & lock adjustments (common areas)",
+        "Elevator cleaning & coordination with service vendors",
+        "Elevator upgrades and modernization",
+        "Preventive maintenance inspections (monthly/quarterly checklists)",
+        "Chute repairs and maintenance",
+        "Window leak repairs",
+        "Life safety systems maintenance"
+      ]
+    },
+    {
+      "category": "General Contracting",
+      "services": [
+        "Drywall repairs & painting of hallways, lobbies, meeting rooms",
+        "Flooring replacement/repair (tile, vinyl, carpet)",
+        "Renovations of community rooms, fitness centers, laundry facilities",
+        "Millwork & cabinetry (common kitchens, storage areas)",
+        "Ceiling & acoustic panel repairs",
+        "Mechanical/electrical upgrades in basements/boiler rooms",
+        "Compliance upgrades (ADA ramps, signage, safety rails)",
+        "Electrical system repairs and upgrades",
+        "Riser replacement",
+        "Boiler replacement and repairs",
+        "Chiller replacement and repairs",
+        "Exhaust fan replacement and repairs",
+        "City of Chicago Department of Buildings Code Compliance"
+      ]
+    }
+  ],
+  "exterior": [
+    {
+      "category": "Janitorial & Grounds",
+      "services": [
+        "Pressure washing sidewalks, entryways, and garage floors",
+        "Exterior window cleaning (ground-level + coordination for high-rise)",
+        "Graffiti removal",
+        "Trash enclosure cleaning & odor control",
+        "Common outdoor furniture cleaning"
+      ]
+    },
+    {
+      "category": "Maintenance",
+      "services": [
+        "Lighting inspection & replacement (parking lots, garages, walkways)",
+        "Roof inspections (visual checks, minor leak patching)",
+        "Roof leak repairs",
+        "Gutter & downspout cleaning",
+        "Fence/gate lubrication and repair",
+        "Drainage system checks (prevent flooding in heavy rains)",
+        "Concrete crack sealing (walkways, steps, curbs)",
+        "Exterior painting & sealants",
+        "Façade inspections & tuckpointing coordination",
+        "Building deck repairs and maintenance",
+        "Garage door replacement and repairs",
+        "Plumbing repairs and maintenance"
+      ]
+    },
+    {
+      "category": "General Contracting",
+      "services": [
+        "Masonry repairs (brick, stone, stucco, EIFS)",
+        "Balcony/deck inspections & repairs",
+        "Deck construction and replacement",
+        "Roofing repairs & full replacement (coordination if large-scale)",
+        "Garage/parking lot maintenance (paving, striping, sealing)",
+        "Retaining wall repairs & rebuilds",
+        "Entryway canopy or awning installation/repairs",
+        "Landscape hardscaping (pavers, outdoor seating, planters)"
+      ]
+    }
+  ],
+  "seasonal": [
+    {
+      "category": "Snow & Ice Services",
+      "services": [
+        "24/7 snow plowing for driveways, alleys, and parking lots",
+        "Sidewalk & stair shoveling (per Chicago ordinance)",
+        "Ice melt/salt application (eco-friendly options available)",
+        "Roof snow removal (prevent ice dams & leaks)",
+        "Post-storm cleanup & safety inspections"
+      ]
+    },
+    {
+      "category": "Seasonal Maintenance",
+      "services": [
+        "Seasonal landscaping (spring planting, fall leaf removal)",
+        "Seasonal HVAC prep (AC spring startup, boiler/winterization)",
+        "Gutter cleaning (spring & fall)",
+        "Window washing (spring & fall)",
+        "Parking lot sweeping"
+      ]
+    }
+  ]
+}
