@@ -6,7 +6,7 @@ const schema = {
   "@context": "https://schema.org",
   "@type": "LocalBusiness",
   "name": "Vector Building Services",
-  "description": "Professional building services for condominium associations in Chicago and suburbs. Interior and exterior maintenance.",
+  "description": "Full-service commercial property management in Chicago. Interior, exterior, security, maintenance, and emergency services for condominium associations and commercial properties.",
   "url": "https://vectorbuildingservices.com",
   "telephone": "+13125225355",
   "address": {
@@ -17,514 +17,414 @@ const schema = {
     "postalCode": "60026",
     "addressCountry": "US"
   },
-  "geo": {
-    "@type": "GeoCoordinates",
-    "latitude": 42.0697,
-    "longitude": -87.7878
-  },
   "areaServed": [
     "Chicago",
     "Glenview",
     "Northbrook",
-    "Skokie",
+    "Wilmette",
+    "Winnetka",
     "Evanston",
-    "Naperville",
-    "Schaumburg",
-    "Oak Brook"
+    "Skokie",
+    "North Shore"
   ]
 };
 ---
 
 <BaseLayout
-  title="Condominium Association Building Services Chicago"
-  description="Vector Building Services provides professional interior and exterior services for condominium associations throughout Chicago and suburbs. Call (312) 522-5355."
+  title="Full-Service Commercial Property Management Chicago | Vector Building Services"
+  description="Complete property management solutions for Chicago commercial properties. Janitorial, security, HVAC, electrical, plumbing, emergency repairs. Call (312) 522-5355."
   schema={schema}
 >
-  <!-- Hero Section with Video Background -->
-  <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <!-- Background Image with Overlay -->
-    <div class="absolute inset-0 z-0">
-      <div class="absolute inset-0 bg-gradient-to-br from-primary-900/90 via-primary-800/85 to-primary-600/90 z-10"></div>
-      <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGRlZnM+CjxwYXR0ZXJuIGlkPSJncmlkIiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+CjxwYXRoIGQ9Ik0gMTAwIDAgTCAwIDAgMCAxMDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzAwMDAwMCIgc3Ryb2tlLXdpZHRoPSIwLjUiIG9wYWNpdHk9IjAuMSIvPgo8L3BhdHRlcm4+CjwvZGVmcz4KPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmlkKSIgLz4KPC9zdmc+')] opacity-20"></div>
-    </div>
-
-    <!-- Animated particles -->
-    <div class="absolute inset-0 z-5">
-      <div class="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float"></div>
-      <div class="absolute bottom-20 right-10 w-96 h-96 bg-primary-300/10 rounded-full blur-3xl animate-float" style="animation-delay: 2s"></div>
-    </div>
+  <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-600">
+    <div class="absolute inset-0 bg-black/30"></div>
 
     <div class="container mx-auto px-4 relative z-20">
-      <div class="max-w-4xl mx-auto text-center">
+      <div class="max-w-5xl mx-auto text-center">
         <!-- Trust Badge -->
-        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6 animate-fade-in-up">
-          <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20">
-            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
-            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2 1 1 0 100-2 2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd"></path>
-          </svg>
+        <div class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full mb-6">
+          <span class="text-green-400">✓</span>
           <span class="text-white text-sm font-medium">Trusted by 200+ Condominium Associations</span>
         </div>
 
-        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 animate-fade-in-up" style="animation-delay: 0.2s">
-          Condominium Association<br>
-          <span class="gradient-text">Building Services</span>
+        <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">
+          Complete Property Management<br>
+          <span class="text-gradient">Solutions</span>
         </h1>
 
-        <p class="text-xl md:text-2xl text-blue-100 mb-8 animate-fade-in-up" style="animation-delay: 0.4s">
-          Complete interior and exterior services for Chicago condominium associations
+        <p class="text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto">
+          Comprehensive interior, exterior, security, and maintenance solutions for Chicago and North Shore commercial properties. From daily operations to emergency repairs to full building systems - we handle everything.
         </p>
 
         <!-- CTA Buttons -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12 animate-fade-in-up" style="animation-delay: 0.6s">
-          <a href="/contact/" class="group relative px-8 py-4 bg-white text-primary-700 rounded-lg font-bold text-lg overflow-hidden hover-lift">
-            <span class="relative z-10">Get Instant Quote</span>
-            <div class="absolute inset-0 bg-gradient-to-r from-primary-100 to-primary-200 transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left"></div>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <a href="/contact/" class="px-8 py-4 bg-white text-primary-700 rounded-lg font-bold text-lg hover:bg-gray-100 transition-all">
+            Get Free Quote
           </a>
-          <a href="tel:3125225355" class="group px-8 py-4 border-2 border-white/50 text-white rounded-lg font-bold text-lg backdrop-blur-sm hover:bg-white/10 transition-all">
-            <span class="flex items-center gap-2">
-              <svg class="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-              </svg>
-              (312) 522-5355
-            </span>
+          <a href="tel:3125225355" class="px-8 py-4 border-2 border-white text-white rounded-lg font-bold text-lg backdrop-blur-sm hover:bg-white/10 transition-all">
+            📞 (312) 522-5355
+          </a>
+          <a href="#emergency" class="px-8 py-4 bg-red-600 text-white rounded-lg font-bold text-lg hover:bg-red-700 transition-all">
+            24/7 Emergency Service
           </a>
         </div>
 
         <!-- Stats -->
-        <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto animate-fade-in-up" style="animation-delay: 0.8s">
+        <div class="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
           <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-white counter">15+</div>
+            <div class="text-3xl md:text-4xl font-bold text-white">15+</div>
             <div class="text-sm text-blue-200">Years Experience</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-white counter">500K+</div>
-            <div class="text-sm text-blue-200">Sq Ft Daily</div>
+            <div class="text-3xl md:text-4xl font-bold text-white">24/7</div>
+            <div class="text-sm text-blue-200">Emergency Service</div>
           </div>
           <div class="text-center">
-            <div class="text-3xl md:text-4xl font-bold text-white counter">24/7</div>
-            <div class="text-sm text-blue-200">Emergency Service</div>
+            <div class="text-3xl md:text-4xl font-bold text-white">Full</div>
+            <div class="text-sm text-blue-200">Service Company</div>
           </div>
         </div>
       </div>
     </div>
-
-    <!-- Scroll Indicator -->
-    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
-      <svg class="w-6 h-6 text-white/50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
-      </svg>
-    </div>
   </section>
 
-  <!-- Specialized Services Grid -->
+  <!-- Complete Services Overview -->
   <section class="py-20 bg-gray-50">
     <div class="container mx-auto px-4">
       <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4">Condominium Association Services</h2>
-        <p class="text-xl text-gray-600">Comprehensive interior and exterior building maintenance</p>
+        <h2 class="text-4xl font-bold mb-4">Complete Property Management Solutions</h2>
+        <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+          From janitorial services to security systems to major equipment replacement - we provide all services necessary for the full functioning of your commercial property.
+        </p>
       </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <!-- Office Cleaning Card -->
-        <a href="/commercial-office-cleaning-downtown-chicago/" class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover-lift service-card">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary-500/20 to-transparent rounded-bl-full"></div>
-          <div class="p-8 relative z-10">
-            <div class="w-16 h-16 bg-gradient-to-br from-primary-500 to-primary-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Interior Services</h3>
-            <p class="text-gray-600">Common areas, lobbies, hallways, amenity spaces</p>
+      <!-- Main Service Categories -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <!-- Interior Services -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-blue-600">
+          <div class="w-16 h-16 bg-blue-600 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-2xl text-white">🏢</span>
           </div>
-        </a>
+          <h3 class="text-2xl font-bold mb-4">Interior Services</h3>
+          <p class="text-gray-600 mb-4">Comprehensive interior services from daily janitorial to major renovations.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+            <li>• Daily/Weekly Janitorial & Cleaning</li>
+            <li>• Critical Building Systems (HVAC, Electrical, Plumbing)</li>
+            <li>• Major Equipment (Boilers, Chillers, Elevators)</li>
+            <li>• Security Systems & Access Control</li>
+            <li>• Life Safety Systems (Fire Pumps, Panels)</li>
+            <li>• Chicago DOB Code Compliance</li>
+          </ul>
+          <a href="/services/interior/" class="text-blue-600 font-semibold">View All Interior Services</a>
+        </div>
 
-        <!-- Medical Facility Card -->
-        <a href="/medical-facility-cleaning-glenview/" class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover-lift service-card">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-green-500/20 to-transparent rounded-bl-full"></div>
-          <div class="p-8 relative z-10">
-            <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Exterior Services</h3>
-            <p class="text-gray-600">Building facades, windows, parking areas, grounds</p>
+        <!-- Exterior Services -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-green-600">
+          <div class="w-16 h-16 bg-green-600 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-2xl text-white">🏗️</span>
           </div>
-        </a>
+          <h3 class="text-2xl font-bold mb-4">Exterior Services</h3>
+          <p class="text-gray-600 mb-4">Complete exterior maintenance from routine cleaning to major façade work.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+            <li>• Exterior Cleaning & Pressure Washing</li>
+            <li>• Roof & Window Leak Repairs</li>
+            <li>• Masonry, Façade & Deck Construction</li>
+            <li>• Garage Door Replacement & Repairs</li>
+            <li>• Parking Lot & Drainage Maintenance</li>
+            <li>• Waterproofing & Structural Repairs</li>
+          </ul>
+          <a href="/services/exterior/" class="text-green-600 font-semibold">View All Exterior Services</a>
+        </div>
 
-        <!-- Retail Store Card -->
-        <a href="/retail-store-janitorial-northbrook/" class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover-lift service-card">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-purple-500/20 to-transparent rounded-bl-full"></div>
-          <div class="p-8 relative z-10">
-            <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Maintenance Services</h3>
-            <p class="text-gray-600">Preventive maintenance, repairs, emergency response</p>
+        <!-- Snow & Seasonal -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-purple-600">
+          <div class="w-16 h-16 bg-purple-600 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-2xl text-white">❄️</span>
           </div>
-        </a>
+          <h3 class="text-2xl font-bold mb-4">Snow & Seasonal</h3>
+          <p class="text-gray-600 mb-4">Critical Chicago winter services with 24/7 snow removal.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+            <li>• 24/7 Snow Plowing & Removal</li>
+            <li>• Sidewalk Shoveling (Chicago Ordinance)</li>
+            <li>• Ice Management & Salt Application</li>
+            <li>• Roof Snow Removal</li>
+            <li>• Seasonal HVAC Preparation</li>
+            <li>• Post-Storm Safety Inspections</li>
+          </ul>
+          <a href="/services/seasonal/" class="text-purple-600 font-semibold">View Snow & Seasonal Services</a>
+        </div>
 
-        <!-- Restaurant Card -->
-        <a href="/restaurant-cleaning-services-naperville/" class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover-lift service-card">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-orange-500/20 to-transparent rounded-bl-full"></div>
-          <div class="p-8 relative z-10">
-            <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Snow & Ice Removal</h3>
-            <p class="text-gray-600">Winter services for safe resident access</p>
-            </div>
+        <!-- Security & Access -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-teal-600">
+          <div class="w-16 h-16 bg-teal-600 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-2xl text-white">🔐</span>
           </div>
-        </a>
+          <h3 class="text-2xl font-bold mb-4">Security & Access Control</h3>
+          <p class="text-gray-600 mb-4">Complete security solutions for your property.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+            <li>• Security Camera Installation</li>
+            <li>• Access Control Systems</li>
+            <li>• Key Fob Programming</li>
+            <li>• Garage Door Opener Setup</li>
+            <li>• Intercom Systems</li>
+            <li>• System Integration & Monitoring</li>
+          </ul>
+          <a href="/services/specialty/security/" class="text-teal-600 font-semibold">View Security Services</a>
+        </div>
 
-        <!-- Warehouse Card -->
-        <a href="/warehouse-floor-care-schaumburg/" class="group relative overflow-hidden rounded-xl bg-white shadow-lg hover-lift service-card">
-          <div class="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-indigo-500/20 to-transparent rounded-bl-full"></div>
-          <div class="p-8 relative z-10">
-            <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
-              </svg>
-            </div>
-            <h3 class="text-xl font-bold mb-2">Warehouses</h3>
-            <p class="text-gray-600 mb-4">Industrial floor care & maintenance</p>
-            <div class="flex items-center text-indigo-600 font-semibold">
-            </div>
+        <!-- Life Safety -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-red-600">
+          <div class="w-16 h-16 bg-red-600 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-2xl text-white">🚨</span>
           </div>
-        </a>
+          <h3 class="text-2xl font-bold mb-4">Life Safety Systems</h3>
+          <p class="text-gray-600 mb-4">Fire and life safety system maintenance.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+            <li>• Fire Pump Installation & Testing</li>
+            <li>• Fire Extinguisher Service</li>
+            <li>• Fire Panel Maintenance</li>
+            <li>• Sprinkler System Service</li>
+            <li>• Emergency Lighting</li>
+            <li>• Smoke Detector Testing</li>
+          </ul>
+          <a href="/services/interior/fire-life-safety/" class="text-red-600 font-semibold">View Life Safety Services</a>
+        </div>
 
-        <!-- View All Card -->
-        <a href="/services/" class="group relative overflow-hidden rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 shadow-lg hover-lift">
-          <div class="p-8 relative z-10 h-full flex flex-col justify-center">
-            <div class="w-16 h-16 bg-gradient-to-br from-gray-600 to-gray-700 rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform mx-auto">
-              <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-              </svg>
+        <!-- Compliance -->
+        <div class="bg-white rounded-xl shadow-lg p-8 border-t-4 border-orange-600">
+          <div class="w-16 h-16 bg-orange-600 rounded-lg flex items-center justify-center mb-4">
+            <span class="text-2xl text-white">🏛️</span>
+          </div>
+          <h3 class="text-2xl font-bold mb-4">Chicago DOB Compliance</h3>
+          <p class="text-gray-600 mb-4">Navigate city codes and compliance requirements.</p>
+          <ul class="space-y-2 text-sm text-gray-700 mb-6">
+            <li>• Building Code Compliance</li>
+            <li>• Permit Expediting</li>
+            <li>• Elevator Certifications</li>
+            <li>• Fire Safety Code</li>
+            <li>• ADA Accessibility</li>
+            <li>• Violation Remediation</li>
+          </ul>
+          <a href="/services/specialty/compliance/" class="text-orange-600 font-semibold">View Compliance Services</a>
+        </div>
+      </div>
+
+      <!-- Detailed Service Breakdown -->
+      <div class="bg-white rounded-xl shadow-xl p-8 mb-12">
+        <h3 class="text-3xl font-bold mb-8 text-center">Complete Service Capabilities</h3>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Interior Column -->
+          <div>
+            <h4 class="text-xl font-bold mb-4 text-blue-600">Interior Services</h4>
+
+            <div class="mb-6">
+              <h5 class="font-semibold mb-2">Janitorial & Cleaning:</h5>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Common area cleaning (lobbies, hallways, elevators)</li>
+                <li>• Trash/recycling & chute maintenance</li>
+                <li>• Carpet cleaning & floor care</li>
+                <li>• Restroom cleaning & supply restocking</li>
+                <li>• High-touch surface sanitization</li>
+              </ul>
             </div>
-            <h3 class="text-xl font-bold mb-2 text-center">All Services</h3>
-            <p class="text-gray-600 mb-4 text-center">View complete service catalog</p>
-            <div class="flex items-center justify-center text-gray-700 font-semibold">
+
+            <div class="mb-6">
+              <h5 class="font-semibold mb-2">Building Systems:</h5>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• HVAC maintenance & filter changes</li>
+                <li>• Electrical repairs & upgrades</li>
+                <li>• Plumbing repairs & riser replacement</li>
+                <li>• Boiler & chiller replacement/repairs</li>
+                <li>• Elevator upgrades & maintenance</li>
+                <li>• Exhaust fan systems</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h5 class="font-semibold mb-2">General Contracting:</h5>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Drywall repairs & painting</li>
+                <li>• Flooring replacement</li>
+                <li>• Community room renovations</li>
+                <li>• ADA compliance upgrades</li>
+                <li>• Mechanical/electrical upgrades</li>
+              </ul>
             </div>
           </div>
-        </a>
+
+          <!-- Exterior Column -->
+          <div>
+            <h4 class="text-xl font-bold mb-4 text-green-600">Exterior Services</h4>
+
+            <div class="mb-6">
+              <h5 class="font-semibold mb-2">Cleaning & Grounds:</h5>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Pressure washing sidewalks & entrances</li>
+                <li>• Exterior window cleaning</li>
+                <li>• Graffiti removal</li>
+                <li>• Trash enclosure maintenance</li>
+                <li>• Landscaping & grounds keeping</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h5 class="font-semibold mb-2">Building Maintenance:</h5>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Roof inspections & leak repairs</li>
+                <li>• Window leak sealing</li>
+                <li>• Gutter & downspout cleaning</li>
+                <li>• Concrete crack sealing</li>
+                <li>• Garage door replacement/repairs</li>
+                <li>• Drainage system maintenance</li>
+              </ul>
+            </div>
+
+            <div class="mb-6">
+              <h5 class="font-semibold mb-2">Construction & Repairs:</h5>
+              <ul class="text-sm text-gray-600 space-y-1">
+                <li>• Masonry & façade repairs</li>
+                <li>• Deck construction & repairs</li>
+                <li>• Parking lot maintenance</li>
+                <li>• Waterproofing & sealing</li>
+                <li>• Retaining wall repairs</li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Trust Indicators -->
-  <section class="py-20 bg-white">
+  <!-- Why Choose Vector -->
+  <section class="py-16 bg-primary-900 text-white">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4">Why Chicago Trusts Vector</h2>
-        <p class="text-xl text-gray-600">Certifications, guarantees, and proven results</p>
-      </div>
-
-      <div class="grid md:grid-cols-4 gap-8">
-        <div class="text-center">
-          <div class="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-10 h-10 text-green-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">Licensed & Insured</h3>
-          <p class="text-gray-600">$5M liability coverage</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-10 h-10 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path>
-              <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 1 1 0 000 2H6a2 2 0 00-2 2v6a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2 1 1 0 100-2 2 2 0 012 2v8a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">OSHA Certified</h3>
-          <p class="text-gray-600">Safety-first protocols</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-20 h-20 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-10 h-10 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">Background Checked</h3>
-          <p class="text-gray-600">Trusted, vetted staff</p>
-        </div>
-
-        <div class="text-center">
-          <div class="w-20 h-20 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-10 h-10 text-yellow-600" fill="currentColor" viewBox="0 0 20 20">
-              <path fill-rule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clip-rule="evenodd"></path>
-            </svg>
-          </div>
-          <h3 class="text-lg font-semibold mb-2">24/7 Response</h3>
-          <p class="text-gray-600">Emergency services</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonials -->
-  <section class="py-20 bg-gradient-to-br from-primary-50 to-blue-50">
-    <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4">Client Success Stories</h2>
-        <p class="text-xl text-gray-600">Real results from real Chicago businesses</p>
-      </div>
+      <h2 class="text-4xl font-bold text-center mb-12">Why Choose Vector Building Services</h2>
 
       <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white rounded-xl p-8 shadow-lg">
-          <div class="flex mb-4">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-            ))}
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🎯</span>
           </div>
-          <p class="text-gray-600 mb-4">"Vector transformed our office environment. The difference in cleanliness and professionalism is remarkable. They're always responsive and flexible with our needs."</p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-primary-100 rounded-full flex items-center justify-center mr-3">
-              <span class="text-primary-700 font-bold">JM</span>
-            </div>
-            <div>
-              <div class="font-semibold">John Miller</div>
-              <div class="text-sm text-gray-600">Tech Startup, River North</div>
-            </div>
-          </div>
+          <h3 class="text-xl font-semibold mb-2">Full-Service Company</h3>
+          <p class="text-blue-100">Complete property management from janitorial to major construction - one company, all solutions.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-8 shadow-lg">
-          <div class="flex mb-4">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-            ))}
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">⚡</span>
           </div>
-          <p class="text-gray-600 mb-4">"Our medical facility requires the highest standards of cleanliness. Vector consistently exceeds expectations with their attention to detail and compliance expertise."</p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-3">
-              <span class="text-green-700 font-bold">DR</span>
-            </div>
-            <div>
-              <div class="font-semibold">Dr. Sarah Rodriguez</div>
-              <div class="text-sm text-gray-600">Medical Center, Glenview</div>
-            </div>
-          </div>
+          <h3 class="text-xl font-semibold mb-2">24/7 Emergency Response</h3>
+          <p class="text-blue-100">Round-the-clock emergency service for all building issues - we're always ready.</p>
         </div>
 
-        <div class="bg-white rounded-xl p-8 shadow-lg">
-          <div class="flex mb-4">
-            {[...Array(5)].map(() => (
-              <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
-              </svg>
-            ))}
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">✅</span>
           </div>
-          <p class="text-gray-600 mb-4">"Managing a 200,000 sq ft warehouse requires industrial-grade cleaning. Vector's floor care program has improved safety and extended our floor life significantly."</p>
-          <div class="flex items-center">
-            <div class="w-12 h-12 bg-indigo-100 rounded-full flex items-center justify-center mr-3">
-              <span class="text-indigo-700 font-bold">MC</span>
-            </div>
-            <div>
-              <div class="font-semibold">Mike Chen</div>
-              <div class="text-sm text-gray-600">Distribution Center, Schaumburg</div>
-            </div>
+          <h3 class="text-xl font-semibold mb-2">Licensed & Insured</h3>
+          <p class="text-blue-100">Fully licensed contractors with comprehensive insurance - your property is protected.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">🏆</span>
           </div>
+          <h3 class="text-xl font-semibold mb-2">Chicago Expertise</h3>
+          <p class="text-blue-100">Deep knowledge of Chicago codes, permits, and regulations - we navigate compliance efficiently.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">📋</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Single Point of Contact</h3>
+          <p class="text-blue-100">One call handles everything - no more managing multiple vendors and contractors.</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl">💡</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Cost-Effective Solutions</h3>
+          <p class="text-blue-100">Bundled services and preventive maintenance save money versus emergency repairs.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Service Areas Map -->
-  <section class="py-20 bg-gray-900 text-white">
+  <!-- Service Areas -->
+  <section class="py-16 bg-gray-50">
     <div class="container mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-4xl font-bold mb-4">Serving All of Chicagoland</h2>
-        <p class="text-xl text-gray-300">From the Loop to the suburbs, we're everywhere you need us</p>
-      </div>
+      <h2 class="text-4xl font-bold text-center mb-12">Serving Chicago & North Shore</h2>
+      <p class="text-center text-xl text-gray-600 mb-8">Local expertise with deep knowledge of building requirements across our service areas.</p>
 
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h3 class="text-2xl font-bold mb-6">Coverage Areas</h3>
-
-          <div class="space-y-4">
-            <div class="flex items-center">
-              <div class="w-3 h-3 bg-primary-400 rounded-full mr-3"></div>
-              <span class="text-lg">Downtown Chicago & Loop</span>
-            </div>
-            <div class="flex items-center">
-              <div class="w-3 h-3 bg-primary-400 rounded-full mr-3"></div>
-              <span class="text-lg">North Shore (Glenview, Northbrook, Wilmette)</span>
-            </div>
-            <div class="flex items-center">
-              <div class="w-3 h-3 bg-primary-400 rounded-full mr-3"></div>
-              <span class="text-lg">West Suburbs (Naperville, Oak Brook, Schaumburg)</span>
-            </div>
-            <div class="flex items-center">
-              <div class="w-3 h-3 bg-primary-400 rounded-full mr-3"></div>
-              <span class="text-lg">Northwest Suburbs (Arlington Heights, Palatine)</span>
-            </div>
-            <div class="flex items-center">
-              <div class="w-3 h-3 bg-primary-400 rounded-full mr-3"></div>
-              <span class="text-lg">South Suburbs (Oak Lawn, Orland Park)</span>
-            </div>
-          </div>
-
-          <div class="mt-8">
-            <a href="/locations/" class="inline-flex items-center bg-primary-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-primary-700">
-              View All Locations
-              <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-              </svg>
-            </a>
-          </div>
+      <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="font-bold text-lg mb-2">Chicago</h3>
+          <p class="text-gray-600 text-sm">Downtown, Loop, River North</p>
         </div>
-
-        <div class="relative">
-          <div class="aspect-square bg-gray-800 rounded-xl overflow-hidden">
-            <!-- Stylized map representation -->
-            <div class="relative h-full">
-              <div class="absolute inset-0 bg-gradient-to-br from-primary-900/20 to-primary-600/20"></div>
-
-              <!-- Downtown marker -->
-              <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                <div class="relative">
-                  <div class="w-8 h-8 bg-primary-500 rounded-full animate-ping absolute"></div>
-                  <div class="w-8 h-8 bg-primary-500 rounded-full relative z-10"></div>
-                </div>
-                <span class="absolute top-10 left-1/2 transform -translate-x-1/2 text-sm whitespace-nowrap">Chicago</span>
-              </div>
-
-              <!-- North suburbs marker -->
-              <div class="absolute top-1/4 left-1/2 transform -translate-x-1/2">
-                <div class="w-6 h-6 bg-primary-400 rounded-full"></div>
-                <span class="absolute top-8 left-1/2 transform -translate-x-1/2 text-xs whitespace-nowrap">North Shore</span>
-              </div>
-
-              <!-- West suburbs marker -->
-              <div class="absolute top-1/2 left-1/4">
-                <div class="w-6 h-6 bg-primary-400 rounded-full"></div>
-                <span class="absolute top-8 left-1/2 transform -translate-x-1/2 text-xs whitespace-nowrap">West</span>
-              </div>
-
-              <!-- Service radius circles -->
-              <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border-2 border-primary-500/30 rounded-full"></div>
-              <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border-2 border-primary-500/20 rounded-full"></div>
-            </div>
-          </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="font-bold text-lg mb-2">Glenview</h3>
+          <p class="text-gray-600 text-sm">Corporate headquarters</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="font-bold text-lg mb-2">Northbrook</h3>
+          <p class="text-gray-600 text-sm">Business parks</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="font-bold text-lg mb-2">Wilmette</h3>
+          <p class="text-gray-600 text-sm">Mixed-use properties</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="font-bold text-lg mb-2">Winnetka</h3>
+          <p class="text-gray-600 text-sm">Commercial centers</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="font-bold text-lg mb-2">Evanston</h3>
+          <p class="text-gray-600 text-sm">University facilities</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="font-bold text-lg mb-2">Skokie</h3>
+          <p class="text-gray-600 text-sm">Office complexes</p>
+        </div>
+        <div class="bg-white p-6 rounded-lg shadow text-center">
+          <h3 class="font-bold text-lg mb-2">All North Shore</h3>
+          <p class="text-gray-600 text-sm">Complete coverage</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Final CTA -->
-  <section class="py-20 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+  <!-- Emergency Banner -->
+  <section class="bg-red-600 text-white py-12" id="emergency">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Experience the Vector Difference?</h2>
-      <p class="text-xl mb-8 text-blue-100">Join Chicago's leading businesses who trust us with their facilities</p>
-
+      <h2 class="text-3xl font-bold mb-4">24/7 Emergency Service</h2>
+      <p class="text-xl mb-6">Building emergency? We respond immediately to protect your property.</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact/" class="group px-8 py-4 bg-white text-primary-700 rounded-lg font-bold text-lg hover-lift">
-          Get Your Free Quote
+        <a href="tel:3125225355" class="text-4xl font-bold hover:underline">
+          📞 (312) 522-5355
         </a>
-        <a href="tel:3125225355" class="px-8 py-4 border-2 border-white text-white rounded-lg font-bold text-lg hover:bg-white/10 transition-all">
-          <span class="flex items-center gap-2">
-            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-              <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"></path>
-            </svg>
-            Call Now: (312) 522-5355
-          </span>
+        <a href="/services/specialty/emergency/" class="px-8 py-3 bg-white text-red-600 rounded-lg font-semibold hover:bg-gray-100">
+          Emergency Services Details
         </a>
-      </div>
-
-      <div class="mt-12 flex flex-wrap justify-center gap-8 text-sm">
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-          </svg>
-          Free Estimates
-        </div>
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-          </svg>
-          No Contracts Required
-        </div>
-        <div class="flex items-center gap-2">
-          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-          </svg>
-          100% Satisfaction Guarantee
-        </div>
       </div>
     </div>
   </section>
 
-  <!-- Floating Contact Button -->
-  <div class="floating-cta">
-    <a href="/contact/" class="flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-full shadow-2xl hover:bg-primary-700 animate-pulse-glow">
-      <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-      </svg>
-    </a>
-  </div>
-
-  <!-- Add scroll animations script -->
-  <script>
-    // Scroll animations
-    const observerOptions = {
-      threshold: 0.1,
-      rootMargin: '0px 0px -100px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, observerOptions);
-
-    document.querySelectorAll('.scroll-fade-in').forEach(el => {
-      observer.observe(el);
-    });
-
-    // Counter animation
-    const animateCounter = (element, target) => {
-      let current = 0;
-      const increment = target / 50;
-      const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-          element.textContent = target + (element.textContent.includes('+') ? '+' : '');
-          clearInterval(timer);
-        } else {
-          element.textContent = Math.floor(current) + (element.textContent.includes('+') ? '+' : '');
-        }
-      }, 30);
-    };
-
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !entry.target.classList.contains('animated')) {
-          entry.target.classList.add('animated');
-          const text = entry.target.textContent;
-          const number = parseInt(text.replace(/\D/g, ''));
-          if (!isNaN(number)) {
-            animateCounter(entry.target, number);
-          }
-        }
-      });
-    }, { threshold: 0.5 });
-
-    document.querySelectorAll('.counter').forEach(el => {
-      counterObserver.observe(el);
-    });
-  </script>
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary-600 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Experience Full-Service Property Management?</h2>
+      <p class="text-xl mb-8">One company. All services. Complete peace of mind.</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="px-8 py-3 bg-white text-primary-700 rounded-lg font-semibold hover:bg-gray-100">
+          Get Free Quote
+        </a>
+        <a href="/services/" class="px-8 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10">
+          View All Services
+        </a>
+      </div>
+    </div>
+  </section>
 </BaseLayout>
