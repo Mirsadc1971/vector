@@ -1,0 +1,142 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Vector Building Services - Northfield",
+  "description": "Professional property services for HOAs and condominium associations in Northfield, IL",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Northfield",
+    "addressRegion": "IL"
+  },
+  "areaServed": "Northfield, Illinois",
+  "telephone": "+13125225355"
+};
+---
+
+<BaseLayout
+  title="Northfield Property Services | Vector Building Services"
+  description="Professional HOA and condominium services in Northfield. Snow removal, landscaping, maintenance, and emergency repairs. Serving North Shore communities."
+  schema={schema}
+>
+  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
+    <div class="container mx-auto px-4">
+      <nav class="text-sm mb-4">
+        <a href="/" class="hover:underline">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/locations/" class="hover:underline">Locations</a>
+        <span class="mx-2">/</span>
+        <a href="/locations/suburbs/" class="hover:underline">Suburbs</a>
+        <span class="mx-2">/</span>
+        <span>Northfield</span>
+      </nav>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Northfield Property Services</h1>
+      <p class="text-xl text-gray-300">Professional HOA & Condominium Services in Northfield, IL</p>
+    </div>
+  </section>
+
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 mb-8">
+          Vector Building Services provides comprehensive property management solutions for Northfield's homeowner associations and condominium boards. Our experienced teams understand the unique needs of North Shore communities and deliver reliable, professional services year-round.
+        </p>
+
+        <h2 class="text-3xl font-bold mb-6">Services for Northfield HOAs & Condominiums</h2>
+
+        <div class="grid md:grid-cols-2 gap-8 mb-12">
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-primary-600">Seasonal Services</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• 24/7 snow removal & ice management</li>
+              <li>• Professional landscaping (April-October)</li>
+              <li>• Spring/fall cleanup</li>
+              <li>• Holiday decoration installation</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-primary-600">Building Maintenance</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Common area janitorial services</li>
+              <li>• HVAC maintenance & repairs</li>
+              <li>• Plumbing & electrical services</li>
+              <li>• Preventive maintenance programs</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-primary-600">Exterior Services</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• Parking lot maintenance</li>
+              <li>• Roof repairs & replacement</li>
+              <li>• Building washing & windows</li>
+              <li>• Concrete & asphalt repairs</li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-xl font-bold mb-4 text-primary-600">Emergency Response</h3>
+            <ul class="space-y-2 text-gray-700">
+              <li>• 24/7 emergency service</li>
+              <li>• Storm damage response</li>
+              <li>• Flood mitigation</li>
+              <li>• Board-up services</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bg-gray-50 p-8 rounded-lg mb-12">
+          <h3 class="text-2xl font-bold mb-4">Why Northfield Properties Choose Vector</h3>
+          <ul class="space-y-3 text-gray-700">
+            <li class="flex items-start">
+              <span class="text-green-500 mr-3 mt-1">✓</span>
+              <span>Local North Shore presence with rapid response times</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-3 mt-1">✓</span>
+              <span>Licensed, bonded, and fully insured contractors</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-3 mt-1">✓</span>
+              <span>Transparent pricing with no hidden fees</span>
+            </li>
+            <li class="flex items-start">
+              <span class="text-green-500 mr-3 mt-1">✓</span>
+              <span>Preventive maintenance programs that save money</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-12">
+          <h3 class="text-2xl font-bold mb-6">Serving Nearby Communities</h3>
+          <div class="flex flex-wrap gap-3">
+            <a href="/locations/suburbs/winnetka/" class="bg-white border border-gray-300 px-4 py-2 rounded hover:bg-gray-50">Winnetka</a>
+            <a href="/locations/suburbs/glenview/" class="bg-white border border-gray-300 px-4 py-2 rounded hover:bg-gray-50">Glenview</a>
+            <a href="/locations/suburbs/northbrook/" class="bg-white border border-gray-300 px-4 py-2 rounded hover:bg-gray-50">Northbrook</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 bg-primary-900 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Get Started with Vector Building Services</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        Join other Northfield HOAs and condominium associations that trust Vector for reliable, professional property services.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-white text-primary-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">
+          Get Free Quote
+        </a>
+        <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10">
+          Call (312) 522-5355
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
