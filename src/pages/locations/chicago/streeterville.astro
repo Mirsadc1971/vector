@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Streeterville HOA & Condo Services | Vector Building Services",
+  description: "Lakefront high-rise services in Streeterville Chicago. Luxury condo maintenance, amenity management & 24/7 emergency support.",
+  keywords: "Streeterville Chicago HOA services, lakefront condo maintenance, high-rise property management Streeterville"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Streeterville HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Premier property services for lakefront high-rises and luxury condominiums in Chicago's prestigious Streeterville neighborhood.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services provides exceptional property management for Streeterville's iconic lakefront towers and luxury HOAs. From Navy Pier area developments to Lake Shore Drive high-rises, we maintain the premium standards Streeterville residents expect.
+          </p>
+
+          <p class="text-lg leading-relaxed mb-8">
+            Our specialized teams handle the unique challenges of lakefront properties, including weather exposure, tourist traffic, and luxury amenity maintenance.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Streeterville Specializations</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Lakefront building expertise</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Pool and spa maintenance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Marina and dock services</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Tourist area management</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services Overview</h2>
+
+          <div class="mb-6">
+            <p class="font-semibold mb-2">Lakefront Services:</p>
+            <p>Window cleaning, balcony maintenance, wind damage response, salt air corrosion prevention</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-semibold mb-2">Luxury Amenities:</p>
+            <p>Pool deck care, fitness centers, business centers, resident lounges, outdoor terraces</p>
+          </div>
+
+          <div class="mb-8">
+            <p class="font-semibold mb-2">Seasonal Support:</p>
+            <p>Beach season prep, winter weatherization, tourist season management, special event coordination</p>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Nearby Service Areas</h2>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="/locations/chicago/the-loop" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">The Loop</a>
+            <a href="/locations/chicago/river-north" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">River North</a>
+            <a href="/locations/chicago/gold-coast" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Gold Coast</a>
+          </div>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Get lakefront property expertise for your Streeterville building.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Request Proposal</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

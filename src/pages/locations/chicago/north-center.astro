@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "North Center HOA & Condo Services | Vector Building Services",
+  description: "Property services for North Center Chicago HOAs & condos. Family-friendly neighborhoods, townhomes, vintage buildings & professional management.",
+  keywords: "North Center Chicago HOA services, condo maintenance Roscoe Village, property management North Center"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ North Center HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Professional property services for North Center's family-friendly neighborhoods and growing condo communities.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services maintains North Center's blend of vintage charm and modern development. From Roscoe Village townhomes to new construction condos, we provide reliable property management for this thriving neighborhood.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">North Center Excellence</h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Townhome association expertise</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ New construction management</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Family amenity maintenance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Green space care</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services</h2>
+          <p class="mb-4">Residential: Private yard maintenance, garage management, sidewalk care</p>
+          <p class="mb-4">Community: Playground upkeep, common green spaces, family amenities</p>
+          <p class="mb-8">Modern: Smart home support, EV charging stations, sustainable practices</p>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Get family-friendly property services in North Center.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Lakeview HOA & Condo Services | Vector Building Services",
+  description: "Property services for Lakeview Chicago HOAs & condos. Mid-rise maintenance, vintage rehabs, landscaping & emergency response.",
+  keywords: "Lakeview Chicago HOA services, condo maintenance Lakeview, property management Wrigleyville Boystown"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Lakeview HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Comprehensive property services for diverse condominiums and HOAs throughout Lakeview, Wrigleyville, and Boystown.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services manages properties across Lakeview's vibrant neighborhoods, from lakefront high-rises to vintage six-flats near Wrigley Field. We understand the area's diverse architecture and active community lifestyle.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Lakeview Specializations</h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Mid-rise building expertise</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Vintage conversion management</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Event area maintenance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Mixed residential/retail properties</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services</h2>
+          <p class="mb-4">Interior: Common area upkeep, laundry room maintenance, bike storage management</p>
+          <p class="mb-4">Exterior: Rooftop deck care, rear courtyard maintenance, graffiti removal</p>
+          <p class="mb-8">Seasonal: Cubs game day management, Pride festival prep, beach season support</p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Nearby Areas</h2>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="/locations/chicago/lincoln-park" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Lincoln Park</a>
+            <a href="/locations/chicago/uptown" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Uptown</a>
+            <a href="/locations/chicago/north-center" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">North Center</a>
+          </div>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Get reliable property services for your Lakeview building.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

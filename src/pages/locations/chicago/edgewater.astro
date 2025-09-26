@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Edgewater HOA & Condo Services | Vector Building Services",
+  description: "Property services for Edgewater Chicago HOAs & condos. Lakefront high-rises, vintage co-ops, beachfront maintenance & 24/7 support.",
+  keywords: "Edgewater Chicago HOA services, lakefront condo maintenance, property management Edgewater Chicago"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Edgewater HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Lakefront property expertise for Edgewater's high-rises, vintage co-ops, and beachfront communities.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services specializes in Edgewater's unique lakefront properties, from Sheridan Road high-rises to historic co-ops. We handle the challenges of lake effect weather and maintain the area's distinctive character.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Edgewater Specializations</h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Lakefront building maintenance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Co-op board support</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Beach access management</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Historic district compliance</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services</h2>
+          <p class="mb-4">Lakefront: Window cleaning, balcony maintenance, lake effect damage repair</p>
+          <p class="mb-4">Interior: Co-op common areas, vintage detail preservation, modernization projects</p>
+          <p class="mb-8">Seasonal: Beach season prep, winter weatherization, storm response</p>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Get lakefront expertise for your Edgewater property.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

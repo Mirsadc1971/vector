@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Gold Coast HOA & Condo Services | Vector Building Services",
+  description: "Historic & luxury property services in Chicago's Gold Coast. Vintage condo restoration, high-end maintenance & preservation expertise.",
+  keywords: "Gold Coast Chicago HOA services, historic condo maintenance, luxury property management Gold Coast Chicago"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Gold Coast HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Preservation-focused property services for historic mansions and luxury high-rises in Chicago's prestigious Gold Coast.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services specializes in maintaining Gold Coast's architectural treasures and modern luxury towers. From landmarked vintage buildings to contemporary Lake Shore Drive high-rises, we provide meticulous care that preserves property character and value.
+          </p>
+
+          <p class="text-lg leading-relaxed mb-8">
+            Our teams are trained in historic preservation techniques while also managing state-of-the-art luxury amenities, making us the ideal partner for Gold Coast's diverse properties.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Gold Coast Excellence</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Historic preservation expertise</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Landmark building compliance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Luxury finishes maintenance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Discretion for high-profile residents</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Specialized Services</h2>
+
+          <div class="mb-6">
+            <p class="font-semibold mb-2">Historic Preservation:</p>
+            <p>Ornamental plaster repair, marble restoration, brass and bronze care, vintage elevator maintenance</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-semibold mb-2">Modern Luxury:</p>
+            <p>Smart home system support, wine cellar maintenance, private garage management, penthouse terrace care</p>
+          </div>
+
+          <div class="mb-8">
+            <p class="font-semibold mb-2">Exclusive Support:</p>
+            <p>White-glove service standards, VIP resident services, art installation care, private event support</p>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Nearby Service Areas</h2>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="/locations/chicago/streeterville" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Streeterville</a>
+            <a href="/locations/chicago/lincoln-park" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Lincoln Park</a>
+            <a href="/locations/chicago/river-north" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">River North</a>
+          </div>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Preserve your Gold Coast property's elegance and value.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Schedule Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

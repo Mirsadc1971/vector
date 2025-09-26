@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "River North HOA & Condo Services | Vector Building Services",
+  description: "Luxury condominium services in River North Chicago. High-rise maintenance, concierge support, amenity management & 24/7 emergency response.",
+  keywords: "River North Chicago HOA services, luxury condo maintenance River North, high-rise property management Chicago"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ River North HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Premium property services for luxury high-rises and boutique condominiums in Chicago's trendy River North neighborhood.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services specializes in luxury property management for River North's prestigious condominium towers and HOAs. From gallery district boutique buildings to riverfront high-rises, we deliver white-glove service that matches the neighborhood's upscale standards.
+          </p>
+
+          <p class="text-lg leading-relaxed mb-8">
+            Our teams understand the expectations of River North residents and provide discreet, professional services that maintain property values and enhance resident experiences.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">River North Property Expertise</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Luxury amenity management</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Concierge-level service standards</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Art installation and gallery care</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Valet and parking management</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services Overview</h2>
+
+          <div class="mb-6">
+            <p class="font-semibold mb-2">Luxury Interior Services:</p>
+            <p>Marble and stone care, fitness center management, wine storage maintenance, private dining room service</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-semibold mb-2">Exterior Excellence:</p>
+            <p>Terrace and rooftop deck maintenance, architectural lighting, valet area upkeep, storefront cleaning</p>
+          </div>
+
+          <div class="mb-8">
+            <p class="font-semibold mb-2">24/7 Support:</p>
+            <p>Concierge coordination, emergency repairs, resident move-in/out assistance, special event support</p>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Nearby Service Areas</h2>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="/locations/chicago/the-loop" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">The Loop</a>
+            <a href="/locations/chicago/streeterville" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Streeterville</a>
+            <a href="/locations/chicago/gold-coast" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Gold Coast</a>
+          </div>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Elevate your River North property management today.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Schedule Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

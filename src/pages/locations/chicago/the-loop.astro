@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "The Loop HOA & Condo Services | Vector Building Services",
+  description: "Expert HOA & condominium services in Chicago's Loop. High-rise maintenance, janitorial, snow removal & emergency repairs. 24/7 service.",
+  keywords: "Loop Chicago HOA services, downtown condo maintenance, high-rise property management Loop, Chicago commercial HOA services"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ The Loop HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Professional property services for high-rise condominiums and commercial HOAs in Chicago's bustling downtown Loop district.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services delivers comprehensive property management for HOAs and condominium associations in Chicago's Loop. From iconic high-rises along LaSalle Street to mixed-use developments near Millennium Park, we understand the unique demands of downtown property management.
+          </p>
+
+          <p class="text-lg leading-relaxed mb-8">
+            Our experienced teams provide 24/7 support for emergency repairs, DOB compliance, and the specialized maintenance that Loop properties require.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Why Loop Associations Choose Vector</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ High-rise specialists with 30+ floors experience</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Chicago DOB code compliance experts</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ 24/7 emergency response team</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Union-certified contractors</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services for Loop Properties</h2>
+
+          <h3 class="text-2xl font-bold mb-4 text-blue-800">Interior Services</h3>
+          <ul class="list-disc pl-6 mb-8 space-y-2">
+            <li>Daily janitorial for lobbies and common areas</li>
+            <li>Elevator maintenance and modernization</li>
+            <li>HVAC systems for high-rise buildings</li>
+            <li>Fire pump and life safety systems</li>
+            <li>Parking garage cleaning and maintenance</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold mb-4 text-blue-800">Exterior Services</h3>
+          <ul class="list-disc pl-6 mb-8 space-y-2">
+            <li>Window cleaning for high-rise facades</li>
+            <li>Sidewalk maintenance and city compliance</li>
+            <li>Loading dock management</li>
+            <li>Roof and façade inspections</li>
+            <li>Exterior lighting and signage</li>
+          </ul>
+
+          <h3 class="text-2xl font-bold mb-4 text-blue-800">Emergency & Seasonal</h3>
+          <ul class="list-disc pl-6 mb-8 space-y-2">
+            <li>24/7 snow removal and de-icing</li>
+            <li>Flood response and water extraction</li>
+            <li>Emergency HVAC and plumbing</li>
+            <li>Power outage support</li>
+            <li>Storm damage response</li>
+          </ul>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Serving Nearby Areas</h2>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="/locations/chicago/river-north" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">River North</a>
+            <a href="/locations/chicago/streeterville" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Streeterville</a>
+            <a href="/locations/chicago/gold-coast" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Gold Coast</a>
+          </div>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Get a free consultation for your Loop property today.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Request Consultation</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

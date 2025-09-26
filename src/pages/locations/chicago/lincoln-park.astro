@@ -1,0 +1,84 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Lincoln Park HOA & Condo Services | Vector Building Services",
+  description: "Property services for Lincoln Park Chicago HOAs & condos. Vintage building care, modern amenities, landscaping & 24/7 support.",
+  keywords: "Lincoln Park Chicago HOA services, condo maintenance Lincoln Park, property management Lincoln Park Chicago"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Lincoln Park HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Expert property services for vintage condos and modern developments in Chicago's charming Lincoln Park neighborhood.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services provides comprehensive property management for Lincoln Park's diverse mix of vintage walk-ups, boutique condos, and modern high-rises. From tree-lined residential streets to bustling commercial corridors, we maintain properties that define this iconic neighborhood.
+          </p>
+
+          <p class="text-lg leading-relaxed mb-8">
+            Our teams excel at preserving historic character while modernizing systems and amenities to meet contemporary expectations.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Lincoln Park Property Expertise</h2>
+
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Vintage building restoration</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Courtyard and garden maintenance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Greystone and brownstone care</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Mixed-use property management</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services Overview</h2>
+
+          <div class="mb-6">
+            <p class="font-semibold mb-2">Interior Services:</p>
+            <p>Common area renovation, vintage detail preservation, modern system upgrades, boutique amenity management</p>
+          </div>
+
+          <div class="mb-6">
+            <p class="font-semibold mb-2">Exterior Services:</p>
+            <p>Landscaped courtyard care, wrought iron maintenance, masonry restoration, sidewalk and parkway upkeep</p>
+          </div>
+
+          <div class="mb-8">
+            <p class="font-semibold mb-2">Seasonal Services:</p>
+            <p>Garden maintenance, snow removal, seasonal decoration, outdoor space preparation</p>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Nearby Service Areas</h2>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="/locations/chicago/gold-coast" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Gold Coast</a>
+            <a href="/locations/chicago/lakeview" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Lakeview</a>
+            <a href="/locations/chicago/north-center" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">North Center</a>
+          </div>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Get trusted property care for your Lincoln Park association.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Request Quote</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

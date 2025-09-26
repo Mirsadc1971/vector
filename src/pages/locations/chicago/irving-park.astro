@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Irving Park HOA & Condo Services | Vector Building Services",
+  description: "Property services for Irving Park Chicago HOAs & condos. Mixed-use buildings, residential communities & comprehensive maintenance.",
+  keywords: "Irving Park Chicago HOA services, condo maintenance Irving Park, property management Old Irving Park"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Irving Park HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Reliable property services for Irving Park's diverse residential communities and mixed-use developments.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services maintains properties throughout Irving Park, from historic Old Irving homes to modern transit-oriented developments. We provide comprehensive services that meet this evolving neighborhood's needs.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Irving Park Solutions</h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Mixed-use property expertise</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Historic home preservation</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Transit corridor maintenance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Multi-family management</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services</h2>
+          <p class="mb-4">Residential: Multi-unit maintenance, courtyard care, parking management</p>
+          <p class="mb-4">Commercial: Ground-floor retail support, loading area maintenance</p>
+          <p class="mb-8">Community: Neighborhood beautification, safety improvements, accessibility upgrades</p>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Partner with Vector for comprehensive Irving Park property care.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

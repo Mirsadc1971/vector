@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Uptown HOA & Condo Services | Vector Building Services",
+  description: "Property services for Uptown Chicago HOAs & condos. Historic building care, affordable housing support & community-focused management.",
+  keywords: "Uptown Chicago HOA services, condo maintenance Uptown, property management Uptown Chicago"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Uptown HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Diverse property services for Uptown's eclectic mix of vintage buildings, affordable housing, and lakefront properties.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services supports Uptown's diverse community with property management that respects both historic architecture and modern affordability needs. From landmark theaters to lakefront towers, we provide reliable, cost-effective services.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Uptown Expertise</h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Historic preservation</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Affordable housing compliance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Multi-cultural community support</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Entertainment district management</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services</h2>
+          <p class="mb-4">Interior: Common area maintenance, community room management, accessibility upgrades</p>
+          <p class="mb-4">Exterior: Historic façade care, sidewalk maintenance, security lighting</p>
+          <p class="mb-8">Special: Grant compliance support, energy efficiency programs, community event coordination</p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Nearby Areas</h2>
+          <div class="flex flex-wrap gap-4 mb-8">
+            <a href="/locations/chicago/lakeview" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Lakeview</a>
+            <a href="/locations/chicago/edgewater" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Edgewater</a>
+            <a href="/locations/chicago/rogers-park" class="bg-blue-100 hover:bg-blue-200 px-4 py-2 rounded-lg transition">Rogers Park</a>
+          </div>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Partner with Vector for community-focused property management.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

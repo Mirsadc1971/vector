@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Portage Park HOA & Condo Services | Vector Building Services",
+  description: "Property services for Portage Park Chicago HOAs & condos. Bungalow conversions, family communities, traditional neighborhood care.",
+  keywords: "Portage Park Chicago HOA services, condo maintenance Portage Park, property management Six Corners"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Portage Park HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Traditional property services for Portage Park's bungalow communities and emerging condo developments.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services maintains Portage Park's traditional Chicago bungalow belt character while supporting new development. From Six Corners commercial district to quiet tree-lined streets, we provide reliable property management.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Portage Park Services</h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Bungalow conversion expertise</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Traditional neighborhood care</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Family-friendly maintenance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Park-adjacent properties</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services</h2>
+          <p class="mb-4">Traditional: Bungalow maintenance, garage care, basement management</p>
+          <p class="mb-4">Community: Tree-lined street care, parkway maintenance, alley upkeep</p>
+          <p class="mb-8">Modern: Two-flat conversions, coach house renovations, ADU support</p>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Preserve your Portage Park property's traditional charm.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

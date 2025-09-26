@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Albany Park HOA & Condo Services | Vector Building Services",
+  description: "Property services for Albany Park Chicago HOAs & condos. Diverse community support, affordable housing, multi-family buildings.",
+  keywords: "Albany Park Chicago HOA services, condo maintenance Albany Park, property management Mayfair"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Albany Park HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Community-centered property services for Albany Park's diverse neighborhoods and multi-family buildings.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services supports Albany Park's multicultural community with flexible, affordable property management. From Lawrence Avenue corridors to residential side streets, we maintain properties that reflect the neighborhood's diversity.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Albany Park Expertise</h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Multi-cultural community focus</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Affordable housing compliance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Multi-family building care</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Language accessibility</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services</h2>
+          <p class="mb-4">Community: Multi-lingual communication, cultural event support, community spaces</p>
+          <p class="mb-4">Buildings: Affordable maintenance programs, energy efficiency, safety improvements</p>
+          <p class="mb-8">Support: Flexible payment options, grant assistance, preventive maintenance</p>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Get community-focused property services in Albany Park.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

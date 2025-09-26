@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const meta = {
+  title: "Jefferson Park HOA & Condo Services | Vector Building Services",
+  description: "Property services for Jefferson Park Chicago HOAs & condos. Transit-oriented developments, family neighborhoods, professional management.",
+  keywords: "Jefferson Park Chicago HOA services, condo maintenance Jefferson Park, property management Northwest Side"
+};
+---
+
+<BaseLayout title={meta.title} description={meta.description}>
+  <main>
+    <section class="hero bg-gradient-to-br from-blue-900 to-blue-700 text-white py-20">
+      <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">🏙️ Jefferson Park HOA & Condominium Services</h1>
+        <p class="text-xl mb-8 max-w-3xl">Reliable property services for Jefferson Park's family-friendly neighborhoods and transit-oriented developments.</p>
+      </div>
+    </section>
+
+    <section class="py-16">
+      <div class="container mx-auto px-4">
+        <div class="prose max-w-4xl mx-auto">
+          <p class="text-lg leading-relaxed mb-6">
+            Vector Building Services maintains Jefferson Park's blend of suburban feel within city limits. From transit hub developments to quiet residential streets, we provide dependable property management for this Northwest Side community.
+          </p>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Jefferson Park Focus</h2>
+          <div class="grid md:grid-cols-2 gap-6 mb-12">
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Transit-oriented properties</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Family community focus</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Suburban-style maintenance</p>
+            </div>
+            <div class="bg-gray-50 p-6 rounded-lg">
+              <p>✓ Senior housing support</p>
+            </div>
+          </div>
+
+          <h2 class="text-3xl font-bold mb-6 text-blue-900">Services</h2>
+          <p class="mb-4">Residential: Single-family conversions, townhome care, driveway maintenance</p>
+          <p class="mb-4">Transit: Commuter support, parking management, snow priority routes</p>
+          <p class="mb-8">Community: Senior amenities, family spaces, traditional neighborhood upkeep</p>
+
+          <div class="text-center mb-12">
+            <a href="/locations/chicago" class="inline-block bg-gray-200 hover:bg-gray-300 px-6 py-3 rounded-lg font-semibold transition">← Back to Chicago Areas</a>
+          </div>
+
+          <div class="bg-blue-900 text-white p-8 rounded-lg text-center">
+            <p class="text-xl font-bold mb-6">👉 Get neighborhood-focused property care in Jefferson Park.</p>
+            <a href="/contact" class="inline-block bg-white text-blue-900 px-8 py-3 rounded-lg font-bold hover:bg-gray-100 transition">Contact Us</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>
