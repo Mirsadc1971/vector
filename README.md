@@ -106,7 +106,7 @@ npm run preview
 ## 📞 Contact
 
 Vector Building Services Inc.
-1400 Patriot Boulevard #2042
+1400 Patriot Boulevard 2042
 Glenview, IL 60026
 Phone: (312) 522-5355
 Email: service@vectorbuildingservices.com
