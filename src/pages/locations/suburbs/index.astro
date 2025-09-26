@@ -11,54 +11,9 @@ const schema = {
   "areaServed": [
     "Evanston", "Wilmette", "Winnetka", "Kenilworth", "Glencoe", "Highland Park",
     "Lake Forest", "Glenview", "Northbrook", "Deerfield", "Buffalo Grove",
-    "Wheeling", "Lincolnshire", "Oak Brook", "Downers Grove", "Naperville",
-    "Elmhurst", "Libertyville", "Vernon Hills", "Lake Zurich", "Barrington"
+    "Wheeling", "Lincolnshire", "Libertyville", "Vernon Hills", "Lake Zurich", "Barrington"
   ]
 };
-
-const serviceAreas = [
-  {
-    region: "North Shore",
-    cities: [
-      { name: "Evanston", link: "/locations/suburbs/evanston/" },
-      { name: "Wilmette", link: "/locations/suburbs/wilmette/" },
-      { name: "Winnetka", link: "/locations/suburbs/winnetka/" },
-      { name: "Kenilworth", link: "/locations/suburbs/kenilworth/" },
-      { name: "Glencoe", link: "/locations/suburbs/glencoe/" },
-      { name: "Highland Park", link: "/locations/suburbs/highland-park/" },
-      { name: "Lake Forest", link: "/locations/suburbs/lake-forest/" }
-    ]
-  },
-  {
-    region: "Northwest Suburbs",
-    cities: [
-      { name: "Glenview", link: "/locations/suburbs/glenview/" },
-      { name: "Northbrook", link: "/locations/suburbs/northbrook/" },
-      { name: "Deerfield", link: "/locations/suburbs/deerfield/" },
-      { name: "Buffalo Grove", link: "/locations/suburbs/buffalo-grove/" },
-      { name: "Wheeling", link: "/locations/suburbs/wheeling/" },
-      { name: "Lincolnshire", link: "/locations/suburbs/lincolnshire/" }
-    ]
-  },
-  {
-    region: "Western Suburbs",
-    cities: [
-      { name: "Oak Brook", link: "/locations/suburbs/oak-brook/" },
-      { name: "Downers Grove", link: "/locations/suburbs/downers-grove/" },
-      { name: "Naperville", link: "/locations/suburbs/naperville/" },
-      { name: "Elmhurst", link: "/locations/suburbs/elmhurst/" }
-    ]
-  },
-  {
-    region: "Farther Suburbs",
-    cities: [
-      { name: "Libertyville", link: "/locations/suburbs/libertyville/" },
-      { name: "Vernon Hills", link: "/locations/suburbs/vernon-hills/" },
-      { name: "Lake Zurich", link: "/locations/suburbs/lake-zurich/" },
-      { name: "Barrington", link: "/locations/suburbs/barrington/" }
-    ]
-  }
-];
 ---
 
 <BaseLayout
@@ -81,46 +36,87 @@ const serviceAreas = [
     </div>
   </section>
 
+  <!-- Intro Section -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <p class="text-lg text-gray-700 mb-8">
+          Beyond Chicago's city limits, Vector Building Services delivers comprehensive janitorial, maintenance, and contracting solutions for condominium associations and HOAs across Chicagoland's suburbs. From the North Shore lakefront to the Northwest and Western suburbs, our team is trusted for high-quality work, responsive communication, and a deep understanding of suburban community needs.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tailored Solutions -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Tailored Solutions for Suburban Communities</h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+          Suburban associations face challenges very different from downtown high-rises — larger footprints, landscaped common grounds, expansive parking facilities, and weather-exposed exterior systems. Vector Building Services specializes in delivering customized solutions that protect property values, reduce long-term costs, and keep communities safe and appealing.
+        </p>
+
+        <div class="grid md:grid-cols-3 gap-8 mb-8">
+          <a href="/services/interior/" class="block bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Interior Services</h3>
+            <p class="text-gray-600">Community clubhouse and lobby renovations, fitness center upgrades, interior lighting and energy-efficient retrofits, plumbing and electrical maintenance.</p>
+          </a>
+
+          <a href="/services/exterior/" class="block bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Exterior Services</h3>
+            <p class="text-gray-600">Roofing and siding repair or replacement, drainage and water-management systems, masonry restoration, parking garage and lot maintenance.</p>
+          </a>
+
+          <a href="/services/seasonal/" class="block bg-white p-6 rounded-lg shadow hover:shadow-xl transition-shadow duration-300">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Seasonal Services</h3>
+            <p class="text-gray-600">24/7 snow & ice removal, professional landscaping (April-October), storm & flood emergency response.</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Areas We Serve -->
   <section class="py-16">
     <div class="container mx-auto px-4">
       <div class="max-w-7xl mx-auto">
-        <h2 class="text-3xl font-bold mb-6 text-center">Areas We Serve</h2>
-        <p class="text-lg text-gray-700 mb-12 text-center max-w-3xl mx-auto">
-          Professional HOA & condominium property services across Chicagoland's suburbs. Click any location to learn more about our services in your area.
+        <h2 class="text-3xl font-bold mb-6">Areas We Serve</h2>
+        <p class="text-lg text-gray-700 mb-12">
+          We provide building services across Chicago's premier suburbs. Click any location below to learn more about our services in your area.
         </p>
 
         <!-- North Shore (7 cards) -->
         <div class="mb-12">
-          <h3 class="text-2xl font-bold mb-6 text-primary-600">North Shore</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 mb-8">
-            <a href="evanston" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+          <h3 class="text-2xl font-bold mb-6 text-primary-600">North Shore Communities</h3>
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <a href="evanston" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Evanston</h4>
-              <p class="text-gray-600 text-sm">HOA & condo services in Evanston's vibrant lakefront community</p>
+              <p class="text-gray-600 text-sm">Lakefront HOA & condo services</p>
             </a>
-            <a href="wilmette" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="wilmette" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Wilmette</h4>
-              <p class="text-gray-600 text-sm">Expert property services for Wilmette's historic North Shore community</p>
+              <p class="text-gray-600 text-sm">Historic community property care</p>
             </a>
-            <a href="winnetka" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="winnetka" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Winnetka</h4>
-              <p class="text-gray-600 text-sm">Comprehensive services for Winnetka's luxury communities</p>
+              <p class="text-gray-600 text-sm">Luxury association services</p>
             </a>
-            <a href="kenilworth" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="kenilworth" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Kenilworth</h4>
-              <p class="text-gray-600 text-sm">Professional services for Kenilworth's exclusive associations</p>
+              <p class="text-gray-600 text-sm">Exclusive HOA maintenance</p>
             </a>
-            <a href="glencoe" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="glencoe" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Glencoe</h4>
-              <p class="text-gray-600 text-sm">Property care for Glencoe's wooded neighborhoods</p>
+              <p class="text-gray-600 text-sm">Wooded neighborhood services</p>
             </a>
-            <a href="highland-park" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="highland-park" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Highland Park</h4>
-              <p class="text-gray-600 text-sm">HOA & condo services for Highland Park's large communities</p>
+              <p class="text-gray-600 text-sm">Large community management</p>
             </a>
-            <a href="lake-forest" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="lake-forest" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Lake Forest</h4>
-              <p class="text-gray-600 text-sm">Reliable property services for Lake Forest's suburban communities</p>
+              <p class="text-gray-600 text-sm">Suburban property solutions</p>
             </a>
           </div>
         </div>
@@ -128,53 +124,53 @@ const serviceAreas = [
         <!-- Northwest Suburbs (6 cards) -->
         <div class="mb-12">
           <h3 class="text-2xl font-bold mb-6 text-primary-600">Northwest Suburbs</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            <a href="glenview" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <a href="glenview" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Glenview</h4>
-              <p class="text-gray-600 text-sm">Trusted property services for Glenview's suburban associations</p>
+              <p class="text-gray-600 text-sm">Trusted suburban HOA services</p>
             </a>
-            <a href="northbrook" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="northbrook" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Northbrook</h4>
-              <p class="text-gray-600 text-sm">HOA & condo services in Northbrook's established neighborhoods</p>
+              <p class="text-gray-600 text-sm">Established neighborhood care</p>
             </a>
-            <a href="deerfield" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="deerfield" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Deerfield</h4>
-              <p class="text-gray-600 text-sm">Expert maintenance & landscaping for Deerfield communities</p>
+              <p class="text-gray-600 text-sm">Expert maintenance & landscaping</p>
             </a>
-            <a href="buffalo-grove" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="buffalo-grove" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Buffalo Grove</h4>
-              <p class="text-gray-600 text-sm">Professional services for Buffalo Grove's large residential campuses</p>
+              <p class="text-gray-600 text-sm">Large campus property services</p>
             </a>
-            <a href="wheeling" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="wheeling" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Wheeling</h4>
-              <p class="text-gray-600 text-sm">Reliable property care for Wheeling's condo complexes</p>
+              <p class="text-gray-600 text-sm">Condo complex management</p>
             </a>
-            <a href="lincolnshire" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="lincolnshire" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Lincolnshire</h4>
-              <p class="text-gray-600 text-sm">HOA & condo services for Lincolnshire's residential neighborhoods</p>
+              <p class="text-gray-600 text-sm">Residential HOA solutions</p>
             </a>
           </div>
         </div>
 
-        <!-- Farther Suburbs (4 cards) -->
+        <!-- Farther Suburbs (4 cards) - centered -->
         <div class="mb-12">
           <h3 class="text-2xl font-bold mb-6 text-primary-600">Farther Suburbs</h3>
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <a href="libertyville" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <a href="libertyville" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Libertyville</h4>
-              <p class="text-gray-600 text-sm">Property services for Libertyville's growing residential communities</p>
+              <p class="text-gray-600 text-sm">Growing community services</p>
             </a>
-            <a href="vernon-hills" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="vernon-hills" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Vernon Hills</h4>
-              <p class="text-gray-600 text-sm">Comprehensive services for Vernon Hills' residential communities</p>
+              <p class="text-gray-600 text-sm">Comprehensive property care</p>
             </a>
-            <a href="lake-zurich" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="lake-zurich" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Lake Zurich</h4>
-              <p class="text-gray-600 text-sm">Property services for Lake Zurich's lakefront associations</p>
+              <p class="text-gray-600 text-sm">Lakefront association services</p>
             </a>
-            <a href="barrington" class="group bg-white border border-gray-200 p-6 rounded-lg hover:shadow-lg hover:border-primary-300 transition-all duration-300">
+            <a href="barrington" class="group bg-white border-2 border-gray-200 p-5 rounded-lg hover:shadow-xl hover:border-primary-400 transition-all">
               <h4 class="font-bold text-lg text-gray-900 group-hover:text-primary-600 mb-2">Barrington</h4>
-              <p class="text-gray-600 text-sm">Professional services for Barrington's townhome developments</p>
+              <p class="text-gray-600 text-sm">Townhome development services</p>
             </a>
           </div>
         </div>
