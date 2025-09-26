@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
 
 const exteriorServices = {
   cleaning: {
@@ -50,22 +51,16 @@ const exteriorServices = {
   description="Complete exterior maintenance for Chicago commercial properties. Pressure washing, roof repairs, masonry, parking lots, landscaping. Call (312) 522-5355."
 >
   <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
-    <div class="container mx-auto px-4">
-      <nav class="text-sm mb-4">
-        <a href="/" class="hover:underline">Home</a>
-        <span class="mx-2">/</span>
-        <a href="/services/" class="hover:underline">Services</a>
-        <span class="mx-2">/</span>
-        <span>Exterior Services</span>
-      </nav>
-
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Exterior Services</h1>
-      <p class="text-xl text-green-100">
-        Complete exterior maintenance from routine cleaning to major façade work, protecting your building's structure and appearance
-      </p>
-    </div>
-  </section>
+  <Hero
+    title="Exterior Services"
+    subtitle="Complete exterior maintenance from routine cleaning to major façade work, protecting your building's structure and appearance"
+    image="/images/parking sealcoat.jpg"
+    breadcrumbs={[
+      { name: "Home", href: "/" },
+      { name: "Services", href: "/services/" },
+      { name: "Exterior Services" }
+    ]}
+  />
 
   <!-- Services Overview -->
   <section class="py-16">

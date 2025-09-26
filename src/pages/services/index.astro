@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
 
 const allServices = [
   {
@@ -145,20 +146,15 @@ const schema = {
   schema={schema}
 >
   <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
-    <div class="container mx-auto px-4">
-      <nav class="text-sm mb-4">
-        <a href="/" class="hover:underline">Home</a>
-        <span class="mx-2">/</span>
-        <span>Services</span>
-      </nav>
-
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Complete Property Services</h1>
-      <p class="text-xl text-gray-300 max-w-3xl">
-        Everything your HOA or condominium needs - from daily cleaning to emergency repairs to major renovations. One trusted partner for all property services.
-      </p>
-    </div>
-  </section>
+  <Hero
+    title="Complete Property Services"
+    subtitle="Everything your HOA or condominium needs - from daily cleaning to emergency repairs to major renovations. One trusted partner for all property services."
+    image="/images/building lobby.jpg"
+    breadcrumbs={[
+      { name: "Home", href: "/" },
+      { name: "Services" }
+    ]}
+  />
 
   <!-- Work Process Section -->
   <section class="py-16 bg-gray-50">

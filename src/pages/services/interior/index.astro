@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
 import servicesData from '../../../data/services.json';
 ---
 
@@ -7,20 +8,16 @@ import servicesData from '../../../data/services.json';
   title="Interior Construction Services Chicago | Office Build-Outs, Electrical, HVAC"
   description="Complete interior construction and renovation services in Chicago. Office build-outs, electrical, plumbing, HVAC, flooring, and more. Call (312) 522-5355."
 >
-  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
-    <div class="container mx-auto px-4">
-      <nav class="text-sm mb-4">
-        <a href="/" class="hover:underline">Home</a>
-        <span class="mx-2">/</span>
-        <a href="/services/" class="hover:underline">Services</a>
-        <span class="mx-2">/</span>
-        <span>Interior Services</span>
-      </nav>
-
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Interior Construction Services</h1>
-      <p class="text-xl text-gray-300">Transform your space with expert interior construction and renovation</p>
-    </div>
-  </section>
+  <Hero
+    title="Interior Construction Services"
+    subtitle="Transform your space with expert interior construction and renovation"
+    image="/images/basement commercial.jpg"
+    breadcrumbs={[
+      { name: "Home", href: "/" },
+      { name: "Services", href: "/services/" },
+      { name: "Interior Services" }
+    ]}
+  />
 
   <section class="py-16">
     <div class="container mx-auto px-4">

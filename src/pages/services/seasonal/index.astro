@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../../../layouts/BaseLayout.astro';
+import Hero from '../../../components/Hero.astro';
 
 const schema = {
   "@context": "https://schema.org",
@@ -23,20 +24,16 @@ const schema = {
   schema={schema}
 >
   <!-- Hero Section -->
-  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
-    <div class="container mx-auto px-4">
-      <nav class="text-sm mb-4">
-        <a href="/" class="hover:underline">Home</a>
-        <span class="mx-2">/</span>
-        <a href="/services/" class="hover:underline">Services</a>
-        <span class="mx-2">/</span>
-        <span>Seasonal</span>
-      </nav>
-
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Seasonal Services by Vector Building Services</h1>
-      <p class="text-xl text-gray-300">Year-round property care through Chicago's changing seasons</p>
-    </div>
-  </section>
+  <Hero
+    title="Seasonal Services by Vector Building Services"
+    subtitle="Year-round property care through Chicago's changing seasons"
+    image="/images/snow-plowing.jpg"
+    breadcrumbs={[
+      { name: "Home", href: "/" },
+      { name: "Services", href: "/services/" },
+      { name: "Seasonal" }
+    ]}
+  />
 
   <!-- Introduction -->
   <section class="py-16">
