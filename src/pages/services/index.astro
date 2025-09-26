@@ -1,12 +1,78 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import servicesData from '../../data/services.json';
+
+const serviceCategories = [
+  {
+    title: "Interior Services",
+    href: "/services/interior/",
+    color: "blue",
+    icon: "🏢",
+    description: "Comprehensive interior services from daily janitorial to major renovations",
+    services: [
+      "Janitorial & Cleaning",
+      "Building Maintenance",
+      "General Contracting",
+      "Security Systems",
+      "Office Build-Outs",
+      "Electrical Systems",
+      "Plumbing Services",
+      "HVAC Systems",
+      "Flooring Solutions",
+      "Fire/Life Safety"
+    ]
+  },
+  {
+    title: "Exterior Services",
+    href: "/services/exterior/",
+    color: "green",
+    icon: "🏗️",
+    description: "Complete exterior maintenance from routine cleaning to major façade work",
+    services: [
+      "Exterior Cleaning & Grounds",
+      "Landscaping & Grounds Maintenance",
+      "Exterior Maintenance",
+      "Exterior Contracting",
+      "Roofing Services",
+      "Masonry & Façade",
+      "Waterproofing",
+      "Parking & Paving"
+    ]
+  },
+  {
+    title: "Snow & Seasonal",
+    href: "/services/seasonal/",
+    color: "purple",
+    icon: "❄️",
+    description: "Critical Chicago winter services with 24/7 snow removal",
+    services: [
+      "24/7 Snow Plowing",
+      "Ice & Salt Management",
+      "Seasonal HVAC Prep",
+      "Seasonal Landscaping"
+    ]
+  },
+  {
+    title: "Specialty & Maintenance",
+    href: "/services/specialty/",
+    color: "orange",
+    icon: "🔧",
+    description: "Specialized services and comprehensive maintenance programs",
+    services: [
+      "Preventive Plans",
+      "24/7 Emergency",
+      "Energy Efficiency/LED",
+      "ADA/Accessibility",
+      "Permitting/Inspections"
+    ]
+  }
+];
 ---
 
 <BaseLayout
-  title="Construction & Building Services Chicago | Vector Building Services"
-  description="Complete construction, renovation, and maintenance services for Chicago commercial properties. Interior build-outs, exterior work, emergency repairs. Call (312) 522-5355."
+  title="Complete Property Management Services Chicago | Vector Building Services"
+  description="Full-service commercial property management. Janitorial, security, HVAC, electrical, plumbing, emergency repairs. One company, all solutions. Call (312) 522-5355."
 >
+  <!-- Hero Section -->
   <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
     <div class="container mx-auto px-4">
       <nav class="text-sm mb-4">
@@ -15,110 +81,200 @@ import servicesData from '../../data/services.json';
         <span>Services</span>
       </nav>
 
-      <h1 class="text-4xl md:text-5xl font-bold mb-4">Construction & Building Services</h1>
-      <p class="text-xl text-blue-100">Complete solutions for Chicago commercial properties</p>
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Complete Property Management Services</h1>
+      <p class="text-xl text-blue-100">
+        From janitorial services to security systems to major equipment replacement - we provide all services necessary for the full functioning of your commercial property
+      </p>
     </div>
   </section>
 
+  <!-- Main Services Grid -->
   <section class="py-16">
     <div class="container mx-auto px-4">
-      <!-- Interior Services -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-bold mb-8">
-          <a href="/services/interior/" class="hover:text-primary-600">Interior Services</a>
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {servicesData.interior.map(service => (
-            <a href={`/services/interior/${service.slug}/`} class="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all">
-              <h3 class="text-xl font-semibold mb-2 group-hover:text-primary-600">{service.name}</h3>
-              <p class="text-gray-600 mb-4">{service.shortDescription}</p>
-              <div class="text-primary-600 font-semibold flex items-center">
-                Learn More
-                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </div>
-            </a>
-          ))}
-        </div>
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-bold mb-4">Full-Service Property Management Solutions</h2>
+        <p class="text-lg text-gray-600 max-w-3xl mx-auto">
+          One company. All services. Complete peace of mind. We handle every aspect of your commercial property management.
+        </p>
       </div>
 
-      <!-- Exterior Services -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-bold mb-8">
-          <a href="/services/exterior/" class="hover:text-primary-600">Exterior Services</a>
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {servicesData.exterior.map(service => (
-            <a href={`/services/exterior/${service.slug}/`} class="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all">
-              <h3 class="text-xl font-semibold mb-2 group-hover:text-primary-600">{service.name}</h3>
-              <p class="text-gray-600 mb-4">{service.shortDescription}</p>
-              <div class="text-primary-600 font-semibold flex items-center">
-                Learn More
-                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
+      <div class="grid md:grid-cols-2 gap-8 mb-16">
+        {serviceCategories.map(category => (
+          <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+            <div class={`bg-${category.color}-600 text-white p-6`}>
+              <h3 class="text-2xl font-bold flex items-center gap-3">
+                <span class="text-3xl">{category.icon}</span>
+                <span>{category.title}</span>
+              </h3>
+              <p class="mt-2 text-blue-100">{category.description}</p>
+            </div>
+            <div class="p-6">
+              <h4 class="font-semibold mb-4 text-gray-800">Services Include:</h4>
+              <div class="grid grid-cols-2 gap-2 mb-6">
+                {category.services.map(service => (
+                  <div class="flex items-start">
+                    <span class="text-green-500 mr-2">✓</span>
+                    <span class="text-sm text-gray-700">{service}</span>
+                  </div>
+                ))}
               </div>
-            </a>
-          ))}
-        </div>
+              <a href={category.href} class={`inline-block bg-${category.color}-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-${category.color}-700`}>
+                View All {category.title}
+              </a>
+            </div>
+          </div>
+        ))}
       </div>
 
-      <!-- Maintenance Plans -->
-      <div class="mb-16">
-        <h2 class="text-3xl font-bold mb-8">
-          <a href="/services/maintenance/" class="hover:text-primary-600">Maintenance Plans</a>
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {servicesData.maintenance.map(service => (
-            <a href={`/services/maintenance/${service.slug}/`} class="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all">
-              <h3 class="text-xl font-semibold mb-2 group-hover:text-primary-600">{service.name}</h3>
-              <p class="text-gray-600 mb-4">{service.shortDescription}</p>
-              <div class="text-primary-600 font-semibold flex items-center">
-                Learn More
-                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </div>
-            </a>
-          ))}
+      <!-- Complete Service Capabilities -->
+      <div class="bg-gray-50 rounded-xl p-8">
+        <h2 class="text-3xl font-bold mb-8 text-center">Complete Service Capabilities</h2>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <!-- Security & Access Control -->
+          <div class="bg-white rounded-lg p-6 border-l-4 border-teal-600">
+            <h3 class="text-teal-600 font-bold text-lg mb-3 flex items-center gap-2">
+              <span>🔐</span>
+              Security & Access Control
+            </h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Security camera installation</li>
+              <li>• Access control systems</li>
+              <li>• Key fob programming</li>
+              <li>• Garage door openers</li>
+              <li>• Intercom systems</li>
+              <li>• System monitoring</li>
+            </ul>
+          </div>
+
+          <!-- Life Safety Systems -->
+          <div class="bg-white rounded-lg p-6 border-l-4 border-red-600">
+            <h3 class="text-red-600 font-bold text-lg mb-3 flex items-center gap-2">
+              <span>🚨</span>
+              Life Safety Systems
+            </h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Fire pump maintenance</li>
+              <li>• Fire extinguisher service</li>
+              <li>• Fire panel testing</li>
+              <li>• Sprinkler systems</li>
+              <li>• Emergency lighting</li>
+              <li>• Smoke detectors</li>
+            </ul>
+          </div>
+
+          <!-- Chicago DOB Compliance -->
+          <div class="bg-white rounded-lg p-6 border-l-4 border-orange-600">
+            <h3 class="text-orange-600 font-bold text-lg mb-3 flex items-center gap-2">
+              <span>🏛️</span>
+              Chicago DOB Compliance
+            </h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Building permits</li>
+              <li>• Code compliance</li>
+              <li>• Elevator certifications</li>
+              <li>• Fire safety code</li>
+              <li>• ADA compliance</li>
+              <li>• Violation remediation</li>
+            </ul>
+          </div>
+
+          <!-- Major Equipment -->
+          <div class="bg-white rounded-lg p-6 border-l-4 border-blue-600">
+            <h3 class="text-blue-600 font-bold text-lg mb-3 flex items-center gap-2">
+              <span>⚙️</span>
+              Major Equipment
+            </h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Boiler replacement/repairs</li>
+              <li>• Chiller replacement/repairs</li>
+              <li>• Elevator upgrades</li>
+              <li>• Riser replacement</li>
+              <li>• Exhaust fan systems</li>
+              <li>• Generator service</li>
+            </ul>
+          </div>
+
+          <!-- Emergency Services -->
+          <div class="bg-white rounded-lg p-6 border-l-4 border-red-500">
+            <h3 class="text-red-500 font-bold text-lg mb-3 flex items-center gap-2">
+              <span>⚡</span>
+              24/7 Emergency
+            </h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Flood response</li>
+              <li>• Fire damage</li>
+              <li>• Storm damage</li>
+              <li>• Emergency plumbing</li>
+              <li>• Emergency HVAC</li>
+              <li>• Board-up services</li>
+            </ul>
+          </div>
+
+          <!-- Preventive Maintenance -->
+          <div class="bg-white rounded-lg p-6 border-l-4 border-green-600">
+            <h3 class="text-green-600 font-bold text-lg mb-3 flex items-center gap-2">
+              <span>📋</span>
+              Preventive Maintenance
+            </h3>
+            <ul class="text-sm text-gray-600 space-y-1">
+              <li>• Custom schedules</li>
+              <li>• Monthly inspections</li>
+              <li>• Quarterly deep cleaning</li>
+              <li>• Annual reviews</li>
+              <li>• Budget planning</li>
+              <li>• Priority response</li>
+            </ul>
+          </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <!-- Specialty Services -->
-      <div>
-        <h2 class="text-3xl font-bold mb-8">
-          <a href="/services/specialty/" class="hover:text-primary-600">Specialty & Compliance</a>
-        </h2>
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {servicesData.specialty.map(service => (
-            <a href={`/services/specialty/${service.slug}/`} class="group bg-white border border-gray-200 rounded-lg p-6 hover:shadow-xl transition-all">
-              <h3 class="text-xl font-semibold mb-2 group-hover:text-primary-600">{service.name}</h3>
-              <p class="text-gray-600 mb-4">{service.shortDescription}</p>
-              <div class="text-primary-600 font-semibold flex items-center">
-                Learn More
-                <svg class="w-5 h-5 ml-2 group-hover:translate-x-2 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </div>
-            </a>
-          ))}
+  <!-- Why Choose Section -->
+  <section class="py-16 bg-primary-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center">Why Choose Vector Building Services</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl text-white">🎯</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Full-Service Company</h3>
+          <p class="text-gray-600">Complete property management from janitorial to major construction</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl text-white">⚡</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">24/7 Emergency</h3>
+          <p class="text-gray-600">Round-the-clock response for all building emergencies</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-primary-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl text-white">✅</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Licensed & Insured</h3>
+          <p class="text-gray-600">Fully licensed contractors with comprehensive insurance</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CTA Section -->
-  <section class="bg-gray-100 py-16">
+  <section class="bg-primary-600 text-white py-16">
     <div class="container mx-auto px-4 text-center">
-      <h2 class="text-3xl font-bold mb-4">Ready to Start Your Project?</h2>
-      <p class="text-xl text-gray-600 mb-8">Get a free consultation and quote for your building needs</p>
+      <h2 class="text-3xl font-bold mb-4">Ready to Experience Full-Service Property Management?</h2>
+      <p class="text-xl mb-8">One call handles everything - no more managing multiple vendors</p>
       <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="/contact/" class="bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700">
+        <a href="/contact/" class="bg-white text-primary-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">
           Get Free Quote
         </a>
-        <a href="tel:3125225355" class="border-2 border-primary-600 text-primary-600 px-8 py-3 rounded-lg font-semibold hover:bg-primary-50">
-          Call: (312) 522-5355
+        <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10">
+          (312) 522-5355
         </a>
       </div>
     </div>

@@ -1,0 +1,280 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+
+const exteriorServices = {
+  cleaning: {
+    title: "Exterior Cleaning & Grounds",
+    services: [
+      "Pressure washing sidewalks, entryways, and garage floors",
+      "Exterior window cleaning (ground-level + coordination for high-rise)",
+      "Graffiti removal",
+      "Trash enclosure cleaning & odor control",
+      "Common outdoor furniture cleaning"
+    ]
+  },
+  maintenance: {
+    title: "Exterior Maintenance",
+    services: [
+      "Lighting inspection & replacement (parking lots, garages, walkways)",
+      "Roof inspections (visual checks, minor leak patching)",
+      "Roof leak repairs",
+      "Gutter & downspout cleaning",
+      "Fence/gate lubrication and repair",
+      "Drainage system checks (prevent flooding in heavy rains)",
+      "Concrete crack sealing (walkways, steps, curbs)",
+      "Exterior painting & sealants",
+      "Façade inspections & tuckpointing coordination",
+      "Building deck repairs and maintenance",
+      "Garage door replacement and repairs",
+      "Plumbing repairs and maintenance"
+    ]
+  },
+  contracting: {
+    title: "General Contracting",
+    services: [
+      "Masonry repairs (brick, stone, stucco, EIFS)",
+      "Balcony/deck inspections & repairs",
+      "Deck construction and replacement",
+      "Roofing repairs & full replacement (coordination if large-scale)",
+      "Garage/parking lot maintenance (paving, striping, sealing)",
+      "Retaining wall repairs & rebuilds",
+      "Entryway canopy or awning installation/repairs",
+      "Landscape hardscaping (pavers, outdoor seating, planters)"
+    ]
+  }
+};
+---
+
+<BaseLayout
+  title="Exterior Services | Vector Building Services Chicago"
+  description="Complete exterior maintenance for Chicago commercial properties. Pressure washing, roof repairs, masonry, parking lots, landscaping. Call (312) 522-5355."
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-green-600 to-green-700 text-white py-16">
+    <div class="container mx-auto px-4">
+      <nav class="text-sm mb-4">
+        <a href="/" class="hover:underline">Home</a>
+        <span class="mx-2">/</span>
+        <a href="/services/" class="hover:underline">Services</a>
+        <span class="mx-2">/</span>
+        <span>Exterior Services</span>
+      </nav>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">Exterior Services</h1>
+      <p class="text-xl text-green-100">
+        Complete exterior maintenance from routine cleaning to major façade work, protecting your building's structure and appearance
+      </p>
+    </div>
+  </section>
+
+  <!-- Services Overview -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="mb-12">
+        <h2 class="text-3xl font-bold mb-6">Comprehensive Exterior Building Services</h2>
+        <p class="text-lg text-gray-700 mb-8">
+          From pressure washing to roof repairs to complete façade restoration, we handle every aspect of your building's exterior maintenance.
+          Our exterior services protect your property investment, ensure safety, and maintain curb appeal.
+        </p>
+      </div>
+
+      <!-- Exterior Cleaning & Grounds -->
+      <div class="mb-12">
+        <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-cyan-500">
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+            <span class="text-3xl">🏢</span>
+            <span>Exterior Cleaning & Grounds</span>
+          </h3>
+          <p class="text-gray-600 mb-6">Professional cleaning services to maintain your property's appearance and value.</p>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            {exteriorServices.cleaning.services.map(service => (
+              <div class="flex items-start">
+                <span class="text-green-500 mr-2 mt-1">✓</span>
+                <span class="text-gray-700">{service}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Exterior Maintenance -->
+      <div class="mb-12">
+        <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-red-500">
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+            <span class="text-3xl">🔨</span>
+            <span>Exterior Maintenance</span>
+          </h3>
+          <p class="text-gray-600 mb-6">Preventive maintenance and repairs to protect your building envelope.</p>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            {exteriorServices.maintenance.services.map(service => (
+              <div class="flex items-start">
+                <span class="text-green-500 mr-2 mt-1">✓</span>
+                <span class="text-gray-700">{service}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- General Contracting -->
+      <div class="mb-12">
+        <div class="bg-white rounded-xl shadow-lg p-8 border-l-4 border-yellow-500">
+          <h3 class="text-2xl font-bold mb-6 flex items-center gap-3">
+            <span class="text-3xl">🏗️</span>
+            <span>Exterior General Contracting</span>
+          </h3>
+          <p class="text-gray-600 mb-6">Major construction and renovation projects for building exteriors.</p>
+
+          <div class="grid md:grid-cols-2 gap-4">
+            {exteriorServices.contracting.services.map(service => (
+              <div class="flex items-start">
+                <span class="text-green-500 mr-2 mt-1">✓</span>
+                <span class="text-gray-700">{service}</span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <!-- Additional Services -->
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Landscaping -->
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+            <span>🌿</span>
+            <span>Landscaping & Grounds</span>
+          </h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Lawn maintenance and mowing</li>
+            <li>• Seasonal planting (spring/fall)</li>
+            <li>• Tree and shrub trimming</li>
+            <li>• Mulching and bed maintenance</li>
+            <li>• Irrigation system management</li>
+            <li>• Leaf removal</li>
+            <li>• Landscape design and installation</li>
+            <li>• Sod installation and repair</li>
+          </ul>
+        </div>
+
+        <!-- Emergency Services -->
+        <div class="bg-gray-50 rounded-xl p-6">
+          <h3 class="text-xl font-bold mb-4 flex items-center gap-2">
+            <span>🚨</span>
+            <span>Emergency Exterior Response</span>
+          </h3>
+          <ul class="space-y-2 text-gray-700">
+            <li>• Storm damage repairs</li>
+            <li>• Emergency roof tarping</li>
+            <li>• Board-up services</li>
+            <li>• Flood prevention and response</li>
+            <li>• Emergency glass replacement</li>
+            <li>• Structural stabilization</li>
+            <li>• 24/7 response team</li>
+            <li>• Insurance coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Section -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center">Why Choose Our Exterior Services</h2>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl text-white">🏢</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Complete Exterior Care</h3>
+          <p class="text-gray-600">From routine cleaning to major construction, we handle all exterior needs</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl text-white">⚡</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">24/7 Emergency Service</h3>
+          <p class="text-gray-600">Immediate response for storm damage, leaks, and exterior emergencies</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl text-white">✅</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Licensed & Insured</h3>
+          <p class="text-gray-600">Fully licensed contractors with comprehensive insurance coverage</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl text-white">🌤️</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Weather Protection</h3>
+          <p class="text-gray-600">Protect your building from Chicago's harsh weather conditions</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl text-white">💰</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Preventive Maintenance</h3>
+          <p class="text-gray-600">Regular maintenance prevents costly emergency repairs</p>
+        </div>
+
+        <div class="text-center">
+          <div class="w-16 h-16 bg-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
+            <span class="text-2xl text-white">📋</span>
+          </div>
+          <h3 class="text-xl font-semibold mb-2">Compliance Expertise</h3>
+          <p class="text-gray-600">Ensure your property meets all Chicago building codes</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Areas -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold mb-8 text-center">Exterior Services Throughout Chicago & North Shore</h2>
+
+      <div class="grid md:grid-cols-4 gap-4 mb-8">
+        <div class="bg-white p-4 rounded-lg shadow text-center">
+          <h3 class="font-semibold">Chicago</h3>
+          <p class="text-sm text-gray-600">Downtown & Loop</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow text-center">
+          <h3 class="font-semibold">Glenview</h3>
+          <p class="text-sm text-gray-600">Commercial Properties</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow text-center">
+          <h3 class="font-semibold">Northbrook</h3>
+          <p class="text-sm text-gray-600">Business Parks</p>
+        </div>
+        <div class="bg-white p-4 rounded-lg shadow text-center">
+          <h3 class="font-semibold">North Shore</h3>
+          <p class="text-sm text-gray-600">All Communities</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="bg-green-600 text-white py-16">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Protect Your Building's Exterior?</h2>
+      <p class="text-xl mb-8">Get a free consultation and quote for your exterior service needs</p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">
+          Get Free Quote
+        </a>
+        <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10">
+          (312) 522-5355
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

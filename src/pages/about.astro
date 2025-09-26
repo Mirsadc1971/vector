@@ -1,0 +1,283 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Vector Building Services",
+  "description": "Chicago's trusted building experts providing full-service property management for condominium associations and commercial properties.",
+  "url": "https://vectorbuildingservices.com",
+  "telephone": "+13125225355",
+  "email": "service@vectorbuildingservices.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1400 Patriot Boulevard #2042",
+    "addressLocality": "Glenview",
+    "addressRegion": "IL",
+    "postalCode": "60026",
+    "addressCountry": "US"
+  },
+  "areaServed": ["Chicago", "North Shore", "Glenview", "Northbrook", "Wilmette", "Evanston"],
+  "foundingDate": "2010"
+};
+---
+
+<BaseLayout
+  title="About Us — Vector Building Services"
+  description="Chicago's trusted building experts. Full-service janitorial, maintenance, and general contracting for condominium associations. Serving Chicago and North Shore since 2010."
+  schema={schema}
+>
+  <!-- Hero Section -->
+  <section class="bg-gradient-to-r from-primary-600 to-primary-700 text-white py-16">
+    <div class="container mx-auto px-4">
+      <nav class="text-sm mb-4">
+        <a href="/" class="hover:underline">Home</a>
+        <span class="mx-2">/</span>
+        <span>About</span>
+      </nav>
+
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">About Vector Building Services — Chicago's Trusted Building Experts</h1>
+    </div>
+  </section>
+
+  <!-- Mission & Core Identity -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Intro / Mission & Core Identity</h2>
+
+        <p class="text-lg text-gray-700 mb-6">
+          At Vector Building Services, we believe every building tells a story — from its foundations to its finishings.
+          Serving the greater Chicago area, our mission is to deliver exceptional craftsmanship, uncompromising integrity,
+          and dependable results across every interior and exterior service we provide.
+        </p>
+
+        <p class="text-lg text-gray-700 mb-8 font-semibold">
+          We're not just contractors or maintenance providers — we're your partners in preserving property value,
+          enhancing safety, and elevating living environments.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story & Values -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Our Story & Values</h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+          Founded in 2010, Vector began as a team of dedicated tradespeople passionate about raising the bar for building
+          quality in Chicagoland. Over time, we've grown into a full-scale janitorial, maintenance, and general contracting
+          firm. But our principles remain the same:
+        </p>
+
+        <div class="grid md:grid-cols-2 gap-6 mb-8">
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Integrity First</h3>
+            <p class="text-gray-700">We do what's right, even when no one is watching.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Relentless Quality</h3>
+            <p class="text-gray-700">From small repairs to major renovations, we aim for excellence.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Customer-Centric</h3>
+            <p class="text-gray-700">Clear communication, flexible plans, and dependable performance.</p>
+          </div>
+
+          <div class="bg-white p-6 rounded-lg shadow">
+            <h3 class="font-bold text-xl mb-3 text-primary-600">Local Experts</h3>
+            <p class="text-gray-700">Deep understanding of Chicago's climate, building codes, and association needs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Who We Serve -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Who We Serve</h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+          We specialize in working with <strong>Condominium Associations, HOAs, property managers, and multi-unit residential buildings</strong>.
+          Whether you need routine janitorial services, seasonal snow solutions, or full-scale renovations, we tailor our
+          approach to your community's priorities and budget.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Team & Leadership -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Our Team & Leadership</h2>
+
+        <p class="text-lg text-gray-700 mb-8">
+          Our leadership brings decades of collective experience in building trades, property management, and construction.
+          Every field technician, project manager, and maintenance specialist is vetted, trained, and committed to
+          representing Vector at the highest standard.
+        </p>
+
+        <blockquote class="border-l-4 border-primary-600 pl-6 text-xl text-gray-800 italic mb-8">
+          "We measure our success by how well your property serves its residents — in safety, longevity, and aesthetic appeal."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Philosophy & Approach -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Service Philosophy & Approach</h2>
+
+        <p class="text-xl text-gray-800 font-semibold mb-8">We don't just fix problems — we prevent them.</p>
+
+        <div class="grid md:grid-cols-2 gap-6">
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <h3 class="font-bold mb-2">Proactive Maintenance</h3>
+              <p class="text-gray-700">Scheduled inspections to catch issues before they escalate.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <h3 class="font-bold mb-2">Transparent Contracts</h3>
+              <p class="text-gray-700">Clear scopes, timelines, and costs — no surprises.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <h3 class="font-bold mb-2">Sustainable Practices</h3>
+              <p class="text-gray-700">Environmentally safe materials, energy-efficient upgrades, and green maintenance wherever possible.</p>
+            </div>
+          </div>
+
+          <div class="flex items-start">
+            <span class="text-green-500 mr-3 mt-1 text-xl">✓</span>
+            <div>
+              <h3 class="font-bold mb-2">Responsive Support</h3>
+              <p class="text-gray-700">24/7 emergency service, fast response, and actionable solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Chicago Focus & Local Advantage -->
+  <section class="py-16 bg-primary-50">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Chicago Focus & Local Advantage</h2>
+
+        <p class="text-lg text-gray-700 mb-6">
+          Because we're based in the Chicago area, we understand the unique challenges of Midwestern weather:
+          freeze-thaw cycles, ice dams, snow loads, and seasonal expansion/contraction. Our local presence means
+          faster response times and deeper accountability.
+        </p>
+
+        <p class="text-lg text-gray-700">
+          We're also well-versed in Illinois building codes, city permitting, HOA regulations, and common-condo
+          constraints, so you can trust us to handle compliance and coordination for you.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications, Partners & Trust -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl font-bold mb-6">Certifications, Partners & Trust</h2>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">✅</span>
+            </div>
+            <p class="font-semibold">Licensed & Insured</p>
+            <p class="text-sm text-gray-600">Full contractor coverage</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🏆</span>
+            </div>
+            <p class="font-semibold">Industry Member</p>
+            <p class="text-sm text-gray-600">Local Builders Association</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🛡️</span>
+            </div>
+            <p class="font-semibold">Safety Certified</p>
+            <p class="text-sm text-gray-600">OSHA compliant</p>
+          </div>
+
+          <div class="text-center">
+            <div class="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-3">
+              <span class="text-2xl">🌿</span>
+            </div>
+            <p class="font-semibold">Green Standards</p>
+            <p class="text-sm text-gray-600">Environmental practices</p>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <a href="/projects/" class="text-primary-600 hover:underline mr-4">View Client Testimonials</a>
+          <span class="text-gray-400">|</span>
+          <a href="/why-vector/" class="text-primary-600 hover:underline ml-4">See Case Studies</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Join Us CTA -->
+  <section class="py-16 bg-primary-600 text-white">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <h2 class="text-3xl font-bold mb-6">Join Us in Your Next Project</h2>
+
+        <p class="text-xl mb-8">
+          Whether you're planning a lobby renovation, need snow management this winter, or want a preventive
+          maintenance plan — we're ready to partner with your association.
+        </p>
+
+        <a href="/contact/" class="bg-white text-primary-600 px-8 py-3 rounded-lg font-bold text-lg hover:bg-gray-100 inline-block">
+          Request a Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Related Links -->
+  <section class="py-12">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto">
+        <h3 class="text-xl font-bold mb-4">Learn More About Our Services</h3>
+        <div class="flex flex-wrap gap-4">
+          <a href="/services/" class="text-primary-600 hover:underline">View All Services</a>
+          <span class="text-gray-400">•</span>
+          <a href="/projects/" class="text-primary-600 hover:underline">See Our Projects</a>
+          <span class="text-gray-400">•</span>
+          <a href="/why-vector/" class="text-primary-600 hover:underline">Why Choose Vector</a>
+          <span class="text-gray-400">•</span>
+          <a href="/locations/" class="text-primary-600 hover:underline">Service Areas</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
