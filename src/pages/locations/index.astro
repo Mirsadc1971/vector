@@ -1,0 +1,99 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Hero from '../../components/Hero.astro';
+
+const schema = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Vector Building Services - Service Areas",
+  "description": "Property services throughout Chicago and suburbs",
+  "areaServed": ["Chicago", "North Shore", "Northwest Suburbs"]
+};
+---
+
+<BaseLayout
+  title="Service Areas | Vector Building Services"
+  description="Vector Building Services provides property services throughout Chicago and the suburbs. Find our services in your area."
+  schema={schema}
+>
+  <!-- Hero Section -->
+  <Hero
+    title="Service Areas"
+    subtitle="Professional property services throughout Chicagoland"
+    image="/images/Chicago-Bean-.jpg"
+    breadcrumbs={[
+      { name: "Home", href: "/" },
+      { name: "Locations" }
+    ]}
+  />
+
+  <!-- Main Content -->
+  <section class="py-16">
+    <div class="container mx-auto px-4">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">Where We Serve</h2>
+          <p class="text-lg text-gray-700">
+            Vector Building Services provides comprehensive property services throughout Chicago and the surrounding suburbs.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Chicago -->
+          <a href="/locations/chicago/" class="block bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl hover:border-primary-400 transition-all">
+            <h3 class="text-2xl font-bold mb-4 text-primary-600">Chicago Neighborhoods</h3>
+            <p class="text-gray-700 mb-4">
+              Serving all major Chicago neighborhoods with comprehensive property services for HOAs, offices, and commercial buildings.
+            </p>
+            <div class="text-sm text-gray-600">
+              <p class="font-semibold mb-2">Including:</p>
+              <p>The Loop • River North • Gold Coast • Lincoln Park • Lakeview • Uptown • Rogers Park • And more...</p>
+            </div>
+          </a>
+
+          <!-- Suburbs -->
+          <a href="/locations/suburbs/" class="block bg-white border-2 border-gray-200 rounded-lg p-8 hover:shadow-xl hover:border-primary-400 transition-all">
+            <h3 class="text-2xl font-bold mb-4 text-primary-600">Suburban Communities</h3>
+            <p class="text-gray-700 mb-4">
+              Professional services for suburban HOAs and condominium associations throughout the North Shore and Northwest suburbs.
+            </p>
+            <div class="text-sm text-gray-600">
+              <p class="font-semibold mb-2">Including:</p>
+              <p>Evanston • Wilmette • Glenview • Northbrook • Highland Park • Lake Forest • And more...</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="mt-12 text-center">
+          <div class="bg-gray-50 p-8 rounded-lg">
+            <h3 class="text-2xl font-bold mb-4">Don't See Your Area?</h3>
+            <p class="text-lg text-gray-700 mb-6">
+              We're constantly expanding our service areas. Contact us to discuss service availability in your location.
+            </p>
+            <a href="/contact/" class="inline-block bg-primary-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-700 transition">
+              Contact Us Today
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA Section -->
+  <section class="py-16 bg-primary-900 text-white">
+    <div class="container mx-auto px-4 text-center">
+      <h2 class="text-3xl font-bold mb-4">Ready to Get Started?</h2>
+      <p class="text-xl mb-8 max-w-3xl mx-auto">
+        Professional property services throughout Chicagoland. One trusted partner for all your needs.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="/contact/" class="bg-white text-primary-900 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100">
+          Get Free Quote
+        </a>
+        <a href="tel:3125225355" class="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white/10">
+          Call (312) 522-5355
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
